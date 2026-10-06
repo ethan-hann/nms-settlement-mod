@@ -1,6 +1,6 @@
-# Settlement Planner: build plan
+# Overseer's Toolkit: build plan
 
-Working name: **Settlement Planner**. Part and perk ID prefix: `SP_`. Repo: `github.com/ethan-hann/nms-settlement-mod` (private for now; Nexus Mods release later).
+Name: **Overseer's Toolkit** (Nexus subtitle along the lines of "settlement paths, building and defense", since players search for "settlement"). Part and perk ID prefix: `OT_`. Repo: `github.com/ethan-hann/nms-settlement-mod` (private for now; Nexus Mods release later).
 
 A No Man's Sky mod that lets players lay out and improve settlements instead of just watching a procedural village. Written 2026-10-06 against game build 180836. "Verified" means checked on Ethan's PC that day.
 
@@ -26,16 +26,16 @@ What players do today, and what goes wrong:
 This mod is for everyone, not one PC. Ethan's setup is one test case, not the target.
 
 1. **Target the vanilla game.** Design and validate against vanilla data only. Never assume, require or tune around any other mod.
-2. **Add rather than edit.** New `SP_` entries can't collide with other mods. Edit a vanilla entry only when the feature needs it, and list every vanilla `_id` and field the mod edits in `COMPATIBILITY.md` (generated, see section 9).
+2. **Add rather than edit.** New `OT_` entries can't collide with other mods. Edit a vanilla entry only when the feature needs it, and list every vanilla `_id` and field the mod edits in `COMPATIBILITY.md` (generated, see section 9).
 3. **Patch the fewest fields possible.** Ship partial EXML patches (section 5), never whole-file replacements.
 4. **Modular.** Each feature is its own mod folder, so players can take what they want and drop what conflicts. These become optional files on Nexus:
 
    | Module folder | Contents | Edits vanilla? |
    |---|---|---|
-   | `SettlementPlanner` (core) | Path kit, signposts, lighting | Exposes `DECALPATH`; everything else is new `SP_` parts |
-   | `SettlementPlanner-OpenSettlements` | Build inside settlements without the base-claim trick | Yes, one or two global fields that other base mods also change |
-   | `SettlementPlanner-Defense` | Fortify decision, defense perk, decorative tower | Adds a judgement and a perk; adds a selection entry |
-   | `SettlementPlanner-Runtime` | NMS.py path tool (later, optional) | No data edits |
+   | `OverseersToolkit` (core) | Path kit, signposts, lighting | Exposes `DECALPATH`; everything else is new `OT_` parts |
+   | `OverseersToolkit-OpenSettlements` | Build inside settlements without the base-claim trick | Yes, one or two global fields that other base mods also change |
+   | `OverseersToolkit-Defense` | Fortify decision, defense perk, decorative tower | Adds a judgement and a perk; adds a selection entry |
+   | `OverseersToolkit-Runtime` | NMS.py path tool (later, optional) | No data edits |
 
    Modules must not depend on each other. Core alone must work.
 5. **No new 3D assets** for the data modules. New parts reuse vanilla scene files, so multiplayer visitors without the mod at least have the meshes.
@@ -49,7 +49,7 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 ### Hard rules
 
 1. **Saves are read-only.** Never write, move, rename or delete anything in `%APPDATA%\HelloGames\NMS\`. To inspect a save, copy the one test-slot file to `scratch/` and read the copy.
-2. **Other mods are untouchable.** In `GAMEDATA\MODS\`, create, update or remove only the dev folders this project owns (`_SPDEV_*`). Never touch any other folder, file, or `vortex.deployment.json`.
+2. **Other mods are untouchable.** In `GAMEDATA\MODS\`, create, update or remove only the dev folders this project owns (`_OTDEV_*`). Never touch any other folder, file, or `vortex.deployment.json`.
 3. **Game files are untouchable.** Never write under `PCBANKS` or `Binaries`, except `Binaries\SETTINGS\GCMODSETTINGS.MXML`, and only through `testmode.py`. That script backs it up first and restores it byte for byte.
 4. **Never act while the game runs.** Every tool that touches the game folder refuses to run if `NMS.exe` is running.
 5. **Backups are never deleted** by any tool or session.
@@ -66,9 +66,9 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 `testmode.py enter [--modules core,open,defense,testtuning] [--with-user-mods]`:
 
 1. Refuses if `NMS.exe` is running.
-2. Makes a full backup of the save folder plus `Binaries\SETTINGS\` to `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\settlement-planner-backups\<timestamp>\`. It writes a sha256 manifest and re-reads every file to verify it.
+2. Makes a full backup of the save folder plus `Binaries\SETTINGS\` to `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\overseers-toolkit-backups\<timestamp>\`. It writes a sha256 manifest and re-reads every file to verify it.
 3. Records a read-only listing (names and sizes) of `GAMEDATA\MODS\`.
-4. Copies the requested modules into `GAMEDATA\MODS\_SPDEV_<module>`.
+4. Copies the requested modules into `GAMEDATA\MODS\_OTDEV_<module>`.
 5. Rewrites `GCMODSETTINGS.MXML` so every other mod is `Enabled=false` (with `--with-user-mods`, it leaves them as they were) and ours are `Enabled=true`. Nothing is deleted. `GCMODSETTINGS` is the game's own mod list, and Vortex doesn't write it (verified: Vortex tracks only files under `MODS`).
 6. Writes `scratch/testmode.state.json` recording what it did.
 7. Prints the session checklist and the warning: **load the test slot from the load menu; never press Continue.** If Continue lands on the main save while only test mods are active, the game could strip modded items from it when it saves.
@@ -76,9 +76,9 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 `testmode.py exit`:
 
 1. Refuses if `NMS.exe` is running.
-2. Removes the `_SPDEV_*` folders, so Ethan's normal game never loads dev builds by accident.
+2. Removes the `_OTDEV_*` folders, so Ethan's normal game never loads dev builds by accident.
 3. Restores `GCMODSETTINGS.MXML` byte for byte from the backup and checks the hash.
-4. Checks the `MODS` listing against the snapshot. Any difference outside `_SPDEV_*` is a safety failure.
+4. Checks the `MODS` listing against the snapshot. Any difference outside `_OTDEV_*` is a safety failure.
 5. Hash-compares every save file against the backup. Only the test slot's files, `accountdata.hg`, their `mf_` companions and `cache\` may differ. **Any other change is a safety failure**: stop and report.
 6. Copies the test slot's save file to `scratch/saves/` for verification.
 
@@ -90,7 +90,7 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 
 After each session, `tools/save_inspect.py` decodes the copied test save. The format is LZ4 block chunks with magic `0xFEEDA1E5`, and keys are de-obfuscated with MBINCompiler's `mapping.json`. That's the same approach as Ethan's existing script at `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\scratch dir\corvette-destroyer\inspect_save.py`. It checks, for example:
 
-- which `SP_` and `DECALPATH` objects exist in `PersistentPlayerBases[*].Objects`
+- which `OT_` and `DECALPATH` objects exist in `PersistentPlayerBases[*].Objects`
 - where the base sits relative to the settlement
 - settlement perks and stats
 
@@ -119,7 +119,7 @@ Out of scope: NPCs walking player paths, moving settlement buildings, protecting
 | Mods folder | `GAMEDATA\MODS`, Vortex hardlink deployment, 799 tracked files, about 55 mods |
 | Mod list and load order | `Binaries\SETTINGS\GCMODSETTINGS.MXML` (`ModPriority`, `Enabled`, `EnabledVR` per mod). Not written by Vortex. |
 | Saves | `%APPDATA%\HelloGames\NMS\st_76561198023670358`. Slot N = `save{2N-1}.hg` and `save{2N}.hg` with `mf_` companions; slot 1 = `save.hg`/`save2.hg`. |
-| Backup root | `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\` (Ethan's dated folders live here; ours go in `settlement-planner-backups\`) |
+| Backup root | `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\` (Ethan's dated folders live here; ours go in `overseers-toolkit-backups\`) |
 | MBINCompiler | v7.04.1-pre3 (2026-09-24), currently in `tools/mbincompiler/`. Older copies on the PC (5.54, 7.01) don't match this build. |
 | hgpaktool | 1.1.3 from PyPI, currently in `tools/.venv/` (uv, Python 3.14) |
 | NMS.py | Latest 180383.0 (2026-10-01), **one build behind the game**. It usually catches up within a week. |
@@ -194,7 +194,7 @@ If NMS.py can't place parts, the fallback is an **offline save-edit path planner
 docs/plan.md                 this file
 docs/progress.md             progress log: one entry per milestone and test session, plus forward-looking notes
 mod/<Module>/                each module mirrors GAMEDATA/MODS/<Module>/ paths
-mod/SettlementPlanner-TestTuning/   test-only (fast judgement timers and so on); never shipped
+mod/OverseersToolkit-TestTuning/   test-only (fast judgement timers and so on); never shipped
 runtime/                     NMS.py mod
 tools/
   bootstrap.ps1              fetch pinned MBINCompiler and hgpaktool into gitignored subfolders
@@ -228,16 +228,16 @@ Done when bootstrap, extract, check_build and all tests run from a fresh clone, 
 
 ### M1: Probes, then [SESSION 1]
 
-Build a throwaway probe module (`_SPDEV_PROBES`, never shipped) that answers the unknowns in one session:
+Build a throwaway probe module (`_OTDEV_PROBES`, never shipped) that answers the unknowns in one session:
 
 | Probe | Patch | What answers it |
 |---|---|---|
 | P1 edit-merge | `DECALPATH`: add a `Groups` entry, raise `PlanetBaseLimit` | Decal path appears in the build menu |
-| P2 append | New `SP_PROBE` part copied from `S_FLOOR_Q` | It appears and can be placed |
-| P3 text | A custom loc key for `SP_PROBE`'s name (a new `LANGUAGE/` file, or a partial patch of a vanilla language file) | The menu shows the custom name, not the raw key |
+| P2 append | New `OT_PROBE` part copied from `S_FLOOR_Q` | It appears and can be placed |
+| P3 text | A custom loc key for `OT_PROBE`'s name (a new `LANGUAGE/` file, or a partial patch of a vanilla language file) | The menu shows the custom name, not the raw key |
 | P4 open settlements | Lower `RadiusMultiplier_DoNotPlaceAnywhereNear` | A base can be claimed inside a settlement |
 | P5 terrain | (no patch) Place `BUILDPAVING` and `DECALPATH` inside a settlement | Whether flora clears, whether decals follow the slope |
-| P6 isolation | `testmode` disables all non-test mods | The in-game mod list shows only `_SPDEV_PROBES` |
+| P6 isolation | `testmode` disables all non-test mods | The in-game mod list shows only `_OTDEV_PROBES` |
 
 Extract `nms_reality_gcproducttable` and the `language/*english*` files first; P2 and P3 need them.
 
@@ -260,10 +260,10 @@ Record the results in `docs/progress.md`. Re-plan M2 to M4 if P2 or P3 fail: fal
 
   | Part | Copied from | Change |
   |---|---|---|
-  | `SP_PATH_TILE`, `SP_PATH_TRI` | `S_FLOOR_Q`, `S_TRIFLOOR_Q` | Low profile, `EditsTerrain` set per the P5 result |
-  | `SP_CURB` | The low wall players use as a step | Snaps under tile edges |
-  | `SP_SIGNPOST` | A vanilla sign or plaque scene | |
-  | `SP_LAMP` | A vanilla lamp | No power needed |
+  | `OT_PATH_TILE`, `OT_PATH_TRI` | `S_FLOOR_Q`, `S_TRIFLOOR_Q` | Low profile, `EditsTerrain` set per the P5 result |
+  | `OT_CURB` | The low wall players use as a step | Snaps under tile edges |
+  | `OT_SIGNPOST` | A vanilla sign or plaque scene | |
+  | `OT_LAMP` | A vanilla lamp | No power needed |
 
 - Give all of them their own build-menu subgroup ("Settlement") if groups allow it.
 - Tests: IDs unique and at most 16 characters, scenes exist in `scratch/all_files.txt`, every part has cost, product, group and loc entries.
@@ -276,10 +276,10 @@ Record the results in `docs/progress.md`. Re-plan M2 to M4 if P2 or P3 fail: fal
 
 ### M4: Defense module
 
-- Perk `SP_WATCH`: lowers `Alert`, raises `Sentinels`. Tune it against `StatsMaxValues` and `AlertUnitsPerCycleRateModifier`.
-- Judgement `SP_J_FORTIFY`, "Fortify the perimeter?": the options cost resources and grant `SP_WATCH`. Copy the cost mechanism from vanilla sentinel judgements. Add it to the pool with the fewest edits possible.
-- Decorative `SP_TOWER` reusing a settlement tower or sentinel pillar scene.
-- `SettlementPlanner-TestTuning`: short `JudgementWaitTimeMin` and `JudgementWaitTimeMax` so the fortify decision shows up within minutes during testing.
+- Perk `OT_WATCH`: lowers `Alert`, raises `Sentinels`. Tune it against `StatsMaxValues` and `AlertUnitsPerCycleRateModifier`.
+- Judgement `OT_J_FORTIFY`, "Fortify the perimeter?": the options cost resources and grant `OT_WATCH`. Copy the cost mechanism from vanilla sentinel judgements. Add it to the pool with the fewest edits possible.
+- Decorative `OT_TOWER` reusing a settlement tower or sentinel pillar scene.
+- `OverseersToolkit-TestTuning`: short `JudgementWaitTimeMin` and `JudgementWaitTimeMax` so the fortify decision shows up within minutes during testing.
 
 ### M5: Class-gated unlocks
 
@@ -369,7 +369,7 @@ M0 through M5 merged, [SESSION 1] and [SESSION 2] recorded, the M6 spike report 
 |---|---|---|
 | Ethan presses Continue during a test session and loads his main save with only test mods | Modded items could be stripped from the main save | Warning in the checklist; full verified backup before every session; the `exit` hash check catches any change; restore only with his approval |
 | A test session is left open and Ethan plays normally | Same as above | `exit` runs as soon as he reports the session done; `status` is checked at the start of every build-session turn that touches the game |
-| A partial patch can't append new `_id`s | No new `SP_` parts | P2. Fall back to exposing and retuning vanilla parts |
+| A partial patch can't append new `_id`s | No new `OT_` parts | P2. Fall back to exposing and retuning vanilla parts |
 | Custom text can't be added | Vanilla names reused | P3. Cosmetic |
 | The exclusion field does more than claimed | Spawn side effects | P4 plus the [SESSION 2] check; fall back to Runtime |
 | NMS.py lags or lacks a placement function | No path tool | M6 gate; save-edit fallback on the test slot only |
