@@ -83,3 +83,31 @@ Its pieces are known:
 - Ethan's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
 
 The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs Ethan's GitHub or Discord account.
+
+## 2026-10-06: Session 2, part A, and the fixes it led to
+
+`testmode enter --modules core,open,defense,testtuning`, a new creative game in slot 6, with the test-only `SaveOutModdedMetadata` export on. Exit passed every safety check; the game's export went to `scratch/exported/20261006-222620`, and `tools/check_export.py` found every module edit in it (the cost table is not part of the export).
+
+What Ethan saw:
+- No crash creating or loading the game.
+- Decoration > SETTLEMENT listed the kit under its English names; the Tower Pillar sat under Structural Adornments.
+- A base computer could be claimed about 110u from the settlement centre, against about 312u before.
+- The path tiles flatten the ground. That is intended and stays.
+- The lamp gave no light.
+- The Settlement Path placed with a sound but showed nothing.
+- "Fortify the perimeter?" appeared after about 20 minutes of being overseer, and again right after; the second acceptance showed Perimeter Watch. Both added debt.
+- Inside the settlement, the overseer's build menu offered only fireworks, fossils and portable tech. Near the base the menu flipped between the base and the settlement.
+
+What the save copy showed: OT_WATCH in the settlement's perks once, every kit part in KnownProducts, and the three unlock missions loaded (Progress -1).
+
+Causes, from the game files:
+- The lamp copied BUILDLIGHT2, whose bulb hangs under a connected-to-power node. The vanilla Lamp Post (S_STREETLAMP0) keeps its lights at the scene root. OT_LAMP now copies it.
+- DECALPATH's scene is an empty `PathDecal` locator. Settlement paths are drawn by the settlement generator around that marker, so a placed copy renders nothing. It is out of the kit and the B unlock. A future runtime path tool would lay kit tiles, not DECALPATH.
+- The overseer menu lists only parts with `BuildableOnPlanet=true` (built outside a base). Every kit part and the tower now set it.
+- The repeat decision is the test tuning; judgements have no "already owned" condition, so a rare repeat in normal play costs debt for no new perk.
+- The menu flip is the game choosing between overlapping base and settlement areas. It is a side effect of OpenSettlements and of gBase Boundary alike.
+
+Ethan's calls (2026-10-06):
+- The data-display signpost did not read as a sign. It is replaced by 24 vanilla signs copied under their vanilla names (so every game language has them): the Illuminated Sign, Standing Sign, Station Billboard, the holographic displays, the Gek, Korvax and Vy'keen emblem decals and the number decals 0 to 9. They unlock at class A.
+- Scope: new optional module `OverseersToolkit-SettlementDecor` sets `BuildableOnPlanet` on every planet-base part in the Decoration, Exotics and Wall Art groups (489 today), leaving out the 13 lights that draw power. `gen_parts.py` gained `group_edits` to generate it from the vanilla groups. Side effect: those parts can also be placed outside any base.
+- The side-effect check for the smaller base radius is settled by his own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
