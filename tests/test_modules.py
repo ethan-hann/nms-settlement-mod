@@ -54,6 +54,12 @@ def vanilla_loc_keys():
     return keys
 
 
+@pytest.fixture(scope="module")
+def vanilla_cost_ids():
+    root = ET.parse(EXTRACTED / "metadata/reality/tables/basebuildingcoststable.MXML").getroot()
+    return {e.get("_id") for e in root.find("Property[@name='ObjectCosts']")}
+
+
 def module_loc_keys(module):
     keys = set(spec_of(module).get("text", {}))
     for f in (MODS / module).rglob("*.EXML"):
@@ -78,7 +84,7 @@ def test_every_patch_merges_and_compiles(module, tmp_path):
 
 
 @pytest.mark.parametrize("module", SPEC_MODULES)
-def test_new_parts_are_complete(module, game_files, vanilla_loc_keys):
+def test_new_parts_are_complete(module, game_files, vanilla_loc_keys, vanilla_cost_ids):
     spec = spec_of(module)
     out = {str(k).replace("\\", "/"): ET.fromstring(v) for k, v in gen_parts.build(spec).items()}
     objects = out.get("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
@@ -93,7 +99,9 @@ def test_new_parts_are_complete(module, game_files, vanilla_loc_keys):
         assert scene.lower() in game_files, f"{id_}: scene {scene} is not in the game files"
         groups = entry.find("Property[@name='Groups']")
         assert len(groups) > 0, f"{id_} has no build-menu group"
-        assert costs.find(f"Property[@name='ObjectCosts']/Property[@_id='{id_}']") is not None
+        # Most vanilla parts have no cost entry; a new part has one exactly when its source does.
+        has_cost = costs is not None and costs.find(f"Property[@name='ObjectCosts']/Property[@_id='{id_}']") is not None
+        assert has_cost == (part["copy_from"] in vanilla_cost_ids), f"{id_}: cost entry should mirror {part['copy_from']}"
         product = products.find(f"Property[@name='Table']/Property[@_id='{id_}']")
         assert product is not None, f"{id_} has no product"
         for field in ("Name", "NameLower", "Description"):
