@@ -4,3 +4,4 @@ tools/.venv/
 tools/mbincompiler/
 __pycache__/
 .pytest_cache/
+.claude/worktrees/
