@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Probe: does shrinking this multiplier let a base be claimed inside a settlement? -->
+<!-- Probe: which radius keeps a base out of a settlement, and does a pak-root globals patch load at all? -->
 <Data template="cGcBuildingGlobals">
 	<Property name="RadiusMultiplier_DoNotPlaceAnywhereNear" value="0.000001" />
+	<Property name="MinRadiusForBases" value="100.000000" />
+	<Property name="BuildingPlacementMaxDistance" value="150.000000" />
 </Data>

@@ -24,7 +24,10 @@
 					<Property name="OptionText" value="OT_PJ_OPT1" />
 					<Property name="AltOptionText" />
 					<Property name="Perks">
-						<Property name="Perks" value="OT_PROBE_PERK" />
+						<Property name="Perks" value="GcSettlementJudgementPerkOption">
+							<Property name="Perk" value="OT_PROBE_PERK" />
+							<Property name="PerkChance" value="1.000000" />
+						</Property>
 					</Property>
 					<Property name="HidePerkInJudgement" value="false" />
 					<Property name="StatChanges">

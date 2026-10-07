@@ -36,7 +36,10 @@ FILTERS = [
     "metadata/simulation/solarsystem/wfcbuildings/*",
     "metadata/simulation/environment/planetbuildingtable*",
     "metadata/simulation/missions/tables/sentinelsettlementmissiontable*",
+    "metadata/simulation/missions/tables/missiontable*",
+    "metadata/simulation/missions/tables/modmissiontable*",
     "metadata/reality/cataloguebuilding*",
+    "metadata/gamestate/difficultyconfig*",
     "language/*english*",
 ]
 
