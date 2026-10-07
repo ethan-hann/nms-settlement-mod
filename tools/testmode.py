@@ -10,18 +10,18 @@ Every command refuses while the game runs. Backups are never deleted.
 """
 
 import argparse
-import csv
 import hashlib
 import json
 import os
 import re
 import shutil
-import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
+
+from nmsenv import game_running
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -141,23 +141,12 @@ def real_env():
     )
 
 
-def game_running(process_name):
-    """True if a process with this image name runs. Fails closed if tasklist fails."""
-    proc = subprocess.run(
-        ["tasklist", "/FO", "CSV", "/NH", "/FI", f"IMAGENAME eq {process_name}"],
-        capture_output=True,
-        text=True,
-    )
-    if proc.returncode != 0:
-        raise Refused(f"cannot list processes (tasklist exit {proc.returncode}); assuming the game runs")
-    for row in csv.reader(proc.stdout.splitlines()):
-        if row and row[0].lower() == process_name.lower():
-            return True
-    return False
-
-
 def refuse_if_game_running(env):
-    if game_running(env.process_name):
+    try:
+        running = game_running(env.process_name)
+    except RuntimeError as e:
+        raise Refused(f"{e}; assuming the game runs") from e
+    if running:
         raise Refused(f"{env.process_name} is running. Quit the game first.")
 
 
