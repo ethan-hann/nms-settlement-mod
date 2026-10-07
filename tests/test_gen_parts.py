@@ -274,3 +274,19 @@ def test_duplicate_ids_are_rejected(vanilla):
     part = {"id": "OT_X", "copy_from": "S_FLOOR_Q"}
     with pytest.raises(SpecError, match="OT_X"):
         gen_parts.build({"parts": [part, dict(part)]}, vanilla)
+
+
+def test_new_parts_are_flagged_as_coming_from_a_mod_folder(vanilla):
+    # Public mods that add parts set this on every new entry; vanilla entries all leave it false.
+    objects = OBJECTS.replace(
+        '<Property name="ID" value="S_FLOOR_Q" />',
+        '<Property name="ID" value="S_FLOOR_Q" />\n      <Property name="IsFromModFolder" value="false" />',
+    )
+    (vanilla / "metadata/reality/tables/basebuildingobjectstable.MXML").write_text(objects)
+    out = files(NEW_PART, vanilla)
+    assert get(item(out[OBJ], "Objects", "OT_PATH_TILE"), "IsFromModFolder").get("value") == "true"
+
+
+def test_edits_to_vanilla_parts_leave_the_mod_folder_flag_alone(vanilla):
+    out = files({"edits": [{"id": "DECALPATH", "object": {"PlanetBaseLimit": "200"}}]}, vanilla)
+    assert get(item(out[OBJ], "Objects", "DECALPATH"), "IsFromModFolder") is None
