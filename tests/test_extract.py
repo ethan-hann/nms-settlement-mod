@@ -12,6 +12,7 @@ def test_filters_cover_the_tables_the_mod_patches():
         "metadata/reality/tables/nms_reality_gcproducttable*",
         "metadata/reality/tables/settlementperkstable*",
         "language/*english*",
+        "gcdebugoptions*",
         "metadata/simulation/missions/tables/missiontable*",
         "metadata/simulation/missions/tables/modmissiontable*",
         "metadata/gamestate/difficultyconfig*",

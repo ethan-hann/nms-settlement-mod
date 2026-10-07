@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The game then writes the data it merged from all mods to GAMEDATA/MODS/EXPORTED,
+     which testmode moves into scratch/ at exit so patches can be checked from files. -->
+<Data template="cGcDebugOptions">
+	<Property name="SaveOutModdedMetadata" value="true" />
+</Data>

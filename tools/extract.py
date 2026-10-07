@@ -23,6 +23,7 @@ FILTERS = [
     "gcnavigationglobals*",
     "gcmultiplayerglobals*",
     "gcgameplayglobals*",
+    "gcdebugoptions*",
     "metadata/reality/tables/basebuilding*",
     "metadata/reality/tables/settlementperkstable*",
     "metadata/reality/tables/nms_basepartproducts*",
