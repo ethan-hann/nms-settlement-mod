@@ -349,3 +349,120 @@ def test_slot_of(name, slot):
 def test_unchanged_gcmodsettings_round_trips_byte_for_byte(fake_tree):
     original = gcmodsettings(fake_tree).read_bytes()
     assert testmode.rewrite_mod_settings(original, [], keep_user_mods=True) == original
+
+
+# --- review hardening --------------------------------------------------------
+
+
+def test_exit_refuses_before_changing_anything_when_the_settings_backup_is_missing(fake_tree):
+    env = make_env(fake_tree)
+    backup = Path(testmode.enter(env, ["core"]).backup_dir)
+    rewritten = gcmodsettings(fake_tree).read_bytes()
+    (backup / "SETTINGS/GCMODSETTINGS.MXML").unlink()
+
+    with pytest.raises(Refused, match="GCMODSETTINGS"):
+        testmode.exit_session(env)
+
+    assert (env.mods_dir / "_OTDEV_CORE").is_dir()
+    assert gcmodsettings(fake_tree).read_bytes() == rewritten
+    assert testmode.status(env).open
+
+
+def test_exit_refuses_when_the_settings_backup_no_longer_matches_its_hash(fake_tree):
+    env = make_env(fake_tree)
+    backup = Path(testmode.enter(env, ["core"]).backup_dir)
+    (backup / "SETTINGS/GCMODSETTINGS.MXML").write_bytes(b"damaged")
+
+    with pytest.raises(Refused, match="GCMODSETTINGS"):
+        testmode.exit_session(env)
+    assert (env.mods_dir / "_OTDEV_CORE").is_dir()
+
+
+def test_exit_refuses_when_the_mods_snapshot_is_missing(fake_tree):
+    env = make_env(fake_tree)
+    backup = Path(testmode.enter(env, ["core"]).backup_dir)
+    (backup / "mods_listing.json").unlink()
+
+    with pytest.raises(Refused, match="mods_listing"):
+        testmode.exit_session(env)
+    assert (env.mods_dir / "_OTDEV_CORE").is_dir()
+
+
+def test_exit_restores_settings_even_if_dev_folder_removal_fails_and_can_be_rerun(fake_tree, monkeypatch):
+    env = make_env(fake_tree)
+    original = gcmodsettings(fake_tree).read_bytes()
+    testmode.enter(env, ["core"])
+
+    def locked(path, *a, **k):
+        raise PermissionError(f"locked: {path}")
+
+    real_rmtree = testmode.shutil.rmtree
+    monkeypatch.setattr(testmode.shutil, "rmtree", locked)
+    with pytest.raises(Refused, match="locked"):
+        testmode.exit_session(env)
+
+    assert gcmodsettings(fake_tree).read_bytes() == original
+    st = testmode.status(env)
+    assert st.open and not st.ok
+    assert any("locked" in p for p in st.problems)
+
+    monkeypatch.setattr(testmode.shutil, "rmtree", real_rmtree)
+    result = testmode.exit_session(env)
+    assert result.ok, result.failures
+    assert not list(env.mods_dir.glob("_OTDEV_*"))
+
+
+def test_exit_flags_a_same_size_change_to_a_user_mod_file(fake_tree):
+    env = make_env(fake_tree)
+    target = env.mods_dir / "User Mod A/GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML"
+    testmode.enter(env, ["core"])
+    before = target.read_bytes()
+    target.write_bytes(before.replace(b"1", b"2"))
+    assert len(target.read_bytes()) == len(before)
+
+    result = testmode.exit_session(env)
+
+    assert not result.ok
+    assert any("User Mod A" in f for f in result.failures)
+
+
+def test_enter_gets_a_fresh_backup_folder_when_the_timestamp_is_taken(fake_tree, monkeypatch):
+    from datetime import datetime
+
+    env = make_env(fake_tree)
+    fixed = datetime(2026, 10, 6, 12, 0, 0)
+    monkeypatch.setattr(testmode, "_now", lambda: fixed)
+    taken = fake_tree["backups"] / fixed.strftime("%Y%m%d-%H%M%S")
+    taken.mkdir(parents=True)
+    (taken / "keep.txt").write_text("an older backup")
+
+    result = testmode.enter(env, ["core"])
+
+    assert Path(result.backup_dir) != taken
+    assert (taken / "keep.txt").read_text() == "an older backup"
+
+
+def test_enter_refuses_a_symlink_in_the_save_folder(fake_tree):
+    env = make_env(fake_tree)
+    link = fake_tree["saves"] / "st_1/linked.hg"
+    try:
+        link.symlink_to(fake_tree["saves"] / "st_1/save3.hg")
+    except OSError:
+        pytest.skip("this account cannot create symlinks")
+    with pytest.raises(Refused, match="linked.hg"):
+        testmode.enter(env, ["core"])
+    assert not fake_tree["backups"].exists()
+
+
+def test_status_command_reports_a_problem_when_processes_cannot_be_listed(fake_tree, monkeypatch, capsys):
+    env = make_env(fake_tree)
+    monkeypatch.setattr(testmode, "real_env", lambda: env)
+
+    def broken(name):
+        raise RuntimeError("tasklist failed")
+
+    monkeypatch.setattr(testmode, "game_running", broken)
+    code = testmode.main(["status"])
+    out = capsys.readouterr().out
+    assert code != 0
+    assert "unknown" in out and "PROBLEM" in out

@@ -162,11 +162,17 @@ def sha256_file(path):
 
 
 def files_under(root):
-    """Relative POSIX paths of every regular file under root."""
+    """Relative POSIX paths of every regular file under root. Refuses links rather than skip them."""
     root = Path(root)
-    return sorted(
-        p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file() and not p.is_symlink()
-    )
+    files, links = [], []
+    for p in root.rglob("*"):
+        if p.is_symlink() or p.is_junction():
+            links.append(str(p))
+        elif p.is_file():
+            files.append(p.relative_to(root).as_posix())
+    if links:
+        raise Refused(f"links are not supported here, so they cannot be verified: {', '.join(sorted(links))}")
+    return sorted(files)
 
 
 def is_dev_path(rel):
@@ -174,11 +180,12 @@ def is_dev_path(rel):
 
 
 def mods_listing(mods_dir):
-    """Names and sizes of everything in MODS except our dev folders."""
+    """Size and sha256 of everything in MODS except our dev folders."""
     listing = {}
     for rel in files_under(mods_dir):
         if not is_dev_path(rel):
-            listing[rel] = (Path(mods_dir) / rel).stat().st_size
+            path = Path(mods_dir) / rel
+            listing[rel] = [path.stat().st_size, sha256_file(path)]
     return listing
 
 
@@ -292,10 +299,27 @@ def rewrite_mod_settings(original, dev_names, keep_user_mods):
 # --- backup ------------------------------------------------------------------
 
 
-def make_backup(env, stamp):
+def _now():
+    return datetime.now()
+
+
+def _new_backup_dir(env):
+    """A backup folder that did not exist before; never reuses or overwrites an older one."""
+    base = _now().strftime("%Y%m%d-%H%M%S")
+    for n in range(100):
+        stamp = base if n == 0 else f"{base}-{n}"
+        path = Path(env.backup_root) / stamp
+        try:
+            path.mkdir(parents=True, exist_ok=False)
+        except FileExistsError:
+            continue
+        return stamp, path
+    raise Refused(f"no free backup folder name under {env.backup_root}")
+
+
+def make_backup(env):
     """Copy the save folder and SETTINGS, write a manifest, and verify every copy."""
-    backup = Path(env.backup_root) / stamp
-    backup.mkdir(parents=True, exist_ok=False)
+    stamp, backup = _new_backup_dir(env)
     manifest = {}
     for label, src_root in (("saves", Path(env.save_root)), ("SETTINGS", env.settings_dir)):
         for rel in files_under(src_root):
@@ -313,7 +337,7 @@ def make_backup(env, stamp):
     for rel, digest in manifest.items():
         if sha256_file(backup / rel) != digest:
             raise Refused(f"backup verification failed for {rel}")
-    return backup, manifest
+    return stamp, backup, manifest
 
 
 # --- state -------------------------------------------------------------------
@@ -370,9 +394,11 @@ def enter(env, modules, with_user_mods=False):
     dev_names = [DEV_PREFIX + m.upper() for m in modules]
     new_settings = rewrite_mod_settings(original_settings, dev_names, keep_user_mods=with_user_mods)
 
-    stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    backup, manifest = make_backup(env, stamp)
+    # Listing first: it refuses links before any backup folder exists.
+    files_under(env.save_root)
+    files_under(env.settings_dir)
     listing = mods_listing(env.mods_dir)
+    stamp, backup, manifest = make_backup(env)
     write_json(backup / "mods_listing.json", listing)
 
     state = {
@@ -446,6 +472,22 @@ def _compare_saves(env, manifest, test_slot):
     return failures, learned
 
 
+def _verified_backup(backup):
+    """Everything exit needs from the backup, checked before exit changes anything."""
+    manifest_doc = read_json(backup / "manifest.json")
+    if manifest_doc is None:
+        raise Refused(f"backup manifest missing at {backup}; nothing was changed")
+    manifest = manifest_doc["files"]
+    settings = backup / "SETTINGS" / "GCMODSETTINGS.MXML"
+    want = manifest.get("SETTINGS/GCMODSETTINGS.MXML")
+    if want is None or not settings.is_file() or sha256_file(settings) != want:
+        raise Refused(f"backup GCMODSETTINGS.MXML at {settings} is missing or damaged; nothing was changed")
+    listing = read_json(backup / "mods_listing.json")
+    if listing is None:
+        raise Refused(f"backup mods_listing.json missing at {backup}; nothing was changed")
+    return manifest, settings, listing
+
+
 def exit_session(env):
     refuse_if_game_running(env)
     state = read_json(env.state_file)
@@ -454,16 +496,28 @@ def exit_session(env):
     if state.get("status") != "open":
         raise Refused(f"session status is {state.get('status')}; resolve it with Ethan first")
     backup = Path(state["backup_dir"])
-    manifest = read_json(backup / "manifest.json")["files"]
+    manifest, settings_backup, before = _verified_backup(backup)
     failures = []
 
-    # Put the game back first, then check what happened.
-    _remove_dev_folders(env, failures)
-    shutil.copy2(backup / "SETTINGS" / "GCMODSETTINGS.MXML", env.gcmodsettings)
+    # Put the game back first, then check what happened. The mod list goes back before the
+    # dev folders go, so a failure part-way never leaves the user's own mods switched off.
+    errors = []
+    try:
+        shutil.copy2(settings_backup, env.gcmodsettings)
+    except OSError as e:
+        errors.append(f"restoring GCMODSETTINGS.MXML failed: {e}")
+    try:
+        _remove_dev_folders(env, failures)
+    except OSError as e:
+        errors.append(f"removing dev folders failed: {e}")
+    if errors:
+        state["exit_error"] = "; ".join(errors)
+        write_json(env.state_file, state)
+        raise Refused(state["exit_error"] + "; fix the cause and run exit again")
+    state.pop("exit_error", None)
     if sha256_file(env.gcmodsettings) != manifest["SETTINGS/GCMODSETTINGS.MXML"]:
         failures.append("GCMODSETTINGS.MXML does not match its backup after restore")
 
-    before = read_json(backup / "mods_listing.json")
     after = mods_listing(env.mods_dir)
     for rel in sorted(set(before) | set(after)):
         if rel not in after:
@@ -471,7 +525,7 @@ def exit_session(env):
         elif rel not in before:
             failures.append(f"MODS: {rel} appeared")
         elif before[rel] != after[rel]:
-            failures.append(f"MODS: {rel} changed size ({before[rel]} -> {after[rel]})")
+            failures.append(f"MODS: {rel} changed")
 
     test_slot = state.get("test_slot")
     save_failures, learned = _compare_saves(env, manifest, test_slot)
@@ -491,7 +545,7 @@ def exit_session(env):
                 shutil.copy2(profile / name, env.saves_copy_dir / name)
                 copied.append(name)
 
-    closed = datetime.now().strftime("%Y%m%d-%H%M%S")
+    closed = _now().strftime("%Y%m%d-%H%M%S")
     record = dict(state, closed=closed, test_slot=test_slot, failures=failures, copied=copied)
     if failures:
         record["status"] = "failed"
@@ -521,7 +575,9 @@ def status(env):
         problems.extend("  " + f for f in state.get("failures", []))
         return Status(open=False, ok=False, problems=problems, detail=state)
     if state is not None:
-        return Status(open=True, ok=True, detail=state)
+        if state.get("exit_error"):
+            problems.append(f"exit stopped part-way: {state['exit_error']}")
+        return Status(open=True, ok=not problems, problems=problems, detail=state)
     stale = dev_folders_present(env)
     if stale:
         problems.append(f"dev folders in MODS without an open session: {', '.join(stale)}")
@@ -576,7 +632,13 @@ def main(argv=None):
             return 2
         if args.cmd == "status":
             st = status(env)
-            print("running: " + ("yes" if game_running(env.process_name) else "no"))
+            try:
+                running = "yes" if game_running(env.process_name) else "no"
+            except RuntimeError as e:
+                running = "unknown"
+                st.ok = False
+                st.problems.append(f"cannot tell whether the game runs: {e}")
+            print("running: " + running)
             print("session: " + ("open" if st.open else "none open"))
             if st.open:
                 print(f"  opened {st.detail.get('opened')}, modules {st.detail.get('modules')}")
