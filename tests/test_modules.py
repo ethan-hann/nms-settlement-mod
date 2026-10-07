@@ -108,3 +108,11 @@ def test_ids_are_unique_across_modules():
         for item in spec.get("parts", []):
             assert item["id"] not in ids, f"{item['id']} defined in {ids.get(item['id'])} and {spec_file.stem}"
             ids[item["id"]] = spec_file.stem
+
+
+def test_compatibility_file_is_current():
+    import compat_report
+
+    expected = compat_report.generate_compatibility(MODS, EXTRACTED)
+    on_disk = (REPO / "COMPATIBILITY.md").read_text(encoding="utf-8")
+    assert on_disk == expected, "COMPATIBILITY.md is stale; rerun tools/compat_report.py"
