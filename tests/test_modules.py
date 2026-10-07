@@ -16,7 +16,9 @@ MODS = REPO / "mod"
 EXTRACTED = merge_preview.EXTRACTED
 ALL_FILES = REPO / "scratch" / "all_files.txt"
 
-EXPECTED_MODULES = ["OverseersToolkit-Probes"]
+# Every folder under mod/ is a module; a spec under specs/ is optional (hand-written modules have none).
+MODULES = sorted(p.name for p in MODS.iterdir() if p.is_dir())
+SPEC_MODULES = [m for m in MODULES if (SPECS / f"{m}.json").is_file()]
 
 pytestmark = pytest.mark.skipif(
     not (EXTRACTED / "metadata/reality/tables/basebuildingobjectstable.MXML").is_file()
@@ -27,7 +29,13 @@ pytestmark = pytest.mark.skipif(
 
 
 def spec_of(module):
-    return json.loads((SPECS / f"{module}.json").read_text(encoding="utf-8"))
+    path = SPECS / f"{module}.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+
+
+def test_every_spec_has_a_module():
+    for spec in SPECS.glob("*.json"):
+        assert (MODS / spec.stem).is_dir(), f"{spec.name} has no mod/{spec.stem} folder"
 
 
 @pytest.fixture(scope="module")
@@ -54,14 +62,14 @@ def module_loc_keys(module):
     return keys
 
 
-@pytest.mark.parametrize("module", EXPECTED_MODULES)
+@pytest.mark.parametrize("module", SPEC_MODULES)
 def test_generated_files_match_the_spec(module):
     for rel, text in gen_parts.build(spec_of(module)).items():
         on_disk = (MODS / module / rel).read_text(encoding="utf-8")
         assert on_disk == text, f"{rel} is stale; rerun tools/gen_parts.py"
 
 
-@pytest.mark.parametrize("module", EXPECTED_MODULES)
+@pytest.mark.parametrize("module", MODULES)
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)
     assert results, f"{module} has no patches"
@@ -69,7 +77,7 @@ def test_every_patch_merges_and_compiles(module, tmp_path):
     assert not failures
 
 
-@pytest.mark.parametrize("module", EXPECTED_MODULES)
+@pytest.mark.parametrize("module", SPEC_MODULES)
 def test_new_parts_are_complete(module, game_files, vanilla_loc_keys):
     spec = spec_of(module)
     out = {str(k).replace("\\", "/"): ET.fromstring(v) for k, v in gen_parts.build(spec).items()}
@@ -93,8 +101,7 @@ def test_new_parts_are_complete(module, game_files, vanilla_loc_keys):
             assert key in known_text, f"{id_}.{field}: no text for {key}"
 
 
-@pytest.mark.parametrize("module", EXPECTED_MODULES)
-def test_ids_are_unique_across_modules(module):
+def test_ids_are_unique_across_modules():
     ids = {}
     for spec_file in SPECS.glob("*.json"):
         spec = json.loads(spec_file.read_text(encoding="utf-8"))
