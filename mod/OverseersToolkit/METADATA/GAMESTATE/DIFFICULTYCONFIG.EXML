@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcDifficultyConfig">
+	<Property name="StartWithAllItemsKnownEnabledData" value="GcDifficultyStartWithAllItemsKnownOptionData">
+		<Property name="InitialKnownThings" value="GcKnownThingsPreset">
+			<Property name="KnownProducts">
+				<Property name="KnownProducts" value="OT_PATH_TILE" />
+				<Property name="KnownProducts" value="OT_PATH_TRI" />
+				<Property name="KnownProducts" value="OT_CURB" />
+				<Property name="KnownProducts" value="OT_SIGNPOST" />
+				<Property name="KnownProducts" value="OT_LAMP" />
+				<Property name="KnownProducts" value="DECALPATH" />
+			</Property>
+		</Property>
+	</Property>
+</Data>

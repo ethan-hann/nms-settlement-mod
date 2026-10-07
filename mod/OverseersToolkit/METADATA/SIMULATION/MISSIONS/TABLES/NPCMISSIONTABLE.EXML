@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcMissionTable">
+	<Property name="Missions">
+		<Property name="Missions" value="GcGenericMissionSequence" _id="OT_UNLOCK_B">
+			<Property name="MissionID" value="OT_UNLOCK_B" />
+			<Property name="MissionClass" value="Guide" />
+			<Property name="MissionIsCritical" value="false" />
+			<Property name="MissionObjective" value="" />
+			<Property name="MissionTitles" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionSubtitles" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionDescriptions" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="SeasonalLogTextOverrides" value="GcSeasonalLogOverrides">
+				<Property name="ApplicableSeasonNumbers" />
+				<Property name="MissionTitle" value="" />
+				<Property name="MissionSubtitle" value="" />
+				<Property name="MissionDescription" value="" />
+			</Property>
+			<Property name="MissionDescSwitchOverride" value="" />
+			<Property name="MissionProcDescriptionHeader" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionProcDescriptionA" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionProcDescriptionB" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionProcDescriptionC" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="UseScanEventDetailsInLogInfo" value="false" />
+			<Property name="UseFirstPurpleSystemDetailsInLogInfo" value="false" />
+			<Property name="MissionIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="MissionIconSelected" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="MissionIconNotSelected" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="MissionPriority" value="-1" />
+			<Property name="MissionCategory" value="GcMissionCategory">
+				<Property name="MissionCategory" value="Mission" />
+			</Property>
+			<Property name="MissionPageHint" value="GcMissionPageHint">
+				<Property name="MissionPageHint" value="None" />
+			</Property>
+			<Property name="MissionPageLocID" value="" />
+			<Property name="MissionBuildMenuHint" value="" />
+			<Property name="MissionHasColourOverride" value="false" />
+			<Property name="MissionColourOverride">
+				<Property name="R" value="1.000000" />
+				<Property name="G" value="1.000000" />
+				<Property name="B" value="1.000000" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="BeginCheckFrequency" value="20" />
+			<Property name="WikiMissionBlockedBySeasons" />
+			<Property name="DefaultItems" value="GcDefaultMissionItemsTable">
+				<Property name="PrimarySubstances" />
+				<Property name="SecondarySubstances" />
+				<Property name="PrimaryProducts" />
+				<Property name="SecondaryProducts" />
+				<Property name="AmountMin" value="0" />
+				<Property name="AmountMax" value="0" />
+				<Property name="AmountShouldBeRoundNumber" value="false" />
+			</Property>
+			<Property name="PrefixTitle" value="true" />
+			<Property name="NextMissionHint" value="" />
+			<Property name="MessageComplete" value="Default" />
+			<Property name="MessageStart" value="Default" />
+			<Property name="MissionBoardOptions" value="GcMissionBoardOptions">
+				<Property name="Type" value="GcMissionType">
+					<Property name="MissionType" value="SpaceCombat" />
+				</Property>
+				<Property name="Difficulty" value="GcMissionDifficulty">
+					<Property name="MissionDifficulty" value="Normal" />
+				</Property>
+				<Property name="MinRank" value="0" />
+				<Property name="CloseMissionGiver" value="false" />
+				<Property name="IsGuildShopMission" value="false" />
+				<Property name="IsPlanetProcMission" value="false" />
+				<Property name="IsMultiplayerEventMission" value="false" />
+				<Property name="RewardPenaltyOnAbandon" value="" />
+				<Property name="Faction" />
+				<Property name="Weighting" value="100" />
+				<Property name="IgnoreCalculatedObjective" value="false" />
+				<Property name="MultiplayerMissionInitialWarpScanEvent" value="" />
+				<Property name="DefaultItemInitialWarpScanEvents" />
+				<Property name="DefaultItemTypeForInitialWarp" value="None" />
+				<Property name="BasePartBlueprints" />
+				<Property name="MandatorySalvageEquipment" />
+				<Property name="RequireUncompletedPOI" value="false" />
+				<Property name="RequireUncompletedPOIOfType" value="GcSpacePoiType">
+					<Property name="SpacePoiType" value="AsteroidBelt" />
+				</Property>
+			</Property>
+			<Property name="AutoStart" value="AllModes" />
+			<Property name="RestartOnCompletion" value="false" />
+			<Property name="CancelSetsComplete" value="false" />
+			<Property name="Dialog" value="GcAlienPuzzleTable">
+				<Property name="Table" />
+			</Property>
+			<Property name="ScanEvents" />
+			<Property name="Rewards">
+				<Property name="Rewards" value="GcGenericRewardTableEntry" _id="R_OT_UNLOCK_B">
+					<Property name="Id" value="R_OT_UNLOCK_B" />
+					<Property name="List" value="GcRewardTableItemList">
+						<Property name="RewardChoice" value="GiveAll" />
+						<Property name="OverrideZeroSeed" value="false" />
+						<Property name="UseInventoryChoiceOverride" value="false" />
+						<Property name="IncrementStat" value="" />
+						<Property name="List">
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_PATH_TILE" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_PATH_TRI" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_CURB" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_LAMP" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="DECALPATH" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+			<Property name="Costs" />
+			<Property name="TradingDataOverride" value="GcTradeData">
+				<Property name="AlwaysPresentProducts" />
+				<Property name="AlwaysPresentSubstances" />
+				<Property name="OptionalProducts" />
+				<Property name="OptionalSubstances" />
+				<Property name="AlwaysConsideredBarterProducts" />
+				<Property name="BarterAcceptanceCurve" value="TkCurveType">
+					<Property name="Curve" value="Linear" />
+				</Property>
+				<Property name="BarterPriceMultiplier" value="1.000000" />
+				<Property name="BarterItemPreferenceFloor" value="0.500000" />
+				<Property name="MinItemsForSale" value="5" />
+				<Property name="MaxItemsForSale" value="15" />
+				<Property name="PercentageOfItemsAreProducts" value="0.300000" />
+				<Property name="BuyPriceIncreaseRedThreshold" value="20.000000" />
+				<Property name="BuyPriceDecreaseGreenThreshold" value="-10.000000" />
+				<Property name="SellPriceIncreaseGreenThreshold" value="10.000000" />
+				<Property name="SellPriceDecreaseRedThreshold" value="-20.000000" />
+				<Property name="ShowSeasonRewards" value="false" />
+				<Property name="UseBarterForBuy" value="false" />
+				<Property name="MinAmountOfProductAvailable">
+					<Property name="Poor" value="10" />
+					<Property name="Average" value="10" />
+					<Property name="Wealthy" value="10" />
+					<Property name="Pirate" value="10" />
+				</Property>
+				<Property name="MaxAmountOfProductAvailable">
+					<Property name="Poor" value="100" />
+					<Property name="Average" value="100" />
+					<Property name="Wealthy" value="100" />
+					<Property name="Pirate" value="100" />
+				</Property>
+				<Property name="MinAmountOfSubstanceAvailable">
+					<Property name="Poor" value="100" />
+					<Property name="Average" value="100" />
+					<Property name="Wealthy" value="100" />
+					<Property name="Pirate" value="100" />
+				</Property>
+				<Property name="MaxAmountOfSubstanceAvailable">
+					<Property name="Poor" value="1000" />
+					<Property name="Average" value="1000" />
+					<Property name="Wealthy" value="1000" />
+					<Property name="Pirate" value="1000" />
+				</Property>
+				<Property name="MinExtraSystemProducts">
+					<Property name="Poor" value="2" />
+					<Property name="Average" value="2" />
+					<Property name="Wealthy" value="2" />
+					<Property name="Pirate" value="2" />
+				</Property>
+				<Property name="MaxExtraSystemProducts">
+					<Property name="Poor" value="4" />
+					<Property name="Average" value="4" />
+					<Property name="Wealthy" value="4" />
+					<Property name="Pirate" value="4" />
+				</Property>
+				<Property name="TradeProductsPriceImprovements">
+					<Property name="Poor" value="0.000000" />
+					<Property name="Average" value="0.000000" />
+					<Property name="Wealthy" value="0.000000" />
+					<Property name="Pirate" value="0.000000" />
+				</Property>
+			</Property>
+			<Property name="StartConditionTest" value="GcMissionConditionTest">
+				<Property name="ConditionTest" value="AnyFalse" />
+			</Property>
+			<Property name="CancelConditionTest" value="GcMissionConditionTest">
+				<Property name="ConditionTest" value="AnyFalse" />
+			</Property>
+			<Property name="StartIsCancel" value="false" />
+			<Property name="StartingConditions">
+				<Property name="StartingConditions" value="GcMissionConditionHasSettlementBuilding">
+					<Property name="GcMissionConditionHasSettlementBuilding">
+						<Property name="BuildingClass" value="GcBuildingClassification">
+							<Property name="BuildingClass" value="None" />
+						</Property>
+						<Property name="AnyBuildingClass" value="true" />
+						<Property name="MinimumClass" value="GcInventoryClass">
+							<Property name="InventoryClass" value="B" />
+						</Property>
+						<Property name="RequireComplete" value="true" />
+						<Property name="CheckAllSettlements" value="true" />
+					</Property>
+				</Property>
+			</Property>
+			<Property name="CancelingConditions" />
+			<Property name="FinalStageVersions">
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="4" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="5" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="6" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="7" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="8" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="9" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="10" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="11" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="12" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="13" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="14" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="15" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="16" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="17" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="18" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="19" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="20" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="21" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="22" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="23" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="24" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="25" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="26" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="27" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="28" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="29" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="30" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="31" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="32" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="33" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="34" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="35" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="36" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="37" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="38" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="39" />
+					<Property name="Progress" value="2" />
+				</Property>
+			</Property>
+			<Property name="Stages">
+				<Property name="Stages" value="GcGenericMissionStage">
+					<Property name="Versions" />
+					<Property name="Stage" value="GcMissionSequenceGroup">
+						<Property name="GcMissionSequenceGroup">
+							<Property name="Silent" value="true" />
+							<Property name="Icon" value="TkTextureResource">
+								<Property name="Filename" value="" />
+							</Property>
+							<Property name="PageHint" value="GcMissionPageHint">
+								<Property name="MissionPageHint" value="None" />
+							</Property>
+							<Property name="GetPageHintFromInventoryHint" value="true" />
+							<Property name="PageDataLocID" value="" />
+							<Property name="BuildMenuHint" value="" />
+							<Property name="InventoryHint" value="" />
+							<Property name="TerrainTarget" value="" />
+							<Property name="FoodTarget" value="" />
+							<Property name="DebugText" value="only do this if you don't know it" />
+							<Property name="ObjectiveID" value="" />
+							<Property name="ObjectiveTipID" value="" />
+							<Property name="HasCategoryOverride" value="false" />
+							<Property name="OverrideCategory" value="GcMissionCategory">
+								<Property name="MissionCategory" value="Mission" />
+							</Property>
+							<Property name="HasColourOverride" value="false" />
+							<Property name="ColourOverride">
+								<Property name="R" value="1.000000" />
+								<Property name="G" value="1.000000" />
+								<Property name="B" value="1.000000" />
+								<Property name="A" value="1.000000" />
+							</Property>
+							<Property name="PrefixTitle" value="false" />
+							<Property name="PrefixTitleText" value="" />
+							<Property name="BlockPinning" value="false" />
+							<Property name="AutoPinRepairs" value="false" />
+							<Property name="BlockSpaceBattles" value="false" />
+							<Property name="ConditionTest" value="GcMissionConditionTest">
+								<Property name="ConditionTest" value="AnyTrue" />
+							</Property>
+							<Property name="HideFromLogIfConditionsMet" value="false" />
+							<Property name="DoConsequencesIfNeverActivated" value="true" />
+							<Property name="RepeatLogic" value="None" />
+							<Property name="IconStyle" value="Default" />
+							<Property name="GalMapPathOverride" value="None" />
+							<Property name="SpecialButtonIcon" value="TkInputEnum">
+								<Property name="InputButton" value="None" />
+							</Property>
+							<Property name="ObjectiveFormatting" value="GcObjectiveTextFormatOptions">
+								<Property name="ObjectivesCanBeFormattedBySequences" value="false" />
+								<Property name="FormattableObjective" value="" />
+								<Property name="FormattableObjectiveTip" value="" />
+							</Property>
+							<Property name="SeasonalObjectiveOverrides" value="GcSeasonalObjectiveOverrides">
+								<Property name="ApplicableSeasonNumbers" />
+								<Property name="OverrideObjective" value="" />
+								<Property name="OverrideObjectiveTip" value="" />
+							</Property>
+							<Property name="SurveyTarget" value="GcTargetMissionSurveyOptions">
+								<Property name="TargetMissionSurveyId" value="" />
+								<Property name="TargetMissionSurveyDefinitelyExists" value="false" />
+								<Property name="ForceSurveyTextForAllSequencesInThisGroup" value="false" />
+								<Property name="TargetMissionSurveyDefinitelyExistsWithResourceHint" value="" />
+								<Property name="SurveyInactiveHint" value="NOTIFY_MISSION_SURVEY_INACTIVE" />
+								<Property name="SurveySwapHint" value="NOTIFY_MISSION_SURVEY_SWAP" />
+								<Property name="SurveyHint" value="NOTIFY_MISSION_SURVEY" />
+								<Property name="SurveyVehicleHint" value="NOTIFY_MISSION_SURVEY_CAR" />
+							</Property>
+							<Property name="CustomNotifyTimers" value="GcCustomNotifyTimerOptions">
+								<Property name="HasCustomNotifyTimer" value="false" />
+								<Property name="NotifyDisplayTime" value="20.000000" />
+								<Property name="NotifyPauseTime" value="30.000000" />
+							</Property>
+							<Property name="Conditions">
+								<Property name="Conditions" value="GcMissionConditionSeasonNumber">
+									<Property name="GcMissionConditionSeasonNumber">
+										<Property name="ActiveSeason" value="12" />
+										<Property name="IncludeRemix" value="true" />
+										<Property name="IncludeOtherSeasons" />
+									</Property>
+								</Property>
+								<Property name="Conditions" value="GcMissionConditionProductKnown">
+									<Property name="GcMissionConditionProductKnown">
+										<Property name="Product" value="OT_PATH_TILE" />
+										<Property name="Default" value="GcDefaultMissionProductEnum">
+											<Property name="DefaultProductType" value="None" />
+										</Property>
+										<Property name="DependentOnSeasonMilestone" value="false" />
+										<Property name="TakeProductFromSeasonData" value="false" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="Consequences" />
+							<Property name="Stages">
+								<Property name="Stages" value="GcGenericMissionStage">
+									<Property name="Versions">
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="4" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="5" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="6" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="7" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="8" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="9" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="10" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="11" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="12" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="13" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="14" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="15" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="16" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="17" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="18" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="19" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="20" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="21" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="22" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="23" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="24" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="25" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="26" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="27" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="28" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="29" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="30" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="31" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="32" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="33" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="34" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="35" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="36" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="37" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="38" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="39" />
+											<Property name="Progress" value="0" />
+										</Property>
+									</Property>
+									<Property name="Stage" value="GcMissionSequenceWait">
+										<Property name="GcMissionSequenceWait">
+											<Property name="Time" value="1.000000" />
+											<Property name="DebugText" value="small wait" />
+											<Property name="SuppressMessages" value="false" />
+											<Property name="MultiplyTimeBySeasonValue" value="false" />
+										</Property>
+									</Property>
+								</Property>
+								<Property name="Stages" value="GcGenericMissionStage">
+									<Property name="Versions">
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="4" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="5" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="6" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="7" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="8" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="9" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="10" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="11" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="12" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="13" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="14" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="15" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="16" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="17" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="18" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="19" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="20" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="21" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="22" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="23" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="24" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="25" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="26" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="27" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="28" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="29" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="30" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="31" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="32" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="33" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="34" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="35" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="36" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="37" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="38" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="39" />
+											<Property name="Progress" value="1" />
+										</Property>
+									</Property>
+									<Property name="Stage" value="GcMissionSequenceReward">
+										<Property name="GcMissionSequenceReward">
+											<Property name="Message" value="" />
+											<Property name="Reward" value="R_OT_UNLOCK_B" />
+											<Property name="DoMissionBoardOverride" value="false" />
+											<Property name="Silent" value="false" />
+											<Property name="RewardInventoryOverride" value="None" />
+											<Property name="DebugText" value="teach the class B settlement parts" />
+										</Property>
+									</Property>
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+			<Property name="ForcesBuildMenuHint" value="false" />
+			<Property name="IsProceduralAllowed" value="false" />
+			<Property name="IsRecurring" value="false" />
+			<Property name="IsLegacy" value="false" />
+			<Property name="BlocksPinning" value="false" />
+			<Property name="CanRenounce" value="false" />
+			<Property name="UseCommunityMissionForLog" value="" />
+			<Property name="TakeCommunityMissionIDFromSeasonData" value="false" />
+			<Property name="TelemetryUpload" value="false" />
+			<Property name="UseSeasonTitleOverride" value="false" />
+			<Property name="RequiresSettlement" value="false" />
+			<Property name="SettlementAbandonOSD" value="" />
+		</Property>
+		<Property name="Missions" value="GcGenericMissionSequence" _id="OT_UNLOCK_A">
+			<Property name="MissionID" value="OT_UNLOCK_A" />
+			<Property name="MissionClass" value="Guide" />
+			<Property name="MissionIsCritical" value="false" />
+			<Property name="MissionObjective" value="" />
+			<Property name="MissionTitles" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionSubtitles" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionDescriptions" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="SeasonalLogTextOverrides" value="GcSeasonalLogOverrides">
+				<Property name="ApplicableSeasonNumbers" />
+				<Property name="MissionTitle" value="" />
+				<Property name="MissionSubtitle" value="" />
+				<Property name="MissionDescription" value="" />
+			</Property>
+			<Property name="MissionDescSwitchOverride" value="" />
+			<Property name="MissionProcDescriptionHeader" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionProcDescriptionA" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionProcDescriptionB" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="MissionProcDescriptionC" value="GcNumberedTextList">
+				<Property name="Format" value="" />
+				<Property name="Count" value="1" />
+			</Property>
+			<Property name="UseScanEventDetailsInLogInfo" value="false" />
+			<Property name="UseFirstPurpleSystemDetailsInLogInfo" value="false" />
+			<Property name="MissionIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="MissionIconSelected" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="MissionIconNotSelected" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="MissionPriority" value="-1" />
+			<Property name="MissionCategory" value="GcMissionCategory">
+				<Property name="MissionCategory" value="Mission" />
+			</Property>
+			<Property name="MissionPageHint" value="GcMissionPageHint">
+				<Property name="MissionPageHint" value="None" />
+			</Property>
+			<Property name="MissionPageLocID" value="" />
+			<Property name="MissionBuildMenuHint" value="" />
+			<Property name="MissionHasColourOverride" value="false" />
+			<Property name="MissionColourOverride">
+				<Property name="R" value="1.000000" />
+				<Property name="G" value="1.000000" />
+				<Property name="B" value="1.000000" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="BeginCheckFrequency" value="20" />
+			<Property name="WikiMissionBlockedBySeasons" />
+			<Property name="DefaultItems" value="GcDefaultMissionItemsTable">
+				<Property name="PrimarySubstances" />
+				<Property name="SecondarySubstances" />
+				<Property name="PrimaryProducts" />
+				<Property name="SecondaryProducts" />
+				<Property name="AmountMin" value="0" />
+				<Property name="AmountMax" value="0" />
+				<Property name="AmountShouldBeRoundNumber" value="false" />
+			</Property>
+			<Property name="PrefixTitle" value="true" />
+			<Property name="NextMissionHint" value="" />
+			<Property name="MessageComplete" value="Default" />
+			<Property name="MessageStart" value="Default" />
+			<Property name="MissionBoardOptions" value="GcMissionBoardOptions">
+				<Property name="Type" value="GcMissionType">
+					<Property name="MissionType" value="SpaceCombat" />
+				</Property>
+				<Property name="Difficulty" value="GcMissionDifficulty">
+					<Property name="MissionDifficulty" value="Normal" />
+				</Property>
+				<Property name="MinRank" value="0" />
+				<Property name="CloseMissionGiver" value="false" />
+				<Property name="IsGuildShopMission" value="false" />
+				<Property name="IsPlanetProcMission" value="false" />
+				<Property name="IsMultiplayerEventMission" value="false" />
+				<Property name="RewardPenaltyOnAbandon" value="" />
+				<Property name="Faction" />
+				<Property name="Weighting" value="100" />
+				<Property name="IgnoreCalculatedObjective" value="false" />
+				<Property name="MultiplayerMissionInitialWarpScanEvent" value="" />
+				<Property name="DefaultItemInitialWarpScanEvents" />
+				<Property name="DefaultItemTypeForInitialWarp" value="None" />
+				<Property name="BasePartBlueprints" />
+				<Property name="MandatorySalvageEquipment" />
+				<Property name="RequireUncompletedPOI" value="false" />
+				<Property name="RequireUncompletedPOIOfType" value="GcSpacePoiType">
+					<Property name="SpacePoiType" value="AsteroidBelt" />
+				</Property>
+			</Property>
+			<Property name="AutoStart" value="AllModes" />
+			<Property name="RestartOnCompletion" value="false" />
+			<Property name="CancelSetsComplete" value="false" />
+			<Property name="Dialog" value="GcAlienPuzzleTable">
+				<Property name="Table" />
+			</Property>
+			<Property name="ScanEvents" />
+			<Property name="Rewards">
+				<Property name="Rewards" value="GcGenericRewardTableEntry" _id="R_OT_UNLOCK_A">
+					<Property name="Id" value="R_OT_UNLOCK_A" />
+					<Property name="List" value="GcRewardTableItemList">
+						<Property name="RewardChoice" value="GiveAll" />
+						<Property name="OverrideZeroSeed" value="false" />
+						<Property name="UseInventoryChoiceOverride" value="false" />
+						<Property name="IncrementStat" value="" />
+						<Property name="List">
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_SIGNPOST" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+			<Property name="Costs" />
+			<Property name="TradingDataOverride" value="GcTradeData">
+				<Property name="AlwaysPresentProducts" />
+				<Property name="AlwaysPresentSubstances" />
+				<Property name="OptionalProducts" />
+				<Property name="OptionalSubstances" />
+				<Property name="AlwaysConsideredBarterProducts" />
+				<Property name="BarterAcceptanceCurve" value="TkCurveType">
+					<Property name="Curve" value="Linear" />
+				</Property>
+				<Property name="BarterPriceMultiplier" value="1.000000" />
+				<Property name="BarterItemPreferenceFloor" value="0.500000" />
+				<Property name="MinItemsForSale" value="5" />
+				<Property name="MaxItemsForSale" value="15" />
+				<Property name="PercentageOfItemsAreProducts" value="0.300000" />
+				<Property name="BuyPriceIncreaseRedThreshold" value="20.000000" />
+				<Property name="BuyPriceDecreaseGreenThreshold" value="-10.000000" />
+				<Property name="SellPriceIncreaseGreenThreshold" value="10.000000" />
+				<Property name="SellPriceDecreaseRedThreshold" value="-20.000000" />
+				<Property name="ShowSeasonRewards" value="false" />
+				<Property name="UseBarterForBuy" value="false" />
+				<Property name="MinAmountOfProductAvailable">
+					<Property name="Poor" value="10" />
+					<Property name="Average" value="10" />
+					<Property name="Wealthy" value="10" />
+					<Property name="Pirate" value="10" />
+				</Property>
+				<Property name="MaxAmountOfProductAvailable">
+					<Property name="Poor" value="100" />
+					<Property name="Average" value="100" />
+					<Property name="Wealthy" value="100" />
+					<Property name="Pirate" value="100" />
+				</Property>
+				<Property name="MinAmountOfSubstanceAvailable">
+					<Property name="Poor" value="100" />
+					<Property name="Average" value="100" />
+					<Property name="Wealthy" value="100" />
+					<Property name="Pirate" value="100" />
+				</Property>
+				<Property name="MaxAmountOfSubstanceAvailable">
+					<Property name="Poor" value="1000" />
+					<Property name="Average" value="1000" />
+					<Property name="Wealthy" value="1000" />
+					<Property name="Pirate" value="1000" />
+				</Property>
+				<Property name="MinExtraSystemProducts">
+					<Property name="Poor" value="2" />
+					<Property name="Average" value="2" />
+					<Property name="Wealthy" value="2" />
+					<Property name="Pirate" value="2" />
+				</Property>
+				<Property name="MaxExtraSystemProducts">
+					<Property name="Poor" value="4" />
+					<Property name="Average" value="4" />
+					<Property name="Wealthy" value="4" />
+					<Property name="Pirate" value="4" />
+				</Property>
+				<Property name="TradeProductsPriceImprovements">
+					<Property name="Poor" value="0.000000" />
+					<Property name="Average" value="0.000000" />
+					<Property name="Wealthy" value="0.000000" />
+					<Property name="Pirate" value="0.000000" />
+				</Property>
+			</Property>
+			<Property name="StartConditionTest" value="GcMissionConditionTest">
+				<Property name="ConditionTest" value="AnyFalse" />
+			</Property>
+			<Property name="CancelConditionTest" value="GcMissionConditionTest">
+				<Property name="ConditionTest" value="AnyFalse" />
+			</Property>
+			<Property name="StartIsCancel" value="false" />
+			<Property name="StartingConditions">
+				<Property name="StartingConditions" value="GcMissionConditionHasSettlementBuilding">
+					<Property name="GcMissionConditionHasSettlementBuilding">
+						<Property name="BuildingClass" value="GcBuildingClassification">
+							<Property name="BuildingClass" value="None" />
+						</Property>
+						<Property name="AnyBuildingClass" value="true" />
+						<Property name="MinimumClass" value="GcInventoryClass">
+							<Property name="InventoryClass" value="A" />
+						</Property>
+						<Property name="RequireComplete" value="true" />
+						<Property name="CheckAllSettlements" value="true" />
+					</Property>
+				</Property>
+			</Property>
+			<Property name="CancelingConditions" />
+			<Property name="FinalStageVersions">
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="4" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="5" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="6" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="7" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="8" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="9" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="10" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="11" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="12" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="13" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="14" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="15" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="16" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="17" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="18" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="19" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="20" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="21" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="22" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="23" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="24" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="25" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="26" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="27" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="28" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="29" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="30" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="31" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="32" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="33" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="34" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="35" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="36" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="37" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="38" />
+					<Property name="Progress" value="2" />
+				</Property>
+				<Property name="FinalStageVersions" value="GcGenericMissionVersionProgress">
+					<Property name="Version" value="39" />
+					<Property name="Progress" value="2" />
+				</Property>
+			</Property>
+			<Property name="Stages">
+				<Property name="Stages" value="GcGenericMissionStage">
+					<Property name="Versions" />
+					<Property name="Stage" value="GcMissionSequenceGroup">
+						<Property name="GcMissionSequenceGroup">
+							<Property name="Silent" value="true" />
+							<Property name="Icon" value="TkTextureResource">
+								<Property name="Filename" value="" />
+							</Property>
+							<Property name="PageHint" value="GcMissionPageHint">
+								<Property name="MissionPageHint" value="None" />
+							</Property>
+							<Property name="GetPageHintFromInventoryHint" value="true" />
+							<Property name="PageDataLocID" value="" />
+							<Property name="BuildMenuHint" value="" />
+							<Property name="InventoryHint" value="" />
+							<Property name="TerrainTarget" value="" />
+							<Property name="FoodTarget" value="" />
+							<Property name="DebugText" value="only do this if you don't know it" />
+							<Property name="ObjectiveID" value="" />
+							<Property name="ObjectiveTipID" value="" />
+							<Property name="HasCategoryOverride" value="false" />
+							<Property name="OverrideCategory" value="GcMissionCategory">
+								<Property name="MissionCategory" value="Mission" />
+							</Property>
+							<Property name="HasColourOverride" value="false" />
+							<Property name="ColourOverride">
+								<Property name="R" value="1.000000" />
+								<Property name="G" value="1.000000" />
+								<Property name="B" value="1.000000" />
+								<Property name="A" value="1.000000" />
+							</Property>
+							<Property name="PrefixTitle" value="false" />
+							<Property name="PrefixTitleText" value="" />
+							<Property name="BlockPinning" value="false" />
+							<Property name="AutoPinRepairs" value="false" />
+							<Property name="BlockSpaceBattles" value="false" />
+							<Property name="ConditionTest" value="GcMissionConditionTest">
+								<Property name="ConditionTest" value="AnyTrue" />
+							</Property>
+							<Property name="HideFromLogIfConditionsMet" value="false" />
+							<Property name="DoConsequencesIfNeverActivated" value="true" />
+							<Property name="RepeatLogic" value="None" />
+							<Property name="IconStyle" value="Default" />
+							<Property name="GalMapPathOverride" value="None" />
+							<Property name="SpecialButtonIcon" value="TkInputEnum">
+								<Property name="InputButton" value="None" />
+							</Property>
+							<Property name="ObjectiveFormatting" value="GcObjectiveTextFormatOptions">
+								<Property name="ObjectivesCanBeFormattedBySequences" value="false" />
+								<Property name="FormattableObjective" value="" />
+								<Property name="FormattableObjectiveTip" value="" />
+							</Property>
+							<Property name="SeasonalObjectiveOverrides" value="GcSeasonalObjectiveOverrides">
+								<Property name="ApplicableSeasonNumbers" />
+								<Property name="OverrideObjective" value="" />
+								<Property name="OverrideObjectiveTip" value="" />
+							</Property>
+							<Property name="SurveyTarget" value="GcTargetMissionSurveyOptions">
+								<Property name="TargetMissionSurveyId" value="" />
+								<Property name="TargetMissionSurveyDefinitelyExists" value="false" />
+								<Property name="ForceSurveyTextForAllSequencesInThisGroup" value="false" />
+								<Property name="TargetMissionSurveyDefinitelyExistsWithResourceHint" value="" />
+								<Property name="SurveyInactiveHint" value="NOTIFY_MISSION_SURVEY_INACTIVE" />
+								<Property name="SurveySwapHint" value="NOTIFY_MISSION_SURVEY_SWAP" />
+								<Property name="SurveyHint" value="NOTIFY_MISSION_SURVEY" />
+								<Property name="SurveyVehicleHint" value="NOTIFY_MISSION_SURVEY_CAR" />
+							</Property>
+							<Property name="CustomNotifyTimers" value="GcCustomNotifyTimerOptions">
+								<Property name="HasCustomNotifyTimer" value="false" />
+								<Property name="NotifyDisplayTime" value="20.000000" />
+								<Property name="NotifyPauseTime" value="30.000000" />
+							</Property>
+							<Property name="Conditions">
+								<Property name="Conditions" value="GcMissionConditionSeasonNumber">
+									<Property name="GcMissionConditionSeasonNumber">
+										<Property name="ActiveSeason" value="12" />
+										<Property name="IncludeRemix" value="true" />
+										<Property name="IncludeOtherSeasons" />
+									</Property>
+								</Property>
+								<Property name="Conditions" value="GcMissionConditionProductKnown">
+									<Property name="GcMissionConditionProductKnown">
+										<Property name="Product" value="OT_SIGNPOST" />
+										<Property name="Default" value="GcDefaultMissionProductEnum">
+											<Property name="DefaultProductType" value="None" />
+										</Property>
+										<Property name="DependentOnSeasonMilestone" value="false" />
+										<Property name="TakeProductFromSeasonData" value="false" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="Consequences" />
+							<Property name="Stages">
+								<Property name="Stages" value="GcGenericMissionStage">
+									<Property name="Versions">
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="4" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="5" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="6" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="7" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="8" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="9" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="10" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="11" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="12" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="13" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="14" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="15" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="16" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="17" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="18" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="19" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="20" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="21" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="22" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="23" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="24" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="25" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="26" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="27" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="28" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="29" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="30" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="31" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="32" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="33" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="34" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="35" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="36" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="37" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="38" />
+											<Property name="Progress" value="0" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="39" />
+											<Property name="Progress" value="0" />
+										</Property>
+									</Property>
+									<Property name="Stage" value="GcMissionSequenceWait">
+										<Property name="GcMissionSequenceWait">
+											<Property name="Time" value="1.000000" />
+											<Property name="DebugText" value="small wait" />
+											<Property name="SuppressMessages" value="false" />
+											<Property name="MultiplyTimeBySeasonValue" value="false" />
+										</Property>
+									</Property>
+								</Property>
+								<Property name="Stages" value="GcGenericMissionStage">
+									<Property name="Versions">
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="4" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="5" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="6" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="7" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="8" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="9" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="10" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="11" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="12" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="13" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="14" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="15" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="16" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="17" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="18" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="19" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="20" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="21" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="22" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="23" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="24" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="25" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="26" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="27" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="28" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="29" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="30" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="31" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="32" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="33" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="34" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="35" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="36" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="37" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="38" />
+											<Property name="Progress" value="1" />
+										</Property>
+										<Property name="Versions" value="GcGenericMissionVersionProgress">
+											<Property name="Version" value="39" />
+											<Property name="Progress" value="1" />
+										</Property>
+									</Property>
+									<Property name="Stage" value="GcMissionSequenceReward">
+										<Property name="GcMissionSequenceReward">
+											<Property name="Message" value="" />
+											<Property name="Reward" value="R_OT_UNLOCK_A" />
+											<Property name="DoMissionBoardOverride" value="false" />
+											<Property name="Silent" value="false" />
+											<Property name="RewardInventoryOverride" value="None" />
+											<Property name="DebugText" value="teach the class A settlement parts" />
+										</Property>
+									</Property>
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+			<Property name="ForcesBuildMenuHint" value="false" />
+			<Property name="IsProceduralAllowed" value="false" />
+			<Property name="IsRecurring" value="false" />
+			<Property name="IsLegacy" value="false" />
+			<Property name="BlocksPinning" value="false" />
+			<Property name="CanRenounce" value="false" />
+			<Property name="UseCommunityMissionForLog" value="" />
+			<Property name="TakeCommunityMissionIDFromSeasonData" value="false" />
+			<Property name="TelemetryUpload" value="false" />
+			<Property name="UseSeasonTitleOverride" value="false" />
+			<Property name="RequiresSettlement" value="false" />
+			<Property name="SettlementAbandonOSD" value="" />
+		</Property>
+	</Property>
+</Data>

@@ -133,5 +133,35 @@
         }
       }
     }
+  ],
+  "unlocks": [
+    {
+      "id": "OT_UNLOCK_B",
+      "min_class": "B",
+      "reward": "R_OT_UNLOCK_B",
+      "recipes": [
+        "OT_PATH_TILE",
+        "OT_PATH_TRI",
+        "OT_CURB",
+        "OT_LAMP",
+        "DECALPATH"
+      ]
+    },
+    {
+      "id": "OT_UNLOCK_A",
+      "min_class": "A",
+      "reward": "R_OT_UNLOCK_A",
+      "recipes": [
+        "OT_SIGNPOST"
+      ]
+    }
+  ],
+  "creative_known": [
+    "OT_PATH_TILE",
+    "OT_PATH_TRI",
+    "OT_CURB",
+    "OT_SIGNPOST",
+    "OT_LAMP",
+    "DECALPATH"
   ]
 }

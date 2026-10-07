@@ -16,6 +16,7 @@ Appends to these vanilla lists:
 
 | File | List |
 |---|---|
+| METADATA/GAMESTATE/DIFFICULTYCONFIG.EXML | StartWithAllItemsKnownEnabledData.InitialKnownThings.KnownProducts |
 | METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[DECALPATH].Groups |
 
 ### Adds new
@@ -37,6 +38,8 @@ Appends to these vanilla lists:
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_PATH_TILE] |
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_PATH_TRI] |
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_SIGNPOST] |
+| METADATA/SIMULATION/MISSIONS/TABLES/NPCMISSIONTABLE.EXML | Missions[OT_UNLOCK_A] |
+| METADATA/SIMULATION/MISSIONS/TABLES/NPCMISSIONTABLE.EXML | Missions[OT_UNLOCK_B] |
 | LocTable.MXML | (whole file) |
 
 ## OverseersToolkit-Defense
@@ -48,6 +51,7 @@ Appends to these vanilla lists:
 | File | List |
 |---|---|
 | GLOBALS/GCSETTLEMENTGLOBALS.EXML | Judgements |
+| METADATA/GAMESTATE/DIFFICULTYCONFIG.EXML | StartWithAllItemsKnownEnabledData.InitialKnownThings.KnownProducts |
 
 ### Adds new
 
@@ -57,6 +61,7 @@ Appends to these vanilla lists:
 | METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[OT_TOWER] |
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_TOWER] |
 | METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_WATCH] |
+| METADATA/SIMULATION/MISSIONS/TABLES/NPCMISSIONTABLE.EXML | Missions[OT_UNLOCK_S] |
 | LocTable.MXML | (whole file) |
 
 ## OverseersToolkit-OpenSettlements

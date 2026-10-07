@@ -281,13 +281,13 @@ def test_tower_reuses_a_vanilla_scene_that_exists_and_is_placeable_on_a_planet_b
     assert scene.lower() in files
 
 
-def test_tower_is_craftable_and_ships_no_unlock_or_blueprint_entries():
+def test_tower_is_craftable_and_learned_only_at_s_class():
     product = generated_file(PRODUCTS).find(f"Property[@name='Table']/Property[@_id='{TOWER}']")
     assert product is not None, f"{TOWER} has no product"
     assert value(product, "IsCraftable") == "true"
     names = [p.name.upper() for p in (MODS / DEFENSE).rglob("*") if p.is_file()]
-    assert not [n for n in names if "UNLOCK" in n or "BLUEPRINT" in n]
-    assert not {"unlocks", "blueprints"} & set(load_spec())
+    assert not [n for n in names if "UNLOCKABLEITEMTREES" in n or "BLUEPRINT" in n]
+    assert [(u["min_class"], u["recipes"]) for u in load_spec()["unlocks"]] == [("S", [TOWER])]
 
 
 def test_perk_ids_and_text_keys_are_unique_across_modules():
