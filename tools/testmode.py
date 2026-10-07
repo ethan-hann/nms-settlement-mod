@@ -450,7 +450,8 @@ def _compare_saves(env, manifest, test_slot):
             if name.lower() in ACCOUNT_FILES and kind != "deleted":
                 continue
             slot = slot_of(name)
-            if slot is not None and kind != "deleted":
+            # A tester may delete the known test slot to start a fresh game there.
+            if slot is not None and (kind != "deleted" or slot == test_slot):
                 slot_changes.setdefault(slot, []).append(rel)
                 continue
         failures.append(f"save folder: {rel} was {kind}")

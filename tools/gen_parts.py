@@ -8,7 +8,9 @@ Spec keys (all optional):
   text:      {loc_key: "English text"}                      -> LocTable.MXML
   subgroups: [{group, id, name}]                            -> new build-menu subgroup in a vanilla group
   parts:     [{id, copy_from, object: {field: value}, groups: [[group, subgroup]],
-               product: {field: value}}]                    -> new object, cost and product entries
+               product_from, product: {field: value}}]      -> new object, cost and product entries;
+               the cost entry is copied only if the source has one, and product_from names
+               another part to copy the product from (for sources with no base-part product)
   edits:     [{id, object: {field: value}, add_groups: [[group, subgroup]],
                new_product: {copy_from, fields: {field: value}}}]  -> changes to a vanilla part
 
@@ -55,6 +57,9 @@ class Table:
         self.root = ET.parse(Path(vanilla_dir) / rel).getroot()
         self.patch = ET.Element("Data", {"template": self.root.get("template")})
         self.lists = {}
+
+    def has(self, id_):
+        return self.root.find(f"Property[@name='{self.list_name}']/Property[@_id='{id_}']") is not None
 
     def vanilla_entry(self, id_):
         node = self.root.find(f"Property[@name='{self.list_name}']/Property[@_id='{id_}']")
@@ -112,6 +117,14 @@ def _copy_entry(table, source_id, new_id, owner):
     entry.set("_id", new_id)
     _field(entry, "ID", owner).set("value", new_id)
     return entry
+
+
+def _product_source(products, part):
+    src = part.get("product_from", part["copy_from"])
+    if not products.has(src):
+        hint = "" if "product_from" in part else "; set product_from to copy another part's product"
+        raise SpecError(f"{src} has no product in vanilla {products.out.name}{hint}")
+    return src
 
 
 def _check_ids(spec):
@@ -179,8 +192,10 @@ def build(spec, vanilla_dir=EXTRACTED):
             for g, s in part["groups"]:
                 groups.append(_group(g, s))
         objects.add(entry)
-        costs.add(_copy_entry(costs, src, id_, id_))
-        product = _copy_entry(products, src, id_, id_)
+        # Most vanilla parts have no cost entry, so a missing one is not an error.
+        if costs.has(src):
+            costs.add(_copy_entry(costs, src, id_, id_))
+        product = _copy_entry(products, _product_source(products, part), id_, id_)
         _set(product, part.get("product"), id_)
         products.add(product)
 

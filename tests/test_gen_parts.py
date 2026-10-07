@@ -28,6 +28,28 @@ OBJECTS = """<Data template="cGcBaseBuildingTable">
       <Property name="PlanetBaseLimit" value="50" />
       <Property name="Groups" />
     </Property>
+    <Property name="Objects" value="GcBaseBuildingEntry" _id="S_WALL_Q_H">
+      <Property name="ID" value="S_WALL_Q_H" />
+      <Property name="PlacementScene" value="TkModelResource">
+        <Property name="Filename" value="MODELS/WALL.SCENE.MBIN" />
+      </Property>
+      <Property name="PlanetBaseLimit" value="0" />
+      <Property name="Groups">
+        <Property name="Groups" value="GcBaseBuildingEntryGroup" _index="0">
+          <Property name="Group" value="BASIC_S" />
+          <Property name="SubGroupName" value="S_WALLS" />
+          <Property name="SubGroup" value="0" />
+        </Property>
+      </Property>
+    </Property>
+    <Property name="Objects" value="GcBaseBuildingEntry" _id="DATASIGN">
+      <Property name="ID" value="DATASIGN" />
+      <Property name="PlacementScene" value="TkModelResource">
+        <Property name="Filename" value="MODELS/SIGN.SCENE.MBIN" />
+      </Property>
+      <Property name="PlanetBaseLimit" value="10" />
+      <Property name="Groups" />
+    </Property>
   </Property>
   <Property name="Groups">
     <Property name="Groups" value="GcBaseBuildingGroup" _id="MOD">
@@ -67,6 +89,19 @@ PRODUCTS = """<Data template="cGcProductTable">
         <Property name="Requirements" value="GcTechnologyRequirement" _id="SAND1">
           <Property name="ID" value="SAND1" />
           <Property name="Amount" value="5" />
+        </Property>
+      </Property>
+    </Property>
+    <Property name="Table" value="GcProductData" _id="S_WALL_Q_H">
+      <Property name="ID" value="S_WALL_Q_H" />
+      <Property name="Name" value="BLD_S_WALL_Q_H_NAME" />
+      <Property name="Icon" value="TkTextureResource">
+        <Property name="Filename" value="TEXTURES/WALL.DDS" />
+      </Property>
+      <Property name="Requirements">
+        <Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+          <Property name="ID" value="LAND2" />
+          <Property name="Amount" value="10" />
         </Property>
       </Property>
     </Property>
@@ -144,6 +179,39 @@ def test_new_part_gets_cost_and_product_entries(vanilla):
     assert get(product, "Name").get("value") == "OT_PATH_TILE_NAME"
     assert get(get(product, "Icon"), "Filename").get("value") == "TEXTURES/PATH.DDS"
     assert get(product, "Requirements").find("Property[@_id='SAND1']") is not None
+
+
+def test_source_without_a_cost_entry_gets_none(vanilla):
+    out = files({"parts": [{"id": "OT_CURB", "copy_from": "S_WALL_Q_H"}]}, vanilla)
+    assert item(out[OBJ], "Objects", "OT_CURB") is not None
+    assert item(out[PROD], "Table", "OT_CURB") is not None
+    assert COST not in out
+
+
+def test_product_can_be_copied_from_a_different_part(vanilla):
+    spec = {
+        "parts": [
+            {
+                "id": "OT_SIGNPOST",
+                "copy_from": "DATASIGN",
+                "product_from": "S_WALL_Q_H",
+                "product": {"Name": "OT_SIGNPOST_NAME"},
+            }
+        ]
+    }
+    out = files(spec, vanilla)
+    entry = item(out[OBJ], "Objects", "OT_SIGNPOST")
+    assert get(get(entry, "PlacementScene"), "Filename").get("value") == "MODELS/SIGN.SCENE.MBIN"
+    product = item(out[PROD], "Table", "OT_SIGNPOST")
+    assert get(product, "ID").get("value") == "OT_SIGNPOST"
+    assert get(product, "Name").get("value") == "OT_SIGNPOST_NAME"
+    assert get(get(product, "Icon"), "Filename").get("value") == "TEXTURES/WALL.DDS"
+    assert get(product, "Requirements").find("Property[@_id='LAND2']") is not None
+
+
+def test_source_without_a_product_points_at_product_from(vanilla):
+    with pytest.raises(SpecError, match="product_from"):
+        gen_parts.build({"parts": [{"id": "OT_SIGNPOST", "copy_from": "DATASIGN"}]}, vanilla)
 
 
 def test_edit_touches_only_named_fields_and_appends_groups(vanilla):
