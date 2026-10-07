@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Data template="cTkLocalisationTable">
 	<Property name="Table">
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_NAME" />
 			<Property name="English" value="OT Probe Tile" />
 			<Property name="USEnglish" value="OT Probe Tile" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_NAME_L" />
 			<Property name="English" value="OT probe tile" />
 			<Property name="USEnglish" value="OT probe tile" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_DESC" />
 			<Property name="English" value="Overseer's Toolkit test part. Safe to delete." />
 			<Property name="USEnglish" value="Overseer's Toolkit test part. Safe to delete." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_DECALPATH_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_DECALPATH_NAME" />
 			<Property name="English" value="OT Path Decal" />
 			<Property name="USEnglish" value="OT Path Decal" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_DECALPATH_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_DECALPATH_NAME_L" />
 			<Property name="English" value="OT path decal" />
 			<Property name="USEnglish" value="OT path decal" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_DECALPATH_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_DECALPATH_DESC" />
 			<Property name="English" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
 			<Property name="USEnglish" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_SUB_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_SUB_NAME" />
 			<Property name="English" value="OT Probes" />
 			<Property name="USEnglish" value="OT Probes" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_TITLE">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_TITLE" />
 			<Property name="English" value="OT Probe Decision" />
 			<Property name="USEnglish" value="OT Probe Decision" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_QUESTION">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_QUESTION" />
 			<Property name="English" value="Run the Overseer's Toolkit test?" />
 			<Property name="USEnglish" value="Run the Overseer's Toolkit test?" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_DILEMMA">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_DILEMMA" />
 			<Property name="English" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
 			<Property name="USEnglish" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_OPT1">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_OPT1" />
 			<Property name="English" value="Grant the probe perk" />
 			<Property name="USEnglish" value="Grant the probe perk" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_OPT2">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_OPT2" />
 			<Property name="English" value="Do nothing" />
 			<Property name="USEnglish" value="Do nothing" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_PERK_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_PERK_NAME" />
 			<Property name="English" value="OT Probe Perk" />
 			<Property name="USEnglish" value="OT Probe Perk" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_PERK_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_PERK_DESC" />
 			<Property name="English" value="Granted by the Overseer's Toolkit test decision." />
 			<Property name="USEnglish" value="Granted by the Overseer's Toolkit test decision." />
