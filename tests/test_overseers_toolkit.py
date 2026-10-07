@@ -29,7 +29,7 @@ KIT_SOURCES = {
     "OT_PATH_TRI": "S_TRIFLOOR_Q",
     "OT_CURB": "S_WALL_Q_H",
     "OT_SIGNPOST": "BLD_DATASIGN",
-    "OT_LAMP": "BUILDLIGHT2",
+    "OT_LAMP": "S_STREETLAMP0",
 }
 
 
@@ -115,24 +115,25 @@ def test_settlement_subgroup_is_appended_to_the_decoration_group_with_a_label(sp
     assert label(spec, field(sub, "Name")) == "SETTLEMENT"
 
 
-def test_decal_path_is_exposed_in_the_settlement_subgroup_with_a_paving_product(built):
-    entry = part_entry(built, "DECALPATH")
-    assert group_pairs(entry) == [SUBGROUP]
-    product = product_of(built, "DECALPATH")
-    vanilla = ET.parse(EXTRACTED / "metadata/reality/tables/nms_basepartproducts.MXML").getroot()
-    paving = vanilla.find("Property[@name='Table']/Property[@_id='BUILDPAVING']")
-    assert field(product, "Icon.Filename") == field(paving, "Icon.Filename")
+def test_every_kit_part_shows_in_the_overseer_build_menu(built):
+    # The settlement's own build menu lists only parts that can be built outside a base.
+    for id_ in KIT_SOURCES:
+        assert field(part_entry(built, id_), "BuildableOnPlanet") == "true", id_
 
 
-def test_decal_path_limit_is_raised_to_suit_path_laying(built):
-    limit = int(field(part_entry(built, "DECALPATH"), "PlanetBaseLimit"))
-    assert 200 <= limit <= 300
+def test_decal_path_is_left_vanilla(spec, built):
+    # Its scene is an empty marker that settlements draw paths around, so a placed copy renders nothing.
+    assert "DECALPATH" not in [e["id"] for e in spec.get("edits", [])]
+    assert table(built, OBJ).find("Property[@name='Objects']/Property[@_id='DECALPATH']") is None
+    assert "DECALPATH" not in products(built)
 
 
-def test_lamp_draws_no_power_exactly_like_the_vanilla_street_lamp(built):
+def test_lamp_lights_without_power_like_the_vanilla_street_lamp(built):
+    # A powered lamp's bulb sits under its connected-state node, so cutting its power use leaves it dark.
     lamp = part_entry(built, "OT_LAMP")
     street = vanilla_object("S_STREETLAMP0")
     for dotted in (
+        "PlacementScene.Filename",
         "LinkGridData.Rate",
         "LinkGridData.Connection.NetworkSubGroup",
         "LinkGridData.Connection.NetworkMask",
@@ -142,8 +143,7 @@ def test_lamp_draws_no_power_exactly_like_the_vanilla_street_lamp(built):
 
 
 def test_every_new_product_is_craftable(built):
-    ids = [*KIT_SOURCES, "DECALPATH"]
-    for id_ in ids:
+    for id_ in KIT_SOURCES:
         assert field(product_of(built, id_), "IsCraftable") == "true", id_
 
 
@@ -165,7 +165,7 @@ def test_text_is_plain_player_facing_english(spec):
 
 
 def test_names_follow_the_vanilla_casing(spec, built):
-    for id_ in [*KIT_SOURCES, "DECALPATH"]:
+    for id_ in KIT_SOURCES:
         product = product_of(built, id_)
         name, lower = label(spec, field(product, "Name")), label(spec, field(product, "NameLower"))
         assert name == name.upper(), f"{id_}: {name!r}"
@@ -191,11 +191,11 @@ def _spec():
 def test_settlement_class_unlocks_follow_the_wishlist_tiers():
     tiers = {u["min_class"]: set(u["recipes"]) for u in _spec()["unlocks"]}
     assert tiers == {
-        "B": {"OT_PATH_TILE", "OT_PATH_TRI", "OT_CURB", "OT_LAMP", "DECALPATH"},
+        "B": {"OT_PATH_TILE", "OT_PATH_TRI", "OT_CURB", "OT_LAMP"},
         "A": {"OT_SIGNPOST"},
     }
 
 
 def test_new_creative_games_know_every_kit_part():
     spec = _spec()
-    assert set(spec["creative_known"]) == {p["id"] for p in spec["parts"]} | {"DECALPATH"}
+    assert set(spec["creative_known"]) == {p["id"] for p in spec["parts"]}

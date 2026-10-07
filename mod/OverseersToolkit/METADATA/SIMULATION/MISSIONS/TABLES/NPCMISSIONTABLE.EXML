@@ -173,18 +173,6 @@
 									</Property>
 								</Property>
 							</Property>
-							<Property name="List" value="GcRewardTableItem">
-								<Property name="PercentageChance" value="100.000000" />
-								<Property name="LabelID" value="" />
-								<Property name="Reward" value="GcRewardSpecificProductRecipe">
-									<Property name="GcRewardSpecificProductRecipe">
-										<Property name="ID" value="DECALPATH" />
-										<Property name="Silent" value="true" />
-										<Property name="HideInSeasonRewards" value="false" />
-										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
-									</Property>
-								</Property>
-							</Property>
 						</Property>
 					</Property>
 				</Property>

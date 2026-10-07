@@ -27,7 +27,7 @@
 			<Property name="BuildableOnFreighter" value="false" />
 			<Property name="BuildableInShipStructural" value="false" />
 			<Property name="BuildableInShipDecorative" value="false" />
-			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanet" value="true" />
 			<Property name="BuildableOnPlanetWithProduct" value="false" />
 			<Property name="BuildableUnderwater" value="true" />
 			<Property name="BuildableAboveWater" value="true" />

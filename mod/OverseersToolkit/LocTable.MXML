@@ -7,21 +7,6 @@
 			<Property name="USEnglish" value="SETTLEMENT" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_PATHDECAL_NAME" />
-			<Property name="English" value="SETTLEMENT PATH" />
-			<Property name="USEnglish" value="SETTLEMENT PATH" />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_PATHDECAL_NAME_L" />
-			<Property name="English" value="Settlement Path" />
-			<Property name="USEnglish" value="Settlement Path" />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_PATHDECAL_DESC" />
-			<Property name="English" value="A flat path surface that lies on the ground. Rotate and scale it to lay a path between buildings." />
-			<Property name="USEnglish" value="A flat path surface that lies on the ground. Rotate and scale it to lay a path between buildings." />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME" />
 			<Property name="English" value="PATH TILE" />
 			<Property name="USEnglish" value="PATH TILE" />
@@ -93,8 +78,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_DESC" />
-			<Property name="English" value="A rounded standing lamp for lighting paths and streets. It needs no power." />
-			<Property name="USEnglish" value="A rounded standing lamp for lighting paths and streets. It needs no power." />
+			<Property name="English" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="USEnglish" value="A standing street lamp for lighting paths and plazas. It needs no power." />
 		</Property>
 	</Property>
 </Data>
