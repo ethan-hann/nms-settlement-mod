@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcBaseBuildingTable">
+	<Property name="Objects">
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPHERESHAPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="CUBESHAPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="CYLINDERSHAPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="PIPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_BUBPIPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="PYRAMIDSHAPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="WEDGESMALLSHAPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="WEDGESHAPE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDPAVINGTALL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDPAVING_BIG">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDPAVING">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDLABLAMP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="WALLFLAG1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="WALLFLAG2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="WALLFLAG3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FLAG5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FLAG6">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WALLHANGING1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_WALLHANGING1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WALLHANGING2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_WALLHANGING2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WALLHANGING3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_WALLHANGING3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FLAG1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FLAG2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FLAG3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FLAG4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_FLAG_06A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_FLAG_06B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_FLAG_06C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_FLAG_06D">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_FLAG_06E">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_R1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_G1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_B1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_R2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_G2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_B2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_R3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_G3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_FLAG_B3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SWARM_TROPHY_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_STREETLAMP0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_STREETLAMP0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_FLYJAR">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_RADPLANT01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_RADPLANT02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_RADPLANT03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TOXPLANT01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TOXPLANT02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TOXPLANT03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUSTPLANT1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUSTPLANT2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUSTPLANT3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_COLDPLANT1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_COLDPLANT2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_COLDPLANT3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT9">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_JUNGLE04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT7">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT8">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TOXPLANT04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT05">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT06">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT07">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOTPLANT08">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST05">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST06">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST07">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST08">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST09">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST10">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST11">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST12">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_DUST13">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_RADPLANT04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOUDINI1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOUDINI2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_HOUDINI3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SWAMP1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SWAMP2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SWAMP3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_INFEST1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_INFEST2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_INFEST3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_ROCK01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_ROCK02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_ROCK03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_LAVA1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_LAVA2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_CAVE1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_CAVE2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_CAVE3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_CAVE4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_CAVE5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLOWER1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLOWER2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLOWER3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS6">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_GRASS7">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SLIME_MED">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPOOKY_PLANT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_EXPD_BASE01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_SKULL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUI_HAND">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUI_HEAD">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUI_TENT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_COVSILOS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_COVCRATE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_CRANE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_BLOB_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_BLOB_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_BLOB_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_BLOB_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_DIP_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_DIP_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_DIP_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_DIP_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_GEK_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_GEK_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_GEK_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_GEK_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_SHIP_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_SHIP_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_SHIP_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_SHIP_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_WALK_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_WALK_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_WALK_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_WALK_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ATLAS_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ATLAS_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ATLAS_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ATLAS_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ASTRO_B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ASTRO_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ASTRO_G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="STATUE_ASTRO_I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TREE01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TREE02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_TREE03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_JUNGLE01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_JUNGLE02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_JUNGLE03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_BARNACLE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_WPLANT6">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_MEDPLANT01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_MEDPLANT02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_MEDPLANT03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FOXGLOVE01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLORAL01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLORAL04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLORAL02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLORAL03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_PEACOCK01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_PEACOCK02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_PEACOCK03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SPRIGBUSH">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_FLYINGFERN">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT6">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT7">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BASE_SUBZPLANT8">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL05">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL06">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL07">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="SPEC_DECAL08">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_WORM_P1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_WORM_P2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_WORM_P3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_WORM_P4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_WORM_P5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL05">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL06">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL07">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL08">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL09">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL10">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL11">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL12">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL13">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL14">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL15">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL16">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL17">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL18">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL19">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL20">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL21">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL22">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_DECAL23">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_CAFE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_UFT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_AGT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_AMINO">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_QIT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_NMSCORD">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_UN42">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_NMS_FR">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_AF">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_RSS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_OOGC">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_BIOME3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_CPLANET1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_STARTSHIP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_GALCORE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_UWTREAS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_NEXUSM">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_SPOOKATL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_SHIP1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_PIRATESYS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_BLUESYS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_CREBEETLE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_CREFLY">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_CREPAWS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_FPLANET2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_TOSTARS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_PEEP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_HAZARD">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_SKULL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_HORROR">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_JELLY">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_BONESOUP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_EXTINCT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_SCAN">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_BONEJUDGE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECAL_RUINMECH">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM6">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM7">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM8">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNUM9">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECAL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECAL2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALNMS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALVIS1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALVIS2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALVIS3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALVIS4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALVIS5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALSIMP1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALSIMP2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALSIMP3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BUILDDECALSIMP4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CANOPY_WALL0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CANOPY_WALL1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CANOPY_WALL2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_CANOPY_WALL0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_CANOPY_WALL1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_CANOPY_WALL2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER6">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER7">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER8">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER9">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER10">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER11">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER12">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER13">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER14">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER15">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER16">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER17">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER18">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER19">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER20">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER21">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER22">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER23">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER24">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER25">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER26">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER27">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER28">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER29">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER30">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_POSTER31">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER05A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER05B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER05C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER06A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER06B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER06C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER07A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER07B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER07C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER08A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER08B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER08C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER09A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER09B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER09C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER10A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER10B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER10C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER11A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER11B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER11C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER12A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER12B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER12C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER13A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER13B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER13C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER14A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER14B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER14C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER15A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER15B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER15C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER16A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER16B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER16C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER17A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER17B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER17C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER18A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER18B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER18C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER19A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER19B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER19C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER20A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER20B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER20C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER21A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER21B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER21C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER22A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER22B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER22C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23A">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23B">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23C">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23D">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23E">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23F">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23G">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23H">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="EXPD_POSTER23I">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FENCE0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FENCE1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FENCE2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FENCE3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SAIL0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_SAIL0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SAIL1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_SAIL1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SAIL2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_SAIL2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SAIL3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_SAIL3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_GAZEBO0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WATERVALVE0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BARREL1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_MACHINE0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WATERTOWER">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_WATERTOWER">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_ANTENNA0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_ANTENNA1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_ANTENNA2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_ANTENNA3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_ANTENNA0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_ANTENNA1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_ANTENNA2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_ANTENNA3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WALLLIGHT0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_HANGLAMP0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_HANGLAMP1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_HANGLAMP2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_HANGLAMP3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_LIGHTSTRIP0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_TABLELAMP0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SIGN_BAR0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SIGN_BAR1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SIGN_BAR2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SIGN_BAR3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_STEPLADDER">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SCAFFOLD_M">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SCAFFOLD_L">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BUCKET_S">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BUCKET_M">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_PALLET">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_PALLET_BRICK">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_PALLET_BRICK">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BRICKSWRAPPED">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CEMENTBAG">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BARRIER">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_RSJSTACK">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CEMENTMIXER">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SHOVEL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_LARGETRYE0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_LARGETRYE0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_FURNACE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_WHEELBARROW">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_COMPOSTBIN">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_EXCBUCKET">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_PLANTER_M">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_TROUGH0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SPARKPLUG">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CANISTER1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CARRIAGE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_CARRIAGEWHEEL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_CARRIAGEWHEEL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_SCISSORLIFT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="B_SCISSORLIFT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_PUMP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_GENERATOR">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="HEATER">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOORLIGHT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_HOLOGEK">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_CRYS_SENT0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_CRYS_SENT1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_CRYS_DRONE">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="HOLO_DISCO_0">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_SHIPBREAK1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_SHIPBREAK2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_SHIPBREAK3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_SHIPBREAK4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_SHIPBREAK5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUGHEAD1">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUGHEAD2">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUGHEAD3">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUGHEAD4">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_BUGHEAD5">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_SKULL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_SKULL_MNT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_SKULL_DISP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_LIMBS">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_LIMBS_MNT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_LIMBS_DISP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_BODY">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_BODY_MNT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_BODY_DISP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_TAIL">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_TAIL_MNT">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="FOS_TAIL_DISP">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_01">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_02">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_03">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_04">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_05">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_06">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_07">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_08">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_09">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_10">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_11">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="BLD_RUINS_12">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+	</Property>
+</Data>

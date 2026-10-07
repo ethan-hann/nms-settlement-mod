@@ -292,3 +292,87 @@ def test_new_parts_are_flagged_as_coming_from_a_mod_folder(vanilla):
 def test_edits_to_vanilla_parts_leave_the_mod_folder_flag_alone(vanilla):
     out = files({"edits": [{"id": "DECALPATH", "object": {"PlanetBaseLimit": "200"}}]}, vanilla)
     assert get(item(out[OBJ], "Objects", "DECALPATH"), "IsFromModFolder") is None
+
+
+def decor_part(id_, groups, base="true", anywhere="false", rate="0"):
+    group_xml = "".join(
+        f"""<Property name="Groups" value="GcBaseBuildingEntryGroup" _index="{i}">
+          <Property name="Group" value="{g}" /><Property name="SubGroupName" value="{g}_SUB" />
+          <Property name="SubGroup" value="0" /></Property>"""
+        for i, g in enumerate(groups)
+    )
+    return f"""<Property name="Objects" value="GcBaseBuildingEntry" _id="{id_}">
+      <Property name="ID" value="{id_}" />
+      <Property name="BuildableOnPlanetBase" value="{base}" />
+      <Property name="BuildableOnPlanet" value="{anywhere}" />
+      <Property name="LinkGridData" value="GcBaseBuildingEntryLinkGridData">
+        <Property name="Rate" value="{rate}" />
+      </Property>
+      <Property name="Groups">{group_xml}</Property>
+    </Property>"""
+
+
+DECOR_OBJECTS = f"""<Data template="cGcBaseBuildingTable">
+  <Property name="Objects">
+    {decor_part("BENCH", ["DECORATION"])}
+    {decor_part("POSTER", ["WALL_ART"])}
+    {decor_part("FLOOR", ["BASIC_S"])}
+    {decor_part("CRATE", ["BASIC_S", "DECORATION"])}
+    {decor_part("FIREWORK", ["DECORATION"], anywhere="true")}
+    {decor_part("FREIGHTERONLY", ["DECORATION"], base="false")}
+    {decor_part("CEILINGLIGHT", ["DECORATION"], rate="-1")}
+  </Property>
+  <Property name="Groups">
+    <Property name="Groups" value="GcBaseBuildingGroup" _id="DECORATION"><Property name="ID" value="DECORATION" /></Property>
+    <Property name="Groups" value="GcBaseBuildingGroup" _id="WALL_ART"><Property name="ID" value="WALL_ART" /></Property>
+    <Property name="Groups" value="GcBaseBuildingGroup" _id="BASIC_S"><Property name="ID" value="BASIC_S" /></Property>
+  </Property>
+</Data>
+"""
+
+DECOR_EDIT = {"groups": ["DECORATION", "WALL_ART"], "object": {"BuildableOnPlanet": "true"}}
+
+
+@pytest.fixture
+def decor_vanilla(tmp_path):
+    tables = tmp_path / "metadata/reality/tables"
+    tables.mkdir(parents=True)
+    (tables / "basebuildingobjectstable.MXML").write_text(DECOR_OBJECTS)
+    (tables / "basebuildingcoststable.MXML").write_text(COSTS)
+    (tables / "nms_basepartproducts.MXML").write_text(PRODUCTS)
+    return tmp_path
+
+
+def edited_ids(spec, vanilla):
+    out = files(spec, vanilla)
+    return {e.get("_id"): e for e in out[OBJ].find("Property[@name='Objects']")} if OBJ in out else {}
+
+
+def test_group_edit_sets_the_fields_on_every_base_part_in_the_named_groups(decor_vanilla):
+    edited = edited_ids({"group_edits": [DECOR_EDIT]}, decor_vanilla)
+    assert {"BENCH", "POSTER", "CRATE"} <= set(edited)
+    assert "FLOOR" not in edited
+    bench = edited["BENCH"]
+    assert [(c.get("name"), c.get("value")) for c in bench] == [("BuildableOnPlanet", "true")]
+
+
+def test_group_edit_skips_parts_that_already_have_the_values_or_no_planet_base(decor_vanilla):
+    edited = edited_ids({"group_edits": [DECOR_EDIT]}, decor_vanilla)
+    assert "FIREWORK" not in edited
+    assert "FREIGHTERONLY" not in edited
+
+
+def test_group_edit_can_leave_out_parts_on_the_power_grid(decor_vanilla):
+    assert "CEILINGLIGHT" in edited_ids({"group_edits": [DECOR_EDIT]}, decor_vanilla)
+    unpowered = {**DECOR_EDIT, "unpowered_only": True}
+    assert "CEILINGLIGHT" not in edited_ids({"group_edits": [unpowered]}, decor_vanilla)
+
+
+def test_group_edit_with_an_unknown_group_is_an_error(decor_vanilla):
+    with pytest.raises(SpecError, match="NOPE"):
+        files({"group_edits": [{**DECOR_EDIT, "groups": ["NOPE"]}]}, decor_vanilla)
+
+
+def test_group_edit_rejects_struct_fields(decor_vanilla):
+    with pytest.raises(SpecError, match="top-level"):
+        files({"group_edits": [{**DECOR_EDIT, "object": {"LinkGridData.Rate": "0"}}]}, decor_vanilla)

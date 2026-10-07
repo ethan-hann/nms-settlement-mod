@@ -1,0 +1,15 @@
+{
+  "group_edits": [
+    {
+      "groups": [
+        "DECORATION",
+        "EXOTICS",
+        "WALL_ART"
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
+      "unpowered_only": true
+    }
+  ]
+}
