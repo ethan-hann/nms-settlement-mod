@@ -144,7 +144,11 @@ def vanilla_relpath(rel):
     rel = Path(rel)
     name = rel.name.lower()
     stem = name[: -len(rel.suffix)] if rel.suffix else name
-    return Path(*[p.lower() for p in rel.parent.parts], stem + ".MXML")
+    parts = [p.lower() for p in rel.parent.parts]
+    # The mod loader reads globals from <mod>/GLOBALS/, but the paks keep them at the root.
+    if parts[:1] == ["globals"]:
+        parts = parts[1:]
+    return Path(*parts, stem + ".MXML")
 
 
 def compile_mxml(mxml, out_dir):
