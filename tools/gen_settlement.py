@@ -54,6 +54,7 @@ def _strip_index(entry):
 def _clear(node):
     for child in list(node):
         node.remove(child)
+    node.text = None
 
 
 def _loc_key(key, owner):

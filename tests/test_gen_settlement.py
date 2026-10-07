@@ -306,6 +306,12 @@ def test_options_never_inherit_rewards_or_perks_from_the_source(vanilla):
     assert "STARTING_POS1" not in ET.tostring(entry, encoding="unicode")
 
 
+def test_emptied_lists_are_written_self_closing_like_vanilla(vanilla):
+    text = gen_settlement.build(NEW_JUDGEMENT, vanilla)[Path(GLOBALS_FILE)]
+    assert '<Property name="AdditionalRewards" />' in text
+    assert '<Property name="AdditionalRewards">' not in text
+
+
 def test_option_flags_are_copied_from_the_source(vanilla):
     entry = new_judgement(files(NEW_JUDGEMENT, vanilla))
     assert value(get(entry, "Option1List")[0], "OptionIsPositiveForNPC") == "true"
