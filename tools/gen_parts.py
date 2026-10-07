@@ -143,7 +143,7 @@ def _loc_table(text):
     for key, english in text.items():
         if len(key) > MAX_LOC_KEY:
             raise SpecError(f"loc key {key} is longer than {MAX_LOC_KEY} characters")
-        entry = P({"name": "Table", "value": "TkLocalisationEntry", "_id": key}, P({"name": "Id", "value": key}))
+        entry = P({"name": "Table", "value": "TkLocalisationEntry"}, P({"name": "Id", "value": key}))
         for lang in LOC_LANGUAGES:
             entry.append(P({"name": lang, "value": english}))
         table.append(entry)
