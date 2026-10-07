@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Probe: does appending to a vanilla language file add a key? -->
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE2_NAME">
+			<Property name="Id" value="OT_PROBE2_NAME" />
+			<Property name="English" value="OT Probe Triangle" />
+		</Property>
+	</Property>
+</Data>

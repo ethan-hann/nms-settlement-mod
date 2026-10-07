@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcBaseBuildingTable">
+	<Property name="Groups">
+		<Property name="Groups" value="GcBaseBuildingGroup" _id="MOD">
+			<Property name="SubGroups">
+				<Property name="SubGroups" value="GcBaseBuildingSubGroup" _id="OT_PROBE_SUB">
+					<Property name="Id" value="OT_PROBE_SUB" />
+					<Property name="Name" value="OT_PROBE_SUB_NAME" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+	<Property name="Objects">
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_PROBE">
+			<Property name="ID" value="OT_PROBE" />
+			<Property name="IsTemporary" value="false" />
+			<Property name="IsFromModFolder" value="false" />
+			<Property name="Style" value="GcBaseBuildingPartStyle">
+				<Property name="Style" value="Stone" />
+			</Property>
+			<Property name="PlacementScene" value="TkModelResource">
+				<Property name="Filename" value="MODELS/PLANETS/BIOMES/COMMON/BUILDINGS/PARTS/BUILDABLEPARTS/BASICPARTS/BASIC_FLOOR_QUARTER_PLACEMENT.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="SinglePartID" value="" />
+			<Property name="DecorationType" value="GcBaseBuildingObjectDecorationTypes">
+				<Property name="BaseBuildingDecorationType" value="Normal" />
+			</Property>
+			<Property name="IsPlaceable" value="true" />
+			<Property name="IsPlaceableFloatingInSpace" value="true" />
+			<Property name="IsDecoration" value="false" />
+			<Property name="Biome" value="GcBiomeType">
+				<Property name="Biome" value="Lush" />
+			</Property>
+			<Property name="BuildableOnPlanetBase" value="true" />
+			<Property name="BuildableOnSpaceBase" value="true" />
+			<Property name="BuildableOnFreighter" value="false" />
+			<Property name="BuildableInShipStructural" value="false" />
+			<Property name="BuildableInShipDecorative" value="false" />
+			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanetWithProduct" value="false" />
+			<Property name="BuildableUnderwater" value="true" />
+			<Property name="BuildableAboveWater" value="true" />
+			<Property name="BuildableOnSpaceStationBase" value="false" />
+			<Property name="BuildableOnSpaceStationBackSection" value="true" />
+			<Property name="BuildableOnSpaceStationExterior" value="false" />
+			<Property name="PlanetLimit" value="0" />
+			<Property name="RegionLimit" value="0" />
+			<Property name="PlanetBaseLimit" value="0" />
+			<Property name="FreighterBaseLimit" value="0" />
+			<Property name="CorvetteBaseLimit" value="0" />
+			<Property name="DoesNotCountTowardsComplexity" value="false" />
+			<Property name="CheckPlaceholderCollision" value="false" />
+			<Property name="CheckPlayerCollision" value="true" />
+			<Property name="CanStack" value="true" />
+			<Property name="SnapRotateBlocked" value="false" />
+			<Property name="CanRotate3D" value="true" />
+			<Property name="CanScale" value="false" />
+			<Property name="Groups">
+				<Property name="Groups" value="GcBaseBuildingEntryGroup">
+					<Property name="Group" value="DECORATION" />
+					<Property name="SubGroupName" value="DECOEXTERIOR" />
+					<Property name="SubGroup" value="0" />
+				</Property>
+			</Property>
+			<Property name="StorageContainerIndex" value="-1" />
+			<Property name="ColourPaletteGroupId" value="COLOURS_S" />
+			<Property name="StationColourPaletteGroupId" value="COLOURS_S" />
+			<Property name="DefaultColourPaletteId" value="STONENATURAL1" />
+			<Property name="MaterialGroupId" value="S_ALL" />
+			<Property name="DefaultMaterialId" value="MAT_S_DEFAULT" />
+			<Property name="CanChangeColour" value="true" />
+			<Property name="CanChangeMaterial" value="true" />
+			<Property name="CanPickUp" value="false" />
+			<Property name="ShowInBuildMenu" value="true" />
+			<Property name="CompositePartObjectIDs" />
+			<Property name="FamilyIDs">
+				<Property name="FamilyIDs" value="FLOORS_SMALL" />
+			</Property>
+			<Property name="BuildEffectAccelerator" value="1.000000" />
+			<Property name="IconOverrideProductID" value="" />
+			<Property name="RemovesAttachedDecoration" value="true" />
+			<Property name="RemovesWhenUnsnapped" value="false" />
+			<Property name="EditsTerrain" value="true" />
+			<Property name="BaseTerrainEditShape" value="Cube" />
+			<Property name="MinimumDeleteDistance" value="1.000000" />
+			<Property name="IsSealed" value="false" />
+			<Property name="HasGravity" value="true" />
+			<Property name="GravityStrength" value="0.500000" />
+			<Property name="GravityFalloff" value="2.000000" />
+			<Property name="CloseMenuAfterBuild" value="false" />
+			<Property name="Tag" value="" />
+			<Property name="LinkGridData" value="GcBaseLinkGridData">
+				<Property name="Connection" value="GcBaseLinkGridConnectionData">
+					<Property name="Network" value="GcLinkNetworkTypes">
+						<Property name="LinkNetworkType" value="Power" />
+					</Property>
+					<Property name="NetworkSubGroup" value="0" />
+					<Property name="NetworkMask" value="0" />
+					<Property name="ConnectionDistance" value="0.100000" />
+					<Property name="UseMinDistance" value="false" />
+					<Property name="LinkSocketPositions" />
+					<Property name="LinkSocketSubGroups" />
+				</Property>
+				<Property name="Rate" value="0" />
+				<Property name="Storage" value="0" />
+				<Property name="DependsOnEnvironment" value="None" />
+				<Property name="DependsOnHotspots" value="None" />
+				<Property name="DependentConnections" />
+			</Property>
+			<Property name="GhostsCountOverride" value="2" />
+			<Property name="ShowGhosts" value="true" />
+			<Property name="SnappingDistanceOverride" value="0.000000" />
+			<Property name="RegionSpawnLOD" value="1" />
+			<Property name="NPCInteractionScene" value="TkModelResource">
+				<Property name="Filename" value="" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="IsModularCustomisation" value="false" />
+			<Property name="ModularCustomisationBaseID" value="" />
+			<Property name="HasDescriptor" value="false" />
+			<Property name="DescriptorID" value="" />
+			<Property name="FossilDisplayID" value="" />
+			<Property name="UseProductIDOverride" value="false" />
+			<Property name="UseProductIDOverrideInSpace" value="false" />
+			<Property name="OverrideProductID" value="" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_PROBE2">
+			<Property name="ID" value="OT_PROBE2" />
+			<Property name="IsTemporary" value="false" />
+			<Property name="IsFromModFolder" value="false" />
+			<Property name="Style" value="GcBaseBuildingPartStyle">
+				<Property name="Style" value="Stone" />
+			</Property>
+			<Property name="PlacementScene" value="TkModelResource">
+				<Property name="Filename" value="MODELS/PLANETS/BIOMES/COMMON/BUILDINGS/PARTS/BUILDABLEPARTS/BASICPARTS/BASIC_FLOOR_TRI_QUARTER_PLACEMENT.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="SinglePartID" value="" />
+			<Property name="DecorationType" value="GcBaseBuildingObjectDecorationTypes">
+				<Property name="BaseBuildingDecorationType" value="Normal" />
+			</Property>
+			<Property name="IsPlaceable" value="true" />
+			<Property name="IsPlaceableFloatingInSpace" value="true" />
+			<Property name="IsDecoration" value="false" />
+			<Property name="Biome" value="GcBiomeType">
+				<Property name="Biome" value="Lush" />
+			</Property>
+			<Property name="BuildableOnPlanetBase" value="true" />
+			<Property name="BuildableOnSpaceBase" value="true" />
+			<Property name="BuildableOnFreighter" value="false" />
+			<Property name="BuildableInShipStructural" value="false" />
+			<Property name="BuildableInShipDecorative" value="false" />
+			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanetWithProduct" value="false" />
+			<Property name="BuildableUnderwater" value="true" />
+			<Property name="BuildableAboveWater" value="true" />
+			<Property name="BuildableOnSpaceStationBase" value="false" />
+			<Property name="BuildableOnSpaceStationBackSection" value="true" />
+			<Property name="BuildableOnSpaceStationExterior" value="false" />
+			<Property name="PlanetLimit" value="0" />
+			<Property name="RegionLimit" value="0" />
+			<Property name="PlanetBaseLimit" value="0" />
+			<Property name="FreighterBaseLimit" value="0" />
+			<Property name="CorvetteBaseLimit" value="0" />
+			<Property name="DoesNotCountTowardsComplexity" value="false" />
+			<Property name="CheckPlaceholderCollision" value="false" />
+			<Property name="CheckPlayerCollision" value="true" />
+			<Property name="CanStack" value="true" />
+			<Property name="SnapRotateBlocked" value="false" />
+			<Property name="CanRotate3D" value="true" />
+			<Property name="CanScale" value="false" />
+			<Property name="Groups">
+				<Property name="Groups" value="GcBaseBuildingEntryGroup">
+					<Property name="Group" value="MOD" />
+					<Property name="SubGroupName" value="OT_PROBE_SUB" />
+					<Property name="SubGroup" value="0" />
+				</Property>
+			</Property>
+			<Property name="StorageContainerIndex" value="-1" />
+			<Property name="ColourPaletteGroupId" value="COLOURS_S" />
+			<Property name="StationColourPaletteGroupId" value="COLOURS_S" />
+			<Property name="DefaultColourPaletteId" value="STONENATURAL1" />
+			<Property name="MaterialGroupId" value="S_ALL" />
+			<Property name="DefaultMaterialId" value="MAT_S_DEFAULT" />
+			<Property name="CanChangeColour" value="true" />
+			<Property name="CanChangeMaterial" value="true" />
+			<Property name="CanPickUp" value="false" />
+			<Property name="ShowInBuildMenu" value="true" />
+			<Property name="CompositePartObjectIDs" />
+			<Property name="FamilyIDs">
+				<Property name="FamilyIDs" value="TRIS_SMALL" />
+			</Property>
+			<Property name="BuildEffectAccelerator" value="1.000000" />
+			<Property name="IconOverrideProductID" value="" />
+			<Property name="RemovesAttachedDecoration" value="true" />
+			<Property name="RemovesWhenUnsnapped" value="false" />
+			<Property name="EditsTerrain" value="true" />
+			<Property name="BaseTerrainEditShape" value="Cube" />
+			<Property name="MinimumDeleteDistance" value="1.000000" />
+			<Property name="IsSealed" value="false" />
+			<Property name="HasGravity" value="true" />
+			<Property name="GravityStrength" value="0.500000" />
+			<Property name="GravityFalloff" value="2.000000" />
+			<Property name="CloseMenuAfterBuild" value="false" />
+			<Property name="Tag" value="" />
+			<Property name="LinkGridData" value="GcBaseLinkGridData">
+				<Property name="Connection" value="GcBaseLinkGridConnectionData">
+					<Property name="Network" value="GcLinkNetworkTypes">
+						<Property name="LinkNetworkType" value="Power" />
+					</Property>
+					<Property name="NetworkSubGroup" value="0" />
+					<Property name="NetworkMask" value="0" />
+					<Property name="ConnectionDistance" value="0.100000" />
+					<Property name="UseMinDistance" value="false" />
+					<Property name="LinkSocketPositions" />
+					<Property name="LinkSocketSubGroups" />
+				</Property>
+				<Property name="Rate" value="0" />
+				<Property name="Storage" value="0" />
+				<Property name="DependsOnEnvironment" value="None" />
+				<Property name="DependsOnHotspots" value="None" />
+				<Property name="DependentConnections" />
+			</Property>
+			<Property name="GhostsCountOverride" value="2" />
+			<Property name="ShowGhosts" value="true" />
+			<Property name="SnappingDistanceOverride" value="0.000000" />
+			<Property name="RegionSpawnLOD" value="1" />
+			<Property name="NPCInteractionScene" value="TkModelResource">
+				<Property name="Filename" value="" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="IsModularCustomisation" value="false" />
+			<Property name="ModularCustomisationBaseID" value="" />
+			<Property name="HasDescriptor" value="false" />
+			<Property name="DescriptorID" value="" />
+			<Property name="FossilDisplayID" value="" />
+			<Property name="UseProductIDOverride" value="false" />
+			<Property name="UseProductIDOverrideInSpace" value="false" />
+			<Property name="OverrideProductID" value="" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECALPATH">
+			<Property name="PlanetBaseLimit" value="200" />
+			<Property name="Groups">
+				<Property name="Groups" value="GcBaseBuildingEntryGroup">
+					<Property name="Group" value="DECORATION" />
+					<Property name="SubGroupName" value="DECOEXTERIOR" />
+					<Property name="SubGroup" value="0" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>

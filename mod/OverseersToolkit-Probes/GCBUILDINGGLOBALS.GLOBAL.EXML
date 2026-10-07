@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Probe: does shrinking this multiplier let a base be claimed inside a settlement? -->
+<Data template="cGcBuildingGlobals">
+	<Property name="RadiusMultiplier_DoNotPlaceAnywhereNear" value="0.000001" />
+</Data>
