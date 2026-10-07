@@ -1,3 +1,4 @@
+import os
 import hashlib
 import json
 import xml.etree.ElementTree as ET
@@ -8,7 +9,8 @@ import pytest
 import testmode
 from testmode import Env, Refused
 
-UNIQUE_PROC = "OTFAKE_GAME.exe"
+# Per-process name, so test runs in parallel checkouts never see each other's fake game.
+UNIQUE_PROC = f"OTF{os.getpid()}.exe"
 
 
 def make_env(tree, process_name=UNIQUE_PROC):
@@ -466,3 +468,30 @@ def test_status_command_reports_a_problem_when_processes_cannot_be_listed(fake_t
     out = capsys.readouterr().out
     assert code != 0
     assert "unknown" in out and "PROBLEM" in out
+
+
+def test_deleting_the_known_test_slot_is_allowed(fake_tree):
+    env = make_env(fake_tree)
+    env.local_file.write_text(json.dumps({"test_slot": 6}))
+    profile = fake_tree["saves"] / "st_1"
+    for name in ("save11.hg", "save12.hg", "mf_save11.hg", "mf_save12.hg"):
+        (profile / name).write_bytes(b"old creative game")
+    testmode.enter(env, ["core"])
+    for name in ("save11.hg", "save12.hg", "mf_save11.hg", "mf_save12.hg"):
+        (profile / name).unlink()
+
+    result = testmode.exit_session(env)
+
+    assert result.ok, result.failures
+
+
+def test_deleting_a_protected_slot_still_fails_when_the_test_slot_is_known(fake_tree):
+    env = make_env(fake_tree)
+    env.local_file.write_text(json.dumps({"test_slot": 6}))
+    testmode.enter(env, ["core"])
+    (fake_tree["saves"] / "st_1/save9.hg").unlink()
+
+    result = testmode.exit_session(env)
+
+    assert not result.ok
+    assert any("save9.hg" in f for f in result.failures)

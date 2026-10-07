@@ -6,6 +6,8 @@ import pytest
 
 import nmsenv
 
+PROBE_PROC = f"OTP{os.getpid()}.exe"
+
 LIBRARY_VDF = r'''"libraryfolders"
 {
 	"0"
@@ -73,6 +75,6 @@ def test_find_game_root_fails_loudly_when_nothing_matches(tmp_path, monkeypatch)
 
 
 def test_game_running_sees_a_process_by_image_name(fake_process):
-    assert not nmsenv.game_running("OTFAKE_PROBE.exe")
-    fake_process("OTFAKE_PROBE.exe")
-    assert nmsenv.game_running("OTFAKE_PROBE.exe")
+    assert not nmsenv.game_running(PROBE_PROC)
+    fake_process(PROBE_PROC)
+    assert nmsenv.game_running(PROBE_PROC)
