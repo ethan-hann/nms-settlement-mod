@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcBaseBuildingCostsTable">
+	<Property name="ObjectCosts">
+		<Property name="ObjectCosts" value="GcBaseBuildingEntryCosts" _id="OT_TOWER">
+			<Property name="ID" value="OT_TOWER" />
+			<Property name="Active0AverageFrameTimeCost" value="0.0026181771" />
+			<Property name="Active1AverageFrameTimeCost" value="1.000000" />
+			<Property name="ActiveTotalNodes" value="4" />
+			<Property name="ActivePhysicsComponents" value="1" />
+			<Property name="Inactive0AverageFrameTimeCost" value="0.00247277343" />
+			<Property name="Inactive1AverageFrameTimeCost" value="1.000000" />
+			<Property name="InactiveTotalNodes" value="2" />
+			<Property name="InactivePhysicsComponents" value="0" />
+		</Property>
+	</Property>
+</Data>

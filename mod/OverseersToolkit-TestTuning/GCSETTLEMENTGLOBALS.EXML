@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. A judgement arrives every one to two minutes and is nearly always the fortify request: Request is the heaviest type and its vanilla judgements are zeroed. -->
+<Data template="cGcSettlementGlobals">
+	<Property name="JudgementWaitTimeMin" value="60" />
+	<Property name="JudgementWaitTimeMax" value="120" />
+	<Property name="JudgementSelectionWeights">
+		<Property name="Request" value="50.000000" />
+	</Property>
+	<Property name="Judgements">
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="22">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="23">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="24">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="25">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+	</Property>
+</Data>

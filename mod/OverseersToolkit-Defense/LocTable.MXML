@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_WATCH_NAME">
+			<Property name="Id" value="OT_WATCH_NAME" />
+			<Property name="English" value="Perimeter Watch" />
+			<Property name="USEnglish" value="Perimeter Watch" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_WATCH_DESC">
+			<Property name="Id" value="OT_WATCH_DESC" />
+			<Property name="English" value="Lookouts spot Sentinel attacks early, but their lights are easy to see." />
+			<Property name="USEnglish" value="Lookouts spot Sentinel attacks early, but their lights are easy to see." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_FORT_TITLE">
+			<Property name="Id" value="OT_FORT_TITLE" />
+			<Property name="English" value="A Watchful Eye" />
+			<Property name="USEnglish" value="A Watchful Eye" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_FORT_QUESTION">
+			<Property name="Id" value="OT_FORT_QUESTION" />
+			<Property name="English" value="Fortify the perimeter?" />
+			<Property name="USEnglish" value="Fortify the perimeter?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_FORT_DILEMMA">
+			<Property name="Id" value="OT_FORT_DILEMMA" />
+			<Property name="English" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds, and their lights will be easy for Sentinels to see." />
+			<Property name="USEnglish" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds, and their lights will be easy for Sentinels to see." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_FORT_OPT1">
+			<Property name="Id" value="OT_FORT_OPT1" />
+			<Property name="English" value="Fortify the perimeter (adds debt)" />
+			<Property name="USEnglish" value="Fortify the perimeter (adds debt)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_FORT_OPT2">
+			<Property name="Id" value="OT_FORT_OPT2" />
+			<Property name="English" value="Leave the perimeter as it is" />
+			<Property name="USEnglish" value="Leave the perimeter as it is" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_TOWER_NAME">
+			<Property name="Id" value="OT_TOWER_NAME" />
+			<Property name="English" value="TOWER PILLAR" />
+			<Property name="USEnglish" value="TOWER PILLAR" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_TOWER_NAME_L">
+			<Property name="Id" value="OT_TOWER_NAME_L" />
+			<Property name="English" value="Tower Pillar" />
+			<Property name="USEnglish" value="Tower Pillar" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_TOWER_DESC">
+			<Property name="Id" value="OT_TOWER_DESC" />
+			<Property name="English" value="A stone pillar, suited to towers and gateposts." />
+			<Property name="USEnglish" value="A stone pillar, suited to towers and gateposts." />
+		</Property>
+	</Property>
+</Data>

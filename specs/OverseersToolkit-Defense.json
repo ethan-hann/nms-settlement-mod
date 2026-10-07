@@ -1,0 +1,86 @@
+{
+  "text": {
+    "OT_WATCH_NAME": "Perimeter Watch",
+    "OT_WATCH_DESC": "Lookouts spot Sentinel attacks early, but their lights are easy to see.",
+    "OT_FORT_TITLE": "A Watchful Eye",
+    "OT_FORT_QUESTION": "Fortify the perimeter?",
+    "OT_FORT_DILEMMA": "The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds, and their lights will be easy for Sentinels to see.",
+    "OT_FORT_OPT1": "Fortify the perimeter (adds debt)",
+    "OT_FORT_OPT2": "Leave the perimeter as it is",
+    "OT_TOWER_NAME": "TOWER PILLAR",
+    "OT_TOWER_NAME_L": "Tower Pillar",
+    "OT_TOWER_DESC": "A stone pillar, suited to towers and gateposts."
+  },
+  "parts": [
+    {
+      "id": "OT_TOWER",
+      "copy_from": "S_WALL_SUPPORTS",
+      "groups": [
+        [
+          "DECORATION",
+          "DECOEXTERIOR"
+        ]
+      ],
+      "product": {
+        "Name": "OT_TOWER_NAME",
+        "NameLower": "OT_TOWER_NAME_L",
+        "Description": "OT_TOWER_DESC"
+      }
+    }
+  ],
+  "perks": [
+    {
+      "id": "OT_WATCH",
+      "copy_from": "SENT_QUAR",
+      "name": "OT_WATCH_NAME",
+      "description": "OT_WATCH_DESC",
+      "stat_changes": [
+        [
+          "Alert",
+          "PositiveMedium"
+        ],
+        [
+          "Sentinels",
+          "NegativeSmall"
+        ]
+      ]
+    }
+  ],
+  "judgements": [
+    {
+      "name": "OT_J_FORTIFY",
+      "copy_from": 24,
+      "type": "Request",
+      "weighting": 1.0,
+      "title": "OT_FORT_TITLE",
+      "question": "OT_FORT_QUESTION",
+      "dilemma": "OT_FORT_DILEMMA",
+      "options": [
+        {
+          "text": "OT_FORT_OPT1",
+          "perks": [
+            [
+              "OT_WATCH",
+              1.0
+            ]
+          ],
+          "stat_changes": [
+            [
+              "Debt",
+              "NegativeMedium"
+            ]
+          ]
+        },
+        {
+          "text": "OT_FORT_OPT2",
+          "stat_changes": [
+            [
+              "Happiness",
+              "NegativeSmall"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
