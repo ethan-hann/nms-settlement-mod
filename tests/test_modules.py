@@ -66,6 +66,16 @@ def vanilla_cost_ids():
     return {e.get("_id") for e in root.find("Property[@name='ObjectCosts']")}
 
 
+@pytest.fixture(scope="module")
+def vanilla_part_models():
+    root = ET.parse(EXTRACTED / "metadata/reality/tables/basebuildingpartstable.MXML").getroot()
+    models = {}
+    for part in root.find("Property[@name='Parts']"):
+        model = part.find(".//Property[@name='Model']/Property[@name='Filename']")
+        models[part.get("_id")] = model.get("value") if model is not None else ""
+    return models
+
+
 def module_loc_keys(module):
     keys = set(spec_of(module).get("text", {}))
     for f in (MODS / module).rglob("*.EXML"):
@@ -106,7 +116,7 @@ def test_every_patch_merges_and_compiles(module, tmp_path):
 
 
 @pytest.mark.parametrize("module", SPEC_MODULES)
-def test_new_parts_are_complete(module, game_files, vanilla_loc_keys, vanilla_cost_ids):
+def test_new_parts_are_complete(module, game_files, vanilla_loc_keys, vanilla_cost_ids, vanilla_part_models):
     spec = spec_of(module)
     out = {str(k).replace("\\", "/"): ET.fromstring(v) for k, v in gen_parts.build(spec).items()}
     objects = out.get("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
@@ -118,7 +128,11 @@ def test_new_parts_are_complete(module, game_files, vanilla_loc_keys, vanilla_co
         assert id_.startswith("OT_"), id_
         entry = objects.find(f"Property[@name='Objects']/Property[@_id='{id_}']")
         scene = entry.find("Property[@name='PlacementScene']/Property[@name='Filename']").get("value")
-        assert scene.lower() in game_files, f"{id_}: scene {scene} is not in the game files"
+        if not scene:
+            # Station parts have no placement scene; their model comes from the parts table instead.
+            single = entry.find("Property[@name='SinglePartID']").get("value")
+            scene = vanilla_part_models.get(single, "")
+        assert scene and scene.lower() in game_files, f"{id_}: scene {scene!r} is not in the game files"
         groups = entry.find("Property[@name='Groups']")
         assert len(groups) > 0, f"{id_} has no build-menu group"
         # Most vanilla parts have no cost entry; a new part has one exactly when its source does.

@@ -32,6 +32,7 @@ MODULES = {
     "defense": "OverseersToolkit-Defense",
     "testtuning": "OverseersToolkit-TestTuning",
     "probes": "OverseersToolkit-Probes",
+    "decor": "OverseersToolkit-SettlementDecor",
 }
 DEV_PREFIX = "_OTDEV_"
 # The game writes its merged mod data here when the test-only debug flag is on.

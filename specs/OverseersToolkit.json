@@ -10,9 +10,6 @@
     "OT_CURB_NAME": "PATH CURB",
     "OT_CURB_NAME_L": "Path Curb",
     "OT_CURB_DESC": "A short stone wall for edging a path. Set it under the rim of a path tile to make a low step.",
-    "OT_SIGNPOST_NAME": "SIGNPOST",
-    "OT_SIGNPOST_NAME_L": "Signpost",
-    "OT_SIGNPOST_DESC": "A freestanding display panel for marking streets and landmarks. It also gives off light.",
     "OT_LAMP_NAME": "PATH LAMP",
     "OT_LAMP_NAME_L": "Path Lamp",
     "OT_LAMP_DESC": "A standing street lamp for lighting paths and plazas. It needs no power."
@@ -80,27 +77,6 @@
       }
     },
     {
-      "id": "OT_SIGNPOST",
-      "copy_from": "BLD_DATASIGN",
-      "groups": [
-        [
-          "DECORATION",
-          "OT_SETTLEMENT"
-        ]
-      ],
-      "object": {
-        "BuildableOnPlanet": "true"
-      },
-      "product_from": "BOXEDSCREEN",
-      "product": {
-        "Name": "OT_SIGNPOST_NAME",
-        "NameLower": "OT_SIGNPOST_NAME_L",
-        "Subtitle": "BLD_DATASIGN_SUB",
-        "Description": "OT_SIGNPOST_DESC",
-        "Icon.Filename": "TEXTURES/UI/FRONTEND/ICONS/SPECIALSHOP/SPECIAL1.DATASIGN.DDS"
-      }
-    },
-    {
       "id": "OT_LAMP",
       "copy_from": "S_STREETLAMP0",
       "groups": [
@@ -116,6 +92,318 @@
         "Name": "OT_LAMP_NAME",
         "NameLower": "OT_LAMP_NAME_L",
         "Description": "OT_LAMP_DESC"
+      }
+    },
+    {
+      "id": "OT_SIGN_BAR",
+      "copy_from": "S_SIGN_BAR0",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_SIGN_STAND",
+      "copy_from": "STANDINGSIGN",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_BILLBOARD",
+      "copy_from": "BILLBOARD",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_SMALL1",
+      "copy_from": "HOLO_SMALL1",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_SMALL2",
+      "copy_from": "HOLO_SMALL2",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_SMALL3",
+      "copy_from": "HOLO_SMALL3",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_MED1",
+      "copy_from": "HOLO_MED1",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_MED2",
+      "copy_from": "HOLO_MED2",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_GEK",
+      "copy_from": "HOLO_TRA",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_KORVAX",
+      "copy_from": "HOLO_EXP",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_HOLO_VYKEEN",
+      "copy_from": "HOLO_WAR",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_VYKEEN",
+      "copy_from": "BUILDDECALVIS1",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_GEK",
+      "copy_from": "BUILDDECALVIS2",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_KORVAX",
+      "copy_from": "BUILDDECALVIS3",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM0",
+      "copy_from": "BUILDDECALNUM0",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM1",
+      "copy_from": "BUILDDECALNUM1",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM2",
+      "copy_from": "BUILDDECALNUM2",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM3",
+      "copy_from": "BUILDDECALNUM3",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM4",
+      "copy_from": "BUILDDECALNUM4",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM5",
+      "copy_from": "BUILDDECALNUM5",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM6",
+      "copy_from": "BUILDDECALNUM6",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM7",
+      "copy_from": "BUILDDECALNUM7",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM8",
+      "copy_from": "BUILDDECALNUM8",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      }
+    },
+    {
+      "id": "OT_DECAL_NUM9",
+      "copy_from": "BUILDDECALNUM9",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
       }
     }
   ],
@@ -136,7 +424,30 @@
       "min_class": "A",
       "reward": "R_OT_UNLOCK_A",
       "recipes": [
-        "OT_SIGNPOST"
+        "OT_SIGN_BAR",
+        "OT_SIGN_STAND",
+        "OT_BILLBOARD",
+        "OT_HOLO_SMALL1",
+        "OT_HOLO_SMALL2",
+        "OT_HOLO_SMALL3",
+        "OT_HOLO_MED1",
+        "OT_HOLO_MED2",
+        "OT_HOLO_GEK",
+        "OT_HOLO_KORVAX",
+        "OT_HOLO_VYKEEN",
+        "OT_DECAL_VYKEEN",
+        "OT_DECAL_GEK",
+        "OT_DECAL_KORVAX",
+        "OT_DECAL_NUM0",
+        "OT_DECAL_NUM1",
+        "OT_DECAL_NUM2",
+        "OT_DECAL_NUM3",
+        "OT_DECAL_NUM4",
+        "OT_DECAL_NUM5",
+        "OT_DECAL_NUM6",
+        "OT_DECAL_NUM7",
+        "OT_DECAL_NUM8",
+        "OT_DECAL_NUM9"
       ]
     }
   ],
@@ -144,7 +455,30 @@
     "OT_PATH_TILE",
     "OT_PATH_TRI",
     "OT_CURB",
-    "OT_SIGNPOST",
-    "OT_LAMP"
+    "OT_LAMP",
+    "OT_SIGN_BAR",
+    "OT_SIGN_STAND",
+    "OT_BILLBOARD",
+    "OT_HOLO_SMALL1",
+    "OT_HOLO_SMALL2",
+    "OT_HOLO_SMALL3",
+    "OT_HOLO_MED1",
+    "OT_HOLO_MED2",
+    "OT_HOLO_GEK",
+    "OT_HOLO_KORVAX",
+    "OT_HOLO_VYKEEN",
+    "OT_DECAL_VYKEEN",
+    "OT_DECAL_GEK",
+    "OT_DECAL_KORVAX",
+    "OT_DECAL_NUM0",
+    "OT_DECAL_NUM1",
+    "OT_DECAL_NUM2",
+    "OT_DECAL_NUM3",
+    "OT_DECAL_NUM4",
+    "OT_DECAL_NUM5",
+    "OT_DECAL_NUM6",
+    "OT_DECAL_NUM7",
+    "OT_DECAL_NUM8",
+    "OT_DECAL_NUM9"
   ]
 }
