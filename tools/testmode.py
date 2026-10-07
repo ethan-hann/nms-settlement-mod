@@ -32,6 +32,7 @@ MODULES = {
     "defense": "OverseersToolkit-Defense",
     "testtuning": "OverseersToolkit-TestTuning",
     "probes": "OverseersToolkit-Probes",
+    "decor": "OverseersToolkit-SettlementDecor",
 }
 DEV_PREFIX = "_OTDEV_"
 FIRST_FREE_SLOT = 6  # slots 1 to 5 hold real games and may never change
