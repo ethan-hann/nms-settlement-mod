@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Probe: does a mission appended to the empty mod mission table run, and can it teach new parts? -->
+<!-- Probe: does a mission appended to the empty mod mission table run, and can it teach a vanilla part creative does not know? -->
 <Data template="cGcMissionTable">
 	<Property name="Missions">
 		<Property name="Missions" value="GcGenericMissionSequence" _id="OT_PROBE_TEACH">
@@ -131,31 +131,7 @@
 								<Property name="LabelID" value="" />
 								<Property name="Reward" value="GcRewardSpecificProductRecipe">
 									<Property name="GcRewardSpecificProductRecipe">
-										<Property name="ID" value="OT_PROBE" />
-										<Property name="Silent" value="false" />
-										<Property name="HideInSeasonRewards" value="false" />
-										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
-									</Property>
-								</Property>
-							</Property>
-							<Property name="List" value="GcRewardTableItem">
-								<Property name="PercentageChance" value="100.000000" />
-								<Property name="LabelID" value="" />
-								<Property name="Reward" value="GcRewardSpecificProductRecipe">
-									<Property name="GcRewardSpecificProductRecipe">
-										<Property name="ID" value="OT_PROBE2" />
-										<Property name="Silent" value="false" />
-										<Property name="HideInSeasonRewards" value="false" />
-										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
-									</Property>
-								</Property>
-							</Property>
-							<Property name="List" value="GcRewardTableItem">
-								<Property name="PercentageChance" value="100.000000" />
-								<Property name="LabelID" value="" />
-								<Property name="Reward" value="GcRewardSpecificProductRecipe">
-									<Property name="GcRewardSpecificProductRecipe">
-										<Property name="ID" value="DECALPATH" />
+										<Property name="ID" value="BLD_DATASIGN" />
 										<Property name="Silent" value="false" />
 										<Property name="HideInSeasonRewards" value="false" />
 										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
@@ -454,7 +430,7 @@
 							<Property name="Conditions">
 								<Property name="Conditions" value="GcMissionConditionProductKnown">
 									<Property name="GcMissionConditionProductKnown">
-										<Property name="Product" value="OT_PROBE" />
+										<Property name="Product" value="BLD_DATASIGN" />
 										<Property name="Default" value="GcDefaultMissionProductEnum">
 											<Property name="DefaultProductType" value="None" />
 										</Property>
@@ -611,7 +587,7 @@
 											<Property name="DoMissionBoardOverride" value="false" />
 											<Property name="Silent" value="false" />
 											<Property name="RewardInventoryOverride" value="None" />
-											<Property name="DebugText" value="teach the probe parts" />
+											<Property name="DebugText" value="teach a vanilla part creative does not know" />
 										</Property>
 									</Property>
 								</Property>

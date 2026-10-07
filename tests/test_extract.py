@@ -14,6 +14,7 @@ def test_filters_cover_the_tables_the_mod_patches():
         "language/*english*",
         "metadata/simulation/missions/tables/missiontable*",
         "metadata/simulation/missions/tables/modmissiontable*",
+        "metadata/gamestate/difficultyconfig*",
     ]
     for pattern in needed:
         assert pattern in extract.FILTERS

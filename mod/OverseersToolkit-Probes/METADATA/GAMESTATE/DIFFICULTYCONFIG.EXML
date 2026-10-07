@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Probe: new creative games know only the products listed here, so append the probe parts. -->
+<Data template="cGcDifficultyConfig">
+	<Property name="StartWithAllItemsKnownEnabledData" value="GcDifficultyStartWithAllItemsKnownOptionData">
+		<Property name="InitialKnownThings" value="GcKnownThingsPreset">
+			<Property name="KnownProducts">
+				<Property name="KnownProducts" value="OT_PROBE" />
+				<Property name="KnownProducts" value="OT_PROBE2" />
+				<Property name="KnownProducts" value="DECALPATH" />
+			</Property>
+		</Property>
+	</Property>
+</Data>
