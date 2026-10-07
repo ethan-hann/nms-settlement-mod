@@ -495,3 +495,36 @@ def test_deleting_a_protected_slot_still_fails_when_the_test_slot_is_known(fake_
 
     assert not result.ok
     assert any("save9.hg" in f for f in result.failures)
+
+
+# --- the game's merged-data export (MODS/EXPORTED) ---------------------------
+
+
+def test_an_export_folder_the_game_creates_during_the_session_is_kept_in_scratch_and_removed(fake_tree):
+    env = make_env(fake_tree)
+    testmode.enter(env, ["core"])
+    exported = env.mods_dir / "EXPORTED" / "METADATA" / "REALITY" / "TABLES"
+    exported.mkdir(parents=True)
+    (exported / "BASEBUILDINGOBJECTSTABLE.MXML").write_text("<Data />")
+
+    result = testmode.exit_session(env)
+
+    assert result.ok, result.failures
+    assert not (env.mods_dir / "EXPORTED").exists()
+    kept = list(env.scratch.glob("exported/*/METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.MXML"))
+    assert len(kept) == 1
+
+
+def test_an_export_folder_that_existed_before_the_session_is_left_alone_and_checked(fake_tree):
+    env = make_env(fake_tree)
+    old = env.mods_dir / "EXPORTED" / "OLD.MXML"
+    old.parent.mkdir(parents=True)
+    old.write_text("someone else's export")
+    testmode.enter(env, ["core"])
+    old.write_text("rewritten during the session")
+
+    result = testmode.exit_session(env)
+
+    assert old.read_text() == "rewritten during the session"
+    assert not result.ok
+    assert any("EXPORTED" in f for f in result.failures)
