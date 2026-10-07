@@ -124,3 +124,26 @@ def test_report_measures_base_to_settlement_distance_on_the_same_planet(save_fil
     assert near["name"] == "Gersfiel Colony"
     assert near["distance"] == pytest.approx(5.0)
     assert report["bases"][1]["nearest_settlement"] is None
+
+
+def test_empty_ring_buffer_slots_are_not_settlements(tmp_path):
+    readable = json.loads(json.dumps(READABLE))
+    psd = readable["BaseContext"]["PlayerStateData"]
+    psd["SettlementStatesV2"].append(
+        {"Name": "", "UniverseAddress": 0, "Position": [0.0, 0.0, 0.0], "Stats": [0] * 8, "Perks": []}
+    )
+    path = tmp_path / "save11.hg"
+    path.write_bytes(encode_save(readable))
+    report = save_inspect.report(save_inspect.read_save(path))
+    assert [s["name"] for s in report["settlements"]] == ["Gersfiel Colony"]
+
+
+def test_game_mode_comes_from_the_difficulty_preset(tmp_path):
+    readable = json.loads(json.dumps(READABLE))
+    readable["CommonStateData"] = {"SeasonData": {"GameMode": {"PresetGameMode": "Unspecified"}}}
+    readable["BaseContext"]["PlayerStateData"]["DifficultyState"] = {
+        "Preset": {"DifficultyPresetType": "Creative"}
+    }
+    path = tmp_path / "save11.hg"
+    path.write_bytes(encode_save(readable))
+    assert save_inspect.report(save_inspect.read_save(path))["game_mode"] == "Creative"
