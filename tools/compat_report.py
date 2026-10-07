@@ -167,6 +167,12 @@ def _pak_path(rel):
     return vanilla_relpath(Path(rel)).with_suffix(".mbin").as_posix().lower()
 
 
+def _is_root_globals(rel):
+    """A globals patch placed beside the mod's top-level folders instead of under GLOBALS/."""
+    path = Path(rel)
+    return len(path.parts) == 1 and "GLOBALS" in path.name.upper()
+
+
 def _compare(mod, rel, theirs, ours, findings):
     our_changed = {e.path: e for e in ours if e.kind == "changed"}
     our_added = {e.path for e in ours if e.kind == "added"}
@@ -215,6 +221,11 @@ def scan_mods(mods_dir, mod_root, vanilla_dir, game_files, include_test_modules=
             if suffix == ".MBIN":
                 if target in ours:
                     findings.append(Finding(mod, rel, "conflict", "replaces the whole file we patch"))
+                continue
+            if _is_root_globals(rel):
+                findings.append(
+                    Finding(mod, rel, "may-not-load", "globals patches load only from <mod>/GLOBALS/")
+                )
                 continue
             if _pak_path(rel) not in game_files:
                 findings.append(
