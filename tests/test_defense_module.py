@@ -281,6 +281,12 @@ def test_tower_reuses_a_vanilla_scene_that_exists_and_is_placeable_on_a_planet_b
     assert scene.lower() in files
 
 
+def test_tower_shows_in_the_overseer_build_menu():
+    # The settlement's own build menu lists only parts that can be built outside a base.
+    new = generated_file(OBJECTS).find(f"Property[@name='Objects']/Property[@_id='{TOWER}']")
+    assert value(new, "BuildableOnPlanet") == "true"
+
+
 def test_tower_is_craftable_and_learned_only_at_s_class():
     product = generated_file(PRODUCTS).find(f"Property[@name='Table']/Property[@_id='{TOWER}']")
     assert product is not None, f"{TOWER} has no product"

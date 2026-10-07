@@ -8,7 +8,6 @@
 				<Property name="KnownProducts" value="OT_CURB" />
 				<Property name="KnownProducts" value="OT_SIGNPOST" />
 				<Property name="KnownProducts" value="OT_LAMP" />
-				<Property name="KnownProducts" value="DECALPATH" />
 			</Property>
 		</Property>
 	</Property>

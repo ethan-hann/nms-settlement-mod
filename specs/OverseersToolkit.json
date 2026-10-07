@@ -1,9 +1,6 @@
 {
   "text": {
     "OT_SETTLEMENT_NAME": "SETTLEMENT",
-    "OT_PATHDECAL_NAME": "SETTLEMENT PATH",
-    "OT_PATHDECAL_NAME_L": "Settlement Path",
-    "OT_PATHDECAL_DESC": "A flat path surface that lies on the ground. Rotate and scale it to lay a path between buildings.",
     "OT_PATH_TILE_NAME": "PATH TILE",
     "OT_PATH_TILE_NAME_L": "Path Tile",
     "OT_PATH_TILE_DESC": "A small stone tile for laying paths, plazas and walkways.",
@@ -18,7 +15,7 @@
     "OT_SIGNPOST_DESC": "A freestanding display panel for marking streets and landmarks. It also gives off light.",
     "OT_LAMP_NAME": "PATH LAMP",
     "OT_LAMP_NAME_L": "Path Lamp",
-    "OT_LAMP_DESC": "A rounded standing lamp for lighting paths and streets. It needs no power."
+    "OT_LAMP_DESC": "A standing street lamp for lighting paths and plazas. It needs no power."
   },
   "subgroups": [
     {
@@ -37,6 +34,9 @@
           "OT_SETTLEMENT"
         ]
       ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
       "product": {
         "Name": "OT_PATH_TILE_NAME",
         "NameLower": "OT_PATH_TILE_NAME_L",
@@ -52,6 +52,9 @@
           "OT_SETTLEMENT"
         ]
       ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
       "product": {
         "Name": "OT_PATH_TRI_NAME",
         "NameLower": "OT_PATH_TRI_NAME_L",
@@ -67,6 +70,9 @@
           "OT_SETTLEMENT"
         ]
       ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
       "product": {
         "Name": "OT_CURB_NAME",
         "NameLower": "OT_CURB_NAME_L",
@@ -82,6 +88,9 @@
           "OT_SETTLEMENT"
         ]
       ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
       "product_from": "BOXEDSCREEN",
       "product": {
         "Name": "OT_SIGNPOST_NAME",
@@ -93,7 +102,7 @@
     },
     {
       "id": "OT_LAMP",
-      "copy_from": "BUILDLIGHT2",
+      "copy_from": "S_STREETLAMP0",
       "groups": [
         [
           "DECORATION",
@@ -101,36 +110,12 @@
         ]
       ],
       "object": {
-        "LinkGridData.Rate": "0",
-        "LinkGridData.Connection.NetworkSubGroup": "0",
-        "LinkGridData.Connection.NetworkMask": "0"
+        "BuildableOnPlanet": "true"
       },
       "product": {
         "Name": "OT_LAMP_NAME",
         "NameLower": "OT_LAMP_NAME_L",
         "Description": "OT_LAMP_DESC"
-      }
-    }
-  ],
-  "edits": [
-    {
-      "id": "DECALPATH",
-      "object": {
-        "PlanetBaseLimit": "250"
-      },
-      "add_groups": [
-        [
-          "DECORATION",
-          "OT_SETTLEMENT"
-        ]
-      ],
-      "new_product": {
-        "copy_from": "BUILDPAVING",
-        "fields": {
-          "Name": "OT_PATHDECAL_NAME",
-          "NameLower": "OT_PATHDECAL_NAME_L",
-          "Description": "OT_PATHDECAL_DESC"
-        }
       }
     }
   ],
@@ -143,8 +128,7 @@
         "OT_PATH_TILE",
         "OT_PATH_TRI",
         "OT_CURB",
-        "OT_LAMP",
-        "DECALPATH"
+        "OT_LAMP"
       ]
     },
     {
@@ -161,7 +145,6 @@
     "OT_PATH_TRI",
     "OT_CURB",
     "OT_SIGNPOST",
-    "OT_LAMP",
-    "DECALPATH"
+    "OT_LAMP"
   ]
 }
