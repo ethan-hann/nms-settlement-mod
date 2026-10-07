@@ -52,21 +52,6 @@
 			<Property name="USEnglish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SIGNPOST_NAME" />
-			<Property name="English" value="SIGNPOST" />
-			<Property name="USEnglish" value="SIGNPOST" />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SIGNPOST_NAME_L" />
-			<Property name="English" value="Signpost" />
-			<Property name="USEnglish" value="Signpost" />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SIGNPOST_DESC" />
-			<Property name="English" value="A freestanding display panel for marking streets and landmarks. It also gives off light." />
-			<Property name="USEnglish" value="A freestanding display panel for marking streets and landmarks. It also gives off light." />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME" />
 			<Property name="English" value="PATH LAMP" />
 			<Property name="USEnglish" value="PATH LAMP" />

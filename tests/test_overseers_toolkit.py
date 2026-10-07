@@ -24,13 +24,30 @@ pytestmark = pytest.mark.skipif(
 OBJ = "METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML"
 PROD = "METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML"
 SUBGROUP = ("DECORATION", "OT_SETTLEMENT")
-KIT_SOURCES = {
+PATH_SOURCES = {
     "OT_PATH_TILE": "S_FLOOR_Q",
     "OT_PATH_TRI": "S_TRIFLOOR_Q",
     "OT_CURB": "S_WALL_Q_H",
-    "OT_SIGNPOST": "BLD_DATASIGN",
     "OT_LAMP": "S_STREETLAMP0",
 }
+SIGN_SOURCES = {
+    "OT_SIGN_BAR": "S_SIGN_BAR0",
+    "OT_SIGN_STAND": "STANDINGSIGN",
+    "OT_BILLBOARD": "BILLBOARD",
+    "OT_HOLO_SMALL1": "HOLO_SMALL1",
+    "OT_HOLO_SMALL2": "HOLO_SMALL2",
+    "OT_HOLO_SMALL3": "HOLO_SMALL3",
+    "OT_HOLO_MED1": "HOLO_MED1",
+    "OT_HOLO_MED2": "HOLO_MED2",
+    "OT_HOLO_GEK": "HOLO_TRA",
+    "OT_HOLO_KORVAX": "HOLO_EXP",
+    "OT_HOLO_VYKEEN": "HOLO_WAR",
+    "OT_DECAL_VYKEEN": "BUILDDECALVIS1",
+    "OT_DECAL_GEK": "BUILDDECALVIS2",
+    "OT_DECAL_KORVAX": "BUILDDECALVIS3",
+    **{f"OT_DECAL_NUM{n}": f"BUILDDECALNUM{n}" for n in range(10)},
+}
+KIT_SOURCES = {**PATH_SOURCES, **SIGN_SOURCES}
 
 
 def load_spec():
@@ -98,7 +115,7 @@ def label(spec, key):
     return spec["text"][key]
 
 
-def test_kit_is_the_five_parts_copied_from_their_vanilla_sources(spec):
+def test_kit_is_the_path_parts_lamp_and_signs_copied_from_their_vanilla_sources(spec):
     assert {p["id"]: p["copy_from"] for p in spec.get("parts", [])} == KIT_SOURCES
 
 
@@ -153,8 +170,18 @@ def test_new_product_icons_exist_in_the_game_files(built, game_files):
         assert icon.lower() in game_files, f"{id_}: icon {icon} is not in the game files"
 
 
-def test_signpost_uses_the_data_display_icon(built):
-    assert field(product_of(built, "OT_SIGNPOST"), "Icon.Filename").endswith("SPECIAL1.DATASIGN.DDS")
+def test_signs_keep_their_vanilla_names_so_every_game_language_has_them(built):
+    vanilla = ET.parse(EXTRACTED / "metadata/reality/tables/nms_basepartproducts.MXML").getroot()
+    for id_, src in SIGN_SOURCES.items():
+        source = vanilla.find(f"Property[@name='Table']/Property[@_id='{src}']")
+        for name in ("Name", "NameLower", "Description", "Icon.Filename"):
+            assert field(product_of(built, id_), name) == field(source, name), f"{id_}.{name}"
+
+
+def test_no_kit_sign_draws_power(built):
+    # A settlement has no power grid to connect to.
+    for id_ in SIGN_SOURCES:
+        assert field(part_entry(built, id_), "LinkGridData.Rate") == "0", id_
 
 
 def test_text_is_plain_player_facing_english(spec):
@@ -165,7 +192,7 @@ def test_text_is_plain_player_facing_english(spec):
 
 
 def test_names_follow_the_vanilla_casing(spec, built):
-    for id_ in KIT_SOURCES:
+    for id_ in PATH_SOURCES:
         product = product_of(built, id_)
         name, lower = label(spec, field(product, "Name")), label(spec, field(product, "NameLower"))
         assert name == name.upper(), f"{id_}: {name!r}"
@@ -192,7 +219,7 @@ def test_settlement_class_unlocks_follow_the_wishlist_tiers():
     tiers = {u["min_class"]: set(u["recipes"]) for u in _spec()["unlocks"]}
     assert tiers == {
         "B": {"OT_PATH_TILE", "OT_PATH_TRI", "OT_CURB", "OT_LAMP"},
-        "A": {"OT_SIGNPOST"},
+        "A": set(SIGN_SOURCES),
     }
 
 

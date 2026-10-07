@@ -965,7 +965,283 @@
 								<Property name="LabelID" value="" />
 								<Property name="Reward" value="GcRewardSpecificProductRecipe">
 									<Property name="GcRewardSpecificProductRecipe">
-										<Property name="ID" value="OT_SIGNPOST" />
+										<Property name="ID" value="OT_SIGN_BAR" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_SIGN_STAND" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_BILLBOARD" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_SMALL1" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_SMALL2" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_SMALL3" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_MED1" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_MED2" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_GEK" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_KORVAX" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_HOLO_VYKEEN" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_VYKEEN" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_GEK" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_KORVAX" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM0" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM1" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM2" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM3" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM4" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM5" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM6" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM7" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM8" />
+										<Property name="Silent" value="true" />
+										<Property name="HideInSeasonRewards" value="false" />
+										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
+									</Property>
+								</Property>
+							</Property>
+							<Property name="List" value="GcRewardTableItem">
+								<Property name="PercentageChance" value="100.000000" />
+								<Property name="LabelID" value="" />
+								<Property name="Reward" value="GcRewardSpecificProductRecipe">
+									<Property name="GcRewardSpecificProductRecipe">
+										<Property name="ID" value="OT_DECAL_NUM9" />
 										<Property name="Silent" value="true" />
 										<Property name="HideInSeasonRewards" value="false" />
 										<Property name="SeasonRewardFormat" value="UI_BLUEPRINT_REWARD_FORMAT" />
@@ -1292,7 +1568,7 @@
 								</Property>
 								<Property name="Conditions" value="GcMissionConditionProductKnown">
 									<Property name="GcMissionConditionProductKnown">
-										<Property name="Product" value="OT_SIGNPOST" />
+										<Property name="Product" value="OT_SIGN_BAR" />
 										<Property name="Default" value="GcDefaultMissionProductEnum">
 											<Property name="DefaultProductType" value="None" />
 										</Property>

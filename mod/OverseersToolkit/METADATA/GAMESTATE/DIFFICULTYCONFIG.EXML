@@ -6,8 +6,31 @@
 				<Property name="KnownProducts" value="OT_PATH_TILE" />
 				<Property name="KnownProducts" value="OT_PATH_TRI" />
 				<Property name="KnownProducts" value="OT_CURB" />
-				<Property name="KnownProducts" value="OT_SIGNPOST" />
 				<Property name="KnownProducts" value="OT_LAMP" />
+				<Property name="KnownProducts" value="OT_SIGN_BAR" />
+				<Property name="KnownProducts" value="OT_SIGN_STAND" />
+				<Property name="KnownProducts" value="OT_BILLBOARD" />
+				<Property name="KnownProducts" value="OT_HOLO_SMALL1" />
+				<Property name="KnownProducts" value="OT_HOLO_SMALL2" />
+				<Property name="KnownProducts" value="OT_HOLO_SMALL3" />
+				<Property name="KnownProducts" value="OT_HOLO_MED1" />
+				<Property name="KnownProducts" value="OT_HOLO_MED2" />
+				<Property name="KnownProducts" value="OT_HOLO_GEK" />
+				<Property name="KnownProducts" value="OT_HOLO_KORVAX" />
+				<Property name="KnownProducts" value="OT_HOLO_VYKEEN" />
+				<Property name="KnownProducts" value="OT_DECAL_VYKEEN" />
+				<Property name="KnownProducts" value="OT_DECAL_GEK" />
+				<Property name="KnownProducts" value="OT_DECAL_KORVAX" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM0" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM1" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM2" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM3" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM4" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM5" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM6" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM7" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM8" />
+				<Property name="KnownProducts" value="OT_DECAL_NUM9" />
 			</Property>
 		</Property>
 	</Property>
