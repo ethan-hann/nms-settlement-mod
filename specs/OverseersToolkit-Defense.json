@@ -21,6 +21,9 @@
           "DECOEXTERIOR"
         ]
       ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
       "product": {
         "Name": "OT_TOWER_NAME",
         "NameLower": "OT_TOWER_NAME_L",
