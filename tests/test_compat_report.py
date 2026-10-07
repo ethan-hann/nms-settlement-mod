@@ -36,7 +36,7 @@ VANILLA_GLOBALS = """<?xml version="1.0" encoding="utf-8"?>
 """
 
 OBJECTS_REL = "METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML"
-GLOBALS_REL = "GCBUILDINGGLOBALS.GLOBAL.EXML"
+GLOBALS_REL = "GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML"
 
 # What the game's paks contain, lower case with .mbin, as in scratch/all_files.txt.
 GAME_FILES = {
@@ -296,17 +296,18 @@ def test_an_mbin_at_a_path_we_do_not_patch_is_ignored(mods, mod_root, vanilla):
     assert scan(mods, mod_root, vanilla) == []
 
 
-def test_a_patch_under_globals_is_flagged_as_possibly_not_loading(mods, mod_root, vanilla):
-    write(mods / "gBase-like/GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML", globals_patch("0.5"))
+def test_a_root_level_globals_patch_is_flagged_as_possibly_not_loading(mods, mod_root, vanilla):
+    # The loader reads globals patches only from <mod>/GLOBALS/.
+    write(mods / "Rooted" / "GCBUILDINGGLOBALS.GLOBAL.EXML", globals_patch("0.5"))
     findings = scan(mods, mod_root, vanilla)
     (flag,) = of_kind(findings, "may-not-load")
-    assert flag.mod == "gBase-like"
-    assert "GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML" in flag.file
-    assert of_kind(findings, "conflict") == []  # a different path, so not our file
+    assert flag.mod == "Rooted"
+    assert "GLOBALS/" in flag.message
+    assert of_kind(findings, "conflict") == []
 
 
-def test_the_same_globals_patch_at_the_pak_root_does_conflict(mods, mod_root, vanilla):
-    write(mods / "Rooted" / GLOBALS_REL, globals_patch("0.5"))
+def test_a_globals_patch_under_globals_conflicts_with_ours(mods, mod_root, vanilla):
+    write(mods / "gBase-like/Globals/GCBUILDINGGLOBALS.GLOBAL.EXML", globals_patch("0.5"))
     (conflict,) = of_kind(scan(mods, mod_root, vanilla), "conflict")
     assert "RadiusMultiplier_DoNotPlaceAnywhereNear" in conflict.message
     assert "1.000000" in conflict.message and "0.5" in conflict.message

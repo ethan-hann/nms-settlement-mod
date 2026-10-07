@@ -184,6 +184,10 @@ def build(spec, vanilla_dir=EXTRACTED):
     for part in spec.get("parts", []):
         id_, src = part["id"], part["copy_from"]
         entry = _copy_entry(objects, src, id_, id_)
+        flag = entry.find("Property[@name='IsFromModFolder']")
+        if flag is not None:
+            # Mods that add parts set this; it marks the entry as not from the vanilla tables.
+            flag.set("value", "true")
         _set(entry, part.get("object"), id_)
         if "groups" in part:
             groups = _field(entry, "Groups", id_)

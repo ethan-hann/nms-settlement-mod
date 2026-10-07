@@ -74,15 +74,6 @@
           "Description": "OT_DECALPATH_DESC"
         }
       }
-    },
-    {
-      "id": "BUILDPAVING",
-      "add_groups": [
-        [
-          "DECORATION",
-          "DECOLIGHTS"
-        ]
-      ]
     }
   ]
 }

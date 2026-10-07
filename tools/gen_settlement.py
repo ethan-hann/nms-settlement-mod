@@ -30,7 +30,7 @@ from gen_parts import EXTRACTED, MAX_ID, MAX_LOC_KEY, SpecError, Table, P, to_te
 
 TABLES = Path("METADATA/REALITY/TABLES")
 PERKS = ("metadata/reality/tables/settlementperkstable.MXML", "Table", TABLES / "SETTLEMENTPERKSTABLE.EXML")
-GLOBALS = ("gcsettlementglobals.MXML", "Judgements", Path("GCSETTLEMENTGLOBALS.EXML"))
+GLOBALS = ("gcsettlementglobals.MXML", "Judgements", Path("GLOBALS/GCSETTLEMENTGLOBALS.EXML"))
 MAX_OPTIONS = 4
 OPTION_FLAGS = ("UsePolicyPerk", "UsePolicyStat", "UseGiftReward", "UseTechPerk")
 

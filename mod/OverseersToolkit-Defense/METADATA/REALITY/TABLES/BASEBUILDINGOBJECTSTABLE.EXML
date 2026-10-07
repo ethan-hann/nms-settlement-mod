@@ -4,7 +4,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_TOWER">
 			<Property name="ID" value="OT_TOWER" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="None" />
 			</Property>

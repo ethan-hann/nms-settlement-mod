@@ -31,7 +31,12 @@
     {
       "id": "OT_PATH_TILE",
       "copy_from": "S_FLOOR_Q",
-      "groups": [["DECORATION", "OT_SETTLEMENT"]],
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
       "product": {
         "Name": "OT_PATH_TILE_NAME",
         "NameLower": "OT_PATH_TILE_NAME_L",
@@ -41,7 +46,12 @@
     {
       "id": "OT_PATH_TRI",
       "copy_from": "S_TRIFLOOR_Q",
-      "groups": [["DECORATION", "OT_SETTLEMENT"]],
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
       "product": {
         "Name": "OT_PATH_TRI_NAME",
         "NameLower": "OT_PATH_TRI_NAME_L",
@@ -51,7 +61,12 @@
     {
       "id": "OT_CURB",
       "copy_from": "S_WALL_Q_H",
-      "groups": [["DECORATION", "OT_SETTLEMENT"]],
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
       "product": {
         "Name": "OT_CURB_NAME",
         "NameLower": "OT_CURB_NAME_L",
@@ -61,7 +76,12 @@
     {
       "id": "OT_SIGNPOST",
       "copy_from": "BLD_DATASIGN",
-      "groups": [["DECORATION", "OT_SETTLEMENT"]],
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
       "product_from": "BOXEDSCREEN",
       "product": {
         "Name": "OT_SIGNPOST_NAME",
@@ -74,7 +94,12 @@
     {
       "id": "OT_LAMP",
       "copy_from": "BUILDLIGHT2",
-      "groups": [["DECORATION", "OT_SETTLEMENT"]],
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
       "object": {
         "LinkGridData.Rate": "0",
         "LinkGridData.Connection.NetworkSubGroup": "0",
@@ -93,7 +118,12 @@
       "object": {
         "PlanetBaseLimit": "250"
       },
-      "add_groups": [["DECORATION", "OT_SETTLEMENT"]],
+      "add_groups": [
+        [
+          "DECORATION",
+          "OT_SETTLEMENT"
+        ]
+      ],
       "new_product": {
         "copy_from": "BUILDPAVING",
         "fields": {
@@ -102,10 +132,6 @@
           "Description": "OT_PATHDECAL_DESC"
         }
       }
-    },
-    {
-      "id": "S_STREETLAMP0",
-      "add_groups": [["DECORATION", "OT_SETTLEMENT"]]
     }
   ]
 }

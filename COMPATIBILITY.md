@@ -17,7 +17,6 @@ Appends to these vanilla lists:
 | File | List |
 |---|---|
 | METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[DECALPATH].Groups |
-| METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[S_STREETLAMP0].Groups |
 
 ### Adds new
 
@@ -48,7 +47,7 @@ Appends to these vanilla lists:
 
 | File | List |
 |---|---|
-| GCSETTLEMENTGLOBALS.EXML | Judgements |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | Judgements |
 
 ### Adds new
 
@@ -59,3 +58,15 @@ Appends to these vanilla lists:
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_TOWER] |
 | METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_WATCH] |
 | LocTable.MXML | (whole file) |
+
+## OverseersToolkit-OpenSettlements
+
+### Edits vanilla
+
+| File | Field | Vanilla | Ours |
+|---|---|---|---|
+| GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML | MinRadiusForBases | 300.000000 | 15.000000 |
+
+### Adds new
+
+Nothing new.
