@@ -40,6 +40,9 @@ FILTERS = [
     "metadata/simulation/missions/tables/modmissiontable*",
     "metadata/reality/cataloguebuilding*",
     "metadata/gamestate/difficultyconfig*",
+    "metadata/gamestate/defaultsavedata*",
+    "metadata/simulation/missions/tables/npcmissiontable*",
+    "metadata/simulation/missions/tables/fleetmissiontable*",
     "language/*english*",
 ]
 
