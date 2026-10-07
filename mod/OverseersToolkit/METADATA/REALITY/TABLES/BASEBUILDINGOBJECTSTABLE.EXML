@@ -37,7 +37,7 @@
 			<Property name="BuildableOnFreighter" value="false" />
 			<Property name="BuildableInShipStructural" value="false" />
 			<Property name="BuildableInShipDecorative" value="false" />
-			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanet" value="true" />
 			<Property name="BuildableOnPlanetWithProduct" value="false" />
 			<Property name="BuildableUnderwater" value="true" />
 			<Property name="BuildableAboveWater" value="true" />
@@ -151,7 +151,7 @@
 			<Property name="BuildableOnFreighter" value="false" />
 			<Property name="BuildableInShipStructural" value="false" />
 			<Property name="BuildableInShipDecorative" value="false" />
-			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanet" value="true" />
 			<Property name="BuildableOnPlanetWithProduct" value="false" />
 			<Property name="BuildableUnderwater" value="true" />
 			<Property name="BuildableAboveWater" value="true" />
@@ -265,7 +265,7 @@
 			<Property name="BuildableOnFreighter" value="false" />
 			<Property name="BuildableInShipStructural" value="false" />
 			<Property name="BuildableInShipDecorative" value="false" />
-			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanet" value="true" />
 			<Property name="BuildableOnPlanetWithProduct" value="false" />
 			<Property name="BuildableUnderwater" value="true" />
 			<Property name="BuildableAboveWater" value="true" />
@@ -379,7 +379,7 @@
 			<Property name="BuildableOnFreighter" value="true" />
 			<Property name="BuildableInShipStructural" value="false" />
 			<Property name="BuildableInShipDecorative" value="true" />
-			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanet" value="true" />
 			<Property name="BuildableOnPlanetWithProduct" value="false" />
 			<Property name="BuildableUnderwater" value="true" />
 			<Property name="BuildableAboveWater" value="true" />
@@ -473,7 +473,7 @@
 				<Property name="Style" value="None" />
 			</Property>
 			<Property name="PlacementScene" value="TkModelResource">
-				<Property name="Filename" value="MODELS/PLANETS/BIOMES/COMMON/BUILDINGS/PARTS/BUILDABLEPARTS/DECORATION/STANDINGLIGHT2_PLACEMENT.SCENE.MBIN" />
+				<Property name="Filename" value="MODELS/PLANETS/BIOMES/COMMON/BUILDINGS/PARTS/BUILDABLEPARTS/DECORATION/BAZAAR/LIGHTOUTDOORSTANDING_PLACEMENT.SCENE.MBIN" />
 				<Property name="Seed" value="0" />
 			</Property>
 			<Property name="SinglePartID" value="" />
@@ -491,7 +491,7 @@
 			<Property name="BuildableOnFreighter" value="true" />
 			<Property name="BuildableInShipStructural" value="false" />
 			<Property name="BuildableInShipDecorative" value="true" />
-			<Property name="BuildableOnPlanet" value="false" />
+			<Property name="BuildableOnPlanet" value="true" />
 			<Property name="BuildableOnPlanetWithProduct" value="false" />
 			<Property name="BuildableUnderwater" value="true" />
 			<Property name="BuildableAboveWater" value="true" />
@@ -576,16 +576,6 @@
 			<Property name="UseProductIDOverride" value="false" />
 			<Property name="UseProductIDOverrideInSpace" value="false" />
 			<Property name="OverrideProductID" value="" />
-		</Property>
-		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECALPATH">
-			<Property name="PlanetBaseLimit" value="250" />
-			<Property name="Groups">
-				<Property name="Groups" value="GcBaseBuildingEntryGroup">
-					<Property name="Group" value="DECORATION" />
-					<Property name="SubGroupName" value="OT_SETTLEMENT" />
-					<Property name="SubGroup" value="0" />
-				</Property>
-			</Property>
 		</Property>
 	</Property>
 </Data>
