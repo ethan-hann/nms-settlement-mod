@@ -116,3 +116,18 @@ def test_ids_are_unique_across_modules():
         for item in spec.get("parts", []):
             assert item["id"] not in ids, f"{item['id']} defined in {ids.get(item['id'])} and {spec_file.stem}"
             ids[item["id"]] = spec_file.stem
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_no_part_sits_twice_in_one_top_level_build_group(module, tmp_path):
+    # No vanilla part repeats a top-level group, and a probe that did so is a crash suspect.
+    rel = Path("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
+    patch = MODS / module / rel
+    if not patch.is_file():
+        pytest.skip("module does not patch base parts")
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    merged, _ = merge_preview.merge(vanilla, ET.parse(patch).getroot())
+    for entry in ET.parse(patch).getroot().iterfind("Property[@name='Objects']/Property"):
+        part = merged.find(f"Property[@name='Objects']/Property[@_id='{entry.get('_id')}']")
+        groups = [g.find("Property[@name='Group']").get("value") for g in part.find("Property[@name='Groups']")]
+        assert len(groups) == len(set(groups)), f"{entry.get('_id')} repeats a top-level group: {groups}"

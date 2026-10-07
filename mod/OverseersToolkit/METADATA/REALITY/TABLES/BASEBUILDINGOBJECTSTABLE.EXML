@@ -587,14 +587,5 @@
 				</Property>
 			</Property>
 		</Property>
-		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_STREETLAMP0">
-			<Property name="Groups">
-				<Property name="Groups" value="GcBaseBuildingEntryGroup">
-					<Property name="Group" value="DECORATION" />
-					<Property name="SubGroupName" value="OT_SETTLEMENT" />
-					<Property name="SubGroup" value="0" />
-				</Property>
-			</Property>
-		</Property>
 	</Property>
 </Data>

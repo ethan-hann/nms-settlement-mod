@@ -129,10 +129,6 @@ def test_decal_path_limit_is_raised_to_suit_path_laying(built):
     assert 200 <= limit <= 300
 
 
-def test_street_lamp_post_is_listed_in_the_settlement_subgroup(built):
-    assert group_pairs(part_entry(built, "S_STREETLAMP0")) == [SUBGROUP]
-
-
 def test_lamp_draws_no_power_exactly_like_the_vanilla_street_lamp(built):
     lamp = part_entry(built, "OT_LAMP")
     street = vanilla_object("S_STREETLAMP0")
