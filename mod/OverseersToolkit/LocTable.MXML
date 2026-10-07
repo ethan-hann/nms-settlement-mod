@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Data template="cTkLocalisationTable">
 	<Property name="Table">
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_SETTLEMENT_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SETTLEMENT_NAME" />
 			<Property name="English" value="SETTLEMENT" />
 			<Property name="USEnglish" value="SETTLEMENT" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATHDECAL_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATHDECAL_NAME" />
 			<Property name="English" value="SETTLEMENT PATH" />
 			<Property name="USEnglish" value="SETTLEMENT PATH" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATHDECAL_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATHDECAL_NAME_L" />
 			<Property name="English" value="Settlement Path" />
 			<Property name="USEnglish" value="Settlement Path" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATHDECAL_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATHDECAL_DESC" />
 			<Property name="English" value="A flat path surface that lies on the ground. Rotate and scale it to lay a path between buildings." />
 			<Property name="USEnglish" value="A flat path surface that lies on the ground. Rotate and scale it to lay a path between buildings." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATH_TILE_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME" />
 			<Property name="English" value="PATH TILE" />
 			<Property name="USEnglish" value="PATH TILE" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATH_TILE_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME_L" />
 			<Property name="English" value="Path Tile" />
 			<Property name="USEnglish" value="Path Tile" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATH_TILE_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_DESC" />
 			<Property name="English" value="A small stone tile for laying paths, plazas and walkways." />
 			<Property name="USEnglish" value="A small stone tile for laying paths, plazas and walkways." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATH_TRI_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_NAME" />
 			<Property name="English" value="PATH TRIANGLE" />
 			<Property name="USEnglish" value="PATH TRIANGLE" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATH_TRI_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_NAME_L" />
 			<Property name="English" value="Path Triangle" />
 			<Property name="USEnglish" value="Path Triangle" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_PATH_TRI_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_DESC" />
 			<Property name="English" value="A small triangular stone tile for turning corners and filling gaps along a path." />
 			<Property name="USEnglish" value="A small triangular stone tile for turning corners and filling gaps along a path." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_CURB_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_NAME" />
 			<Property name="English" value="PATH CURB" />
 			<Property name="USEnglish" value="PATH CURB" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_CURB_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_NAME_L" />
 			<Property name="English" value="Path Curb" />
 			<Property name="USEnglish" value="Path Curb" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_CURB_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_DESC" />
 			<Property name="English" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
 			<Property name="USEnglish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_SIGNPOST_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SIGNPOST_NAME" />
 			<Property name="English" value="SIGNPOST" />
 			<Property name="USEnglish" value="SIGNPOST" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_SIGNPOST_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SIGNPOST_NAME_L" />
 			<Property name="English" value="Signpost" />
 			<Property name="USEnglish" value="Signpost" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_SIGNPOST_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SIGNPOST_DESC" />
 			<Property name="English" value="A freestanding display panel for marking streets and landmarks. It also gives off light." />
 			<Property name="USEnglish" value="A freestanding display panel for marking streets and landmarks. It also gives off light." />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_LAMP_NAME">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME" />
 			<Property name="English" value="PATH LAMP" />
 			<Property name="USEnglish" value="PATH LAMP" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_LAMP_NAME_L">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME_L" />
 			<Property name="English" value="Path Lamp" />
 			<Property name="USEnglish" value="Path Lamp" />
 		</Property>
-		<Property name="Table" value="TkLocalisationEntry" _id="OT_LAMP_DESC">
+		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_DESC" />
 			<Property name="English" value="A rounded standing lamp for lighting paths and streets. It needs no power." />
 			<Property name="USEnglish" value="A rounded standing lamp for lighting paths and streets. It needs no power." />

@@ -249,10 +249,12 @@ def test_text_becomes_a_loc_table_in_english_and_us_english(vanilla):
     out = files({"text": {"OT_PATH_TILE_NAME": "Path Tile"}}, vanilla)
     table = out["LocTable.MXML"]
     assert table.get("template") == "cTkLocalisationTable"
-    entry = get(table, "Table").find("Property[@_id='OT_PATH_TILE_NAME']")
+    (entry,) = list(get(table, "Table"))
     assert get(entry, "Id").get("value") == "OT_PATH_TILE_NAME"
     assert get(entry, "English").get("value") == "Path Tile"
     assert get(entry, "USEnglish").get("value") == "Path Tile"
+    # Installed mods' LocTable.MXML entries carry no _id; match that proven shape.
+    assert "_id" not in entry.attrib
 
 
 def test_unknown_source_part_is_an_error(vanilla):
