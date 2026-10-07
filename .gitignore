@@ -1,2 +1,6 @@
-scratch/*
-tools/*
+scratch/
+dist/
+tools/.venv/
+tools/mbincompiler/
+__pycache__/
+.pytest_cache/
