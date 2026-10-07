@@ -14,7 +14,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_PATH_TILE">
 			<Property name="ID" value="OT_PATH_TILE" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="Stone" />
 			</Property>
@@ -128,7 +128,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_PATH_TRI">
 			<Property name="ID" value="OT_PATH_TRI" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="Stone" />
 			</Property>
@@ -242,7 +242,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_CURB">
 			<Property name="ID" value="OT_CURB" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="Stone" />
 			</Property>
@@ -356,7 +356,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_SIGNPOST">
 			<Property name="ID" value="OT_SIGNPOST" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="None" />
 			</Property>
@@ -468,7 +468,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_LAMP">
 			<Property name="ID" value="OT_LAMP" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="None" />
 			</Property>
@@ -579,15 +579,6 @@
 		</Property>
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="DECALPATH">
 			<Property name="PlanetBaseLimit" value="250" />
-			<Property name="Groups">
-				<Property name="Groups" value="GcBaseBuildingEntryGroup">
-					<Property name="Group" value="DECORATION" />
-					<Property name="SubGroupName" value="OT_SETTLEMENT" />
-					<Property name="SubGroup" value="0" />
-				</Property>
-			</Property>
-		</Property>
-		<Property name="Objects" value="GcBaseBuildingEntry" _id="S_STREETLAMP0">
 			<Property name="Groups">
 				<Property name="Groups" value="GcBaseBuildingEntryGroup">
 					<Property name="Group" value="DECORATION" />

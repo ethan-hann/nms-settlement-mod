@@ -17,7 +17,6 @@ Appends to these vanilla lists:
 | File | List |
 |---|---|
 | METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[DECALPATH].Groups |
-| METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[S_STREETLAMP0].Groups |
 
 ### Adds new
 

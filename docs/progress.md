@@ -40,3 +40,14 @@ Results:
 - **Save facts:** settlements live in a 100-entry ring buffer (`SettlementStatesV2`), most entries empty (address 0); a nearby settlement the player never visited is not stored. `save_inspect.py` now skips empty entries and reads the game mode from `DifficultyState`.
 
 Process change (Ethan's feedback): no more iterating probes in game. Open questions get answered offline first (installed mods, public mod scripts, docs, data validation), and the rest is batched into one short Session 2.
+
+### Correction, same evening: globals belong under GLOBALS/
+
+The M0 finding that globals "sit at the pak root" was right about the paks and wrong about mods. NMS.exe's mod-loading code references `/GLOBALS`, `/BASEBUILDINGPARTS` and `/LOCTABLE.MXML` as per-mod inputs, and all 25 globals patches among the installed mods use `<mod>/GLOBALS/` (every field still valid on this build). The probe's root-level globals patches were therefore most likely never applied, so **P4 never actually ran**, and the decision probe was inert too. gBase Boundary's GLOBALS/ path is the normal one, not a broken one. `merge_preview.py` now maps `GLOBALS/X` to the root-level vanilla file, and all globals patches move under `GLOBALS/`.
+
+Other findings from mining the installed mods (all read-only):
+
+- The loader also has a native `<mod>/BASEBUILDINGPARTS/` route; libMBIN defines `GcModBasePart` (ProductData, PartData, ID), and vanilla's unused `MOD` build group looks made for it. Not used by any installed mod; untested.
+- No vanilla part sits in two subgroups of the same top-level group, but the probe put Paving in two Decoration subgroups. That is now the second crash suspect after the mission, and it has been removed.
+- Working patterns for making items obtainable in existing saves: keyless nodes appended to unlock trees (Unlockable Expedition Exclusive Techs, Craftablemodules), specials-shop entries (Consumerism), reward-table appends (BetterRewardsCombined). No installed mod adds a mission, a judgement or a perk.
+- Vanilla recipe-teaching catch-up missions (`STORAGE_FIX`, `BP_ANALYSER_FIX`) wait a moment before a silent reward; the probe's mission rewarded on the first tick, non-silently.

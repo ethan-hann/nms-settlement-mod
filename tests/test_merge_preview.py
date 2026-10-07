@@ -224,3 +224,11 @@ def test_a_patch_with_a_bad_value_fails_to_compile(tmp_path):
     results = merge_preview.preview_module(module, tmp_path / "out")
     assert [r.ok for r in results] == [False]
     assert "wide" in results[0].message
+
+
+def test_globals_folder_maps_to_the_root_level_vanilla_file():
+    # Installed globals mods ship under GLOBALS/ while the extracted files sit at the root.
+    assert merge_preview.vanilla_relpath(Path("GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML")) == Path(
+        "gcbuildingglobals.global.MXML"
+    )
+    assert merge_preview.vanilla_relpath(Path("globals/gcsettlementglobals.EXML")) == Path("gcsettlementglobals.MXML")

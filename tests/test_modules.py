@@ -124,3 +124,41 @@ def test_compatibility_file_is_current():
     expected = compat_report.generate_compatibility(MODS, EXTRACTED)
     on_disk = (REPO / "COMPATIBILITY.md").read_text(encoding="utf-8")
     assert on_disk == expected, "COMPATIBILITY.md is stale; rerun tools/compat_report.py"
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_no_part_sits_twice_in_one_top_level_build_group(module, tmp_path):
+    # No vanilla part repeats a top-level group, and a probe that did so is a crash suspect.
+    rel = Path("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
+    patch = MODS / module / rel
+    if not patch.is_file():
+        pytest.skip("module does not patch base parts")
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    merged, _ = merge_preview.merge(vanilla, ET.parse(patch).getroot())
+    for entry in ET.parse(patch).getroot().iterfind("Property[@name='Objects']/Property"):
+        part = merged.find(f"Property[@name='Objects']/Property[@_id='{entry.get('_id')}']")
+        groups = [g.find("Property[@name='Group']").get("value") for g in part.find("Property[@name='Groups']")]
+        assert len(groups) == len(set(groups)), f"{entry.get('_id')} repeats a top-level group: {groups}"
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_files_are_ones_the_mod_loader_reads(module):
+    # The loader applies .EXML patches and .MBIN replacements; the only MXML it reads is LocTable.MXML at the mod root.
+    for path in (MODS / module).rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(MODS / module)
+        suffix = path.suffix.upper()
+        if suffix == ".MXML":
+            assert rel.as_posix().upper() == "LOCTABLE.MXML", f"{rel}: the game ignores MXML here"
+        else:
+            assert suffix in (".EXML", ".MBIN"), f"{rel}: not a file type the mod loader reads"
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_globals_patches_sit_under_globals(module):
+    # Globals live at the pak root, but the loader reads EXML patches to them only from <mod>/GLOBALS/.
+    for path in (MODS / module).rglob("*.EXML"):
+        rel = path.relative_to(MODS / module)
+        if "GLOBALS" in rel.name.upper() or rel.name.upper().startswith("GCSETTLEMENTGLOBALS"):
+            assert rel.parts[0].upper() == "GLOBALS", f"{rel}: move it under GLOBALS/"
