@@ -36,5 +36,40 @@
 			<Property name="English" value="OT Probes" />
 			<Property name="USEnglish" value="OT Probes" />
 		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_TITLE">
+			<Property name="Id" value="OT_PJ_TITLE" />
+			<Property name="English" value="OT Probe Decision" />
+			<Property name="USEnglish" value="OT Probe Decision" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_QUESTION">
+			<Property name="Id" value="OT_PJ_QUESTION" />
+			<Property name="English" value="Run the Overseer's Toolkit test?" />
+			<Property name="USEnglish" value="Run the Overseer's Toolkit test?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_DILEMMA">
+			<Property name="Id" value="OT_PJ_DILEMMA" />
+			<Property name="English" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="USEnglish" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_OPT1">
+			<Property name="Id" value="OT_PJ_OPT1" />
+			<Property name="English" value="Grant the probe perk" />
+			<Property name="USEnglish" value="Grant the probe perk" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PJ_OPT2">
+			<Property name="Id" value="OT_PJ_OPT2" />
+			<Property name="English" value="Do nothing" />
+			<Property name="USEnglish" value="Do nothing" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_PERK_NAME">
+			<Property name="Id" value="OT_PROBE_PERK_NAME" />
+			<Property name="English" value="OT Probe Perk" />
+			<Property name="USEnglish" value="OT Probe Perk" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry" _id="OT_PROBE_PERK_DESC">
+			<Property name="Id" value="OT_PROBE_PERK_DESC" />
+			<Property name="English" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="USEnglish" value="Granted by the Overseer's Toolkit test decision." />
+		</Property>
 	</Property>
 </Data>
