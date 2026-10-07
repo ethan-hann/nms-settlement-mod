@@ -39,3 +39,23 @@ Appends to these vanilla lists:
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_PATH_TRI] |
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_SIGNPOST] |
 | LocTable.MXML | (whole file) |
+
+## OverseersToolkit-Defense
+
+### Edits vanilla
+
+Appends to these vanilla lists:
+
+| File | List |
+|---|---|
+| GCSETTLEMENTGLOBALS.EXML | Judgements |
+
+### Adds new
+
+| File | Entry |
+|---|---|
+| METADATA/REALITY/TABLES/BASEBUILDINGCOSTSTABLE.EXML | ObjectCosts[OT_TOWER] |
+| METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[OT_TOWER] |
+| METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_TOWER] |
+| METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_WATCH] |
+| LocTable.MXML | (whole file) |

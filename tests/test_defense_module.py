@@ -152,24 +152,25 @@ def test_watch_lowers_alert_in_the_sign_the_game_applies():
     assert high < 0, f"Alert strength {changes['Alert']} applies {low}..{high}; it must be negative to lower Alert"
 
 
-def test_watch_raises_sentinels_in_the_sign_the_game_applies():
+def test_watch_lowers_the_sentinel_alert_level_in_the_sign_the_game_applies():
+    # The Sentinels stat is what the settlement screen calls "Sentinel Alert Level", so lower is better.
     changes = dict(stat_changes(perk()))
     assert "Sentinels" in changes, "OT_WATCH has no Sentinels change"
     assert not good_when_positive("Sentinels")
     low, high = amounts("Sentinels", changes["Sentinels"])
-    assert low > 0, f"Sentinels strength {changes['Sentinels']} applies {low}..{high}; it must be positive to raise Sentinels"
+    assert high < 0, f"Sentinels strength {changes['Sentinels']} applies {low}..{high}; it must be negative to lower it"
 
 
 def test_watch_changes_only_alert_and_sentinels():
     assert sorted(s for s, _ in stat_changes(perk())) == ["Alert", "Sentinels"]
 
 
-def test_watch_alert_drop_is_below_a_full_reset_and_the_sentinel_rise_is_small():
+def test_watch_alert_drop_is_below_a_full_reset_and_the_sentinel_drop_is_modest():
     changes = dict(stat_changes(perk()))
     alert_max = float(table("StatsMaxValues")["Alert"].get("value"))
     sentinels_max = float(table("StatsMaxValues")["Sentinels"].get("value"))
     assert abs(amounts("Alert", changes["Alert"])[1]) < alert_max, "a persistent perk must not equal a full Alert reset"
-    assert amounts("Sentinels", changes["Sentinels"])[1] <= 0.05 * sentinels_max
+    assert abs(amounts("Sentinels", changes["Sentinels"])[0]) <= 0.10 * sentinels_max
 
 
 def test_watch_is_a_plain_perk_like_the_ones_judgements_grant():

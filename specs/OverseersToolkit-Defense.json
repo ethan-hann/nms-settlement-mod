@@ -1,10 +1,10 @@
 {
   "text": {
     "OT_WATCH_NAME": "Perimeter Watch",
-    "OT_WATCH_DESC": "Lookouts spot Sentinel attacks early, but their lights are easy to see.",
+    "OT_WATCH_DESC": "Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention.",
     "OT_FORT_TITLE": "A Watchful Eye",
     "OT_FORT_QUESTION": "Fortify the perimeter?",
-    "OT_FORT_DILEMMA": "The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds, and their lights will be easy for Sentinels to see.",
+    "OT_FORT_DILEMMA": "The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds.",
     "OT_FORT_OPT1": "Fortify the perimeter (adds debt)",
     "OT_FORT_OPT2": "Leave the perimeter as it is",
     "OT_TOWER_NAME": "TOWER PILLAR",
@@ -41,7 +41,7 @@
         ],
         [
           "Sentinels",
-          "NegativeSmall"
+          "PositiveMedium"
         ]
       ]
     }

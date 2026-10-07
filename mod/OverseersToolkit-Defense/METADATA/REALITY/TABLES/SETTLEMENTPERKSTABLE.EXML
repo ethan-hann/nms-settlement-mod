@@ -25,7 +25,7 @@
 						<Property name="SettlementStatType" value="Sentinels" />
 					</Property>
 					<Property name="Strength" value="GcSettlementStatStrength">
-						<Property name="SettlementStatStrength" value="NegativeSmall" />
+						<Property name="SettlementStatStrength" value="PositiveMedium" />
 					</Property>
 					<Property name="DirectlyChangePopulation" value="false" />
 				</Property>
