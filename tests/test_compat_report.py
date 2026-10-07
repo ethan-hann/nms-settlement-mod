@@ -1,3 +1,4 @@
+import os
 import re
 
 import pytest
@@ -43,7 +44,7 @@ GAME_FILES = {
     "gcbuildingglobals.global.mbin",
 }
 
-GAME_PROCESS = "otcompat_fake_game.exe"
+GAME_PROCESS = f"OTC{os.getpid()}.exe"
 
 
 def write(path, text):
