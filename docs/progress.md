@@ -62,3 +62,24 @@ Built in parallel worktrees by subagents and integrated here; every patch merges
 - **M5 (class gating):** expressible in data. The only class check vanilla offers is the mission condition `GcMissionConditionHasSettlementBuilding` (MinimumClass). Unlock missions are copies of vanilla STORAGE_FIX appended to `npcmissiontable`: class B teaches the path kit, curb, lamp and DECALPATH; class A the signpost; class S the tower. New creative games know every part through the creative KnownProducts list.
 
 Open for Session 2: whether the parts show and place in a new creative game; whether the decal follows slopes and flora clears (P5); whether a base can be claimed in a settlement with the smaller radius; whether the appended judgement and perk load and fire; whether the missions load without crashing (class gating itself needs a B-class building, which a short session can't reach).
+
+## 2026-10-06: M6 runtime feasibility (desk spike)
+
+The in-game spike could not run: the newest NMS.py is 180383.0 and the game is 180836, and no matching release, branch or PR exists yet. Past releases trailed game patches by 0 to 6 days, and one patch was skipped entirely. NMS.py also needs Python 3.13 or older, so it needs its own venv; `tools/.venv` is 3.14. What could be settled without the game:
+
+| Step | Finding | Verdict |
+|---|---|---|
+| 1. Log a base's objects | `cGcGameState.mSavedInteractionsManager.maPersistentBaseBuffers` → `cGcPlayerBasePersistentBuffer.maBaseBuildingObjects` are declared in NMS.py's types. Of 393 hook patterns, 368 match exactly once in the 180836 exe, including every base-building hook the spikes use (offsets unverified). | Go once NMS.py supports 180836 |
+| 2. World to base-local | Confirmed from a save: object positions are base-local, with Y = normalized base Position and Z = Forward. Implemented and tested in `runtime/spikes/base_frame.py`. The NMS.py stub types `GetBaseBuildingRootMatrix`'s result as a vector, where it should be a 3x4 matrix. | Go |
+| 3. Place DECALPATH from code | No spawn, place or add function exists in NMS.py, its examples, or any public runtime mod. Finding the game's commit-a-part function means reverse engineering the 7.x exe. Writing straight into the object vector would not create the world object. | **No-go today** |
+| 4. Flatten terrain | `ApplyTerrainEditFlatten` is declared, but its arguments and the beam instance are not. | Optional, low odds |
+
+**Decision: no-go for a runtime path tool.** Per the plan, the fallback is the offline save-edit planner. It works on a copy of the creative test slot, and installing it needs Ethan's approval.
+
+Its pieces are known:
+- The save codec is in `save_inspect.py`.
+- The base frame is in `runtime/spikes/base_frame.py`.
+- Objects are `{"ObjectID", "Position", "Up", "At", "Timestamp", "UserData"}` entries in `PersistentPlayerBases[*].Objects`.
+- Ethan's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
+
+The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs Ethan's GitHub or Discord account.
