@@ -58,7 +58,7 @@ Built in parallel worktrees by subagents and integrated here; every patch merges
 
 - **M2 core (`OverseersToolkit`):** OT_PATH_TILE, OT_PATH_TRI (stone quarter floor and triangle), OT_CURB (short stone wall), OT_SIGNPOST (Data Display Unit scene), OT_LAMP (standing light with the vanilla street lamp's no-power settings) in a new Decoration > Settlement subgroup; DECALPATH gets a product, that subgroup and a 250 limit. New parts carry `IsFromModFolder=true`, as public part mods do. Vanilla parts that already exist elsewhere are not added to the subgroup: no vanilla part sits twice in one top-level group.
 - **M3 (`OverseersToolkit-OpenSettlements`):** `MinRadiusForBases` 300 to 15 under GLOBALS/. Cost: every new base starts that small and grows by the vanilla extension as parts are placed. `tools/compat_report.py` regenerates COMPATIBILITY.md and scans a MODS folder read-only; on the installed mods it flags gBase Boundary (`MinRadiusForBases`) and notes the merged timer mod sharing GCSETTLEMENTGLOBALS.
-- **M4 (`OverseersToolkit-Defense`, `-TestTuning`):** perk OT_WATCH lowers the hidden Alert gauge and the Sentinels stat ("Sentinel Alert Level" in the settlement screen; the plan's literal "raises Sentinels" contradicted its stated goal); appended Request judgement "Fortify the perimeter?" grants it for added debt; OT_TOWER reuses the stone support pillar scene. Estimate from vanilla rates: about one fortify decision per 55 hours of judgements without test tuning.
+- **M4 (`OverseersToolkit-Defense`, `-TestTuning`):** perk OT_WATCH lowers the hidden Alert gauge and the Sentinels stat ("Sentinel Alert Level" in the settlement screen; the plan's literal "raises Sentinels" contradicted its stated goal); appended Request judgement "Fortify the perimeter?" grants it for added debt; OT_TOWER reuses the stone support pillar scene. Estimate from vanilla rates: about one fortify decision per 55 hours of judgements without test tuning (corrected 2026-10-07: about 28 hours; the estimate counted the wrong number of vanilla requests).
 - **M5 (class gating):** expressible in data. The only class check vanilla offers is the mission condition `GcMissionConditionHasSettlementBuilding` (MinimumClass). Unlock missions are copies of vanilla STORAGE_FIX appended to `npcmissiontable`: class B teaches the path kit, curb, lamp and DECALPATH; class A the signpost; class S the tower. New creative games know every part through the creative KnownProducts list.
 
 Open for Session 2: whether the parts show and place in a new creative game; whether the decal follows slopes and flora clears (P5); whether a base can be claimed in a settlement with the smaller radius; whether the appended judgement and perk load and fire; whether the missions load without crashing (class gating itself needs a B-class building, which a short session can't reach).
@@ -145,3 +145,20 @@ Result: NMS.exe crashed during startup on every launch, before the main menu and
 - One launch of bare NMS.py (`pymhf run nmspy`, with an empty mod folder): same crash. The cause is NMS.py's own startup hooks (`cTkFSM.StateChange`, `cTkFSMState.StateChange`, `cGcApplication.Update`) on 180836, not our spike.
 
 Conclusion: NMS.py 180383.0 does not run on 180836. The runtime path tool waits for an NMS.py release for the current build. `SUPPORTED_BUILDS` is back to 180383 only. An upstream issue with these crash details would need Ethan's GitHub account.
+
+## 2026-10-07: Release prep (M8), 1.0.0
+
+Ethan's calls: version 1.0.0; the fortify decision should be rare, about once every 18 hours of judgements.
+
+- **Fortify rate.** The vanilla pool has four Request judgements (total weighting 4.01), and Request is drawn for about 20% of judgements when BuildingChoice is not on offer. At weighting 1.0, fortify came up about once every 28 hours; it is now 1.8, about once every 18 hours (6.3% of judgements; two in a row 0.4%). Judgements are drawn independently, so the rate does not cluster. There is still no way in data to stop it after the perk is owned.
+- **Packaging.** `tools/package.py` writes `dist/<Module>-<version>.zip` for OverseersToolkit, -Defense and -SettlementDecor. Each zip holds the module folder and only the files the loader reads. Probes and TestTuning are test-only; a test fails if a module is in neither list. The version lives in `VERSION`.
+- **CHANGES.md** has the 1.0.0 entry.
+
+Release facts, for the Nexus page and README:
+- Game build: validated on NMS.exe 180836 (Steam build 25732212), MBINCompiler v7.04.1-pre3.
+- Install: extract each zip into `GAMEDATA/MODS`. Core works alone; Defense and SettlementDecor are optional and independent of each other and of core.
+- Use: become a settlement's overseer and open the build menu inside the settlement; the parts are under Decoration > SETTLEMENT (SettlementDecor adds parts to the other decor tabs).
+- Not yet seen in game: the class B, A and S unlock missions granting parts in a normal (non-creative) game. They load without errors, but no test session reached a B-class building.
+- Compatibility: COMPATIBILITY.md lists every vanilla entry and field each module edits. Against Ethan's 55 installed mods, the scan finds no field conflicts. gBase Boundary is a good companion for building base-only parts beside a settlement.
+- Multiplayer: every part reuses a vanilla scene, so visitors without the mod see the meshes.
+- Known limits: the fortify decision can repeat after Perimeter Watch is owned; the Settlement Path decal is not buildable (its scene is an empty marker); no path-drawing tool yet (waits for an NMS.py release for the current game build).

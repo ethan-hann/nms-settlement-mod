@@ -178,12 +178,23 @@ def test_watch_is_a_plain_perk_like_the_ones_judgements_grant():
     assert [value(entry, f) for f in ("IsNegative", "IsStarter", "IsProc", "IsJob", "IsBlessing")] == ["false"] * 5
 
 
-def test_fortify_is_appended_as_a_request_with_a_vanilla_comparable_weighting():
+def test_fortify_is_appended_as_a_request():
     entry = fortify()
     assert "_id" not in entry.attrib and "_index" not in entry.attrib
     assert judgement_type(entry) == "Request"
-    weights = vanilla_weights("Request")
-    assert min(weights) <= float(value(entry, "Weighting")) <= max(weights)
+
+
+def test_without_tuning_fortify_comes_up_about_once_every_twelve_to_twenty_four_hours():
+    # Rare enough that repeats after the perk is owned stay a minor nuisance, common enough to be seen.
+    # BuildingChoice is left out of the type draw: it needs a building waiting to be chosen.
+    root = vanilla_globals()
+    mean_wait = (float(value(root, "JudgementWaitTimeMin")) + float(value(root, "JudgementWaitTimeMax"))) / 2
+    type_weights = {n: float(c.get("value")) for n, c in table("JudgementSelectionWeights").items()}
+    type_weights.pop("BuildingChoice")
+    own = float(value(fortify(), "Weighting"))
+    chance = type_weights["Request"] / sum(type_weights.values()) * own / (own + sum(vanilla_weights("Request")))
+    hours = mean_wait / chance / 3600
+    assert 12 <= hours <= 24, f"fortify comes up about once every {hours:.0f} hours"
 
 
 def test_fortify_copies_a_vanilla_request_judgement():
