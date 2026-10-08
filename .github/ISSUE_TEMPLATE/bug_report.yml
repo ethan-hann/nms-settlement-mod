@@ -1,0 +1,81 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the build menu in a settlement
+        2. ...
+    validations:
+      required: true
+  - type: checkboxes
+    id: modules
+    attributes:
+      label: Modules installed
+      options:
+        - label: OverseersToolkit (core)
+        - label: OverseersToolkit-Defense
+        - label: OverseersToolkit-SettlementDecor
+        - label: OverseersToolkit-Probes
+  - type: input
+    id: version
+    attributes:
+      label: Mod version
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: No Man's Sky version
+      placeholder: e.g. 7.06 (COSMOS)
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / install method
+      options:
+        - Steam (Vortex)
+        - Steam (manual)
+        - GOG
+        - Xbox / Microsoft Store
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Game mode
+      options:
+        - Normal
+        - Survival
+        - Permadeath
+        - Creative
+        - Relaxed
+        - Custom
+  - type: input
+    id: settlement
+    attributes:
+      label: Settlement class (if relevant)
+      placeholder: e.g. B, A, S
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other mods installed
+      description: Especially mods that touch settlements, the build menu, or the same EXML files.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Attach screenshots or relevant log output.
