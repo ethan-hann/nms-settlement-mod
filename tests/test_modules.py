@@ -54,6 +54,22 @@ def vanilla_loc_keys():
     return keys
 
 
+@pytest.fixture(scope="module")
+def vanilla_cost_ids():
+    root = ET.parse(EXTRACTED / "metadata/reality/tables/basebuildingcoststable.MXML").getroot()
+    return {e.get("_id") for e in root.find("Property[@name='ObjectCosts']")}
+
+
+@pytest.fixture(scope="module")
+def vanilla_part_models():
+    root = ET.parse(EXTRACTED / "metadata/reality/tables/basebuildingpartstable.MXML").getroot()
+    models = {}
+    for part in root.find("Property[@name='Parts']"):
+        model = part.find(".//Property[@name='Model']/Property[@name='Filename']")
+        models[part.get("_id")] = model.get("value") if model is not None else ""
+    return models
+
+
 def module_loc_keys(module):
     keys = set(spec_of(module).get("text", {}))
     for f in (MODS / module).rglob("*.EXML"):
@@ -78,7 +94,7 @@ def test_every_patch_merges_and_compiles(module, tmp_path):
 
 
 @pytest.mark.parametrize("module", SPEC_MODULES)
-def test_new_parts_are_complete(module, game_files, vanilla_loc_keys):
+def test_new_parts_are_complete(module, game_files, vanilla_loc_keys, vanilla_cost_ids, vanilla_part_models):
     spec = spec_of(module)
     out = {str(k).replace("\\", "/"): ET.fromstring(v) for k, v in gen_parts.build(spec).items()}
     objects = out.get("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
@@ -90,10 +106,16 @@ def test_new_parts_are_complete(module, game_files, vanilla_loc_keys):
         assert id_.startswith("OT_"), id_
         entry = objects.find(f"Property[@name='Objects']/Property[@_id='{id_}']")
         scene = entry.find("Property[@name='PlacementScene']/Property[@name='Filename']").get("value")
-        assert scene.lower() in game_files, f"{id_}: scene {scene} is not in the game files"
+        if not scene:
+            # Station parts have no placement scene; their model comes from the parts table instead.
+            single = entry.find("Property[@name='SinglePartID']").get("value")
+            scene = vanilla_part_models.get(single, "")
+        assert scene and scene.lower() in game_files, f"{id_}: scene {scene!r} is not in the game files"
         groups = entry.find("Property[@name='Groups']")
         assert len(groups) > 0, f"{id_} has no build-menu group"
-        assert costs.find(f"Property[@name='ObjectCosts']/Property[@_id='{id_}']") is not None
+        # Most vanilla parts have no cost entry; a new part has one exactly when its source does.
+        has_cost = costs is not None and costs.find(f"Property[@name='ObjectCosts']/Property[@_id='{id_}']") is not None
+        assert has_cost == (part["copy_from"] in vanilla_cost_ids), f"{id_}: cost entry should mirror {part['copy_from']}"
         product = products.find(f"Property[@name='Table']/Property[@_id='{id_}']")
         assert product is not None, f"{id_} has no product"
         for field in ("Name", "NameLower", "Description"):
@@ -108,3 +130,41 @@ def test_ids_are_unique_across_modules():
         for item in spec.get("parts", []):
             assert item["id"] not in ids, f"{item['id']} defined in {ids.get(item['id'])} and {spec_file.stem}"
             ids[item["id"]] = spec_file.stem
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_no_part_sits_twice_in_one_top_level_build_group(module, tmp_path):
+    # No vanilla part repeats a top-level group, and a probe that did so is a crash suspect.
+    rel = Path("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
+    patch = MODS / module / rel
+    if not patch.is_file():
+        pytest.skip("module does not patch base parts")
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    merged, _ = merge_preview.merge(vanilla, ET.parse(patch).getroot())
+    for entry in ET.parse(patch).getroot().iterfind("Property[@name='Objects']/Property"):
+        part = merged.find(f"Property[@name='Objects']/Property[@_id='{entry.get('_id')}']")
+        groups = [g.find("Property[@name='Group']").get("value") for g in part.find("Property[@name='Groups']")]
+        assert len(groups) == len(set(groups)), f"{entry.get('_id')} repeats a top-level group: {groups}"
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_files_are_ones_the_mod_loader_reads(module):
+    # The loader applies .EXML patches and .MBIN replacements; the only MXML it reads is LocTable.MXML at the mod root.
+    for path in (MODS / module).rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(MODS / module)
+        suffix = path.suffix.upper()
+        if suffix == ".MXML":
+            assert rel.as_posix().upper() == "LOCTABLE.MXML", f"{rel}: the game ignores MXML here"
+        else:
+            assert suffix in (".EXML", ".MBIN"), f"{rel}: not a file type the mod loader reads"
+
+
+@pytest.mark.parametrize("module", MODULES)
+def test_globals_patches_sit_under_globals(module):
+    # Globals live at the pak root, but the loader reads EXML patches to them only from <mod>/GLOBALS/.
+    for path in (MODS / module).rglob("*.EXML"):
+        rel = path.relative_to(MODS / module)
+        if "GLOBALS" in rel.name.upper() or rel.name.upper().startswith("GCSETTLEMENTGLOBALS"):
+            assert rel.parts[0].upper() == "GLOBALS", f"{rel}: move it under GLOBALS/"

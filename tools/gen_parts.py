@@ -8,7 +8,9 @@ Spec keys (all optional):
   text:      {loc_key: "English text"}                      -> LocTable.MXML
   subgroups: [{group, id, name}]                            -> new build-menu subgroup in a vanilla group
   parts:     [{id, copy_from, object: {field: value}, groups: [[group, subgroup]],
-               product: {field: value}}]                    -> new object, cost and product entries
+               product_from, product: {field: value}}]      -> new object, cost and product entries;
+               the cost entry is copied only if the source has one, and product_from names
+               another part to copy the product from (for sources with no base-part product)
   edits:     [{id, object: {field: value}, add_groups: [[group, subgroup]],
                new_product: {copy_from, fields: {field: value}}}]  -> changes to a vanilla part
 
@@ -55,6 +57,9 @@ class Table:
         self.root = ET.parse(Path(vanilla_dir) / rel).getroot()
         self.patch = ET.Element("Data", {"template": self.root.get("template")})
         self.lists = {}
+
+    def has(self, id_):
+        return self.root.find(f"Property[@name='{self.list_name}']/Property[@_id='{id_}']") is not None
 
     def vanilla_entry(self, id_):
         node = self.root.find(f"Property[@name='{self.list_name}']/Property[@_id='{id_}']")
@@ -114,6 +119,14 @@ def _copy_entry(table, source_id, new_id, owner):
     return entry
 
 
+def _product_source(products, part):
+    src = part.get("product_from", part["copy_from"])
+    if not products.has(src):
+        hint = "" if "product_from" in part else "; set product_from to copy another part's product"
+        raise SpecError(f"{src} has no product in vanilla {products.out.name}{hint}")
+    return src
+
+
 def _check_ids(spec):
     seen = set()
     for item in spec.get("parts", []) + spec.get("edits", []):
@@ -130,7 +143,7 @@ def _loc_table(text):
     for key, english in text.items():
         if len(key) > MAX_LOC_KEY:
             raise SpecError(f"loc key {key} is longer than {MAX_LOC_KEY} characters")
-        entry = P({"name": "Table", "value": "TkLocalisationEntry", "_id": key}, P({"name": "Id", "value": key}))
+        entry = P({"name": "Table", "value": "TkLocalisationEntry"}, P({"name": "Id", "value": key}))
         for lang in LOC_LANGUAGES:
             entry.append(P({"name": lang, "value": english}))
         table.append(entry)
@@ -171,6 +184,10 @@ def build(spec, vanilla_dir=EXTRACTED):
     for part in spec.get("parts", []):
         id_, src = part["id"], part["copy_from"]
         entry = _copy_entry(objects, src, id_, id_)
+        flag = entry.find("Property[@name='IsFromModFolder']")
+        if flag is not None:
+            # Mods that add parts set this; it marks the entry as not from the vanilla tables.
+            flag.set("value", "true")
         _set(entry, part.get("object"), id_)
         if "groups" in part:
             groups = _field(entry, "Groups", id_)
@@ -179,8 +196,10 @@ def build(spec, vanilla_dir=EXTRACTED):
             for g, s in part["groups"]:
                 groups.append(_group(g, s))
         objects.add(entry)
-        costs.add(_copy_entry(costs, src, id_, id_))
-        product = _copy_entry(products, src, id_, id_)
+        # Most vanilla parts have no cost entry, so a missing one is not an error.
+        if costs.has(src):
+            costs.add(_copy_entry(costs, src, id_, id_))
+        product = _copy_entry(products, _product_source(products, part), id_, id_)
         _set(product, part.get("product"), id_)
         products.add(product)
 

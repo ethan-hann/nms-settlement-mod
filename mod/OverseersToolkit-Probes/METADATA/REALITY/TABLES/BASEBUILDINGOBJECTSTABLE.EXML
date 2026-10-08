@@ -14,7 +14,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_PROBE">
 			<Property name="ID" value="OT_PROBE" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="Stone" />
 			</Property>
@@ -128,7 +128,7 @@
 		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_PROBE2">
 			<Property name="ID" value="OT_PROBE2" />
 			<Property name="IsTemporary" value="false" />
-			<Property name="IsFromModFolder" value="false" />
+			<Property name="IsFromModFolder" value="true" />
 			<Property name="Style" value="GcBaseBuildingPartStyle">
 				<Property name="Style" value="Stone" />
 			</Property>

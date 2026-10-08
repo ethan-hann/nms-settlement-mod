@@ -1,0 +1,2833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcProductTable">
+	<Property name="Table">
+		<Property name="Table" value="GcProductData" _id="OT_PATH_TILE">
+			<Property name="ID" value="OT_PATH_TILE" />
+			<Property name="Name" value="OT_PATH_TILE_NAME" />
+			<Property name="NameLower" value="OT_PATH_TILE_NAME_L" />
+			<Property name="Subtitle" value="BLD_STONE_SUB" />
+			<Property name="Description" value="OT_PATH_TILE_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STONE.BASIC_FLOOR_QUARTER.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="1" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="SAND1">
+					<Property name="ID" value="SAND1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_PATH_TRI">
+			<Property name="ID" value="OT_PATH_TRI" />
+			<Property name="Name" value="OT_PATH_TRI_NAME" />
+			<Property name="NameLower" value="OT_PATH_TRI_NAME_L" />
+			<Property name="Subtitle" value="BLD_STONE_SUB" />
+			<Property name="Description" value="OT_PATH_TRI_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STONE.BASIC_FLOOR_TRI_QUARTER.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="1" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="SAND1">
+					<Property name="ID" value="SAND1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_CURB">
+			<Property name="ID" value="OT_CURB" />
+			<Property name="Name" value="OT_CURB_NAME" />
+			<Property name="NameLower" value="OT_CURB_NAME_L" />
+			<Property name="Subtitle" value="BLD_STONE_SUB" />
+			<Property name="Description" value="OT_CURB_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STONE.BASIC_WALL_SMALL_HALF.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="1" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="SAND1">
+					<Property name="ID" value="SAND1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="10" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_LAMP">
+			<Property name="ID" value="OT_LAMP" />
+			<Property name="Name" value="OT_LAMP_NAME" />
+			<Property name="NameLower" value="OT_LAMP_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECOR_SUBTITLE" />
+			<Property name="Description" value="OT_LAMP_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/BAZAAR.LIGHTOUTDOORSTANDING.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="1" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="25" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_SIGN_BAR">
+			<Property name="ID" value="OT_SIGN_BAR" />
+			<Property name="Name" value="BLD_S_SIGN_BAR0_NAME" />
+			<Property name="NameLower" value="BLD_S_SIGN_BAR0_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECOR_SUBTITLE" />
+			<Property name="Description" value="BLD_S_SIGN_BAR0_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/BAZAAR.BARSIGN0.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="1" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="25" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_SIGN_STAND">
+			<Property name="ID" value="OT_SIGN_STAND" />
+			<Property name="Name" value="BLD_STATION_STANDINGSIGN_NAME" />
+			<Property name="NameLower" value="BLD_STATION_STANDINGSIGN_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="3" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.STANDINGSIGN.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="3" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_BILLBOARD">
+			<Property name="ID" value="OT_BILLBOARD" />
+			<Property name="Name" value="BLD_STATION_BILLBOARD_NAME" />
+			<Property name="NameLower" value="BLD_STATION_BILLBOARD_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="3" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.BILLBOARD.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="3" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_SMALL1">
+			<Property name="ID" value="OT_HOLO_SMALL1" />
+			<Property name="Name" value="BLD_STATION_HOLO_SMALL1_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_SMALL1_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="2" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOSMALL1.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="2" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_SMALL2">
+			<Property name="ID" value="OT_HOLO_SMALL2" />
+			<Property name="Name" value="BLD_STATION_HOLO_SMALL2_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_SMALL2_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="2" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOSMALL2.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="2" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_SMALL3">
+			<Property name="ID" value="OT_HOLO_SMALL3" />
+			<Property name="Name" value="BLD_STATION_HOLO_SMALL3_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_SMALL3_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="2" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOSMALL3.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="2" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_MED1">
+			<Property name="ID" value="OT_HOLO_MED1" />
+			<Property name="Name" value="BLD_STATION_HOLO_MED1_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_MED1_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="3" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOMED1.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="3" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_MED2">
+			<Property name="ID" value="OT_HOLO_MED2" />
+			<Property name="Name" value="BLD_STATION_HOLO_MED2_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_MED2_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="3" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOMED2.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="3" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_GEK">
+			<Property name="ID" value="OT_HOLO_GEK" />
+			<Property name="Name" value="BLD_STATION_HOLO_TRA_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_TRA_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="5" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOTRA.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="5" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_KORVAX">
+			<Property name="ID" value="OT_HOLO_KORVAX" />
+			<Property name="Name" value="BLD_STATION_HOLO_EXP_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_EXP_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="5" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOEXP.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="5" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_HOLO_VYKEEN">
+			<Property name="ID" value="OT_HOLO_VYKEEN" />
+			<Property name="Name" value="BLD_STATION_HOLO_WAR_NAME" />
+			<Property name="NameLower" value="BLD_STATION_HOLO_WAR_NAME_L" />
+			<Property name="Subtitle" value="BLD_STATION_PART_SUB" />
+			<Property name="Description" value="BLD_STATION_PART_DESC" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="5" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/STATIONPARTS/BUILDABLE.HOLOWAR.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="LAND2">
+					<Property name="ID" value="LAND2" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="5" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="5" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_VYKEEN">
+			<Property name="ID" value="OT_DECAL_VYKEEN" />
+			<Property name="Name" value="BLD_DECALVIS1_NAME" />
+			<Property name="NameLower" value="BLD_DECALVIS1_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.VISUAL1.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_GEK">
+			<Property name="ID" value="OT_DECAL_GEK" />
+			<Property name="Name" value="BLD_DECALVIS2_NAME" />
+			<Property name="NameLower" value="BLD_DECALVIS2_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.VISUAL2.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_KORVAX">
+			<Property name="ID" value="OT_DECAL_KORVAX" />
+			<Property name="Name" value="BLD_DECALVIS3_NAME" />
+			<Property name="NameLower" value="BLD_DECALVIS3_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.VISUAL3.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM0">
+			<Property name="ID" value="OT_DECAL_NUM0" />
+			<Property name="Name" value="BLD_DECALNUM0_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM0_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM0.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM1">
+			<Property name="ID" value="OT_DECAL_NUM1" />
+			<Property name="Name" value="BLD_DECALNUM1_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM1_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM1.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM2">
+			<Property name="ID" value="OT_DECAL_NUM2" />
+			<Property name="Name" value="BLD_DECALNUM2_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM2_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM2.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM3">
+			<Property name="ID" value="OT_DECAL_NUM3" />
+			<Property name="Name" value="BLD_DECALNUM3_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM3_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM3.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM4">
+			<Property name="ID" value="OT_DECAL_NUM4" />
+			<Property name="Name" value="BLD_DECALNUM4_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM4_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM4.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM5">
+			<Property name="ID" value="OT_DECAL_NUM5" />
+			<Property name="Name" value="BLD_DECALNUM5_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM5_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM5.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM6">
+			<Property name="ID" value="OT_DECAL_NUM6" />
+			<Property name="Name" value="BLD_DECALNUM6_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM6_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM6.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM7">
+			<Property name="ID" value="OT_DECAL_NUM7" />
+			<Property name="Name" value="BLD_DECALNUM7_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM7_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM7.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM8">
+			<Property name="ID" value="OT_DECAL_NUM8" />
+			<Property name="Name" value="BLD_DECALNUM8_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM8_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM8.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+		<Property name="Table" value="GcProductData" _id="OT_DECAL_NUM9">
+			<Property name="ID" value="OT_DECAL_NUM9" />
+			<Property name="Name" value="BLD_DECALNUM9_NAME" />
+			<Property name="NameLower" value="BLD_DECALNUM9_NAME_L" />
+			<Property name="Subtitle" value="BLD_DECAL_SUBTITLE" />
+			<Property name="Description" value="BLD_DECAL_DESCRIPTION" />
+			<Property name="AltDescription" value="" />
+			<Property name="Hint" value="" />
+			<Property name="BuildableShipTechID" value="" />
+			<Property name="GroupID" value="" />
+			<Property name="DebrisFile" value="TkModelResource">
+				<Property name="Filename" value="MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN" />
+				<Property name="Seed" value="0" />
+			</Property>
+			<Property name="BaseValue" value="1" />
+			<Property name="Level" value="0" />
+			<Property name="Icon" value="TkTextureResource">
+				<Property name="Filename" value="TEXTURES/UI/FRONTEND/ICONS/BUILDABLE/DECAL.NUM9.DDS" />
+			</Property>
+			<Property name="HeroIcon" value="TkTextureResource">
+				<Property name="Filename" value="" />
+			</Property>
+			<Property name="Colour">
+				<Property name="R" value="0.172549024" />
+				<Property name="G" value="0.486274511" />
+				<Property name="B" value="0.623529434" />
+				<Property name="A" value="1.000000" />
+			</Property>
+			<Property name="Category" value="GcRealitySubstanceCategory">
+				<Property name="SubstanceCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Type" value="GcProductCategory">
+				<Property name="ProductCategory" value="BuildingPart" />
+			</Property>
+			<Property name="Rarity" value="GcRarity">
+				<Property name="Rarity" value="Common" />
+			</Property>
+			<Property name="Legality" value="GcLegality">
+				<Property name="Legality" value="Legal" />
+			</Property>
+			<Property name="Consumable" value="false" />
+			<Property name="ChargeValue" value="0" />
+			<Property name="StackMultiplier" value="0" />
+			<Property name="DefaultCraftAmount" value="1" />
+			<Property name="CraftAmountStepSize" value="1" />
+			<Property name="CraftAmountMultiplier" value="1" />
+			<Property name="Requirements">
+				<Property name="Requirements" value="GcTechnologyRequirement" _id="FUEL1">
+					<Property name="ID" value="FUEL1" />
+					<Property name="Type" value="GcInventoryType">
+						<Property name="InventoryType" value="Substance" />
+					</Property>
+					<Property name="Amount" value="20" />
+				</Property>
+			</Property>
+			<Property name="AltRequirements" />
+			<Property name="Cost" value="GcItemPriceModifiers">
+				<Property name="SpaceStationMarkup" value="0.000000" />
+				<Property name="LowPriceMod" value="0.000000" />
+				<Property name="HighPriceMod" value="0.000000" />
+				<Property name="BuyBaseMarkup" value="0.000000" />
+				<Property name="BuyMarkupMod" value="0.000000" />
+			</Property>
+			<Property name="RecipeCost" value="1" />
+			<Property name="SpecificChargeOnly" value="false" />
+			<Property name="NormalisedValueOnWorld" value="0.000000" />
+			<Property name="NormalisedValueOffWorld" value="0.000000" />
+			<Property name="TradeCategory" value="GcTradeCategory">
+				<Property name="TradeCategory" value="None" />
+			</Property>
+			<Property name="WikiCategory" value="Construction" />
+			<Property name="FossilCategory" value="GcFossilCategory">
+				<Property name="FossilCategory" value="None" />
+			</Property>
+			<Property name="CorvettePartCategory" value="GcCorvettePartCategory">
+				<Property name="CorvettePartCategory" value="None" />
+			</Property>
+			<Property name="CorvetteRewardFrequency" value="0.000000" />
+			<Property name="IsCraftable" value="true" />
+			<Property name="DeploysInto" value="" />
+			<Property name="EconomyInfluenceMultiplier" value="0.000000" />
+			<Property name="PinObjective" value="" />
+			<Property name="PinObjectiveTip" value="" />
+			<Property name="PinObjectiveMessage" value="" />
+			<Property name="PinObjectiveScannableType" value="GcScannerIconTypes">
+				<Property name="ScanIconType" value="None" />
+			</Property>
+			<Property name="PinObjectiveEasyToRefine" value="false" />
+			<Property name="NeverPinnable" value="false" />
+			<Property name="CookingIngredient" value="false" />
+			<Property name="CookingValue" value="0.000000" />
+			<Property name="FoodBonusStat" value="GcStatsTypes">
+				<Property name="StatsType" value="Unspecified" />
+			</Property>
+			<Property name="FoodBonusStatAmount" value="0.000000" />
+			<Property name="GoodForSelling" value="false" />
+			<Property name="GiveRewardOnSpecialPurchase" value="" />
+			<Property name="EggModifierIngredient" value="false" />
+			<Property name="IsTechbox" value="false" />
+			<Property name="CanSendToOtherPlayers" value="true" />
+		</Property>
+	</Property>
+</Data>
