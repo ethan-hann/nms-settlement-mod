@@ -135,3 +135,13 @@ Session 2 is closed. No open in-game questions remain from it.
 Ethan's call. Every part the mod adds is now built from the settlement's own menu (`BuildableOnPlanet`), so no base is needed to build in a settlement. The module's only remaining use was claiming a base beside a settlement for base-only parts (walls, floors, pads, powered tech). That came at a cost: it shrank the starting radius of every new base, made the build menu flip near settlements, and conflicted with gBase Boundary, which already does the same thing at radius 10.
 
 Removed: `mod/OverseersToolkit-OpenSettlements`, its test, and the `open` key in `testmode.py`. COMPATIBILITY.md is regenerated, and a scan of Ethan's MODS folder now finds no conflicts, only shared files. For the release facts: players who want full base-building next to a settlement can add gBase Boundary alongside this mod.
+
+## 2026-10-07: NMS.py trial on build 180836
+
+Ethan asked to try NMS.py 180383.0 on game build 180836 anyway. Setup: uv-managed Python 3.13.14 and `nmspy==180383.0` (pymhf 0.2.4) in `runtime/.venv`, outside the tools venv. NMS.py has no version lock; it uses the exe hash only to name its pattern cache. The session ran under `testmode` (core, defense, decor, testtuning), and exit passed every safety check.
+
+Result: NMS.exe crashed during startup on every launch, before the main menu and before FullLog.txt got any content. Windows logged Application Error 1000 each time: fault in ntdll.dll, exception 0xc0000374 (heap corruption).
+- Two launches with spike 1 (`pymhf run runtime/spikes/spike1_log_base_objects.py`): injection completed, the pattern cache was written, the mod GUI opened, and then the game died after resuming.
+- One launch of bare NMS.py (`pymhf run nmspy`, with an empty mod folder): same crash. The cause is NMS.py's own startup hooks (`cTkFSM.StateChange`, `cTkFSMState.StateChange`, `cGcApplication.Update`) on 180836, not our spike.
+
+Conclusion: NMS.py 180383.0 does not run on 180836. The runtime path tool waits for an NMS.py release for the current build. `SUPPORTED_BUILDS` is back to 180383 only. An upstream issue with these crash details would need Ethan's GitHub account.
