@@ -54,7 +54,7 @@
       "name": "OT_J_FORTIFY",
       "copy_from": 24,
       "type": "Request",
-      "weighting": 1.0,
+      "weighting": 1.8,
       "title": "OT_FORT_TITLE",
       "question": "OT_FORT_QUESTION",
       "dilemma": "OT_FORT_DILEMMA",

@@ -5,7 +5,7 @@
 			<Property name="JudgementType" value="GcSettlementJudgementType">
 				<Property name="SettlementJudgementType" value="Request" />
 			</Property>
-			<Property name="Weighting" value="1.000000" />
+			<Property name="Weighting" value="1.800000" />
 			<Property name="HeaderOverride" value="" />
 			<Property name="Title" value="OT_FORT_TITLE" />
 			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
