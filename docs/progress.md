@@ -62,3 +62,70 @@ Built in parallel worktrees by subagents and integrated here; every patch merges
 - **M5 (class gating):** expressible in data. The only class check vanilla offers is the mission condition `GcMissionConditionHasSettlementBuilding` (MinimumClass). Unlock missions are copies of vanilla STORAGE_FIX appended to `npcmissiontable`: class B teaches the path kit, curb, lamp and DECALPATH; class A the signpost; class S the tower. New creative games know every part through the creative KnownProducts list.
 
 Open for Session 2: whether the parts show and place in a new creative game; whether the decal follows slopes and flora clears (P5); whether a base can be claimed in a settlement with the smaller radius; whether the appended judgement and perk load and fire; whether the missions load without crashing (class gating itself needs a B-class building, which a short session can't reach).
+
+## 2026-10-06: M6 runtime feasibility (desk spike)
+
+The in-game spike could not run: the newest NMS.py is 180383.0 and the game is 180836, and no matching release, branch or PR exists yet. Past releases trailed game patches by 0 to 6 days, and one patch was skipped entirely. NMS.py also needs Python 3.13 or older, so it needs its own venv; `tools/.venv` is 3.14. What could be settled without the game:
+
+| Step | Finding | Verdict |
+|---|---|---|
+| 1. Log a base's objects | `cGcGameState.mSavedInteractionsManager.maPersistentBaseBuffers` → `cGcPlayerBasePersistentBuffer.maBaseBuildingObjects` are declared in NMS.py's types. Of 393 hook patterns, 368 match exactly once in the 180836 exe, including every base-building hook the spikes use (offsets unverified). | Go once NMS.py supports 180836 |
+| 2. World to base-local | Confirmed from a save: object positions are base-local, with Y = normalized base Position and Z = Forward. Implemented and tested in `runtime/spikes/base_frame.py`. The NMS.py stub types `GetBaseBuildingRootMatrix`'s result as a vector, where it should be a 3x4 matrix. | Go |
+| 3. Place DECALPATH from code | No spawn, place or add function exists in NMS.py, its examples, or any public runtime mod. Finding the game's commit-a-part function means reverse engineering the 7.x exe. Writing straight into the object vector would not create the world object. | **No-go today** |
+| 4. Flatten terrain | `ApplyTerrainEditFlatten` is declared, but its arguments and the beam instance are not. | Optional, low odds |
+
+**Decision: no-go for a runtime path tool.** Per the plan, the fallback is the offline save-edit planner. It works on a copy of the creative test slot, and installing it needs Ethan's approval.
+
+Its pieces are known:
+- The save codec is in `save_inspect.py`.
+- The base frame is in `runtime/spikes/base_frame.py`.
+- Objects are `{"ObjectID", "Position", "Up", "At", "Timestamp", "UserData"}` entries in `PersistentPlayerBases[*].Objects`.
+- Ethan's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
+
+The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs Ethan's GitHub or Discord account.
+
+## 2026-10-06: Session 2, part A, and the fixes it led to
+
+`testmode enter --modules core,open,defense,testtuning`, a new creative game in slot 6, with the test-only `SaveOutModdedMetadata` export on. Exit passed every safety check; the game's export went to `scratch/exported/20261006-222620`, and `tools/check_export.py` found every module edit in it (the cost table is not part of the export).
+
+What Ethan saw:
+- No crash creating or loading the game.
+- Decoration > SETTLEMENT listed the kit under its English names; the Tower Pillar sat under Structural Adornments.
+- A base computer could be claimed about 110u from the settlement centre, against about 312u before.
+- The path tiles flatten the ground. That is intended and stays.
+- The lamp gave no light.
+- The Settlement Path placed with a sound but showed nothing.
+- "Fortify the perimeter?" appeared after about 20 minutes of being overseer, and again right after; the second acceptance showed Perimeter Watch. Both added debt.
+- Inside the settlement, the overseer's build menu offered only fireworks, fossils and portable tech. Near the base the menu flipped between the base and the settlement.
+
+What the save copy showed: OT_WATCH in the settlement's perks once, every kit part in KnownProducts, and the three unlock missions loaded (Progress -1).
+
+Causes, from the game files:
+- The lamp copied BUILDLIGHT2, whose bulb hangs under a connected-to-power node. The vanilla Lamp Post (S_STREETLAMP0) keeps its lights at the scene root. OT_LAMP now copies it.
+- DECALPATH's scene is an empty `PathDecal` locator. Settlement paths are drawn by the settlement generator around that marker, so a placed copy renders nothing. It is out of the kit and the B unlock. A future runtime path tool would lay kit tiles, not DECALPATH.
+- The overseer menu lists only parts with `BuildableOnPlanet=true` (built outside a base). Every kit part and the tower now set it.
+- The repeat decision is the test tuning; judgements have no "already owned" condition, so a rare repeat in normal play costs debt for no new perk.
+- The menu flip is the game choosing between overlapping base and settlement areas. It is a side effect of OpenSettlements and of gBase Boundary alike.
+
+Ethan's calls (2026-10-06):
+- The data-display signpost did not read as a sign. It is replaced by 24 vanilla signs copied under their vanilla names (so every game language has them): the Illuminated Sign, Standing Sign, Station Billboard, the holographic displays, the Gek, Korvax and Vy'keen emblem decals and the number decals 0 to 9. They unlock at class A.
+- Scope: new optional module `OverseersToolkit-SettlementDecor` sets `BuildableOnPlanet` on every planet-base part in the Decoration, Exotics and Wall Art groups (489 today), leaving out the 13 lights that draw power. `gen_parts.py` gained `group_edits` to generate it from the vanilla groups. Side effect: those parts can also be placed outside any base.
+- The side-effect check for the smaller base radius is settled by his own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
+
+## 2026-10-07: Session 2, final pass
+
+Two launches on slot 6, each closed with every safety check passed.
+
+Launch 1, `testmode enter --modules core,open,defense,decor,testtuning` (export `scratch/exported/20261007-201237`):
+- Inside Funana Bridge the build menu listed the kit, the Path Lamp and all 24 signs under Decoration > SETTLEMENT, and the other decor tabs showed the SettlementDecor parts.
+- Placed parts survived save and reload. The lamp lights indoors and at night.
+- Perimeter Watch is still in the settlement's features.
+- `check_export.py` on the five installed modules: every edit landed except the cost table, which the export does not include.
+
+Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/20261007-202657`): the SETTLEMENT section and the placed parts were still there. Two expected differences in the export, both from Ethan's mods loading over ours:
+- gBase Boundary sets `MinRadiusForBases` to 10 instead of our 15 (listed in COMPATIBILITY.md).
+- The merged timer mod sets `JudgementWaitTimeMin`/`Max` to 20/30 instead of TestTuning's 60/120. TestTuning is test-only, so this does not affect a release.
+
+The save copy (`scratch/saves/save11.hg`, same counts in save12): placed parts are stored in `PlayerStateData.BaseBuildingObjects`, not in a player base (37 OT_CURB, 17 OT_PATH_TILE, 2 OT_LAMP, OT_SIGN_STAND, OT_HOLO_GEK, OT_DECAL_GEK). Every kit part and all 24 signs are in KnownProducts, OT_WATCH is in the settlement's perks once, and the three unlock missions are loaded.
+
+Session 2 is closed. No open in-game questions remain from it.
