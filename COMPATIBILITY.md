@@ -116,18 +116,6 @@ Appends to these vanilla lists:
 | METADATA/SIMULATION/MISSIONS/TABLES/NPCMISSIONTABLE.EXML | Missions[OT_UNLOCK_S] |
 | LocTable.MXML | (whole file) |
 
-## OverseersToolkit-OpenSettlements
-
-### Edits vanilla
-
-| File | Field | Vanilla | Ours |
-|---|---|---|---|
-| GLOBALS/GCBUILDINGGLOBALS.GLOBAL.EXML | MinRadiusForBases | 300.000000 | 15.000000 |
-
-### Adds new
-
-Nothing new.
-
 ## OverseersToolkit-SettlementDecor
 
 ### Edits vanilla

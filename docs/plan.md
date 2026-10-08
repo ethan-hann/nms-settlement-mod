@@ -102,7 +102,7 @@ In scope, in order:
 
 1. **Probes** that settle the unknowns cheaply, all in one test session.
 2. **Core: settlement path kit.** Buildable settlement path decal, path tiles that work in settlements, curb and step pieces, signposts, lighting that needs no power.
-3. **OpenSettlements.** Build inside settlements without the claim trick.
+3. **OpenSettlements.** Build inside settlements without the claim trick. Dropped on 2026-10-07; see `docs/progress.md`.
 4. **Defense.** A fortify decision that grants a perk lowering sentinel alerts, plus a decorative tower.
 5. **Class-gated unlocks**, if data can express them; otherwise they move to Runtime.
 6. **Runtime path tool** (NMS.py), gated on a feasibility spike.
@@ -268,7 +268,7 @@ Record the results in `docs/progress.md`. Re-plan M2 to M4 if P2 or P3 fail: fal
 - Give all of them their own build-menu subgroup ("Settlement") if groups allow it.
 - Tests: IDs unique and at most 16 characters, scenes exist in `scratch/all_files.txt`, every part has cost, product, group and loc entries.
 
-### M3: OpenSettlements module
+### M3: OpenSettlements module (dropped 2026-10-07)
 
 - Use the smallest exclusion change that P4 showed works.
 - Before shipping, check for side effects: do buildings and points of interest still spawn normally around bases on a fresh planet? That goes in [SESSION 2].

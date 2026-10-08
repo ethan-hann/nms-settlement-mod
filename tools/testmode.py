@@ -28,7 +28,6 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 # Module key -> source folder under mod/.
 MODULES = {
     "core": "OverseersToolkit",
-    "open": "OverseersToolkit-OpenSettlements",
     "defense": "OverseersToolkit-Defense",
     "testtuning": "OverseersToolkit-TestTuning",
     "probes": "OverseersToolkit-Probes",

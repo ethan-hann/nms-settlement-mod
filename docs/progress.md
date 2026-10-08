@@ -129,3 +129,9 @@ Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/202
 The save copy (`scratch/saves/save11.hg`, same counts in save12): placed parts are stored in `PlayerStateData.BaseBuildingObjects`, not in a player base (37 OT_CURB, 17 OT_PATH_TILE, 2 OT_LAMP, OT_SIGN_STAND, OT_HOLO_GEK, OT_DECAL_GEK). Every kit part and all 24 signs are in KnownProducts, OT_WATCH is in the settlement's perks once, and the three unlock missions are loaded.
 
 Session 2 is closed. No open in-game questions remain from it.
+
+## 2026-10-07: OpenSettlements dropped
+
+Ethan's call. Every part the mod adds is now built from the settlement's own menu (`BuildableOnPlanet`), so no base is needed to build in a settlement. The module's only remaining use was claiming a base beside a settlement for base-only parts (walls, floors, pads, powered tech). That came at a cost: it shrank the starting radius of every new base, made the build menu flip near settlements, and conflicted with gBase Boundary, which already does the same thing at radius 10.
+
+Removed: `mod/OverseersToolkit-OpenSettlements`, its test, and the `open` key in `testmode.py`. COMPATIBILITY.md is regenerated, and a scan of Ethan's MODS folder now finds no conflicts, only shared files. For the release facts: players who want full base-building next to a settlement can add gBase Boundary alongside this mod.

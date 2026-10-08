@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- A settlement counts as a base whose radius never drops below this minimum, which keeps
-     other base computers about 300u away. Shrinking it lets a base be claimed among the
-     buildings. It is the starting radius of every new base too; bases still grow as parts
-     are added (BaseRadiusExtension) up to the usual cap. -->
-<Data template="cGcBuildingGlobals">
-	<Property name="MinRadiusForBases" value="15.000000" />
-</Data>
