@@ -10,10 +10,11 @@ import pytest
 
 import gen_parts
 import gen_settlement
+import gen_unlocks
 import merge_preview
 
 # Each generator takes a spec and returns {relative path: file text}; a module's files must match all of them.
-GENERATORS = [gen_parts.build, gen_settlement.build]
+GENERATORS = [gen_parts.build, gen_settlement.build, gen_unlocks.build]
 
 REPO = Path(__file__).resolve().parent.parent
 SPECS = REPO / "specs"

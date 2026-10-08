@@ -406,5 +406,79 @@
         "BuildableOnPlanet": "true"
       }
     }
+  ],
+  "unlocks": [
+    {
+      "id": "OT_UNLOCK_B",
+      "min_class": "B",
+      "reward": "R_OT_UNLOCK_B",
+      "recipes": [
+        "OT_PATH_TILE",
+        "OT_PATH_TRI",
+        "OT_CURB",
+        "OT_LAMP"
+      ]
+    },
+    {
+      "id": "OT_UNLOCK_A",
+      "min_class": "A",
+      "reward": "R_OT_UNLOCK_A",
+      "recipes": [
+        "OT_SIGN_BAR",
+        "OT_SIGN_STAND",
+        "OT_BILLBOARD",
+        "OT_HOLO_SMALL1",
+        "OT_HOLO_SMALL2",
+        "OT_HOLO_SMALL3",
+        "OT_HOLO_MED1",
+        "OT_HOLO_MED2",
+        "OT_HOLO_GEK",
+        "OT_HOLO_KORVAX",
+        "OT_HOLO_VYKEEN",
+        "OT_DECAL_VYKEEN",
+        "OT_DECAL_GEK",
+        "OT_DECAL_KORVAX",
+        "OT_DECAL_NUM0",
+        "OT_DECAL_NUM1",
+        "OT_DECAL_NUM2",
+        "OT_DECAL_NUM3",
+        "OT_DECAL_NUM4",
+        "OT_DECAL_NUM5",
+        "OT_DECAL_NUM6",
+        "OT_DECAL_NUM7",
+        "OT_DECAL_NUM8",
+        "OT_DECAL_NUM9"
+      ]
+    }
+  ],
+  "creative_known": [
+    "OT_PATH_TILE",
+    "OT_PATH_TRI",
+    "OT_CURB",
+    "OT_LAMP",
+    "OT_SIGN_BAR",
+    "OT_SIGN_STAND",
+    "OT_BILLBOARD",
+    "OT_HOLO_SMALL1",
+    "OT_HOLO_SMALL2",
+    "OT_HOLO_SMALL3",
+    "OT_HOLO_MED1",
+    "OT_HOLO_MED2",
+    "OT_HOLO_GEK",
+    "OT_HOLO_KORVAX",
+    "OT_HOLO_VYKEEN",
+    "OT_DECAL_VYKEEN",
+    "OT_DECAL_GEK",
+    "OT_DECAL_KORVAX",
+    "OT_DECAL_NUM0",
+    "OT_DECAL_NUM1",
+    "OT_DECAL_NUM2",
+    "OT_DECAL_NUM3",
+    "OT_DECAL_NUM4",
+    "OT_DECAL_NUM5",
+    "OT_DECAL_NUM6",
+    "OT_DECAL_NUM7",
+    "OT_DECAL_NUM8",
+    "OT_DECAL_NUM9"
   ]
 }

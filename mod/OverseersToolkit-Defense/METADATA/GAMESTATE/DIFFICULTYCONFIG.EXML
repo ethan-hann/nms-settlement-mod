@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcDifficultyConfig">
+	<Property name="StartWithAllItemsKnownEnabledData" value="GcDifficultyStartWithAllItemsKnownOptionData">
+		<Property name="InitialKnownThings" value="GcKnownThingsPreset">
+			<Property name="KnownProducts">
+				<Property name="KnownProducts" value="OT_TOWER" />
+			</Property>
+		</Property>
+	</Property>
+</Data>

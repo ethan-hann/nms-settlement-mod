@@ -207,3 +207,22 @@ def test_text_keys_do_not_collide_with_other_modules(spec):
             continue
         shared = mine & set(json.loads(other.read_text(encoding="utf-8")).get("text", {}))
         assert not shared, f"{sorted(shared)} also defined by {other.stem}"
+
+
+def _spec():
+    import json
+
+    return json.loads((REPO / "specs" / "OverseersToolkit.json").read_text(encoding="utf-8"))
+
+
+def test_settlement_class_unlocks_follow_the_wishlist_tiers():
+    tiers = {u["min_class"]: set(u["recipes"]) for u in _spec()["unlocks"]}
+    assert tiers == {
+        "B": {"OT_PATH_TILE", "OT_PATH_TRI", "OT_CURB", "OT_LAMP"},
+        "A": set(SIGN_SOURCES),
+    }
+
+
+def test_new_creative_games_know_every_kit_part():
+    spec = _spec()
+    assert set(spec["creative_known"]) == {p["id"] for p in spec["parts"]}

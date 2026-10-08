@@ -85,5 +85,18 @@
         }
       ]
     }
+  ],
+  "unlocks": [
+    {
+      "id": "OT_UNLOCK_S",
+      "min_class": "S",
+      "reward": "R_OT_UNLOCK_S",
+      "recipes": [
+        "OT_TOWER"
+      ]
+    }
+  ],
+  "creative_known": [
+    "OT_TOWER"
   ]
 }

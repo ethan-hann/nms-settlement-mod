@@ -16,6 +16,9 @@ def test_filters_cover_the_tables_the_mod_patches():
         "metadata/simulation/missions/tables/missiontable*",
         "metadata/simulation/missions/tables/modmissiontable*",
         "metadata/gamestate/difficultyconfig*",
+        "metadata/gamestate/defaultsavedata*",
+        "metadata/simulation/missions/tables/npcmissiontable*",
+        "metadata/simulation/missions/tables/fleetmissiontable*",
     ]
     for pattern in needed:
         assert pattern in extract.FILTERS
