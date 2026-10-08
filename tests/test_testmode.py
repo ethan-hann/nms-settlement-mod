@@ -1,3 +1,4 @@
+import os
 import hashlib
 import json
 import xml.etree.ElementTree as ET
@@ -8,7 +9,8 @@ import pytest
 import testmode
 from testmode import Env, Refused
 
-UNIQUE_PROC = "OTFAKE_GAME.exe"
+# Per-process name, so test runs in parallel checkouts never see each other's fake game.
+UNIQUE_PROC = f"OTF{os.getpid()}.exe"
 
 
 def make_env(tree, process_name=UNIQUE_PROC):

@@ -132,6 +132,14 @@ def test_ids_are_unique_across_modules():
             ids[item["id"]] = spec_file.stem
 
 
+def test_compatibility_file_is_current():
+    import compat_report
+
+    expected = compat_report.generate_compatibility(MODS, EXTRACTED)
+    on_disk = (REPO / "COMPATIBILITY.md").read_text(encoding="utf-8")
+    assert on_disk == expected, "COMPATIBILITY.md is stale; rerun tools/compat_report.py"
+
+
 @pytest.mark.parametrize("module", MODULES)
 def test_no_part_sits_twice_in_one_top_level_build_group(module, tmp_path):
     # No vanilla part repeats a top-level group, and a probe that did so is a crash suspect.

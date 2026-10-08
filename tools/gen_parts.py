@@ -13,6 +13,10 @@ Spec keys (all optional):
                another part to copy the product from (for sources with no base-part product)
   edits:     [{id, object: {field: value}, add_groups: [[group, subgroup]],
                new_product: {copy_from, fields: {field: value}}}]  -> changes to a vanilla part
+  group_edits: [{groups: [group], object: {field: value}, unpowered_only}]
+             -> the same top-level fields on every vanilla part in those build-menu groups
+                that a planet base can hold and that lacks the values; unpowered_only
+                leaves out parts on the power grid
 
 Field names may be dotted to reach into a struct, for example "Icon.Filename".
 
@@ -127,6 +131,33 @@ def _product_source(products, part):
     return src
 
 
+def _value(entry, dotted):
+    node = entry
+    for part in dotted.split("."):
+        node = node.find(f"Property[@name='{part}']")
+        if node is None:
+            return None
+    return node.get("value")
+
+
+def _group_edit_ids(objects, group_edit):
+    wanted = set(group_edit["groups"])
+    known = {g.get("_id") for g in objects.root.find("Property[@name='Groups']")}
+    if wanted - known:
+        raise SpecError(f"build group(s) not found in vanilla: {', '.join(sorted(wanted - known))}")
+    ids = []
+    for entry in objects.root.find(f"Property[@name='{objects.list_name}']"):
+        groups = {g.find("Property[@name='Group']").get("value") for g in entry.find("Property[@name='Groups']")}
+        if not wanted & groups or _value(entry, "BuildableOnPlanetBase") != "true":
+            continue
+        if group_edit.get("unpowered_only") and _value(entry, "LinkGridData.Rate") != "0":
+            continue
+        if all(_value(entry, f) == str(v) for f, v in group_edit["object"].items()):
+            continue
+        ids.append(entry.get("_id"))
+    return ids
+
+
 def _check_ids(spec):
     seen = set()
     for item in spec.get("parts", []) + spec.get("edits", []):
@@ -203,7 +234,16 @@ def build(spec, vanilla_dir=EXTRACTED):
         _set(product, part.get("product"), id_)
         products.add(product)
 
-    for edit in spec.get("edits", []):
+    edits = list(spec.get("edits", []))
+    named = {e["id"] for e in edits}
+    for group_edit in spec.get("group_edits", []):
+        for id_ in _group_edit_ids(objects, group_edit):
+            if id_ in named:
+                raise SpecError(f"{id_} is edited twice; edit it in one place")
+            named.add(id_)
+            edits.append({"id": id_, "object": group_edit["object"]})
+
+    for edit in edits:
         id_ = edit["id"]
         vanilla = objects.vanilla_entry(id_)
         entry = P({"name": "Objects", "value": vanilla.get("value"), "_id": id_})
