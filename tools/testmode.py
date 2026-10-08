@@ -35,6 +35,8 @@ MODULES = {
     "decor": "OverseersToolkit-SettlementDecor",
 }
 DEV_PREFIX = "_OTDEV_"
+# The game writes its merged mod data here when the test-only debug flag is on.
+EXPORT_DIR = "EXPORTED"
 FIRST_FREE_SLOT = 6  # slots 1 to 5 hold real games and may never change
 
 # Files in the profile folder the game rewrites on any load, whatever the slot.
@@ -180,10 +182,12 @@ def is_dev_path(rel):
     return rel.split("/", 1)[0].upper().startswith(DEV_PREFIX)
 
 
-def mods_listing(mods_dir):
-    """Size and sha256 of everything in MODS except our dev folders."""
+def mods_listing(mods_dir, skip_export=False):
+    """Size and sha256 of everything in MODS except our dev folders (and a session-owned export)."""
     listing = {}
     for rel in files_under(mods_dir):
+        if skip_export and rel.split("/", 1)[0].upper() == EXPORT_DIR:
+            continue
         if not is_dev_path(rel):
             path = Path(mods_dir) / rel
             listing[rel] = [path.stat().st_size, sha256_file(path)]
@@ -410,6 +414,8 @@ def enter(env, modules, with_user_mods=False):
         "with_user_mods": with_user_mods,
         "dev_folders": dev_names,
         "test_slot": known_test_slot(env),
+        # Only an export folder the game creates during the session is ours to move out.
+        "export_owned": not (env.mods_dir / EXPORT_DIR).exists(),
     }
     # Record the session before touching the game, so a crash mid-way still leaves exit able to clean up.
     write_json(env.state_file, state)
@@ -430,6 +436,22 @@ def _remove_dev_folders(env, failures):
             failures.append(f"MODS/{name} is not a plain folder; left in place")
             continue
         shutil.rmtree(path)
+
+
+def _move_export_out(env, opened, failures):
+    """Keep the game's merged-data export for inspection, then take it out of MODS."""
+    export = env.mods_dir / EXPORT_DIR
+    if not export.exists():
+        return
+    if export.is_symlink() or export.is_junction() or not export.is_dir():
+        failures.append(f"MODS/{EXPORT_DIR} is not a plain folder; left in place")
+        return
+    files_under(export)  # refuses links inside it
+    target = env.scratch / "exported" / opened
+    if target.exists():
+        shutil.rmtree(target)
+    shutil.copytree(export, target)
+    shutil.rmtree(export)
 
 
 def _compare_saves(env, manifest, test_slot):
@@ -512,6 +534,11 @@ def exit_session(env):
         _remove_dev_folders(env, failures)
     except OSError as e:
         errors.append(f"removing dev folders failed: {e}")
+    if state.get("export_owned"):
+        try:
+            _move_export_out(env, state["opened"], failures)
+        except OSError as e:
+            errors.append(f"moving the game's export out of MODS failed: {e}")
     if errors:
         state["exit_error"] = "; ".join(errors)
         write_json(env.state_file, state)
@@ -520,7 +547,7 @@ def exit_session(env):
     if sha256_file(env.gcmodsettings) != manifest["SETTINGS/GCMODSETTINGS.MXML"]:
         failures.append("GCMODSETTINGS.MXML does not match its backup after restore")
 
-    after = mods_listing(env.mods_dir)
+    after = mods_listing(env.mods_dir, skip_export=state.get("export_owned", False))
     for rel in sorted(set(before) | set(after)):
         if rel not in after:
             failures.append(f"MODS: {rel} disappeared")

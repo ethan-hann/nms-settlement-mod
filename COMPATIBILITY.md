@@ -88,6 +88,26 @@ This module does not edit vanilla entries.
 | METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_SIGN_STAND] |
 | LocTable.MXML | (whole file) |
 
+## OverseersToolkit-Defense
+
+### Edits vanilla
+
+Appends to these vanilla lists:
+
+| File | List |
+|---|---|
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | Judgements |
+
+### Adds new
+
+| File | Entry |
+|---|---|
+| METADATA/REALITY/TABLES/BASEBUILDINGCOSTSTABLE.EXML | ObjectCosts[OT_TOWER] |
+| METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML | Objects[OT_TOWER] |
+| METADATA/REALITY/TABLES/NMS_BASEPARTPRODUCTS.EXML | Table[OT_TOWER] |
+| METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_WATCH] |
+| LocTable.MXML | (whole file) |
+
 ## OverseersToolkit-OpenSettlements
 
 ### Edits vanilla

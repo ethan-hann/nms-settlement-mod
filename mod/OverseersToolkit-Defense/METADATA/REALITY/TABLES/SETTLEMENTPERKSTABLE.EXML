@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcSettlementPerksTable">
+	<Property name="Table">
+		<Property name="Table" value="GcSettlementPerkData" _id="OT_WATCH">
+			<Property name="ID" value="OT_WATCH" />
+			<Property name="Name" value="OT_WATCH_NAME" />
+			<Property name="Description" value="OT_WATCH_DESC" />
+			<Property name="IsNegative" value="false" />
+			<Property name="IsStarter" value="false" />
+			<Property name="IsProc" value="false" />
+			<Property name="IsJob" value="false" />
+			<Property name="IsBlessing" value="false" />
+			<Property name="StatChanges">
+				<Property name="StatChanges" value="GcSettlementStatChange">
+					<Property name="Stat" value="GcSettlementStatType">
+						<Property name="SettlementStatType" value="Alert" />
+					</Property>
+					<Property name="Strength" value="GcSettlementStatStrength">
+						<Property name="SettlementStatStrength" value="PositiveMedium" />
+					</Property>
+					<Property name="DirectlyChangePopulation" value="false" />
+				</Property>
+				<Property name="StatChanges" value="GcSettlementStatChange">
+					<Property name="Stat" value="GcSettlementStatType">
+						<Property name="SettlementStatType" value="Sentinels" />
+					</Property>
+					<Property name="Strength" value="GcSettlementStatStrength">
+						<Property name="SettlementStatStrength" value="PositiveMedium" />
+					</Property>
+					<Property name="DirectlyChangePopulation" value="false" />
+				</Property>
+			</Property>
+			<Property name="AssociatedBuildings" />
+		</Property>
+	</Property>
+</Data>

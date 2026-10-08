@@ -49,7 +49,7 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 ### Hard rules
 
 1. **Saves are read-only.** Never write, move, rename or delete anything in `%APPDATA%\HelloGames\NMS\`. To inspect a save, copy the one test-slot file to `scratch/` and read the copy.
-2. **Other mods are untouchable.** In `GAMEDATA\MODS\`, create, update or remove only the dev folders this project owns (`_OTDEV_*`). Never touch any other folder, file, or `vortex.deployment.json`.
+2. **Other mods are untouchable.** In `GAMEDATA\MODS\`, create, update or remove only the dev folders this project owns (`_OTDEV_*`). Never touch any other folder, file, or `vortex.deployment.json`. One exception, approved by Ethan on 2026-10-06: when the test-only TestTuning module turns on the game's `SaveOutModdedMetadata` flag, the game creates `GAMEDATA\MODS\EXPORTED\`. If that folder did not exist when the session began, `testmode exit` copies it to `scratch/exported/` and removes it. An `EXPORTED` folder that existed before is left alone and checked like any other.
 3. **Game files are untouchable.** Never write under `PCBANKS` or `Binaries`, except `Binaries\SETTINGS\GCMODSETTINGS.MXML`, and only through `testmode.py`. That script backs it up first and restores it byte for byte.
 4. **Never act while the game runs.** Every tool that touches the game folder refuses to run if `NMS.exe` is running.
 5. **Backups are never deleted** by any tool or session.
