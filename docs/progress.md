@@ -111,3 +111,21 @@ Ethan's calls (2026-10-06):
 - The data-display signpost did not read as a sign. It is replaced by 24 vanilla signs copied under their vanilla names (so every game language has them): the Illuminated Sign, Standing Sign, Station Billboard, the holographic displays, the Gek, Korvax and Vy'keen emblem decals and the number decals 0 to 9. They unlock at class A.
 - Scope: new optional module `OverseersToolkit-SettlementDecor` sets `BuildableOnPlanet` on every planet-base part in the Decoration, Exotics and Wall Art groups (489 today), leaving out the 13 lights that draw power. `gen_parts.py` gained `group_edits` to generate it from the vanilla groups. Side effect: those parts can also be placed outside any base.
 - The side-effect check for the smaller base radius is settled by his own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
+
+## 2026-10-07: Session 2, final pass
+
+Two launches on slot 6, each closed with every safety check passed.
+
+Launch 1, `testmode enter --modules core,open,defense,decor,testtuning` (export `scratch/exported/20261007-201237`):
+- Inside Funana Bridge the build menu listed the kit, the Path Lamp and all 24 signs under Decoration > SETTLEMENT, and the other decor tabs showed the SettlementDecor parts.
+- Placed parts survived save and reload. The lamp lights indoors and at night.
+- Perimeter Watch is still in the settlement's features.
+- `check_export.py` on the five installed modules: every edit landed except the cost table, which the export does not include.
+
+Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/20261007-202657`): the SETTLEMENT section and the placed parts were still there. Two expected differences in the export, both from Ethan's mods loading over ours:
+- gBase Boundary sets `MinRadiusForBases` to 10 instead of our 15 (listed in COMPATIBILITY.md).
+- The merged timer mod sets `JudgementWaitTimeMin`/`Max` to 20/30 instead of TestTuning's 60/120. TestTuning is test-only, so this does not affect a release.
+
+The save copy (`scratch/saves/save11.hg`, same counts in save12): placed parts are stored in `PlayerStateData.BaseBuildingObjects`, not in a player base (37 OT_CURB, 17 OT_PATH_TILE, 2 OT_LAMP, OT_SIGN_STAND, OT_HOLO_GEK, OT_DECAL_GEK). Every kit part and all 24 signs are in KnownProducts, OT_WATCH is in the settlement's perks once, and the three unlock missions are loaded.
+
+Session 2 is closed. No open in-game questions remain from it.
