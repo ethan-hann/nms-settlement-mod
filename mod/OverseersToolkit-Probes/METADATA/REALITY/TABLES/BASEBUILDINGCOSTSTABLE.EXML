@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcBaseBuildingCostsTable">
+	<Property name="ObjectCosts">
+		<Property name="ObjectCosts" value="GcBaseBuildingEntryCosts" _id="OT_PROBE">
+			<Property name="ID" value="OT_PROBE" />
+			<Property name="Active0AverageFrameTimeCost" value="0.00274302741" />
+			<Property name="Active1AverageFrameTimeCost" value="1.000000" />
+			<Property name="ActiveTotalNodes" value="4" />
+			<Property name="ActivePhysicsComponents" value="1" />
+			<Property name="Inactive0AverageFrameTimeCost" value="0.00266927457" />
+			<Property name="Inactive1AverageFrameTimeCost" value="1.000000" />
+			<Property name="InactiveTotalNodes" value="2" />
+			<Property name="InactivePhysicsComponents" value="0" />
+		</Property>
+		<Property name="ObjectCosts" value="GcBaseBuildingEntryCosts" _id="OT_PROBE2">
+			<Property name="ID" value="OT_PROBE2" />
+			<Property name="Active0AverageFrameTimeCost" value="0.00558547862" />
+			<Property name="Active1AverageFrameTimeCost" value="1.000000" />
+			<Property name="ActiveTotalNodes" value="8" />
+			<Property name="ActivePhysicsComponents" value="1" />
+			<Property name="Inactive0AverageFrameTimeCost" value="0.00408307835" />
+			<Property name="Inactive1AverageFrameTimeCost" value="0.00295455311" />
+			<Property name="InactiveTotalNodes" value="5" />
+			<Property name="InactivePhysicsComponents" value="0" />
+		</Property>
+	</Property>
+</Data>

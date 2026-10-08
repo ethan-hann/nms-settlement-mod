@@ -1,0 +1,79 @@
+{
+  "text": {
+    "OT_PROBE_NAME": "OT Probe Tile",
+    "OT_PROBE_NAME_L": "OT probe tile",
+    "OT_PROBE_DESC": "Overseer's Toolkit test part. Safe to delete.",
+    "OT_DECALPATH_NAME": "OT Path Decal",
+    "OT_DECALPATH_NAME_L": "OT path decal",
+    "OT_DECALPATH_DESC": "The settlement path decal, exposed by Overseer's Toolkit for testing.",
+    "OT_PROBE_SUB_NAME": "OT Probes",
+    "OT_PJ_TITLE": "OT Probe Decision",
+    "OT_PJ_QUESTION": "Run the Overseer's Toolkit test?",
+    "OT_PJ_DILEMMA": "A test decision added by Overseer's Toolkit. The first option grants a test perk.",
+    "OT_PJ_OPT1": "Grant the probe perk",
+    "OT_PJ_OPT2": "Do nothing",
+    "OT_PROBE_PERK_NAME": "OT Probe Perk",
+    "OT_PROBE_PERK_DESC": "Granted by the Overseer's Toolkit test decision."
+  },
+  "subgroups": [
+    {
+      "group": "MOD",
+      "id": "OT_PROBE_SUB",
+      "name": "OT_PROBE_SUB_NAME"
+    }
+  ],
+  "parts": [
+    {
+      "id": "OT_PROBE",
+      "copy_from": "S_FLOOR_Q",
+      "groups": [
+        [
+          "DECORATION",
+          "DECOEXTERIOR"
+        ]
+      ],
+      "product": {
+        "Name": "OT_PROBE_NAME",
+        "NameLower": "OT_PROBE_NAME_L",
+        "Description": "OT_PROBE_DESC"
+      }
+    },
+    {
+      "id": "OT_PROBE2",
+      "copy_from": "S_TRIFLOOR_Q",
+      "groups": [
+        [
+          "MOD",
+          "OT_PROBE_SUB"
+        ]
+      ],
+      "product": {
+        "Name": "OT_PROBE2_NAME",
+        "NameLower": "OT_PROBE2_NAME",
+        "Description": "OT_PROBE_DESC"
+      }
+    }
+  ],
+  "edits": [
+    {
+      "id": "DECALPATH",
+      "object": {
+        "PlanetBaseLimit": "200"
+      },
+      "add_groups": [
+        [
+          "DECORATION",
+          "DECOEXTERIOR"
+        ]
+      ],
+      "new_product": {
+        "copy_from": "BUILDPAVING",
+        "fields": {
+          "Name": "OT_DECALPATH_NAME",
+          "NameLower": "OT_DECALPATH_NAME_L",
+          "Description": "OT_DECALPATH_DESC"
+        }
+      }
+    }
+  ]
+}

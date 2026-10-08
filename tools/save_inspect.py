@@ -112,6 +112,8 @@ def report(save):
 
     settlements = []
     for s in settlements_raw:
+        if not _address(s.get("UniverseAddress")):
+            continue  # unused slot in the save's fixed-size settlement ring buffer
         settlements.append(
             {
                 "name": s.get("Name"),
@@ -152,7 +154,8 @@ def report(save):
 
     return {
         "save_name": find_key(save, "SaveName"),
-        "game_mode": find_key(save, "GameMode"),
+        "game_mode": find_key(find_key(save, "DifficultyState"), "DifficultyPresetType")
+        or find_key(save, "GameMode"),
         "bases": bases,
         "settlements": settlements,
     }
@@ -184,7 +187,7 @@ def main(argv=None):
         for part, n in b["watched_parts"].items():
             print(f"  {part}: {n}")
     for s in rep["settlements"]:
-        print(f"settlement {s['name']!r}: perks {s['perks']}, stats {s['stats']}")
+        print(f"settlement {s['name'] or '(unnamed)'!r}: perks {s['perks']}, stats {s['stats']}")
     return 0
 
 
