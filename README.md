@@ -8,8 +8,6 @@ Overseer's Toolkit is a No Man's Sky mod that gives settlement overseers the stu
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/ethan-hann/nms-settlement-mod)](https://github.com/ethan-hann/nms-settlement-mod/issues)
 
----
-
 ## What's in the box
 
 The mod comes in three modules. Core works on its own; the other two are optional, and none of them depends on another.
@@ -60,7 +58,7 @@ A few things worth knowing:
 
 - Built and tested on **No Man's Sky 7.06 (COSMOS)**.
 - The mod ships small EXML patches and adds new `OT_` parts instead of editing vanilla ones wherever it can. [COMPATIBILITY.md](COMPATIBILITY.md) lists every vanilla entry and field each module touches, and it's generated from the patches, so it's always current.
-- Want to build base-only parts (walls, landing pads, tech) right next to your settlement? Pair it with **gBase Boundary**.
+- Want to build base-only parts (walls, landing pads, tech) right next to your settlement? Pair it with [gBase Boundries](https://www.nexusmods.com/nomanssky/mods/1369).
 - Multiplayer: every part reuses a vanilla model, so visitors without the mod should still see what you built.
 
 ## Known limits
@@ -76,8 +74,6 @@ Please use the [issue tracker](https://github.com/ethan-hann/nms-settlement-mod/
 ## Roadmap
 
 - **Path tool.** Click points along a route and have the kit tiles laid for you, turned and snapped to the ground. It needs [NMS.py](https://github.com/monkeyman192/NMS.py) to support the current game build first; the latest release crashes the game at startup on 7.06.
-
----
 
 ## For modders and contributors 🛠️
 
