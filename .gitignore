@@ -5,3 +5,6 @@ tools/mbincompiler/
 __pycache__/
 .pytest_cache/
 .claude/worktrees/
+runtime/.venv/
+runtime/spikes/spike*-*.json
+runtime/nmspy-mods-empty/
