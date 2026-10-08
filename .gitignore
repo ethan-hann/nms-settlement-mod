@@ -8,3 +8,4 @@ __pycache__/
 runtime/.venv/
 runtime/spikes/spike*-*.json
 runtime/nmspy-mods-empty/
+nexus_screenshots/
