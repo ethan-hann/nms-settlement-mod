@@ -107,6 +107,18 @@ def test_generated_files_match_the_spec(module):
         assert path.read_text(encoding="utf-8") == text, f"{rel} is stale; rerun the generators in tools/"
 
 
+# Probes holds hand-written probe patches beside its generated files.
+MIXED_MODULES = {"OverseersToolkit-Probes"}
+
+
+@pytest.mark.parametrize("module", [m for m in SPEC_MODULES if m not in MIXED_MODULES])
+def test_generated_modules_hold_only_generated_files(module):
+    # The byte check above only covers files the generators still write; a dropped file would pass it.
+    expected = {Path(rel).as_posix() for rel in generated_files(spec_of(module))}
+    present = {p.relative_to(MODS / module).as_posix() for p in (MODS / module).rglob("*") if p.is_file()}
+    assert present == expected
+
+
 @pytest.mark.parametrize("module", MODULES)
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)

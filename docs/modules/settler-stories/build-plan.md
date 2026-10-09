@@ -17,7 +17,7 @@ The data leaves these open, and the slice is built to answer them all in one cre
 
 Decided 2026-10-09.
 
-1. **Defense output must not change.** Before any generator change, add a test that pins today's Defense output byte for byte against a snapshot taken on `main`. Defense is the only spec using this generator. The test passes on its first run, so break the generator on purpose once to prove it can fail.
+1. **Defense output must not change.** `test_generated_files_match_the_spec` in `tests/test_modules.py` already regenerates every spec module and compares it byte for byte with the committed files, so the committed Defense folder is the snapshot. It only checks files the generators still write, so `test_generated_modules_hold_only_generated_files` closes that gap: a fully generated module may hold no file the generators don't write. Probes is exempt because it mixes in hand-written probe patches. Any generator change that alters Defense fails one of the two, unless the Defense folder is regenerated, and that would show in the PR diff under `mod/OverseersToolkit-Defense/`.
 2. **Spec format.** These additions; existing keys keep their meaning:
    - `custom_judgements`: same fields as `judgements`, minus `type` and `weighting`, plus `id`. `copy_from` names a vanilla custom judgement by ID, for example `J_DEBRIEF_POS`. They are appended to `CustomJudgements`.
    - On any option: `chain` (a custom judgement ID), `rewards` (a list of existing reward IDs) and `gift` (sets `UseGiftReward`).
@@ -53,7 +53,7 @@ Chain checks:
 - a chain loop is an error
 
 Unchanged:
-- Defense output stays byte-identical
+- Defense output stays byte-identical (the two module checks above)
 - every existing `test_gen_settlement.py` test still passes, except the one that rejects chaining sources, which decision 4 changes
 
 Session support, in `tools/save_inspect.py`:
@@ -91,7 +91,7 @@ Results go into `docs/progress.md`, `vanilla-findings.md` and plan.md:
 
 ## Order of work
 
-1. Snapshot test pinning Defense output.
+1. Close the dropped-file gap in the existing byte-for-byte module check.
 2. Custom judgements in the generator, test by test.
 3. Option `chain`, `rewards` and `gift`.
 4. Chain checks.
