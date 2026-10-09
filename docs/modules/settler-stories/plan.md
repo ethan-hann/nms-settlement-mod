@@ -50,8 +50,11 @@ Ethan's calls, 2026-10-09:
 1. **Stories never start halfway through.** A follow-up dilemma must only ever fire from its chain, never from the random pool. This is a requirement, not a preference. If the data can't guarantee it, stories are dropped in favour of single dilemmas (see Risks).
 2. **Race-specific stories if the game allows it.** Write stories for a specific race when the data can target one. Otherwise write them to fit any race.
 3. **The first release has 6 single dilemmas and 3 stories** of two or three steps.
+4. **The first release is race-neutral** (2026-10-09). Judgements have no race field, and the only route is a race-gated mission ([vanilla-findings.md](vanilla-findings.md)). Mission appends crashed in session 1, so every story is written to fit any race. Race-gated stories wait until missions are proven safe, alongside I-2.
 
 ## To verify offline
+
+Answered from vanilla data on 2026-10-09; see [vanilla-findings.md](vanilla-findings.md). In short: follow-ups go in `CustomJudgements`, but whether a random-pool dilemma can hand off to one needs a test session. Race targeting works only through a mission. The original questions:
 
 1. **Keeping follow-ups out of the random pool.** Two candidate mechanisms:
    - `ChainedJudgementID` points at a `CustomJudgements` ID, which is never drawn at random.
