@@ -2,9 +2,9 @@
 
 Name: **Overseer's Toolkit** (Nexus subtitle along the lines of "settlement paths, building and defense", since players search for "settlement"). Part and perk ID prefix: `OT_`. Repo: `github.com/ethan-hann/nms-settlement-mod` (private for now; Nexus Mods release later).
 
-A No Man's Sky mod that lets players lay out and improve settlements instead of just watching a procedural village. Written 2026-10-06 against game build 180836. "Verified" means checked on Ethan's PC that day.
+A No Man's Sky mod that lets players lay out and improve settlements instead of just watching a procedural village. Written 2026-10-06 against game build 180836. "Verified" means checked on the maintainer's PC that day.
 
-**How to use this plan.** A `/goal` session builds it end to end with as little of Ethan's time as possible. Section 3 (safety) overrides everything else in this file. Section 10 says when to stop and ask.
+**How to use this plan.** A `/goal` session builds it end to end with as little of the maintainer's time as possible. Section 3 (safety) overrides everything else in this file. Section 10 says when to stop and ask.
 
 ## 1. Why this mod exists
 
@@ -23,7 +23,7 @@ What players do today, and what goes wrong:
 
 ## 2. Design principles
 
-This mod is for everyone, not one PC. Ethan's setup is one test case, not the target.
+This mod is for everyone, not one PC. The maintainer's setup is one test case, not the target.
 
 1. **Target the vanilla game.** Design and validate against vanilla data only. Never assume, require or tune around any other mod.
 2. **Add rather than edit.** New `OT_` entries can't collide with other mods. Edit a vanilla entry only when the feature needs it, and list every vanilla `_id` and field the mod edits in `COMPATIBILITY.md` (generated, see section 9).
@@ -44,22 +44,22 @@ This mod is for everyone, not one PC. Ethan's setup is one test case, not the ta
 
 ## 3. Safety (overrides everything)
 
-Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neither may be damaged. These rules are absolute.
+The maintainer's save is years old, and the mod setup is about 55 Vortex-managed mods. Neither may be damaged. These rules are absolute.
 
 ### Hard rules
 
 1. **Saves are read-only.** Never write, move, rename or delete anything in `%APPDATA%\HelloGames\NMS\`. To inspect a save, copy the one test-slot file to `scratch/` and read the copy.
-2. **Other mods are untouchable.** In `GAMEDATA\MODS\`, create, update or remove only the dev folders this project owns (`_OTDEV_*`). Never touch any other folder, file, or `vortex.deployment.json`. One exception, approved by Ethan on 2026-10-06: when the test-only TestTuning module turns on the game's `SaveOutModdedMetadata` flag, the game creates `GAMEDATA\MODS\EXPORTED\`. If that folder did not exist when the session began, `testmode exit` copies it to `scratch/exported/` and removes it. An `EXPORTED` folder that existed before is left alone and checked like any other.
+2. **Other mods are untouchable.** In `GAMEDATA\MODS\`, create, update or remove only the dev folders this project owns (`_OTDEV_*`). Never touch any other folder, file, or `vortex.deployment.json`. One exception, approved by the maintainer on 2026-10-06: when the test-only TestTuning module turns on the game's `SaveOutModdedMetadata` flag, the game creates `GAMEDATA\MODS\EXPORTED\`. If that folder did not exist when the session began, `testmode exit` copies it to `scratch/exported/` and removes it. An `EXPORTED` folder that existed before is left alone and checked like any other.
 3. **Game files are untouchable.** Never write under `PCBANKS` or `Binaries`, except `Binaries\SETTINGS\GCMODSETTINGS.MXML`, and only through `testmode.py`. That script backs it up first and restores it byte for byte.
 4. **Never act while the game runs.** Every tool that touches the game folder refuses to run if `NMS.exe` is running.
 5. **Backups are never deleted** by any tool or session.
-6. **Main save protection.** Ethan's main game is slot 2 (`save3.hg`, `save4.hg`, last played 2026-10-03). Slots 1 to 5 are in use and Steam Cloud is on (`steam_autocloud.vdf`). Testing uses a new creative save in a free slot (6 or higher), never slots 1 to 5.
-7. **Any safety check failure stops the session** and goes to Ethan with the exact files involved. Restoring a save from backup always needs his explicit approval. Steam Cloud can fight a restore, so plan it with him; never do it automatically.
+6. **Main save protection.** The maintainer's main game is slot 2 (`save3.hg`, `save4.hg`, last played 2026-10-03). Slots 1 to 5 are in use and Steam Cloud is on (`steam_autocloud.vdf`). Testing uses a new creative save in a free slot (6 or higher), never slots 1 to 5.
+7. **Any safety check failure stops the session** and goes to the maintainer with the exact files involved. Restoring a save from backup always needs the maintainer's explicit approval. Steam Cloud can fight a restore, so plan it with the maintainer; never do it automatically.
 
 ### Test environment
 
 - **Primary:** a fresh **creative-mode** save (settlements are quick to find and claim) with **only this mod's modules enabled**.
-- **Compatibility pass:** the same creative save with Ethan's full mod list plus this mod. That's one realistic heavy setup, and it never involves his real saves.
+- **Compatibility pass:** the same creative save with the maintainer's full mod list plus this mod. That's one realistic heavy setup, and it never involves the real saves.
 
 ### `tools/testmode.py`: the only way into and out of a test session
 
@@ -76,7 +76,7 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 `testmode.py exit`:
 
 1. Refuses if `NMS.exe` is running.
-2. Removes the `_OTDEV_*` folders, so Ethan's normal game never loads dev builds by accident.
+2. Removes the `_OTDEV_*` folders, so the maintainer's normal game never loads dev builds by accident.
 3. Restores `GCMODSETTINGS.MXML` byte for byte from the backup and checks the hash.
 4. Checks the `MODS` listing against the snapshot. Any difference outside `_OTDEV_*` is a safety failure.
 5. Hash-compares every save file against the backup. Only the test slot's files, `accountdata.hg`, their `mf_` companions and `cache\` may differ. **Any other change is a safety failure**: stop and report.
@@ -86,15 +86,15 @@ Ethan's save is years old. His mod setup is about 55 Vortex-managed mods. Neithe
 
 `testmode.py` gets its own tests, run against a fake game tree in a temp directory and never the real folders. They must show that `exit` restores `GCMODSETTINGS` byte for byte, that it refuses while a fake `NMS.exe` process is running, and that a changed non-test save file is reported as a failure.
 
-### Verifying results without Ethan
+### Verifying results without the maintainer
 
-After each session, `tools/save_inspect.py` decodes the copied test save. The format is LZ4 block chunks with magic `0xFEEDA1E5`, and keys are de-obfuscated with MBINCompiler's `mapping.json`. That's the same approach as Ethan's existing script at `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\scratch dir\corvette-destroyer\inspect_save.py`. It checks, for example:
+After each session, `tools/save_inspect.py` decodes the copied test save. The format is LZ4 block chunks with magic `0xFEEDA1E5`, and keys are de-obfuscated with MBINCompiler's `mapping.json`. That's the same approach as the maintainer's existing script at `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\scratch dir\corvette-destroyer\inspect_save.py`. It checks, for example:
 
 - which `OT_` and `DECALPATH` objects exist in `PersistentPlayerBases[*].Objects`
 - where the base sits relative to the settlement
 - settlement perks and stats
 
-This keeps Ethan's checklist to "do these actions, save, quit". The game log (`GAMEDATA\FullLog.txt`) is useless here: it only records texture cache misses.
+This keeps the maintainer's checklist to "do these actions, save, quit". The game log (`GAMEDATA\FullLog.txt`) is useless here: it only records texture cache misses.
 
 ## 4. Scope
 
@@ -119,7 +119,7 @@ Out of scope: NPCs walking player paths, moving settlement buildings, protecting
 | Mods folder | `GAMEDATA\MODS`, Vortex hardlink deployment, 799 tracked files, about 55 mods |
 | Mod list and load order | `Binaries\SETTINGS\GCMODSETTINGS.MXML` (`ModPriority`, `Enabled`, `EnabledVR` per mod). Not written by Vortex. |
 | Saves | `%APPDATA%\HelloGames\NMS\st_76561198023670358`. Slot N = `save{2N-1}.hg` and `save{2N}.hg` with `mf_` companions; slot 1 = `save.hg`/`save2.hg`. |
-| Backup root | `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\` (Ethan's dated folders live here; ours go in `overseers-toolkit-backups\`) |
+| Backup root | `X:\Files\Documents\!SAVED GAMES AND CONFIGS\No Mans Sky\` (the maintainer's dated folders live here; ours go in `overseers-toolkit-backups\`) |
 | MBINCompiler | v7.04.1-pre3 (2026-09-24), currently in `tools/mbincompiler/`. Older copies on the PC (5.54, 7.01) don't match this build. |
 | hgpaktool | 1.1.3 from PyPI, currently in `tools/.venv/` (uv, Python 3.14) |
 | NMS.py | Latest 180383.0 (2026-10-01), **one build behind the game**. It usually catches up within a week. |
@@ -188,7 +188,7 @@ Paths below are relative to `scratch/extracted/`.
 
 The data modules are partial EXML patches plus localization. Runtime is an NMS.py mod that the data modules never depend on.
 
-If NMS.py can't place parts, the fallback is an **offline save-edit path planner**, a separate tool that works on a copy of a save. It's only ever installed onto Ethan's creative test slot, never a real save, and only with his approval.
+If NMS.py can't place parts, the fallback is an **offline save-edit path planner**, a separate tool that works on a copy of a save. It's only ever installed onto the maintainer's creative test slot, never a real save, and only with the maintainer's approval.
 
 ```
 docs/plan.md                 this file
@@ -215,7 +215,7 @@ scratch/  dist/              gitignored
 
 ## 8. Milestones
 
-Every milestone runs on a branch `m<n>-<slug>` and ends in a GitHub PR (section 10). **[SESSION n]** marks an in-game test session (section 3), with all checks batched to save Ethan's time.
+Every milestone runs on a branch `m<n>-<slug>` and ends in a GitHub PR (section 10). **[SESSION n]** marks an in-game test session (section 3), with all checks batched to save the maintainer's time.
 
 ### M0: Tooling and safety
 
@@ -241,7 +241,7 @@ Build a throwaway probe module (`_OTDEV_PROBES`, never shipped) that answers the
 
 Extract `nms_reality_gcproducttable` and the `language/*english*` files first; P2 and P3 need them.
 
-**[SESSION 1]**, Ethan's checklist (first time only: start a new creative game, which lands in a free slot):
+**[SESSION 1]**, the maintainer's checklist (first time only: start a new creative game, which lands in a free slot):
 
 1. Find and claim a settlement.
 2. Check the mod list.
@@ -249,7 +249,7 @@ Extract `nms_reality_gcproducttable` and the `language/*english*` files first; P
 4. Try claiming a base inside it.
 5. Save and quit.
 
-The build session confirms most of the results from the save copy. Ethan only reports what he saw for P3, P5 and P6.
+The build session confirms most of the results from the save copy. The maintainer only reports what was seen for P3, P5 and P6.
 
 Record the results in `docs/progress.md`. Re-plan M2 to M4 if P2 or P3 fail: fall back to editing existing entries and reusing vanilla names.
 
@@ -290,13 +290,13 @@ Look for anything in data keyed on settlement class: unlock trees, blueprints, p
 
 ### [SESSION 2]: Content, then compatibility
 
-1. `testmode enter --modules core,open,defense,testtuning`. Ethan's checklist:
+1. `testmode enter --modules core,open,defense,testtuning`. The maintainer's checklist:
    1. Build a short path with the kit.
    2. Wait for and accept the fortify decision.
    3. Fly to a fresh planet and look around a new base site (OpenSettlements side-effect check).
    4. Save and quit.
-2. `testmode exit`, then `testmode enter --with-user-mods --modules core,open,defense`. Ethan loads the **same creative save**, confirms the game starts, and confirms the parts and decision still work. Save and quit.
-3. `compat_report.py` against Ethan's real `MODS` folder (read-only). It should flag gBase Boundaries (`RadiusMultiplier_DoNotPlaceAnywhereNear`) and the merged timer mod (`gcsettlementglobals`). Use the report to write `COMPATIBILITY.md`.
+2. `testmode exit`, then `testmode enter --with-user-mods --modules core,open,defense`. The maintainer loads the **same creative save**, confirms the game starts, and confirms the parts and decision still work. Save and quit.
+3. `compat_report.py` against the maintainer's real `MODS` folder (read-only). It should flag gBase Boundaries (`RadiusMultiplier_DoNotPlaceAnywhereNear`) and the merged timer mod (`gcsettlementglobals`). Use the report to write `COMPATIBILITY.md`.
 
 ### M6: Runtime feasibility spike
 
@@ -319,7 +319,7 @@ Look for anything in data keyed on settlement class: unlock trees, blueprints, p
 ### M8: Release prep
 
 - `package.py` zips per module, a version bump, and a `CHANGES.md` entry list.
-- **The Nexus page, README and screenshots are Ethan's.** The build session supplies the facts (features, compatibility list, install notes) in `docs/progress.md` and never writes those documents.
+- **The Nexus page, README and screenshots are the maintainer's.** The build session supplies the facts (features, compatibility list, install notes) in `docs/progress.md` and never writes those documents.
 
 ## 9. Testing
 
@@ -340,21 +340,21 @@ Look for anything in data keyed on settlement class: unlock trees, blueprints, p
 
 ## 10. Workflow and autonomy
 
-Ethan wants to be hands-off. The build session decides and proceeds on its own within this plan.
+Sessions are hands-off. The build session decides and proceeds on its own within this plan.
 
 - **Git:**
   - One branch per milestone.
-  - Commits as Ethan's global GitHub identity (`36464732+ethan-hann@users.noreply.github.com`). Check `git config user.email` before the first commit.
+  - Commits as the maintainer's global GitHub identity (`36464732+ethan-hann@users.noreply.github.com`). Check `git config user.email` before the first commit.
   - No attribution lines.
   - Push the branch and open a PR with `gh`. The body uses one unwrapped line per paragraph and notes the tests run.
-  - **Merge it yourself** (merge commit, not squash, so the commit messages that record each TDD red survive) once automated tests pass and any session for that milestone is recorded. Ethan reviews merged PRs whenever he likes.
-- **Stop and ask Ethan only for:**
-  - each [SESSION] (send the checklist as one short message; use a push notification if he's away)
+  - **Merge it yourself** (merge commit, not squash, so the commit messages that record each TDD red survive) once automated tests pass and any session for that milestone is recorded. The maintainer reviews merged PRs at any time.
+- **Stop and ask the maintainer only for:**
+  - each [SESSION] (send the checklist as one short message; use a push notification if no reply comes)
   - any safety failure
   - a scope change
   - a tool, game or NMS.py version mismatch that blocks progress
-  - anything needing his accounts (Nexus, Discord)
-- **Status updates:** a few lines, with any decision he needs to make first. Details go in PRs and `docs/progress.md`.
+  - anything needing the maintainer's accounts (Nexus, Discord)
+- **Status updates:** a few lines, with any decision needed first. Details go in PRs and `docs/progress.md`.
 - **Comments in code and patches** explain why. They never name milestones, slices or phases; forward-looking notes go in `docs/progress.md`.
 - **Out-of-scope findings** become GitHub issues on this repo.
 - **Prose** in commits, PRs and docs: ASCII, American English, concise.
@@ -367,13 +367,13 @@ M0 through M5 merged, [SESSION 1] and [SESSION 2] recorded, the M6 spike report 
 
 | Risk | Impact | Plan |
 |---|---|---|
-| Ethan presses Continue during a test session and loads his main save with only test mods | Modded items could be stripped from the main save | Warning in the checklist; full verified backup before every session; the `exit` hash check catches any change; restore only with his approval |
-| A test session is left open and Ethan plays normally | Same as above | `exit` runs as soon as he reports the session done; `status` is checked at the start of every build-session turn that touches the game |
+| The maintainer presses Continue during a test session and loads the main save with only test mods | Modded items could be stripped from the main save | Warning in the checklist; full verified backup before every session; the `exit` hash check catches any change; restore only with his approval |
+| A test session is left open and the maintainer plays normally | Same as above | `exit` runs as soon as the session is reported done; `status` is checked at the start of every build-session turn that touches the game |
 | A partial patch can't append new `_id`s | No new `OT_` parts | P2. Fall back to exposing and retuning vanilla parts |
 | Custom text can't be added | Vanilla names reused | P3. Cosmetic |
 | The exclusion field does more than claimed | Spawn side effects | P4 plus the [SESSION 2] check; fall back to Runtime |
 | NMS.py lags or lacks a placement function | No path tool | M6 gate; save-edit fallback on the test slot only |
-| Multiplayer visitors without the mod | Missing or odd parts | Vanilla scenes only; test with a second player before release (needs Ethan) |
+| Multiplayer visitors without the mod | Missing or odd parts | Vanilla scenes only; test with a second player before release (needs the maintainer) |
 | Game updates rename fields or regenerate settlements | Patches stop applying; paths misalign | The validator catches renames. Regeneration is Hello Games' and out of scope |
 | NPC pathing | Players expect NPCs to use paths | Out of scope. Research note: per-part nav nodes exist for freighter parts; adding them to planet path parts might or might not be read by settlement NPCs. A one-hour spike after M7 at most |
 | Moving settlement buildings | Wishlist item | Out of scope (generated layouts plus save data) |

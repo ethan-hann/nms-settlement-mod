@@ -32,14 +32,14 @@ Session 1 ran in three short rounds on a new creative save, which became test sl
 
 Results:
 
-- **Safety:** every exit restored GCMODSETTINGS and removed `_OTDEV_PROBES`; protected saves and all other mods verified unchanged each time. The last exit flagged only the slot 6 files Ethan deleted in game to start a new creative game; he approved and it was resolved. `testmode` now allows deleting the known test slot.
+- **Safety:** every exit restored GCMODSETTINGS and removed `_OTDEV_PROBES`; protected saves and all other mods verified unchanged each time. The last exit flagged only the slot 6 files the maintainer deleted in game to start a new creative game; that was approved and resolved. `testmode` now allows deleting the known test slot.
 - **P4 (open settlements): no.** With `RadiusMultiplier_DoNotPlaceAnywhereNear` at 0.000001 (pak-root globals patch), the base computer still showed "Cannot Build // Within Existing Base" (`BASEBUILD_INVALID_INSIDE_BASE`) until about 312u from the settlement marker. That matches the vanilla `MinRadiusForBases` of 300, so the settlement appears to count as a base with that radius. Unconfirmed: whether a pak-root globals patch loads at all; the visible check for it was in round 2, which crashed.
 - **P1, P2, P3, new subgroup: inconclusive.** No probe part appeared, and no star (MOD) tab. Creative games know an explicit list (`difficultyconfig` `StartWithAllItemsKnownEnabledData.InitialKnownThings.KnownProducts`, 1386 IDs), which lists no new part and not DECALPATH. New parts need a way to become known before any of these can be judged.
 - **P5, P6, P8:** not reached (P8 needs an owned settlement; P6 was not reported).
 - **Crashes:** rounds 2 and 3 crashed while loading the test save and while creating a new creative game (crash IDs 180836M_0x4BE63F and 180836M_0x9BD78A). Round 1 loaded fine. Added in every crashing run: a mission appended to the empty `modmissiontable` (copied from vanilla GLASS_FIX, empty StartingConditions, inline recipe reward; it crashed even when teaching a vanilla part); `MinRadiusForBases` 100 and `BuildingPlacementMaxDistance` 150; BUILDPAVING in a second subgroup; the probe judgement's perk grant in its correct `GcSettlementJudgementPerkOption` form (round 1's malformed form compiled to an empty grant). The mission is the prime suspect but is not proven.
 - **Save facts:** settlements live in a 100-entry ring buffer (`SettlementStatesV2`), most entries empty (address 0); a nearby settlement the player never visited is not stored. `save_inspect.py` now skips empty entries and reads the game mode from `DifficultyState`.
 
-Process change (Ethan's feedback): no more iterating probes in game. Open questions get answered offline first (installed mods, public mod scripts, docs, data validation), and the rest is batched into one short Session 2.
+Process change: no more iterating probes in game. Open questions get answered offline first (installed mods, public mod scripts, docs, data validation), and the rest is batched into one short Session 2.
 
 ### Correction, same evening: globals belong under GLOBALS/
 
@@ -74,21 +74,21 @@ The in-game spike could not run: the newest NMS.py is 180383.0 and the game is 1
 | 3. Place DECALPATH from code | No spawn, place or add function exists in NMS.py, its examples, or any public runtime mod. Finding the game's commit-a-part function means reverse engineering the 7.x exe. Writing straight into the object vector would not create the world object. | **No-go today** |
 | 4. Flatten terrain | `ApplyTerrainEditFlatten` is declared, but its arguments and the beam instance are not. | Optional, low odds |
 
-**Decision: no-go for a runtime path tool.** Per the plan, the fallback is the offline save-edit planner. It works on a copy of the creative test slot, and installing it needs Ethan's approval.
+**Decision: no-go for a runtime path tool.** Per the plan, the fallback is the offline save-edit planner. It works on a copy of the creative test slot, and installing it needs the maintainer's approval.
 
 Its pieces are known:
 - The save codec is in `save_inspect.py`.
 - The base frame is in `runtime/spikes/base_frame.py`.
 - Objects are `{"ObjectID", "Position", "Up", "At", "Timestamp", "UserData"}` entries in `PersistentPlayerBases[*].Objects`.
-- Ethan's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
+- The maintainer's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
 
-The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs Ethan's GitHub or Discord account.
+The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs the maintainer's GitHub or Discord account.
 
 ## 2026-10-06: Session 2, part A, and the fixes it led to
 
 `testmode enter --modules core,open,defense,testtuning`, a new creative game in slot 6, with the test-only `SaveOutModdedMetadata` export on. Exit passed every safety check; the game's export went to `scratch/exported/20261006-222620`, and `tools/check_export.py` found every module edit in it (the cost table is not part of the export).
 
-What Ethan saw:
+What the test session showed:
 - No crash creating or loading the game.
 - Decoration > SETTLEMENT listed the kit under its English names; the Tower Pillar sat under Structural Adornments.
 - A base computer could be claimed about 110u from the settlement centre, against about 312u before.
@@ -107,10 +107,10 @@ Causes, from the game files:
 - The repeat decision is the test tuning; judgements have no "already owned" condition, so a rare repeat in normal play costs debt for no new perk.
 - The menu flip is the game choosing between overlapping base and settlement areas. It is a side effect of OpenSettlements and of gBase Boundary alike.
 
-Ethan's calls (2026-10-06):
+Decided 2026-10-06:
 - The data-display signpost did not read as a sign. It is replaced by 24 vanilla signs copied under their vanilla names (so every game language has them): the Illuminated Sign, Standing Sign, Station Billboard, the holographic displays, the Gek, Korvax and Vy'keen emblem decals and the number decals 0 to 9. They unlock at class A.
 - Scope: new optional module `OverseersToolkit-SettlementDecor` sets `BuildableOnPlanet` on every planet-base part in the Decoration, Exotics and Wall Art groups (489 today), leaving out the 13 lights that draw power. `gen_parts.py` gained `group_edits` to generate it from the vanilla groups. Side effect: those parts can also be placed outside any base.
-- The side-effect check for the smaller base radius is settled by his own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
+- The side-effect check for the smaller base radius is settled by the maintainer's own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
 
 ## 2026-10-07: Session 2, final pass
 
@@ -122,7 +122,7 @@ Launch 1, `testmode enter --modules core,open,defense,decor,testtuning` (export 
 - Perimeter Watch is still in the settlement's features.
 - `check_export.py` on the five installed modules: every edit landed except the cost table, which the export does not include.
 
-Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/20261007-202657`): the SETTLEMENT section and the placed parts were still there. Two expected differences in the export, both from Ethan's mods loading over ours:
+Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/20261007-202657`): the SETTLEMENT section and the placed parts were still there. Two expected differences in the export, both from the maintainer's mods loading over ours:
 - gBase Boundary sets `MinRadiusForBases` to 10 instead of our 15 (listed in COMPATIBILITY.md).
 - The merged timer mod sets `JudgementWaitTimeMin`/`Max` to 20/30 instead of TestTuning's 60/120. TestTuning is test-only, so this does not affect a release.
 
@@ -132,23 +132,23 @@ Session 2 is closed. No open in-game questions remain from it.
 
 ## 2026-10-07: OpenSettlements dropped
 
-Ethan's call. Every part the mod adds is now built from the settlement's own menu (`BuildableOnPlanet`), so no base is needed to build in a settlement. The module's only remaining use was claiming a base beside a settlement for base-only parts (walls, floors, pads, powered tech). That came at a cost: it shrank the starting radius of every new base, made the build menu flip near settlements, and conflicted with gBase Boundary, which already does the same thing at radius 10.
+Decided. Every part the mod adds is now built from the settlement's own menu (`BuildableOnPlanet`), so no base is needed to build in a settlement. The module's only remaining use was claiming a base beside a settlement for base-only parts (walls, floors, pads, powered tech). That came at a cost: it shrank the starting radius of every new base, made the build menu flip near settlements, and conflicted with gBase Boundary, which already does the same thing at radius 10.
 
-Removed: `mod/OverseersToolkit-OpenSettlements`, its test, and the `open` key in `testmode.py`. COMPATIBILITY.md is regenerated, and a scan of Ethan's MODS folder now finds no conflicts, only shared files. For the release facts: players who want full base-building next to a settlement can add gBase Boundary alongside this mod.
+Removed: `mod/OverseersToolkit-OpenSettlements`, its test, and the `open` key in `testmode.py`. COMPATIBILITY.md is regenerated, and a scan of the maintainer's MODS folder now finds no conflicts, only shared files. For the release facts: players who want full base-building next to a settlement can add gBase Boundary alongside this mod.
 
 ## 2026-10-07: NMS.py trial on build 180836
 
-Ethan asked to try NMS.py 180383.0 on game build 180836 anyway. Setup: uv-managed Python 3.13.14 and `nmspy==180383.0` (pymhf 0.2.4) in `runtime/.venv`, outside the tools venv. NMS.py has no version lock; it uses the exe hash only to name its pattern cache. The session ran under `testmode` (core, defense, decor, testtuning), and exit passed every safety check.
+NMS.py 180383.0 was tried on game build 180836 anyway. Setup: uv-managed Python 3.13.14 and `nmspy==180383.0` (pymhf 0.2.4) in `runtime/.venv`, outside the tools venv. NMS.py has no version lock; it uses the exe hash only to name its pattern cache. The session ran under `testmode` (core, defense, decor, testtuning), and exit passed every safety check.
 
 Result: NMS.exe crashed during startup on every launch, before the main menu and before FullLog.txt got any content. Windows logged Application Error 1000 each time: fault in ntdll.dll, exception 0xc0000374 (heap corruption).
 - Two launches with spike 1 (`pymhf run runtime/spikes/spike1_log_base_objects.py`): injection completed, the pattern cache was written, the mod GUI opened, and then the game died after resuming.
 - One launch of bare NMS.py (`pymhf run nmspy`, with an empty mod folder): same crash. The cause is NMS.py's own startup hooks (`cTkFSM.StateChange`, `cTkFSMState.StateChange`, `cGcApplication.Update`) on 180836, not our spike.
 
-Conclusion: NMS.py 180383.0 does not run on 180836. The runtime path tool waits for an NMS.py release for the current build. `SUPPORTED_BUILDS` is back to 180383 only. An upstream issue with these crash details would need Ethan's GitHub account.
+Conclusion: NMS.py 180383.0 does not run on 180836. The runtime path tool waits for an NMS.py release for the current build. `SUPPORTED_BUILDS` is back to 180383 only. An upstream issue with these crash details would need the maintainer's GitHub account.
 
 ## 2026-10-07: Release prep (M8), 1.0.0
 
-Ethan's calls: version 1.0.0; the fortify decision should be rare, about once every 18 hours of judgements.
+Decided: version 1.0.0; the fortify decision should be rare, about once every 18 hours of judgements.
 
 - **Fortify rate.** The vanilla pool has four Request judgements (total weighting 4.01), and Request is drawn for about 20% of judgements when BuildingChoice is not on offer. At weighting 1.0, fortify came up about once every 28 hours; it is now 1.8, about once every 18 hours (6.3% of judgements; two in a row 0.4%). Judgements are drawn independently, so the rate does not cluster. There is still no way in data to stop it after the perk is owned.
 - **Packaging.** `tools/package.py` writes `dist/<Module>-<version>.zip` for OverseersToolkit, -Defense and -SettlementDecor. Each zip holds the module folder and only the files the loader reads. Probes and TestTuning are test-only; a test fails if a module is in neither list. The version lives in `VERSION`.
@@ -159,6 +159,6 @@ Release facts, for the Nexus page and README:
 - Install: extract each zip into `GAMEDATA/MODS`. Core works alone; Defense and SettlementDecor are optional and independent of each other and of core.
 - Use: become a settlement's overseer and open the build menu inside the settlement; the parts are under Decoration > SETTLEMENT (SettlementDecor adds parts to the other decor tabs).
 - Not yet seen in game: the class B, A and S unlock missions granting parts in a normal (non-creative) game. They load without errors, but no test session reached a B-class building.
-- Compatibility: COMPATIBILITY.md lists every vanilla entry and field each module edits. Against Ethan's 55 installed mods, the scan finds no field conflicts. gBase Boundary is a good companion for building base-only parts beside a settlement.
+- Compatibility: COMPATIBILITY.md lists every vanilla entry and field each module edits. Against the maintainer's 55 installed mods, the scan finds no field conflicts. gBase Boundary is a good companion for building base-only parts beside a settlement.
 - Multiplayer: every part reuses a vanilla scene, so visitors without the mod see the meshes.
 - Known limits: the fortify decision can repeat after Perimeter Watch is owned; the Settlement Path decal is not buildable (its scene is an empty marker); no path-drawing tool yet (waits for an NMS.py release for the current game build).

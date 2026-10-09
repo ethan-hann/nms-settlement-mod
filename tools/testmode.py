@@ -517,7 +517,7 @@ def exit_session(env):
     if state is None:
         raise Refused("no test session is open")
     if state.get("status") != "open":
-        raise Refused(f"session status is {state.get('status')}; resolve it with Ethan first")
+        raise Refused(f"session status is {state.get('status')}; resolve it with the maintainer first")
     backup = Path(state["backup_dir"])
     manifest, settings_backup, before = _verified_backup(backup)
     failures = []
@@ -613,7 +613,7 @@ def status(env):
 
 
 def resolve(env, note):
-    """Archive a failed session after Ethan has reviewed it. Never touches game or save files."""
+    """Archive a failed session after the maintainer has reviewed it. Never touches game or save files."""
     state = read_json(env.state_file)
     if state is None or state.get("status") != "failed":
         raise Refused("there is no failed session to resolve")
@@ -634,7 +634,7 @@ def main(argv=None):
     p_enter.add_argument("--with-user-mods", action="store_true")
     sub.add_parser("exit")
     sub.add_parser("status")
-    p_resolve = sub.add_parser("resolve", help="archive a failed session after Ethan approved")
+    p_resolve = sub.add_parser("resolve", help="archive a failed session after the maintainer approved")
     p_resolve.add_argument("--note", required=True)
     args = parser.parse_args(argv)
 
@@ -654,7 +654,7 @@ def main(argv=None):
                 if result.copied:
                     print(f"Copied to {env.saves_copy_dir}: {', '.join(result.copied)}")
                 return 0
-            print("SAFETY CHECK FAILED. Stop and report these to Ethan:")
+            print("SAFETY CHECK FAILED. Stop and report these to the maintainer:")
             for f in result.failures:
                 print("  " + f)
             return 2

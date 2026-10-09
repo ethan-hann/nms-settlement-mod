@@ -129,11 +129,11 @@ AMUMSS decompiles game files, applies Lua change tables, and rebuilds a mod. Pla
   - shaders are hard to edit
   - custom parts are invisible to visitors
   - new snappable parts compete for the frozen snap quota
-- **For this repo:** plan principle 5 (no new 3D assets) and Ethan's art constraint both apply. Custom models would have to come from free marketplaces or be built with Claude in Blender. Ideas below prefer vanilla scenes.
+- **For this repo:** plan principle 5 (no new 3D assets) and the maintainer's art constraint both apply. Custom models would have to come from free marketplaces or be built with Claude in Blender. Ideas below prefer vanilla scenes.
 
 ## 5. Save editors (NomNom, goatfungus)
 
 - **NomNom** edits a settlement's stats, perks, name, seed (which changes its look), next decision and timers. It keeps a "collection" that works around the settlement limit by swapping. [NomNom wiki](https://github.com/zencq/NomNom/wiki/Save.-Planetary-Settlement)
 - **goatfungus** players use the raw JSON to change production items and reset debt.
 - **Limits:** buildings can't be moved; they regenerate from seeds. Editing the alert value does not fix a stuck alert for long. Raising population raises the cap, not the settler count.
-- **For this repo:** `tools/save_inspect.py` already decodes saves. The plan restricts any save writing to Ethan's creative test slot, so save-edit tools are for testing, not shipping.
+- **For this repo:** `tools/save_inspect.py` already decodes saves. The plan restricts any save writing to the maintainer's creative test slot, so save-edit tools are for testing, not shipping.
