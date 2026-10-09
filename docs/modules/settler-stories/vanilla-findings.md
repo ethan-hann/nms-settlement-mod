@@ -1,44 +1,114 @@
-# Settler Stories: what vanilla data shows
+# Settler Stories: what the game files show
 
-Read 2026-10-09 from `scratch/extracted` (`gcsettlementglobals.MXML`, `metadata/reality/tables/rewardtable.MXML`, `metadata/simulation/missions/tables/sentinelsettlementmissiontable.MXML`). This answers the two "To verify offline" items in [plan.md](plan.md). Nothing here has been tested in game yet.
+Second pass, 2026-10-09. It replaces the first pass from the same day, which read only `gcsettlementglobals` and got two things wrong (see "Corrections").
 
-## Summary
+Each finding is marked:
+- **Verified:** read directly in vanilla data, the type definitions or a save.
+- **Inferred:** the most likely reading of the data, but not stated anywhere.
+- **Unknown:** needs a game session.
 
-- Every vanilla chain stays inside `CustomJudgements`, and no random-pool judgement chains at all. So follow-ups belong in `CustomJudgements`, which the random draw never touches.
-- The open question moves: can a random-pool dilemma hand off to a custom one? Vanilla never does it, so it needs one test session.
-- Judgements have no race field. Vanilla targets a race only through a mission, and does exactly that for its Autophage story.
+## Sources
 
-## 1. Keeping follow-ups out of the random pool
+- Vanilla data, decompiled: `scratch/extracted/` (settlement globals, reward table, perks table, five mission tables, English and USEnglish language files) and `scratch/extracted-stories/` (seven more mission tables, `ui/interactionjudgementpage`, `gcuiglobals`, `statdefinitionstable`). Pulled from the game's own archives with the repo's pinned hgpaktool and MBINCompiler.
+- Type definitions: `tools/mbincompiler/libMBIN.dll` 7.4.1.3, read through .NET reflection. `scratch/nmspy_types.py` doesn't cover these structs.
+- Saves: the decoded test-slot saves under `scratch/saves/` (round1, session2a, session2 final).
+- Earlier session notes: `docs/progress.md` and `scratch/session*.md`.
+- Other mods: `scratch/realmods/` and the export of a 55-mod test setup, `scratch/exported/20261007-202657/`.
+- Web: Hello Games' Beacon update page and the Step modding wiki. Neither documents these fields; nothing else public was found.
 
-The two lists:
-- `Judgements`: 36 random-pool entries, weights 0.1 to 2.5. None has a `ChainedJudgementID`.
-- `CustomJudgements`: 13 entries addressed by `ID` (`J_SENT_MISS_1`, `J_BUI_VISITOR`, `J_DEBRIEF_POS` and so on). All 8 non-empty `ChainedJudgementID` values point from one custom entry to another (`J_SENT_MISS_1` to `J_SENT_MISS_1B`, `J_SENT_MISS_3` to `3B` or `3C`, `J_SENT_MISS_4*` to `4B` or `4C`).
+## Corrections to the first pass
 
-A custom entry wraps the same `GcSettlementJudgementData` as a pool entry, plus `CustomCostText` and `CustomMissionObjectiveText`. Custom entries carry a `Weighting`, but nothing suggests the random draw reads them.
+- **Mission appends did not "crash in session 1".** One mission appended to the empty `modmissiontable` was among several changes in the crashing runs. It was the prime suspect, never proven. Missions appended to `NPCMISSIONTABLE` ship in 1.0.0 and load fine (Progress -1 in saves). None has yet been seen to start and pay out in a normal game.
+- **Route B has no vanilla precedent.** No judgement option in vanilla starts a custom judgement through a reward, directly or through a mission. The first pass called both halves "proven"; they exist separately but are never joined.
 
-Vanilla starts the first step of a custom chain in three ways:
-- A mission reward, `GcRewardSettlementCustomJudgement`, with `CustomJudgement`, `DisplaySettlementJudgementAlert`, `CanOverrideNonCustomJudgement` and `AwardToClosestSettlement`. The Sentinel storyline uses this for `J_SENT_MISS_1`, `_3` and `J_SENT_4_LEGS`.
-- The mini-expedition: `MiniMissionSuccessJudgement` and `MiniMissionFailJudgement` name `J_DEBRIEF_POS` and `J_DEBRIEF_NEG`.
-- A judgement option starting a mission: the `J_BUI_VISITOR` options list `AdditionalRewards` `R_J_BUI_VISITOR`, a `SettlementTable` reward entry that gives `GcRewardMission` `SETTLE_BUI_J`.
+## Judgement structure
 
-**Result:** the `Weighting` 0 idea is not needed. Follow-ups go in `CustomJudgements`.
+- **Verified:** the two lists:
+  - `Judgements`: the random pool, 36 entries. Entries have no `ID` field and no `_id`, so nothing can point at a pool judgement.
+  - `CustomJudgements`: 13 entries addressed by a 16-byte `ID`.
+- **Verified:** a custom entry wraps the same `GcSettlementJudgementData` as a pool entry, plus `CustomCostText` and `CustomMissionObjectiveText`.
+- **Verified:** sizes from libMBIN:
+  - judgement `ID`, `ChainedJudgementID`, each `AdditionalRewards` element, perk IDs and reward table `Id`s are 16-byte strings;
+  - text keys are 32-byte strings.
+  
+  Whether 16 bytes means 15 or 16 usable characters is **unknown**. The repo's tools disagree (`gen_parts.py` uses 16, `gen_unlocks.py` 15), so new IDs stay at 15 characters or fewer.
+- **Verified:** the judgement types are None, StrangerVisit, Policy, NewBuilding, BuildingChoice, Conflict, Request, BlessingPerkRelated, JobPerkRelated, ProcPerkRelated, UpgradeBuilding and UpgradeBuildingChoice. `JudgementSelectionWeights` sets NewBuilding, UpgradeBuilding and UpgradeBuildingChoice to 0.
+- **Verified:** no judgement field works as a requirement: no minimum class, required building or required perk.
+- **Verified:** an option's perk entry has only `Perk` and `PerkChance`, with no guard against a perk the settlement already owns. In session 2, accepting the fortify request twice left `OT_WATCH` in the save once.
 
-**Still unproven:** a story's first step comes from the random pool, and vanilla has no pool entry that chains. Two routes, in order of preference:
-- **A.** Set `ChainedJudgementID` on a pool option to a custom ID. Same option struct, so it may just work.
-- **B.** Put a `SettlementTable` reward entry in `AdditionalRewards` that gives `GcRewardSettlementCustomJudgement`. Both halves exist in vanilla, but never joined like this.
+## Chains and custom judgements
 
-If neither works, a story can open with a custom judgement fired by a mission, which is the vanilla route and brings a mission into scope.
+- **Verified:** all 8 non-empty `ChainedJudgementID` values are on custom judgements and point at custom judgements:
+  - `J_SENT_MISS_1` to `1B`
+  - `J_SENT_MISS_3` to `3B` or `3C`
+  - `J_SENT_4_ARMS` and `J_SENT_4_LEGS` to `4B` or `4C`
 
-## 2. Targeting a race
+  No pool option chains.
+- **Verified:** vanilla starts the first step of a custom judgement in four ways:
 
-- `GcSettlementJudgementData` has no race field. The only race-related fields are `DilemmaTextIsAlien` (49 uses) and `JudgementSpecificRacePartyChance` (parties only).
-- `GcMissionConditionHasSettlement` takes `SpecificAlienRace`. Vanilla sets it to `Builders` (Autophage) in `SETTLE_BUI_SE` and `SETTLE_BUI_J`, the Autophage visitor storyline that ends in `J_BUI_VISITOR`.
-- A separate `GcMissionConditionHasSettlementLocal` exists. That suggests `HasSettlement` means "owns one anywhere", not "is standing in one". If so, a race-gated story could fire at a settlement of a different race. `AwardToClosestSettlement` on the reward might help; not checked.
+  | Route | Judgements | Where |
+  |---|---|---|
+  | Mission reward `GcRewardSettlementCustomJudgement` | `J_SENT_MISS_1`, `J_SENT_MISS_3`, `J_SENT_4_LEGS`, `J_SENT_4_ARMS` (Sentinel missions); `J_BUI_VISITOR` (`SETTLE_MGR`) | sentinel settlement mission table |
+  | The same reward in a seasonal mission | `J_S23_BEACON` (mission `BEACON`) | seasonal bespoke mission table |
+  | Globals `MiniMissionSuccessJudgement` / `MiniMissionFailJudgement` | `J_DEBRIEF_POS`, `J_DEBRIEF_NEG` | settlement globals |
+  | Chain from another custom judgement | the B and C steps above | settlement globals |
 
-**Result:** race targeting is possible only through a mission, the way vanilla does it for the Autophage. Without one, stories must fit any race.
+- **Verified:** every custom entry has `Weighting` 1.0 except `J_DEBRIEF_POS` and `J_DEBRIEF_NEG`, which are 0.0. The debriefs still fire, so a weight of 0 doesn't stop a custom judgement that is awarded directly.
+- **Inferred:** the random draw never picks custom judgements. Nothing references them by weight, and the save tracks a pool judgement by type alone (`PendingJudgementType`) and a custom one by ID (`PendingCustomJudgementID`). Not stated anywhere.
+- **Unknown:** whether a pool option's `ChainedJudgementID` can point at a custom judgement (route A). Vanilla never does it.
+- **Unknown:** whether a judgement option can fire a custom judgement through a reward (route B). Vanilla never does it.
+- **Unknown:** what `CanOverrideNonCustomJudgement` does. It's true on six of the seven rewards and false only on `J_BUI_VISITOR`. Only one judgement can be pending at a time (verified from the save format).
+
+## Rewards
+
+- **Verified:** `AdditionalRewards` IDs resolve from several places:
+  - the reward table's `SettlementTable` (`R_J_GIFTITEM1`, `R_SET_FW_EXPED`)
+  - its `GenericTable` (`TECHFRAG_XL`)
+  - a mission's own `Rewards` list (`R_SENT3_J_ALT`, `R_SENT4_LEGS`)
+- **Unknown:** whether a mission-local reward needs its mission to be active when the option is chosen.
+- **Verified:** `SettlementTable` has 71 entries, including 37 gift entries `R_J_GIFTITEM1` to `37` (units, products, substances, procedural items) and `R_J_BOUNTY` (units).
+- **Verified:** a judgement option can start a mission. `J_BUI_VISITOR` gives `R_J_BUI_VISITOR` and `R_J_BUI_SCAN`, which start `SETTLE_BUI_J` and `SETTLE_BUI_SE`.
+- **Verified, conflict risk:** two installed mods (EqualPlantTimerAndProduction, Unlockable Expedition Exclusive Techs) ship the whole reward table as MBIN. Either one, loaded after this module, would erase any entry it appends to `SettlementTable`.
+- **Verified, conflict risk:** in the 55-mod export, an unidentified mod raises eight vanilla `SettlementTable` payouts. For example, `R_J_GIFTITEM1` goes from 500-600 units to 2500-3000, and `R_J_BOUNTY` from 200-500 to 2000-5000. Reusing vanilla gift IDs means other mods can change this module's rewards.
+- **Verified:** per-race gift lists exist in the globals:
+  - `GekGifts`: `R_J_GIFT_TRA1`, `TRA2`
+  - `KorvaxGifts`: `R_J_GIFT_EXP1`, `EXP2`
+  - `VykeenGifts`: `R_J_GIFT_WAR1`, `WAR2`
+  - `AutophageGifts`: reuses `EXP1`, `EXP2`
+
+  There is also a general `Gifts` list. Options with `UseGiftReward` true (3 vanilla options) **probably** draw from the settlement race's list. That reading is inferred.
+
+## Race
+
+- **Verified:** judgements have no race field. The only race-related fields are `DilemmaTextIsAlien` (true only on `J_BUI_VISITOR`) and `JudgementSpecificRacePartyChance` (0.16, parties only).
+- **Verified:** the save stores each settlement's race (`GcSettlementState.Race`). The test-slot saves show `Warriors` (Vy'keen) and `Traders` (Gek).
+- **Verified:** the race enum names are Traders (Gek), Warriors (Vy'keen), Explorers (Korvax), Robots, Atlas, Diplomats, Exotics, None, and Builders (Autophage).
+- **Verified:** the mission condition `GcMissionConditionHasSettlement` takes `SpecificAlienRace`. Vanilla sets it to Builders only in the Autophage storyline (`SETTLE_BUI_SE`, `SETTLE_MGR`).
+- **Inferred, well supported:** it means "the player owns a settlement of that race", not "is standing in one". `SETTLE_BUI_SE` marks an unowned Autophage settlement and ends when that condition turns true. `SETTLE_MGR` pairs it with a `NearSettlement` that excludes Autophage settlements. No condition anywhere tests the race of the settlement the player is at.
+- **Verified:** `AwardToClosestSettlement` is false on six vanilla custom-judgement rewards. It's true only on the seasonal `BEACON` mission.
+- **Unknown:** which settlement receives a fired judgement when the player owns several, with the flag false or true. A race-gated mission could land its judgement at a different-race settlement.
+- **Verified:** the text placeholder `%RACE%` exists in 16 vanilla strings, for example "%RACE% Planetary Settlement" and "%RACE% words". None is a judgement string.
+- **Unknown:** whether the dilemma screen fills in `%RACE%`. Judgement text uses many other placeholders: `%NAME1%` (187 strings), `%NUM%`, `%NAME%`, `%SETTLEMENT%`, `%ITEM%`, and more.
+
+## Missions
+
+- **Verified:** what the repo ships. `gen_unlocks.py` copies vanilla `STORAGE_FIX` into `NPCMISSIONTABLE` as Guide-class missions with `AutoStart` AllModes, gated on `GcMissionConditionHasSettlementBuilding` (`CheckAllSettlements` true).
+- **Verified:** vanilla's own judgement-to-mission chain (Autophage) never restarts. `RestartOnCompletion` and `IsRecurring` are false.
+- **Verified:** missions can test for a specific pending judgement with `GcMissionConditionHasPendingSettlementJudgement` (`SpecificID`).
+- **Unknown:** whether a Guide-class `NPCMISSIONTABLE` mission can give `GcRewardSettlementCustomJudgement` without crashing, and to which settlement it goes.
+- **Unknown:** exactly how a mission group's `ConditionTest` is evaluated. The `SETTLE_MGR` Autophage branch reads inconsistently either way.
+
+## Text
+
+- **Verified:** vanilla judgement strings live in `nms_loc7` and `nms_loc9`, in both English and USEnglish. `gen_parts.py` already writes both.
+- **Verified:** the longest vanilla text key is 31 characters, which matches the 32-byte field.
+- **Verified:** text markup tags in use include `<TECHNOLOGY>`, `<STELLAR>`, `<TRADEABLE>`, `<COMMODITY>`, `<SPECIAL>` and `<TRANS_DIP>`.
+- **Unknown:** what other languages show for the module's keys. Nothing is tested outside English.
 
 ## Other things noticed
 
-- An option slot (`Option1List` to `Option4List`) is a list, and 4 vanilla slots hold more than one variant. The game probably picks one at random. That could give a dilemma variety without adding entries; behaviour unconfirmed.
-- `SettlementTable` holds 8 vanilla reward entries (`R_SETTL_LIST1` to `3`, `R_SETTL_UPLIST1` to `3`, `R_SETTL_NAVDATA`, `R_SETTL_PROG`). Item, nanite and standing rewards would be new entries in that bucket.
-- `CanOverrideNonCustomJudgement` suggests a fired custom judgement replaces a pending random one rather than queueing behind it.
+- **Verified:** 4 option slots hold more than one variant: Conflict pool entries 3 and 4, and BlessingPerkRelated 30. The variants differ only in text and stat changes, with no weight field. **Inferred:** the game picks one at random.
+- **Verified:** `GcRewardTriggerSettlementJudgement` (in `R_OPEN_SETJUDGE`) has no fields and nothing references it. **Unknown:** what it does.
+- **Verified:** `GcRewardSettlementJudgement` (`JudgementTypes`, `Silent`) exists in the types. Nothing in the extracted data uses it.
+- **Verified:** `SETTLE_MGR` checks for a pending `J_SENT_MISS_4`, which doesn't exist. It's a stale vanilla reference and harmless.
+- **Verified:** no installed mod and no mod found on Nexus adds judgements, custom judgements or settlement missions.
