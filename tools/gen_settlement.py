@@ -18,7 +18,9 @@ Spec keys (all optional):
                      judgement with _id copy_from; type and the two wrapper texts are optional
 
 An option's chain names the custom judgement that follows it, from vanilla or this spec;
-rewards name entries of the vanilla reward table; gift sets UseGiftReward.
+rewards name entries of the vanilla reward table; gift sets UseGiftReward. Every custom
+judgement in a spec must be reachable through chains from a pool option, and chains may
+not loop, so a story can only ever start at its first step.
 
 Vanilla judgements have no _id, so a new one is appended without a key. Options never
 inherit rewards, perks, stat changes or a chain from the source; the source supplies the
@@ -279,6 +281,34 @@ def _custom_judgement(item, table, ctx):
     return entry
 
 
+def _chains(item):
+    return [option["chain"] for option in item["options"] if option.get("chain")]
+
+
+def _check_chains(judgement_items, custom_items):
+    """A story may only start from the pool, so every spec step needs a path from a pool option."""
+    steps = {item["id"]: _chains(item) for item in custom_items}
+    reached, todo = set(), [chain for item in judgement_items for chain in _chains(item)]
+    while todo:
+        id_ = todo.pop()
+        if id_ in steps and id_ not in reached:
+            reached.add(id_)
+            todo.extend(steps[id_])
+    missing = sorted(set(steps) - reached)
+    if missing:
+        raise SpecError(f"{', '.join(missing)}: no pool option can reach them through chains")
+
+    def visit(id_, path):
+        if id_ in path:
+            loop = path[path.index(id_):] + [id_]
+            raise SpecError(f"chain loop: {' -> '.join(loop)}")
+        for nxt in steps.get(id_, []):
+            visit(nxt, path + [id_])
+
+    for id_ in steps:
+        visit(id_, [])
+
+
 def build(spec, vanilla_dir=EXTRACTED):
     """Return {relative path: file text} for the module."""
     perk_items, judgement_items = spec.get("perks", []), spec.get("judgements", [])
@@ -289,6 +319,7 @@ def build(spec, vanilla_dir=EXTRACTED):
     vocab = Vocabulary(settings.root)
     _check_perk_ids(perk_items, perks)
     _check_custom_ids(custom_items, settings)
+    _check_chains(judgement_items, custom_items)
     perk_ids = {c.get("_id") for c in _list(perks.root, "Table")} | {i["id"] for i in perk_items}
     custom_ids = {c.get("_id") for c in _list(settings.root, CUSTOM)} | {i["id"] for i in custom_items}
     ctx = Context(vocab, perk_ids, custom_ids, vanilla_dir)

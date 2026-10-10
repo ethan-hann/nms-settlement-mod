@@ -634,3 +634,39 @@ def test_a_reward_that_is_not_in_the_vanilla_reward_table_is_an_error(vanilla):
 def test_gift_sets_use_gift_reward(vanilla):
     assert value(pool_option(files(with_pool_option(gift=True), vanilla), 2), "UseGiftReward") == "true"
     assert value(pool_option(files(STORY, vanilla), 2), "UseGiftReward") == "false"
+
+
+def two_steps(last_chain=""):
+    """Pool option 1 leads to OT_SS_P1B, whose option 1 leads to OT_SS_P1C."""
+    spec = story()
+    second = copy.deepcopy(spec["custom_judgements"][0])
+    second["id"] = "OT_SS_P1C"
+    second["options"][0]["chain"] = last_chain
+    spec["custom_judgements"][0]["options"][0]["chain"] = "OT_SS_P1C"
+    spec["custom_judgements"].append(second)
+    return spec
+
+
+def test_a_two_step_story_builds(vanilla):
+    out = files(two_steps(), vanilla)
+    assert value(get(get(custom_entry(out), "Data"), "Option1List")[0], "ChainedJudgementID") == "OT_SS_P1C"
+    custom_entry(out, "OT_SS_P1C")
+
+
+def test_a_custom_judgement_that_nothing_reaches_is_an_error(vanilla):
+    spec = story()
+    del spec["judgements"][0]["options"][0]["chain"]
+    with pytest.raises(SpecError, match="OT_SS_P1B.*reach"):
+        build(spec, vanilla)
+
+
+def test_a_step_reached_only_from_an_unreachable_step_is_an_error(vanilla):
+    spec = two_steps()
+    del spec["judgements"][0]["options"][0]["chain"]
+    with pytest.raises(SpecError, match="OT_SS_P1B, OT_SS_P1C"):
+        build(spec, vanilla)
+
+
+def test_a_chain_loop_is_an_error(vanilla):
+    with pytest.raises(SpecError, match="loop.*OT_SS_P1B"):
+        build(two_steps(last_chain="OT_SS_P1B"), vanilla)
