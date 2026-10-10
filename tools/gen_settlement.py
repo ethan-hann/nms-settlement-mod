@@ -11,11 +11,18 @@ Spec keys (all optional):
                 options: [{text, perks: [[perk, chance]], stat_changes: [[stat, strength]]}]}]
                   -> new judgement appended to the pool, copied from the vanilla
                      judgement at _index copy_from
+  custom_judgements: [{id, copy_from, header, title, question, dilemma, options,
+                       type, cost_text, objective_text}]
+                  -> new entry in CustomJudgements, copied from the vanilla custom
+                     judgement with _id copy_from; type and the two wrapper texts are optional
 
 Vanilla judgements have no _id, so a new one is appended without a key. Options never
-inherit rewards, perks or stat changes from the source; the source supplies the NPC
-fields and flags. Sources whose options chain to another judgement or pick their own
-perk are rejected, because the copy would carry that behavior silently.
+inherit rewards, perks, stat changes or a chain from the source; the source supplies the
+NPC fields and flags. Sources whose options pick their own perk are rejected, because
+the copy would carry that behavior silently.
+
+Custom judgements get Weighting 0, as vanilla's debrief judgements do: they still fire
+when awarded directly, and the random draw can never pick them.
 
 Usage: gen_settlement.py <spec.json> <module folder>
 """
@@ -31,6 +38,8 @@ from gen_parts import EXTRACTED, MAX_ID, MAX_LOC_KEY, SpecError, Table, P, to_te
 TABLES = Path("METADATA/REALITY/TABLES")
 PERKS = ("metadata/reality/tables/settlementperkstable.MXML", "Table", TABLES / "SETTLEMENTPERKSTABLE.EXML")
 GLOBALS = ("gcsettlementglobals.MXML", "Judgements", Path("GLOBALS/GCSETTLEMENTGLOBALS.EXML"))
+CUSTOM = "CustomJudgements"
+MAX_JUDGEMENT_ID = 15  # 16-byte string; whether it needs a terminator is unknown, so assume it does
 MAX_OPTIONS = 4
 OPTION_FLAGS = ("UsePolicyPerk", "UsePolicyStat", "UseGiftReward", "UseTechPerk")
 
@@ -149,9 +158,6 @@ def _source_judgement(table, index):
 
 
 def _plain_option(option, owner):
-    chain = _child(option, "ChainedJudgementID", owner).get("value")
-    if chain:
-        raise SpecError(f"{owner}: the source option chains to {chain}; copy a judgement that does not")
     for flag in OPTION_FLAGS:
         if _child(option, flag, owner).get("value") == "true":
             raise SpecError(f"{owner}: the source option sets {flag}; copy a judgement that does not")
@@ -171,43 +177,95 @@ def _option(list_node, spec, vocab, perk_ids, owner):
         perks.append(_perk_option(perk, chance))
     _fill_changes(_child(option, "StatChanges", owner), spec.get("stat_changes", []), vocab, owner)
     _clear(_child(option, "AdditionalRewards", owner))
+    _set(option, "ChainedJudgementID", "", owner)
+
+
+def _set_type(data, type_, vocab, owner):
+    if type_ not in vocab.types:
+        raise SpecError(f"{owner}: unknown judgement type {type_!r}; vanilla has {sorted(vocab.types)}")
+    _set(_child(data, "JudgementType", owner), "SettlementJudgementType", type_, owner)
+
+
+def _fill_data(data, item, vocab, perk_ids, owner):
+    """Text and options shared by pool and custom judgements."""
+    for field, key in (("Title", "title"), ("QuestionText", "question"), ("DilemmaText", "dilemma")):
+        _set(data, field, _loc_key(item[key], owner), owner)
+    lists = [_child(data, f"Option{n}List", owner) for n in range(1, MAX_OPTIONS + 1)]
+    source_count = sum(1 for node in lists if len(node))
+    if source_count != len(item["options"]):
+        raise SpecError(f"{owner}: spec has {len(item['options'])} options but the source has {source_count}")
+    for node, spec in zip(lists, item["options"]):
+        _option(node, spec, vocab, perk_ids, owner)
 
 
 def _judgement(item, table, vocab, perk_ids, number):
     owner = item.get("name") or f"judgement {number}"
     entry = copy.deepcopy(_source_judgement(table, item["copy_from"]))
     _strip_index(entry)
-    if item["type"] not in vocab.types:
-        raise SpecError(f"{owner}: unknown judgement type {item['type']!r}; vanilla has {sorted(vocab.types)}")
+    _set_type(entry, item["type"], vocab, owner)
     if item["weighting"] <= 0:
         raise SpecError(f"{owner}: weighting must be positive")
-    _set(_child(entry, "JudgementType", owner), "SettlementJudgementType", item["type"], owner)
     _set(entry, "Weighting", f"{item['weighting']:.6f}", owner)
-    for field, key in (("Title", "title"), ("QuestionText", "question"), ("DilemmaText", "dilemma")):
-        _set(entry, field, _loc_key(item[key], owner), owner)
-    lists = [_child(entry, f"Option{n}List", owner) for n in range(1, MAX_OPTIONS + 1)]
-    source_count = sum(1 for node in lists if len(node))
-    if source_count != len(item["options"]):
-        raise SpecError(f"{owner}: spec has {len(item['options'])} options but the source has {source_count}")
-    for node, spec in zip(lists, item["options"]):
-        _option(node, spec, vocab, perk_ids, owner)
+    _fill_data(entry, item, vocab, perk_ids, owner)
+    return entry
+
+
+def _custom_source(table, id_):
+    return table.root.find(f"Property[@name='{CUSTOM}']/Property[@_id='{id_}']")
+
+
+def _check_custom_ids(items, table):
+    seen = set()
+    for item in items:
+        id_ = item["id"]
+        if len(id_) > MAX_JUDGEMENT_ID:
+            raise SpecError(f"{id_} is longer than {MAX_JUDGEMENT_ID} characters")
+        if id_ in seen:
+            raise SpecError(f"{id_} appears twice in the spec")
+        if _custom_source(table, id_) is not None:
+            raise SpecError(f"{id_} already exists in vanilla; pick another id")
+        seen.add(id_)
+
+
+def _custom_judgement(item, table, vocab, perk_ids):
+    id_ = item["id"]
+    source = _custom_source(table, item["copy_from"])
+    if source is None:
+        raise SpecError(f"{id_}: no vanilla custom judgement {item['copy_from']}")
+    entry = copy.deepcopy(source)
+    _strip_index(entry)
+    entry.set("_id", id_)
+    _set(entry, "ID", id_, id_)
+    # The source's cost and objective text belong to its own story, so they never carry over.
+    _set(entry, "CustomCostText", _loc_key(item.get("cost_text", ""), id_), id_)
+    _set(entry, "CustomMissionObjectiveText", _loc_key(item.get("objective_text", ""), id_), id_)
+    data = _child(entry, "Data", id_)
+    if "type" in item:
+        _set_type(data, item["type"], vocab, id_)
+    _set(data, "Weighting", f"{0:.6f}", id_)
+    _set(data, "HeaderOverride", _loc_key(item["header"], id_), id_)
+    _fill_data(data, item, vocab, perk_ids, id_)
     return entry
 
 
 def build(spec, vanilla_dir=EXTRACTED):
     """Return {relative path: file text} for the module."""
     perk_items, judgement_items = spec.get("perks", []), spec.get("judgements", [])
-    if not perk_items and not judgement_items:
+    custom_items = spec.get("custom_judgements", [])
+    if not perk_items and not judgement_items and not custom_items:
         return {}
     perks, settings = Table(vanilla_dir, PERKS), Table(vanilla_dir, GLOBALS)
     vocab = Vocabulary(settings.root)
     _check_perk_ids(perk_items, perks)
+    _check_custom_ids(custom_items, settings)
     perk_ids = {c.get("_id") for c in _list(perks.root, "Table")} | {i["id"] for i in perk_items}
 
     for item in perk_items:
         perks.add(_perk(item, perks, vocab))
     for number, item in enumerate(judgement_items, 1):
         settings.add(_judgement(item, settings, vocab, perk_ids, number))
+    for item in custom_items:
+        settings.add(_custom_judgement(item, settings, vocab, perk_ids), CUSTOM)
 
     return {table.out: to_text(table.patch) for table in (perks, settings) if table.used()}
 

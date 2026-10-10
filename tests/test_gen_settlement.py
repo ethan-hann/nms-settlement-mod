@@ -69,17 +69,16 @@ OPTION = """<Property name="Option{n}List">
 </Property>"""
 
 
-def judgement(index, type_, weight, chain="", policy_perk="false"):
+def judgement_fields(type_, weight, chain="", policy_perk="false", header="", npc="NPC_JUDGEMENT"):
     option1 = OPTION.format(
         n=1, changes=STAT_CHANGE.format(i=0, stat="Happiness", strength="PositiveLarge"), chain=chain, positive="true"
     ).replace('"UsePolicyPerk" value="false"', f'"UsePolicyPerk" value="{policy_perk}"')
     option2 = OPTION.format(n=2, changes="", chain="", positive="false")
-    return f"""<Property name="Judgements" value="GcSettlementJudgementData" _index="{index}">
-  <Property name="JudgementType" value="GcSettlementJudgementType">
+    return f"""<Property name="JudgementType" value="GcSettlementJudgementType">
     <Property name="SettlementJudgementType" value="{type_}" />
   </Property>
   <Property name="Weighting" value="{weight}" />
-  <Property name="HeaderOverride" value="" />
+  <Property name="HeaderOverride" value="{header}" />
   <Property name="Title" value="SOURCE_TITLE" />
   <Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
   <Property name="QuestionText" value="SOURCE_QUESTION" />
@@ -89,8 +88,24 @@ def judgement(index, type_, weight, chain="", policy_perk="false"):
   {option2}
   <Property name="Option3List" />
   <Property name="Option4List" />
-  <Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
-  <Property name="NPCs" value="One" />
+  <Property name="NPC1CustomId" value="{npc}" />
+  <Property name="NPCs" value="One" />"""
+
+
+def judgement(index, type_, weight, chain="", policy_perk="false"):
+    return f"""<Property name="Judgements" value="GcSettlementJudgementData" _index="{index}">
+  {judgement_fields(type_, weight, chain, policy_perk)}
+</Property>"""
+
+
+def custom_judgement(index, id_, chain=""):
+    return f"""<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="{id_}" _index="{index}">
+  <Property name="ID" value="{id_}" />
+  <Property name="Data" value="GcSettlementJudgementData">
+    {judgement_fields("Request", "1.000000", chain, header="SOURCE_HEADER", npc="NPC_CUSTOM")}
+  </Property>
+  <Property name="CustomCostText" value="SOURCE_COST" />
+  <Property name="CustomMissionObjectiveText" value="SOURCE_OBJECTIVE" />
 </Property>"""
 
 
@@ -123,6 +138,10 @@ GLOBALS = f"""<Data template="cGcSettlementGlobals">
     {judgement(1, "Request", "1.000000")}
     {judgement(2, "Request", "0.500000", chain="J_CHAINED")}
     {judgement(3, "Request", "0.500000", policy_perk="true")}
+  </Property>
+  <Property name="CustomJudgements">
+    {custom_judgement(0, "J_SOURCE", chain="J_SOURCE_B")}
+    {custom_judgement(1, "J_SOURCE_B")}
   </Property>
   <Property name="StatsMaxValues">
     <Property name="Happiness" value="180" />
@@ -411,9 +430,9 @@ def test_fewer_options_than_the_source_are_rejected(vanilla):
         build(spec, vanilla)
 
 
-def test_a_source_that_chains_to_another_judgement_is_rejected(vanilla):
-    with pytest.raises(SpecError, match="J_CHAINED"):
-        build(with_judgement(copy_from=2), vanilla)
+def test_a_source_chain_is_never_inherited(vanilla):
+    entry = new_judgement(files(with_judgement(copy_from=2), vanilla))
+    assert value(get(entry, "Option1List")[0], "ChainedJudgementID") == ""
 
 
 def test_a_source_that_picks_its_own_perk_is_rejected(vanilla):
@@ -436,3 +455,113 @@ def test_write_puts_each_file_under_the_module_folder(vanilla, tmp_path):
     written = gen_settlement.write(NEW_JUDGEMENT, module, vanilla)
     assert sorted(p.relative_to(module).as_posix() for p in written) == [GLOBALS_FILE, PERK_FILE]
     assert (module / PERK_FILE).read_text(encoding="utf-8").startswith('<?xml version="1.0" encoding="utf-8"?>\n')
+
+
+STORY = {
+    "judgements": [
+        {
+            "name": "OT_SS_P1",
+            "copy_from": 1,
+            "type": "Request",
+            "weighting": 0.5,
+            "title": "OT_SS_P1_TITLE",
+            "question": "OT_SS_P1_Q",
+            "dilemma": "OT_SS_P1_D",
+            "options": [{"text": "OT_SS_P1_OPT1", "chain": "OT_SS_P1B"}, {"text": "OT_SS_P1_OPT2"}],
+        }
+    ],
+    "custom_judgements": [
+        {
+            "id": "OT_SS_P1B",
+            "copy_from": "J_SOURCE",
+            "header": "OT_SS_HEADER",
+            "title": "OT_SS_P1B_TITLE",
+            "question": "OT_SS_P1B_Q",
+            "dilemma": "OT_SS_P1B_D",
+            "options": [
+                {"text": "OT_SS_P1B_OPT1", "stat_changes": [["Happiness", "PositiveSmall"]]},
+                {"text": "OT_SS_P1B_OPT2"},
+            ],
+        }
+    ],
+}
+
+
+def story(**changes_):
+    spec = copy.deepcopy(STORY)
+    spec["custom_judgements"][0].update(changes_)
+    return spec
+
+
+def custom_entry(out, id_="OT_SS_P1B"):
+    found = out[GLOBALS_FILE].find(f"Property[@name='CustomJudgements']/Property[@_id='{id_}']")
+    assert found is not None, f"{id_} was not appended to CustomJudgements"
+    return found
+
+
+def test_custom_judgement_is_appended_under_its_own_id(vanilla):
+    out = files(STORY, vanilla)
+    entry = custom_entry(out)
+    assert entry.get("value") == "GcSettlementCustomJudgement"
+    assert value(entry, "ID") == "OT_SS_P1B"
+    assert "_index" not in entry.attrib
+    assert len(out[GLOBALS_FILE].find("Property[@name='CustomJudgements']")) == 1
+
+
+def test_custom_judgement_has_zero_weighting_and_the_spec_text(vanilla):
+    data = get(custom_entry(files(STORY, vanilla)), "Data")
+    assert value(data, "Weighting") == "0.000000"
+    assert value(data, "HeaderOverride") == "OT_SS_HEADER"
+    assert value(data, "Title") == "OT_SS_P1B_TITLE"
+    assert value(data, "QuestionText") == "OT_SS_P1B_Q"
+    assert value(data, "DilemmaText") == "OT_SS_P1B_D"
+    assert value(data, "NPC1CustomId") == "NPC_CUSTOM"
+    assert value(get(data, "JudgementType"), "SettlementJudgementType") == "Request"
+
+
+def test_custom_judgement_wrapper_text_is_cleared_unless_the_spec_sets_it(vanilla):
+    entry = custom_entry(files(STORY, vanilla))
+    assert (value(entry, "CustomCostText"), value(entry, "CustomMissionObjectiveText")) == ("", "")
+    entry = custom_entry(files(story(cost_text="OT_SS_COST", objective_text="OT_SS_OBJ"), vanilla))
+    assert (value(entry, "CustomCostText"), value(entry, "CustomMissionObjectiveText")) == ("OT_SS_COST", "OT_SS_OBJ")
+
+
+def test_custom_judgement_type_can_be_set(vanilla):
+    data = get(custom_entry(files(story(type="Policy"), vanilla)), "Data")
+    assert value(get(data, "JudgementType"), "SettlementJudgementType") == "Policy"
+    with pytest.raises(SpecError, match="Bogus"):
+        build(story(type="Bogus"), vanilla)
+
+
+def test_custom_judgement_options_come_from_the_spec_and_inherit_no_chain_or_rewards(vanilla):
+    data = get(custom_entry(files(STORY, vanilla)), "Data")
+    one, two = get(data, "Option1List")[0], get(data, "Option2List")[0]
+    assert (value(one, "OptionText"), changes(one)) == ("OT_SS_P1B_OPT1", [("Happiness", "PositiveSmall")])
+    assert value(two, "OptionText") == "OT_SS_P1B_OPT2"
+    for option in (one, two):
+        assert value(option, "ChainedJudgementID") == ""
+        assert len(get(option, "AdditionalRewards")) == 0
+        assert len(get(option, "Perks")) == 0
+
+
+def test_unknown_source_custom_judgement_is_an_error(vanilla):
+    with pytest.raises(SpecError, match="J_NOPE"):
+        build(story(copy_from="J_NOPE"), vanilla)
+
+
+def test_a_custom_judgement_id_that_exists_in_vanilla_is_rejected(vanilla):
+    with pytest.raises(SpecError, match="J_SOURCE_B"):
+        build(story(id="J_SOURCE_B"), vanilla)
+
+
+def test_duplicate_custom_judgement_ids_are_rejected(vanilla):
+    spec = story()
+    spec["custom_judgements"].append(copy.deepcopy(spec["custom_judgements"][0]))
+    with pytest.raises(SpecError, match="OT_SS_P1B"):
+        build(spec, vanilla)
+
+
+def test_custom_judgement_ids_longer_than_fifteen_characters_are_rejected(vanilla):
+    custom_entry(files(story(id="OT_SS_FIFTEEN_C"), vanilla), "OT_SS_FIFTEEN_C")
+    with pytest.raises(SpecError, match="15"):
+        build(story(id="OT_SS_SIXTEEN_CH"), vanilla)
