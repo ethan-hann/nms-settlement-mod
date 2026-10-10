@@ -67,7 +67,7 @@ A new `specs/OverseersToolkit-SettlerStories.json`, kept small:
   - Option A chains to custom step `A2`.
   - Option B has no chain; it is the control.
 - **`A2`:**
-  - one option gives a vanilla reward (`R_J_GIFTITEM1`, units) plus a new perk;
+  - one option gives a vanilla reward (`R_J_GIFTITEM1`, 500-600 nanites) plus a new perk;
   - the other has `gift` set.
 - **Probes module, test-only:** one more pool dilemma, P2. Its option gives a hand-written reward entry that fires custom step `B2` (route B).
 
@@ -79,7 +79,7 @@ Creative test slot only, via `testmode.py`. Install SettlerStories, Probes and T
 
 1. Watch for P1. Does the `%RACE%` text show the town's race?
 2. Choose option A. Does `A2` appear, and how soon: right away, or after the normal wait?
-3. On `A2`, pick the reward option. Do the units and the perk arrive? On the next run, pick the gift option. What arrives, and does it match the town's race?
+3. On `A2`, pick the reward option. Do the nanites and the perk arrive? On the next run, pick the gift option. What arrives, and does it match the town's race?
 4. When P2 appears, choose its option. Does `B2` appear?
 5. Over the whole session, does `A2` or `B2` ever appear without its parent? It must not.
 6. Any crash, hang or broken text.

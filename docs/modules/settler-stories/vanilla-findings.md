@@ -66,10 +66,10 @@ Each finding is marked:
   - its `GenericTable` (`TECHFRAG_XL`)
   - a mission's own `Rewards` list (`R_SENT3_J_ALT`, `R_SENT4_LEGS`)
 - **Unknown:** whether a mission-local reward needs its mission to be active when the option is chosen.
-- **Verified:** `SettlementTable` has 71 entries, including 37 gift entries `R_J_GIFTITEM1` to `37` (units, products, substances, procedural items) and `R_J_BOUNTY` (units).
+- **Verified:** `SettlementTable` has 71 entries, including 37 gift entries `R_J_GIFTITEM1` to `37` and `R_J_BOUNTY`. Currency gifts: `R_J_GIFTITEM1` gives 500-600 nanites, `R_J_GIFTITEM2` 100,000-300,000 units, and `R_J_BOUNTY` 200-500 quicksilver. The rest give specific products, substances or procedural items.
 - **Verified:** a judgement option can start a mission. `J_BUI_VISITOR` gives `R_J_BUI_VISITOR` and `R_J_BUI_SCAN`, which start `SETTLE_BUI_J` and `SETTLE_BUI_SE`.
 - **Verified, conflict risk:** two installed mods (EqualPlantTimerAndProduction, Unlockable Expedition Exclusive Techs) ship the whole reward table as MBIN. Either one, loaded after this module, would erase any entry it appends to `SettlementTable`.
-- **Verified, conflict risk:** in the 55-mod export, an unidentified mod raises eight vanilla `SettlementTable` payouts. For example, `R_J_GIFTITEM1` goes from 500-600 units to 2500-3000, and `R_J_BOUNTY` from 200-500 to 2000-5000. Reusing vanilla gift IDs means other mods can change this module's rewards.
+- **Verified, conflict risk:** in the 55-mod export, an unidentified mod raises eight vanilla `SettlementTable` payouts. For example, `R_J_GIFTITEM1` goes from 500-600 nanites to 2500-3000, and `R_J_BOUNTY` from 200-500 quicksilver to 2000-5000. Reusing vanilla gift IDs means other mods can change this module's rewards.
 - **Verified:** per-race gift lists exist in the globals:
   - `GekGifts`: `R_J_GIFT_TRA1`, `TRA2`
   - `KorvaxGifts`: `R_J_GIFT_EXP1`, `EXP2`

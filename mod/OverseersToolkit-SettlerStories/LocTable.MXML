@@ -48,8 +48,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_A2_OPT1" />
-			<Property name="English" value="[TEST] Take the units and the test perk" />
-			<Property name="USEnglish" value="[TEST] Take the units and the test perk" />
+			<Property name="English" value="[TEST] Take the nanites and the test perk" />
+			<Property name="USEnglish" value="[TEST] Take the nanites and the test perk" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_A2_OPT2" />
