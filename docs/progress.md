@@ -162,3 +162,12 @@ Release facts, for the Nexus page and README:
 - Compatibility: COMPATIBILITY.md lists every vanilla entry and field each module edits. Against the maintainer's 55 installed mods, the scan finds no field conflicts. gBase Boundary is a good companion for building base-only parts beside a settlement.
 - Multiplayer: every part reuses a vanilla scene, so visitors without the mod see the meshes.
 - Known limits: the fortify decision can repeat after Perimeter Watch is owned; the Settlement Path decal is not buildable (its scene is an empty marker); no path-drawing tool yet (waits for an NMS.py release for the current game build).
+
+## 2026-10-09: Settler Stories tooling and test slice, pending Session 3
+
+Plan, findings and decisions are in [modules/settler-stories/](modules/settler-stories/plan.md).
+
+- **Generator.** `gen_settlement.py` writes custom judgements (Weighting 0), option chains, vanilla reward IDs and gift options. It rejects a chain that targets anything but a custom judgement, a story step no pool option can reach, and a chain loop. Options no longer inherit a chain from their source. A new module test fails when a generator stops writing a file, which the byte-for-byte check alone missed.
+- **save_inspect.** Reports each settlement's race, pending custom judgement and last judgement time.
+- **Test slice.** `OverseersToolkit-SettlerStories` (route A: a pool option chains to custom step `OT_SS_A2`) and the hand-written `OverseersToolkit-StoryProbes` (route B: a pool option's reward fires custom step `OT_SSP_B2`). Both are test-only and all text is marked [TEST]. Both merge and compile against vanilla.
+- **Session 3 asks:** does route A or B start the follow-up, and how soon; does `%RACE%` show the town's race; do the units reward, the perk and the gift arrive; does a follow-up ever appear on its own.
