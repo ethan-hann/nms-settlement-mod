@@ -159,10 +159,26 @@ GLOBALS = f"""<Data template="cGcSettlementGlobals">
 """
 
 
+REWARDS = """<Data template="cGcRewardTable">
+  <Property name="GenericTable">
+    <Property name="GenericTable" value="GcGenericRewardTableEntry" _id="R_GENERIC" _index="0">
+      <Property name="Id" value="R_GENERIC" />
+    </Property>
+  </Property>
+  <Property name="SettlementTable">
+    <Property name="SettlementTable" value="GcGenericRewardTableEntry" _id="R_GIFT" _index="0">
+      <Property name="Id" value="R_GIFT" />
+    </Property>
+  </Property>
+</Data>
+"""
+
+
 @pytest.fixture
 def vanilla(tmp_path):
     (tmp_path / "metadata/reality/tables").mkdir(parents=True)
     (tmp_path / "metadata/reality/tables/settlementperkstable.MXML").write_text(PERKS)
+    (tmp_path / "metadata/reality/tables/rewardtable.MXML").write_text(REWARDS)
     (tmp_path / "gcsettlementglobals.MXML").write_text(GLOBALS)
     return tmp_path
 
@@ -490,6 +506,8 @@ STORY = {
 def story(**changes_):
     spec = copy.deepcopy(STORY)
     spec["custom_judgements"][0].update(changes_)
+    # A renamed step keeps the chain that leads to it.
+    spec["judgements"][0]["options"][0]["chain"] = spec["custom_judgements"][0]["id"]
     return spec
 
 
@@ -565,3 +583,54 @@ def test_custom_judgement_ids_longer_than_fifteen_characters_are_rejected(vanill
     custom_entry(files(story(id="OT_SS_FIFTEEN_C"), vanilla), "OT_SS_FIFTEEN_C")
     with pytest.raises(SpecError, match="15"):
         build(story(id="OT_SS_SIXTEEN_CH"), vanilla)
+
+
+def pool_option(out, n=1):
+    return get(new_judgement(out), f"Option{n}List")[0]
+
+
+def with_pool_option(**changes_):
+    spec = copy.deepcopy(STORY)
+    spec["judgements"][0]["options"][1].update(changes_)
+    return spec
+
+
+def test_chain_writes_the_chained_judgement_id_on_a_pool_option(vanilla):
+    out = files(STORY, vanilla)
+    assert value(pool_option(out, 1), "ChainedJudgementID") == "OT_SS_P1B"
+    assert value(pool_option(out, 2), "ChainedJudgementID") == ""
+
+
+def test_chain_works_on_a_custom_option_and_may_target_a_vanilla_custom_judgement(vanilla):
+    spec = story()
+    spec["custom_judgements"][0]["options"][0]["chain"] = "J_SOURCE_B"
+    data = get(custom_entry(files(spec, vanilla)), "Data")
+    assert value(get(data, "Option1List")[0], "ChainedJudgementID") == "J_SOURCE_B"
+
+
+def test_a_chain_to_an_unknown_id_is_an_error(vanilla):
+    with pytest.raises(SpecError, match="OT_NOPE"):
+        build(with_pool_option(chain="OT_NOPE"), vanilla)
+
+
+def test_a_chain_to_a_pool_judgement_is_an_error(vanilla):
+    with pytest.raises(SpecError, match="OT_SS_P1.*custom"):
+        build(with_pool_option(chain="OT_SS_P1"), vanilla)
+
+
+def test_rewards_write_additional_rewards_in_order(vanilla):
+    rewards = get(pool_option(files(with_pool_option(rewards=["R_GIFT", "R_GENERIC"]), vanilla), 2), "AdditionalRewards")
+    assert [(c.get("name"), c.get("value"), c.attrib.get("_index")) for c in rewards] == [
+        ("AdditionalRewards", "R_GIFT", None),
+        ("AdditionalRewards", "R_GENERIC", None),
+    ]
+
+
+def test_a_reward_that_is_not_in_the_vanilla_reward_table_is_an_error(vanilla):
+    with pytest.raises(SpecError, match="R_NOPE"):
+        build(with_pool_option(rewards=["R_NOPE"]), vanilla)
+
+
+def test_gift_sets_use_gift_reward(vanilla):
+    assert value(pool_option(files(with_pool_option(gift=True), vanilla), 2), "UseGiftReward") == "true"
+    assert value(pool_option(files(STORY, vanilla), 2), "UseGiftReward") == "false"
