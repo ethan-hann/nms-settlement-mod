@@ -22,6 +22,7 @@ TEST_ONLY = [
     "OverseersToolkit-Probes",
     "OverseersToolkit-TestTuning",
     "OverseersToolkit-SettlerStories",
+    "OverseersToolkit-StoryTuning",
 ]
 
 VERSION_RE = re.compile(r"\d+\.\d+\.\d+")

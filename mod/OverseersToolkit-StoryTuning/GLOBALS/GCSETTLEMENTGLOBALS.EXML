@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. A decision arrives every one to two minutes and is nearly always a Settler Stories Policy, StrangerVisit or Conflict dilemma: those types are weighted up, Request and BuildingChoice are off, and the vanilla judgements of the three types are zeroed. Do not install with TestTuning; both set the same fields. -->
+<Data template="cGcSettlementGlobals">
+	<Property name="JudgementWaitTimeMin" value="60" />
+	<Property name="JudgementWaitTimeMax" value="120" />
+	<Property name="JudgementSelectionWeights">
+		<Property name="StrangerVisit" value="50.000000" />
+		<Property name="Policy" value="50.000000" />
+		<Property name="BuildingChoice" value="0.000000" />
+		<Property name="Conflict" value="50.000000" />
+		<Property name="Request" value="0.000000" />
+	</Property>
+	<Property name="Judgements">
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="2">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="3">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="4">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="5">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="6">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="7">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="8">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="9">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="10">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="11">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="12">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="13">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="14">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="15">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="16">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="17">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="18">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="19">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="20">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData" _index="21">
+			<Property name="Weighting" value="0.000000" />
+		</Property>
+	</Property>
+</Data>

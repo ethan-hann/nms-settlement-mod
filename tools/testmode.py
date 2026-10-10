@@ -33,6 +33,7 @@ MODULES = {
     "probes": "OverseersToolkit-Probes",
     "decor": "OverseersToolkit-SettlementDecor",
     "stories": "OverseersToolkit-SettlerStories",
+    "storytuning": "OverseersToolkit-StoryTuning",
 }
 DEV_PREFIX = "_OTDEV_"
 # The game writes its merged mod data here when the test-only debug flag is on.
