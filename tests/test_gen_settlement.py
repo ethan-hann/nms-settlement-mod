@@ -670,3 +670,11 @@ def test_a_step_reached_only_from_an_unreachable_step_is_an_error(vanilla):
 def test_a_chain_loop_is_an_error(vanilla):
     with pytest.raises(SpecError, match="loop.*OT_SS_P1B"):
         build(two_steps(last_chain="OT_SS_P1B"), vanilla)
+
+
+def test_outcomes_are_never_hidden_even_when_the_source_hides_them(vanilla):
+    hidden = GLOBALS.replace('"HidePerkInJudgement" value="false"', '"HidePerkInJudgement" value="true"')
+    (vanilla / "gcsettlementglobals.MXML").write_text(hidden)
+    out = files(STORY, vanilla)
+    options = [get(new_judgement(out), "Option1List")[0], get(get(custom_entry(out), "Data"), "Option2List")[0]]
+    assert [value(o, "HidePerkInJudgement") for o in options] == ["false", "false"]

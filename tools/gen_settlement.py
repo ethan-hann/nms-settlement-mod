@@ -25,7 +25,7 @@ not loop, so a story can only ever start at its first step.
 Vanilla judgements have no _id, so a new one is appended without a key. Options never
 inherit rewards, perks, stat changes or a chain from the source; the source supplies the
 NPC fields and flags. Sources whose options pick their own perk are rejected, because
-the copy would carry that behavior silently.
+the copy would carry that behavior silently. Outcomes are never hidden.
 
 Custom judgements get Weighting 0, as vanilla's debrief judgements do: they still fire
 when awarded directly, and the random draw can never pick them.
@@ -192,6 +192,8 @@ def _option(list_node, spec, ctx, owner):
     option = list_node[0]
     _plain_option(option, owner)
     _set(option, "OptionText", _loc_key(spec["text"], owner), owner)
+    # Players see every outcome before choosing, whatever the source did.
+    _set(option, "HidePerkInJudgement", "false", owner)
     perks = _child(option, "Perks", owner)
     _clear(perks)
     for perk, chance in spec.get("perks", []):
