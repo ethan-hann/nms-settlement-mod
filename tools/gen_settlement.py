@@ -50,6 +50,9 @@ CUSTOM = "CustomJudgements"
 MAX_JUDGEMENT_ID = 15  # 16-byte string; whether it needs a terminator is unknown, so assume it does
 MAX_OPTIONS = 4
 OPTION_FLAGS = ("UsePolicyPerk", "UsePolicyStat", "UseGiftReward", "UseTechPerk")
+# No vanilla option changes these, and the choice screen shows a raw text key for them (seen with
+# Alert in Session 3). Perks may still carry them.
+UNLABELLED_OPTION_STATS = ("Alert", "BugAttack")
 
 
 def _child(node, name, owner):
@@ -200,6 +203,9 @@ def _option(list_node, spec, ctx, owner):
         if perk not in ctx.perk_ids:
             raise SpecError(f"{owner}: option grants {perk}, which is neither vanilla nor in this spec")
         perks.append(_perk_option(perk, chance))
+    for stat, _ in spec.get("stat_changes", []):
+        if stat in UNLABELLED_OPTION_STATS:
+            raise SpecError(f"{owner}: {stat} has no label on the choice screen; use it in a perk, not an option")
     _fill_changes(_child(option, "StatChanges", owner), spec.get("stat_changes", []), ctx.vocab, owner)
     rewards = _child(option, "AdditionalRewards", owner)
     _clear(rewards)

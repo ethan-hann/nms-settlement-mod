@@ -678,3 +678,10 @@ def test_outcomes_are_never_hidden_even_when_the_source_hides_them(vanilla):
     out = files(STORY, vanilla)
     options = [get(new_judgement(out), "Option1List")[0], get(get(custom_entry(out), "Data"), "Option2List")[0]]
     assert [value(o, "HidePerkInJudgement") for o in options] == ["false", "false"]
+
+
+def test_an_option_cannot_change_a_stat_the_choice_screen_cannot_label(vanilla):
+    for stat in ("Alert", "BugAttack"):
+        with pytest.raises(SpecError, match=f"{stat}.*option"):
+            build(with_pool_option(stat_changes=[[stat, "PositiveSmall"]]), vanilla)
+    files(with_pool_option(stat_changes=[["Sentinels", "PositiveSmall"]]), vanilla)

@@ -180,3 +180,13 @@ Modules: SettlerStories test slice (route A), StoryProbes (route B), TestTuning,
 - **Route A untested.** Its first step never came up while route B's reward was installed.
 - The custom step showed up only at the overseer terminal, with no in-game alert, 2 to 4 minutes apart.
 - Safety: exit passed all checks.
+
+## 2026-10-09: Session 3b, route A
+
+Modules: SettlerStories (the real content) and TestTuning, on the creative test slot.
+
+- **Route A works.** A Sealed Vault led straight to The Old Seeds, and Overdue to Shelter in the Ruins and then The Relics, each at once and with the story's own header. No story step appeared on its own. Item, productivity and nanite rewards arrived as previewed.
+- **Alert has no label on the choice screen.** The Buried Beacon's second option showed the raw key `UI_SETTLEMENT_STAT_HAPPY_FMT` for its Alert change; no vanilla option changes Alert. The generator now rejects Alert and BugAttack in options, and those options use Sentinels instead.
+- "Keep the best, plant the rest" paid out a random rare item (a predator skull); it now gives Hexaberries.
+- Not yet seen in game: the Policy, StrangerVisit and Conflict dilemmas, the three-step Stranger at the Gate story, and the three perks. TestTuning favors Request.
+- Safety: exit passed all checks.

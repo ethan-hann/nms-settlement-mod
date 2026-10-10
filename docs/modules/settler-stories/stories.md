@@ -5,6 +5,7 @@ Draft, 2026-10-09. The content for the first release, now in `specs/OverseersToo
 Conventions:
 - Strengths follow the game's sign: `Positive` is good for the settlement, `Negative` is bad. For example, `Debt NegativeSmall` adds debt, and `Alert PositiveMedium` lowers the Sentinel alert.
 - Every outcome is shown before the choice (`HidePerkInJudgement` false); costs are named in the option text.
+- Options never change Alert or BugAttack: the choice screen has no label for them and shows a raw text key (seen in Session 3). Perks may change them.
 - Text is race-neutral. `%RACE%` goes in only if Session 3 shows the dilemma screen fills it in.
 - Player rewards use vanilla reward IDs: `R_J_GIFTITEM1` (500-600 nanites), `R_J_GIFTITEM2` (100,000-300,000 units), `R_J_BOUNTY` (200-500 quicksilver), `R_SETTL_NAVDATA` (1-5 navigation data), `R_J_GIFTITEM24` (salvaged technology), `R_J_GIFTITEM30` (a rare procedural item).
 - Settlement rewards are stat changes, new perks, and `R_SET_FW_PARTY` (a fireworks party).
@@ -37,7 +38,7 @@ Conventions:
 > Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates.
 
 - **Download the coordinates.** Player: `R_SETTL_NAVDATA` (navigation data).
-- **Wire it into the perimeter sensors.** Alert PositiveMedium, Sentinels PositiveSmall.
+- **Wire it into the perimeter sensors.** Sentinels PositiveMedium.
 
 ### D5. Festival of Lights (Policy)
 
@@ -62,7 +63,7 @@ Conventions:
 > A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from.
 
 - **Let them stay.** Leads to step 2.
-- **Turn them away.** Alert PositiveSmall.
+- **Turn them away.** Sentinels PositiveSmall.
 
 **Step 2, Rumours.**
 
@@ -92,7 +93,7 @@ Conventions:
 > Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown.
 
 - **Plant them for the settlement.** New perk **Ancient Orchard**: Production PositiveMedium, Happiness PositiveSmall.
-- **Keep the best for yourself, plant the rest.** Player: `R_J_GIFTITEM30` (rare item). Production PositiveSmall.
+- **Keep the best for yourself, plant the rest.** Player: `R_J_GIFTITEM10` (5 Hexaberries). Production PositiveSmall.
 
 ### S3. The Lost Survey (Request, three steps)
 

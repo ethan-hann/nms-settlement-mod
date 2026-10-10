@@ -286,19 +286,10 @@
 					<Property name="StatChanges">
 						<Property name="StatChanges" value="GcSettlementStatChange">
 							<Property name="Stat" value="GcSettlementStatType">
-								<Property name="SettlementStatType" value="Alert" />
-							</Property>
-							<Property name="Strength" value="GcSettlementStatStrength">
-								<Property name="SettlementStatStrength" value="PositiveMedium" />
-							</Property>
-							<Property name="DirectlyChangePopulation" value="false" />
-						</Property>
-						<Property name="StatChanges" value="GcSettlementStatChange">
-							<Property name="Stat" value="GcSettlementStatType">
 								<Property name="SettlementStatType" value="Sentinels" />
 							</Property>
 							<Property name="Strength" value="GcSettlementStatStrength">
-								<Property name="SettlementStatStrength" value="PositiveSmall" />
+								<Property name="SettlementStatStrength" value="PositiveMedium" />
 							</Property>
 							<Property name="DirectlyChangePopulation" value="false" />
 						</Property>
@@ -545,7 +536,7 @@
 					<Property name="StatChanges">
 						<Property name="StatChanges" value="GcSettlementStatChange">
 							<Property name="Stat" value="GcSettlementStatType">
-								<Property name="SettlementStatType" value="Alert" />
+								<Property name="SettlementStatType" value="Sentinels" />
 							</Property>
 							<Property name="Strength" value="GcSettlementStatStrength">
 								<Property name="SettlementStatStrength" value="PositiveSmall" />
@@ -925,7 +916,7 @@
 							</Property>
 						</Property>
 						<Property name="AdditionalRewards">
-							<Property name="AdditionalRewards" value="R_J_GIFTITEM30" />
+							<Property name="AdditionalRewards" value="R_J_GIFTITEM10" />
 						</Property>
 						<Property name="ChainedJudgementID" value="" />
 						<Property name="UsePolicyPerk" value="false" />

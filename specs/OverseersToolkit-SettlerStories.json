@@ -246,12 +246,8 @@
           "text": "OT_SS_D4_O2",
           "stat_changes": [
             [
-              "Alert",
-              "PositiveMedium"
-            ],
-            [
               "Sentinels",
-              "PositiveSmall"
+              "PositiveMedium"
             ]
           ]
         }
@@ -347,7 +343,7 @@
           "text": "OT_SS_S1_O2",
           "stat_changes": [
             [
-              "Alert",
+              "Sentinels",
               "PositiveSmall"
             ]
           ]
@@ -486,7 +482,7 @@
         {
           "text": "OT_SS_S2B_O2",
           "rewards": [
-            "R_J_GIFTITEM30"
+            "R_J_GIFTITEM10"
           ],
           "stat_changes": [
             [
