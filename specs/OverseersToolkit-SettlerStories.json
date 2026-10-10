@@ -1,28 +1,130 @@
 {
   "text": {
-    "OT_SS_HEADER": "[TEST] Settler Stories",
-    "OT_SS_P1_TITLE": "[TEST] A Settler's Request",
-    "OT_SS_P1_Q": "[TEST] Hear the settler out?",
-    "OT_SS_P1_D": "[TEST] Placeholder text for a Settler Stories test session. A %RACE% settler wants a word with the Overseer. The first option should lead straight to a second decision; the second option should end the story here.",
-    "OT_SS_P1_OPT1": "[TEST] Hear them out (a follow-up should appear)",
-    "OT_SS_P1_OPT2": "[TEST] Not now (no follow-up)",
-    "OT_SS_A2_TITLE": "[TEST] The Settler Returns",
-    "OT_SS_A2_Q": "[TEST] How should the settlement respond?",
-    "OT_SS_A2_D": "[TEST] Placeholder text. This is the second step of a test story. It should only ever appear right after the first step's first option.",
-    "OT_SS_A2_OPT1": "[TEST] Take the nanites and the test perk",
-    "OT_SS_A2_OPT2": "[TEST] Accept the settlement's gift",
-    "OT_SS_PERK_NAME": "[TEST] Story Perk",
-    "OT_SS_PERK_DESC": "[TEST] Granted by the Settler Stories test story. Raises happiness a little."
+    "OT_SS_SANCTUARY_N": "Sanctuary",
+    "OT_SS_SANCTUARY_DS": "The settlement stood by one of its own. Spirits are high, though outsiders have taken notice.",
+    "OT_SS_ORCHARD_N": "Ancient Orchard",
+    "OT_SS_ORCHARD_DS": "A crop nobody alive had ever grown, now thriving in the settlement's fields.",
+    "OT_SS_RELICS_N": "Relic Hall",
+    "OT_SS_RELICS_DS": "Relics from the ruins on display, drawing curious settlers and the odd trader.",
+    "OT_SS_D1_O1": "Let it run free",
+    "OT_SS_D1_O2": "Charge a stall fee (units)",
+    "OT_SS_D1_T": "The Night Market",
+    "OT_SS_D1_Q": "Should the night market pay a fee?",
+    "OT_SS_D1_D": "Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer.",
+    "OT_SS_D2_O1": "Claim the salvage yourself",
+    "OT_SS_D2_O2": "Strip it for parts for the settlement",
+    "OT_SS_D2_T": "Salvage Rights",
+    "OT_SS_D2_Q": "Who gets the salvage?",
+    "OT_SS_D2_D": "Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold.",
+    "OT_SS_D3_O1": "Give them a bed (settlers worry)",
+    "OT_SS_D3_O2": "Trade medicine for the trinket",
+    "OT_SS_D3_T": "A Fevered Traveller",
+    "OT_SS_D3_Q": "Give the traveller a bed?",
+    "OT_SS_D3_D": "A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack.",
+    "OT_SS_D4_O1": "Download the coordinates",
+    "OT_SS_D4_O2": "Wire it into the perimeter sensors",
+    "OT_SS_D4_T": "The Buried Beacon",
+    "OT_SS_D4_Q": "What should be done with the beacon?",
+    "OT_SS_D4_D": "Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates.",
+    "OT_SS_D5_O1": "Fund a full festival (adds debt)",
+    "OT_SS_D5_O2": "Keep it small",
+    "OT_SS_D5_T": "Festival of Lights",
+    "OT_SS_D5_Q": "How big should the festival be?",
+    "OT_SS_D5_D": "The settlers ask for a festival to mark the end of the building season: lanterns, music, fireworks over the rooftops.",
+    "OT_SS_D6_O1": "Side with the crew (adds debt)",
+    "OT_SS_D6_O2": "Side with the foreman",
+    "OT_SS_D6_T": "The Wage Dispute",
+    "OT_SS_D6_Q": "Whose side is the Overseer on?",
+    "OT_SS_D6_D": "Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work.",
+    "OT_SS_S1_O1": "Let them stay",
+    "OT_SS_S1_O2": "Turn them away",
+    "OT_SS_S1_T": "A Stranger at the Gate",
+    "OT_SS_S1_Q": "Let the stranger stay?",
+    "OT_SS_S1_D": "A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from.",
+    "OT_SS_S2_O1": "Open it carefully",
+    "OT_SS_S2_O2": "Sell it unopened (units)",
+    "OT_SS_S2_T": "A Sealed Vault",
+    "OT_SS_S2_Q": "Open the vault?",
+    "OT_SS_S2_D": "A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened.",
+    "OT_SS_S3_O1": "Send a search party",
+    "OT_SS_S3_O2": "Light a beacon and wait",
+    "OT_SS_S3_T": "Overdue",
+    "OT_SS_S3_Q": "Send a search party?",
+    "OT_SS_S3_D": "A survey team left two days ago to map the ridge. They should have been back yesterday.",
+    "OT_SS_H_S1": "The Stranger at the Gate",
+    "OT_SS_H_S2": "The Seed Vault",
+    "OT_SS_H_S3": "The Lost Survey",
+    "OT_SS_S1B_O1": "Keep their secret",
+    "OT_SS_S1B_O2": "Hand them over for the bounty",
+    "OT_SS_S1B_T": "Rumours",
+    "OT_SS_S1B_Q": "Keep the stranger's secret?",
+    "OT_SS_S1B_D": "The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters.",
+    "OT_SS_S1C_O1": "Stand together",
+    "OT_SS_S1C_O2": "Pay the crew to leave (adds debt)",
+    "OT_SS_S1C_T": "The Crew Comes Looking",
+    "OT_SS_S1C_Q": "How should the settlement answer?",
+    "OT_SS_S1C_D": "A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely.",
+    "OT_SS_S2B_O1": "Plant them for the settlement",
+    "OT_SS_S2B_O2": "Keep the best, plant the rest",
+    "OT_SS_S2B_T": "The Old Seeds",
+    "OT_SS_S2B_Q": "What should become of the seeds?",
+    "OT_SS_S2B_D": "Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown.",
+    "OT_SS_S3B_O1": "Bring them home, with the relics",
+    "OT_SS_S3B_O2": "Bring them home, leave the relics",
+    "OT_SS_S3B_T": "Shelter in the Ruins",
+    "OT_SS_S3B_Q": "Bring the relics home?",
+    "OT_SS_S3B_D": "The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises.",
+    "OT_SS_S3C_O1": "Put them on display",
+    "OT_SS_S3C_O2": "Hand them to the Overseer (nanites)",
+    "OT_SS_S3C_T": "The Relics",
+    "OT_SS_S3C_Q": "What should be done with the relics?",
+    "OT_SS_S3C_D": "The relics are back in the settlement, and everyone has an opinion about them."
   },
   "perks": [
     {
-      "id": "OT_SS_PERK",
+      "id": "OT_SS_SANCTUARY",
       "copy_from": "SENT_QUAR",
-      "name": "OT_SS_PERK_NAME",
-      "description": "OT_SS_PERK_DESC",
+      "name": "OT_SS_SANCTUARY_N",
+      "description": "OT_SS_SANCTUARY_DS",
       "stat_changes": [
         [
           "Happiness",
+          "PositiveMedium"
+        ],
+        [
+          "Alert",
+          "NegativeSmall"
+        ]
+      ]
+    },
+    {
+      "id": "OT_SS_ORCHARD",
+      "copy_from": "SENT_QUAR",
+      "name": "OT_SS_ORCHARD_N",
+      "description": "OT_SS_ORCHARD_DS",
+      "stat_changes": [
+        [
+          "Production",
+          "PositiveMedium"
+        ],
+        [
+          "Happiness",
+          "PositiveSmall"
+        ]
+      ]
+    },
+    {
+      "id": "OT_SS_RELICS",
+      "copy_from": "SENT_QUAR",
+      "name": "OT_SS_RELICS_N",
+      "description": "OT_SS_RELICS_DS",
+      "stat_changes": [
+        [
+          "Happiness",
+          "PositiveSmall"
+        ],
+        [
+          "Production",
           "PositiveSmall"
         ]
       ]
@@ -30,48 +132,418 @@
   ],
   "judgements": [
     {
-      "name": "OT_SS_P1",
+      "name": "OT_SS_D1",
+      "copy_from": 8,
+      "type": "Policy",
+      "weighting": 1.0,
+      "title": "OT_SS_D1_T",
+      "question": "OT_SS_D1_Q",
+      "dilemma": "OT_SS_D1_D",
+      "options": [
+        {
+          "text": "OT_SS_D1_O1",
+          "stat_changes": [
+            [
+              "Happiness",
+              "PositiveSmall"
+            ],
+            [
+              "Production",
+              "PositiveSmall"
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_D1_O2",
+          "rewards": [
+            "R_J_GIFTITEM2"
+          ],
+          "stat_changes": [
+            [
+              "Happiness",
+              "NegativeSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_D2",
+      "copy_from": 23,
+      "type": "Request",
+      "weighting": 1.0,
+      "title": "OT_SS_D2_T",
+      "question": "OT_SS_D2_Q",
+      "dilemma": "OT_SS_D2_D",
+      "options": [
+        {
+          "text": "OT_SS_D2_O1",
+          "rewards": [
+            "R_J_GIFTITEM24"
+          ]
+        },
+        {
+          "text": "OT_SS_D2_O2",
+          "stat_changes": [
+            [
+              "Production",
+              "PositiveMedium"
+            ],
+            [
+              "Upkeep",
+              "PositiveSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_D3",
+      "copy_from": 15,
+      "type": "StrangerVisit",
+      "weighting": 1.0,
+      "title": "OT_SS_D3_T",
+      "question": "OT_SS_D3_Q",
+      "dilemma": "OT_SS_D3_D",
+      "options": [
+        {
+          "text": "OT_SS_D3_O1",
+          "stat_changes": [
+            [
+              "MaxPopulation",
+              "PositiveSmall"
+            ],
+            [
+              "Happiness",
+              "NegativeSmall"
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_D3_O2",
+          "rewards": [
+            "R_J_GIFTITEM30"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_D4",
+      "copy_from": 25,
+      "type": "Request",
+      "weighting": 1.0,
+      "title": "OT_SS_D4_T",
+      "question": "OT_SS_D4_Q",
+      "dilemma": "OT_SS_D4_D",
+      "options": [
+        {
+          "text": "OT_SS_D4_O1",
+          "rewards": [
+            "R_SETTL_NAVDATA"
+          ]
+        },
+        {
+          "text": "OT_SS_D4_O2",
+          "stat_changes": [
+            [
+              "Alert",
+              "PositiveMedium"
+            ],
+            [
+              "Sentinels",
+              "PositiveSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_D5",
+      "copy_from": 9,
+      "type": "Policy",
+      "weighting": 1.0,
+      "title": "OT_SS_D5_T",
+      "question": "OT_SS_D5_Q",
+      "dilemma": "OT_SS_D5_D",
+      "options": [
+        {
+          "text": "OT_SS_D5_O1",
+          "rewards": [
+            "R_SET_FW_PARTY"
+          ],
+          "stat_changes": [
+            [
+              "Happiness",
+              "PositiveMedium"
+            ],
+            [
+              "Debt",
+              "NegativeSmall"
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_D5_O2",
+          "stat_changes": [
+            [
+              "Happiness",
+              "PositiveSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_D6",
+      "copy_from": 2,
+      "type": "Conflict",
+      "weighting": 1.0,
+      "title": "OT_SS_D6_T",
+      "question": "OT_SS_D6_Q",
+      "dilemma": "OT_SS_D6_D",
+      "options": [
+        {
+          "text": "OT_SS_D6_O1",
+          "stat_changes": [
+            [
+              "Happiness",
+              "PositiveMedium"
+            ],
+            [
+              "Debt",
+              "NegativeSmall"
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_D6_O2",
+          "stat_changes": [
+            [
+              "Production",
+              "PositiveMedium"
+            ],
+            [
+              "Happiness",
+              "NegativeSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_S1",
+      "copy_from": 19,
+      "type": "StrangerVisit",
+      "weighting": 1.0,
+      "title": "OT_SS_S1_T",
+      "question": "OT_SS_S1_Q",
+      "dilemma": "OT_SS_S1_D",
+      "options": [
+        {
+          "text": "OT_SS_S1_O1",
+          "chain": "OT_SS_S1B"
+        },
+        {
+          "text": "OT_SS_S1_O2",
+          "stat_changes": [
+            [
+              "Alert",
+              "PositiveSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_S2",
       "copy_from": 24,
       "type": "Request",
       "weighting": 1.0,
-      "title": "OT_SS_P1_TITLE",
-      "question": "OT_SS_P1_Q",
-      "dilemma": "OT_SS_P1_D",
+      "title": "OT_SS_S2_T",
+      "question": "OT_SS_S2_Q",
+      "dilemma": "OT_SS_S2_D",
       "options": [
         {
-          "text": "OT_SS_P1_OPT1",
-          "chain": "OT_SS_A2"
+          "text": "OT_SS_S2_O1",
+          "chain": "OT_SS_S2B"
         },
         {
-          "text": "OT_SS_P1_OPT2"
+          "text": "OT_SS_S2_O2",
+          "rewards": [
+            "R_J_GIFTITEM2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_SS_S3",
+      "copy_from": 22,
+      "type": "Request",
+      "weighting": 1.0,
+      "title": "OT_SS_S3_T",
+      "question": "OT_SS_S3_Q",
+      "dilemma": "OT_SS_S3_D",
+      "options": [
+        {
+          "text": "OT_SS_S3_O1",
+          "chain": "OT_SS_S3B"
+        },
+        {
+          "text": "OT_SS_S3_O2",
+          "stat_changes": [
+            [
+              "Production",
+              "PositiveSmall"
+            ],
+            [
+              "Happiness",
+              "NegativeSmall"
+            ]
+          ]
         }
       ]
     }
   ],
   "custom_judgements": [
     {
-      "id": "OT_SS_A2",
+      "id": "OT_SS_S1B",
       "copy_from": "J_SENT_MISS_4B",
-      "header": "OT_SS_HEADER",
-      "title": "OT_SS_A2_TITLE",
-      "question": "OT_SS_A2_Q",
-      "dilemma": "OT_SS_A2_D",
+      "type": "StrangerVisit",
+      "header": "OT_SS_H_S1",
+      "title": "OT_SS_S1B_T",
+      "question": "OT_SS_S1B_Q",
+      "dilemma": "OT_SS_S1B_D",
       "options": [
         {
-          "text": "OT_SS_A2_OPT1",
+          "text": "OT_SS_S1B_O1",
+          "chain": "OT_SS_S1C"
+        },
+        {
+          "text": "OT_SS_S1B_O2",
           "rewards": [
-            "R_J_GIFTITEM1"
+            "R_J_BOUNTY"
           ],
+          "stat_changes": [
+            [
+              "Happiness",
+              "NegativeSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT_SS_S1C",
+      "copy_from": "J_SENT_MISS_4B",
+      "type": "StrangerVisit",
+      "header": "OT_SS_H_S1",
+      "title": "OT_SS_S1C_T",
+      "question": "OT_SS_S1C_Q",
+      "dilemma": "OT_SS_S1C_D",
+      "options": [
+        {
+          "text": "OT_SS_S1C_O1",
           "perks": [
             [
-              "OT_SS_PERK",
+              "OT_SS_SANCTUARY",
               1.0
             ]
           ]
         },
         {
-          "text": "OT_SS_A2_OPT2",
-          "gift": true
+          "text": "OT_SS_S1C_O2",
+          "stat_changes": [
+            [
+              "Debt",
+              "NegativeMedium"
+            ],
+            [
+              "Production",
+              "PositiveSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT_SS_S2B",
+      "copy_from": "J_SENT_MISS_4B",
+      "type": "Request",
+      "header": "OT_SS_H_S2",
+      "title": "OT_SS_S2B_T",
+      "question": "OT_SS_S2B_Q",
+      "dilemma": "OT_SS_S2B_D",
+      "options": [
+        {
+          "text": "OT_SS_S2B_O1",
+          "perks": [
+            [
+              "OT_SS_ORCHARD",
+              1.0
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_S2B_O2",
+          "rewards": [
+            "R_J_GIFTITEM30"
+          ],
+          "stat_changes": [
+            [
+              "Production",
+              "PositiveSmall"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT_SS_S3B",
+      "copy_from": "J_SENT_MISS_4B",
+      "type": "Request",
+      "header": "OT_SS_H_S3",
+      "title": "OT_SS_S3B_T",
+      "question": "OT_SS_S3B_Q",
+      "dilemma": "OT_SS_S3B_D",
+      "options": [
+        {
+          "text": "OT_SS_S3B_O1",
+          "chain": "OT_SS_S3C"
+        },
+        {
+          "text": "OT_SS_S3B_O2",
+          "stat_changes": [
+            [
+              "Happiness",
+              "PositiveMedium"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OT_SS_S3C",
+      "copy_from": "J_SENT_MISS_4B",
+      "type": "Request",
+      "header": "OT_SS_H_S3",
+      "title": "OT_SS_S3C_T",
+      "question": "OT_SS_S3C_Q",
+      "dilemma": "OT_SS_S3C_D",
+      "options": [
+        {
+          "text": "OT_SS_S3C_O1",
+          "perks": [
+            [
+              "OT_SS_RELICS",
+              1.0
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_S3C_O2",
+          "rewards": [
+            "R_J_GIFTITEM1"
+          ]
         }
       ]
     }

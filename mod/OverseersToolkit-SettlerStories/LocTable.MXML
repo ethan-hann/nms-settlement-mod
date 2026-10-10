@@ -2,69 +2,399 @@
 <Data template="cTkLocalisationTable">
 	<Property name="Table">
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_HEADER" />
-			<Property name="English" value="[TEST] Settler Stories" />
-			<Property name="USEnglish" value="[TEST] Settler Stories" />
+			<Property name="Id" value="OT_SS_SANCTUARY_N" />
+			<Property name="English" value="Sanctuary" />
+			<Property name="USEnglish" value="Sanctuary" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_P1_TITLE" />
-			<Property name="English" value="[TEST] A Settler's Request" />
-			<Property name="USEnglish" value="[TEST] A Settler's Request" />
+			<Property name="Id" value="OT_SS_SANCTUARY_DS" />
+			<Property name="English" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="USEnglish" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_P1_Q" />
-			<Property name="English" value="[TEST] Hear the settler out?" />
-			<Property name="USEnglish" value="[TEST] Hear the settler out?" />
+			<Property name="Id" value="OT_SS_ORCHARD_N" />
+			<Property name="English" value="Ancient Orchard" />
+			<Property name="USEnglish" value="Ancient Orchard" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_P1_D" />
-			<Property name="English" value="[TEST] Placeholder text for a Settler Stories test session. A %RACE% settler wants a word with the Overseer. The first option should lead straight to a second decision; the second option should end the story here." />
-			<Property name="USEnglish" value="[TEST] Placeholder text for a Settler Stories test session. A %RACE% settler wants a word with the Overseer. The first option should lead straight to a second decision; the second option should end the story here." />
+			<Property name="Id" value="OT_SS_ORCHARD_DS" />
+			<Property name="English" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="USEnglish" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_P1_OPT1" />
-			<Property name="English" value="[TEST] Hear them out (a follow-up should appear)" />
-			<Property name="USEnglish" value="[TEST] Hear them out (a follow-up should appear)" />
+			<Property name="Id" value="OT_SS_RELICS_N" />
+			<Property name="English" value="Relic Hall" />
+			<Property name="USEnglish" value="Relic Hall" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_P1_OPT2" />
-			<Property name="English" value="[TEST] Not now (no follow-up)" />
-			<Property name="USEnglish" value="[TEST] Not now (no follow-up)" />
+			<Property name="Id" value="OT_SS_RELICS_DS" />
+			<Property name="English" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="USEnglish" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_A2_TITLE" />
-			<Property name="English" value="[TEST] The Settler Returns" />
-			<Property name="USEnglish" value="[TEST] The Settler Returns" />
+			<Property name="Id" value="OT_SS_D1_O1" />
+			<Property name="English" value="Let it run free" />
+			<Property name="USEnglish" value="Let it run free" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_A2_Q" />
-			<Property name="English" value="[TEST] How should the settlement respond?" />
-			<Property name="USEnglish" value="[TEST] How should the settlement respond?" />
+			<Property name="Id" value="OT_SS_D1_O2" />
+			<Property name="English" value="Charge a stall fee (units)" />
+			<Property name="USEnglish" value="Charge a stall fee (units)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_A2_D" />
-			<Property name="English" value="[TEST] Placeholder text. This is the second step of a test story. It should only ever appear right after the first step's first option." />
-			<Property name="USEnglish" value="[TEST] Placeholder text. This is the second step of a test story. It should only ever appear right after the first step's first option." />
+			<Property name="Id" value="OT_SS_D1_T" />
+			<Property name="English" value="The Night Market" />
+			<Property name="USEnglish" value="The Night Market" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_A2_OPT1" />
-			<Property name="English" value="[TEST] Take the nanites and the test perk" />
-			<Property name="USEnglish" value="[TEST] Take the nanites and the test perk" />
+			<Property name="Id" value="OT_SS_D1_Q" />
+			<Property name="English" value="Should the night market pay a fee?" />
+			<Property name="USEnglish" value="Should the night market pay a fee?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_A2_OPT2" />
-			<Property name="English" value="[TEST] Accept the settlement's gift" />
-			<Property name="USEnglish" value="[TEST] Accept the settlement's gift" />
+			<Property name="Id" value="OT_SS_D1_D" />
+			<Property name="English" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="USEnglish" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_PERK_NAME" />
-			<Property name="English" value="[TEST] Story Perk" />
-			<Property name="USEnglish" value="[TEST] Story Perk" />
+			<Property name="Id" value="OT_SS_D2_O1" />
+			<Property name="English" value="Claim the salvage yourself" />
+			<Property name="USEnglish" value="Claim the salvage yourself" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="OT_SS_PERK_DESC" />
-			<Property name="English" value="[TEST] Granted by the Settler Stories test story. Raises happiness a little." />
-			<Property name="USEnglish" value="[TEST] Granted by the Settler Stories test story. Raises happiness a little." />
+			<Property name="Id" value="OT_SS_D2_O2" />
+			<Property name="English" value="Strip it for parts for the settlement" />
+			<Property name="USEnglish" value="Strip it for parts for the settlement" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D2_T" />
+			<Property name="English" value="Salvage Rights" />
+			<Property name="USEnglish" value="Salvage Rights" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D2_Q" />
+			<Property name="English" value="Who gets the salvage?" />
+			<Property name="USEnglish" value="Who gets the salvage?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D2_D" />
+			<Property name="English" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="USEnglish" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D3_O1" />
+			<Property name="English" value="Give them a bed (settlers worry)" />
+			<Property name="USEnglish" value="Give them a bed (settlers worry)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D3_O2" />
+			<Property name="English" value="Trade medicine for the trinket" />
+			<Property name="USEnglish" value="Trade medicine for the trinket" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D3_T" />
+			<Property name="English" value="A Fevered Traveller" />
+			<Property name="USEnglish" value="A Fevered Traveller" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D3_Q" />
+			<Property name="English" value="Give the traveller a bed?" />
+			<Property name="USEnglish" value="Give the traveller a bed?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D3_D" />
+			<Property name="English" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack." />
+			<Property name="USEnglish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D4_O1" />
+			<Property name="English" value="Download the coordinates" />
+			<Property name="USEnglish" value="Download the coordinates" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D4_O2" />
+			<Property name="English" value="Wire it into the perimeter sensors" />
+			<Property name="USEnglish" value="Wire it into the perimeter sensors" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D4_T" />
+			<Property name="English" value="The Buried Beacon" />
+			<Property name="USEnglish" value="The Buried Beacon" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D4_Q" />
+			<Property name="English" value="What should be done with the beacon?" />
+			<Property name="USEnglish" value="What should be done with the beacon?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D4_D" />
+			<Property name="English" value="Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates." />
+			<Property name="USEnglish" value="Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D5_O1" />
+			<Property name="English" value="Fund a full festival (adds debt)" />
+			<Property name="USEnglish" value="Fund a full festival (adds debt)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D5_O2" />
+			<Property name="English" value="Keep it small" />
+			<Property name="USEnglish" value="Keep it small" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D5_T" />
+			<Property name="English" value="Festival of Lights" />
+			<Property name="USEnglish" value="Festival of Lights" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D5_Q" />
+			<Property name="English" value="How big should the festival be?" />
+			<Property name="USEnglish" value="How big should the festival be?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D5_D" />
+			<Property name="English" value="The settlers ask for a festival to mark the end of the building season: lanterns, music, fireworks over the rooftops." />
+			<Property name="USEnglish" value="The settlers ask for a festival to mark the end of the building season: lanterns, music, fireworks over the rooftops." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D6_O1" />
+			<Property name="English" value="Side with the crew (adds debt)" />
+			<Property name="USEnglish" value="Side with the crew (adds debt)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D6_O2" />
+			<Property name="English" value="Side with the foreman" />
+			<Property name="USEnglish" value="Side with the foreman" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D6_T" />
+			<Property name="English" value="The Wage Dispute" />
+			<Property name="USEnglish" value="The Wage Dispute" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D6_Q" />
+			<Property name="English" value="Whose side is the Overseer on?" />
+			<Property name="USEnglish" value="Whose side is the Overseer on?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_D6_D" />
+			<Property name="English" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="USEnglish" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1_O1" />
+			<Property name="English" value="Let them stay" />
+			<Property name="USEnglish" value="Let them stay" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1_O2" />
+			<Property name="English" value="Turn them away" />
+			<Property name="USEnglish" value="Turn them away" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1_T" />
+			<Property name="English" value="A Stranger at the Gate" />
+			<Property name="USEnglish" value="A Stranger at the Gate" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1_Q" />
+			<Property name="English" value="Let the stranger stay?" />
+			<Property name="USEnglish" value="Let the stranger stay?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1_D" />
+			<Property name="English" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="USEnglish" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2_O1" />
+			<Property name="English" value="Open it carefully" />
+			<Property name="USEnglish" value="Open it carefully" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2_O2" />
+			<Property name="English" value="Sell it unopened (units)" />
+			<Property name="USEnglish" value="Sell it unopened (units)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2_T" />
+			<Property name="English" value="A Sealed Vault" />
+			<Property name="USEnglish" value="A Sealed Vault" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2_Q" />
+			<Property name="English" value="Open the vault?" />
+			<Property name="USEnglish" value="Open the vault?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2_D" />
+			<Property name="English" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="USEnglish" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3_O1" />
+			<Property name="English" value="Send a search party" />
+			<Property name="USEnglish" value="Send a search party" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3_O2" />
+			<Property name="English" value="Light a beacon and wait" />
+			<Property name="USEnglish" value="Light a beacon and wait" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3_T" />
+			<Property name="English" value="Overdue" />
+			<Property name="USEnglish" value="Overdue" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3_Q" />
+			<Property name="English" value="Send a search party?" />
+			<Property name="USEnglish" value="Send a search party?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3_D" />
+			<Property name="English" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="USEnglish" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_H_S1" />
+			<Property name="English" value="The Stranger at the Gate" />
+			<Property name="USEnglish" value="The Stranger at the Gate" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_H_S2" />
+			<Property name="English" value="The Seed Vault" />
+			<Property name="USEnglish" value="The Seed Vault" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_H_S3" />
+			<Property name="English" value="The Lost Survey" />
+			<Property name="USEnglish" value="The Lost Survey" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1B_O1" />
+			<Property name="English" value="Keep their secret" />
+			<Property name="USEnglish" value="Keep their secret" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1B_O2" />
+			<Property name="English" value="Hand them over for the bounty" />
+			<Property name="USEnglish" value="Hand them over for the bounty" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1B_T" />
+			<Property name="English" value="Rumours" />
+			<Property name="USEnglish" value="Rumours" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1B_Q" />
+			<Property name="English" value="Keep the stranger's secret?" />
+			<Property name="USEnglish" value="Keep the stranger's secret?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1B_D" />
+			<Property name="English" value="The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters." />
+			<Property name="USEnglish" value="The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1C_O1" />
+			<Property name="English" value="Stand together" />
+			<Property name="USEnglish" value="Stand together" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1C_O2" />
+			<Property name="English" value="Pay the crew to leave (adds debt)" />
+			<Property name="USEnglish" value="Pay the crew to leave (adds debt)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1C_T" />
+			<Property name="English" value="The Crew Comes Looking" />
+			<Property name="USEnglish" value="The Crew Comes Looking" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1C_Q" />
+			<Property name="English" value="How should the settlement answer?" />
+			<Property name="USEnglish" value="How should the settlement answer?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S1C_D" />
+			<Property name="English" value="A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="USEnglish" value="A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2B_O1" />
+			<Property name="English" value="Plant them for the settlement" />
+			<Property name="USEnglish" value="Plant them for the settlement" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2B_O2" />
+			<Property name="English" value="Keep the best, plant the rest" />
+			<Property name="USEnglish" value="Keep the best, plant the rest" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2B_T" />
+			<Property name="English" value="The Old Seeds" />
+			<Property name="USEnglish" value="The Old Seeds" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2B_Q" />
+			<Property name="English" value="What should become of the seeds?" />
+			<Property name="USEnglish" value="What should become of the seeds?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S2B_D" />
+			<Property name="English" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="USEnglish" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3B_O1" />
+			<Property name="English" value="Bring them home, with the relics" />
+			<Property name="USEnglish" value="Bring them home, with the relics" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3B_O2" />
+			<Property name="English" value="Bring them home, leave the relics" />
+			<Property name="USEnglish" value="Bring them home, leave the relics" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3B_T" />
+			<Property name="English" value="Shelter in the Ruins" />
+			<Property name="USEnglish" value="Shelter in the Ruins" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3B_Q" />
+			<Property name="English" value="Bring the relics home?" />
+			<Property name="USEnglish" value="Bring the relics home?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3B_D" />
+			<Property name="English" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises." />
+			<Property name="USEnglish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3C_O1" />
+			<Property name="English" value="Put them on display" />
+			<Property name="USEnglish" value="Put them on display" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3C_O2" />
+			<Property name="English" value="Hand them to the Overseer (nanites)" />
+			<Property name="USEnglish" value="Hand them to the Overseer (nanites)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3C_T" />
+			<Property name="English" value="The Relics" />
+			<Property name="USEnglish" value="The Relics" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3C_Q" />
+			<Property name="English" value="What should be done with the relics?" />
+			<Property name="USEnglish" value="What should be done with the relics?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_S3C_D" />
+			<Property name="English" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="USEnglish" value="The relics are back in the settlement, and everyone has an opinion about them." />
 		</Property>
 	</Property>
 </Data>

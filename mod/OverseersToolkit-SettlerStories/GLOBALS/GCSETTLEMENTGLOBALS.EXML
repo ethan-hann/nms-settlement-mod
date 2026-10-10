@@ -3,26 +3,45 @@
 	<Property name="Judgements">
 		<Property name="Judgements" value="GcSettlementJudgementData">
 			<Property name="JudgementType" value="GcSettlementJudgementType">
-				<Property name="SettlementJudgementType" value="Request" />
+				<Property name="SettlementJudgementType" value="Policy" />
 			</Property>
 			<Property name="Weighting" value="1.000000" />
 			<Property name="HeaderOverride" value="" />
-			<Property name="Title" value="OT_SS_P1_TITLE" />
+			<Property name="Title" value="OT_SS_D1_T" />
 			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
-			<Property name="QuestionText" value="OT_SS_P1_Q" />
-			<Property name="DilemmaText" value="OT_SS_P1_D" />
+			<Property name="QuestionText" value="OT_SS_D1_Q" />
+			<Property name="DilemmaText" value="OT_SS_D1_D" />
 			<Property name="DilemmaTextIsAlien" value="false" />
 			<Property name="UseResearchLoc" value="false" />
 			<Property name="UseAltResearchLoc" value="false" />
 			<Property name="Option1List">
 				<Property name="Option1List" value="GcSettlementJudgementOption">
-					<Property name="OptionText" value="OT_SS_P1_OPT1" />
+					<Property name="OptionText" value="OT_SS_D1_O1" />
 					<Property name="AltOptionText" />
 					<Property name="Perks" />
 					<Property name="HidePerkInJudgement" value="false" />
-					<Property name="StatChanges" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Production" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
 					<Property name="AdditionalRewards" />
-					<Property name="ChainedJudgementID" value="OT_SS_A2" />
+					<Property name="ChainedJudgementID" value="" />
 					<Property name="UsePolicyPerk" value="false" />
 					<Property name="UsePolicyStat" value="false" />
 					<Property name="UseGiftReward" value="false" />
@@ -33,11 +52,101 @@
 			</Property>
 			<Property name="Option2List">
 				<Property name="Option2List" value="GcSettlementJudgementOption">
-					<Property name="OptionText" value="OT_SS_P1_OPT2" />
+					<Property name="OptionText" value="OT_SS_D1_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="NegativeSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="R_J_GIFTITEM2" />
+					</Property>
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="None" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="Request" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_D2_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_D2_Q" />
+			<Property name="DilemmaText" value="OT_SS_D2_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D2_O1" />
 					<Property name="AltOptionText" />
 					<Property name="Perks" />
 					<Property name="HidePerkInJudgement" value="false" />
 					<Property name="StatChanges" />
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="R_J_GIFTITEM24" />
+					</Property>
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D2_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Production" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveMedium" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Upkeep" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
 					<Property name="AdditionalRewards" />
 					<Property name="ChainedJudgementID" value="" />
 					<Property name="UsePolicyPerk" value="false" />
@@ -58,38 +167,651 @@
 			<Property name="NPC2HoloEffect" value="" />
 			<Property name="NPCs" value="One" />
 		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="StrangerVisit" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_D3_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_D3_Q" />
+			<Property name="DilemmaText" value="OT_SS_D3_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D3_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="MaxPopulation" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="NegativeSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D3_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges" />
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="R_J_GIFTITEM30" />
+					</Property>
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="false" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="One" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="Request" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_D4_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_D4_Q" />
+			<Property name="DilemmaText" value="OT_SS_D4_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D4_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges" />
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="R_SETTL_NAVDATA" />
+					</Property>
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D4_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Alert" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveMedium" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Sentinels" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="One" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="Policy" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_D5_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_D5_Q" />
+			<Property name="DilemmaText" value="OT_SS_D5_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D5_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveMedium" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Debt" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="NegativeSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="R_SET_FW_PARTY" />
+					</Property>
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D5_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="None" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="Conflict" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_D6_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_D6_Q" />
+			<Property name="DilemmaText" value="OT_SS_D6_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D6_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveMedium" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Debt" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="NegativeSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="false" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_D6_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Production" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveMedium" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="NegativeSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="false" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="One" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="StrangerVisit" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_S1_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_S1_Q" />
+			<Property name="DilemmaText" value="OT_SS_S1_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_S1_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges" />
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="OT_SS_S1B" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_S1_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Alert" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="false" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="One" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="Request" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_S2_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_S2_Q" />
+			<Property name="DilemmaText" value="OT_SS_S2_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_S2_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges" />
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="OT_SS_S2B" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_S2_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges" />
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="R_J_GIFTITEM2" />
+					</Property>
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="false" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="One" />
+		</Property>
+		<Property name="Judgements" value="GcSettlementJudgementData">
+			<Property name="JudgementType" value="GcSettlementJudgementType">
+				<Property name="SettlementJudgementType" value="Request" />
+			</Property>
+			<Property name="Weighting" value="1.000000" />
+			<Property name="HeaderOverride" value="" />
+			<Property name="Title" value="OT_SS_S3_T" />
+			<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+			<Property name="QuestionText" value="OT_SS_S3_Q" />
+			<Property name="DilemmaText" value="OT_SS_S3_D" />
+			<Property name="DilemmaTextIsAlien" value="false" />
+			<Property name="UseResearchLoc" value="false" />
+			<Property name="UseAltResearchLoc" value="false" />
+			<Property name="Option1List">
+				<Property name="Option1List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_S3_O1" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges" />
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="OT_SS_S3B" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="true" />
+				</Property>
+			</Property>
+			<Property name="Option2List">
+				<Property name="Option2List" value="GcSettlementJudgementOption">
+					<Property name="OptionText" value="OT_SS_S3_O2" />
+					<Property name="AltOptionText" />
+					<Property name="Perks" />
+					<Property name="HidePerkInJudgement" value="false" />
+					<Property name="StatChanges">
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Production" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="PositiveSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+						<Property name="StatChanges" value="GcSettlementStatChange">
+							<Property name="Stat" value="GcSettlementStatType">
+								<Property name="SettlementStatType" value="Happiness" />
+							</Property>
+							<Property name="Strength" value="GcSettlementStatStrength">
+								<Property name="SettlementStatStrength" value="NegativeSmall" />
+							</Property>
+							<Property name="DirectlyChangePopulation" value="false" />
+						</Property>
+					</Property>
+					<Property name="AdditionalRewards" />
+					<Property name="ChainedJudgementID" value="" />
+					<Property name="UsePolicyPerk" value="false" />
+					<Property name="UsePolicyStat" value="false" />
+					<Property name="UseGiftReward" value="false" />
+					<Property name="UseTechPerk" value="false" />
+					<Property name="JudgementOptionStanding" value="None" />
+					<Property name="OptionIsPositiveForNPC" value="false" />
+				</Property>
+			</Property>
+			<Property name="Option3List" />
+			<Property name="Option4List" />
+			<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+			<Property name="NPC1CustomName" value="" />
+			<Property name="NPC2CustomName" value="" />
+			<Property name="NPC1HoloEffect" value="" />
+			<Property name="NPC2HoloEffect" value="" />
+			<Property name="NPCs" value="None" />
+		</Property>
 	</Property>
 	<Property name="CustomJudgements">
-		<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="OT_SS_A2">
-			<Property name="ID" value="OT_SS_A2" />
+		<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="OT_SS_S1B">
+			<Property name="ID" value="OT_SS_S1B" />
 			<Property name="Data" value="GcSettlementJudgementData">
 				<Property name="JudgementType" value="GcSettlementJudgementType">
-					<Property name="SettlementJudgementType" value="Request" />
+					<Property name="SettlementJudgementType" value="StrangerVisit" />
 				</Property>
 				<Property name="Weighting" value="0.000000" />
-				<Property name="HeaderOverride" value="OT_SS_HEADER" />
-				<Property name="Title" value="OT_SS_A2_TITLE" />
+				<Property name="HeaderOverride" value="OT_SS_H_S1" />
+				<Property name="Title" value="OT_SS_S1B_T" />
 				<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
-				<Property name="QuestionText" value="OT_SS_A2_Q" />
-				<Property name="DilemmaText" value="OT_SS_A2_D" />
+				<Property name="QuestionText" value="OT_SS_S1B_Q" />
+				<Property name="DilemmaText" value="OT_SS_S1B_D" />
 				<Property name="DilemmaTextIsAlien" value="false" />
 				<Property name="UseResearchLoc" value="false" />
 				<Property name="UseAltResearchLoc" value="false" />
 				<Property name="Option1List">
 					<Property name="Option1List" value="GcSettlementJudgementOption">
-						<Property name="OptionText" value="OT_SS_A2_OPT1" />
+						<Property name="OptionText" value="OT_SS_S1B_O1" />
+						<Property name="AltOptionText" />
+						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges" />
+						<Property name="AdditionalRewards" />
+						<Property name="ChainedJudgementID" value="OT_SS_S1C" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="true" />
+					</Property>
+				</Property>
+				<Property name="Option2List">
+					<Property name="Option2List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S1B_O2" />
+						<Property name="AltOptionText" />
+						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges">
+							<Property name="StatChanges" value="GcSettlementStatChange">
+								<Property name="Stat" value="GcSettlementStatType">
+									<Property name="SettlementStatType" value="Happiness" />
+								</Property>
+								<Property name="Strength" value="GcSettlementStatStrength">
+									<Property name="SettlementStatStrength" value="NegativeSmall" />
+								</Property>
+								<Property name="DirectlyChangePopulation" value="false" />
+							</Property>
+						</Property>
+						<Property name="AdditionalRewards">
+							<Property name="AdditionalRewards" value="R_J_BOUNTY" />
+						</Property>
+						<Property name="ChainedJudgementID" value="" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="false" />
+					</Property>
+				</Property>
+				<Property name="Option3List" />
+				<Property name="Option4List" />
+				<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC1CustomName" value="" />
+				<Property name="NPC2CustomName" value="" />
+				<Property name="NPC1HoloEffect" value="" />
+				<Property name="NPC2HoloEffect" value="" />
+				<Property name="NPCs" value="One" />
+			</Property>
+			<Property name="CustomCostText" value="" />
+			<Property name="CustomMissionObjectiveText" value="" />
+		</Property>
+		<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="OT_SS_S1C">
+			<Property name="ID" value="OT_SS_S1C" />
+			<Property name="Data" value="GcSettlementJudgementData">
+				<Property name="JudgementType" value="GcSettlementJudgementType">
+					<Property name="SettlementJudgementType" value="StrangerVisit" />
+				</Property>
+				<Property name="Weighting" value="0.000000" />
+				<Property name="HeaderOverride" value="OT_SS_H_S1" />
+				<Property name="Title" value="OT_SS_S1C_T" />
+				<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+				<Property name="QuestionText" value="OT_SS_S1C_Q" />
+				<Property name="DilemmaText" value="OT_SS_S1C_D" />
+				<Property name="DilemmaTextIsAlien" value="false" />
+				<Property name="UseResearchLoc" value="false" />
+				<Property name="UseAltResearchLoc" value="false" />
+				<Property name="Option1List">
+					<Property name="Option1List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S1C_O1" />
 						<Property name="AltOptionText" />
 						<Property name="Perks">
 							<Property name="Perks" value="GcSettlementJudgementPerkOption">
-								<Property name="Perk" value="OT_SS_PERK" />
+								<Property name="Perk" value="OT_SS_SANCTUARY" />
 								<Property name="PerkChance" value="1.000000" />
 							</Property>
 						</Property>
 						<Property name="HidePerkInJudgement" value="false" />
 						<Property name="StatChanges" />
-						<Property name="AdditionalRewards">
-							<Property name="AdditionalRewards" value="R_J_GIFTITEM1" />
-						</Property>
+						<Property name="AdditionalRewards" />
 						<Property name="ChainedJudgementID" value="" />
 						<Property name="UsePolicyPerk" value="false" />
 						<Property name="UsePolicyStat" value="false" />
@@ -101,16 +823,255 @@
 				</Property>
 				<Property name="Option2List">
 					<Property name="Option2List" value="GcSettlementJudgementOption">
-						<Property name="OptionText" value="OT_SS_A2_OPT2" />
+						<Property name="OptionText" value="OT_SS_S1C_O2" />
 						<Property name="AltOptionText" />
 						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges">
+							<Property name="StatChanges" value="GcSettlementStatChange">
+								<Property name="Stat" value="GcSettlementStatType">
+									<Property name="SettlementStatType" value="Debt" />
+								</Property>
+								<Property name="Strength" value="GcSettlementStatStrength">
+									<Property name="SettlementStatStrength" value="NegativeMedium" />
+								</Property>
+								<Property name="DirectlyChangePopulation" value="false" />
+							</Property>
+							<Property name="StatChanges" value="GcSettlementStatChange">
+								<Property name="Stat" value="GcSettlementStatType">
+									<Property name="SettlementStatType" value="Production" />
+								</Property>
+								<Property name="Strength" value="GcSettlementStatStrength">
+									<Property name="SettlementStatStrength" value="PositiveSmall" />
+								</Property>
+								<Property name="DirectlyChangePopulation" value="false" />
+							</Property>
+						</Property>
+						<Property name="AdditionalRewards" />
+						<Property name="ChainedJudgementID" value="" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="false" />
+					</Property>
+				</Property>
+				<Property name="Option3List" />
+				<Property name="Option4List" />
+				<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC1CustomName" value="" />
+				<Property name="NPC2CustomName" value="" />
+				<Property name="NPC1HoloEffect" value="" />
+				<Property name="NPC2HoloEffect" value="" />
+				<Property name="NPCs" value="One" />
+			</Property>
+			<Property name="CustomCostText" value="" />
+			<Property name="CustomMissionObjectiveText" value="" />
+		</Property>
+		<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="OT_SS_S2B">
+			<Property name="ID" value="OT_SS_S2B" />
+			<Property name="Data" value="GcSettlementJudgementData">
+				<Property name="JudgementType" value="GcSettlementJudgementType">
+					<Property name="SettlementJudgementType" value="Request" />
+				</Property>
+				<Property name="Weighting" value="0.000000" />
+				<Property name="HeaderOverride" value="OT_SS_H_S2" />
+				<Property name="Title" value="OT_SS_S2B_T" />
+				<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+				<Property name="QuestionText" value="OT_SS_S2B_Q" />
+				<Property name="DilemmaText" value="OT_SS_S2B_D" />
+				<Property name="DilemmaTextIsAlien" value="false" />
+				<Property name="UseResearchLoc" value="false" />
+				<Property name="UseAltResearchLoc" value="false" />
+				<Property name="Option1List">
+					<Property name="Option1List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S2B_O1" />
+						<Property name="AltOptionText" />
+						<Property name="Perks">
+							<Property name="Perks" value="GcSettlementJudgementPerkOption">
+								<Property name="Perk" value="OT_SS_ORCHARD" />
+								<Property name="PerkChance" value="1.000000" />
+							</Property>
+						</Property>
 						<Property name="HidePerkInJudgement" value="false" />
 						<Property name="StatChanges" />
 						<Property name="AdditionalRewards" />
 						<Property name="ChainedJudgementID" value="" />
 						<Property name="UsePolicyPerk" value="false" />
 						<Property name="UsePolicyStat" value="false" />
-						<Property name="UseGiftReward" value="true" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="true" />
+					</Property>
+				</Property>
+				<Property name="Option2List">
+					<Property name="Option2List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S2B_O2" />
+						<Property name="AltOptionText" />
+						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges">
+							<Property name="StatChanges" value="GcSettlementStatChange">
+								<Property name="Stat" value="GcSettlementStatType">
+									<Property name="SettlementStatType" value="Production" />
+								</Property>
+								<Property name="Strength" value="GcSettlementStatStrength">
+									<Property name="SettlementStatStrength" value="PositiveSmall" />
+								</Property>
+								<Property name="DirectlyChangePopulation" value="false" />
+							</Property>
+						</Property>
+						<Property name="AdditionalRewards">
+							<Property name="AdditionalRewards" value="R_J_GIFTITEM30" />
+						</Property>
+						<Property name="ChainedJudgementID" value="" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="false" />
+					</Property>
+				</Property>
+				<Property name="Option3List" />
+				<Property name="Option4List" />
+				<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC1CustomName" value="" />
+				<Property name="NPC2CustomName" value="" />
+				<Property name="NPC1HoloEffect" value="" />
+				<Property name="NPC2HoloEffect" value="" />
+				<Property name="NPCs" value="One" />
+			</Property>
+			<Property name="CustomCostText" value="" />
+			<Property name="CustomMissionObjectiveText" value="" />
+		</Property>
+		<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="OT_SS_S3B">
+			<Property name="ID" value="OT_SS_S3B" />
+			<Property name="Data" value="GcSettlementJudgementData">
+				<Property name="JudgementType" value="GcSettlementJudgementType">
+					<Property name="SettlementJudgementType" value="Request" />
+				</Property>
+				<Property name="Weighting" value="0.000000" />
+				<Property name="HeaderOverride" value="OT_SS_H_S3" />
+				<Property name="Title" value="OT_SS_S3B_T" />
+				<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+				<Property name="QuestionText" value="OT_SS_S3B_Q" />
+				<Property name="DilemmaText" value="OT_SS_S3B_D" />
+				<Property name="DilemmaTextIsAlien" value="false" />
+				<Property name="UseResearchLoc" value="false" />
+				<Property name="UseAltResearchLoc" value="false" />
+				<Property name="Option1List">
+					<Property name="Option1List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S3B_O1" />
+						<Property name="AltOptionText" />
+						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges" />
+						<Property name="AdditionalRewards" />
+						<Property name="ChainedJudgementID" value="OT_SS_S3C" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="true" />
+					</Property>
+				</Property>
+				<Property name="Option2List">
+					<Property name="Option2List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S3B_O2" />
+						<Property name="AltOptionText" />
+						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges">
+							<Property name="StatChanges" value="GcSettlementStatChange">
+								<Property name="Stat" value="GcSettlementStatType">
+									<Property name="SettlementStatType" value="Happiness" />
+								</Property>
+								<Property name="Strength" value="GcSettlementStatStrength">
+									<Property name="SettlementStatStrength" value="PositiveMedium" />
+								</Property>
+								<Property name="DirectlyChangePopulation" value="false" />
+							</Property>
+						</Property>
+						<Property name="AdditionalRewards" />
+						<Property name="ChainedJudgementID" value="" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="false" />
+					</Property>
+				</Property>
+				<Property name="Option3List" />
+				<Property name="Option4List" />
+				<Property name="NPC1CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC2CustomId" value="NPC_JUDGEMENT" />
+				<Property name="NPC1CustomName" value="" />
+				<Property name="NPC2CustomName" value="" />
+				<Property name="NPC1HoloEffect" value="" />
+				<Property name="NPC2HoloEffect" value="" />
+				<Property name="NPCs" value="One" />
+			</Property>
+			<Property name="CustomCostText" value="" />
+			<Property name="CustomMissionObjectiveText" value="" />
+		</Property>
+		<Property name="CustomJudgements" value="GcSettlementCustomJudgement" _id="OT_SS_S3C">
+			<Property name="ID" value="OT_SS_S3C" />
+			<Property name="Data" value="GcSettlementJudgementData">
+				<Property name="JudgementType" value="GcSettlementJudgementType">
+					<Property name="SettlementJudgementType" value="Request" />
+				</Property>
+				<Property name="Weighting" value="0.000000" />
+				<Property name="HeaderOverride" value="OT_SS_H_S3" />
+				<Property name="Title" value="OT_SS_S3C_T" />
+				<Property name="NPCTitle" value="UI_DILEMMA_BOT_TITLE" />
+				<Property name="QuestionText" value="OT_SS_S3C_Q" />
+				<Property name="DilemmaText" value="OT_SS_S3C_D" />
+				<Property name="DilemmaTextIsAlien" value="false" />
+				<Property name="UseResearchLoc" value="false" />
+				<Property name="UseAltResearchLoc" value="false" />
+				<Property name="Option1List">
+					<Property name="Option1List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S3C_O1" />
+						<Property name="AltOptionText" />
+						<Property name="Perks">
+							<Property name="Perks" value="GcSettlementJudgementPerkOption">
+								<Property name="Perk" value="OT_SS_RELICS" />
+								<Property name="PerkChance" value="1.000000" />
+							</Property>
+						</Property>
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges" />
+						<Property name="AdditionalRewards" />
+						<Property name="ChainedJudgementID" value="" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
+						<Property name="UseTechPerk" value="false" />
+						<Property name="JudgementOptionStanding" value="None" />
+						<Property name="OptionIsPositiveForNPC" value="true" />
+					</Property>
+				</Property>
+				<Property name="Option2List">
+					<Property name="Option2List" value="GcSettlementJudgementOption">
+						<Property name="OptionText" value="OT_SS_S3C_O2" />
+						<Property name="AltOptionText" />
+						<Property name="Perks" />
+						<Property name="HidePerkInJudgement" value="false" />
+						<Property name="StatChanges" />
+						<Property name="AdditionalRewards">
+							<Property name="AdditionalRewards" value="R_J_GIFTITEM1" />
+						</Property>
+						<Property name="ChainedJudgementID" value="" />
+						<Property name="UsePolicyPerk" value="false" />
+						<Property name="UsePolicyStat" value="false" />
+						<Property name="UseGiftReward" value="false" />
 						<Property name="UseTechPerk" value="false" />
 						<Property name="JudgementOptionStanding" value="None" />
 						<Property name="OptionIsPositiveForNPC" value="false" />

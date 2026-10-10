@@ -1,6 +1,6 @@
 # Settler Stories: story draft
 
-Draft, 2026-10-09. The content for the first release, written before Session 3 results are in. How a story step links to the next (route A chain or route B reward) does not change the content, so only the spec wiring waits on the session.
+Draft, 2026-10-09. The content for the first release, now in `specs/OverseersToolkit-SettlerStories.json`. Steps link by route A (`ChainedJudgementID`); if Session 3 shows route A fails, only the links change. Route B is ruled out: in Session 3 a reward-fired follow-up replaced its own first step before any choice was made, which suggests the game runs option rewards when a judgement comes up (inferred).
 
 Conventions:
 - Strengths follow the game's sign: `Positive` is good for the settlement, `Negative` is bad. For example, `Debt NegativeSmall` adds debt, and `Alert PositiveMedium` lowers the Sentinel alert.
