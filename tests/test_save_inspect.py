@@ -43,6 +43,9 @@ READABLE = {
                     "Stats": [10, 20, 30, 40, 50, 60, 70],
                     "Perks": ["^STARTING_NEG1", "^OT_WATCH"],
                     "PendingJudgementType": {"SettlementJudgementType": "None"},
+                    "PendingCustomJudgementID": "^OT_SS_P1B",
+                    "LastJudgementTime": 1791345914,
+                    "Race": {"AlienRace": "Warriors"},
                 }
             ],
         },
@@ -147,3 +150,25 @@ def test_game_mode_comes_from_the_difficulty_preset(tmp_path):
     path = tmp_path / "save11.hg"
     path.write_bytes(encode_save(readable))
     assert save_inspect.report(save_inspect.read_save(path))["game_mode"] == "Creative"
+
+
+def test_report_gives_each_settlement_its_race_and_judgement_state(save_file):
+    settlement = save_inspect.report(save_inspect.read_save(save_file))["settlements"][0]
+    assert settlement["race"] == "Warriors"
+    assert settlement["pending_custom_judgement"] == "OT_SS_P1B"
+    assert settlement["last_judgement_time"] == 1791345914
+
+
+def test_an_empty_pending_custom_judgement_reads_as_none(tmp_path):
+    readable = json.loads(json.dumps(READABLE))
+    readable["BaseContext"]["PlayerStateData"]["SettlementStatesV2"][0]["PendingCustomJudgementID"] = "^"
+    path = tmp_path / "save11.hg"
+    path.write_bytes(encode_save(readable))
+    assert save_inspect.report(save_inspect.read_save(path))["settlements"][0]["pending_custom_judgement"] is None
+
+
+def test_text_output_shows_race_and_pending_judgements(save_file, capsys):
+    assert save_inspect.main([str(save_file)]) == 0
+    line = [l for l in capsys.readouterr().out.splitlines() if l.startswith("settlement")][0]
+    assert "Warriors" in line
+    assert "pending None/OT_SS_P1B" in line

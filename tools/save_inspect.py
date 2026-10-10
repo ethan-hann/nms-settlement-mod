@@ -122,7 +122,10 @@ def report(save):
                 "stats": s.get("Stats"),
                 "perks": [_strip(p) for p in s.get("Perks") or []],
                 "pending_judgement": find_key(s.get("PendingJudgementType"), "SettlementJudgementType"),
-                "pending_custom_judgement": s.get("PendingCustomJudgementID"),
+                # The game writes an empty ID as a bare "^".
+                "pending_custom_judgement": _strip(s.get("PendingCustomJudgementID")) or None,
+                "last_judgement_time": s.get("LastJudgementTime"),
+                "race": find_key(s.get("Race"), "AlienRace"),
                 "owner": s.get("Owner"),
             }
         )
@@ -187,7 +190,10 @@ def main(argv=None):
         for part, n in b["watched_parts"].items():
             print(f"  {part}: {n}")
     for s in rep["settlements"]:
-        print(f"settlement {s['name'] or '(unnamed)'!r}: perks {s['perks']}, stats {s['stats']}")
+        print(
+            f"settlement {s['name'] or '(unnamed)'!r} ({s['race']}): perks {s['perks']}, stats {s['stats']}, "
+            f"pending {s['pending_judgement']}/{s['pending_custom_judgement']}, last judgement {s['last_judgement_time']}"
+        )
     return 0
 
 
