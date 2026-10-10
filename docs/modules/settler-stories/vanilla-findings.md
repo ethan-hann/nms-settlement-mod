@@ -56,7 +56,7 @@ Each finding is marked:
 - **Verified:** every custom entry has `Weighting` 1.0 except `J_DEBRIEF_POS` and `J_DEBRIEF_NEG`, which are 0.0. The debriefs still fire, so a weight of 0 doesn't stop a custom judgement that is awarded directly.
 - **Inferred:** the random draw never picks custom judgements. Nothing references them by weight, and the save tracks a pool judgement by type alone (`PendingJudgementType`) and a custom one by ID (`PendingCustomJudgementID`). Not stated anywhere.
 - **Unknown:** whether a pool option's `ChainedJudgementID` can point at a custom judgement (route A). Vanilla never does it.
-- **Unknown:** whether a judgement option can fire a custom judgement through a reward (route B). Vanilla never does it.
+- **Verified in Session 3 (2026-10-09), route B fails:** a pool option whose `AdditionalRewards` fired a custom judgement (`GcRewardSettlementCustomJudgement`, `CanOverrideNonCustomJudgement` true) made that custom judgement appear on its own, again and again: 4 times in a row, with neither pool judgement ever shown. **Inferred:** the game runs option rewards when a judgement is drawn, not when it is chosen, and the fired judgement overrides the drawn one. Never put a judgement-firing reward on an option.
 - **Unknown:** what `CanOverrideNonCustomJudgement` does. It's true on six of the seven rewards and false only on `J_BUI_VISITOR`. Only one judgement can be pending at a time (verified from the save format).
 
 ## Rewards

@@ -22,7 +22,6 @@ EXCLUDED_MODULES = (
     "OverseersToolkit-Probes",
     "OverseersToolkit-TestTuning",
     "OverseersToolkit-SettlerStories",
-    "OverseersToolkit-StoryProbes",
 )
 DEV_PREFIX = "_OTDEV_"
 PATCH_SUFFIXES = (".EXML", ".MXML", ".MBIN")

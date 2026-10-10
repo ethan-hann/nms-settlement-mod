@@ -171,3 +171,12 @@ Plan, findings and decisions are in [modules/settler-stories/](modules/settler-s
 - **save_inspect.** Reports each settlement's race, pending custom judgement and last judgement time.
 - **Test slice.** `OverseersToolkit-SettlerStories` (route A: a pool option chains to custom step `OT_SS_A2`) and the hand-written `OverseersToolkit-StoryProbes` (route B: a pool option's reward fires custom step `OT_SSP_B2`). Both are test-only and all text is marked [TEST]. Both merge and compile against vanilla.
 - **Session 3 asks:** does route A or B start the follow-up, and how soon; does `%RACE%` show the town's race; do the nanites reward, the perk and the gift arrive; does a follow-up ever appear on its own.
+
+## 2026-10-09: Session 3, Settler Stories chains
+
+Modules: SettlerStories test slice (route A), StoryProbes (route B), TestTuning, on the creative test slot.
+
+- **Route B fails.** The custom step fired by a reward on a pool option (`OT_SSP_B2`) appeared on its own, 4 times in a row, with no other decision shown. The save confirms 5 judgements settled (12 before, 17 after): one vanilla expedition debrief left pending from earlier play, then the 4 probe steps. Inferred cause: option rewards run when a judgement is drawn, and the fired judgement overrides it. The StoryProbes module is removed; it is in history at 533460a.
+- **Route A untested.** Its first step never came up while route B's reward was installed.
+- The custom step showed up only at the overseer terminal, with no in-game alert, 2 to 4 minutes apart.
+- Safety: exit passed all checks.
