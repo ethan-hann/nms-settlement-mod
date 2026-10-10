@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. Fires the route B probe's follow-up; the item copies vanilla R_SENT1_JUDGE. -->
+<Data template="cGcRewardTable">
+	<Property name="SettlementTable">
+		<Property name="SettlementTable" value="GcGenericRewardTableEntry" _id="R_OT_SSP_B2">
+			<Property name="Id" value="R_OT_SSP_B2" />
+			<Property name="List" value="GcRewardTableItemList">
+				<Property name="RewardChoice" value="GiveAll" />
+				<Property name="OverrideZeroSeed" value="false" />
+				<Property name="UseInventoryChoiceOverride" value="false" />
+				<Property name="IncrementStat" value="" />
+				<Property name="List">
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementCustomJudgement">
+							<Property name="GcRewardSettlementCustomJudgement">
+								<Property name="CustomJudgement" value="OT_SSP_B2" />
+								<Property name="DisplaySettlementJudgementAlert" value="true" />
+								<Property name="CanOverrideNonCustomJudgement" value="true" />
+								<Property name="AwardToClosestSettlement" value="false" />
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>

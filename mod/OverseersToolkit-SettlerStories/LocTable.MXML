@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_HEADER" />
+			<Property name="English" value="[TEST] Settler Stories" />
+			<Property name="USEnglish" value="[TEST] Settler Stories" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_P1_TITLE" />
+			<Property name="English" value="[TEST] A Settler's Request" />
+			<Property name="USEnglish" value="[TEST] A Settler's Request" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_P1_Q" />
+			<Property name="English" value="[TEST] Hear the settler out?" />
+			<Property name="USEnglish" value="[TEST] Hear the settler out?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_P1_D" />
+			<Property name="English" value="[TEST] Placeholder text for a Settler Stories test session. A %RACE% settler wants a word with the Overseer. The first option should lead straight to a second decision; the second option should end the story here." />
+			<Property name="USEnglish" value="[TEST] Placeholder text for a Settler Stories test session. A %RACE% settler wants a word with the Overseer. The first option should lead straight to a second decision; the second option should end the story here." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_P1_OPT1" />
+			<Property name="English" value="[TEST] Hear them out (a follow-up should appear)" />
+			<Property name="USEnglish" value="[TEST] Hear them out (a follow-up should appear)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_P1_OPT2" />
+			<Property name="English" value="[TEST] Not now (no follow-up)" />
+			<Property name="USEnglish" value="[TEST] Not now (no follow-up)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_A2_TITLE" />
+			<Property name="English" value="[TEST] The Settler Returns" />
+			<Property name="USEnglish" value="[TEST] The Settler Returns" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_A2_Q" />
+			<Property name="English" value="[TEST] How should the settlement respond?" />
+			<Property name="USEnglish" value="[TEST] How should the settlement respond?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_A2_D" />
+			<Property name="English" value="[TEST] Placeholder text. This is the second step of a test story. It should only ever appear right after the first step's first option." />
+			<Property name="USEnglish" value="[TEST] Placeholder text. This is the second step of a test story. It should only ever appear right after the first step's first option." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_A2_OPT1" />
+			<Property name="English" value="[TEST] Take the units and the test perk" />
+			<Property name="USEnglish" value="[TEST] Take the units and the test perk" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_A2_OPT2" />
+			<Property name="English" value="[TEST] Accept the settlement's gift" />
+			<Property name="USEnglish" value="[TEST] Accept the settlement's gift" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_PERK_NAME" />
+			<Property name="English" value="[TEST] Story Perk" />
+			<Property name="USEnglish" value="[TEST] Story Perk" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SS_PERK_DESC" />
+			<Property name="English" value="[TEST] Granted by the Settler Stories test story. Raises happiness a little." />
+			<Property name="USEnglish" value="[TEST] Granted by the Settler Stories test story. Raises happiness a little." />
+		</Property>
+	</Property>
+</Data>

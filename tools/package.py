@@ -17,7 +17,13 @@ REPO = Path(__file__).resolve().parent.parent
 
 SHIPPED = ["OverseersToolkit", "OverseersToolkit-Defense", "OverseersToolkit-SettlementDecor"]
 # Kept in the repo for test sessions; installing them changes how the game plays.
-TEST_ONLY = ["OverseersToolkit-Probes", "OverseersToolkit-TestTuning"]
+# SettlerStories holds placeholder test text until its stories are written.
+TEST_ONLY = [
+    "OverseersToolkit-Probes",
+    "OverseersToolkit-TestTuning",
+    "OverseersToolkit-SettlerStories",
+    "OverseersToolkit-StoryProbes",
+]
 
 VERSION_RE = re.compile(r"\d+\.\d+\.\d+")
 

@@ -1,0 +1,79 @@
+{
+  "text": {
+    "OT_SS_HEADER": "[TEST] Settler Stories",
+    "OT_SS_P1_TITLE": "[TEST] A Settler's Request",
+    "OT_SS_P1_Q": "[TEST] Hear the settler out?",
+    "OT_SS_P1_D": "[TEST] Placeholder text for a Settler Stories test session. A %RACE% settler wants a word with the Overseer. The first option should lead straight to a second decision; the second option should end the story here.",
+    "OT_SS_P1_OPT1": "[TEST] Hear them out (a follow-up should appear)",
+    "OT_SS_P1_OPT2": "[TEST] Not now (no follow-up)",
+    "OT_SS_A2_TITLE": "[TEST] The Settler Returns",
+    "OT_SS_A2_Q": "[TEST] How should the settlement respond?",
+    "OT_SS_A2_D": "[TEST] Placeholder text. This is the second step of a test story. It should only ever appear right after the first step's first option.",
+    "OT_SS_A2_OPT1": "[TEST] Take the units and the test perk",
+    "OT_SS_A2_OPT2": "[TEST] Accept the settlement's gift",
+    "OT_SS_PERK_NAME": "[TEST] Story Perk",
+    "OT_SS_PERK_DESC": "[TEST] Granted by the Settler Stories test story. Raises happiness a little."
+  },
+  "perks": [
+    {
+      "id": "OT_SS_PERK",
+      "copy_from": "SENT_QUAR",
+      "name": "OT_SS_PERK_NAME",
+      "description": "OT_SS_PERK_DESC",
+      "stat_changes": [
+        [
+          "Happiness",
+          "PositiveSmall"
+        ]
+      ]
+    }
+  ],
+  "judgements": [
+    {
+      "name": "OT_SS_P1",
+      "copy_from": 24,
+      "type": "Request",
+      "weighting": 1.0,
+      "title": "OT_SS_P1_TITLE",
+      "question": "OT_SS_P1_Q",
+      "dilemma": "OT_SS_P1_D",
+      "options": [
+        {
+          "text": "OT_SS_P1_OPT1",
+          "chain": "OT_SS_A2"
+        },
+        {
+          "text": "OT_SS_P1_OPT2"
+        }
+      ]
+    }
+  ],
+  "custom_judgements": [
+    {
+      "id": "OT_SS_A2",
+      "copy_from": "J_SENT_MISS_4B",
+      "header": "OT_SS_HEADER",
+      "title": "OT_SS_A2_TITLE",
+      "question": "OT_SS_A2_Q",
+      "dilemma": "OT_SS_A2_D",
+      "options": [
+        {
+          "text": "OT_SS_A2_OPT1",
+          "rewards": [
+            "R_J_GIFTITEM1"
+          ],
+          "perks": [
+            [
+              "OT_SS_PERK",
+              1.0
+            ]
+          ]
+        },
+        {
+          "text": "OT_SS_A2_OPT2",
+          "gift": true
+        }
+      ]
+    }
+  ]
+}

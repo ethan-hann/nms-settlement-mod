@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_HEADER" />
+			<Property name="English" value="[TEST] Story probe" />
+			<Property name="USEnglish" value="[TEST] Story probe" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_P2_TITLE" />
+			<Property name="English" value="[TEST] A Courier Arrives" />
+			<Property name="USEnglish" value="[TEST] A Courier Arrives" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_P2_Q" />
+			<Property name="English" value="[TEST] Accept the courier's message?" />
+			<Property name="USEnglish" value="[TEST] Accept the courier's message?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_P2_D" />
+			<Property name="English" value="[TEST] Placeholder text for a Settler Stories test session. The first option fires a second decision through a reward instead of a chain. The second option does nothing." />
+			<Property name="USEnglish" value="[TEST] Placeholder text for a Settler Stories test session. The first option fires a second decision through a reward instead of a chain. The second option does nothing." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_P2_OPT1" />
+			<Property name="English" value="[TEST] Accept (a follow-up should appear)" />
+			<Property name="USEnglish" value="[TEST] Accept (a follow-up should appear)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_P2_OPT2" />
+			<Property name="English" value="[TEST] Send them away (no follow-up)" />
+			<Property name="USEnglish" value="[TEST] Send them away (no follow-up)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_B2_TITLE" />
+			<Property name="English" value="[TEST] The Courier's Message" />
+			<Property name="USEnglish" value="[TEST] The Courier's Message" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_B2_Q" />
+			<Property name="English" value="[TEST] Did this arrive through a reward?" />
+			<Property name="USEnglish" value="[TEST] Did this arrive through a reward?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_B2_D" />
+			<Property name="English" value="[TEST] Placeholder text. If this decision appears right after the courier, a reward can start a custom judgement from a judgement option." />
+			<Property name="USEnglish" value="[TEST] Placeholder text. If this decision appears right after the courier, a reward can start a custom judgement from a judgement option." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_B2_OPT1" />
+			<Property name="English" value="[TEST] Noted" />
+			<Property name="USEnglish" value="[TEST] Noted" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SSP_B2_OPT2" />
+			<Property name="English" value="[TEST] Also noted" />
+			<Property name="USEnglish" value="[TEST] Also noted" />
+		</Property>
+	</Property>
+</Data>

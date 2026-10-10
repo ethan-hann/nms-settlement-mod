@@ -18,7 +18,12 @@ import nmsenv
 from merge_preview import PatchError, vanilla_relpath
 
 REPO = Path(__file__).resolve().parent.parent
-EXCLUDED_MODULES = ("OverseersToolkit-Probes", "OverseersToolkit-TestTuning")
+EXCLUDED_MODULES = (
+    "OverseersToolkit-Probes",
+    "OverseersToolkit-TestTuning",
+    "OverseersToolkit-SettlerStories",
+    "OverseersToolkit-StoryProbes",
+)
 DEV_PREFIX = "_OTDEV_"
 PATCH_SUFFIXES = (".EXML", ".MXML", ".MBIN")
 
