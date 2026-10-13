@@ -209,10 +209,7 @@ Modules: SettlerStories and StoryTuning, on the creative test slot.
 
 Verified in Sessions 3 and 3b: loading and saving without the module that adds a placed part deletes that part. Vanilla parts a module only edits (everything SettlementDecor touches) survive. Core adds 29 parts and Defense 1; SettlementDecor adds none.
 
-Rules from here on:
-- **Part IDs are permanent.** Never rename or remove a shipped `OT_` part ID, even in a later version: a player who updates would lose every copy they placed. A retired part stays defined and is only hidden from the build menu.
-- **Every release keeps the 1.0.0 parts loadable,** so a collection pinned to an older version and a player on the newest one both keep their builds.
-- **After each game update,** run `check_build.py`, re-extract and rerun pytest before players report problems, then a short session on the test slot with every module whose parts it holds (`testmode enter` now refuses otherwise).
+The rules that follow from this (permanent part IDs, loadable earlier parts, the game-update check) are in `AGENTS.md`.
 
 Open questions, for a session before the next release:
 - What the game's mod loader does when a partial patch no longer matches after a game update: skip one file, skip the whole module, or stop loading. If it skips a module, a game update alone could delete builds when the player saves.
