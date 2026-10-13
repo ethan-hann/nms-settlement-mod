@@ -213,4 +213,5 @@ The rules that follow from this (permanent part IDs, loadable earlier parts, the
 
 Open questions, for a session before the next release:
 - What the game's mod loader does when a partial patch no longer matches after a game update: skip one file, skip the whole module, or stop loading. If it skips a module, a game update alone could delete builds when the player saves.
+- Answered: a town perk whose module is missing is hidden, not deleted. Session 3c ran without Defense; the town did not show Perimeter Watch, yet the save still lists `OT_WATCH`, and nothing crashed. Whether it returns, and whether a hidden perk still changes stats, goes to Session 4.
 - What happens to a save whose pending decision is a Settler Stories step (`PendingCustomJudgementID` set to an `OT_SS_` ID) when SettlerStories is removed. Must be tested before SettlerStories ships.
