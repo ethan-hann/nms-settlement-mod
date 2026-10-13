@@ -28,6 +28,9 @@ The mod comes in three modules. Core works on its own; the other two are optiona
 
 In creative mode, everything is available from the start.
 
+> [!WARNING]
+> **Removing a module deletes what you built with it.** The moment the game saves without a module installed, every part that module added disappears from your save for good. That means the paths, curbs, lamps and signs from core, and the Tower Pillar from Defense. Settlement Decor only unlocks the game's own parts, so those stay. See [Uninstalling](#uninstalling) before you remove anything.
+
 > **Heads up:** the class unlocks haven't been tested in a survival or normal game yet. They load fine and should™ work. If a part doesn't unlock when your settlement levels up, please [open an issue](https://github.com/ethan-hann/nms-settlement-mod/issues).
 
 ## Installing
@@ -40,7 +43,16 @@ In creative mode, everything is available from the start.
 2. Extract each one into `No Man's Sky\GAMEDATA\MODS`. Each zip already contains its own module folder.
 3. Launch the game.
 
-To uninstall, delete the module folders.
+## Uninstalling
+
+> [!WARNING]
+> When the game saves without a module, it deletes every part that module added, and they can't be recovered from that save. Autosaves count too.
+
+1. **Back up your saves first.** They live in `%APPDATA%\HelloGames\NMS\`.
+2. Replace anything you want to keep with the game's own parts. Settlement Decor parts are the game's own, so they're safe.
+3. Remove the module in Vortex, or delete its folder from `GAMEDATA\MODS`.
+
+**Parts missing after an uninstall or a game update?** Quit without saving, reinstall the module (or wait for an update if a game patch broke it), then load again. Your parts are still in the save until the game saves without them.
 
 ## Using it
 
@@ -66,6 +78,7 @@ A few things worth knowing:
 - The fortify judgement can turn up again after you already have Perimeter Watch. Just turn it down (it costs a little happiness).
 - With Settlement Decor installed, those decoration parts can also be placed outside a base.
 - No path-drawing tool yet: paths go down one piece at a time, like any other part.
+- After a game update, check that your paths and signs are still there before you save. If they're gone, the update may have stopped the mod from loading: quit without saving and check the [issues](https://github.com/ethan-hann/nms-settlement-mod/issues) or the Nexus page.
 
 ## Reporting bugs and ideas 🐛
 
