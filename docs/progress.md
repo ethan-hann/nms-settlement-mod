@@ -202,3 +202,18 @@ Modules: SettlerStories and StoryTuning, on the creative test slot.
 - Not taken in game: Hand them over for the bounty (its 405 quicksilver preview showed), and the Ancient Orchard and Relic Hall perks (the same perk mechanism as Sanctuary).
 - **Placed parts are deleted when a save is loaded and saved without the module that adds them.** The test slot held 38 OT_CURB and other OT_ parts on 2026-10-09; Sessions 3 and 3b ran without core, and by 2026-10-12 every OT_ part was gone while vanilla parts stayed. Test sessions on this slot need the modules whose parts it holds, and players need an uninstall warning. The 2026-10-09 backup (`overseers-toolkit-backups/20261009-192543`) still has the parts.
 - Safety: exit passed all checks.
+
+## 2026-10-12: Keeping placed parts safe for existing players
+
+1.0.0 has about 370 downloads and is in a Nexus collection (Beyond Infinity, 89 mods), so player builds and update resilience now matter more than new features.
+
+Verified in Sessions 3 and 3b: loading and saving without the module that adds a placed part deletes that part. Vanilla parts a module only edits (everything SettlementDecor touches) survive. Core adds 29 parts and Defense 1; SettlementDecor adds none.
+
+Rules from here on:
+- **Part IDs are permanent.** Never rename or remove a shipped `OT_` part ID, even in a later version: a player who updates would lose every copy they placed. A retired part stays defined and is only hidden from the build menu.
+- **Every release keeps the 1.0.0 parts loadable,** so a collection pinned to an older version and a player on the newest one both keep their builds.
+- **After each game update,** run `check_build.py`, re-extract and rerun pytest before players report problems, then a short session on the test slot with every module whose parts it holds (`testmode enter` now refuses otherwise).
+
+Open questions, for a session before the next release:
+- What the game's mod loader does when a partial patch no longer matches after a game update: skip one file, skip the whole module, or stop loading. If it skips a module, a game update alone could delete builds when the player saves.
+- What happens to a save whose pending decision is a Settler Stories step (`PendingCustomJudgementID` set to an `OT_SS_` ID) when SettlerStories is removed. Must be tested before SettlerStories ships.

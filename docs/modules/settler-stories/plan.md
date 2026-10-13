@@ -83,4 +83,5 @@ Answered from game data on 2026-10-09; see [vanilla-findings.md](vanilla-finding
 - **Chaining:** if follow-ups can't be kept out of the random pool, the 3 stories become single dilemmas with richer outcomes. Stories that start halfway through are not acceptable.
 - **Race targeting:** if no route exists, every story is written to fit any race. Race flavour then comes only through text that suits all of them.
 - **Shared file:** `GCSETTLEMENTGLOBALS` is the file every settlement mod patches. Appending to the judgement lists should merge cleanly, but test alongside a timer mod.
+- **Removal mid-story:** a save can hold a pending story step by ID (`PendingCustomJudgementID`). What the game does when SettlerStories is removed while one is pending is untested; it must be tested before release.
 - **Repeats:** no condition checks whether a perk is already owned, so a perk-granting dilemma can come up again (the known Defense limit).
