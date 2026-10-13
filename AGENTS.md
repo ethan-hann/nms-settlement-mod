@@ -39,7 +39,7 @@ The game deletes a placed part the moment it saves without the module that adds 
 The maintainer runs every in-game check; agents cannot play.
 
 - Answer what the data can answer offline first, then batch the rest into one short session.
-- `testmode enter` must include every module whose parts the test slot holds, or the session deletes them.
+- `testmode enter` must include every module whose parts the test slot holds, or the session deletes them. It refuses otherwise.
 - Checklists: one table of which decision or part to look for, what to pick, and what to report. Estimate time with the waits included.
 - Record results in `docs/progress.md` the same day.
 

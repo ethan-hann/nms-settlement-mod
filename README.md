@@ -142,7 +142,7 @@ python tools\testmode.py exit
 python tools\testmode.py status
 ```
 
-`enter` backs up your saves and settings, installs the modules as `_OTDEV_*` folders and points the game's mod list at them. `exit` removes them, restores the mod list byte for byte, and proves nothing changed outside the test slot. Both refuse while the game is running. Local paths and the test slot go in `scratch/testmode.local.json`.
+`enter` backs up your saves and settings, installs the modules as `_OTDEV_*` folders and points the game's mod list at them. It refuses when the test slot holds parts from a module you left out, because saving without that module would delete them. `exit` removes them, restores the mod list byte for byte, and proves nothing changed outside the test slot. Both refuse while the game is running. Local paths and the test slot go in `scratch/testmode.local.json`.
 
 > Always use **Load** and pick the test slot. Never press **Continue**.
 
