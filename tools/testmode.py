@@ -21,6 +21,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 
+import save_inspect
 from nmsenv import game_running
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -368,6 +369,58 @@ def known_test_slot(env):
     return (read_json(env.local_file, {}) or {}).get("test_slot")
 
 
+OBJECTS_TABLE = Path("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
+
+
+VANILLA_OBJECTS = Path("scratch/extracted/metadata/reality/tables/basebuildingobjectstable.MXML")
+
+
+def _object_ids(table):
+    return {e.get("_id") for e in ET.parse(table).getroot().iter("Property") if e.get("_id")}
+
+
+def parts_by_module(env):
+    """{module key: set of part IDs it adds}; vanilla parts a module only edits are never at risk."""
+    vanilla_table = Path(env.repo_root) / VANILLA_OBJECTS
+    if not vanilla_table.is_file():
+        raise Refused(f"{vanilla_table} is missing, so new parts cannot be told from vanilla ones; run tools/extract.py")
+    vanilla = _object_ids(vanilla_table)
+    found = {}
+    for key, folder in MODULES.items():
+        table = Path(env.repo_root) / "mod" / folder / OBJECTS_TABLE
+        if table.is_file():
+            ids = _object_ids(table) - vanilla
+            if ids:
+                found[key] = ids
+    return found
+
+
+def refuse_if_test_slot_loses_parts(env, modules):
+    """The game deletes placed parts whose module is missing as soon as the save is written."""
+    slot = known_test_slot(env)
+    if slot is None:
+        return
+    owners = parts_by_module(env)
+    profile = Path(env.save_root) / env.profile
+    placed = set()
+    for name in slot_files(slot)[:2]:
+        path = profile / name
+        if not path.is_file():
+            continue
+        try:
+            text = json.dumps(save_inspect.read_save(path))
+        except Exception as e:
+            raise Refused(f"cannot read test slot save {name} to check its placed parts: {e}") from e
+        placed |= {m.group(1) for m in re.finditer(r'"\^([A-Za-z0-9_]+)"', text)}
+    at_risk = {key: sorted(ids & placed) for key, ids in owners.items() if key not in modules and ids & placed}
+    if at_risk:
+        detail = "; ".join(f"{key}: {', '.join(ids[:5])}{' ...' if len(ids) > 5 else ''}" for key, ids in at_risk.items())
+        raise Refused(
+            f"the test slot holds parts from modules not requested ({detail}); "
+            f"saving without them deletes those parts. Add {', '.join(at_risk)} to --modules"
+        )
+
+
 def dev_folders_present(env):
     if not env.mods_dir.is_dir():
         return []
@@ -391,6 +444,7 @@ def enter(env, modules, with_user_mods=False):
     missing = [str(p) for p in sources.values() if not p.is_dir()]
     if missing:
         raise Refused(f"module source missing: {', '.join(missing)}")
+    refuse_if_test_slot_loses_parts(env, modules)
     stale = dev_folders_present(env)
     if stale:
         raise Refused(f"dev folders already in MODS without an open session: {', '.join(stale)}")
