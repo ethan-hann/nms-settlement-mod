@@ -119,7 +119,17 @@ def test_generated_modules_hold_only_generated_files(module):
     assert present == expected
 
 
-@pytest.mark.parametrize("module", MODULES)
+# BrokenProbe is broken on purpose, to show in game what the mod loader does with a stale patch.
+BROKEN_ON_PURPOSE = "OverseersToolkit-BrokenProbe"
+
+
+def test_the_broken_probe_fails_only_on_its_missing_field(tmp_path):
+    results = merge_preview.preview_module(MODS / BROKEN_ON_PURPOSE, tmp_path)
+    failures = [f"{r.patch.name}: {r.message}" for r in results if not r.ok]
+    assert len(failures) == 1 and "OT_NoSuchField" in failures[0], failures
+
+
+@pytest.mark.parametrize("module", [m for m in MODULES if m != BROKEN_ON_PURPOSE])
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)
     assert results, f"{module} has no patches"
