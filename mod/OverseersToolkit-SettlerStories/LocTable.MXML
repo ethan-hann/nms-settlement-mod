@@ -153,8 +153,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_D" />
-			<Property name="English" value="The settlers ask for a festival to mark the end of the building season: lanterns, music, fireworks over the rooftops." />
-			<Property name="USEnglish" value="The settlers ask for a festival to mark the end of the building season: lanterns, music, fireworks over the rooftops." />
+			<Property name="English" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="USEnglish" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_O1" />

@@ -190,3 +190,15 @@ Modules: SettlerStories (the real content) and TestTuning, on the creative test 
 - "Keep the best, plant the rest" paid out a random rare item (a predator skull); it now gives Hexaberries.
 - Not yet seen in game: the Policy, StrangerVisit and Conflict dilemmas, the three-step Stranger at the Gate story, and the three perks. TestTuning favors Request.
 - Safety: exit passed all checks.
+
+## 2026-10-12: Session 3c, the other decision types
+
+Modules: SettlerStories and StoryTuning, on the creative test slot.
+
+- **All five non-Request dilemmas work:** The Night Market, The Wage Dispute, A Fevered Traveller, Festival of Lights and A Stranger at the Gate show correct text and labels, and their stat, item and quicksilver previews match what arrives.
+- **The three-step story works.** A Stranger at the Gate led straight to Rumours and then The Crew Comes Looking; Stand together added the Sanctuary feature, confirmed in the save. Turn them away ended the story with its reward.
+- **Festival of Lights** set off fireworks only when funded. `R_SET_FW_PARTY` shows its own random reason for the party, so the dilemma text no longer names one.
+- The Wage Dispute came up three times because it is the only Conflict dilemma left under StoryTuning; normal play mixes it with the vanilla Conflict judgements.
+- Not taken in game: Hand them over for the bounty (its 405 quicksilver preview showed), and the Ancient Orchard and Relic Hall perks (the same perk mechanism as Sanctuary).
+- **Placed parts are deleted when a save is loaded and saved without the module that adds them.** The test slot held 38 OT_CURB and other OT_ parts on 2026-10-09; Sessions 3 and 3b ran without core, and by 2026-10-12 every OT_ part was gone while vanilla parts stayed. Test sessions on this slot need the modules whose parts it holds, and players need an uninstall warning. The 2026-10-09 backup (`overseers-toolkit-backups/20261009-192543`) still has the parts.
+- Safety: exit passed all checks.

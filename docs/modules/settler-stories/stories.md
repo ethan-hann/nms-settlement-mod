@@ -42,7 +42,9 @@ Conventions:
 
 ### D5. Festival of Lights (Policy)
 
-> The settlers ask for a festival to mark the end of the building season: lanterns, music, fireworks over the rooftops.
+> The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating.
+
+`R_SET_FW_PARTY` picks its own reason for the party (for example "the coming of the cleansing rains"), so the text names none.
 
 - **Fund a full festival (adds debt).** `R_SET_FW_PARTY`, Happiness PositiveMedium, Debt NegativeSmall.
 - **Keep it small.** Happiness PositiveSmall.
