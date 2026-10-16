@@ -215,3 +215,26 @@ Open questions, for a session before the next release:
 - What the game's mod loader does when a partial patch no longer matches after a game update: skip one file, skip the whole module, or stop loading. If it skips a module, a game update alone could delete builds when the player saves.
 - Answered: a town perk whose module is missing is hidden, not deleted. Session 3c ran without Defense; the town did not show Perimeter Watch, yet the save still lists `OT_WATCH`, and nothing crashed. Whether it returns, and whether a hidden perk still changes stats, goes to Session 4.
 - What happens to a save whose pending decision is a Settler Stories step (`PendingCustomJudgementID` set to an `OT_SS_` ID) when SettlerStories is removed. Must be tested before SettlerStories ships.
+
+## 2026-10-15: Session 4, probes, removal and a broken patch
+
+Three launches on the creative test slot. Safety: every exit passed all checks.
+
+**Part A** (RewardProbes, StoryTuning):
+- `%RACE%` in judgement text is shown literally; the dilemma screen does not fill it in.
+- The vanilla `WORD` reward taught Gek words ("Gek", "friend") and `STANDING` raised Gek standing, both previewed on the option. The town is Gek and sits in a Gek system, so whether they follow the settlement's race or the system's is unknown.
+- `UseGiftReward` gives a random item from the general gift list (nanites, Hex Core, Glowing Mineral), not the race list.
+- A two-step probe story was left with its second step pending at save time (`PendingCustomJudgementID` `OT_RP_P3B`).
+
+**Part B** (core and Defense only, so the pending step's module was missing):
+- The save loads, but the terminal's "Greet settlement visitor" opens a placeholder decision (header "Judgement", subheading "Sub heading", raw `UI_SETTLEMENT_STAT_*_FMT` labels, `%NUM%` text, unrelated NPC dialogue) whose options cannot be chosen. The game had to be closed with Alt+F4. The step stays pending in the save, so this repeats until the module is back. The rest of the terminal works.
+- Perimeter Watch, hidden while Defense was missing in Session 3c, shows again with Defense installed: a missing-module perk is hidden and returns, never deleted.
+
+**Part C** (BrokenProbe, SettlerStories, StoryTuning, RewardProbes):
+- With RewardProbes back, the pending step opened normally and answering it cleared it from the save.
+- A patch file that sets a field the game does not have still loads: the game ignores that field and applies the rest of the file (BrokenProbe's decision appeared). Other modules were unaffected. Only an unknown field was tested; a renamed list or a template mismatch is still unknown.
+
+Consequences:
+- **Removing SettlerStories while a story step is pending soft-locks that town's decisions** until it is reinstalled. Recovery: reinstall, answer the step, remove again. Release notes and the README need this before SettlerStories ships.
+- Game updates that rename a single field are less dangerous than feared: the rest of the patch still applies.
+- `WORD` and `STANDING` are usable player rewards for race-neutral stories. `%RACE%` and the gift give no race flavour.

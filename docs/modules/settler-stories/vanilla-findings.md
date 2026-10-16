@@ -88,7 +88,7 @@ Each finding is marked:
 - **Verified:** `AwardToClosestSettlement` is false on six vanilla custom-judgement rewards. It's true only on the seasonal `BEACON` mission.
 - **Unknown:** which settlement receives a fired judgement when the player owns several, with the flag false or true. A race-gated mission could land its judgement at a different-race settlement.
 - **Verified:** the text placeholder `%RACE%` exists in 16 vanilla strings, for example "%RACE% Planetary Settlement" and "%RACE% words". None is a judgement string.
-- **Unknown:** whether the dilemma screen fills in `%RACE%`. Judgement text uses many other placeholders: `%NAME1%` (187 strings), `%NUM%`, `%NAME%`, `%SETTLEMENT%`, `%ITEM%`, and more.
+- **Verified in Session 4:** the dilemma screen does not fill in `%RACE%`; it shows the token literally. The vanilla `WORD` and `STANDING` rewards work from a judgement option (Gek in a Gek town in a Gek system; settlement versus system race is unknown), and `UseGiftReward` gives a random item from the general gift list. Judgement text uses many other placeholders: `%NAME1%` (187 strings), `%NUM%`, `%NAME%`, `%SETTLEMENT%`, `%ITEM%`, and more.
 
 ## Missions
 
