@@ -206,7 +206,9 @@
 							<Property name="DirectlyChangePopulation" value="false" />
 						</Property>
 					</Property>
-					<Property name="AdditionalRewards" />
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="WORD" />
+					</Property>
 					<Property name="ChainedJudgementID" value="" />
 					<Property name="UsePolicyPerk" value="false" />
 					<Property name="UsePolicyStat" value="false" />
@@ -382,7 +384,9 @@
 							<Property name="DirectlyChangePopulation" value="false" />
 						</Property>
 					</Property>
-					<Property name="AdditionalRewards" />
+					<Property name="AdditionalRewards">
+						<Property name="AdditionalRewards" value="STANDING" />
+					</Property>
 					<Property name="ChainedJudgementID" value="" />
 					<Property name="UsePolicyPerk" value="false" />
 					<Property name="UsePolicyStat" value="false" />
@@ -723,7 +727,9 @@
 						<Property name="Perks" />
 						<Property name="HidePerkInJudgement" value="false" />
 						<Property name="StatChanges" />
-						<Property name="AdditionalRewards" />
+						<Property name="AdditionalRewards">
+							<Property name="AdditionalRewards" value="WORD" />
+						</Property>
 						<Property name="ChainedJudgementID" value="OT_SS_S1C" />
 						<Property name="UsePolicyPerk" value="false" />
 						<Property name="UsePolicyStat" value="false" />
@@ -984,12 +990,14 @@
 									<Property name="SettlementStatType" value="Happiness" />
 								</Property>
 								<Property name="Strength" value="GcSettlementStatStrength">
-									<Property name="SettlementStatStrength" value="PositiveMedium" />
+									<Property name="SettlementStatStrength" value="PositiveSmall" />
 								</Property>
 								<Property name="DirectlyChangePopulation" value="false" />
 							</Property>
 						</Property>
-						<Property name="AdditionalRewards" />
+						<Property name="AdditionalRewards">
+							<Property name="AdditionalRewards" value="WORD" />
+						</Property>
 						<Property name="ChainedJudgementID" value="" />
 						<Property name="UsePolicyPerk" value="false" />
 						<Property name="UsePolicyStat" value="false" />

@@ -20,14 +20,14 @@
     "OT_SS_D3_O2": "Trade medicine for the trinket",
     "OT_SS_D3_T": "A Fevered Traveller",
     "OT_SS_D3_Q": "Give the traveller a bed?",
-    "OT_SS_D3_D": "A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack.",
-    "OT_SS_D4_O1": "Download the coordinates",
+    "OT_SS_D3_D": "A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover.",
+    "OT_SS_D4_O1": "Download the charts",
     "OT_SS_D4_O2": "Wire it into the perimeter sensors",
     "OT_SS_D4_T": "The Buried Beacon",
-    "OT_SS_D4_Q": "What should be done with the beacon?",
-    "OT_SS_D4_D": "Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates.",
+    "OT_SS_D4_Q": "What should be done with the booster?",
+    "OT_SS_D4_D": "Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts.",
     "OT_SS_D5_O1": "Fund a full festival (adds debt)",
-    "OT_SS_D5_O2": "Keep it small",
+    "OT_SS_D5_O2": "Keep it small and join in",
     "OT_SS_D5_T": "Festival of Lights",
     "OT_SS_D5_Q": "How big should the festival be?",
     "OT_SS_D5_D": "The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating.",
@@ -58,22 +58,22 @@
     "OT_SS_S1B_O2": "Hand them over for the bounty",
     "OT_SS_S1B_T": "Rumours",
     "OT_SS_S1B_Q": "Keep the stranger's secret?",
-    "OT_SS_S1B_D": "The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters.",
+    "OT_SS_S1B_D": "The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back.",
     "OT_SS_S1C_O1": "Stand together",
-    "OT_SS_S1C_O2": "Pay the crew to leave (adds debt)",
+    "OT_SS_S1C_O2": "Pay the pirates to leave (adds debt)",
     "OT_SS_S1C_T": "The Crew Comes Looking",
     "OT_SS_S1C_Q": "How should the settlement answer?",
-    "OT_SS_S1C_D": "A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely.",
+    "OT_SS_S1C_D": "A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely.",
     "OT_SS_S2B_O1": "Plant them for the settlement",
     "OT_SS_S2B_O2": "Keep the best, plant the rest",
     "OT_SS_S2B_T": "The Old Seeds",
     "OT_SS_S2B_Q": "What should become of the seeds?",
     "OT_SS_S2B_D": "Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown.",
     "OT_SS_S3B_O1": "Bring them home, with the relics",
-    "OT_SS_S3B_O2": "Bring them home, leave the relics",
+    "OT_SS_S3B_O2": "Leave the relics, copy the carvings",
     "OT_SS_S3B_T": "Shelter in the Ruins",
     "OT_SS_S3B_Q": "Bring the relics home?",
-    "OT_SS_S3B_D": "The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises.",
+    "OT_SS_S3B_D": "The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises.",
     "OT_SS_S3C_O1": "Put them on display",
     "OT_SS_S3C_O2": "Hand them to the Overseer (nanites)",
     "OT_SS_S3C_T": "The Relics",
@@ -208,6 +208,9 @@
       "options": [
         {
           "text": "OT_SS_D3_O1",
+          "rewards": [
+            "WORD"
+          ],
           "stat_changes": [
             [
               "MaxPopulation",
@@ -280,6 +283,9 @@
         },
         {
           "text": "OT_SS_D5_O2",
+          "rewards": [
+            "STANDING"
+          ],
           "stat_changes": [
             [
               "Happiness",
@@ -412,6 +418,9 @@
       "options": [
         {
           "text": "OT_SS_S1B_O1",
+          "rewards": [
+            "WORD"
+          ],
           "chain": "OT_SS_S1C"
         },
         {
@@ -508,10 +517,13 @@
         },
         {
           "text": "OT_SS_S3B_O2",
+          "rewards": [
+            "WORD"
+          ],
           "stat_changes": [
             [
               "Happiness",
-              "PositiveMedium"
+              "PositiveSmall"
             ]
           ]
         }

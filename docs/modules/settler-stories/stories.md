@@ -1,13 +1,13 @@
 # Settler Stories: story draft
 
-Draft, 2026-10-09. The content for the first release, now in `specs/OverseersToolkit-SettlerStories.json`. Steps link by route A (`ChainedJudgementID`); if Session 3 shows route A fails, only the links change. Route B is ruled out: in Session 3 a reward-fired follow-up replaced its own first step before any choice was made, which suggests the game runs option rewards when a judgement comes up (inferred).
+The content for the first release, in `specs/OverseersToolkit-SettlerStories.json`. Written 2026-10-09, rebalanced 2026-10-15 after Session 4. Steps link by `ChainedJudgementID` (route A, verified in Session 3b). Every decision and story step was seen in game in Sessions 3b and 3c except the options changed in the rebalance; those use only rewards proven in Session 4.
 
 Conventions:
 - Strengths follow the game's sign: `Positive` is good for the settlement, `Negative` is bad. For example, `Debt NegativeSmall` adds debt, and `Alert PositiveMedium` lowers the Sentinel alert.
 - Every outcome is shown before the choice (`HidePerkInJudgement` false); costs are named in the option text.
 - Options never change Alert or BugAttack: the choice screen has no label for them and shows a raw text key (seen in Session 3). Perks may change them.
-- Text is race-neutral. `%RACE%` goes in only if Session 3 shows the dilemma screen fills it in.
-- Player rewards use vanilla reward IDs: `R_J_GIFTITEM1` (500-600 nanites), `R_J_GIFTITEM2` (100,000-300,000 units), `R_J_BOUNTY` (200-500 quicksilver), `R_SETTL_NAVDATA` (1-5 navigation data), `R_J_GIFTITEM24` (salvaged technology), `R_J_GIFTITEM30` (a rare procedural item).
+- Text is race-neutral: the dilemma screen shows `%RACE%` literally (Session 4). The world stays No Man's Sky: pirates, signal boosters, ruins whose carvings teach words.
+- Player rewards use vanilla reward IDs: `R_J_GIFTITEM1` (500-600 nanites), `R_J_GIFTITEM2` (100,000-300,000 units), `R_J_BOUNTY` (200-500 quicksilver), `R_SETTL_NAVDATA` (1-5 navigation data), `R_J_GIFTITEM24` (Starship AI Valves), `R_J_GIFTITEM30` (a rare procedural item), `R_J_GIFTITEM10` (5 Hexaberries), `WORD` (one word, Gek in a Gek town) and `STANDING` (Gek standing in a Gek town). Whether `WORD` and `STANDING` follow the settlement's race or the star system's is unknown.
 - Settlement rewards are stat changes, new perks, and `R_SET_FW_PARTY` (a fireworks party).
 
 ## Single dilemmas
@@ -28,16 +28,18 @@ Conventions:
 
 ### D3. A Fevered Traveller (StrangerVisit)
 
-> A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack.
+> A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover.
 
-- **Give them a bed.** MaxPopulation PositiveSmall, Happiness NegativeSmall ("the settlers worry about the fever").
+- **Give them a bed (settlers worry).** Player: `WORD`. MaxPopulation PositiveSmall, Happiness NegativeSmall.
 - **Trade medicine for the trinket and send them on.** Player: `R_J_GIFTITEM30` (rare item).
 
 ### D4. The Buried Beacon (Request)
 
-> Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates.
+The title stays; the object is a signal booster, as in vanilla.
 
-- **Download the coordinates.** Player: `R_SETTL_NAVDATA` (navigation data).
+> Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts.
+
+- **Download the charts.** Player: `R_SETTL_NAVDATA` (navigation data).
 - **Wire it into the perimeter sensors.** Sentinels PositiveMedium.
 
 ### D5. Festival of Lights (Policy)
@@ -47,7 +49,7 @@ Conventions:
 `R_SET_FW_PARTY` picks its own reason for the party (for example "the coming of the cleansing rains"), so the text names none.
 
 - **Fund a full festival (adds debt).** `R_SET_FW_PARTY`, Happiness PositiveMedium, Debt NegativeSmall.
-- **Keep it small.** Happiness PositiveSmall.
+- **Keep it small and join in.** Player: `STANDING`. Happiness PositiveSmall.
 
 ### D6. The Wage Dispute (Conflict)
 
@@ -69,17 +71,17 @@ Conventions:
 
 **Step 2, Rumours.**
 
-> The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters.
+> The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back.
 
-- **Keep their secret.** Leads to step 3.
+- **Keep their secret.** Player: `WORD` (the stranger teaches a word). Leads to step 3.
 - **Hand them over for the bounty.** Player: `R_J_BOUNTY` (quicksilver). Happiness NegativeSmall.
 
 **Step 3, The Crew Comes Looking.**
 
-> A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely.
+> A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely.
 
 - **Stand together.** New perk **Sanctuary**: Happiness PositiveMedium, Alert NegativeSmall ("the settlement draws more attention").
-- **Pay the crew to leave (adds debt).** Debt NegativeMedium, Production PositiveSmall ("the deserter stays on as a worker").
+- **Pay the pirates to leave (adds debt).** Debt NegativeMedium, Production PositiveSmall ("the deserter stays on as a worker").
 
 ### S2. The Seed Vault (Request, two steps)
 
@@ -108,10 +110,10 @@ Conventions:
 
 **Step 2, Shelter in the Ruins.**
 
-> The search party found them sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises.
+> The search party found them sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises.
 
 - **Bring them home, with the relics.** Leads to step 3.
-- **Bring them home and leave the relics.** Happiness PositiveMedium.
+- **Leave the relics, copy the carvings.** Player: `WORD`. Happiness PositiveSmall.
 
 **Step 3, The Relics.**
 
@@ -120,8 +122,8 @@ Conventions:
 - **Put them on display.** New perk **Relic Hall**: Happiness PositiveSmall, Production PositiveSmall.
 - **Hand them to the Overseer.** Player: `R_J_GIFTITEM1` (nanites).
 
-## Balance, to finish after Session 3
+## Balance
 
-- **Player and settlement split.** 8 options pay the player and about 14 pay the settlement, roughly 35/65 against the 50/50 aim. Candidates to shift: word and standing rewards, if a probe shows the generic `WORD` and `STANDING` rewards (race `None`) resolve to the settlement's race; or one or two settlement options turned into player rewards.
+- **Player and settlement split.** Of 28 options, 12 pay the player (an item, currency, a word or standing), 12 pay only the settlement (stats, perks, the fireworks party), and 4 only lead to the next story step. Decided 2026-10-15: 50/50, reached with `WORD` and `STANDING`.
 - **Weightings.** Estimate, assuming the game picks a type by `JudgementSelectionWeights` among types that have judgements, then a judgement by `Weighting` within the type (inferred, not stated in the data). Vanilla totals per type: Conflict 9.0 (6 entries), Policy 7.0 (7), StrangerVisit 6.0 (7), Request 4.01 (4). With this draft's nine pool entries (4 Request, 2 Policy, 2 StrangerVisit, 1 Conflict) at weighting 1.0 each, about 1 decision in 5 is a Settler Stories one while no building choice is on offer, and about 1 in 10 while one is (BuildingChoice weighs 1.6). That meets the one-in-four-or-five aim at weighting 1.0. Four new Request entries would make up half of all Requests, so moving one Request story start to another type is worth considering.
 - **New perks.** Sanctuary, Ancient Orchard and Relic Hall copy vanilla `SENT_QUAR` as Defense's perk does. Like every perk grant, they can come up again once owned.

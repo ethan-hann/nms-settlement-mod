@@ -103,13 +103,13 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_D" />
-			<Property name="English" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack." />
-			<Property name="USEnglish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack." />
+			<Property name="English" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="USEnglish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_O1" />
-			<Property name="English" value="Download the coordinates" />
-			<Property name="USEnglish" value="Download the coordinates" />
+			<Property name="English" value="Download the charts" />
+			<Property name="USEnglish" value="Download the charts" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_O2" />
@@ -123,13 +123,13 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_Q" />
-			<Property name="English" value="What should be done with the beacon?" />
-			<Property name="USEnglish" value="What should be done with the beacon?" />
+			<Property name="English" value="What should be done with the booster?" />
+			<Property name="USEnglish" value="What should be done with the booster?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_D" />
-			<Property name="English" value="Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates." />
-			<Property name="USEnglish" value="Builders digging a new foundation hit an old survey beacon. It still hums, and its memory is full of coordinates." />
+			<Property name="English" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="USEnglish" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_O1" />
@@ -138,8 +138,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_O2" />
-			<Property name="English" value="Keep it small" />
-			<Property name="USEnglish" value="Keep it small" />
+			<Property name="English" value="Keep it small and join in" />
+			<Property name="USEnglish" value="Keep it small and join in" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_T" />
@@ -293,8 +293,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_D" />
-			<Property name="English" value="The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters." />
-			<Property name="USEnglish" value="The stranger has worked hard and kept to themselves. Now a passing pilot claims they are a deserter from a mercenary crew, and that the crew pays well for deserters." />
+			<Property name="English" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="USEnglish" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_O1" />
@@ -303,8 +303,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_O2" />
-			<Property name="English" value="Pay the crew to leave (adds debt)" />
-			<Property name="USEnglish" value="Pay the crew to leave (adds debt)" />
+			<Property name="English" value="Pay the pirates to leave (adds debt)" />
+			<Property name="USEnglish" value="Pay the pirates to leave (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_T" />
@@ -318,8 +318,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_D" />
-			<Property name="English" value="A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
-			<Property name="USEnglish" value="A dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="English" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="USEnglish" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_O1" />
@@ -353,8 +353,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_O2" />
-			<Property name="English" value="Bring them home, leave the relics" />
-			<Property name="USEnglish" value="Bring them home, leave the relics" />
+			<Property name="English" value="Leave the relics, copy the carvings" />
+			<Property name="USEnglish" value="Leave the relics, copy the carvings" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_T" />
@@ -368,8 +368,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_D" />
-			<Property name="English" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises." />
-			<Property name="USEnglish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in relics nobody recognises." />
+			<Property name="English" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="USEnglish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_O1" />
