@@ -26,12 +26,12 @@ body:
         - label: OverseersToolkit (core)
         - label: OverseersToolkit-Defense
         - label: OverseersToolkit-SettlementDecor
-        - label: OverseersToolkit-Probes
+        - label: OverseersToolkit-SettlerStories
   - type: input
     id: version
     attributes:
       label: Mod version
-      placeholder: e.g. 0.1.0
+      placeholder: e.g. 1.1.0
     validations:
       required: true
   - type: input
@@ -64,11 +64,22 @@ body:
         - Creative
         - Relaxed
         - Custom
+        - Expedition
   - type: input
     id: settlement
     attributes:
       label: Settlement class (if relevant)
       placeholder: e.g. B, A, S
+  - type: textarea
+    id: changes
+    attributes:
+      label: Anything changed recently?
+      description: Did you add, remove or update a module, or update the game, before this started? Removing a module deletes its parts once the game saves, and removing Settler Stories mid-story leaves a decision you can't answer.
+  - type: input
+    id: decision
+    attributes:
+      label: Decision on screen (Settler Stories, if relevant)
+      placeholder: e.g. "The Stranger at the Gate"
   - type: textarea
     id: other-mods
     attributes:
@@ -77,5 +88,5 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Logs / screenshots
-      description: Attach screenshots or relevant log output.
+      label: Screenshots
+      description: Attach screenshots of the problem. Please don't attach save files unless asked; they contain account details.
