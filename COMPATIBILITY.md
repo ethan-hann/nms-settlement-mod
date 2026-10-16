@@ -615,3 +615,27 @@ Appends to these vanilla lists:
 ### Adds new
 
 Nothing new.
+
+## OverseersToolkit-SettlerStories
+
+### Edits vanilla
+
+Appends to these vanilla lists:
+
+| File | List |
+|---|---|
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | Judgements |
+
+### Adds new
+
+| File | Entry |
+|---|---|
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | CustomJudgements[OT_SS_S1B] |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | CustomJudgements[OT_SS_S1C] |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | CustomJudgements[OT_SS_S2B] |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | CustomJudgements[OT_SS_S3B] |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | CustomJudgements[OT_SS_S3C] |
+| METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_SS_ORCHARD] |
+| METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_SS_RELICS] |
+| METADATA/REALITY/TABLES/SETTLEMENTPERKSTABLE.EXML | Table[OT_SS_SANCTUARY] |
+| LocTable.MXML | (whole file) |

@@ -1,5 +1,23 @@
 # Changes
 
+## 1.1.0
+
+A new optional module, Settler Stories, and warnings about removing modules.
+
+**Read before removing any module**
+- When the game saves without a module installed, it deletes every part that module added, and the save cannot get them back. Back up saves before removing a module. Settlement Decor's parts are the game's own and stay.
+- Parts missing after an uninstall or a game update are still in the save until the game saves again (autosaves included): quit without saving and reinstall the module.
+- Remove Settler Stories only when no story step is waiting at any settlement. Otherwise that settlement's terminal shows a decision that cannot be answered until Settler Stories is reinstalled and the step answered.
+
+**OverseersToolkit-SettlerStories (new, optional)**
+- Six new settlement decisions: a night market, salvage from a crashed freighter, a fevered traveller, a buried signal booster, a festival and a wage dispute.
+- Three short stories of two and three steps: a stranger at the gate with pirates on their trail, a vault of ancient seeds, and an overdue survey team. Each step follows the previous choice at once. Story steps send no alert, so check the overseer's terminal.
+- Every outcome is shown before choosing. Half the options reward the player (units, nanites, quicksilver, items, alien words, standing) and half the settlement (happiness, productivity, a fireworks party, and three new features: Sanctuary, Ancient Orchard and Relic Hall).
+- The new decisions mix in with the game's own, roughly one in five while no building choice is waiting.
+
+**Existing modules**
+- Unchanged. Every 1.0.0 part and perk keeps its ID, so existing builds and settlements carry over.
+
 ## 1.0.0
 
 First release. Three modules; each works alone.

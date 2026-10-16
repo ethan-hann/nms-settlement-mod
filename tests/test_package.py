@@ -82,4 +82,4 @@ def test_every_module_in_the_repo_is_either_shipped_or_marked_test_only():
 
 
 def test_the_repo_version_is_well_formed():
-    assert package.read_version(REPO / "VERSION") == "1.0.0"
+    assert package.read_version(REPO / "VERSION") == "1.1.0"

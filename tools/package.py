@@ -15,13 +15,16 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-SHIPPED = ["OverseersToolkit", "OverseersToolkit-Defense", "OverseersToolkit-SettlementDecor"]
+SHIPPED = [
+    "OverseersToolkit",
+    "OverseersToolkit-Defense",
+    "OverseersToolkit-SettlementDecor",
+    "OverseersToolkit-SettlerStories",
+]
 # Kept in the repo for test sessions; installing them changes how the game plays.
-# SettlerStories holds placeholder test text until its stories are written.
 TEST_ONLY = [
     "OverseersToolkit-Probes",
     "OverseersToolkit-TestTuning",
-    "OverseersToolkit-SettlerStories",
     "OverseersToolkit-StoryTuning",
     "OverseersToolkit-RewardProbes",
     "OverseersToolkit-BrokenProbe",

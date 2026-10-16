@@ -21,7 +21,6 @@ REPO = Path(__file__).resolve().parent.parent
 EXCLUDED_MODULES = (
     "OverseersToolkit-Probes",
     "OverseersToolkit-TestTuning",
-    "OverseersToolkit-SettlerStories",
     "OverseersToolkit-StoryTuning",
     "OverseersToolkit-RewardProbes",
     "OverseersToolkit-BrokenProbe",
