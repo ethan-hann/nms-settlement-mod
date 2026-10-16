@@ -32,6 +32,7 @@ The game deletes a placed part the moment it saves without the module that adds 
 - Generated modules: edit the spec in `specs/` and rerun the generators. `tests/test_modules.py` fails when a generated file is edited by hand or goes stale.
 - Test first: write the failing test before the implementation and see it fail on an assertion (an import or harness error is not a red). Record the observed red in the commit message. When a test passes on its first run, break the code on purpose once to prove it can fail.
 - Run Python through `tools/.venv` and the full suite with `tools/.venv/Scripts/python.exe -m pytest -q` before every commit.
+- CI (`.github/workflows/tests.yml`) runs the suite on every PR and on pushes to main. It has no game data, so the tests that need `scratch/extracted` skip there, including the stale-module checks. A green CI run does not replace the local run.
 - Check facts against the extracted game data in `scratch/` before proposing a design, and mark findings as verified, inferred or unknown.
 
 ## In-game sessions
