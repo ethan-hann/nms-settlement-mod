@@ -44,7 +44,7 @@ Settler Stories adds new decisions to the ones your settlement already asks you 
 - **Six one-off decisions:** a night market, salvage from a crashed freighter, a fevered traveller, a buried signal booster, a festival and a wage dispute.
 - **Three short stories:** a stranger at the gate with pirates on their trail, a vault of ancient seeds, and a survey team overdue from the ridge. Each next step comes straight after your choice, so answer it at the terminal before you walk away.
 - **Every outcome is shown before you choose,** and most are good or mixed. About half the options reward you (units, nanites, quicksilver, items, alien words, standing) and half reward the settlement (happiness, productivity, new features).
-- They mix in with the game's own decisions: roughly one in five while no building choice is waiting.
+- They mix in with the game's own decisions.
 
 Story steps don't send an alert. Check the overseer's terminal for the next decision.
 
@@ -80,7 +80,7 @@ A few things worth knowing:
 
 - Path tiles flatten the ground under them, so your streets stay flat.
 - The Path Lamp lights up with no power hookup. 💡
-- The fortify judgement is rare on purpose: about once every 18 hours of judgements, and judgements are drawn independently, so it doesn't come in bursts.
+- The fortify judgement is rare on purpose: about once every 18 hours of judgements (about 30 with Settler Stories installed), and judgements are drawn independently, so it doesn't come in bursts.
 
 ## Compatibility
 
@@ -122,7 +122,7 @@ COMPATIBILITY.md     generated list of vanilla edits
 CHANGES.md           release notes
 ```
 
-`OverseersToolkit-Probes` and `OverseersToolkit-TestTuning` live in `mod/` for test sessions only and are never packaged.
+`OverseersToolkit-Probes`, `-TestTuning`, `-StoryTuning`, `-RewardProbes` and `-BrokenProbe` live in `mod/` for test sessions only and are never packaged. `-BrokenProbe` holds a field the game does not know, on purpose.
 
 ### Setup (Windows, PowerShell)
 
@@ -158,7 +158,7 @@ python tools\testmode.py exit
 python tools\testmode.py status
 ```
 
-`enter` backs up your saves and settings, installs the modules as `_OTDEV_*` folders and points the game's mod list at them. It refuses when the test slot holds parts from a module you left out, because saving without that module would delete them. `exit` removes them, restores the mod list byte for byte, and proves nothing changed outside the test slot. Both refuse while the game is running. Local paths and the test slot go in `scratch/testmode.local.json`.
+`enter` backs up your saves and settings, installs the modules as `_OTDEV_*` folders and points the game's mod list at them. It refuses when the test slot holds parts from a module you left out, because saving without that module would delete them. Until a session has recorded the test slot, it checks every slot from 6 up. `exit` removes them, restores the mod list byte for byte, and proves nothing changed outside the test slot. Both refuse while the game is running. Local paths and the test slot go in `scratch/testmode.local.json`.
 
 > Always use **Load** and pick the test slot. Never press **Continue**.
 

@@ -238,3 +238,12 @@ Consequences:
 - **Removing SettlerStories while a story step is pending soft-locks that town's decisions** until it is reinstalled. Recovery: reinstall, answer the step, remove again. Release notes and the README need this before SettlerStories ships.
 - Game updates that rename a single field are less dangerous than feared: the rest of the patch still applies.
 - `WORD` and `STANDING` are usable player rewards for race-neutral stories. `%RACE%` and the gift give no race flavour.
+
+## 2026-10-15: 1.1.0 release prep
+
+Decided 2026-10-15: ship Settler Stories as 1.1.0 with the removal warning first in the README section and the changelog, and rebalance the options to an even player and settlement split (see [modules/settler-stories/stories.md](modules/settler-stories/stories.md)).
+
+- **Packaging.** SettlerStories ships; Probes, TestTuning, StoryTuning, RewardProbes and BrokenProbe are test-only, and a test pins both lists.
+- **Testmode guard.** Until a session records the test slot, `enter` checks every slot from 6 up for parts from modules left out, instead of skipping the check. Tests now cover a real compressed save and the slot's second save file.
+- **Fortify rate.** SettlerStories adds four Request decisions at weighting 1.0, so with it installed, fortify drops from about once every 18 hours of judgements to about once every 30 (same inferred draw model as 1.0.0).
+- **Not yet seen in game:** the four options changed in the rebalance (they use only reward types proven in Session 4), the Orchard and Relic Hall perks, and the bounty path.

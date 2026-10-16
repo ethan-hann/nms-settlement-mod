@@ -13,10 +13,11 @@ A new optional module, Settler Stories, and warnings about removing modules.
 - Six new settlement decisions: a night market, salvage from a crashed freighter, a fevered traveller, a buried signal booster, a festival and a wage dispute.
 - Three short stories of two and three steps: a stranger at the gate with pirates on their trail, a vault of ancient seeds, and an overdue survey team. Each step follows the previous choice at once. Story steps send no alert, so check the overseer's terminal.
 - Every outcome is shown before choosing. Half the options reward the player (units, nanites, quicksilver, items, alien words, standing) and half the settlement (happiness, productivity, a fireworks party, and three new features: Sanctuary, Ancient Orchard and Relic Hall).
-- The new decisions mix in with the game's own, roughly one in five while no building choice is waiting.
+- The new decisions mix in with the game's own.
 
 **Existing modules**
 - Unchanged. Every 1.0.0 part and perk keeps its ID, so existing builds and settlements carry over.
+- With Settler Stories installed, Defense's "Fortify the perimeter?" comes up less often, about once every 30 hours of judgements instead of 18, because four of the new decisions are requests too.
 
 ## 1.0.0
 

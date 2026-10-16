@@ -1,5 +1,7 @@
 # Settler Stories: build plan
 
+Superseded: the slice and the StoryProbes module described here were replaced after Session 3; see [../../progress.md](../../progress.md) for Sessions 3 to 4 and the 1.1.0 release.
+
 Written 2026-10-09 after the second research pass in [vanilla-findings.md](vanilla-findings.md). Covers steps 2 to 4 of [plan.md](plan.md): extend the tooling, build a small vertical slice, and test it in one session. Writing the full pack (step 5) and packaging (step 6) wait for the session results.
 
 ## What the session has to settle
