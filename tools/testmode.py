@@ -21,6 +21,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 
+import save_inspect
 from nmsenv import game_running
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -32,6 +33,10 @@ MODULES = {
     "testtuning": "OverseersToolkit-TestTuning",
     "probes": "OverseersToolkit-Probes",
     "decor": "OverseersToolkit-SettlementDecor",
+    "stories": "OverseersToolkit-SettlerStories",
+    "storytuning": "OverseersToolkit-StoryTuning",
+    "rewardprobes": "OverseersToolkit-RewardProbes",
+    "brokenprobe": "OverseersToolkit-BrokenProbe",
 }
 DEV_PREFIX = "_OTDEV_"
 # The game writes its merged mod data here when the test-only debug flag is on.
@@ -366,6 +371,62 @@ def known_test_slot(env):
     return (read_json(env.local_file, {}) or {}).get("test_slot")
 
 
+OBJECTS_TABLE = Path("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")
+
+
+VANILLA_OBJECTS = Path("scratch/extracted/metadata/reality/tables/basebuildingobjectstable.MXML")
+
+
+def _object_ids(table):
+    return {e.get("_id") for e in ET.parse(table).getroot().iter("Property") if e.get("_id")}
+
+
+def parts_by_module(env):
+    """{module key: set of part IDs it adds}; vanilla parts a module only edits are never at risk."""
+    vanilla_table = Path(env.repo_root) / VANILLA_OBJECTS
+    if not vanilla_table.is_file():
+        raise Refused(f"{vanilla_table} is missing, so new parts cannot be told from vanilla ones; run tools/extract.py")
+    vanilla = _object_ids(vanilla_table)
+    found = {}
+    for key, folder in MODULES.items():
+        table = Path(env.repo_root) / "mod" / folder / OBJECTS_TABLE
+        if table.is_file():
+            ids = _object_ids(table) - vanilla
+            if ids:
+                found[key] = ids
+    return found
+
+
+def refuse_if_test_slot_loses_parts(env, modules):
+    """The game deletes placed parts whose module is missing as soon as the save is written."""
+    owners = parts_by_module(env)
+    profile = Path(env.save_root) / env.profile
+    slot = known_test_slot(env)
+    if slot is None:
+        # Until a session records the test slot, any free slot could be it.
+        slots = sorted({s for p in profile.iterdir() if (s := slot_of(p.name)) and s >= FIRST_FREE_SLOT})
+    else:
+        slots = [slot]
+    names = [name for s in slots for name in slot_files(s)[:2]]
+    placed = set()
+    for name in names:
+        path = profile / name
+        if not path.is_file():
+            continue
+        try:
+            text = json.dumps(save_inspect.read_save(path))
+        except Exception as e:
+            raise Refused(f"cannot read test save {name} to check its placed parts: {e}") from e
+        placed |= {m.group(1) for m in re.finditer(r'"\^([A-Za-z0-9_]+)"', text)}
+    at_risk = {key: sorted(ids & placed) for key, ids in owners.items() if key not in modules and ids & placed}
+    if at_risk:
+        detail = "; ".join(f"{key}: {', '.join(ids[:5])}{' ...' if len(ids) > 5 else ''}" for key, ids in at_risk.items())
+        raise Refused(
+            f"the test save holds parts from modules not requested ({detail}); "
+            f"saving without them deletes those parts. Add {', '.join(at_risk)} to --modules"
+        )
+
+
 def dev_folders_present(env):
     if not env.mods_dir.is_dir():
         return []
@@ -389,6 +450,7 @@ def enter(env, modules, with_user_mods=False):
     missing = [str(p) for p in sources.values() if not p.is_dir()]
     if missing:
         raise Refused(f"module source missing: {', '.join(missing)}")
+    refuse_if_test_slot_loses_parts(env, modules)
     stale = dev_folders_present(env)
     if stale:
         raise Refused(f"dev folders already in MODS without an open session: {', '.join(stale)}")
@@ -517,7 +579,7 @@ def exit_session(env):
     if state is None:
         raise Refused("no test session is open")
     if state.get("status") != "open":
-        raise Refused(f"session status is {state.get('status')}; resolve it with Ethan first")
+        raise Refused(f"session status is {state.get('status')}; resolve it with the maintainer first")
     backup = Path(state["backup_dir"])
     manifest, settings_backup, before = _verified_backup(backup)
     failures = []
@@ -613,7 +675,7 @@ def status(env):
 
 
 def resolve(env, note):
-    """Archive a failed session after Ethan has reviewed it. Never touches game or save files."""
+    """Archive a failed session after the maintainer has reviewed it. Never touches game or save files."""
     state = read_json(env.state_file)
     if state is None or state.get("status") != "failed":
         raise Refused("there is no failed session to resolve")
@@ -634,7 +696,7 @@ def main(argv=None):
     p_enter.add_argument("--with-user-mods", action="store_true")
     sub.add_parser("exit")
     sub.add_parser("status")
-    p_resolve = sub.add_parser("resolve", help="archive a failed session after Ethan approved")
+    p_resolve = sub.add_parser("resolve", help="archive a failed session after the maintainer approved")
     p_resolve.add_argument("--note", required=True)
     args = parser.parse_args(argv)
 
@@ -654,7 +716,7 @@ def main(argv=None):
                 if result.copied:
                     print(f"Copied to {env.saves_copy_dir}: {', '.join(result.copied)}")
                 return 0
-            print("SAFETY CHECK FAILED. Stop and report these to Ethan:")
+            print("SAFETY CHECK FAILED. Stop and report these to the maintainer:")
             for f in result.failures:
                 print("  " + f)
             return 2

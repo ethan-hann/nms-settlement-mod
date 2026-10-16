@@ -8,6 +8,7 @@ import pytest
 
 import testmode
 from testmode import Env, Refused
+from test_save_inspect import encode_save
 
 # Per-process name, so test runs in parallel checkouts never see each other's fake game.
 UNIQUE_PROC = f"OTF{os.getpid()}.exe"
@@ -290,7 +291,7 @@ def test_later_session_allows_only_the_recorded_slot(fake_tree):
     env = make_env(fake_tree)
     env.local_file.write_text(json.dumps({"test_slot": 6}))
     profile = fake_tree["saves"] / "st_1"
-    (profile / "save11.hg").write_bytes(b"creative")
+    (profile / "save11.hg").write_bytes(b'{"save": "creative"}')
     testmode.enter(env, ["core"])
     (profile / "save11.hg").write_bytes(b"creative, played")
     (profile / "save13.hg").write_bytes(b"another new game")
@@ -475,7 +476,7 @@ def test_deleting_the_known_test_slot_is_allowed(fake_tree):
     env.local_file.write_text(json.dumps({"test_slot": 6}))
     profile = fake_tree["saves"] / "st_1"
     for name in ("save11.hg", "save12.hg", "mf_save11.hg", "mf_save12.hg"):
-        (profile / name).write_bytes(b"old creative game")
+        (profile / name).write_bytes(b'{"save": "old creative game"}')
     testmode.enter(env, ["core"])
     for name in ("save11.hg", "save12.hg", "mf_save11.hg", "mf_save12.hg"):
         (profile / name).unlink()
@@ -528,3 +529,99 @@ def test_an_export_folder_that_existed_before_the_session_is_left_alone_and_chec
     assert old.read_text() == "rewritten during the session"
     assert not result.ok
     assert any("EXPORTED" in f for f in result.failures)
+
+
+# --- placed parts in the test slot ---------------------------------------------
+
+OBJECTS_TABLE = "METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML"
+
+
+def with_test_slot_parts(tree, part_ids, slot=6, recorded=True):
+    """Give core two parts, place part_ids in the slot's saves, and record the slot unless told not to."""
+    core = tree["repo"] / "mod/OverseersToolkit" / OBJECTS_TABLE
+    core.write_text(
+        '<Data template="GcBaseBuildingTable"><Property name="Objects">'
+        '<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_CURB" />'
+        '<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_LAMP" />'
+        "</Property></Data>",
+        encoding="utf-8",
+    )
+    if recorded:
+        (tree["repo"] / "scratch/testmode.local.json").write_text(json.dumps({"test_slot": slot}), encoding="utf-8")
+    vanilla = tree["repo"] / "scratch/extracted/metadata/reality/tables/basebuildingobjectstable.MXML"
+    vanilla.parent.mkdir(parents=True, exist_ok=True)
+    vanilla.write_text(
+        '<Data template="GcBaseBuildingTable"><Property name="Objects">'
+        '<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BARREL1" />'
+        "</Property></Data>",
+        encoding="utf-8",
+    )
+    save = {"Objects": [{"ObjectID": "^" + p} for p in part_ids]}
+    for name in testmode.slot_files(slot)[:2]:
+        (tree["saves"] / tree["profile"] / name).write_text(json.dumps(save), encoding="utf-8")
+
+
+def test_enter_refuses_when_the_test_slot_holds_parts_from_a_module_left_out(fake_tree):
+    with_test_slot_parts(fake_tree, ["OT_CURB", "S_BARREL1"])
+    env = make_env(fake_tree)
+    settings_before = gcmodsettings(fake_tree).read_bytes()
+
+    with pytest.raises(Refused, match=r"core.*OT_CURB"):
+        testmode.enter(env, ["probes"])
+
+    assert gcmodsettings(fake_tree).read_bytes() == settings_before
+    assert not fake_tree["backups"].exists()
+    assert testmode.dev_folders_present(env) == []
+
+
+def test_enter_accepts_a_test_slot_whose_parts_come_from_requested_modules(fake_tree):
+    with_test_slot_parts(fake_tree, ["OT_CURB", "OT_LAMP", "S_BARREL1"])
+    testmode.enter(make_env(fake_tree), ["core", "probes"])
+
+
+def test_enter_ignores_parts_no_repo_module_defines(fake_tree):
+    with_test_slot_parts(fake_tree, ["S_BARREL1", "BUILDPAVING"])
+    testmode.enter(make_env(fake_tree), ["probes"])
+
+
+def test_enter_refuses_when_the_test_slot_save_cannot_be_read(fake_tree):
+    with_test_slot_parts(fake_tree, [])
+    (fake_tree["saves"] / fake_tree["profile"] / "save11.hg").write_bytes(b"not a save")
+    with pytest.raises(Refused, match="save11.hg"):
+        testmode.enter(make_env(fake_tree), ["probes"])
+    assert not fake_tree["backups"].exists()
+
+
+def test_enter_ignores_vanilla_parts_a_module_only_edits(fake_tree):
+    with_test_slot_parts(fake_tree, ["S_BARREL1"])
+    probes = fake_tree["repo"] / "mod/OverseersToolkit-Probes" / OBJECTS_TABLE
+    probes.parent.mkdir(parents=True, exist_ok=True)
+    probes.write_text(
+        '<Data template="GcBaseBuildingTable"><Property name="Objects">'
+        '<Property name="Objects" value="GcBaseBuildingEntry" _id="S_BARREL1" />'
+        "</Property></Data>",
+        encoding="utf-8",
+    )
+    testmode.enter(make_env(fake_tree), ["core"])
+
+
+def test_enter_finds_parts_in_a_real_format_save_in_the_slots_second_file(fake_tree):
+    with_test_slot_parts(fake_tree, [])
+    second = fake_tree["saves"] / fake_tree["profile"] / testmode.slot_files(6)[1]
+    # The earlier, longer ID makes LZ4 store OT_CURB as a back-reference, so only a real decode finds it.
+    objects = [{"ObjectID": "^OT_CURB_RETIRED"}, {"ObjectID": "^OT_CURB"}]
+    second.write_bytes(encode_save({"BaseContext": {"Objects": objects}}, chunk=4096))
+    with pytest.raises(Refused, match=r"core.*OT_CURB"):
+        testmode.enter(make_env(fake_tree), ["probes"])
+
+
+def test_enter_checks_every_free_slot_when_no_test_slot_is_recorded(fake_tree):
+    with_test_slot_parts(fake_tree, ["OT_CURB"], slot=7, recorded=False)
+    with pytest.raises(Refused, match=r"core.*OT_CURB"):
+        testmode.enter(make_env(fake_tree), ["probes"])
+    assert not fake_tree["backups"].exists()
+
+
+def test_enter_without_a_recorded_slot_leaves_the_real_game_slots_alone(fake_tree):
+    with_test_slot_parts(fake_tree, ["OT_CURB"], slot=2, recorded=False)
+    testmode.enter(make_env(fake_tree), ["probes"])

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_BP_T" />
+			<Property name="English" value="[TEST] Broken Patch Probe" />
+			<Property name="USEnglish" value="[TEST] Broken Patch Probe" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_BP_Q" />
+			<Property name="English" value="[TEST] Did this load?" />
+			<Property name="USEnglish" value="[TEST] Did this load?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_BP_D" />
+			<Property name="English" value="[TEST] This decision comes from a patch file that also sets a field the game does not have. If you can read this, the game ignored the bad field and loaded the rest of the file." />
+			<Property name="USEnglish" value="[TEST] This decision comes from a patch file that also sets a field the game does not have. If you can read this, the game ignored the bad field and loaded the rest of the file." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_BP_O1" />
+			<Property name="English" value="[TEST] It loaded" />
+			<Property name="USEnglish" value="[TEST] It loaded" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_BP_O2" />
+			<Property name="English" value="[TEST] Noted" />
+			<Property name="USEnglish" value="[TEST] Noted" />
+		</Property>
+	</Property>
+</Data>

@@ -1,0 +1,105 @@
+{
+  "text": {
+    "OT_RP_P1_T": "[TEST] Probe: Race and Words",
+    "OT_RP_P1_Q": "[TEST] Which reward should arrive?",
+    "OT_RP_P1_D": "[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing.",
+    "OT_RP_P1_O1": "[TEST] Teach me a word",
+    "OT_RP_P1_O2": "[TEST] Raise my standing",
+    "OT_RP_P2_T": "[TEST] Probe: A Gift",
+    "OT_RP_P2_Q": "[TEST] Accept the gift?",
+    "OT_RP_P2_D": "[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives.",
+    "OT_RP_P2_O1": "[TEST] Accept the gift",
+    "OT_RP_P2_O2": "[TEST] Decline",
+    "OT_RP_P3_T": "[TEST] Probe: Leave This Pending",
+    "OT_RP_P3_Q": "[TEST] Start the follow-up?",
+    "OT_RP_P3_D": "[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit.",
+    "OT_RP_P3_O1": "[TEST] Start the follow-up",
+    "OT_RP_P3_O2": "[TEST] Not now",
+    "OT_RP_H": "[TEST] Removal probe",
+    "OT_RP_P3B_T": "[TEST] The Pending Step",
+    "OT_RP_P3B_Q": "[TEST] Leave this unanswered",
+    "OT_RP_P3B_D": "[TEST] Do not answer this one. Save and quit to desktop with it still waiting.",
+    "OT_RP_P3B_O1": "[TEST] Answered anyway",
+    "OT_RP_P3B_O2": "[TEST] Also answered"
+  },
+  "judgements": [
+    {
+      "name": "OT_RP_P1",
+      "copy_from": 8,
+      "type": "Policy",
+      "weighting": 1.0,
+      "title": "OT_RP_P1_T",
+      "question": "OT_RP_P1_Q",
+      "dilemma": "OT_RP_P1_D",
+      "options": [
+        {
+          "text": "OT_RP_P1_O1",
+          "rewards": [
+            "WORD"
+          ]
+        },
+        {
+          "text": "OT_RP_P1_O2",
+          "rewards": [
+            "STANDING"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OT_RP_P2",
+      "copy_from": 15,
+      "type": "StrangerVisit",
+      "weighting": 1.0,
+      "title": "OT_RP_P2_T",
+      "question": "OT_RP_P2_Q",
+      "dilemma": "OT_RP_P2_D",
+      "options": [
+        {
+          "text": "OT_RP_P2_O1",
+          "gift": true
+        },
+        {
+          "text": "OT_RP_P2_O2"
+        }
+      ]
+    },
+    {
+      "name": "OT_RP_P3",
+      "copy_from": 2,
+      "type": "Conflict",
+      "weighting": 1.0,
+      "title": "OT_RP_P3_T",
+      "question": "OT_RP_P3_Q",
+      "dilemma": "OT_RP_P3_D",
+      "options": [
+        {
+          "text": "OT_RP_P3_O1",
+          "chain": "OT_RP_P3B"
+        },
+        {
+          "text": "OT_RP_P3_O2"
+        }
+      ]
+    }
+  ],
+  "custom_judgements": [
+    {
+      "id": "OT_RP_P3B",
+      "copy_from": "J_SENT_MISS_4B",
+      "type": "Conflict",
+      "header": "OT_RP_H",
+      "title": "OT_RP_P3B_T",
+      "question": "OT_RP_P3B_Q",
+      "dilemma": "OT_RP_P3B_D",
+      "options": [
+        {
+          "text": "OT_RP_P3B_O1"
+        },
+        {
+          "text": "OT_RP_P3B_O2"
+        }
+      ]
+    }
+  ]
+}

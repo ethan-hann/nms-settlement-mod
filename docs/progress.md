@@ -32,14 +32,14 @@ Session 1 ran in three short rounds on a new creative save, which became test sl
 
 Results:
 
-- **Safety:** every exit restored GCMODSETTINGS and removed `_OTDEV_PROBES`; protected saves and all other mods verified unchanged each time. The last exit flagged only the slot 6 files Ethan deleted in game to start a new creative game; he approved and it was resolved. `testmode` now allows deleting the known test slot.
+- **Safety:** every exit restored GCMODSETTINGS and removed `_OTDEV_PROBES`; protected saves and all other mods verified unchanged each time. The last exit flagged only the slot 6 files the maintainer deleted in game to start a new creative game; that was approved and resolved. `testmode` now allows deleting the known test slot.
 - **P4 (open settlements): no.** With `RadiusMultiplier_DoNotPlaceAnywhereNear` at 0.000001 (pak-root globals patch), the base computer still showed "Cannot Build // Within Existing Base" (`BASEBUILD_INVALID_INSIDE_BASE`) until about 312u from the settlement marker. That matches the vanilla `MinRadiusForBases` of 300, so the settlement appears to count as a base with that radius. Unconfirmed: whether a pak-root globals patch loads at all; the visible check for it was in round 2, which crashed.
 - **P1, P2, P3, new subgroup: inconclusive.** No probe part appeared, and no star (MOD) tab. Creative games know an explicit list (`difficultyconfig` `StartWithAllItemsKnownEnabledData.InitialKnownThings.KnownProducts`, 1386 IDs), which lists no new part and not DECALPATH. New parts need a way to become known before any of these can be judged.
 - **P5, P6, P8:** not reached (P8 needs an owned settlement; P6 was not reported).
 - **Crashes:** rounds 2 and 3 crashed while loading the test save and while creating a new creative game (crash IDs 180836M_0x4BE63F and 180836M_0x9BD78A). Round 1 loaded fine. Added in every crashing run: a mission appended to the empty `modmissiontable` (copied from vanilla GLASS_FIX, empty StartingConditions, inline recipe reward; it crashed even when teaching a vanilla part); `MinRadiusForBases` 100 and `BuildingPlacementMaxDistance` 150; BUILDPAVING in a second subgroup; the probe judgement's perk grant in its correct `GcSettlementJudgementPerkOption` form (round 1's malformed form compiled to an empty grant). The mission is the prime suspect but is not proven.
 - **Save facts:** settlements live in a 100-entry ring buffer (`SettlementStatesV2`), most entries empty (address 0); a nearby settlement the player never visited is not stored. `save_inspect.py` now skips empty entries and reads the game mode from `DifficultyState`.
 
-Process change (Ethan's feedback): no more iterating probes in game. Open questions get answered offline first (installed mods, public mod scripts, docs, data validation), and the rest is batched into one short Session 2.
+Process change: no more iterating probes in game. Open questions get answered offline first (installed mods, public mod scripts, docs, data validation), and the rest is batched into one short Session 2.
 
 ### Correction, same evening: globals belong under GLOBALS/
 
@@ -74,21 +74,21 @@ The in-game spike could not run: the newest NMS.py is 180383.0 and the game is 1
 | 3. Place DECALPATH from code | No spawn, place or add function exists in NMS.py, its examples, or any public runtime mod. Finding the game's commit-a-part function means reverse engineering the 7.x exe. Writing straight into the object vector would not create the world object. | **No-go today** |
 | 4. Flatten terrain | `ApplyTerrainEditFlatten` is declared, but its arguments and the beam instance are not. | Optional, low odds |
 
-**Decision: no-go for a runtime path tool.** Per the plan, the fallback is the offline save-edit planner. It works on a copy of the creative test slot, and installing it needs Ethan's approval.
+**Decision: no-go for a runtime path tool.** Per the plan, the fallback is the offline save-edit planner. It works on a copy of the creative test slot, and installing it needs the maintainer's approval.
 
 Its pieces are known:
 - The save codec is in `save_inspect.py`.
 - The base frame is in `runtime/spikes/base_frame.py`.
 - Objects are `{"ObjectID", "Position", "Up", "At", "Timestamp", "UserData"}` entries in `PersistentPlayerBases[*].Objects`.
-- Ethan's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
+- The maintainer's earlier corvette scripts already write saves and their `mf_` metadata (never tested in game).
 
-The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs Ethan's GitHub or Discord account.
+The untested spike sketches in `runtime/spikes/` stay for when NMS.py catches up; each file states its assumptions. Asking upstream about a placement function needs the maintainer's GitHub or Discord account.
 
 ## 2026-10-06: Session 2, part A, and the fixes it led to
 
 `testmode enter --modules core,open,defense,testtuning`, a new creative game in slot 6, with the test-only `SaveOutModdedMetadata` export on. Exit passed every safety check; the game's export went to `scratch/exported/20261006-222620`, and `tools/check_export.py` found every module edit in it (the cost table is not part of the export).
 
-What Ethan saw:
+What the test session showed:
 - No crash creating or loading the game.
 - Decoration > SETTLEMENT listed the kit under its English names; the Tower Pillar sat under Structural Adornments.
 - A base computer could be claimed about 110u from the settlement centre, against about 312u before.
@@ -107,10 +107,10 @@ Causes, from the game files:
 - The repeat decision is the test tuning; judgements have no "already owned" condition, so a rare repeat in normal play costs debt for no new perk.
 - The menu flip is the game choosing between overlapping base and settlement areas. It is a side effect of OpenSettlements and of gBase Boundary alike.
 
-Ethan's calls (2026-10-06):
+Decided 2026-10-06:
 - The data-display signpost did not read as a sign. It is replaced by 24 vanilla signs copied under their vanilla names (so every game language has them): the Illuminated Sign, Standing Sign, Station Billboard, the holographic displays, the Gek, Korvax and Vy'keen emblem decals and the number decals 0 to 9. They unlock at class A.
 - Scope: new optional module `OverseersToolkit-SettlementDecor` sets `BuildableOnPlanet` on every planet-base part in the Decoration, Exotics and Wall Art groups (489 today), leaving out the 13 lights that draw power. `gen_parts.py` gained `group_edits` to generate it from the vanilla groups. Side effect: those parts can also be placed outside any base.
-- The side-effect check for the smaller base radius is settled by his own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
+- The side-effect check for the smaller base radius is settled by the maintainer's own play: gBase Boundary sets the same field to 10, and buildings and points of interest spawn normally.
 
 ## 2026-10-07: Session 2, final pass
 
@@ -122,7 +122,7 @@ Launch 1, `testmode enter --modules core,open,defense,decor,testtuning` (export 
 - Perimeter Watch is still in the settlement's features.
 - `check_export.py` on the five installed modules: every edit landed except the cost table, which the export does not include.
 
-Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/20261007-202657`): the SETTLEMENT section and the placed parts were still there. Two expected differences in the export, both from Ethan's mods loading over ours:
+Launch 2, the same modules plus `--with-user-mods` (export `scratch/exported/20261007-202657`): the SETTLEMENT section and the placed parts were still there. Two expected differences in the export, both from the maintainer's mods loading over ours:
 - gBase Boundary sets `MinRadiusForBases` to 10 instead of our 15 (listed in COMPATIBILITY.md).
 - The merged timer mod sets `JudgementWaitTimeMin`/`Max` to 20/30 instead of TestTuning's 60/120. TestTuning is test-only, so this does not affect a release.
 
@@ -132,23 +132,23 @@ Session 2 is closed. No open in-game questions remain from it.
 
 ## 2026-10-07: OpenSettlements dropped
 
-Ethan's call. Every part the mod adds is now built from the settlement's own menu (`BuildableOnPlanet`), so no base is needed to build in a settlement. The module's only remaining use was claiming a base beside a settlement for base-only parts (walls, floors, pads, powered tech). That came at a cost: it shrank the starting radius of every new base, made the build menu flip near settlements, and conflicted with gBase Boundary, which already does the same thing at radius 10.
+Decided. Every part the mod adds is now built from the settlement's own menu (`BuildableOnPlanet`), so no base is needed to build in a settlement. The module's only remaining use was claiming a base beside a settlement for base-only parts (walls, floors, pads, powered tech). That came at a cost: it shrank the starting radius of every new base, made the build menu flip near settlements, and conflicted with gBase Boundary, which already does the same thing at radius 10.
 
-Removed: `mod/OverseersToolkit-OpenSettlements`, its test, and the `open` key in `testmode.py`. COMPATIBILITY.md is regenerated, and a scan of Ethan's MODS folder now finds no conflicts, only shared files. For the release facts: players who want full base-building next to a settlement can add gBase Boundary alongside this mod.
+Removed: `mod/OverseersToolkit-OpenSettlements`, its test, and the `open` key in `testmode.py`. COMPATIBILITY.md is regenerated, and a scan of the maintainer's MODS folder now finds no conflicts, only shared files. For the release facts: players who want full base-building next to a settlement can add gBase Boundary alongside this mod.
 
 ## 2026-10-07: NMS.py trial on build 180836
 
-Ethan asked to try NMS.py 180383.0 on game build 180836 anyway. Setup: uv-managed Python 3.13.14 and `nmspy==180383.0` (pymhf 0.2.4) in `runtime/.venv`, outside the tools venv. NMS.py has no version lock; it uses the exe hash only to name its pattern cache. The session ran under `testmode` (core, defense, decor, testtuning), and exit passed every safety check.
+NMS.py 180383.0 was tried on game build 180836 anyway. Setup: uv-managed Python 3.13.14 and `nmspy==180383.0` (pymhf 0.2.4) in `runtime/.venv`, outside the tools venv. NMS.py has no version lock; it uses the exe hash only to name its pattern cache. The session ran under `testmode` (core, defense, decor, testtuning), and exit passed every safety check.
 
 Result: NMS.exe crashed during startup on every launch, before the main menu and before FullLog.txt got any content. Windows logged Application Error 1000 each time: fault in ntdll.dll, exception 0xc0000374 (heap corruption).
 - Two launches with spike 1 (`pymhf run runtime/spikes/spike1_log_base_objects.py`): injection completed, the pattern cache was written, the mod GUI opened, and then the game died after resuming.
 - One launch of bare NMS.py (`pymhf run nmspy`, with an empty mod folder): same crash. The cause is NMS.py's own startup hooks (`cTkFSM.StateChange`, `cTkFSMState.StateChange`, `cGcApplication.Update`) on 180836, not our spike.
 
-Conclusion: NMS.py 180383.0 does not run on 180836. The runtime path tool waits for an NMS.py release for the current build. `SUPPORTED_BUILDS` is back to 180383 only. An upstream issue with these crash details would need Ethan's GitHub account.
+Conclusion: NMS.py 180383.0 does not run on 180836. The runtime path tool waits for an NMS.py release for the current build. `SUPPORTED_BUILDS` is back to 180383 only. An upstream issue with these crash details would need the maintainer's GitHub account.
 
 ## 2026-10-07: Release prep (M8), 1.0.0
 
-Ethan's calls: version 1.0.0; the fortify decision should be rare, about once every 18 hours of judgements.
+Decided: version 1.0.0; the fortify decision should be rare, about once every 18 hours of judgements.
 
 - **Fortify rate.** The vanilla pool has four Request judgements (total weighting 4.01), and Request is drawn for about 20% of judgements when BuildingChoice is not on offer. At weighting 1.0, fortify came up about once every 28 hours; it is now 1.8, about once every 18 hours (6.3% of judgements; two in a row 0.4%). Judgements are drawn independently, so the rate does not cluster. There is still no way in data to stop it after the perk is owned.
 - **Packaging.** `tools/package.py` writes `dist/<Module>-<version>.zip` for OverseersToolkit, -Defense and -SettlementDecor. Each zip holds the module folder and only the files the loader reads. Probes and TestTuning are test-only; a test fails if a module is in neither list. The version lives in `VERSION`.
@@ -159,6 +159,91 @@ Release facts, for the Nexus page and README:
 - Install: extract each zip into `GAMEDATA/MODS`. Core works alone; Defense and SettlementDecor are optional and independent of each other and of core.
 - Use: become a settlement's overseer and open the build menu inside the settlement; the parts are under Decoration > SETTLEMENT (SettlementDecor adds parts to the other decor tabs).
 - Not yet seen in game: the class B, A and S unlock missions granting parts in a normal (non-creative) game. They load without errors, but no test session reached a B-class building.
-- Compatibility: COMPATIBILITY.md lists every vanilla entry and field each module edits. Against Ethan's 55 installed mods, the scan finds no field conflicts. gBase Boundary is a good companion for building base-only parts beside a settlement.
+- Compatibility: COMPATIBILITY.md lists every vanilla entry and field each module edits. Against the maintainer's 55 installed mods, the scan finds no field conflicts. gBase Boundary is a good companion for building base-only parts beside a settlement.
 - Multiplayer: every part reuses a vanilla scene, so visitors without the mod see the meshes.
 - Known limits: the fortify decision can repeat after Perimeter Watch is owned; the Settlement Path decal is not buildable (its scene is an empty marker); no path-drawing tool yet (waits for an NMS.py release for the current game build).
+
+## 2026-10-09: Settler Stories tooling and test slice, pending Session 3
+
+Plan, findings and decisions are in [modules/settler-stories/](modules/settler-stories/plan.md).
+
+- **Generator.** `gen_settlement.py` writes custom judgements (Weighting 0), option chains, vanilla reward IDs and gift options. It rejects a chain that targets anything but a custom judgement, a story step no pool option can reach, and a chain loop. Options no longer inherit a chain from their source. A new module test fails when a generator stops writing a file, which the byte-for-byte check alone missed.
+- **save_inspect.** Reports each settlement's race, pending custom judgement and last judgement time.
+- **Test slice.** `OverseersToolkit-SettlerStories` (route A: a pool option chains to custom step `OT_SS_A2`) and the hand-written `OverseersToolkit-StoryProbes` (route B: a pool option's reward fires custom step `OT_SSP_B2`). Both are test-only and all text is marked [TEST]. Both merge and compile against vanilla.
+- **Session 3 asks:** does route A or B start the follow-up, and how soon; does `%RACE%` show the town's race; do the nanites reward, the perk and the gift arrive; does a follow-up ever appear on its own.
+
+## 2026-10-09: Session 3, Settler Stories chains
+
+Modules: SettlerStories test slice (route A), StoryProbes (route B), TestTuning, on the creative test slot.
+
+- **Route B fails.** The custom step fired by a reward on a pool option (`OT_SSP_B2`) appeared on its own, 4 times in a row, with no other decision shown. The save confirms 5 judgements settled (12 before, 17 after): one vanilla expedition debrief left pending from earlier play, then the 4 probe steps. Inferred cause: option rewards run when a judgement is drawn, and the fired judgement overrides it. The StoryProbes module is removed; it is in history at 533460a.
+- **Route A untested.** Its first step never came up while route B's reward was installed.
+- The custom step showed up only at the overseer terminal, with no in-game alert, 2 to 4 minutes apart.
+- Safety: exit passed all checks.
+
+## 2026-10-09: Session 3b, route A
+
+Modules: SettlerStories (the real content) and TestTuning, on the creative test slot.
+
+- **Route A works.** A Sealed Vault led straight to The Old Seeds, and Overdue to Shelter in the Ruins and then The Relics, each at once and with the story's own header. No story step appeared on its own. Item, productivity and nanite rewards arrived as previewed.
+- **Alert has no label on the choice screen.** The Buried Beacon's second option showed the raw key `UI_SETTLEMENT_STAT_HAPPY_FMT` for its Alert change; no vanilla option changes Alert. The generator now rejects Alert and BugAttack in options, and those options use Sentinels instead.
+- "Keep the best, plant the rest" paid out a random rare item (a predator skull); it now gives Hexaberries.
+- Not yet seen in game: the Policy, StrangerVisit and Conflict dilemmas, the three-step Stranger at the Gate story, and the three perks. TestTuning favors Request.
+- Safety: exit passed all checks.
+
+## 2026-10-12: Session 3c, the other decision types
+
+Modules: SettlerStories and StoryTuning, on the creative test slot.
+
+- **All five non-Request dilemmas work:** The Night Market, The Wage Dispute, A Fevered Traveller, Festival of Lights and A Stranger at the Gate show correct text and labels, and their stat, item and quicksilver previews match what arrives.
+- **The three-step story works.** A Stranger at the Gate led straight to Rumours and then The Crew Comes Looking; Stand together added the Sanctuary feature, confirmed in the save. Turn them away ended the story with its reward.
+- **Festival of Lights** set off fireworks only when funded. `R_SET_FW_PARTY` shows its own random reason for the party, so the dilemma text no longer names one.
+- The Wage Dispute came up three times because it is the only Conflict dilemma left under StoryTuning; normal play mixes it with the vanilla Conflict judgements.
+- Not taken in game: Hand them over for the bounty (its 405 quicksilver preview showed), and the Ancient Orchard and Relic Hall perks (the same perk mechanism as Sanctuary).
+- **Placed parts are deleted when a save is loaded and saved without the module that adds them.** The test slot held 38 OT_CURB and other OT_ parts on 2026-10-09; Sessions 3 and 3b ran without core, and by 2026-10-12 every OT_ part was gone while vanilla parts stayed. Test sessions on this slot need the modules whose parts it holds, and players need an uninstall warning. The 2026-10-09 backup (`overseers-toolkit-backups/20261009-192543`) still has the parts.
+- Safety: exit passed all checks.
+
+## 2026-10-12: Keeping placed parts safe for existing players
+
+1.0.0 has about 370 downloads and is in a Nexus collection (Beyond Infinity, 89 mods), so player builds and update resilience now matter more than new features.
+
+Verified in Sessions 3 and 3b: loading and saving without the module that adds a placed part deletes that part. Vanilla parts a module only edits (everything SettlementDecor touches) survive. Core adds 29 parts and Defense 1; SettlementDecor adds none.
+
+The rules that follow from this (permanent part IDs, loadable earlier parts, the game-update check) are in `AGENTS.md`.
+
+Open questions, for a session before the next release:
+- What the game's mod loader does when a partial patch no longer matches after a game update: skip one file, skip the whole module, or stop loading. If it skips a module, a game update alone could delete builds when the player saves.
+- Answered: a town perk whose module is missing is hidden, not deleted. Session 3c ran without Defense; the town did not show Perimeter Watch, yet the save still lists `OT_WATCH`, and nothing crashed. Whether it returns, and whether a hidden perk still changes stats, goes to Session 4.
+- What happens to a save whose pending decision is a Settler Stories step (`PendingCustomJudgementID` set to an `OT_SS_` ID) when SettlerStories is removed. Must be tested before SettlerStories ships.
+
+## 2026-10-15: Session 4, probes, removal and a broken patch
+
+Three launches on the creative test slot. Safety: every exit passed all checks.
+
+**Part A** (RewardProbes, StoryTuning):
+- `%RACE%` in judgement text is shown literally; the dilemma screen does not fill it in.
+- The vanilla `WORD` reward taught Gek words ("Gek", "friend") and `STANDING` raised Gek standing, both previewed on the option. The town is Gek and sits in a Gek system, so whether they follow the settlement's race or the system's is unknown.
+- `UseGiftReward` gives a random item from the general gift list (nanites, Hex Core, Glowing Mineral), not the race list.
+- A two-step probe story was left with its second step pending at save time (`PendingCustomJudgementID` `OT_RP_P3B`).
+
+**Part B** (core and Defense only, so the pending step's module was missing):
+- The save loads, but the terminal's "Greet settlement visitor" opens a placeholder decision (header "Judgement", subheading "Sub heading", raw `UI_SETTLEMENT_STAT_*_FMT` labels, `%NUM%` text, unrelated NPC dialogue) whose options cannot be chosen. The game had to be closed with Alt+F4. The step stays pending in the save, so this repeats until the module is back. The rest of the terminal works.
+- Perimeter Watch, hidden while Defense was missing in Session 3c, shows again with Defense installed: a missing-module perk is hidden and returns, never deleted.
+
+**Part C** (BrokenProbe, SettlerStories, StoryTuning, RewardProbes):
+- With RewardProbes back, the pending step opened normally and answering it cleared it from the save.
+- A patch file that sets a field the game does not have still loads: the game ignores that field and applies the rest of the file (BrokenProbe's decision appeared). Other modules were unaffected. Only an unknown field was tested; a renamed list or a template mismatch is still unknown.
+
+Consequences:
+- **Removing SettlerStories while a story step is pending soft-locks that town's decisions** until it is reinstalled. Recovery: reinstall, answer the step, remove again. Release notes and the README need this before SettlerStories ships.
+- Game updates that rename a single field are less dangerous than feared: the rest of the patch still applies.
+- `WORD` and `STANDING` are usable player rewards for race-neutral stories. `%RACE%` and the gift give no race flavour.
+
+## 2026-10-15: 1.1.0 release prep
+
+Decided 2026-10-15: ship Settler Stories as 1.1.0 with the removal warning first in the README section and the changelog, and rebalance the options to an even player and settlement split (see [modules/settler-stories/stories.md](modules/settler-stories/stories.md)).
+
+- **Packaging.** SettlerStories ships; Probes, TestTuning, StoryTuning, RewardProbes and BrokenProbe are test-only, and a test pins both lists.
+- **Testmode guard.** Until a session records the test slot, `enter` checks every slot from 6 up for parts from modules left out, instead of skipping the check. Tests now cover a real compressed save and the slot's second save file.
+- **Fortify rate.** SettlerStories adds four Request decisions at weighting 1.0, so with it installed, fortify drops from about once every 18 hours of judgements to about once every 30 (same inferred draw model as 1.0.0).
+- **Not yet seen in game:** the four options changed in the rebalance (they use only reward types proven in Session 4), the Orchard and Relic Hall perks, and the bounty path.

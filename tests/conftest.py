@@ -86,7 +86,8 @@ def fake_tree(tmp_path):
     repo = tmp_path / "repo"
     write(repo / "mod/OverseersToolkit/METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML", "<Data />")
     write(repo / "mod/OverseersToolkit-Probes/LocTable.MXML", "<Data />")
-    (repo / "scratch").mkdir(parents=True)
+    write(repo / "scratch/extracted/metadata/reality/tables/basebuildingobjectstable.MXML", "<Data />")
+    (repo / "scratch").mkdir(parents=True, exist_ok=True)
 
     return {
         "game": game,

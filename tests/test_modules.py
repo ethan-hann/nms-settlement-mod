@@ -107,7 +107,29 @@ def test_generated_files_match_the_spec(module):
         assert path.read_text(encoding="utf-8") == text, f"{rel} is stale; rerun the generators in tools/"
 
 
-@pytest.mark.parametrize("module", MODULES)
+# Probes holds hand-written probe patches beside its generated files.
+MIXED_MODULES = {"OverseersToolkit-Probes"}
+
+
+@pytest.mark.parametrize("module", [m for m in SPEC_MODULES if m not in MIXED_MODULES])
+def test_generated_modules_hold_only_generated_files(module):
+    # The byte check above only covers files the generators still write; a dropped file would pass it.
+    expected = {Path(rel).as_posix() for rel in generated_files(spec_of(module))}
+    present = {p.relative_to(MODS / module).as_posix() for p in (MODS / module).rglob("*") if p.is_file()}
+    assert present == expected
+
+
+# BrokenProbe is broken on purpose, to show in game what the mod loader does with a stale patch.
+BROKEN_ON_PURPOSE = "OverseersToolkit-BrokenProbe"
+
+
+def test_the_broken_probe_fails_only_on_its_missing_field(tmp_path):
+    results = merge_preview.preview_module(MODS / BROKEN_ON_PURPOSE, tmp_path)
+    failures = [f"{r.patch.name}: {r.message}" for r in results if not r.ok]
+    assert len(failures) == 1 and "OT_NoSuchField" in failures[0], failures
+
+
+@pytest.mark.parametrize("module", [m for m in MODULES if m != BROKEN_ON_PURPOSE])
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)
     assert results, f"{module} has no patches"

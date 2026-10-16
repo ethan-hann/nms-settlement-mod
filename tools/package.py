@@ -15,9 +15,20 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-SHIPPED = ["OverseersToolkit", "OverseersToolkit-Defense", "OverseersToolkit-SettlementDecor"]
+SHIPPED = [
+    "OverseersToolkit",
+    "OverseersToolkit-Defense",
+    "OverseersToolkit-SettlementDecor",
+    "OverseersToolkit-SettlerStories",
+]
 # Kept in the repo for test sessions; installing them changes how the game plays.
-TEST_ONLY = ["OverseersToolkit-Probes", "OverseersToolkit-TestTuning"]
+TEST_ONLY = [
+    "OverseersToolkit-Probes",
+    "OverseersToolkit-TestTuning",
+    "OverseersToolkit-StoryTuning",
+    "OverseersToolkit-RewardProbes",
+    "OverseersToolkit-BrokenProbe",
+]
 
 VERSION_RE = re.compile(r"\d+\.\d+\.\d+")
 
