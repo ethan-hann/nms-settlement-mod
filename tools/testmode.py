@@ -399,26 +399,30 @@ def parts_by_module(env):
 
 def refuse_if_test_slot_loses_parts(env, modules):
     """The game deletes placed parts whose module is missing as soon as the save is written."""
-    slot = known_test_slot(env)
-    if slot is None:
-        return
     owners = parts_by_module(env)
     profile = Path(env.save_root) / env.profile
+    slot = known_test_slot(env)
+    if slot is None:
+        # Until a session records the test slot, any free slot could be it.
+        slots = sorted({s for p in profile.iterdir() if (s := slot_of(p.name)) and s >= FIRST_FREE_SLOT})
+    else:
+        slots = [slot]
+    names = [name for s in slots for name in slot_files(s)[:2]]
     placed = set()
-    for name in slot_files(slot)[:2]:
+    for name in names:
         path = profile / name
         if not path.is_file():
             continue
         try:
             text = json.dumps(save_inspect.read_save(path))
         except Exception as e:
-            raise Refused(f"cannot read test slot save {name} to check its placed parts: {e}") from e
+            raise Refused(f"cannot read test save {name} to check its placed parts: {e}") from e
         placed |= {m.group(1) for m in re.finditer(r'"\^([A-Za-z0-9_]+)"', text)}
     at_risk = {key: sorted(ids & placed) for key, ids in owners.items() if key not in modules and ids & placed}
     if at_risk:
         detail = "; ".join(f"{key}: {', '.join(ids[:5])}{' ...' if len(ids) > 5 else ''}" for key, ids in at_risk.items())
         raise Refused(
-            f"the test slot holds parts from modules not requested ({detail}); "
+            f"the test save holds parts from modules not requested ({detail}); "
             f"saving without them deletes those parts. Add {', '.join(at_risk)} to --modules"
         )
 

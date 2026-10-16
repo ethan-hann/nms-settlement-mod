@@ -8,6 +8,7 @@ import pytest
 
 import testmode
 from testmode import Env, Refused
+from test_save_inspect import encode_save
 
 # Per-process name, so test runs in parallel checkouts never see each other's fake game.
 UNIQUE_PROC = f"OTF{os.getpid()}.exe"
@@ -535,8 +536,8 @@ def test_an_export_folder_that_existed_before_the_session_is_left_alone_and_chec
 OBJECTS_TABLE = "METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML"
 
 
-def with_test_slot_parts(tree, part_ids, slot=6):
-    """Configure the test slot, give core two parts, and place part_ids in the slot's saves."""
+def with_test_slot_parts(tree, part_ids, slot=6, recorded=True):
+    """Give core two parts, place part_ids in the slot's saves, and record the slot unless told not to."""
     core = tree["repo"] / "mod/OverseersToolkit" / OBJECTS_TABLE
     core.write_text(
         '<Data template="GcBaseBuildingTable"><Property name="Objects">'
@@ -545,7 +546,8 @@ def with_test_slot_parts(tree, part_ids, slot=6):
         "</Property></Data>",
         encoding="utf-8",
     )
-    (tree["repo"] / "scratch/testmode.local.json").write_text(json.dumps({"test_slot": slot}), encoding="utf-8")
+    if recorded:
+        (tree["repo"] / "scratch/testmode.local.json").write_text(json.dumps({"test_slot": slot}), encoding="utf-8")
     vanilla = tree["repo"] / "scratch/extracted/metadata/reality/tables/basebuildingobjectstable.MXML"
     vanilla.parent.mkdir(parents=True, exist_ok=True)
     vanilla.write_text(
@@ -601,3 +603,25 @@ def test_enter_ignores_vanilla_parts_a_module_only_edits(fake_tree):
         encoding="utf-8",
     )
     testmode.enter(make_env(fake_tree), ["core"])
+
+
+def test_enter_finds_parts_in_a_real_format_save_in_the_slots_second_file(fake_tree):
+    with_test_slot_parts(fake_tree, [])
+    second = fake_tree["saves"] / fake_tree["profile"] / testmode.slot_files(6)[1]
+    # The earlier, longer ID makes LZ4 store OT_CURB as a back-reference, so only a real decode finds it.
+    objects = [{"ObjectID": "^OT_CURB_RETIRED"}, {"ObjectID": "^OT_CURB"}]
+    second.write_bytes(encode_save({"BaseContext": {"Objects": objects}}, chunk=4096))
+    with pytest.raises(Refused, match=r"core.*OT_CURB"):
+        testmode.enter(make_env(fake_tree), ["probes"])
+
+
+def test_enter_checks_every_free_slot_when_no_test_slot_is_recorded(fake_tree):
+    with_test_slot_parts(fake_tree, ["OT_CURB"], slot=7, recorded=False)
+    with pytest.raises(Refused, match=r"core.*OT_CURB"):
+        testmode.enter(make_env(fake_tree), ["probes"])
+    assert not fake_tree["backups"].exists()
+
+
+def test_enter_without_a_recorded_slot_leaves_the_real_game_slots_alone(fake_tree):
+    with_test_slot_parts(fake_tree, ["OT_CURB"], slot=2, recorded=False)
+    testmode.enter(make_env(fake_tree), ["probes"])

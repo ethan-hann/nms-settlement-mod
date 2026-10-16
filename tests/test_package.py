@@ -71,8 +71,24 @@ def test_rebuilding_replaces_the_old_zip(tmp_path):
 
 
 def test_test_only_modules_are_never_shipped():
-    assert "OverseersToolkit-TestTuning" not in package.SHIPPED
-    assert "OverseersToolkit-Probes" not in package.SHIPPED
+    test_only = {
+        "OverseersToolkit-TestTuning",
+        "OverseersToolkit-Probes",
+        "OverseersToolkit-StoryTuning",
+        "OverseersToolkit-RewardProbes",
+        "OverseersToolkit-BrokenProbe",
+    }
+    assert set(package.TEST_ONLY) == test_only
+    assert not test_only & set(package.SHIPPED)
+
+
+def test_the_shipped_modules_are_the_four_released_ones():
+    assert set(package.SHIPPED) == {
+        "OverseersToolkit",
+        "OverseersToolkit-Defense",
+        "OverseersToolkit-SettlementDecor",
+        "OverseersToolkit-SettlerStories",
+    }
 
 
 def test_every_module_in_the_repo_is_either_shipped_or_marked_test_only():
