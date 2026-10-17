@@ -112,7 +112,7 @@ def product_of(built, id_):
 
 def label(spec, key):
     assert key in spec.get("text", {}), f"no text for {key}"
-    return spec["text"][key]
+    return gen_parts.english(spec["text"][key])
 
 
 def test_kit_is_the_path_parts_lamp_and_signs_copied_from_their_vanilla_sources(spec):
@@ -186,7 +186,8 @@ def test_no_kit_sign_draws_power(built):
 
 def test_text_is_plain_player_facing_english(spec):
     assert spec.get("text"), "the spec has no text"
-    for key, value in spec.get("text", {}).items():
+    for key, text in spec.get("text", {}).items():
+        value = gen_parts.english(text)
         assert re.search(r"\b(probe|test)", value, re.I) is None, f"{key}: {value!r}"
         assert value.isascii(), key
 

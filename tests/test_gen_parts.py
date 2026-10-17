@@ -257,6 +257,88 @@ def test_text_becomes_a_loc_table_in_english_and_us_english(vanilla):
     assert "_id" not in entry.attrib
 
 
+VANILLA_COLUMNS = [
+    "English", "French", "Italian", "German", "Spanish", "Russian", "Polish", "Dutch", "Portuguese",
+    "LatinAmericanSpanish", "BrazilianPortuguese", "SimplifiedChinese", "TraditionalChinese", "TencentChinese",
+    "Korean", "Japanese", "USEnglish",
+]
+OTHER_LANGUAGES = [lang for lang in VANILLA_COLUMNS if lang not in ("English", "USEnglish")]
+
+
+def translated(english, **overrides):
+    text = {"English": english, **{lang: f"{lang} {english}" for lang in OTHER_LANGUAGES}}
+    text.update(overrides)
+    return text
+
+
+def loc_entry(text, vanilla):
+    (entry,) = list(get(files({"text": {"OT_KEY": text}}, vanilla)["LocTable.MXML"], "Table"))
+    return entry
+
+
+def columns(entry):
+    return {c.get("name"): c.get("value") for c in entry if c.get("name") != "Id"}
+
+
+def test_loc_entries_fill_every_vanilla_column_in_vanilla_order(vanilla):
+    entry = loc_entry("Path Tile", vanilla)
+    assert [c.get("name") for c in entry] == ["Id"] + VANILLA_COLUMNS
+
+
+def test_untranslated_text_repeats_the_english_in_every_column(vanilla):
+    assert set(columns(loc_entry("Path Tile", vanilla)).values()) == {"Path Tile"}
+
+
+def test_translations_fill_their_own_columns(vanilla):
+    cols = columns(loc_entry(translated("Path Tile", French="Dalle de chemin"), vanilla))
+    assert cols["French"] == "Dalle de chemin"
+    assert cols["Japanese"] == "Japanese Path Tile"
+    assert cols["English"] == cols["USEnglish"] == "Path Tile"
+
+
+def test_a_pending_translation_repeats_the_english(vanilla):
+    cols = columns(loc_entry(translated("Path Tile", Korean=None), vanilla))
+    assert cols["Korean"] == "Path Tile"
+    assert cols["French"] == "French Path Tile"
+
+
+def test_a_translation_left_in_english_must_be_marked_pending(vanilla):
+    with pytest.raises(SpecError, match="OT_KEY.*Polish.*pending"):
+        loc_entry(translated("Path Tile", Polish="Path Tile"), vanilla)
+
+
+def test_an_empty_translation_is_an_error(vanilla):
+    with pytest.raises(SpecError, match="OT_KEY.*Dutch"):
+        loc_entry(translated("Path Tile", Dutch=" "), vanilla)
+
+
+def test_every_language_must_be_listed(vanilla):
+    text = translated("Path Tile")
+    del text["German"]
+    with pytest.raises(SpecError, match="OT_KEY.*German"):
+        loc_entry(text, vanilla)
+
+
+def test_unknown_languages_are_an_error(vanilla):
+    with pytest.raises(SpecError, match="OT_KEY.*Klingon"):
+        loc_entry(translated("Path Tile", Klingon="x"), vanilla)
+
+
+def test_us_english_always_matches_english(vanilla):
+    with pytest.raises(SpecError, match="OT_KEY.*USEnglish"):
+        loc_entry(translated("Path Tile", USEnglish="Path Tile"), vanilla)
+
+
+def test_a_translation_keeps_the_english_placeholders(vanilla):
+    with pytest.raises(SpecError, match="OT_KEY.*German.*%NUM%"):
+        loc_entry(translated("Pay %NUM% units", German="Zahle Einheiten"), vanilla)
+
+
+def test_english_reads_either_text_form():
+    assert gen_parts.english("Path Tile") == "Path Tile"
+    assert gen_parts.english(translated("Path Tile")) == "Path Tile"
+
+
 def test_unknown_source_part_is_an_error(vanilla):
     with pytest.raises(SpecError, match="NOPE"):
         gen_parts.build({"parts": [{"id": "OT_X", "copy_from": "NOPE"}]}, vanilla)

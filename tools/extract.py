@@ -44,7 +44,7 @@ FILTERS = [
     "metadata/gamestate/defaultsavedata*",
     "metadata/simulation/missions/tables/npcmissiontable*",
     "metadata/simulation/missions/tables/fleetmissiontable*",
-    "language/*english*",
+    "language/nms_*",
 ]
 
 

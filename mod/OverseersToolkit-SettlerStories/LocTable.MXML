@@ -4,396 +4,1581 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_SANCTUARY_N" />
 			<Property name="English" value="Sanctuary" />
+			<Property name="French" value="Sanctuaire" />
+			<Property name="Italian" value="Santuario" />
+			<Property name="German" value="Zuflucht" />
+			<Property name="Spanish" value="Santuario" />
+			<Property name="Russian" value="Укрытие" />
+			<Property name="Polish" value="Sanktuarium" />
+			<Property name="Dutch" value="Toevluchtsoord" />
+			<Property name="Portuguese" value="Santuário" />
+			<Property name="LatinAmericanSpanish" value="Santuario" />
+			<Property name="BrazilianPortuguese" value="Santuário" />
+			<Property name="SimplifiedChinese" value="庇护所" />
+			<Property name="TraditionalChinese" value="庇護所" />
+			<Property name="TencentChinese" value="庇护所" />
+			<Property name="Korean" value="성역" />
+			<Property name="Japanese" value="聖域" />
 			<Property name="USEnglish" value="Sanctuary" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_SANCTUARY_DS" />
 			<Property name="English" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="French" value="La colonie a soutenu l'un des siens. Le moral est au beau fixe, mais des étrangers l'ont remarqué." />
+			<Property name="Italian" value="L'insediamento ha difeso uno dei suoi. Il morale è alto, anche se gli esterni se ne sono accorti." />
+			<Property name="German" value="Die Siedlung stand zu einem der Ihren. Die Stimmung ist gut, doch Außenstehende sind aufmerksam geworden." />
+			<Property name="Spanish" value="El asentamiento apoyó a uno de los suyos. La moral está alta, aunque los forasteros se han fijado." />
+			<Property name="Russian" value="Поселение вступилось за одного из своих. Настроение отличное, хотя посторонние уже обратили на это внимание." />
+			<Property name="Polish" value="Osada stanęła w obronie jednego ze swoich. Nastroje są świetne, choć obcy już to zauważyli." />
+			<Property name="Dutch" value="De nederzetting stond achter een van de eigen mensen. Het moreel is hoog, al hebben buitenstaanders het gemerkt." />
+			<Property name="Portuguese" value="O povoamento apoiou um dos seus. O ânimo é elevado, embora os forasteiros tenham reparado." />
+			<Property name="LatinAmericanSpanish" value="El asentamiento respaldó a uno de los suyos. La moral está alta, aunque los forasteros lo notaron." />
+			<Property name="BrazilianPortuguese" value="O povoado apoiou um dos seus. O ânimo está alto, mas gente de fora percebeu." />
+			<Property name="SimplifiedChinese" value="定居点挺身守护了自己人，士气高涨，不过外人已经注意到了这里。" />
+			<Property name="TraditionalChinese" value="聚居地挺身守護了自己人，士氣高昂，不過外人已經注意到這裡。" />
+			<Property name="TencentChinese" value="定居点挺身守护了自己人，士气高涨，不过外人已经注意到了这里。" />
+			<Property name="Korean" value="거주지가 식구 한 명을 지켜 주었습니다. 사기는 높지만 외부인들의 이목도 끌게 되었습니다." />
+			<Property name="Japanese" value="開拓地は仲間の一人を守り抜いた。士気は高いが、外部の者たちも注目し始めている。" />
 			<Property name="USEnglish" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_ORCHARD_N" />
 			<Property name="English" value="Ancient Orchard" />
+			<Property name="French" value="Verger ancestral" />
+			<Property name="Italian" value="Frutteto antico" />
+			<Property name="German" value="Uralter Obstgarten" />
+			<Property name="Spanish" value="Huerto ancestral" />
+			<Property name="Russian" value="Древний сад" />
+			<Property name="Polish" value="Starożytny sad" />
+			<Property name="Dutch" value="Eeuwenoude boomgaard" />
+			<Property name="Portuguese" value="Pomar Antigo" />
+			<Property name="LatinAmericanSpanish" value="Huerto ancestral" />
+			<Property name="BrazilianPortuguese" value="Pomar antigo" />
+			<Property name="SimplifiedChinese" value="远古果园" />
+			<Property name="TraditionalChinese" value="遠古果園" />
+			<Property name="TencentChinese" value="远古果园" />
+			<Property name="Korean" value="고대 과수원" />
+			<Property name="Japanese" value="古代の果樹園" />
 			<Property name="USEnglish" value="Ancient Orchard" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_ORCHARD_DS" />
 			<Property name="English" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="French" value="Une culture que personne de vivant n'avait jamais cultivée prospère désormais dans les champs de la colonie." />
+			<Property name="Italian" value="Una coltura che nessun vivente aveva mai coltivato, ora rigogliosa nei campi dell'insediamento." />
+			<Property name="German" value="Eine Pflanze, die zu Lebzeiten niemand angebaut hat, gedeiht nun auf den Feldern der Siedlung." />
+			<Property name="Spanish" value="Un cultivo que nadie vivo había cultivado jamás, ahora floreciente en los campos del asentamiento." />
+			<Property name="Russian" value="Культура, которую никто из ныне живущих не выращивал, теперь буйно растет на полях поселения." />
+			<Property name="Polish" value="Roślina, której nikt z żyjących nigdy nie uprawiał, teraz bujnie rośnie na polach osady." />
+			<Property name="Dutch" value="Een gewas dat niemand die nu leeft ooit heeft geteeld, groeit nu goed op de velden van de nederzetting." />
+			<Property name="Portuguese" value="Uma cultura que ninguém vivo alguma vez cultivou, agora a prosperar nos campos do povoamento." />
+			<Property name="LatinAmericanSpanish" value="Un cultivo que nadie vivo había cultivado antes, ahora próspero en los campos del asentamiento." />
+			<Property name="BrazilianPortuguese" value="Uma colheita que ninguém vivo jamais cultivou, agora prosperando nos campos do povoado." />
+			<Property name="SimplifiedChinese" value="一种在世者无人种过的作物，如今在定居点的田地里茁壮生长。" />
+			<Property name="TraditionalChinese" value="一種在世者無人種過的作物，如今在聚居地的田地裡茁壯生長。" />
+			<Property name="TencentChinese" value="一种在世者无人种过的作物，如今在定居点的田地里茁壮生长。" />
+			<Property name="Korean" value="살아 있는 누구도 길러 본 적 없는 작물이 거주지 밭에서 무럭무럭 자라고 있습니다." />
+			<Property name="Japanese" value="生きている者の誰も育てたことのない作物が、開拓地の畑で元気に育っている。" />
 			<Property name="USEnglish" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_RELICS_N" />
 			<Property name="English" value="Relic Hall" />
+			<Property name="French" value="Salle des reliques" />
+			<Property name="Italian" value="Sala delle reliquie" />
+			<Property name="German" value="Relikthalle" />
+			<Property name="Spanish" value="Sala de vestigios" />
+			<Property name="Russian" value="Зал реликвий" />
+			<Property name="Polish" value="Hala artefaktów" />
+			<Property name="Dutch" value="Relikwiehal" />
+			<Property name="Portuguese" value="Salão das Relíquias" />
+			<Property name="LatinAmericanSpanish" value="Sala de artefactos" />
+			<Property name="BrazilianPortuguese" value="Salão das relíquias" />
+			<Property name="SimplifiedChinese" value="遗物大厅" />
+			<Property name="TraditionalChinese" value="遺物大廳" />
+			<Property name="TencentChinese" value="遗物大厅" />
+			<Property name="Korean" value="유물 전시관" />
+			<Property name="Japanese" value="遺物の間" />
 			<Property name="USEnglish" value="Relic Hall" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_RELICS_DS" />
 			<Property name="English" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="French" value="Des reliques des ruines sont exposées et attirent des colons curieux et quelques marchands." />
+			<Property name="Italian" value="Reliquie delle rovine in mostra, che attirano coloni curiosi e qualche mercante." />
+			<Property name="German" value="Relikte aus den Ruinen sind ausgestellt und locken neugierige Siedler und gelegentlich einen Händler an." />
+			<Property name="Spanish" value="Vestigios de las ruinas expuestos, que atraen a colonos curiosos y a algún que otro mercader." />
+			<Property name="Russian" value="Реликвии из руин выставлены на показ и привлекают любопытных поселенцев и случайного торговца." />
+			<Property name="Polish" value="Artefakty z ruin wystawione na pokaz przyciągają ciekawskich osadników i od czasu do czasu handlowca." />
+			<Property name="Dutch" value="Relikwieën uit de ruïnes zijn uitgestald en trekken nieuwsgierige nederzetters en af en toe een handelaar." />
+			<Property name="Portuguese" value="Relíquias das ruínas em exposição, que atraem colonizadores curiosos e um ou outro comerciante." />
+			<Property name="LatinAmericanSpanish" value="Artefactos de las ruinas en exhibición, que atraen a colonos curiosos y a algún mercader." />
+			<Property name="BrazilianPortuguese" value="Relíquias das ruínas em exposição, atraindo aldeões curiosos e um ou outro comerciante." />
+			<Property name="SimplifiedChinese" value="废墟中出土的遗物在此展出，吸引着好奇的居民和零星的商人。" />
+			<Property name="TraditionalChinese" value="廢墟中出土的遺物在此展出，吸引著好奇的聚居者和零星的商人。" />
+			<Property name="TencentChinese" value="废墟中出土的遗物在此展出，吸引着好奇的居民和零星的商人。" />
+			<Property name="Korean" value="유적에서 가져온 유물이 전시되어 호기심 많은 거주민과 이따금 상인이 찾아옵니다." />
+			<Property name="Japanese" value="遺跡から持ち帰った遺物が展示され、興味を持った開拓者や、時折トレーダーも訪れる。" />
 			<Property name="USEnglish" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_O1" />
 			<Property name="English" value="Let it run free" />
+			<Property name="French" value="Laisser faire" />
+			<Property name="Italian" value="Lascia fare" />
+			<Property name="German" value="Einfach laufen lassen" />
+			<Property name="Spanish" value="Dejar que siga libre" />
+			<Property name="Russian" value="Пусть торгуют бесплатно" />
+			<Property name="Polish" value="Niech handlują za darmo" />
+			<Property name="Dutch" value="Laat het begaan" />
+			<Property name="Portuguese" value="Deixar andar" />
+			<Property name="LatinAmericanSpanish" value="Dejarlo libre" />
+			<Property name="BrazilianPortuguese" value="Deixar rolar" />
+			<Property name="SimplifiedChinese" value="放任自流" />
+			<Property name="TraditionalChinese" value="放任自流" />
+			<Property name="TencentChinese" value="放任自流" />
+			<Property name="Korean" value="자유롭게 둔다" />
+			<Property name="Japanese" value="自由にやらせる" />
 			<Property name="USEnglish" value="Let it run free" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_O2" />
 			<Property name="English" value="Charge a stall fee (units)" />
+			<Property name="French" value="Faire payer les étals (unités)" />
+			<Property name="Italian" value="Fai pagare un canone alle bancarelle (unità)" />
+			<Property name="German" value="Standgebühr verlangen (Units)" />
+			<Property name="Spanish" value="Cobrar una tasa por los puestos (unidades)" />
+			<Property name="Russian" value="Брать плату за места (юниты)" />
+			<Property name="Polish" value="Pobieraj opłatę za stragany (jednostki)" />
+			<Property name="Dutch" value="Vraag standgeld (units)" />
+			<Property name="Portuguese" value="Cobrar uma taxa de banca (unidades)" />
+			<Property name="LatinAmericanSpanish" value="Cobrar una cuota por los puestos (unidades)" />
+			<Property name="BrazilianPortuguese" value="Cobrar taxa de barraca (unidades)" />
+			<Property name="SimplifiedChinese" value="收取摊位费（货币）" />
+			<Property name="TraditionalChinese" value="收取攤位費（貨幣）" />
+			<Property name="TencentChinese" value="收取摊位费（货币）" />
+			<Property name="Korean" value="노점 사용료를 받는다 (유닛)" />
+			<Property name="Japanese" value="出店料を取る(ユニット)" />
 			<Property name="USEnglish" value="Charge a stall fee (units)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_T" />
 			<Property name="English" value="The Night Market" />
+			<Property name="French" value="Le marché nocturne" />
+			<Property name="Italian" value="Il mercato notturno" />
+			<Property name="German" value="Der Nachtmarkt" />
+			<Property name="Spanish" value="El mercado nocturno" />
+			<Property name="Russian" value="Ночной рынок" />
+			<Property name="Polish" value="Nocny targ" />
+			<Property name="Dutch" value="De nachtmarkt" />
+			<Property name="Portuguese" value="O Mercado Noturno" />
+			<Property name="LatinAmericanSpanish" value="El mercado nocturno" />
+			<Property name="BrazilianPortuguese" value="O mercado noturno" />
+			<Property name="SimplifiedChinese" value="夜市" />
+			<Property name="TraditionalChinese" value="夜市" />
+			<Property name="TencentChinese" value="夜市" />
+			<Property name="Korean" value="야시장" />
+			<Property name="Japanese" value="夜市" />
 			<Property name="USEnglish" value="The Night Market" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_Q" />
 			<Property name="English" value="Should the night market pay a fee?" />
+			<Property name="French" value="Le marché nocturne doit-il payer une redevance ?" />
+			<Property name="Italian" value="Il mercato notturno dovrebbe pagare un canone?" />
+			<Property name="German" value="Soll der Nachtmarkt eine Gebühr zahlen?" />
+			<Property name="Spanish" value="¿Debe pagar una tasa el mercado nocturno?" />
+			<Property name="Russian" value="Должен ли ночной рынок платить сбор?" />
+			<Property name="Polish" value="Czy nocny targ ma płacić opłatę?" />
+			<Property name="Dutch" value="Moet de nachtmarkt standgeld betalen?" />
+			<Property name="Portuguese" value="O mercado noturno deve pagar uma taxa?" />
+			<Property name="LatinAmericanSpanish" value="¿El mercado nocturno debe pagar una cuota?" />
+			<Property name="BrazilianPortuguese" value="O mercado noturno deve pagar uma taxa?" />
+			<Property name="SimplifiedChinese" value="夜市要缴纳费用吗？" />
+			<Property name="TraditionalChinese" value="夜市要繳納費用嗎？" />
+			<Property name="TencentChinese" value="夜市要缴纳费用吗？" />
+			<Property name="Korean" value="야시장에 사용료를 받을까요?" />
+			<Property name="Japanese" value="夜市から出店料を取るか？" />
 			<Property name="USEnglish" value="Should the night market pay a fee?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_D" />
 			<Property name="English" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="French" value="Des marchands veulent tenir un marché nocturne sur la place à la fin des services de travail. Il animerait les lieux, et les étals pourraient verser une redevance au superviseur." />
+			<Property name="Italian" value="I mercanti vogliono allestire un mercato notturno in piazza a fine turno. Animerebbe il posto, e le bancarelle potrebbero versare un canone al supervisore." />
+			<Property name="German" value="Händler möchten nach Schichtende einen Nachtmarkt auf dem Platz abhalten. Das würde Leben in die Siedlung bringen, und die Stände könnten dem Aufseher eine Gebühr zahlen." />
+			<Property name="Spanish" value="Unos mercaderes quieren montar un mercado nocturno en la plaza al acabar los turnos de trabajo. Daría vida al lugar, y los puestos podrían pagar una tasa al supervisor." />
+			<Property name="Russian" value="Торговцы хотят устроить на площади ночной рынок после окончания рабочих смен. Он оживил бы поселение, а торговые места могли бы платить сбор куратору." />
+			<Property name="Polish" value="Handlowcy chcą urządzić na placu nocny targ po zakończeniu zmian. Ożywiłby osadę, a stragany mogłyby płacić opłatę Nadzorcy." />
+			<Property name="Dutch" value="Handelaren willen op het plein een nachtmarkt houden zodra de werkploegen vrij zijn. Dat houdt de boel levendig, en de kraampjes kunnen de supervisor een vergoeding betalen." />
+			<Property name="Portuguese" value="Comerciantes querem montar um mercado noturno na praça quando terminarem os turnos. Manteria o local animado, e as bancas poderiam pagar uma taxa ao Supervisor." />
+			<Property name="LatinAmericanSpanish" value="Unos mercaderes quieren montar un mercado nocturno en la plaza al terminar los turnos de trabajo. Daría vida al lugar, y los puestos podrían pagar una cuota al supervisor." />
+			<Property name="BrazilianPortuguese" value="Comerciantes querem fazer um mercado noturno na praça quando os turnos acabarem. Isso manteria o lugar animado, e as barracas poderiam pagar uma taxa ao supervisor." />
+			<Property name="SimplifiedChinese" value="商人们想在下工之后于广场上开办夜市。这能让这里热闹起来，摊位也可以向监督者缴纳费用。" />
+			<Property name="TraditionalChinese" value="商人們想在下工之後於廣場上開辦夜市。這能讓這裡熱鬧起來，攤位也可以向監督者繳納費用。" />
+			<Property name="TencentChinese" value="商人们想在下工之后于广场上开办夜市。这能让这里热闹起来，摊位也可以向监督者缴纳费用。" />
+			<Property name="Korean" value="상인들이 일과가 끝난 뒤 광장에서 야시장을 열고 싶어 합니다. 광장이 활기를 띠게 되고, 노점은 감독관에게 사용료를 낼 수 있습니다." />
+			<Property name="Japanese" value="トレーダーたちが、仕事の終わった後の広場で夜市を開きたいと申し出ている。賑わいが生まれ、出店者は監督官に出店料を支払える。" />
 			<Property name="USEnglish" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_O1" />
 			<Property name="English" value="Claim the salvage yourself" />
+			<Property name="French" value="Garder la récupération pour soi" />
+			<Property name="Italian" value="Tieni il recupero per te" />
+			<Property name="German" value="Das Wrackgut selbst beanspruchen" />
+			<Property name="Spanish" value="Quedarse con lo recuperado" />
+			<Property name="Russian" value="Забрать находку себе" />
+			<Property name="Polish" value="Zatrzymaj znalezisko dla siebie" />
+			<Property name="Dutch" value="Eis de berging zelf op" />
+			<Property name="Portuguese" value="Ficar com o salvamento" />
+			<Property name="LatinAmericanSpanish" value="Quedarse con lo rescatado" />
+			<Property name="BrazilianPortuguese" value="Ficar com o salvamento" />
+			<Property name="SimplifiedChinese" value="据为己有" />
+			<Property name="TraditionalChinese" value="據為己有" />
+			<Property name="TencentChinese" value="据为己有" />
+			<Property name="Korean" value="노획물을 직접 차지한다" />
+			<Property name="Japanese" value="回収品を自分のものにする" />
 			<Property name="USEnglish" value="Claim the salvage yourself" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_O2" />
 			<Property name="English" value="Strip it for parts for the settlement" />
+			<Property name="French" value="La démonter pour la colonie" />
+			<Property name="Italian" value="Smontalo per l'insediamento" />
+			<Property name="German" value="Für die Siedlung ausschlachten" />
+			<Property name="Spanish" value="Desmontarlo para el asentamiento" />
+			<Property name="Russian" value="Разобрать на детали для поселения" />
+			<Property name="Polish" value="Rozbierz na części dla osady" />
+			<Property name="Dutch" value="Haal er onderdelen uit voor de nederzetting" />
+			<Property name="Portuguese" value="Desmontar para peças para o povoamento" />
+			<Property name="LatinAmericanSpanish" value="Desarmarlo para el asentamiento" />
+			<Property name="BrazilianPortuguese" value="Desmontar para peças do povoado" />
+			<Property name="SimplifiedChinese" value="拆解零件供定居点使用" />
+			<Property name="TraditionalChinese" value="拆解零件供聚居地使用" />
+			<Property name="TencentChinese" value="拆解零件供定居点使用" />
+			<Property name="Korean" value="거주지를 위해 부품을 해체한다" />
+			<Property name="Japanese" value="開拓地のために部品を取り外す" />
 			<Property name="USEnglish" value="Strip it for parts for the settlement" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_T" />
 			<Property name="English" value="Salvage Rights" />
+			<Property name="French" value="Droits de récupération" />
+			<Property name="Italian" value="Diritti di recupero" />
+			<Property name="German" value="Bergungsrechte" />
+			<Property name="Spanish" value="Derechos de recuperación" />
+			<Property name="Russian" value="Право на находку" />
+			<Property name="Polish" value="Prawa do znaleziska" />
+			<Property name="Dutch" value="Bergingsrechten" />
+			<Property name="Portuguese" value="Direitos de Salvamento" />
+			<Property name="LatinAmericanSpanish" value="Derechos de rescate" />
+			<Property name="BrazilianPortuguese" value="Direitos de salvamento" />
+			<Property name="SimplifiedChinese" value="打捞权" />
+			<Property name="TraditionalChinese" value="打撈權" />
+			<Property name="TencentChinese" value="打捞权" />
+			<Property name="Korean" value="노획 권리" />
+			<Property name="Japanese" value="引き揚げの権利" />
 			<Property name="USEnglish" value="Salvage Rights" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_Q" />
 			<Property name="English" value="Who gets the salvage?" />
+			<Property name="French" value="À qui revient la récupération ?" />
+			<Property name="Italian" value="A chi va il recupero?" />
+			<Property name="German" value="Wer bekommt das Wrackgut?" />
+			<Property name="Spanish" value="¿Para quién es lo recuperado?" />
+			<Property name="Russian" value="Кому достанется находка?" />
+			<Property name="Polish" value="Komu przypadnie znalezisko?" />
+			<Property name="Dutch" value="Wie krijgt de berging?" />
+			<Property name="Portuguese" value="Quem fica com o salvamento?" />
+			<Property name="LatinAmericanSpanish" value="¿Quién se queda con lo rescatado?" />
+			<Property name="BrazilianPortuguese" value="Quem fica com o salvamento?" />
+			<Property name="SimplifiedChinese" value="残骸归谁所有？" />
+			<Property name="TraditionalChinese" value="殘骸歸誰所有？" />
+			<Property name="TencentChinese" value="残骸归谁所有？" />
+			<Property name="Korean" value="노획물은 누구의 몫일까요?" />
+			<Property name="Japanese" value="引き揚げ品は誰のものか？" />
 			<Property name="USEnglish" value="Who gets the salvage?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_D" />
 			<Property name="English" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="French" value="Des éclaireurs ont trouvé, à demi enterrée hors des murs, une capsule de cargaison d'un cargo naufragé. Ses scellés tiennent toujours." />
+			<Property name="Italian" value="Degli esploratori hanno trovato fuori dalle mura una capsula di carico di un mercantile distrutto, mezza sepolta. I sigilli reggono ancora." />
+			<Property name="German" value="Späher haben vor den Mauern eine halb vergrabene Frachtkapsel eines abgestürzten Frachters gefunden. Ihre Versiegelung hält noch." />
+			<Property name="Spanish" value="Unos exploradores han encontrado un contenedor de carga de un carguero siniestrado, medio enterrado fuera de los muros. Sus sellos aún aguantan." />
+			<Property name="Russian" value="Разведчики нашли за стенами наполовину засыпанную грузовую капсулу с потерпевшего крушение грузового корабля. Ее пломбы целы." />
+			<Property name="Polish" value="Zwiadowcy znaleźli poza murami do połowy zakopany zasobnik z ładunkiem z rozbitego frachtowca. Jego pieczęcie wciąż trzymają." />
+			<Property name="Dutch" value="Verkenners vonden buiten de muren een half begraven voorraadpod van een neergestort vrachtschip. De zegels houden nog." />
+			<Property name="Portuguese" value="Batedores encontraram, meio enterrada fora das muralhas, uma cápsula de mercadorias de um cargueiro destruído. Os selos ainda aguentam." />
+			<Property name="LatinAmericanSpanish" value="Unos exploradores encontraron un contenedor de carga de un carguero siniestrado, medio enterrado fuera de los muros. Sus sellos todavía resisten." />
+			<Property name="BrazilianPortuguese" value="Batedores encontraram, meio enterrado fora dos muros, um módulo de carga de uma nave cargueira destruída. Os lacres ainda resistem." />
+			<Property name="SimplifiedChinese" value="侦察兵在围墙外发现一个半埋在地下的货舱，来自一艘坠毁的货船。它的封条依然完好。" />
+			<Property name="TraditionalChinese" value="偵察員在圍牆外發現一個半埋在地下的貨物艙，來自一艘墜毀的貨船。它的封條依然完好。" />
+			<Property name="TencentChinese" value="侦察兵在围墙外发现一个半埋在地下的货舱，来自一艘坠毁的货船。它的封条依然完好。" />
+			<Property name="Korean" value="정찰대가 성벽 밖에 반쯤 묻혀 있는 난파된 화물선의 화물 포드를 발견했습니다. 봉인은 아직 멀쩡합니다." />
+			<Property name="Japanese" value="偵察隊が、壁の外に半ば埋もれた大破した貨物船の貨物ポッドを見つけた。封印はまだ無事だ。" />
 			<Property name="USEnglish" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_O1" />
 			<Property name="English" value="Give them a bed (settlers worry)" />
+			<Property name="French" value="Lui offrir un lit (les colons s'inquiètent)" />
+			<Property name="Italian" value="Offri un letto (i coloni si preoccupano)" />
+			<Property name="German" value="Ein Bett anbieten (Siedler sorgen sich)" />
+			<Property name="Spanish" value="Darle una cama (los colonos se preocupan)" />
+			<Property name="Russian" value="Дать постель (поселенцы тревожатся)" />
+			<Property name="Polish" value="Daj łóżko (osadnicy się martwią)" />
+			<Property name="Dutch" value="Geef een bed (nederzetters maken zich zorgen)" />
+			<Property name="Portuguese" value="Dar-lhe uma cama (colonizadores preocupam-se)" />
+			<Property name="LatinAmericanSpanish" value="Darle una cama (los colonos se preocupan)" />
+			<Property name="BrazilianPortuguese" value="Dar uma cama (aldeões ficam preocupados)" />
+			<Property name="SimplifiedChinese" value="给对方一张床（居民担忧）" />
+			<Property name="TraditionalChinese" value="給對方一張床（聚居者擔憂）" />
+			<Property name="TencentChinese" value="给对方一张床（居民担忧）" />
+			<Property name="Korean" value="잠자리를 내준다 (거주민 불안)" />
+			<Property name="Japanese" value="寝床を貸す(開拓者が不安)" />
 			<Property name="USEnglish" value="Give them a bed (settlers worry)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_O2" />
 			<Property name="English" value="Trade medicine for the trinket" />
+			<Property name="French" value="Échanger des médicaments contre la babiole" />
+			<Property name="Italian" value="Scambia medicine con il ninnolo" />
+			<Property name="German" value="Medizin gegen das Schmuckstück tauschen" />
+			<Property name="Spanish" value="Cambiar medicinas por la baratija" />
+			<Property name="Russian" value="Обменять лекарства на безделушку" />
+			<Property name="Polish" value="Wymień leki na błyskotkę" />
+			<Property name="Dutch" value="Ruil medicijnen voor de snuisterij" />
+			<Property name="Portuguese" value="Trocar medicamentos pela bugiganga" />
+			<Property name="LatinAmericanSpanish" value="Cambiar medicinas por la baratija" />
+			<Property name="BrazilianPortuguese" value="Trocar remédio pela bugiganga" />
+			<Property name="SimplifiedChinese" value="用药品换取小物件" />
+			<Property name="TraditionalChinese" value="用藥品換取小飾品" />
+			<Property name="TencentChinese" value="用药品换取小物件" />
+			<Property name="Korean" value="약을 주고 장신구를 받는다" />
+			<Property name="Japanese" value="薬と装飾品を交換する" />
 			<Property name="USEnglish" value="Trade medicine for the trinket" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_T" />
 			<Property name="English" value="A Fevered Traveller" />
+			<Property name="French" value="Une personne de passage fiévreuse" />
+			<Property name="Italian" value="Una persona di passaggio con la febbre" />
+			<Property name="German" value="Ein fiebernder Gast" />
+			<Property name="Spanish" value="Una persona viajera con fiebre" />
+			<Property name="Russian" value="Путник в лихорадке" />
+			<Property name="Polish" value="Podróżny w gorączce" />
+			<Property name="Dutch" value="Een zieke reiziger" />
+			<Property name="Portuguese" value="Um Viajante com Febre" />
+			<Property name="LatinAmericanSpanish" value="Una persona viajera con fiebre" />
+			<Property name="BrazilianPortuguese" value="Um viajante com febre" />
+			<Property name="SimplifiedChinese" value="发烧的旅行者" />
+			<Property name="TraditionalChinese" value="發燒的旅行者" />
+			<Property name="TencentChinese" value="发烧的旅行者" />
+			<Property name="Korean" value="열병에 걸린 여행자" />
+			<Property name="Japanese" value="熱に倒れた旅人" />
 			<Property name="USEnglish" value="A Fevered Traveller" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_Q" />
 			<Property name="English" value="Give the traveller a bed?" />
+			<Property name="French" value="Offrir un lit à cette personne ?" />
+			<Property name="Italian" value="Offrire un letto a questa persona?" />
+			<Property name="German" value="Dem Gast ein Bett geben?" />
+			<Property name="Spanish" value="¿Dar una cama a esa persona?" />
+			<Property name="Russian" value="Дать путнику постель?" />
+			<Property name="Polish" value="Dać podróżnemu łóżko?" />
+			<Property name="Dutch" value="De reiziger een bed geven?" />
+			<Property name="Portuguese" value="Dar uma cama ao viajante?" />
+			<Property name="LatinAmericanSpanish" value="¿Dar una cama a esa persona?" />
+			<Property name="BrazilianPortuguese" value="Dar uma cama ao viajante?" />
+			<Property name="SimplifiedChinese" value="要给旅行者一张床吗？" />
+			<Property name="TraditionalChinese" value="要給旅行者一張床嗎？" />
+			<Property name="TencentChinese" value="要给旅行者一张床吗？" />
+			<Property name="Korean" value="여행자에게 잠자리를 내줄까요?" />
+			<Property name="Japanese" value="旅人に寝床を貸すか？" />
 			<Property name="USEnglish" value="Give the traveller a bed?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_D" />
 			<Property name="English" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="French" value="Une personne de passage entre en titubant, fiévreuse, et demande un lit jusqu'à ce que la fièvre tombe. Elle n'a pas grand-chose à offrir, hormis une babiole tirée de son sac, mais beaucoup de temps pour discuter pendant sa convalescence." />
+			<Property name="Italian" value="Una persona di passaggio entra barcollando, con la febbre, e chiede un letto finché non passa. Ha poco da offrire oltre a un ninnolo preso dallo zaino, ma molto tempo per chiacchierare durante la convalescenza." />
+			<Property name="German" value="Ein Gast schleppt sich fiebernd herein und bittet um ein Bett, bis das Fieber sinkt. Außer einem Schmuckstück aus dem Gepäck hat die Person wenig anzubieten, aber viel Zeit zum Reden, während sie sich erholt." />
+			<Property name="Spanish" value="Una persona viajera entra tambaleándose, con fiebre, y pide una cama hasta que remita. Tiene poco que ofrecer salvo una baratija de su mochila, y mucho tiempo para charlar mientras se recupera." />
+			<Property name="Russian" value="Путник, шатаясь, входит в поселение: у него лихорадка, и он просит постель, пока жар не спадет. Предложить ему почти нечего, кроме безделушки из сумки, зато времени для разговоров, пока он поправляется, хватит." />
+			<Property name="Polish" value="Podróżny wchodzi do osady chwiejnym krokiem, w gorączce, i prosi o łóżko, dopóki nie minie. Poza błyskotką z plecaka ma niewiele do zaoferowania, za to mnóstwo czasu na rozmowy, gdy dochodzi do siebie." />
+			<Property name="Dutch" value="Een reiziger strompelt koortsig binnen en vraagt om een bed tot de koorts zakt. Behalve een snuisterij uit de bagage heeft de reiziger weinig te bieden, maar wel alle tijd om te praten tijdens het herstel." />
+			<Property name="Portuguese" value="Um viajante cambaleia até aqui com febre e pede uma cama até ela baixar. Tem pouco a oferecer além de uma bugiganga da sua bagagem, mas muito tempo para conversar enquanto recupera." />
+			<Property name="LatinAmericanSpanish" value="Una persona viajera entra tambaleándose, con fiebre, y pide una cama hasta que se le baje. Tiene poco que ofrecer, salvo una baratija de su mochila, y mucho tiempo para conversar mientras se recupera." />
+			<Property name="BrazilianPortuguese" value="Um viajante chega cambaleando, com febre, e pede uma cama até ela passar. Tem pouco a oferecer além de uma bugiganga da mochila, mas muito tempo para conversar enquanto se recupera." />
+			<Property name="SimplifiedChinese" value="一位旅行者发着烧，踉踉跄跄地走进来，请求借一张床，等烧退了再走。对方除了背包里的一件小物件，几乎拿不出什么，但康复期间有的是时间聊天。" />
+			<Property name="TraditionalChinese" value="一位旅行者發著燒，踉踉蹌蹌地走進來，請求借一張床，等燒退了再走。對方除了背包裡的一件小飾品，幾乎拿不出什麼，但康復期間有的是時間聊天。" />
+			<Property name="TencentChinese" value="一位旅行者发着烧，踉踉跄跄地走进来，请求借一张床，等烧退了再走。对方除了背包里的一件小物件，几乎拿不出什么，但康复期间有的是时间聊天。" />
+			<Property name="Korean" value="열병에 걸린 여행자가 비틀거리며 들어와 열이 내릴 때까지 쉴 잠자리를 청합니다. 내놓을 것이라곤 짐 속의 장신구뿐이지만, 회복하는 동안 이야기를 나눌 시간은 충분합니다." />
+			<Property name="Japanese" value="熱を出した旅人がふらふらと現れ、治るまで寝床を貸してほしいと頼んでいる。差し出せるのは荷物の中の装飾品くらいだが、回復するまでの間、話をする時間はたっぷりある。" />
 			<Property name="USEnglish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_O1" />
 			<Property name="English" value="Download the charts" />
+			<Property name="French" value="Télécharger les diagrammes" />
+			<Property name="Italian" value="Scarica le mappe" />
+			<Property name="German" value="Die Karten herunterladen" />
+			<Property name="Spanish" value="Descargar las cartas" />
+			<Property name="Russian" value="Скачать карты" />
+			<Property name="Polish" value="Pobierz mapy" />
+			<Property name="Dutch" value="Download de kaarten" />
+			<Property name="Portuguese" value="Transferir os mapas" />
+			<Property name="LatinAmericanSpanish" value="Descargar las cartas" />
+			<Property name="BrazilianPortuguese" value="Baixar os mapas" />
+			<Property name="SimplifiedChinese" value="下载星图" />
+			<Property name="TraditionalChinese" value="下載星系圖" />
+			<Property name="TencentChinese" value="下载星图" />
+			<Property name="Korean" value="행성 도표를 내려받는다" />
+			<Property name="Japanese" value="星系図をダウンロードする" />
 			<Property name="USEnglish" value="Download the charts" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_O2" />
 			<Property name="English" value="Wire it into the perimeter sensors" />
+			<Property name="French" value="Le relier aux capteurs du périmètre" />
+			<Property name="Italian" value="Collegalo ai sensori del perimetro" />
+			<Property name="German" value="An die Perimetersensoren anschließen" />
+			<Property name="Spanish" value="Conectarlo a los sensores del perímetro" />
+			<Property name="Russian" value="Подключить к датчикам периметра" />
+			<Property name="Polish" value="Podłącz do czujników obwodu" />
+			<Property name="Dutch" value="Koppel hem aan de perimetersensoren" />
+			<Property name="Portuguese" value="Ligá-lo aos sensores do perímetro" />
+			<Property name="LatinAmericanSpanish" value="Conectarlo a los sensores del perímetro" />
+			<Property name="BrazilianPortuguese" value="Ligar aos sensores do perímetro" />
+			<Property name="SimplifiedChinese" value="接入周界传感器" />
+			<Property name="TraditionalChinese" value="接入周界感測器" />
+			<Property name="TencentChinese" value="接入周界传感器" />
+			<Property name="Korean" value="경계 센서에 연결한다" />
+			<Property name="Japanese" value="周辺センサーに接続する" />
 			<Property name="USEnglish" value="Wire it into the perimeter sensors" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_T" />
 			<Property name="English" value="The Buried Beacon" />
+			<Property name="French" value="La balise enfouie" />
+			<Property name="Italian" value="Il radiofaro sepolto" />
+			<Property name="German" value="Das vergrabene Signal" />
+			<Property name="Spanish" value="La baliza enterrada" />
+			<Property name="Russian" value="Зарытый маяк" />
+			<Property name="Polish" value="Zakopany sygnalizator" />
+			<Property name="Dutch" value="Het begraven baken" />
+			<Property name="Portuguese" value="O Emissor Enterrado" />
+			<Property name="LatinAmericanSpanish" value="La baliza enterrada" />
+			<Property name="BrazilianPortuguese" value="O sinal enterrado" />
+			<Property name="SimplifiedChinese" value="埋藏的信标" />
+			<Property name="TraditionalChinese" value="埋藏的信標" />
+			<Property name="TencentChinese" value="埋藏的信标" />
+			<Property name="Korean" value="묻혀 있던 신호기" />
+			<Property name="Japanese" value="埋もれたビーコン" />
 			<Property name="USEnglish" value="The Buried Beacon" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_Q" />
 			<Property name="English" value="What should be done with the booster?" />
+			<Property name="French" value="Que faire du scanner de signaux ?" />
+			<Property name="Italian" value="Cosa fare del ripetitore?" />
+			<Property name="German" value="Was soll mit dem Booster geschehen?" />
+			<Property name="Spanish" value="¿Qué hacer con el intensificador?" />
+			<Property name="Russian" value="Что делать с усилителем?" />
+			<Property name="Polish" value="Co zrobić ze wzmacniaczem?" />
+			<Property name="Dutch" value="Wat moet er met de versterker gebeuren?" />
+			<Property name="Portuguese" value="O que fazer com o impulsionador?" />
+			<Property name="LatinAmericanSpanish" value="¿Qué hacer con el intensificador?" />
+			<Property name="BrazilianPortuguese" value="O que fazer com o incremento?" />
+			<Property name="SimplifiedChinese" value="该如何处置这台增强器？" />
+			<Property name="TraditionalChinese" value="該如何處置這台強化器？" />
+			<Property name="TencentChinese" value="该如何处置这台增强器？" />
+			<Property name="Korean" value="신호 부스터를 어떻게 할까요?" />
+			<Property name="Japanese" value="信号ブースターをどうするか？" />
 			<Property name="USEnglish" value="What should be done with the booster?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_D" />
 			<Property name="English" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="French" value="En creusant de nouvelles fondations, des bâtisseurs sont tombés sur un scanner de signaux enfoui. Il ronronne encore, et sa mémoire regorge de diagrammes planétaires." />
+			<Property name="Italian" value="Mentre scavavano nuove fondamenta, dei costruttori hanno urtato un ripetitore di segnale sepolto. Ronza ancora, e la sua memoria è piena di mappe planetarie." />
+			<Property name="German" value="Bauarbeiter stießen beim Ausheben eines neuen Fundaments auf einen vergrabenen Signalbooster. Er summt noch, und sein Speicher ist voller Planetenkarten." />
+			<Property name="Spanish" value="Unos constructores que excavaban unos cimientos nuevos han dado con un intensificador de señal enterrado. Aún zumba, y su memoria está llena de cartas de navegación planetaria." />
+			<Property name="Russian" value="Строители, копавшие новый фундамент, наткнулись на зарытый усилитель сигнала. Он все еще гудит, а его память полна планетарных карт." />
+			<Property name="Polish" value="Budowniczowie kopiący nowy fundament natrafili na zakopany wzmacniacz sygnału. Wciąż buczy, a jego pamięć jest pełna map planet." />
+			<Property name="Dutch" value="Bouwers die een nieuw fundament groeven, stuitten op een begraven signaalversterker. Hij zoemt nog, en zijn geheugen zit vol planetaire kaarten." />
+			<Property name="Portuguese" value="Construtores que cavavam novos alicerces encontraram um impulsionador de sinal enterrado. Ainda zumbe, e a memória está cheia de mapas planetários." />
+			<Property name="LatinAmericanSpanish" value="Unos constructores que cavaban unos cimientos nuevos dieron con un intensificador de señal enterrado. Todavía zumba, y su memoria está llena de cartas de navegación planetaria." />
+			<Property name="BrazilianPortuguese" value="Construtores cavando uma nova fundação toparam com um incremento de sinal enterrado. Ele ainda zumbe, e a memória está cheia de mapas planetários." />
+			<Property name="SimplifiedChinese" value="建筑工人挖掘新地基时，挖到了一台埋藏的信号增强器。它仍在嗡嗡作响，存储器里装满了行星星图。" />
+			<Property name="TraditionalChinese" value="建築工人挖掘新地基時，挖到了一台埋藏的訊號強化器。它仍在嗡嗡作響，記憶體裡裝滿了星系圖。" />
+			<Property name="TencentChinese" value="建筑工人挖掘新地基时，挖到了一台埋藏的信号增强器。它仍在嗡嗡作响，存储器里装满了行星星图。" />
+			<Property name="Korean" value="새 기초를 파던 건설 인부들이 땅속에 묻힌 신호 부스터를 발견했습니다. 아직도 낮게 웅웅거리며, 메모리에는 행성 도표가 가득합니다." />
+			<Property name="Japanese" value="新しい基礎を掘っていた作業員が、地中に埋もれた信号ブースターに行き当たった。まだ低く唸っており、メモリには星系図がぎっしり詰まっている。" />
 			<Property name="USEnglish" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_O1" />
 			<Property name="English" value="Fund a full festival (adds debt)" />
+			<Property name="French" value="Financer une grande fête (ajoute de la dette)" />
+			<Property name="Italian" value="Finanzia una festa in grande (aumenta i debiti)" />
+			<Property name="German" value="Ein großes Fest finanzieren (erhöht die Schulden)" />
+			<Property name="Spanish" value="Financiar un gran festival (añade deuda)" />
+			<Property name="Russian" value="Устроить пышный фестиваль (долг растет)" />
+			<Property name="Polish" value="Sfinansuj wielki festiwal (dług się zwiększa)" />
+			<Property name="Dutch" value="Betaal een groot festival (meer schuld)" />
+			<Property name="Portuguese" value="Financiar um grande festival (aumenta a dívida)" />
+			<Property name="LatinAmericanSpanish" value="Financiar un gran festival (agrega deuda)" />
+			<Property name="BrazilianPortuguese" value="Bancar um grande festival (aumenta a dívida)" />
+			<Property name="SimplifiedChinese" value="举办盛大的节日（增加债务）" />
+			<Property name="TraditionalChinese" value="舉辦盛大的節日（增加債務）" />
+			<Property name="TencentChinese" value="举办盛大的节日（增加债务）" />
+			<Property name="Korean" value="성대한 축제를 연다 (부채 증가)" />
+			<Property name="Japanese" value="盛大な祭りを開く(負債増加)" />
 			<Property name="USEnglish" value="Fund a full festival (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_O2" />
 			<Property name="English" value="Keep it small and join in" />
+			<Property name="French" value="Rester modeste et y participer" />
+			<Property name="Italian" value="Resta in piccolo e partecipa" />
+			<Property name="German" value="Klein halten und mitfeiern" />
+			<Property name="Spanish" value="Hacerlo pequeño y participar" />
+			<Property name="Russian" value="Отметить скромно и присоединиться" />
+			<Property name="Polish" value="Zrób skromny i dołącz" />
+			<Property name="Dutch" value="Houd het klein en doe mee" />
+			<Property name="Portuguese" value="Fazê-lo pequeno e participar" />
+			<Property name="LatinAmericanSpanish" value="Hacerlo pequeño y participar" />
+			<Property name="BrazilianPortuguese" value="Fazer pequeno e participar" />
+			<Property name="SimplifiedChinese" value="办得简单些，一同庆祝" />
+			<Property name="TraditionalChinese" value="辦得簡單些，一同慶祝" />
+			<Property name="TencentChinese" value="办得简单些，一同庆祝" />
+			<Property name="Korean" value="소박하게 열고 함께 즐긴다" />
+			<Property name="Japanese" value="小規模にして自分も参加する" />
 			<Property name="USEnglish" value="Keep it small and join in" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_T" />
 			<Property name="English" value="Festival of Lights" />
+			<Property name="French" value="La fête des lumières" />
+			<Property name="Italian" value="Festa delle luci" />
+			<Property name="German" value="Fest der Lichter" />
+			<Property name="Spanish" value="Festival de las luces" />
+			<Property name="Russian" value="Фестиваль огней" />
+			<Property name="Polish" value="Festiwal Świateł" />
+			<Property name="Dutch" value="Lichtfestival" />
+			<Property name="Portuguese" value="Festival das Luzes" />
+			<Property name="LatinAmericanSpanish" value="Festival de luces" />
+			<Property name="BrazilianPortuguese" value="Festival das luzes" />
+			<Property name="SimplifiedChinese" value="灯火节" />
+			<Property name="TraditionalChinese" value="燈火節" />
+			<Property name="TencentChinese" value="灯火节" />
+			<Property name="Korean" value="빛의 축제" />
+			<Property name="Japanese" value="光の祭り" />
 			<Property name="USEnglish" value="Festival of Lights" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_Q" />
 			<Property name="English" value="How big should the festival be?" />
+			<Property name="French" value="Quelle ampleur donner à la fête ?" />
+			<Property name="Italian" value="Quanto dovrebbe essere grande la festa?" />
+			<Property name="German" value="Wie groß soll das Fest werden?" />
+			<Property name="Spanish" value="¿De qué tamaño debe ser el festival?" />
+			<Property name="Russian" value="Каким должен быть фестиваль?" />
+			<Property name="Polish" value="Jak duży ma być festiwal?" />
+			<Property name="Dutch" value="Hoe groot moet het festival worden?" />
+			<Property name="Portuguese" value="Que dimensão deve ter o festival?" />
+			<Property name="LatinAmericanSpanish" value="¿Qué tan grande debe ser el festival?" />
+			<Property name="BrazilianPortuguese" value="Qual deve ser o tamanho do festival?" />
+			<Property name="SimplifiedChinese" value="节日要办多大规模？" />
+			<Property name="TraditionalChinese" value="節日要辦多大規模？" />
+			<Property name="TencentChinese" value="节日要办多大规模？" />
+			<Property name="Korean" value="축제를 얼마나 크게 열까요?" />
+			<Property name="Japanese" value="祭りの規模はどうするか？" />
 			<Property name="USEnglish" value="How big should the festival be?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_D" />
 			<Property name="English" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="French" value="Les colons veulent organiser une fête avec des lanternes, de la musique et des feux d'artifice au-dessus des toits. Ils sont certains qu'il y a quelque chose à célébrer." />
+			<Property name="Italian" value="I coloni vogliono organizzare una festa, con lanterne, musica e fuochi d'artificio sopra i tetti. Sono certi che ci sia qualcosa da festeggiare." />
+			<Property name="German" value="Die Siedler wollen ein Fest feiern, mit Laternen, Musik und Feuerwerk über den Dächern. Sie sind sicher, dass es etwas zu feiern gibt." />
+			<Property name="Spanish" value="Los colonos quieren organizar un festival, con farolillos, música y fuegos artificiales sobre los tejados. Están seguros de que hay algo que celebrar." />
+			<Property name="Russian" value="Поселенцы хотят устроить фестиваль с фонариками, музыкой и фейерверками над крышами. Они уверены, что поводы для праздника есть." />
+			<Property name="Polish" value="Osadnicy chcą urządzić festiwal z lampionami, muzyką i fajerwerkami nad dachami. Są pewni, że jest co świętować." />
+			<Property name="Dutch" value="De nederzetters willen een festival geven, met lantaarns, muziek en vuurwerk boven de daken. Ze weten zeker dat er iets te vieren valt." />
+			<Property name="Portuguese" value="Os colonizadores querem organizar um festival, com lanternas, música e fogos de artifício sobre os telhados. Têm a certeza de que há algo a celebrar." />
+			<Property name="LatinAmericanSpanish" value="Los colonos quieren hacer un festival, con faroles, música y fuegos artificiales sobre los techos. Están seguros de que hay algo que celebrar." />
+			<Property name="BrazilianPortuguese" value="Os aldeões querem fazer um festival, com lanternas, música e fogos de artifício sobre os telhados. Eles têm certeza de que há algo a comemorar." />
+			<Property name="SimplifiedChinese" value="居民们想举办一场节日，有灯笼、音乐，还有在屋顶上空绽放的烟花。他们坚信眼下有值得庆祝的事。" />
+			<Property name="TraditionalChinese" value="聚居者想舉辦一場節日，有燈籠、音樂，還有在屋頂上空綻放的煙火。他們堅信眼下有值得慶祝的事。" />
+			<Property name="TencentChinese" value="居民们想举办一场节日，有灯笼、音乐，还有在屋顶上空绽放的烟花。他们坚信眼下有值得庆祝的事。" />
+			<Property name="Korean" value="거주민들이 등불과 음악, 지붕 위로 터지는 폭죽으로 축제를 열고 싶어 합니다. 축하할 일이 있다고 굳게 믿고 있습니다." />
+			<Property name="Japanese" value="開拓者たちが、ランタンと音楽、屋根の上に打ち上がる花火で祭りを開きたがっている。祝うべき何かがあると信じて疑わない様子だ。" />
 			<Property name="USEnglish" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_O1" />
 			<Property name="English" value="Side with the crew (adds debt)" />
+			<Property name="French" value="Soutenir l'équipe (ajoute de la dette)" />
+			<Property name="Italian" value="Schierati con la squadra (aumenta i debiti)" />
+			<Property name="German" value="Zur Nachtschicht halten (erhöht die Schulden)" />
+			<Property name="Spanish" value="Ponerse de parte del equipo (añade deuda)" />
+			<Property name="Russian" value="Встать на сторону бригады (долг растет)" />
+			<Property name="Polish" value="Poprzyj ekipę (dług się zwiększa)" />
+			<Property name="Dutch" value="Kies de kant van de ploeg (meer schuld)" />
+			<Property name="Portuguese" value="Apoiar a equipa (aumenta a dívida)" />
+			<Property name="LatinAmericanSpanish" value="Ponerse del lado del equipo (agrega deuda)" />
+			<Property name="BrazilianPortuguese" value="Ficar do lado da equipe (aumenta a dívida)" />
+			<Property name="SimplifiedChinese" value="站在工班一边（增加债务）" />
+			<Property name="TraditionalChinese" value="站在工班一邊（增加債務）" />
+			<Property name="TencentChinese" value="站在工班一边（增加债务）" />
+			<Property name="Korean" value="작업조 편을 든다 (부채 증가)" />
+			<Property name="Japanese" value="作業班の味方をする(負債増加)" />
 			<Property name="USEnglish" value="Side with the crew (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_O2" />
 			<Property name="English" value="Side with the foreman" />
+			<Property name="French" value="Soutenir le contremaître" />
+			<Property name="Italian" value="Schierati con il caposquadra" />
+			<Property name="German" value="Zum Vorarbeiter halten" />
+			<Property name="Spanish" value="Ponerse de parte del capataz" />
+			<Property name="Russian" value="Встать на сторону бригадира" />
+			<Property name="Polish" value="Poprzyj brygadzistę" />
+			<Property name="Dutch" value="Kies de kant van de voorman" />
+			<Property name="Portuguese" value="Apoiar o capataz" />
+			<Property name="LatinAmericanSpanish" value="Ponerse del lado del capataz" />
+			<Property name="BrazilianPortuguese" value="Ficar do lado do capataz" />
+			<Property name="SimplifiedChinese" value="站在工头一边" />
+			<Property name="TraditionalChinese" value="站在工頭一邊" />
+			<Property name="TencentChinese" value="站在工头一边" />
+			<Property name="Korean" value="작업반장 편을 든다" />
+			<Property name="Japanese" value="現場監督の味方をする" />
 			<Property name="USEnglish" value="Side with the foreman" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_T" />
 			<Property name="English" value="The Wage Dispute" />
+			<Property name="French" value="Le conflit salarial" />
+			<Property name="Italian" value="La disputa salariale" />
+			<Property name="German" value="Der Lohnstreit" />
+			<Property name="Spanish" value="La disputa salarial" />
+			<Property name="Russian" value="Спор о зарплате" />
+			<Property name="Polish" value="Spór o płace" />
+			<Property name="Dutch" value="Het loonconflict" />
+			<Property name="Portuguese" value="A Disputa Salarial" />
+			<Property name="LatinAmericanSpanish" value="La disputa salarial" />
+			<Property name="BrazilianPortuguese" value="A disputa salarial" />
+			<Property name="SimplifiedChinese" value="工资纠纷" />
+			<Property name="TraditionalChinese" value="工資糾紛" />
+			<Property name="TencentChinese" value="工资纠纷" />
+			<Property name="Korean" value="임금 분쟁" />
+			<Property name="Japanese" value="賃金をめぐる争い" />
 			<Property name="USEnglish" value="The Wage Dispute" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_Q" />
 			<Property name="English" value="Whose side is the Overseer on?" />
+			<Property name="French" value="Le superviseur prend le parti de qui ?" />
+			<Property name="Italian" value="Da che parte sta il supervisore?" />
+			<Property name="German" value="Auf wessen Seite steht der Aufseher?" />
+			<Property name="Spanish" value="¿De parte de quién está el supervisor?" />
+			<Property name="Russian" value="Чью сторону займет куратор?" />
+			<Property name="Polish" value="Po czyjej stronie stoi Nadzorca?" />
+			<Property name="Dutch" value="Aan wiens kant staat de supervisor?" />
+			<Property name="Portuguese" value="De que lado está o Supervisor?" />
+			<Property name="LatinAmericanSpanish" value="¿De qué lado está el supervisor?" />
+			<Property name="BrazilianPortuguese" value="De que lado o supervisor está?" />
+			<Property name="SimplifiedChinese" value="监督者站在哪一边？" />
+			<Property name="TraditionalChinese" value="監督者站在哪一邊？" />
+			<Property name="TencentChinese" value="监督者站在哪一边？" />
+			<Property name="Korean" value="감독관은 누구 편일까요?" />
+			<Property name="Japanese" value="監督官はどちらの味方をするか？" />
 			<Property name="USEnglish" value="Whose side is the Overseer on?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_D" />
 			<Property name="English" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="French" value="Deux ouvriers se présentent devant le superviseur. L'un affirme que le contremaître vole l'équipe de nuit sur sa paie. Le contremaître répond que l'équipe bâcle le travail." />
+			<Property name="Italian" value="Due lavoratori si presentano al supervisore. Uno dice che il caposquadra defrauda la squadra notturna. Il caposquadra dice che la squadra lavora male." />
+			<Property name="German" value="Zwei Arbeiter stehen vor dem Aufseher. Einer sagt, der Vorarbeiter zahle der Nachtschicht zu wenig. Der Vorarbeiter sagt, die Nachtschicht leiste zu wenig." />
+			<Property name="Spanish" value="Dos trabajadores se presentan ante el supervisor. Uno dice que el capataz estafa al turno de noche. El capataz dice que el turno de noche escatima en el trabajo." />
+			<Property name="Russian" value="Двое рабочих стоят перед куратором. Один говорит, что бригадир обсчитывает ночную смену. Бригадир говорит, что смена халтурит на работе." />
+			<Property name="Polish" value="Dwóch robotników stoi przed Nadzorcą. Jeden mówi, że brygadzista oszukuje nocną zmianę na wypłatach. Brygadzista mówi, że zmiana oszukuje na robocie." />
+			<Property name="Dutch" value="Twee arbeiders staan voor de supervisor. De ene zegt dat de voorman de nachtploeg tekortdoet. De voorman zegt dat de ploeg het werk tekortdoet." />
+			<Property name="Portuguese" value="Dois trabalhadores estão perante o Supervisor. Um diz que o capataz tem lesado a equipa da noite. O capataz diz que a equipa tem lesado o trabalho." />
+			<Property name="LatinAmericanSpanish" value="Dos trabajadores se presentan ante el supervisor. Uno dice que el capataz le paga de menos al turno de noche. El capataz dice que el turno de noche rinde de menos en el trabajo." />
+			<Property name="BrazilianPortuguese" value="Dois trabalhadores estão diante do supervisor. Um diz que o capataz vem pagando menos à equipe da noite. O capataz diz que a equipe vem entregando menos trabalho." />
+			<Property name="SimplifiedChinese" value="两名工人来到监督者面前。一人说工头一直克扣夜班工人的工钱，工头则说工班一直在敷衍干活。" />
+			<Property name="TraditionalChinese" value="兩名工人來到監督者面前。一人說工頭一直剋扣夜班工人的工錢，工頭則說工班一直在敷衍做事。" />
+			<Property name="TencentChinese" value="两名工人来到监督者面前。一人说工头一直克扣夜班工人的工钱，工头则说工班一直在敷衍干活。" />
+			<Property name="Korean" value="일꾼 두 명이 감독관 앞에 섰습니다. 한쪽은 작업반장이 야간조 임금을 떼먹었다고 말합니다. 작업반장은 작업조가 일을 대충 했다고 말합니다." />
+			<Property name="Japanese" value="二人の作業員が監督官の前に立っている。一方は、現場監督が夜勤班の賃金を不当に削っていると言う。現場監督は、班が仕事の手を抜いていると言う。" />
 			<Property name="USEnglish" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_O1" />
 			<Property name="English" value="Let them stay" />
+			<Property name="French" value="La laisser rester" />
+			<Property name="Italian" value="Lasciala restare" />
+			<Property name="German" value="Bleiben lassen" />
+			<Property name="Spanish" value="Dejar que se quede" />
+			<Property name="Russian" value="Позволить остаться" />
+			<Property name="Polish" value="Pozwól zostać" />
+			<Property name="Dutch" value="Laat de vreemdeling blijven" />
+			<Property name="Portuguese" value="Deixar ficar" />
+			<Property name="LatinAmericanSpanish" value="Dejar que se quede" />
+			<Property name="BrazilianPortuguese" value="Deixar ficar" />
+			<Property name="SimplifiedChinese" value="让对方留下" />
+			<Property name="TraditionalChinese" value="讓對方留下" />
+			<Property name="TencentChinese" value="让对方留下" />
+			<Property name="Korean" value="머물게 한다" />
+			<Property name="Japanese" value="滞在を許可する" />
 			<Property name="USEnglish" value="Let them stay" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_O2" />
 			<Property name="English" value="Turn them away" />
+			<Property name="French" value="La renvoyer" />
+			<Property name="Italian" value="Mandala via" />
+			<Property name="German" value="Abweisen" />
+			<Property name="Spanish" value="Rechazarla" />
+			<Property name="Russian" value="Отказать в приюте" />
+			<Property name="Polish" value="Odmów schronienia" />
+			<Property name="Dutch" value="Stuur de vreemdeling weg" />
+			<Property name="Portuguese" value="Mandar embora" />
+			<Property name="LatinAmericanSpanish" value="Rechazarla" />
+			<Property name="BrazilianPortuguese" value="Mandar embora" />
+			<Property name="SimplifiedChinese" value="拒之门外" />
+			<Property name="TraditionalChinese" value="拒之門外" />
+			<Property name="TencentChinese" value="拒之门外" />
+			<Property name="Korean" value="돌려보낸다" />
+			<Property name="Japanese" value="追い返す" />
 			<Property name="USEnglish" value="Turn them away" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_T" />
 			<Property name="English" value="A Stranger at the Gate" />
+			<Property name="French" value="Une personne inconnue à la porte" />
+			<Property name="Italian" value="Una persona sconosciuta al cancello" />
+			<Property name="German" value="Eine fremde Person am Tor" />
+			<Property name="Spanish" value="Una persona desconocida en la puerta" />
+			<Property name="Russian" value="Незнакомец у ворот" />
+			<Property name="Polish" value="Nieznajomy przy bramie" />
+			<Property name="Dutch" value="Een vreemdeling bij de poort" />
+			<Property name="Portuguese" value="Um Desconhecido no Portão" />
+			<Property name="LatinAmericanSpanish" value="Una persona desconocida en la puerta" />
+			<Property name="BrazilianPortuguese" value="Um estranho no portão" />
+			<Property name="SimplifiedChinese" value="门口的陌生人" />
+			<Property name="TraditionalChinese" value="門口的陌生人" />
+			<Property name="TencentChinese" value="门口的陌生人" />
+			<Property name="Korean" value="문 앞의 이방인" />
+			<Property name="Japanese" value="門前のよそ者" />
 			<Property name="USEnglish" value="A Stranger at the Gate" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_Q" />
 			<Property name="English" value="Let the stranger stay?" />
+			<Property name="French" value="Laisser cette personne rester ?" />
+			<Property name="Italian" value="Lasciare restare questa persona?" />
+			<Property name="German" value="Die fremde Person bleiben lassen?" />
+			<Property name="Spanish" value="¿Dejar que esa persona se quede?" />
+			<Property name="Russian" value="Позволить незнакомцу остаться?" />
+			<Property name="Polish" value="Pozwolić nieznajomemu zostać?" />
+			<Property name="Dutch" value="De vreemdeling laten blijven?" />
+			<Property name="Portuguese" value="Deixar a pessoa desconhecida ficar?" />
+			<Property name="LatinAmericanSpanish" value="¿Dejar que esa persona se quede?" />
+			<Property name="BrazilianPortuguese" value="Deixar a pessoa estranha ficar?" />
+			<Property name="SimplifiedChinese" value="要让这位陌生人留下吗？" />
+			<Property name="TraditionalChinese" value="要讓這位陌生人留下嗎？" />
+			<Property name="TencentChinese" value="要让这位陌生人留下吗？" />
+			<Property name="Korean" value="이방인을 머물게 할까요?" />
+			<Property name="Japanese" value="よそ者の滞在を許可するか？" />
 			<Property name="USEnglish" value="Let the stranger stay?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_D" />
 			<Property name="English" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="French" value="Une personne inconnue, en armure usée, demande refuge. Elle donne un nom, mais rien d'autre sur son origine." />
+			<Property name="Italian" value="Una persona sconosciuta, con un'armatura logora, chiede rifugio. Dice un nome, ma nient'altro su da dove venga." />
+			<Property name="German" value="Eine fremde Person in abgetragener Rüstung bittet um Unterkunft. Sie nennt einen Namen, sagt aber sonst nichts darüber, woher sie kommt." />
+			<Property name="Spanish" value="Una persona desconocida, con una armadura desgastada, pide refugio. Da un nombre, pero nada más sobre de dónde viene." />
+			<Property name="Russian" value="Незнакомец в потертых доспехах просит приюта. Имя он называет, но больше ничего не рассказывает о том, откуда пришел." />
+			<Property name="Polish" value="Nieznajomy w znoszonej zbroi prosi o schronienie. Podaje imię, ale o tym, skąd przybywa, nie mówi nic więcej." />
+			<Property name="Dutch" value="Een vreemdeling in een versleten harnas vraagt om onderdak. De vreemdeling noemt een naam, maar zegt verder niets over waar die vandaan komt." />
+			<Property name="Portuguese" value="Uma pessoa desconhecida, de armadura gasta, pede abrigo. Diz um nome, mas nada mais sobre o lugar de onde veio." />
+			<Property name="LatinAmericanSpanish" value="Una persona desconocida, con una armadura desgastada, pide refugio. Dice un nombre, pero nada más sobre de dónde viene." />
+			<Property name="BrazilianPortuguese" value="Uma pessoa estranha, com a armadura gasta, pede abrigo. Diz um nome, mas nada mais sobre de onde veio." />
+			<Property name="SimplifiedChinese" value="一位身穿破旧护甲的陌生人请求庇护。对方报了名字，却没有透露任何来历。" />
+			<Property name="TraditionalChinese" value="一位身穿破舊裝甲的陌生人請求庇護。對方報了名字，卻沒有透露任何來歷。" />
+			<Property name="TencentChinese" value="一位身穿破旧护甲的陌生人请求庇护。对方报了名字，却没有透露任何来历。" />
+			<Property name="Korean" value="낡은 갑옷 차림의 이방인이 쉴 곳을 청합니다. 이름은 밝혔지만, 어디서 왔는지는 말하지 않습니다." />
+			<Property name="Japanese" value="着古した鎧をまとったよそ者が、身を寄せる場所を求めている。名前は名乗ったが、どこから来たのかについては何も語らない。" />
 			<Property name="USEnglish" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_O1" />
 			<Property name="English" value="Open it carefully" />
+			<Property name="French" value="L'ouvrir avec précaution" />
+			<Property name="Italian" value="Aprilo con cautela" />
+			<Property name="German" value="Vorsichtig öffnen" />
+			<Property name="Spanish" value="Abrirlo con cuidado" />
+			<Property name="Russian" value="Вскрыть осторожно" />
+			<Property name="Polish" value="Otwórz ostrożnie" />
+			<Property name="Dutch" value="Open hem voorzichtig" />
+			<Property name="Portuguese" value="Abrir com cuidado" />
+			<Property name="LatinAmericanSpanish" value="Abrirlo con cuidado" />
+			<Property name="BrazilianPortuguese" value="Abrir com cuidado" />
+			<Property name="SimplifiedChinese" value="小心开启" />
+			<Property name="TraditionalChinese" value="小心開啟" />
+			<Property name="TencentChinese" value="小心开启" />
+			<Property name="Korean" value="조심스럽게 연다" />
+			<Property name="Japanese" value="慎重に開ける" />
 			<Property name="USEnglish" value="Open it carefully" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_O2" />
 			<Property name="English" value="Sell it unopened (units)" />
+			<Property name="French" value="Le vendre sans l'ouvrir (unités)" />
+			<Property name="Italian" value="Vendilo senza aprirlo (unità)" />
+			<Property name="German" value="Ungeöffnet verkaufen (Units)" />
+			<Property name="Spanish" value="Venderlo sin abrir (unidades)" />
+			<Property name="Russian" value="Продать невскрытым (юниты)" />
+			<Property name="Polish" value="Sprzedaj nieotwarty (jednostki)" />
+			<Property name="Dutch" value="Verkoop hem ongeopend (units)" />
+			<Property name="Portuguese" value="Vender sem abrir (unidades)" />
+			<Property name="LatinAmericanSpanish" value="Venderlo sin abrir (unidades)" />
+			<Property name="BrazilianPortuguese" value="Vender sem abrir (unidades)" />
+			<Property name="SimplifiedChinese" value="原封不动地出售（货币）" />
+			<Property name="TraditionalChinese" value="原封不動地出售（貨幣）" />
+			<Property name="TencentChinese" value="原封不动地出售（货币）" />
+			<Property name="Korean" value="열지 않고 판다 (유닛)" />
+			<Property name="Japanese" value="開けずに売る(ユニット)" />
 			<Property name="USEnglish" value="Sell it unopened (units)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_T" />
 			<Property name="English" value="A Sealed Vault" />
+			<Property name="French" value="Un caveau scellé" />
+			<Property name="Italian" value="Un deposito sigillato" />
+			<Property name="German" value="Eine versiegelte Kammer" />
+			<Property name="Spanish" value="Un compartimento sellado" />
+			<Property name="Russian" value="Запечатанное хранилище" />
+			<Property name="Polish" value="Zapieczętowany magazyn" />
+			<Property name="Dutch" value="Een verzegelde kluis" />
+			<Property name="Portuguese" value="Um Cofre Selado" />
+			<Property name="LatinAmericanSpanish" value="Un compartimento sellado" />
+			<Property name="BrazilianPortuguese" value="Um cofre lacrado" />
+			<Property name="SimplifiedChinese" value="封存的种子库" />
+			<Property name="TraditionalChinese" value="封存的種子庫" />
+			<Property name="TencentChinese" value="封存的种子库" />
+			<Property name="Korean" value="봉인된 저장고" />
+			<Property name="Japanese" value="封印された保管ボックス" />
 			<Property name="USEnglish" value="A Sealed Vault" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_Q" />
 			<Property name="English" value="Open the vault?" />
+			<Property name="French" value="Ouvrir le caveau ?" />
+			<Property name="Italian" value="Aprire il deposito?" />
+			<Property name="German" value="Die Kammer öffnen?" />
+			<Property name="Spanish" value="¿Abrir el compartimento?" />
+			<Property name="Russian" value="Вскрыть хранилище?" />
+			<Property name="Polish" value="Otworzyć magazyn?" />
+			<Property name="Dutch" value="De kluis openen?" />
+			<Property name="Portuguese" value="Abrir o cofre?" />
+			<Property name="LatinAmericanSpanish" value="¿Abrir el compartimento?" />
+			<Property name="BrazilianPortuguese" value="Abrir o cofre?" />
+			<Property name="SimplifiedChinese" value="要开启种子库吗？" />
+			<Property name="TraditionalChinese" value="要開啟種子庫嗎？" />
+			<Property name="TencentChinese" value="要开启种子库吗？" />
+			<Property name="Korean" value="저장고를 열까요?" />
+			<Property name="Japanese" value="保管ボックスを開けるか？" />
 			<Property name="USEnglish" value="Open the vault?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_D" />
 			<Property name="English" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="French" value="En dégageant une grotte, un fermier a trouvé un caveau scellé de graines anciennes. Des collectionneurs paieraient cher pour l'avoir intact." />
+			<Property name="Italian" value="Un contadino che ripuliva una grotta ha trovato un deposito sigillato di semi antichi. I collezionisti pagherebbero bene per averlo intatto." />
+			<Property name="German" value="Ein Farmer, der eine Höhle freiräumte, fand eine versiegelte Kammer mit uralten Samen. Sammler würden gut dafür zahlen, solange sie ungeöffnet ist." />
+			<Property name="Spanish" value="Un granjero que despejaba una cueva ha encontrado un compartimento sellado con semillas antiguas. Los coleccionistas pagarían bien por él sin abrir." />
+			<Property name="Russian" value="Фермер, расчищавший пещеру, нашел запечатанное хранилище древних семян. Коллекционеры заплатили бы за него щедро, если оно останется невскрытым." />
+			<Property name="Polish" value="Rolnik oczyszczający jaskinię znalazł zapieczętowany magazyn starożytnych nasion. Kolekcjonerzy zapłaciliby za niego sporo, o ile pozostanie nieotwarty." />
+			<Property name="Dutch" value="Een landbouwer die een grot opruimde, vond een verzegelde kluis met eeuwenoude zaden. Verzamelaars zouden er goed voor betalen, zolang hij ongeopend is." />
+			<Property name="Portuguese" value="Um agricultor que limpava uma gruta encontrou um cofre selado com sementes antigas. Os colecionadores pagariam bem por ele, sem o abrir." />
+			<Property name="LatinAmericanSpanish" value="Un granjero que despejaba una cueva encontró un compartimento sellado con semillas antiguas. Los coleccionistas pagarían bien por él sin abrir." />
+			<Property name="BrazilianPortuguese" value="Um fazendeiro limpando uma caverna achou um cofre lacrado com sementes antigas. Colecionadores pagariam bem por ele, sem abrir." />
+			<Property name="SimplifiedChinese" value="一位农民在清理洞穴时，发现了一座封存的古代种子库。收藏家愿意出高价购买未开封的种子库。" />
+			<Property name="TraditionalChinese" value="一位農夫在清理洞窟時，發現了一座封存的古老種子庫。收藏家願意出高價購買未開封的種子庫。" />
+			<Property name="TencentChinese" value="一位农民在清理洞穴时，发现了一座封存的古代种子库。收藏家愿意出高价购买未开封的种子库。" />
+			<Property name="Korean" value="동굴을 정리하던 농부가 고대 씨앗이 든 봉인된 저장고를 발견했습니다. 열지 않은 상태라면 수집가들이 큰돈을 낼 것입니다." />
+			<Property name="Japanese" value="洞窟を整地していた農家が、古代の種が入った封印済みの保管ボックスを見つけた。開けないままなら、収集家が高値を出すだろう。" />
 			<Property name="USEnglish" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_O1" />
 			<Property name="English" value="Send a search party" />
+			<Property name="French" value="Envoyer une équipe de recherche" />
+			<Property name="Italian" value="Invia una squadra di ricerca" />
+			<Property name="German" value="Einen Suchtrupp schicken" />
+			<Property name="Spanish" value="Enviar una partida de búsqueda" />
+			<Property name="Russian" value="Отправить поисковый отряд" />
+			<Property name="Polish" value="Wyślij grupę poszukiwawczą" />
+			<Property name="Dutch" value="Stuur een zoekploeg" />
+			<Property name="Portuguese" value="Enviar uma equipa de busca" />
+			<Property name="LatinAmericanSpanish" value="Enviar una partida de búsqueda" />
+			<Property name="BrazilianPortuguese" value="Enviar uma equipe de busca" />
+			<Property name="SimplifiedChinese" value="派出搜索队" />
+			<Property name="TraditionalChinese" value="派出搜索隊" />
+			<Property name="TencentChinese" value="派出搜索队" />
+			<Property name="Korean" value="수색대를 보낸다" />
+			<Property name="Japanese" value="捜索隊を出す" />
 			<Property name="USEnglish" value="Send a search party" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_O2" />
 			<Property name="English" value="Light a beacon and wait" />
+			<Property name="French" value="Allumer une balise et attendre" />
+			<Property name="Italian" value="Accendi un radiofaro e aspetta" />
+			<Property name="German" value="Ein Signalfeuer entzünden und warten" />
+			<Property name="Spanish" value="Encender una baliza y esperar" />
+			<Property name="Russian" value="Зажечь маяк и ждать" />
+			<Property name="Polish" value="Zapal ogień sygnałowy i czekaj" />
+			<Property name="Dutch" value="Ontsteek een baken en wacht" />
+			<Property name="Portuguese" value="Acender um emissor e esperar" />
+			<Property name="LatinAmericanSpanish" value="Encender una baliza y esperar" />
+			<Property name="BrazilianPortuguese" value="Acender um sinal e esperar" />
+			<Property name="SimplifiedChinese" value="点燃信标等待" />
+			<Property name="TraditionalChinese" value="點燃信標等待" />
+			<Property name="TencentChinese" value="点燃信标等待" />
+			<Property name="Korean" value="신호기를 켜고 기다린다" />
+			<Property name="Japanese" value="ビーコンを灯して待つ" />
 			<Property name="USEnglish" value="Light a beacon and wait" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_T" />
 			<Property name="English" value="Overdue" />
+			<Property name="French" value="En retard" />
+			<Property name="Italian" value="In ritardo" />
+			<Property name="German" value="Überfällig" />
+			<Property name="Spanish" value="Retrasados" />
+			<Property name="Russian" value="Просрочили возвращение" />
+			<Property name="Polish" value="Spóźnienie" />
+			<Property name="Dutch" value="Te laat" />
+			<Property name="Portuguese" value="Em Atraso" />
+			<Property name="LatinAmericanSpanish" value="Atrasados" />
+			<Property name="BrazilianPortuguese" value="Atrasados" />
+			<Property name="SimplifiedChinese" value="逾期未归" />
+			<Property name="TraditionalChinese" value="逾期未歸" />
+			<Property name="TencentChinese" value="逾期未归" />
+			<Property name="Korean" value="늦어지는 귀환" />
+			<Property name="Japanese" value="帰還の遅れ" />
 			<Property name="USEnglish" value="Overdue" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_Q" />
 			<Property name="English" value="Send a search party?" />
+			<Property name="French" value="Envoyer une équipe de recherche ?" />
+			<Property name="Italian" value="Inviare una squadra di ricerca?" />
+			<Property name="German" value="Einen Suchtrupp schicken?" />
+			<Property name="Spanish" value="¿Enviar una partida de búsqueda?" />
+			<Property name="Russian" value="Отправить поисковый отряд?" />
+			<Property name="Polish" value="Wysłać grupę poszukiwawczą?" />
+			<Property name="Dutch" value="Een zoekploeg sturen?" />
+			<Property name="Portuguese" value="Enviar uma equipa de busca?" />
+			<Property name="LatinAmericanSpanish" value="¿Enviar una partida de búsqueda?" />
+			<Property name="BrazilianPortuguese" value="Enviar uma equipe de busca?" />
+			<Property name="SimplifiedChinese" value="要派出搜索队吗？" />
+			<Property name="TraditionalChinese" value="要派出搜索隊嗎？" />
+			<Property name="TencentChinese" value="要派出搜索队吗？" />
+			<Property name="Korean" value="수색대를 보낼까요?" />
+			<Property name="Japanese" value="捜索隊を出すか？" />
 			<Property name="USEnglish" value="Send a search party?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_D" />
 			<Property name="English" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="French" value="Une équipe de relevé est partie il y a deux jours cartographier la crête. Elle aurait dû être de retour hier." />
+			<Property name="Italian" value="Una squadra di rilevamento è partita due giorni fa per mappare il crinale. Sarebbe dovuta tornare ieri." />
+			<Property name="German" value="Ein Vermessungstrupp ist vor zwei Tagen aufgebrochen, um den Höhenzug zu kartieren. Er hätte gestern zurück sein sollen." />
+			<Property name="Spanish" value="Un equipo de inspección salió hace dos días a cartografiar la cresta. Tendría que haber vuelto ayer." />
+			<Property name="Russian" value="Разведывательная группа вышла два дня назад, чтобы нанести на карту хребет. Она должна была вернуться вчера." />
+			<Property name="Polish" value="Zespół badawczy wyruszył dwa dni temu, by zmapować grzbiet. Powinien wrócić wczoraj." />
+			<Property name="Dutch" value="Een verkenningsteam vertrok twee dagen geleden om de bergkam in kaart te brengen. Het had gisteren terug moeten zijn." />
+			<Property name="Portuguese" value="Uma equipa de reconhecimento partiu há dois dias para mapear a cordilheira. Deveria ter regressado ontem." />
+			<Property name="LatinAmericanSpanish" value="Un equipo de exploración salió hace dos días a cartografiar la cresta. Debería haber regresado ayer." />
+			<Property name="BrazilianPortuguese" value="Uma equipe de reconhecimento saiu há dois dias para mapear a serra. Deveria ter voltado ontem." />
+			<Property name="SimplifiedChinese" value="一支勘测队两天前出发去绘制山脊地图，本该昨天就回来了。" />
+			<Property name="TraditionalChinese" value="一支勘測隊兩天前出發去繪製山脊地圖，本該昨天就回來了。" />
+			<Property name="TencentChinese" value="一支勘测队两天前出发去绘制山脊地图，本该昨天就回来了。" />
+			<Property name="Korean" value="측량대가 이틀 전 능선 지도를 만들러 떠났습니다. 어제는 돌아왔어야 합니다." />
+			<Property name="Japanese" value="調査隊は尾根の地図を作るため、二日前に出発した。昨日には戻っているはずだった。" />
 			<Property name="USEnglish" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_H_S1" />
 			<Property name="English" value="The Stranger at the Gate" />
+			<Property name="French" value="La personne inconnue à la porte" />
+			<Property name="Italian" value="La persona sconosciuta al cancello" />
+			<Property name="German" value="Die fremde Person am Tor" />
+			<Property name="Spanish" value="La persona desconocida en la puerta" />
+			<Property name="Russian" value="Незнакомец у ворот" />
+			<Property name="Polish" value="Nieznajomy przy bramie" />
+			<Property name="Dutch" value="De vreemdeling bij de poort" />
+			<Property name="Portuguese" value="O Desconhecido no Portão" />
+			<Property name="LatinAmericanSpanish" value="La persona desconocida en la puerta" />
+			<Property name="BrazilianPortuguese" value="O estranho no portão" />
+			<Property name="SimplifiedChinese" value="门口的陌生人" />
+			<Property name="TraditionalChinese" value="門口的陌生人" />
+			<Property name="TencentChinese" value="门口的陌生人" />
+			<Property name="Korean" value="문 앞의 이방인" />
+			<Property name="Japanese" value="門前のよそ者" />
 			<Property name="USEnglish" value="The Stranger at the Gate" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_H_S2" />
 			<Property name="English" value="The Seed Vault" />
+			<Property name="French" value="Le caveau de graines" />
+			<Property name="Italian" value="Il deposito di semi" />
+			<Property name="German" value="Die Samenkammer" />
+			<Property name="Spanish" value="El compartimento de semillas" />
+			<Property name="Russian" value="Хранилище семян" />
+			<Property name="Polish" value="Magazyn nasion" />
+			<Property name="Dutch" value="De zadenkluis" />
+			<Property name="Portuguese" value="O Cofre das Sementes" />
+			<Property name="LatinAmericanSpanish" value="El compartimento de semillas" />
+			<Property name="BrazilianPortuguese" value="O cofre de sementes" />
+			<Property name="SimplifiedChinese" value="种子库" />
+			<Property name="TraditionalChinese" value="種子庫" />
+			<Property name="TencentChinese" value="种子库" />
+			<Property name="Korean" value="씨앗 저장고" />
+			<Property name="Japanese" value="種の保管ボックス" />
 			<Property name="USEnglish" value="The Seed Vault" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_H_S3" />
 			<Property name="English" value="The Lost Survey" />
+			<Property name="French" value="L'équipe de relevé perdue" />
+			<Property name="Italian" value="La squadra di rilevamento dispersa" />
+			<Property name="German" value="Der verschollene Trupp" />
+			<Property name="Spanish" value="El equipo de inspección perdido" />
+			<Property name="Russian" value="Пропавшая разведгруппа" />
+			<Property name="Polish" value="Zaginiony zespół badawczy" />
+			<Property name="Dutch" value="De vermiste verkenners" />
+			<Property name="Portuguese" value="A Equipa Perdida" />
+			<Property name="LatinAmericanSpanish" value="El equipo de exploración perdido" />
+			<Property name="BrazilianPortuguese" value="A equipe perdida" />
+			<Property name="SimplifiedChinese" value="失踪的勘测队" />
+			<Property name="TraditionalChinese" value="失蹤的勘測隊" />
+			<Property name="TencentChinese" value="失踪的勘测队" />
+			<Property name="Korean" value="실종된 측량대" />
+			<Property name="Japanese" value="行方不明の調査隊" />
 			<Property name="USEnglish" value="The Lost Survey" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_O1" />
 			<Property name="English" value="Keep their secret" />
+			<Property name="French" value="Garder son secret" />
+			<Property name="Italian" value="Mantieni il suo segreto" />
+			<Property name="German" value="Das Geheimnis wahren" />
+			<Property name="Spanish" value="Guardar su secreto" />
+			<Property name="Russian" value="Сохранить тайну" />
+			<Property name="Polish" value="Zachowaj sekret" />
+			<Property name="Dutch" value="Houd het geheim" />
+			<Property name="Portuguese" value="Guardar o segredo" />
+			<Property name="LatinAmericanSpanish" value="Guardar su secreto" />
+			<Property name="BrazilianPortuguese" value="Guardar o segredo" />
+			<Property name="SimplifiedChinese" value="保守对方的秘密" />
+			<Property name="TraditionalChinese" value="保守對方的秘密" />
+			<Property name="TencentChinese" value="保守对方的秘密" />
+			<Property name="Korean" value="비밀을 지켜 준다" />
+			<Property name="Japanese" value="秘密を守る" />
 			<Property name="USEnglish" value="Keep their secret" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_O2" />
 			<Property name="English" value="Hand them over for the bounty" />
+			<Property name="French" value="La livrer pour la prime" />
+			<Property name="Italian" value="Consegnala per la taglia" />
+			<Property name="German" value="Gegen das Kopfgeld ausliefern" />
+			<Property name="Spanish" value="Entregarla por la recompensa" />
+			<Property name="Russian" value="Выдать за награду" />
+			<Property name="Polish" value="Wydaj za nagrodę" />
+			<Property name="Dutch" value="Lever uit voor de premie" />
+			<Property name="Portuguese" value="Entregar pela recompensa" />
+			<Property name="LatinAmericanSpanish" value="Entregarla por la recompensa" />
+			<Property name="BrazilianPortuguese" value="Entregar pela recompensa" />
+			<Property name="SimplifiedChinese" value="为了赏金交出对方" />
+			<Property name="TraditionalChinese" value="為了賞金交出對方" />
+			<Property name="TencentChinese" value="为了赏金交出对方" />
+			<Property name="Korean" value="현상금을 받고 넘긴다" />
+			<Property name="Japanese" value="賞金目当てに引き渡す" />
 			<Property name="USEnglish" value="Hand them over for the bounty" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_T" />
 			<Property name="English" value="Rumours" />
+			<Property name="French" value="Rumeurs" />
+			<Property name="Italian" value="Voci" />
+			<Property name="German" value="Gerüchte" />
+			<Property name="Spanish" value="Rumores" />
+			<Property name="Russian" value="Слухи" />
+			<Property name="Polish" value="Plotki" />
+			<Property name="Dutch" value="Geruchten" />
+			<Property name="Portuguese" value="Rumores" />
+			<Property name="LatinAmericanSpanish" value="Rumores" />
+			<Property name="BrazilianPortuguese" value="Rumores" />
+			<Property name="SimplifiedChinese" value="流言" />
+			<Property name="TraditionalChinese" value="流言" />
+			<Property name="TencentChinese" value="流言" />
+			<Property name="Korean" value="소문" />
+			<Property name="Japanese" value="噂" />
 			<Property name="USEnglish" value="Rumours" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_Q" />
 			<Property name="English" value="Keep the stranger's secret?" />
+			<Property name="French" value="Garder le secret de cette personne ?" />
+			<Property name="Italian" value="Mantenere il segreto di questa persona?" />
+			<Property name="German" value="Das Geheimnis der fremden Person wahren?" />
+			<Property name="Spanish" value="¿Guardar el secreto de esa persona?" />
+			<Property name="Russian" value="Сохранить тайну незнакомца?" />
+			<Property name="Polish" value="Zachować tajemnicę nieznajomego?" />
+			<Property name="Dutch" value="Het geheim van de vreemdeling bewaren?" />
+			<Property name="Portuguese" value="Guardar o segredo da pessoa desconhecida?" />
+			<Property name="LatinAmericanSpanish" value="¿Guardar el secreto de esa persona?" />
+			<Property name="BrazilianPortuguese" value="Guardar o segredo da pessoa estranha?" />
+			<Property name="SimplifiedChinese" value="要替这位陌生人保守秘密吗？" />
+			<Property name="TraditionalChinese" value="要替這位陌生人保守秘密嗎？" />
+			<Property name="TencentChinese" value="要替这位陌生人保守秘密吗？" />
+			<Property name="Korean" value="이방인의 비밀을 지켜 줄까요?" />
+			<Property name="Japanese" value="よそ者の秘密を守るか？" />
 			<Property name="USEnglish" value="Keep the stranger's secret?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_D" />
 			<Property name="English" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="French" value="Cette personne a travaillé dur et est restée discrète. Maintenant, un marchand de passage affirme qu'elle a déserté un équipage de pirates, et que les pirates paient bien pour récupérer leurs déserteurs." />
+			<Property name="Italian" value="La persona ha lavorato sodo e si è tenuta in disparte. Ora un mercante di passaggio sostiene che abbia disertato da un equipaggio pirata, e che i pirati paghino bene per riavere i disertori." />
+			<Property name="German" value="Die fremde Person hat hart gearbeitet und sich zurückgehalten. Nun behauptet ein durchreisender Händler, sie sei aus einer Piratencrew desertiert, und Piraten zahlten gut, um Deserteure zurückzubekommen." />
+			<Property name="Spanish" value="Esa persona ha trabajado duro y se ha mantenido apartada. Ahora un mercader de paso asegura que desertó de una tripulación pirata, y que los piratas pagan bien por recuperar a quienes desertan." />
+			<Property name="Russian" value="Незнакомец усердно работает и держится особняком. Теперь проезжий торговец утверждает, что он дезертировал из пиратской команды, а пираты хорошо платят за возвращение дезертиров." />
+			<Property name="Polish" value="Nieznajomy ciężko pracuje i trzyma się na uboczu. Teraz przejezdny handlowiec twierdzi, że to dezerter z pirackiej załogi, a piraci dobrze płacą za odzyskanie dezerterów." />
+			<Property name="Dutch" value="De vreemdeling heeft hard gewerkt en hield zich afzijdig. Nu beweert een passerende handelaar dat de vreemdeling is gedeserteerd uit een piratencrew, en dat piraten goed betalen voor het terugkrijgen van deserteurs." />
+			<Property name="Portuguese" value="A pessoa desconhecida trabalhou muito e manteve-se discreta. Agora um comerciante de passagem afirma que desertou de uma tripulação de piratas, e que os piratas pagam bem para recuperar desertores." />
+			<Property name="LatinAmericanSpanish" value="Esa persona ha trabajado duro y se ha mantenido aparte. Ahora un mercader de paso asegura que desertó de una tripulación pirata, y que los piratas pagan bien por recuperar a quienes desertan." />
+			<Property name="BrazilianPortuguese" value="A pessoa estranha trabalhou duro e ficou na dela. Agora um comerciante de passagem afirma que ela desertou de uma tripulação pirata, e que piratas pagam bem para ter desertores de volta." />
+			<Property name="SimplifiedChinese" value="这位陌生人干活勤快，也不爱与人往来。现在，一名路过的商人声称对方是从一伙海盗中逃出的逃兵，而海盗愿意出高价抓回逃兵。" />
+			<Property name="TraditionalChinese" value="這位陌生人工作勤奮，也不愛與人往來。現在，一名路過的商人聲稱對方是從一夥海盜中逃出的逃兵，而海盜願意出高價抓回逃兵。" />
+			<Property name="TencentChinese" value="这位陌生人干活勤快，也不爱与人往来。现在，一名路过的商人声称对方是从一伙海寇中逃出的逃兵，而海寇愿意出高价抓回逃兵。" />
+			<Property name="Korean" value="이방인은 열심히 일했고 조용히 지냈습니다. 그런데 지나가던 상인이 이방인이 해적단에서 탈영했으며, 해적들이 탈영병을 되찾기 위해 큰돈을 낸다고 주장합니다." />
+			<Property name="Japanese" value="よそ者は懸命に働き、静かに暮らしてきた。そこへ通りすがりのトレーダーが、海賊団から脱走した者だと言い出した。海賊は脱走者を連れ戻すためなら大金を払うという。" />
 			<Property name="USEnglish" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_O1" />
 			<Property name="English" value="Stand together" />
+			<Property name="French" value="Faire front commun" />
+			<Property name="Italian" value="Restate uniti" />
+			<Property name="German" value="Zusammenhalten" />
+			<Property name="Spanish" value="Hacer frente común" />
+			<Property name="Russian" value="Держаться вместе" />
+			<Property name="Polish" value="Stańcie razem" />
+			<Property name="Dutch" value="Sta samen sterk" />
+			<Property name="Portuguese" value="Manter-se unidos" />
+			<Property name="LatinAmericanSpanish" value="Hacer frente común" />
+			<Property name="BrazilianPortuguese" value="Ficar unidos" />
+			<Property name="SimplifiedChinese" value="团结一致" />
+			<Property name="TraditionalChinese" value="團結一致" />
+			<Property name="TencentChinese" value="团结一致" />
+			<Property name="Korean" value="함께 맞선다" />
+			<Property name="Japanese" value="一致団結する" />
 			<Property name="USEnglish" value="Stand together" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_O2" />
 			<Property name="English" value="Pay the pirates to leave (adds debt)" />
+			<Property name="French" value="Payer les pirates pour qu'ils partent (ajoute de la dette)" />
+			<Property name="Italian" value="Paga i pirati perché se ne vadano (aumenta i debiti)" />
+			<Property name="German" value="Piraten für den Abzug bezahlen (erhöht die Schulden)" />
+			<Property name="Spanish" value="Pagar a los piratas para que se vayan (añade deuda)" />
+			<Property name="Russian" value="Заплатить пиратам, чтобы ушли (долг растет)" />
+			<Property name="Polish" value="Zapłać piratom, by odeszli (dług się zwiększa)" />
+			<Property name="Dutch" value="Betaal de piraten om te vertrekken (meer schuld)" />
+			<Property name="Portuguese" value="Pagar aos piratas para partirem (aumenta a dívida)" />
+			<Property name="LatinAmericanSpanish" value="Pagarles a los piratas para que se vayan (agrega deuda)" />
+			<Property name="BrazilianPortuguese" value="Pagar os piratas para irem embora (aumenta a dívida)" />
+			<Property name="SimplifiedChinese" value="付钱让海盗离开（增加债务）" />
+			<Property name="TraditionalChinese" value="付錢讓海盜離開（增加債務）" />
+			<Property name="TencentChinese" value="付钱让海寇离开（增加债务）" />
+			<Property name="Korean" value="해적에게 돈을 주어 돌려보낸다 (부채 증가)" />
+			<Property name="Japanese" value="海賊に金を払って帰ってもらう(負債増加)" />
 			<Property name="USEnglish" value="Pay the pirates to leave (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_T" />
 			<Property name="English" value="The Crew Comes Looking" />
+			<Property name="French" value="L'équipage vient la chercher" />
+			<Property name="Italian" value="L'equipaggio la cerca" />
+			<Property name="German" value="Die Crew kommt suchen" />
+			<Property name="Spanish" value="La tripulación viene a buscarla" />
+			<Property name="Russian" value="Команда ищет дезертира" />
+			<Property name="Polish" value="Załoga szuka dezertera" />
+			<Property name="Dutch" value="De crew komt zoeken" />
+			<Property name="Portuguese" value="A Tripulação Vem à Procura" />
+			<Property name="LatinAmericanSpanish" value="La tripulación viene a buscarla" />
+			<Property name="BrazilianPortuguese" value="A tripulação vem procurar" />
+			<Property name="SimplifiedChinese" value="船员找上门来" />
+			<Property name="TraditionalChinese" value="船員找上門來" />
+			<Property name="TencentChinese" value="船员找上门来" />
+			<Property name="Korean" value="해적단이 찾아오다" />
+			<Property name="Japanese" value="一味の来訪" />
 			<Property name="USEnglish" value="The Crew Comes Looking" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_Q" />
 			<Property name="English" value="How should the settlement answer?" />
+			<Property name="French" value="Comment la colonie doit-elle répondre ?" />
+			<Property name="Italian" value="Come dovrebbe rispondere l'insediamento?" />
+			<Property name="German" value="Wie soll die Siedlung antworten?" />
+			<Property name="Spanish" value="¿Cómo debe responder el asentamiento?" />
+			<Property name="Russian" value="Как поселению ответить?" />
+			<Property name="Polish" value="Jak osada ma odpowiedzieć?" />
+			<Property name="Dutch" value="Hoe moet de nederzetting antwoorden?" />
+			<Property name="Portuguese" value="Como deve o povoamento responder?" />
+			<Property name="LatinAmericanSpanish" value="¿Cómo debe responder el asentamiento?" />
+			<Property name="BrazilianPortuguese" value="Como o povoado deve responder?" />
+			<Property name="SimplifiedChinese" value="定居点该如何应对？" />
+			<Property name="TraditionalChinese" value="聚居地該如何應對？" />
+			<Property name="TencentChinese" value="定居点该如何应对？" />
+			<Property name="Korean" value="거주지는 어떻게 대응할까요?" />
+			<Property name="Japanese" value="開拓地はどう応じるか？" />
 			<Property name="USEnglish" value="How should the settlement answer?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_D" />
 			<Property name="English" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="French" value="Un vaisseau de transport pirate se pose en bordure de la colonie. L'équipage veut récupérer la personne qui a déserté, et il ne le demande pas poliment." />
+			<Property name="Italian" value="Una navetta pirata atterra ai margini dell'insediamento. L'equipaggio rivuole chi ha disertato, e non lo chiede con gentilezza." />
+			<Property name="German" value="Ein Piraten-Landungsschiff setzt am Rand der Siedlung auf. Die Crew will die desertierte Person zurück und fragt nicht höflich." />
+			<Property name="Spanish" value="Un transbordador pirata aterriza en el borde del asentamiento. La tripulación quiere recuperar a quien desertó, y no lo piden por las buenas." />
+			<Property name="Russian" value="Пиратский десантный корабль садится на краю поселения. Команда требует вернуть дезертира, и просить вежливо она не намерена." />
+			<Property name="Polish" value="Piracki statek desantowy ląduje na skraju osady. Załoga chce odzyskać dezertera i nie zamierza prosić grzecznie." />
+			<Property name="Dutch" value="Een piratenlandingsschip landt aan de rand van de nederzetting. De crew wil de deserteur terug, en ze vragen het niet vriendelijk." />
+			<Property name="Portuguese" value="Uma nave de desembarque pirata aterra na orla do povoamento. A tripulação quer de volta quem desertou, e não o pede com delicadeza." />
+			<Property name="LatinAmericanSpanish" value="Un transbordador pirata aterriza en el borde del asentamiento. La tripulación quiere recuperar a quien desertó, y no lo pide de buena manera." />
+			<Property name="BrazilianPortuguese" value="Uma nave de desembarque pirata pousa na borda do povoado. A tripulação quer de volta quem desertou, e não está pedindo com educação." />
+			<Property name="SimplifiedChinese" value="一艘海盗运输船降落在定居点边缘。船员要求交还他们的逃兵，而且来者不善。" />
+			<Property name="TraditionalChinese" value="一艘海盜降落艦降落在聚居地邊緣。船員要求交還他們的逃兵，而且來者不善。" />
+			<Property name="TencentChinese" value="一艘海寇运输船降落在定居点边缘。船员要求交还他们的逃兵，而且来者不善。" />
+			<Property name="Korean" value="해적 드롭쉽이 거주지 외곽에 착륙했습니다. 해적단은 탈영병을 돌려받길 원하며, 곱게 요구하지 않습니다." />
+			<Property name="Japanese" value="海賊の着陸船が開拓地の外れに降り立った。一味は脱走者を返せと迫っており、穏便に済ませるつもりはなさそうだ。" />
 			<Property name="USEnglish" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_O1" />
 			<Property name="English" value="Plant them for the settlement" />
+			<Property name="French" value="Les planter pour la colonie" />
+			<Property name="Italian" value="Piantali per l'insediamento" />
+			<Property name="German" value="Für die Siedlung anpflanzen" />
+			<Property name="Spanish" value="Plantarlas para el asentamiento" />
+			<Property name="Russian" value="Посадить для поселения" />
+			<Property name="Polish" value="Zasadź dla osady" />
+			<Property name="Dutch" value="Plant ze voor de nederzetting" />
+			<Property name="Portuguese" value="Plantá-las para o povoamento" />
+			<Property name="LatinAmericanSpanish" value="Plantarlas para el asentamiento" />
+			<Property name="BrazilianPortuguese" value="Plantar para o povoado" />
+			<Property name="SimplifiedChinese" value="为定居点种下" />
+			<Property name="TraditionalChinese" value="為聚居地種下" />
+			<Property name="TencentChinese" value="为定居点种下" />
+			<Property name="Korean" value="거주지를 위해 심는다" />
+			<Property name="Japanese" value="開拓地のために植える" />
 			<Property name="USEnglish" value="Plant them for the settlement" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_O2" />
 			<Property name="English" value="Keep the best, plant the rest" />
+			<Property name="French" value="Garder les meilleures, planter le reste" />
+			<Property name="Italian" value="Tieni i migliori, pianta il resto" />
+			<Property name="German" value="Das Beste behalten, den Rest anpflanzen" />
+			<Property name="Spanish" value="Quedarse con las mejores y plantar el resto" />
+			<Property name="Russian" value="Оставить лучшие, остальные посадить" />
+			<Property name="Polish" value="Zatrzymaj najlepsze, resztę zasadź" />
+			<Property name="Dutch" value="Bewaar de beste, plant de rest" />
+			<Property name="Portuguese" value="Guardar as melhores, plantar as restantes" />
+			<Property name="LatinAmericanSpanish" value="Guardar las mejores y plantar el resto" />
+			<Property name="BrazilianPortuguese" value="Guardar as melhores, plantar o resto" />
+			<Property name="SimplifiedChinese" value="留下最好的，其余种下" />
+			<Property name="TraditionalChinese" value="留下最好的，其餘種下" />
+			<Property name="TencentChinese" value="留下最好的，其余种下" />
+			<Property name="Korean" value="가장 좋은 것은 남기고 나머지를 심는다" />
+			<Property name="Japanese" value="最良のものは残し、残りを植える" />
 			<Property name="USEnglish" value="Keep the best, plant the rest" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_T" />
 			<Property name="English" value="The Old Seeds" />
+			<Property name="French" value="Les vieilles graines" />
+			<Property name="Italian" value="I vecchi semi" />
+			<Property name="German" value="Die alten Samen" />
+			<Property name="Spanish" value="Las semillas antiguas" />
+			<Property name="Russian" value="Старые семена" />
+			<Property name="Polish" value="Stare nasiona" />
+			<Property name="Dutch" value="De oude zaden" />
+			<Property name="Portuguese" value="As Sementes Antigas" />
+			<Property name="LatinAmericanSpanish" value="Las semillas viejas" />
+			<Property name="BrazilianPortuguese" value="As sementes antigas" />
+			<Property name="SimplifiedChinese" value="古老的种子" />
+			<Property name="TraditionalChinese" value="古老的種子" />
+			<Property name="TencentChinese" value="古老的种子" />
+			<Property name="Korean" value="오래된 씨앗" />
+			<Property name="Japanese" value="古い種" />
 			<Property name="USEnglish" value="The Old Seeds" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_Q" />
 			<Property name="English" value="What should become of the seeds?" />
+			<Property name="French" value="Que faire des graines ?" />
+			<Property name="Italian" value="Che ne sarà dei semi?" />
+			<Property name="German" value="Was soll aus den Samen werden?" />
+			<Property name="Spanish" value="¿Qué hacer con las semillas?" />
+			<Property name="Russian" value="Что сделать с семенами?" />
+			<Property name="Polish" value="Co zrobić z nasionami?" />
+			<Property name="Dutch" value="Wat moet er met de zaden gebeuren?" />
+			<Property name="Portuguese" value="O que fazer com as sementes?" />
+			<Property name="LatinAmericanSpanish" value="¿Qué hacer con las semillas?" />
+			<Property name="BrazilianPortuguese" value="O que fazer com as sementes?" />
+			<Property name="SimplifiedChinese" value="这些种子该如何处置？" />
+			<Property name="TraditionalChinese" value="這些種子該如何處置？" />
+			<Property name="TencentChinese" value="这些种子该如何处置？" />
+			<Property name="Korean" value="씨앗을 어떻게 할까요?" />
+			<Property name="Japanese" value="種をどうするか？" />
 			<Property name="USEnglish" value="What should become of the seeds?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_D" />
 			<Property name="English" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="French" value="La plupart des graines ne sont que poussière, mais quelques-unes sont vivantes : une culture que personne de vivant n'a jamais cultivée." />
+			<Property name="Italian" value="La maggior parte dei semi è polvere, ma alcuni sono vivi: una coltura che nessun vivente ha mai coltivato." />
+			<Property name="German" value="Die meisten Samen sind zu Staub zerfallen, doch eine Handvoll lebt noch: eine Pflanze, die zu Lebzeiten niemand angebaut hat." />
+			<Property name="Spanish" value="La mayoría de las semillas son polvo, pero un puñado sigue vivo: un cultivo que nadie vivo había cultivado jamás." />
+			<Property name="Russian" value="Большая часть семян превратилась в пыль, но несколько живы: культура, которую никто из ныне живущих не выращивал." />
+			<Property name="Polish" value="Większość nasion obróciła się w pył, ale garstka żyje: roślina, której nikt z żyjących nigdy nie uprawiał." />
+			<Property name="Dutch" value="De meeste zaden zijn stof, maar een handjevol leeft nog: een gewas dat niemand die nu leeft ooit heeft geteeld." />
+			<Property name="Portuguese" value="A maioria das sementes é pó, mas um punhado está vivo: uma cultura que ninguém vivo alguma vez cultivou." />
+			<Property name="LatinAmericanSpanish" value="La mayoría de las semillas son polvo, pero unas cuantas siguen vivas: un cultivo que nadie vivo había cultivado antes." />
+			<Property name="BrazilianPortuguese" value="A maioria das sementes virou pó, mas um punhado está viva: uma colheita que ninguém vivo jamais cultivou." />
+			<Property name="SimplifiedChinese" value="大部分种子已经化为粉末，但仍有少数存活：一种在世者无人种过的作物。" />
+			<Property name="TraditionalChinese" value="大部分種子已經化為粉末，但仍有少數存活：一種在世者無人種過的作物。" />
+			<Property name="TencentChinese" value="大部分种子已经化为粉末，但仍有少数存活：一种在世者无人种过的作物。" />
+			<Property name="Korean" value="씨앗 대부분은 가루가 되었지만, 몇 알은 살아 있습니다. 아무도 길러 본 적 없는 작물입니다." />
+			<Property name="Japanese" value="種のほとんどは塵と化していたが、ひと握りは生きている。誰も育てたことのない作物だ。" />
 			<Property name="USEnglish" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_O1" />
 			<Property name="English" value="Bring them home, with the relics" />
+			<Property name="French" value="Les ramener, avec les reliques" />
+			<Property name="Italian" value="Riportali a casa, con le reliquie" />
+			<Property name="German" value="Mit nach Hause nehmen, samt Relikten" />
+			<Property name="Spanish" value="Llevarlos a casa, con los vestigios" />
+			<Property name="Russian" value="Вернуть домой вместе с реликвиями" />
+			<Property name="Polish" value="Przyprowadź ich, razem z artefaktami" />
+			<Property name="Dutch" value="Breng ze thuis, met de relikwieën" />
+			<Property name="Portuguese" value="Trazê-los para casa, com as relíquias" />
+			<Property name="LatinAmericanSpanish" value="Traerlos a casa, con los artefactos" />
+			<Property name="BrazilianPortuguese" value="Trazer todos para casa, com as relíquias" />
+			<Property name="SimplifiedChinese" value="带他们回家，连同遗物" />
+			<Property name="TraditionalChinese" value="帶他們回家，連同遺物" />
+			<Property name="TencentChinese" value="带他们回家，连同遗物" />
+			<Property name="Korean" value="유물과 함께 데려온다" />
+			<Property name="Japanese" value="調査隊と遺物を連れ帰る" />
 			<Property name="USEnglish" value="Bring them home, with the relics" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_O2" />
 			<Property name="English" value="Leave the relics, copy the carvings" />
+			<Property name="French" value="Laisser les reliques, copier les sculptures" />
+			<Property name="Italian" value="Lascia le reliquie, copia le incisioni" />
+			<Property name="German" value="Relikte lassen, Einkerbungen abzeichnen" />
+			<Property name="Spanish" value="Dejar los vestigios y copiar los grabados" />
+			<Property name="Russian" value="Оставить реликвии, срисовать надписи" />
+			<Property name="Polish" value="Zostaw artefakty, przerysuj rzeźbienia" />
+			<Property name="Dutch" value="Laat de relikwieën, kopieer de groeven" />
+			<Property name="Portuguese" value="Deixar as relíquias, copiar as gravuras" />
+			<Property name="LatinAmericanSpanish" value="Dejar los artefactos y copiar los grabados" />
+			<Property name="BrazilianPortuguese" value="Deixar as relíquias, copiar os entalhes" />
+			<Property name="SimplifiedChinese" value="留下遗物，拓下刻纹" />
+			<Property name="TraditionalChinese" value="留下遺物，拓下刻紋" />
+			<Property name="TencentChinese" value="留下遗物，拓下刻纹" />
+			<Property name="Korean" value="유물은 두고 조각을 베낀다" />
+			<Property name="Japanese" value="遺物は残し、彫刻を写し取る" />
 			<Property name="USEnglish" value="Leave the relics, copy the carvings" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_T" />
 			<Property name="English" value="Shelter in the Ruins" />
+			<Property name="French" value="Abri dans les ruines" />
+			<Property name="Italian" value="Rifugio tra le rovine" />
+			<Property name="German" value="Zuflucht in den Ruinen" />
+			<Property name="Spanish" value="Refugio en las ruinas" />
+			<Property name="Russian" value="Убежище в руинах" />
+			<Property name="Polish" value="Schronienie w ruinach" />
+			<Property name="Dutch" value="Schuilen in de ruïnes" />
+			<Property name="Portuguese" value="Abrigo nas Ruínas" />
+			<Property name="LatinAmericanSpanish" value="Refugio en las ruinas" />
+			<Property name="BrazilianPortuguese" value="Abrigo nas ruínas" />
+			<Property name="SimplifiedChinese" value="废墟中的避难所" />
+			<Property name="TraditionalChinese" value="廢墟中的避難所" />
+			<Property name="TencentChinese" value="废墟中的避难所" />
+			<Property name="Korean" value="유적 속 피난처" />
+			<Property name="Japanese" value="遺跡での避難" />
 			<Property name="USEnglish" value="Shelter in the Ruins" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_Q" />
 			<Property name="English" value="Bring the relics home?" />
+			<Property name="French" value="Ramener les reliques ?" />
+			<Property name="Italian" value="Portare a casa le reliquie?" />
+			<Property name="German" value="Die Relikte mit nach Hause nehmen?" />
+			<Property name="Spanish" value="¿Llevar los vestigios a casa?" />
+			<Property name="Russian" value="Принести реликвии домой?" />
+			<Property name="Polish" value="Zabrać artefakty do osady?" />
+			<Property name="Dutch" value="De relikwieën mee naar huis nemen?" />
+			<Property name="Portuguese" value="Trazer as relíquias para casa?" />
+			<Property name="LatinAmericanSpanish" value="¿Traer los artefactos a casa?" />
+			<Property name="BrazilianPortuguese" value="Trazer as relíquias para casa?" />
+			<Property name="SimplifiedChinese" value="要把遗物带回家吗？" />
+			<Property name="TraditionalChinese" value="要把遺物帶回家嗎？" />
+			<Property name="TencentChinese" value="要把遗物带回家吗？" />
+			<Property name="Korean" value="유물을 가져올까요?" />
+			<Property name="Japanese" value="遺物を持ち帰るか？" />
 			<Property name="USEnglish" value="Bring the relics home?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_D" />
 			<Property name="English" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="French" value="L'équipe de recherche a retrouvé l'équipe de relevé à l'abri dans d'anciennes ruines après une tempête, saine et sauve. Les murs qui l'entourent sont couverts de sculptures et de reliques que personne ne reconnaît." />
+			<Property name="Italian" value="La squadra di ricerca ha trovato la squadra di rilevamento al riparo in antiche rovine dopo una tempesta, illesa. Le pareti intorno sono coperte di incisioni e reliquie che nessuno riconosce." />
+			<Property name="German" value="Der Suchtrupp fand das Vermessungsteam nach einem Sturm unverletzt in alten Ruinen. Die Wände ringsum sind voller Einkerbungen und Relikte, die niemand kennt." />
+			<Property name="Spanish" value="La partida de búsqueda ha encontrado al equipo de inspección refugiado en unas ruinas antiguas tras una tormenta, ileso. Las paredes que los rodean están cubiertas de grabados y vestigios que nadie reconoce." />
+			<Property name="Russian" value="Поисковый отряд нашел разведчиков целыми и невредимыми: они укрылись от бури в древних руинах. Стены вокруг покрыты надписями и реликвиями, которых никто не узнает." />
+			<Property name="Polish" value="Grupa poszukiwawcza znalazła zespół badawczy bez szwanku: przeczekał burzę w starych ruinach. Ściany wokół pokrywają rzeźbienia i artefakty, których nikt nie rozpoznaje." />
+			<Property name="Dutch" value="De zoekploeg vond het verkenningsteam ongedeerd, na een storm schuilend in oude ruïnes. De muren eromheen staan vol groeven en relikwieën die niemand herkent." />
+			<Property name="Portuguese" value="A equipa de busca encontrou a equipa de reconhecimento ilesa, abrigada em velhas ruínas após uma tempestade. As paredes à volta estão cobertas de gravuras e relíquias que ninguém reconhece." />
+			<Property name="LatinAmericanSpanish" value="La partida de búsqueda encontró al equipo de exploración resguardado en unas ruinas antiguas después de una tormenta, sin heridas. Las paredes a su alrededor están cubiertas de grabados y artefactos que nadie reconoce." />
+			<Property name="BrazilianPortuguese" value="A equipe de busca encontrou a equipe de reconhecimento ilesa, abrigada em ruínas antigas depois de uma tempestade. As paredes ao redor estão cobertas de entalhes e relíquias que ninguém reconhece." />
+			<Property name="SimplifiedChinese" value="搜索队发现勘测队在风暴过后躲进了古老的废墟，毫发无伤。四周的墙壁上布满了无人认得的刻纹和遗物。" />
+			<Property name="TraditionalChinese" value="搜索隊發現勘測隊在風暴過後躲進了古老的廢墟，毫髮無傷。四周的牆壁上布滿了無人認得的刻紋和遺物。" />
+			<Property name="TencentChinese" value="搜索队发现勘测队在风暴过后躲进了古老的废墟，毫发无伤。四周的墙壁上布满了无人认得的刻纹和遗物。" />
+			<Property name="Korean" value="수색대는 폭풍을 피해 오래된 유적에 머물던 측량대를 무사히 찾아냈습니다. 주변 벽에는 아무도 알아보지 못하는 조각과 유물이 가득합니다." />
+			<Property name="Japanese" value="捜索隊は、嵐を避けて古い遺跡に身を寄せていた調査隊を、無事に見つけた。周囲の壁には、誰も見覚えのない彫刻や遺物が並んでいる。" />
 			<Property name="USEnglish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_O1" />
 			<Property name="English" value="Put them on display" />
+			<Property name="French" value="Les exposer" />
+			<Property name="Italian" value="Mettile in mostra" />
+			<Property name="German" value="Ausstellen" />
+			<Property name="Spanish" value="Exponerlos" />
+			<Property name="Russian" value="Выставить на показ" />
+			<Property name="Polish" value="Wystaw na pokaz" />
+			<Property name="Dutch" value="Stal ze tentoon" />
+			<Property name="Portuguese" value="Colocá-las em exposição" />
+			<Property name="LatinAmericanSpanish" value="Exhibirlos" />
+			<Property name="BrazilianPortuguese" value="Colocar em exposição" />
+			<Property name="SimplifiedChinese" value="公开展出" />
+			<Property name="TraditionalChinese" value="公開展出" />
+			<Property name="TencentChinese" value="公开展出" />
+			<Property name="Korean" value="전시한다" />
+			<Property name="Japanese" value="展示する" />
 			<Property name="USEnglish" value="Put them on display" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_O2" />
 			<Property name="English" value="Hand them to the Overseer (nanites)" />
+			<Property name="French" value="Les confier au superviseur (nanites)" />
+			<Property name="Italian" value="Consegnale al supervisore (naniti)" />
+			<Property name="German" value="Dem Aufseher übergeben (Nanit)" />
+			<Property name="Spanish" value="Entregarlos al supervisor (nanites)" />
+			<Property name="Russian" value="Передать куратору (наниты)" />
+			<Property name="Polish" value="Przekaż Nadzorcy (nanity)" />
+			<Property name="Dutch" value="Geef ze aan de supervisor (nanieten)" />
+			<Property name="Portuguese" value="Entregá-las ao Supervisor (nanites)" />
+			<Property name="LatinAmericanSpanish" value="Entregarlos al supervisor (nanitos)" />
+			<Property name="BrazilianPortuguese" value="Entregar ao supervisor (nanitos)" />
+			<Property name="SimplifiedChinese" value="交给监督者（纳米星团）" />
+			<Property name="TraditionalChinese" value="交給監督者（奈米機群）" />
+			<Property name="TencentChinese" value="交给监督者（纳米星团）" />
+			<Property name="Korean" value="감독관에게 넘긴다 (나노로봇)" />
+			<Property name="Japanese" value="監督官に預ける(ナノマシン)" />
 			<Property name="USEnglish" value="Hand them to the Overseer (nanites)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_T" />
 			<Property name="English" value="The Relics" />
+			<Property name="French" value="Les reliques" />
+			<Property name="Italian" value="Le reliquie" />
+			<Property name="German" value="Die Relikte" />
+			<Property name="Spanish" value="Los vestigios" />
+			<Property name="Russian" value="Реликвии" />
+			<Property name="Polish" value="Artefakty" />
+			<Property name="Dutch" value="De relikwieën" />
+			<Property name="Portuguese" value="As Relíquias" />
+			<Property name="LatinAmericanSpanish" value="Los artefactos" />
+			<Property name="BrazilianPortuguese" value="As relíquias" />
+			<Property name="SimplifiedChinese" value="遗物" />
+			<Property name="TraditionalChinese" value="遺物" />
+			<Property name="TencentChinese" value="遗物" />
+			<Property name="Korean" value="유물" />
+			<Property name="Japanese" value="遺物" />
 			<Property name="USEnglish" value="The Relics" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_Q" />
 			<Property name="English" value="What should be done with the relics?" />
+			<Property name="French" value="Que faire des reliques ?" />
+			<Property name="Italian" value="Cosa fare delle reliquie?" />
+			<Property name="German" value="Was soll mit den Relikten geschehen?" />
+			<Property name="Spanish" value="¿Qué hacer con los vestigios?" />
+			<Property name="Russian" value="Что делать с реликвиями?" />
+			<Property name="Polish" value="Co zrobić z artefaktami?" />
+			<Property name="Dutch" value="Wat moet er met de relikwieën gebeuren?" />
+			<Property name="Portuguese" value="O que fazer com as relíquias?" />
+			<Property name="LatinAmericanSpanish" value="¿Qué hacer con los artefactos?" />
+			<Property name="BrazilianPortuguese" value="O que fazer com as relíquias?" />
+			<Property name="SimplifiedChinese" value="这些遗物该如何处置？" />
+			<Property name="TraditionalChinese" value="這些遺物該如何處置？" />
+			<Property name="TencentChinese" value="这些遗物该如何处置？" />
+			<Property name="Korean" value="유물을 어떻게 할까요?" />
+			<Property name="Japanese" value="遺物をどうするか？" />
 			<Property name="USEnglish" value="What should be done with the relics?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_D" />
 			<Property name="English" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="French" value="Les reliques sont de retour dans la colonie, et tout le monde a un avis à leur sujet." />
+			<Property name="Italian" value="Le reliquie sono tornate nell'insediamento, e ognuno ha un'opinione in merito." />
+			<Property name="German" value="Die Relikte sind zurück in der Siedlung, und jeder hat eine Meinung dazu." />
+			<Property name="Spanish" value="Los vestigios han vuelto al asentamiento, y todo el mundo tiene una opinión sobre ellos." />
+			<Property name="Russian" value="Реликвии вернулись в поселение, и у каждого о них свое мнение." />
+			<Property name="Polish" value="Artefakty wróciły do osady i każdy ma na ich temat własne zdanie." />
+			<Property name="Dutch" value="De relikwieën zijn terug in de nederzetting, en iedereen heeft er een mening over." />
+			<Property name="Portuguese" value="As relíquias estão de volta ao povoamento, e toda a gente tem uma opinião sobre elas." />
+			<Property name="LatinAmericanSpanish" value="Los artefactos regresaron al asentamiento, y todos tienen una opinión sobre ellos." />
+			<Property name="BrazilianPortuguese" value="As relíquias voltaram ao povoado, e todo mundo tem uma opinião sobre elas." />
+			<Property name="SimplifiedChinese" value="遗物已经回到了定居点，每个人都对它们有自己的看法。" />
+			<Property name="TraditionalChinese" value="遺物已經回到聚居地，每個人都對它們有自己的看法。" />
+			<Property name="TencentChinese" value="遗物已经回到了定居点，每个人都对它们有自己的看法。" />
+			<Property name="Korean" value="유물이 거주지로 돌아왔고, 모두가 저마다 한마디씩 합니다." />
+			<Property name="Japanese" value="遺物は開拓地に戻り、誰もがそれについて意見を持っている。" />
 			<Property name="USEnglish" value="The relics are back in the settlement, and everyone has an opinion about them." />
 		</Property>
 	</Property>
