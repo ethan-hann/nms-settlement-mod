@@ -275,7 +275,7 @@ Consequences:
 
 ## 2026-10-17: Town sign exploration
 
-Plan and findings are in [modules/town-sign/](modules/town-sign/plan.md). The settlement's own terminals are vanilla base parts: `SET_MAYORTERM` (the Administration Terminal), `SET_INT_SUMMARY` (the building-detail terminal) and `SET_MONUMENT` (the Settlement Interface). Each is placeable and has a product but is not buildable on planets or known to players. A sign that shows live numbers in the world needs runtime code. The test-only SignProbes module makes copies of the first two buildable, to see what they open away from their building.
+Plan and findings are in [modules/remote-terminal/](modules/remote-terminal/plan.md). The settlement's own terminals are vanilla base parts: `SET_MAYORTERM` (the Administration Terminal), `SET_INT_SUMMARY` (the building-detail terminal) and `SET_MONUMENT` (the Settlement Interface). Each is placeable and has a product but is not buildable on planets or known to players. A sign that shows live numbers in the world needs runtime code. The test-only SignProbes module makes copies of the first two buildable, to see what they open away from their building.
 
 
 ## 2026-10-17: Session 7, town sign probes
@@ -290,4 +290,6 @@ One launch on the creative test slot with core, Defense, SettlerStories and Sign
 - With LedgerProbes no longer installed, Maintenance Cost was back at 381,454 a day (127,768 with the probe's upkeep marker in Session 6). Removing a contribution patch restores vanilla upkeep at once.
 - The slot's newer save file (`save12.hg`) holds no placed probe part; the older `save11.hg` still holds one Administration Terminal copy, so a session that leaves SignProbes out may be refused by `testmode enter`.
 
-Open: which sign route, if any, ships in 1.2.0 ([modules/town-sign/plan.md](modules/town-sign/plan.md)).
+Decided 2026-10-17: ship the Administration Terminal copy as a remote terminal, buildable anywhere on a planet, inside or outside a base; a live-updating sign needs runtime code and is dropped. Plan in [modules/remote-terminal/plan.md](modules/remote-terminal/plan.md).
+
+Next: Session 8, the terminal away from the town.

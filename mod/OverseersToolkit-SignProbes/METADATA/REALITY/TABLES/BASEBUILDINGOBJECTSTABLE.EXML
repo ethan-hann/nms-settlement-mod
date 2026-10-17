@@ -144,7 +144,7 @@
 			<Property name="Biome" value="GcBiomeType">
 				<Property name="Biome" value="Lush" />
 			</Property>
-			<Property name="BuildableOnPlanetBase" value="false" />
+			<Property name="BuildableOnPlanetBase" value="true" />
 			<Property name="BuildableOnSpaceBase" value="false" />
 			<Property name="BuildableOnFreighter" value="false" />
 			<Property name="BuildableInShipStructural" value="false" />

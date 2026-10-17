@@ -1,12 +1,34 @@
-# Town Sign: rough plan
+# Remote Terminal: rough plan
 
-Rough outline, written 2026-10-17. Not a spec yet. If the probe session shows a workable route, the sign ships in 1.2.0 beside Fair Ledger; otherwise it waits.
+Rough outline, written 2026-10-17. Not a spec yet. It started as a read-only town sign; Session 7 showed that no vanilla page is read-only, and the maintainer chose the remote terminal instead (decision 1 below). Target: 1.2.0, beside Fair Ledger, if Session 8 shows it works away from the town.
 
 ## Goal
 
-An optional add-on module with one new part: a town sign the overseer places anywhere in the settlement. It shows the town's stats and status and is read-only; management stays at the Administration Terminal. The idea came up while planning Fair Ledger ([../fair-ledger/plan.md](../fair-ledger/plan.md), decision 7).
+An optional add-on module, `OverseersToolkit-RemoteTerminal`, with one new part: a copy of the settlement's Administration Terminal that the player can build anywhere on a planet, inside or outside a base. Players can then manage a settlement from a remote base. The idea came up while planning Fair Ledger ([../fair-ledger/plan.md](../fair-ledger/plan.md), decision 7).
 
-Because it adds an `OT_` part, the module carries the removal warning: loading and saving without it deletes every placed sign (verified 2026-10-12 for other parts).
+Because it adds an `OT_` part, the module carries the removal warning: loading and saving without it deletes every placed terminal (verified 2026-10-12 for other parts).
+
+## Decisions
+
+Decided 2026-10-17:
+
+1. **Ship route B as a remote terminal,** not a sign. A live-updating sign needs runtime code, and NMS.py is too heavy for one part. The terminal is buildable anywhere on a planet (`BuildableOnPlanet` and `BuildableOnPlanetBase`).
+
+Fact from the maintainer: each planet holds at most one settlement. **Inferred:** a terminal anywhere on a settlement's planet resolves to that settlement, as the office terminal does.
+
+## Open questions for Session 8
+
+- **Away from the town:** on the settlement's planet but outside the town, at a base on another planet, and in another system, what does the terminal show? Possibilities: the right town, the nearest one, nothing, or the "Terminal reserved for Overseer" message (`UI_SETTLEMENT_NO_SETTLEMENT`). The status and "Manage all settlements" options only check that the player owns a settlement somewhere (cost `C_SETTL_OWN`, verified), so they may work anywhere. "View pending decision" checks for a pending decision (`C_SETTL_JUDGE`); which town it reads is unknown.
+- **Fair Ledger payments from afar:** the payment options sit on the same dialog, so they appear on every copy (inferred). Which town does a remote payment pay?
+- **Inside a base:** does it build and work inside a base's boundary?
+
+## Design questions for the maintainer, after Session 8
+
+2. **Name and menu tab.** Draft name "Remote Overseer Terminal". The probe sat in a [TEST] tab under Decoration; Technology or the Toolkit's SETTLEMENT tab are the alternatives.
+3. **Build cost.** The vanilla office terminal has no build-cost entry, so a copy costs nothing (verified). A cost could come from a vanilla terminal part's cost entry.
+4. **Unlock in normal games.** Creative games learn it from `creative_known`. Normal games need an unlock: for example a mission that teaches it once the player owns a settlement (`GcMissionConditionHasSettlement`, the condition vanilla uses in six sentinel settlement missions), following the class unlocks' pattern.
+5. **Thumbnail.** The vanilla product uses a stone-wall placeholder icon, so the part needs another vanilla icon.
+6. **Scaling.** The vanilla entry allows scaling (`CanScale` true); keep or turn off.
 
 ## What the game files show
 
@@ -37,7 +59,7 @@ Each finding is marked verified, inferred or unknown, as in [../fair-ledger/vani
 
 - **Inferred:** no data field binds settlement stats to text drawn on a placed object. The interaction component (`GcInteractionComponentData`) chooses an interaction type and costs, not displayed values, and the text parts in vanilla (message module, station billboard) show player-written or fixed text. A sign that displays live numbers in the world needs runtime code (tier T3) and is not a candidate for 1.2.0.
 
-## Routes for the sign
+## Routes considered for the sign
 
 - **A. A copy of the building-detail terminal.** A small holographic terminal, a vanilla scene, so visitors without the mod still see it. It is only useful if its page shows something about the town when it stands away from a building.
 - **B. A copy of the Administration Terminal.** Known to open the full terminal: decisions, status, all settlements, and Fair Ledger's payments. It is a remote office terminal rather than a read-only sign, and its status page carries the abandon action too.
@@ -65,8 +87,4 @@ Probe parts are deleted when a later session runs without SignProbes, which is f
 | C. Small model with the monument's interaction | The monument opens the status page in one step | A new scene and entity shipped in the mod (visitors without it see nothing, inferred), and a probe |
 | D. Live numbers | Runtime code | Not for 1.2.0 |
 
-## Decisions for the maintainer
-
-1. Which route, if any, ships in 1.2.0. The status page is never read-only, so the choice is between B (works today, more than a sign) and C (one step to status, the closest to a sign, but new assets and another probe), or waiting.
-2. If A or C, one more short probe session before 1.2.0.
-3. The sign's look and icon: which vanilla model and thumbnail.
+The route decision is recorded under Decisions above.

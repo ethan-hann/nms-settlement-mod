@@ -164,6 +164,9 @@ def test_the_sign_probe_offers_the_settlement_terminals_as_parts():
     for id_ in parts:
         entry = table.find(f"Property[@name='Objects']/Property[@_id='{id_}']")
         assert entry.find("Property[@name='BuildableOnPlanet']").get("value") == "true", id_
+    # The office terminal copy is the remote terminal candidate, so it must also build inside a base.
+    mayor = table.find("Property[@name='Objects']/Property[@_id='OT_SP_MAYOR']")
+    assert mayor.find("Property[@name='BuildableOnPlanetBase']").get("value") == "true"
 
 
 @pytest.mark.parametrize("module", [m for m in MODULES if m not in BROKEN_ON_PURPOSE])

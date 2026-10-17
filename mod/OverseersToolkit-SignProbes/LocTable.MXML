@@ -33,8 +33,8 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SP_MAYOR_DESC" />
-			<Property name="English" value="[TEST] The overseer's office terminal. Place it outside the office and interact with it." />
-			<Property name="USEnglish" value="[TEST] The overseer's office terminal. Place it outside the office and interact with it." />
+			<Property name="English" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="USEnglish" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
 		</Property>
 	</Property>
 </Data>
