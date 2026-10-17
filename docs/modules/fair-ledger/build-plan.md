@@ -104,7 +104,7 @@ Each one gets a failing test first, seen to fail on an assertion.
   - Another mod appending terminal options would push one of ours past the six-slot limit.
   - Economy overhauls that change `SettlementBuildingContributions` (BetterSettlements, Nexus 2855) clash with the Rebalance module.
   - Another mod changing Debt PositiveLarge changes the payment.
-- Removal (inferred, checked in the session): FairLedger stores nothing. Removing it leaves the debt already paid. Removing Rebalance restores vanilla upkeep at once.
+- Removal: FairLedger stores nothing, so removing it leaves the debt already paid (inferred, checked in the session). Removing Rebalance restores vanilla upkeep at once (verified in Session 7 with the probe's upkeep marker).
 
 ## Check session
 
