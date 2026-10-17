@@ -75,9 +75,9 @@ Translations follow issue #22: the game's own terms from its language files, new
 A new generator, `tools/gen_ledger.py`, builds both modules from `specs/OverseersToolkit-FairLedger.json` and `specs/OverseersToolkit-FairLedger-Rebalance.json`, and joins `GENERATORS` in `tests/test_modules.py`, so a hand edit or a stale file fails the suite as with the other modules.
 
 Spec keys (new):
-- `terminal_options`: a list of `{"id", "text", "debt_steps"}`. The generator writes the cost (`2 * 100,000 * debt_steps` units), the reward and the dialog option from it.
+- `terminal_options`: a list of `{"id", "text", "debt_steps"}`. The generator writes the cost `C_OT_FL_<id>` (`2 * 100,000 * debt_steps` units), the reward `R_OT_FL_DEBT<debt_steps>` and the dialog option from it. `text` is the option's loc key, and it needs an entry in `text`.
 - `debt_step`: the flat Debt PositiveLarge amount, 100000.
-- `text_overrides`: vanilla keys to override, with their text per language.
+- `text_overrides`: the vanilla keys the spec's `text` overrides. The text itself stays in `text`, because gen_parts.py writes LocTable.MXML. Every other text key must start with `OT_FL_`, and an override must name a key vanilla has.
 - `match_upkeep_to_production`: the list of buildings for the Rebalance module.
 
 The cost-to-step ratio lives in one constant, so the 2 units per debt rule cannot drift between options.
@@ -97,7 +97,7 @@ Each one gets a failing test first, seen to fail on an assertion.
 
 ## Packaging and compatibility
 
-- `package.py` ships both modules; LedgerProbes stays test-only.
+- `package.py` ships both modules; LedgerProbes and LedgerSetup stay test-only.
 - `testmode.py` gets the keys `fairledger` and `fairledgerrebalance`.
 - `compat_report.py` regenerates COMPATIBILITY.md. It lists the appended `SETTLEMENT_ADMIN` options, the Debt PositiveLarge edit and the nine Upkeep edits.
 - Known conflicts:
@@ -108,7 +108,9 @@ Each one gets a failing test first, seen to fail on an assertion.
 
 ## Check session
 
-About 20 minutes on the test slot. Purchases is set to Standard for the run and set back afterwards. Modules: core, Defense, SettlerStories, FairLedger and FairLedger-Rebalance.
+About 25 minutes on the test slot. Purchases is set to Standard for the run and set back afterwards. Modules: core, Defense, SettlerStories, FairLedger, FairLedger-Rebalance, SignProbes (the slot still lists its parts) and the test-only LedgerSetup.
+
+The test town had no debt and the test character 732,096 units after Session 8 (verified in the save copy), too few for the 2,000,000 payment. LedgerSetup turns the terminal's "Manage all settlements" option into a free "[TEST] Add debt and 5,000,000 units" option (25 Debt NegativeLarge steps, at least 1,250,000 debt), so the terminal keeps six options.
 
 | Check | Expect |
 |---|---|

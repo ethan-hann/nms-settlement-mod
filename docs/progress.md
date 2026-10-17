@@ -362,3 +362,17 @@ Decided 2026-10-17: the remote terminal is dropped; Fair Ledger ships in 1.2.0 o
 ## 2026-10-17: Reproducible release zips
 
 Decided 2026-10-17 (issue #17): module files are LF on every checkout. `.gitattributes` sets `eol=lf` for `.EXML` and `.MXML` under `mod/` and marks `.MBIN` binary. The index already held LF, so only working copies change. package.py refuses a text file holding a carriage return and writes every zip entry with a fixed timestamp and mode, so two builds of one commit give identical zips (verified 2026-10-17 by building twice with touched files). A test checks that the shipped module files on disk match the committed bytes. The next release changes the bytes of every file that shipped as CRLF; CHANGES.md says the change is line endings only.
+
+## 2026-10-17: Fair Ledger built
+
+Built per [modules/fair-ledger/build-plan.md](modules/fair-ledger/build-plan.md), pending the check session.
+
+- `tools/gen_ledger.py` generates both modules from `specs/OverseersToolkit-FairLedger.json` and `specs/OverseersToolkit-FairLedger-Rebalance.json` and joins the stale-module checks in `tests/test_modules.py`.
+- FairLedger: costs `C_OT_FL_PAY1` (200,000 units) and `C_OT_FL_PAY10` (2,000,000), rewards `R_OT_FL_DEBT1` (one Debt PositiveLarge step) and `R_OT_FL_DEBT10` (ten in one GiveAll list), two options appended to `SETTLEMENT_ADMIN` with `KeepOpen` and no disabling conditions, Debt PositiveLarge a flat -100,000, and five vanilla text overrides. All text is in 17 languages.
+- Rebalance: the nine production buildings' C upkeep ranges equal their C productivity ranges, read from vanilla by stat type. The values match the build plan's table.
+- Both are in `package.SHIPPED`, have testmode keys `fairledger` and `fairledgerrebalance`, and are listed in COMPATIBILITY.md. The text overrides do not appear there, because the report lists LocTable.MXML only as a whole file.
+- Translation choices: `UI_SETTLEMENT_STAT_COST_NAME` keeps each language's vanilla wording, since only the English named the stat three ways and decision text around it may depend on its grammatical form. `UI_SETTLEMENT_STAT_UPKEEP` uses each language's upkeep word plus "per day", kept about as short as vanilla. Numbers follow each language's vanilla separator, with a no-break space where the separator is a space.
+- New test-only module LedgerSetup (key `ledgersetup`): the test town had no debt and the test character 732,096 units (save copy after Session 8), too few for the 2,000,000 payment. It turns the terminal's "Manage all settlements" option into a free option giving 5,000,000 units and 25 Debt NegativeLarge steps, so the terminal stays at six options.
+- Unknown until the session: whether ten stat steps in one GiveAll reward all apply (Session 6 tested one step per reward).
+
+Next: the check session (Session 9), then release 1.2.0.

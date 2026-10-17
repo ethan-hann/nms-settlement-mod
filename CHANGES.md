@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+**OverseersToolkit-FairLedger (new, optional)**
+- The Administration Terminal in the overseer's office gains two options: "Pay 100,000 debt" for 200,000 units and "Pay 1,000,000 debt" for 2,000,000 units. Each payment clears exactly the debt it names, in that town.
+- The price follows the Purchases setting: free on Free, a third on Discounted, 2 units per debt on Standard, 3.32 on Expensive.
+- Paying more than the remaining debt is lost. The game shows "Settlement reserves increased", but reserves are not stored anywhere.
+- The terminal shows six options at most and the game uses four, so Fair Ledger takes the last two. Another mod that adds a terminal option pushes one of them off.
+- Clearer text for upkeep and debt: "Maintenance Cost" becomes "Upkeep (per day)", and the debt messages explain how debt falls and where to pay it.
+- Side effect: the positive expedition debrief's debt cut becomes a flat 100,000 instead of 50,000 to 100,000, since both use the same step.
+- Adds no parts, so removing it deletes nothing from a save. Debt already paid stays paid.
+- Its text is in every game language. Like the other translations, it has not been checked by native speakers.
+
+**OverseersToolkit-FairLedger-Rebalance (new, optional)**
+- At class C, the starport, infrastructure, trade center, small industrial, administrative building, storage facility, farm, factory and Autophage RoboArm cost as much upkeep as they produce, instead of more. Each building's rolls still differ, so a single building can land slightly up or down. Upgrades stay the way to profit.
+- Residences, the bar and the fish pond keep their upkeep.
+- Takes effect on existing buildings at once, and removing it restores the game's upkeep at once.
+- Conflicts with economy overhauls that change building contributions, such as BetterSettlements.
+
 **Every game language**
 - Part names, descriptions, perks and decisions in the core, Defense and Settler Stories modules are now translated into every language the game offers. Before, players in any language but English saw raw text keys such as OT_PATH_TILE_NAME.
 - The translations reuse the game's own words for settlements, settlers, the overseer, debt, Sentinels, units and nanites. They have not been checked by native speakers: corrections are welcome as a bug report on GitHub.
