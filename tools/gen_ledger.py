@@ -26,7 +26,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from gen_parts import EXTRACTED, P, SpecError, to_text
+from gen_parts import EXTRACTED, MAX_LOC_KEY, P, SpecError, to_text
 
 TABLES = Path("METADATA/REALITY/TABLES")
 COSTS = ("metadata/reality/tables/costtable.MXML", TABLES / "COSTTABLE.EXML")
@@ -84,6 +84,8 @@ def _check_text(spec, vanilla_dir):
             if key not in text:
                 raise SpecError(f"text_overrides: {key} has no entry in text")
     for key in text:
+        if len(key) > MAX_LOC_KEY:
+            raise SpecError(f"loc key {key} is longer than {MAX_LOC_KEY} characters")
         if not key.startswith(PREFIX) and key not in overrides:
             raise SpecError(f"{key}: new text keys start with {PREFIX}; list vanilla keys in text_overrides")
 
@@ -176,9 +178,9 @@ def _check_options(items, text):
 
 def _terminal(spec, vanilla_dir, out):
     items = spec["terminal_options"]
-    step = spec.get("debt_step")
-    if not isinstance(step, int) or step < 1:
-        raise SpecError("terminal_options need a positive debt_step")
+    if "debt_step" not in spec:
+        raise SpecError("terminal_options need a debt_step")
+    step = spec["debt_step"]
     _check_options(items, spec.get("text", {}))
 
     dialog = ET.parse(Path(vanilla_dir) / DIALOG[0]).getroot()
@@ -217,6 +219,12 @@ def _data_template(template, *children):
     root = ET.Element("Data", {"template": template})
     root.extend(children)
     return root
+
+
+def _check_step(step):
+    # bool is an int in Python, and a zero or negative step would add debt instead of cutting it.
+    if isinstance(step, bool) or not isinstance(step, int) or step < 1:
+        raise SpecError(f"debt_step must be a positive whole number, not {step!r}")
 
 
 def _debt_step(settings, step):
@@ -285,6 +293,8 @@ def build(spec, vanilla_dir=EXTRACTED):
     if not any(k in spec for k in ("debt_step", "terminal_options", "text_overrides", "match_upkeep_to_production")):
         return {}
     _check_text(spec, vanilla_dir)
+    if "debt_step" in spec:
+        _check_step(spec["debt_step"])
     out = {}
     if spec.get("terminal_options"):
         _terminal(spec, vanilla_dir, out)

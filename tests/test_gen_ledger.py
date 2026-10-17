@@ -306,3 +306,15 @@ def test_a_listed_building_without_upkeep_fails(vanilla):
 def test_an_unknown_building_fails(vanilla):
     with pytest.raises(SpecError, match="Settlement_Nowhere"):
         gen_ledger.build({"match_upkeep_to_production": ["Settlement_Nowhere"]}, vanilla)
+
+
+@pytest.mark.parametrize("step", [0, -5, True, 1.5, "100000"])
+def test_a_debt_step_must_be_a_positive_whole_number_even_without_options(vanilla, step):
+    with pytest.raises(SpecError, match="debt_step"):
+        gen_ledger.build({"debt_step": step}, vanilla)
+
+
+def test_new_text_keys_fit_the_loc_id_field(vanilla):
+    key = "OT_FL_" + "X" * 26
+    with pytest.raises(SpecError, match="31"):
+        gen_ledger.build(ledger_spec(option("PAY1", key, 1)), vanilla)
