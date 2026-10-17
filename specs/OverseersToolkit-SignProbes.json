@@ -1,0 +1,60 @@
+{
+  "text": {
+    "OT_SP_GROUP": "[TEST] SIGN PROBES",
+    "OT_SP_SUMMARY_NAME": "[TEST] BUILDING DETAIL TERMINAL",
+    "OT_SP_SUMMARY_NAME_L": "[TEST] Building Detail Terminal",
+    "OT_SP_SUMMARY_DESC": "[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it.",
+    "OT_SP_MAYOR_NAME": "[TEST] ADMINISTRATION TERMINAL",
+    "OT_SP_MAYOR_NAME_L": "[TEST] Administration Terminal",
+    "OT_SP_MAYOR_DESC": "[TEST] The overseer's office terminal. Place it outside the office and interact with it."
+  },
+  "subgroups": [
+    {
+      "group": "DECORATION",
+      "id": "OT_SIGNPROBE",
+      "name": "OT_SP_GROUP"
+    }
+  ],
+  "parts": [
+    {
+      "id": "OT_SP_SUMMARY",
+      "copy_from": "SET_INT_SUMMARY",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SIGNPROBE"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
+      "product": {
+        "Name": "OT_SP_SUMMARY_NAME",
+        "NameLower": "OT_SP_SUMMARY_NAME_L",
+        "Description": "OT_SP_SUMMARY_DESC"
+      }
+    },
+    {
+      "id": "OT_SP_MAYOR",
+      "copy_from": "SET_MAYORTERM",
+      "groups": [
+        [
+          "DECORATION",
+          "OT_SIGNPROBE"
+        ]
+      ],
+      "object": {
+        "BuildableOnPlanet": "true"
+      },
+      "product": {
+        "Name": "OT_SP_MAYOR_NAME",
+        "NameLower": "OT_SP_MAYOR_NAME_L",
+        "Description": "OT_SP_MAYOR_DESC"
+      }
+    }
+  ],
+  "creative_known": [
+    "OT_SP_SUMMARY",
+    "OT_SP_MAYOR"
+  ]
+}

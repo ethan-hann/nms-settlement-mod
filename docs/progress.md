@@ -272,3 +272,9 @@ Consequences:
 - Every 1.1.0 option and perk has now been seen working in game.
 - Game updates are less likely to delete builds than feared. Verified: an unknown field, a renamed template, or a vanilla part ID removed from under SettlementDecor each leaves the rest of the patch in place. Still unknown: a renamed list, a changed struct type, and a field whose type changes.
 - `WORD` and `STANDING` gave Gek rewards in a Gek town in a Gek system, so whether they follow the settlement's race or the system's is still unknown.
+
+## 2026-10-17: Town sign exploration
+
+Plan and findings are in [modules/town-sign/](modules/town-sign/plan.md). The settlement's own terminals are vanilla base parts: `SET_MAYORTERM` (the Administration Terminal), `SET_INT_SUMMARY` (the building-detail terminal) and `SET_MONUMENT` (the Settlement Interface). Each is placeable and has a product but is not buildable on planets or known to players. A sign that shows live numbers in the world needs runtime code. The test-only SignProbes module makes copies of the first two buildable, to see what they open away from their building.
+
+Open: one probe session, then which route, if any, ships in 1.2.0.

@@ -7,3 +7,4 @@ Ideas start in [../research/ideas/module-ideas.md](../research/ideas/module-idea
 | Folder | Module | Idea | Status |
 |---|---|---|---|
 | [settler-stories](settler-stories/plan.md) | OverseersToolkit-SettlerStories | I-1 | Released in 1.1.0 |
+| [town-sign](town-sign/plan.md) | OverseersToolkit-TownSign | (new, from Fair Ledger decision 7) | Probing |
