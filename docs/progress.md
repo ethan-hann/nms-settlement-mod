@@ -304,3 +304,13 @@ One launch on the creative test slot with core, Defense, SettlerStories and Sign
 Decided 2026-10-17: ship the Administration Terminal copy as a remote terminal, buildable anywhere on a planet, inside or outside a base; a live-updating sign needs runtime code and is dropped. Plan in [modules/remote-terminal/plan.md](modules/remote-terminal/plan.md).
 
 Next: Session 8, the terminal away from the town.
+
+## 2026-10-17: Session 8, the terminal away from the town
+
+One launch with core, Defense, SettlerStories and SignProbes. Safety: exit passed all checks.
+
+- The Administration Terminal copy, placed on Funana Bridge's planet well outside the town, showed every option disabled: "No pending decisions" (though a construction choice was pending) and "Terminal reserved for Overseer" on status and all settlements. The terminal only works inside its own town.
+- The rest of the checklist was skipped, since other planets and bases cannot do better.
+- The slot's newer save file (`save12.hg`) holds no placed probe part.
+
+Open: drop the remote terminal for 1.2.0 (recommended), or one more probe of a no-check option that opens the all-settlements page ([modules/remote-terminal/plan.md](modules/remote-terminal/plan.md)).

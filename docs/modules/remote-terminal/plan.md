@@ -16,7 +16,25 @@ Decided 2026-10-17:
 
 Fact from the maintainer: each planet holds at most one settlement. **Inferred:** a terminal anywhere on a settlement's planet resolves to that settlement, as the office terminal does.
 
-## Open questions for Session 8
+## Session 8 result
+
+Verified 2026-10-17: a copy placed on Funana Bridge's planet, well outside the town (the HUD showed the town 6 minutes away), shows every option disabled:
+- "No pending decisions", although the town had a construction choice pending;
+- "Terminal reserved for Overseer" on both the status and the all-settlements options (`UI_SETTLEMENT_NO_SETTLEMENT`).
+
+So the terminal only works inside its town, and `C_SETTL_OWN` checks the town the terminal stands in, not "owns a settlement anywhere" as inferred before the session. The base and other-planet steps were skipped, since they cannot do better than the town's own planet.
+
+**Verified in data:** the status and all-settlements options open their pages through `GcRewardOpenPage` rewards: `R_OPEN_SETHUB` opens `SettlementManagement` and `R_OPEN_SETOVIEW` opens `SettlementsOverview`. Neither reward names a place; the location check is the option's cost. **Unknown:** whether either page opens, and for which town, when an option with no cost runs the reward far from any settlement.
+
+## What is left for the remote terminal
+
+- **A. Drop it for 1.2.0.** Fair Ledger ships on its own.
+- **B. One more probe:** an option with no cost on the terminal that opens `SettlementsOverview` (all settlements) or `SettlementManagement`, tried far from the town. Even if it works, the terminal dialog has six slots and Fair Ledger's two payment options fill it, so shipping both means Fair Ledger keeps one payment option or the remote option replaces one.
+
+Recommendation: **A,** and keep B on file. The terminal's main appeal was managing a town remotely: decisions, construction and payments. Those all ran through the local checks that failed. B could at most give a remote overview, at the price of a Fair Ledger option.
+
+## Questions Session 8 set out to answer
+
 
 - **Away from the town:** on the settlement's planet but outside the town, at a base on another planet, and in another system, what does the terminal show? Possibilities: the right town, the nearest one, nothing, or the "Terminal reserved for Overseer" message (`UI_SETTLEMENT_NO_SETTLEMENT`). The status and "Manage all settlements" options only check that the player owns a settlement somewhere (cost `C_SETTL_OWN`, verified), so they may work anywhere. "View pending decision" checks for a pending decision (`C_SETTL_JUDGE`); which town it reads is unknown.
 - **Fair Ledger payments from afar:** the payment options sit on the same dialog, so they appear on every copy (inferred). Which town does a remote payment pay?
