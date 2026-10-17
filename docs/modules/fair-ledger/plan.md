@@ -54,7 +54,15 @@ Results are in [../../progress.md](../../progress.md) and [vanilla-findings.md](
 - **Decision 5 is supported.** Contributions are computed at runtime, so the upkeep change reached existing buildings at once, and it turned the test town's debt from rising to falling.
 - **Decision 6 needs a new call.** A text entry with only English and USEnglish shows the raw key in every other language, and so does any new Toolkit key. Falling back to "new text only" has the same problem.
 
-### Open after Session 6
+### Decided after Session 6
+
+Decided 2026-10-17:
+
+8. **Fill all 17 languages in every text entry.** Overrides keep each language's vanilla translation outside English; new keys repeat the English text. The repo-wide change is issue #22.
+9. **Accept the Purchases scaling.** The price follows the player's Purchases setting; a line for the mod page goes to the maintainer.
+
+The options and evidence for 8 and 9:
+
 
 8. **Text in other languages.**
    - **A. Fill all 17 languages in every entry.** Overrides keep the vanilla translation outside English, copied from the game's language files. New keys repeat the English text, so other languages see English instead of a raw key.

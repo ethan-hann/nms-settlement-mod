@@ -311,4 +311,6 @@ Consequences:
 - A `LocTable.MXML` entry with only English and USEnglish shows the raw key in every other language. That applies to all Toolkit text, not just overrides.
 - On Free Purchases the payment is free, and on Discounted it costs 0.66 units per debt.
 
-Open: plan decisions 8 (text in other languages, issue #22) and 9 (Purchases difficulty), then the FairLedger specs and generator.
+Decided 2026-10-17: every text entry fills all 17 languages (issue #22), and the payment's price follows the Purchases setting.
+
+Next: the FairLedger specs and generator, after issue #22's language support.
