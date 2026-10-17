@@ -58,7 +58,7 @@ Results are in [../../progress.md](../../progress.md) and [vanilla-findings.md](
 
 Decided 2026-10-17:
 
-8. **Fill all 17 languages in every text entry.** Overrides keep each language's vanilla translation outside English; new keys repeat the English text. The repo-wide change is issue #22.
+8. **Translate every text entry into all 17 languages.** Translations use the game's own terms, taken from its language files as a glossary. Overrides of vanilla keys get new wording in each language, in the game's style. A key not yet translated repeats the English text, so no language ever shows a raw key, and a test fails when a column is empty or still holds English without being marked as pending. Translations are not checked by native speakers, so the changelog says so and invites corrections. The existing modules are translated as separate work under issue #22; Fair Ledger ships translated. Decided 2026-10-17, replacing an earlier "repeat English" decision the same day.
 9. **Accept the Purchases scaling.** The price follows the player's Purchases setting; a line for the mod page goes to the maintainer.
 
 The options and evidence for 8 and 9:
