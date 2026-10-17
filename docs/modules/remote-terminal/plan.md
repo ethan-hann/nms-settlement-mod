@@ -31,7 +31,9 @@ So the terminal only works inside its town, and `C_SETTL_OWN` checks the town th
 - **A. Drop it for 1.2.0.** Fair Ledger ships on its own.
 - **B. One more probe:** an option with no cost on the terminal that opens `SettlementsOverview` (all settlements) or `SettlementManagement`, tried far from the town. Even if it works, the terminal dialog has six slots and Fair Ledger's two payment options fill it, so shipping both means Fair Ledger keeps one payment option or the remote option replaces one.
 
-Recommendation: **A,** and keep B on file. The terminal's main appeal was managing a town remotely: decisions, construction and payments. Those all ran through the local checks that failed. B could at most give a remote overview, at the price of a Fair Ledger option.
+Decided 2026-10-17: the remote terminal is dropped. The maintainer judged it a dead end after Session 8, before B was built. Fair Ledger ships in 1.2.0 on its own.
+
+Recommendation before the decision: **A,** and keep B on file. The terminal's main appeal was managing a town remotely: decisions, construction and payments. Those all ran through the local checks that failed. B could at most give a remote overview, at the price of a Fair Ledger option.
 
 ## Questions Session 8 set out to answer
 

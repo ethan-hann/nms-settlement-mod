@@ -313,4 +313,4 @@ One launch with core, Defense, SettlerStories and SignProbes. Safety: exit passe
 - The rest of the checklist was skipped, since other planets and bases cannot do better.
 - The slot's newer save file (`save12.hg`) holds no placed probe part.
 
-Open: drop the remote terminal for 1.2.0 (recommended), or one more probe of a no-check option that opens the all-settlements page ([modules/remote-terminal/plan.md](modules/remote-terminal/plan.md)).
+Decided 2026-10-17: the remote terminal is dropped; Fair Ledger ships in 1.2.0 on its own. Findings stay in [modules/remote-terminal/plan.md](modules/remote-terminal/plan.md).
