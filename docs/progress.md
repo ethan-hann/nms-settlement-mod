@@ -358,3 +358,7 @@ One launch with core, Defense, SettlerStories and SignProbes. Safety: exit passe
 - The slot's newer save file (`save12.hg`) holds no placed probe part.
 
 Decided 2026-10-17: the remote terminal is dropped; Fair Ledger ships in 1.2.0 on its own. Findings stay in [modules/remote-terminal/plan.md](modules/remote-terminal/plan.md).
+
+## 2026-10-17: Reproducible release zips
+
+Decided 2026-10-17 (issue #17): module files are LF on every checkout. `.gitattributes` sets `eol=lf` for `.EXML` and `.MXML` under `mod/` and marks `.MBIN` binary. The index already held LF, so only working copies change. package.py refuses a text file holding a carriage return and writes every zip entry with a fixed timestamp and mode, so two builds of one commit give identical zips (verified 2026-10-17 by building twice with touched files). A test checks that the shipped module files on disk match the committed bytes. The next release changes the bytes of every file that shipped as CRLF; CHANGES.md says the change is line endings only.

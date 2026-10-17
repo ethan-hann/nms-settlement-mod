@@ -35,6 +35,7 @@ TEST_ONLY = [
 ]
 
 VERSION_RE = re.compile(r"\d+\.\d+\.\d+")
+ZIP_DATE = (1980, 1, 1, 0, 0, 0)
 
 
 class PackageError(Exception):
@@ -67,14 +68,22 @@ def build(mod_root, out_dir, version, modules):
         )
         if not files:
             raise PackageError(f"{name}: no files the game would load")
+        for path in files:
+            if path.suffix.upper() != ".MBIN" and b"\r" in path.read_bytes():
+                rel = path.relative_to(folder).as_posix()
+                raise PackageError(f"{name}: {rel} has CRLF line endings; the repo stores LF (see .gitattributes)")
         plans.append((name, folder, files))
     out_dir.mkdir(parents=True, exist_ok=True)
     made = []
     for name, folder, files in plans:
         target = out_dir / f"{name}-{version}.zip"
-        with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
+        with zipfile.ZipFile(target, "w") as z:
             for path in files:
-                z.write(path, f"{name}/{path.relative_to(folder).as_posix()}")
+                # A fixed timestamp and mode, so two builds of one commit give the same zip.
+                info = zipfile.ZipInfo(f"{name}/{path.relative_to(folder).as_posix()}", ZIP_DATE)
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = 0o644 << 16
+                z.writestr(info, path.read_bytes())
         made.append(target)
     return made
 
