@@ -26,7 +26,12 @@ Each finding is marked verified, inferred or unknown, as in [../fair-ledger/vani
 - **Verified:** `SET_INT_SUMMARY` is a station-style part (no placement scene; the model comes from the parts table). `gen_parts.py` already copies parts like that.
 - **Verified:** `SettlementBuildingDetail`, `SettlementHub` and `Settlement_TowerTerminal` have no dialog entry in `nms_dialog_gcalienpuzzletable`. **Inferred:** they open their UI pages directly.
 - **Verified:** the settlement UI pages are `settlementpage` (overview, production, debt and an abandon action), `settlementbuildingpage` (one building's details), `settlementsummarypage` (history, with abandon), `settlement_npc_page` and `settlernpcpage`.
-- **Unknown:** what a copied terminal shows when placed away from its building or office: the right page, an empty page, or nothing.
+- **Verified in Session 7:** a copy of `SET_MAYORTERM` placed in open ground inside the town works as the full Administration Terminal: the same four options, and "View Funana Bridge status" opens the town's status page.
+- **Verified in Session 7:** a copy of `SET_INT_SUMMARY` cannot be placed anywhere above water ("Must Be Constructed Underwater"). The vanilla entry has both `BuildableUnderwater` and `BuildableAboveWater` false, which the probe copied. What it opens away from a building is still unknown.
+- **Verified in Session 7:** interacting with the monument (`SettlementHub`) opens the town's status page at once, with no options in between.
+- **Verified in Session 7:** the status page is not read-only. It has "Change Output" buttons for production, and its Settlement History page has "Retire as Overseer".
+- **Verified in Session 7:** both probe parts showed in the build menu with a wooden-wall thumbnail. The vanilla products behind them use `BUILDABLE.WALL_STONE.DDS` as a placeholder icon, so a shipped sign needs another vanilla icon.
+- **Verified in Session 7:** an existing creative save learned both parts from the module's `creative_known` entries (`KnownProducts` in the save).
 
 ### Live text on a part
 
@@ -39,7 +44,7 @@ Each finding is marked verified, inferred or unknown, as in [../fair-ledger/vani
 - **C. A vanilla model with a new entity.** For example the summary terminal's model with its interaction set to `SettlementHub`. This ships a modified scene and entity in the mod, so visitors without the mod would not see it, which breaks the "vanilla scenes only" design rule. Worth it only if the hub page is the right read-only view and A shows nothing.
 - **D. Live numbers on the sign.** Runtime code; out of scope for 1.2.0.
 
-No route is truly read-only if it opens the vanilla status page, because that page includes the abandon action. Whether abandoning asks for confirmation there is unknown.
+No route is truly read-only if it opens the vanilla status page: it offers Change Output, and its history page offers Retire as Overseer (verified in Session 7). A read-only sign is out of reach with data alone. The closest thing is one interaction straight to the status page, which is what the monument does.
 
 ## Probe
 
@@ -51,8 +56,17 @@ The session also checks route C's target page on the real monument: what the Set
 
 Probe parts are deleted when a later session runs without SignProbes, which is fine on the test slot. `testmode enter` refuses a session that leaves out a module whose parts the slot holds, so the parts are removed in game at the end of the session.
 
-## Decisions for the maintainer, after the session
+## Session 7 results by route
 
-1. Which route, if any, ships in 1.2.0.
-2. The sign's look: which vanilla model, and whether it may be scaled.
-3. Whether a non-read-only route (B) is acceptable as "the town sign", or the sign waits for a read-only route.
+| Route | Result | What it would take |
+|---|---|---|
+| A. Building-detail terminal | Not placeable above water; page unknown | A second probe with `BuildableAboveWater` set, to see what it opens away from a building |
+| B. Administration Terminal copy | Works: the full terminal anywhere in town, vanilla scene | Ready as data; it is a remote office terminal, not a sign |
+| C. Small model with the monument's interaction | The monument opens the status page in one step | A new scene and entity shipped in the mod (visitors without it see nothing, inferred), and a probe |
+| D. Live numbers | Runtime code | Not for 1.2.0 |
+
+## Decisions for the maintainer
+
+1. Which route, if any, ships in 1.2.0. The status page is never read-only, so the choice is between B (works today, more than a sign) and C (one step to status, the closest to a sign, but new assets and another probe), or waiting.
+2. If A or C, one more short probe session before 1.2.0.
+3. The sign's look and icon: which vanilla model and thumbnail.
