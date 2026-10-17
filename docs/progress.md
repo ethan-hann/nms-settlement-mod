@@ -272,3 +272,14 @@ Consequences:
 - Every 1.1.0 option and perk has now been seen working in game.
 - Game updates are less likely to delete builds than feared. Verified: an unknown field, a renamed template, or a vanilla part ID removed from under SettlementDecor each leaves the rest of the patch in place. Still unknown: a renamed list, a changed struct type, and a field whose type changes.
 - `WORD` and `STANDING` gave Gek rewards in a Gek town in a Gek system, so whether they follow the settlement's race or the system's is still unknown.
+
+## 2026-10-17: Text in every game language
+
+Decided 2026-10-17 (issue #22): every LocTable entry is translated into all 17 columns, using the game's own terms. Translations are not checked by native speakers; the changelog says so and asks for corrections.
+
+- **Spec form.** A `text` entry in a spec is either a plain string (English in every column, used by the test-only modules) or an object with English and each of the 15 other languages. `null` marks a pending translation, which repeats the English. gen_parts.py rejects a translation that is empty, repeats the English without `null`, drops a `%PLACEHOLDER%` or names an unknown language. USEnglish always repeats English.
+- **Tests.** Shipped modules must use the object form, and every `_NAME` must be its `_NAME_L` in capitals in every language, as vanilla does.
+- **Glossary.** extract.py now pulls every language file, and tools/loc_glossary.py shows how vanilla words a term in each language. Verified: each vanilla language file fills only its own column, and TencentChinese is filled for about half the keys (none of the settlement decisions) with Simplified Chinese text, except for a different word for pirates.
+- **Term reference.** The shipped specs are the reference for later text, Fair Ledger included: the cost brackets in OT_FORT_OPT1 (debt), OT_SS_D1_O2 (units), OT_SS_S3C_O2 (nanites) and OT_SS_D3_O1 (settlers) give each language's wording.
+- **Coined terms.** Vanilla has no word for path tile, curb, foreman, night market or perimeter in most languages, so those are new wording. Where vanilla's word for vault is a storage box or compartment, German and Dutch use vanilla's seed-vault word instead (Samenkammer, kluis).
+- **Seen in game (verified 2026-10-17):** the translated LocTables load and show their translations.

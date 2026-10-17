@@ -4,106 +4,421 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P1_T" />
 			<Property name="English" value="[TEST] Probe: Race and Words" />
+			<Property name="French" value="[TEST] Probe: Race and Words" />
+			<Property name="Italian" value="[TEST] Probe: Race and Words" />
+			<Property name="German" value="[TEST] Probe: Race and Words" />
+			<Property name="Spanish" value="[TEST] Probe: Race and Words" />
+			<Property name="Russian" value="[TEST] Probe: Race and Words" />
+			<Property name="Polish" value="[TEST] Probe: Race and Words" />
+			<Property name="Dutch" value="[TEST] Probe: Race and Words" />
+			<Property name="Portuguese" value="[TEST] Probe: Race and Words" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Probe: Race and Words" />
+			<Property name="BrazilianPortuguese" value="[TEST] Probe: Race and Words" />
+			<Property name="SimplifiedChinese" value="[TEST] Probe: Race and Words" />
+			<Property name="TraditionalChinese" value="[TEST] Probe: Race and Words" />
+			<Property name="TencentChinese" value="[TEST] Probe: Race and Words" />
+			<Property name="Korean" value="[TEST] Probe: Race and Words" />
+			<Property name="Japanese" value="[TEST] Probe: Race and Words" />
 			<Property name="USEnglish" value="[TEST] Probe: Race and Words" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P1_Q" />
 			<Property name="English" value="[TEST] Which reward should arrive?" />
+			<Property name="French" value="[TEST] Which reward should arrive?" />
+			<Property name="Italian" value="[TEST] Which reward should arrive?" />
+			<Property name="German" value="[TEST] Which reward should arrive?" />
+			<Property name="Spanish" value="[TEST] Which reward should arrive?" />
+			<Property name="Russian" value="[TEST] Which reward should arrive?" />
+			<Property name="Polish" value="[TEST] Which reward should arrive?" />
+			<Property name="Dutch" value="[TEST] Which reward should arrive?" />
+			<Property name="Portuguese" value="[TEST] Which reward should arrive?" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Which reward should arrive?" />
+			<Property name="BrazilianPortuguese" value="[TEST] Which reward should arrive?" />
+			<Property name="SimplifiedChinese" value="[TEST] Which reward should arrive?" />
+			<Property name="TraditionalChinese" value="[TEST] Which reward should arrive?" />
+			<Property name="TencentChinese" value="[TEST] Which reward should arrive?" />
+			<Property name="Korean" value="[TEST] Which reward should arrive?" />
+			<Property name="Japanese" value="[TEST] Which reward should arrive?" />
 			<Property name="USEnglish" value="[TEST] Which reward should arrive?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P1_D" />
 			<Property name="English" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="French" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Italian" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="German" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Spanish" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Russian" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Polish" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Dutch" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Portuguese" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="LatinAmericanSpanish" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="BrazilianPortuguese" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="SimplifiedChinese" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="TraditionalChinese" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="TencentChinese" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Korean" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
+			<Property name="Japanese" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
 			<Property name="USEnglish" value="[TEST] Reward probe. This settlement's race should appear here: %RACE%. The first option teaches a word, the second raises standing." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P1_O1" />
 			<Property name="English" value="[TEST] Teach me a word" />
+			<Property name="French" value="[TEST] Teach me a word" />
+			<Property name="Italian" value="[TEST] Teach me a word" />
+			<Property name="German" value="[TEST] Teach me a word" />
+			<Property name="Spanish" value="[TEST] Teach me a word" />
+			<Property name="Russian" value="[TEST] Teach me a word" />
+			<Property name="Polish" value="[TEST] Teach me a word" />
+			<Property name="Dutch" value="[TEST] Teach me a word" />
+			<Property name="Portuguese" value="[TEST] Teach me a word" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Teach me a word" />
+			<Property name="BrazilianPortuguese" value="[TEST] Teach me a word" />
+			<Property name="SimplifiedChinese" value="[TEST] Teach me a word" />
+			<Property name="TraditionalChinese" value="[TEST] Teach me a word" />
+			<Property name="TencentChinese" value="[TEST] Teach me a word" />
+			<Property name="Korean" value="[TEST] Teach me a word" />
+			<Property name="Japanese" value="[TEST] Teach me a word" />
 			<Property name="USEnglish" value="[TEST] Teach me a word" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P1_O2" />
 			<Property name="English" value="[TEST] Raise my standing" />
+			<Property name="French" value="[TEST] Raise my standing" />
+			<Property name="Italian" value="[TEST] Raise my standing" />
+			<Property name="German" value="[TEST] Raise my standing" />
+			<Property name="Spanish" value="[TEST] Raise my standing" />
+			<Property name="Russian" value="[TEST] Raise my standing" />
+			<Property name="Polish" value="[TEST] Raise my standing" />
+			<Property name="Dutch" value="[TEST] Raise my standing" />
+			<Property name="Portuguese" value="[TEST] Raise my standing" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Raise my standing" />
+			<Property name="BrazilianPortuguese" value="[TEST] Raise my standing" />
+			<Property name="SimplifiedChinese" value="[TEST] Raise my standing" />
+			<Property name="TraditionalChinese" value="[TEST] Raise my standing" />
+			<Property name="TencentChinese" value="[TEST] Raise my standing" />
+			<Property name="Korean" value="[TEST] Raise my standing" />
+			<Property name="Japanese" value="[TEST] Raise my standing" />
 			<Property name="USEnglish" value="[TEST] Raise my standing" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P2_T" />
 			<Property name="English" value="[TEST] Probe: A Gift" />
+			<Property name="French" value="[TEST] Probe: A Gift" />
+			<Property name="Italian" value="[TEST] Probe: A Gift" />
+			<Property name="German" value="[TEST] Probe: A Gift" />
+			<Property name="Spanish" value="[TEST] Probe: A Gift" />
+			<Property name="Russian" value="[TEST] Probe: A Gift" />
+			<Property name="Polish" value="[TEST] Probe: A Gift" />
+			<Property name="Dutch" value="[TEST] Probe: A Gift" />
+			<Property name="Portuguese" value="[TEST] Probe: A Gift" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Probe: A Gift" />
+			<Property name="BrazilianPortuguese" value="[TEST] Probe: A Gift" />
+			<Property name="SimplifiedChinese" value="[TEST] Probe: A Gift" />
+			<Property name="TraditionalChinese" value="[TEST] Probe: A Gift" />
+			<Property name="TencentChinese" value="[TEST] Probe: A Gift" />
+			<Property name="Korean" value="[TEST] Probe: A Gift" />
+			<Property name="Japanese" value="[TEST] Probe: A Gift" />
 			<Property name="USEnglish" value="[TEST] Probe: A Gift" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P2_Q" />
 			<Property name="English" value="[TEST] Accept the gift?" />
+			<Property name="French" value="[TEST] Accept the gift?" />
+			<Property name="Italian" value="[TEST] Accept the gift?" />
+			<Property name="German" value="[TEST] Accept the gift?" />
+			<Property name="Spanish" value="[TEST] Accept the gift?" />
+			<Property name="Russian" value="[TEST] Accept the gift?" />
+			<Property name="Polish" value="[TEST] Accept the gift?" />
+			<Property name="Dutch" value="[TEST] Accept the gift?" />
+			<Property name="Portuguese" value="[TEST] Accept the gift?" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Accept the gift?" />
+			<Property name="BrazilianPortuguese" value="[TEST] Accept the gift?" />
+			<Property name="SimplifiedChinese" value="[TEST] Accept the gift?" />
+			<Property name="TraditionalChinese" value="[TEST] Accept the gift?" />
+			<Property name="TencentChinese" value="[TEST] Accept the gift?" />
+			<Property name="Korean" value="[TEST] Accept the gift?" />
+			<Property name="Japanese" value="[TEST] Accept the gift?" />
 			<Property name="USEnglish" value="[TEST] Accept the gift?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P2_D" />
 			<Property name="English" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="French" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Italian" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="German" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Spanish" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Russian" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Polish" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Dutch" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Portuguese" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="LatinAmericanSpanish" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="BrazilianPortuguese" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="SimplifiedChinese" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="TraditionalChinese" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="TencentChinese" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Korean" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
+			<Property name="Japanese" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
 			<Property name="USEnglish" value="[TEST] Gift probe. The first option uses the game's own gift reward; note what arrives." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P2_O1" />
 			<Property name="English" value="[TEST] Accept the gift" />
+			<Property name="French" value="[TEST] Accept the gift" />
+			<Property name="Italian" value="[TEST] Accept the gift" />
+			<Property name="German" value="[TEST] Accept the gift" />
+			<Property name="Spanish" value="[TEST] Accept the gift" />
+			<Property name="Russian" value="[TEST] Accept the gift" />
+			<Property name="Polish" value="[TEST] Accept the gift" />
+			<Property name="Dutch" value="[TEST] Accept the gift" />
+			<Property name="Portuguese" value="[TEST] Accept the gift" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Accept the gift" />
+			<Property name="BrazilianPortuguese" value="[TEST] Accept the gift" />
+			<Property name="SimplifiedChinese" value="[TEST] Accept the gift" />
+			<Property name="TraditionalChinese" value="[TEST] Accept the gift" />
+			<Property name="TencentChinese" value="[TEST] Accept the gift" />
+			<Property name="Korean" value="[TEST] Accept the gift" />
+			<Property name="Japanese" value="[TEST] Accept the gift" />
 			<Property name="USEnglish" value="[TEST] Accept the gift" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P2_O2" />
 			<Property name="English" value="[TEST] Decline" />
+			<Property name="French" value="[TEST] Decline" />
+			<Property name="Italian" value="[TEST] Decline" />
+			<Property name="German" value="[TEST] Decline" />
+			<Property name="Spanish" value="[TEST] Decline" />
+			<Property name="Russian" value="[TEST] Decline" />
+			<Property name="Polish" value="[TEST] Decline" />
+			<Property name="Dutch" value="[TEST] Decline" />
+			<Property name="Portuguese" value="[TEST] Decline" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Decline" />
+			<Property name="BrazilianPortuguese" value="[TEST] Decline" />
+			<Property name="SimplifiedChinese" value="[TEST] Decline" />
+			<Property name="TraditionalChinese" value="[TEST] Decline" />
+			<Property name="TencentChinese" value="[TEST] Decline" />
+			<Property name="Korean" value="[TEST] Decline" />
+			<Property name="Japanese" value="[TEST] Decline" />
 			<Property name="USEnglish" value="[TEST] Decline" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3_T" />
 			<Property name="English" value="[TEST] Probe: Leave This Pending" />
+			<Property name="French" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Italian" value="[TEST] Probe: Leave This Pending" />
+			<Property name="German" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Spanish" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Russian" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Polish" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Dutch" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Portuguese" value="[TEST] Probe: Leave This Pending" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Probe: Leave This Pending" />
+			<Property name="BrazilianPortuguese" value="[TEST] Probe: Leave This Pending" />
+			<Property name="SimplifiedChinese" value="[TEST] Probe: Leave This Pending" />
+			<Property name="TraditionalChinese" value="[TEST] Probe: Leave This Pending" />
+			<Property name="TencentChinese" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Korean" value="[TEST] Probe: Leave This Pending" />
+			<Property name="Japanese" value="[TEST] Probe: Leave This Pending" />
 			<Property name="USEnglish" value="[TEST] Probe: Leave This Pending" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3_Q" />
 			<Property name="English" value="[TEST] Start the follow-up?" />
+			<Property name="French" value="[TEST] Start the follow-up?" />
+			<Property name="Italian" value="[TEST] Start the follow-up?" />
+			<Property name="German" value="[TEST] Start the follow-up?" />
+			<Property name="Spanish" value="[TEST] Start the follow-up?" />
+			<Property name="Russian" value="[TEST] Start the follow-up?" />
+			<Property name="Polish" value="[TEST] Start the follow-up?" />
+			<Property name="Dutch" value="[TEST] Start the follow-up?" />
+			<Property name="Portuguese" value="[TEST] Start the follow-up?" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Start the follow-up?" />
+			<Property name="BrazilianPortuguese" value="[TEST] Start the follow-up?" />
+			<Property name="SimplifiedChinese" value="[TEST] Start the follow-up?" />
+			<Property name="TraditionalChinese" value="[TEST] Start the follow-up?" />
+			<Property name="TencentChinese" value="[TEST] Start the follow-up?" />
+			<Property name="Korean" value="[TEST] Start the follow-up?" />
+			<Property name="Japanese" value="[TEST] Start the follow-up?" />
 			<Property name="USEnglish" value="[TEST] Start the follow-up?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3_D" />
 			<Property name="English" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="French" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Italian" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="German" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Spanish" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Russian" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Polish" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Dutch" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Portuguese" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="LatinAmericanSpanish" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="BrazilianPortuguese" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="SimplifiedChinese" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="TraditionalChinese" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="TencentChinese" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Korean" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
+			<Property name="Japanese" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
 			<Property name="USEnglish" value="[TEST] Removal probe. The first option queues a follow-up decision. Leave that follow-up unanswered, then save and quit." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3_O1" />
 			<Property name="English" value="[TEST] Start the follow-up" />
+			<Property name="French" value="[TEST] Start the follow-up" />
+			<Property name="Italian" value="[TEST] Start the follow-up" />
+			<Property name="German" value="[TEST] Start the follow-up" />
+			<Property name="Spanish" value="[TEST] Start the follow-up" />
+			<Property name="Russian" value="[TEST] Start the follow-up" />
+			<Property name="Polish" value="[TEST] Start the follow-up" />
+			<Property name="Dutch" value="[TEST] Start the follow-up" />
+			<Property name="Portuguese" value="[TEST] Start the follow-up" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Start the follow-up" />
+			<Property name="BrazilianPortuguese" value="[TEST] Start the follow-up" />
+			<Property name="SimplifiedChinese" value="[TEST] Start the follow-up" />
+			<Property name="TraditionalChinese" value="[TEST] Start the follow-up" />
+			<Property name="TencentChinese" value="[TEST] Start the follow-up" />
+			<Property name="Korean" value="[TEST] Start the follow-up" />
+			<Property name="Japanese" value="[TEST] Start the follow-up" />
 			<Property name="USEnglish" value="[TEST] Start the follow-up" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3_O2" />
 			<Property name="English" value="[TEST] Not now" />
+			<Property name="French" value="[TEST] Not now" />
+			<Property name="Italian" value="[TEST] Not now" />
+			<Property name="German" value="[TEST] Not now" />
+			<Property name="Spanish" value="[TEST] Not now" />
+			<Property name="Russian" value="[TEST] Not now" />
+			<Property name="Polish" value="[TEST] Not now" />
+			<Property name="Dutch" value="[TEST] Not now" />
+			<Property name="Portuguese" value="[TEST] Not now" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Not now" />
+			<Property name="BrazilianPortuguese" value="[TEST] Not now" />
+			<Property name="SimplifiedChinese" value="[TEST] Not now" />
+			<Property name="TraditionalChinese" value="[TEST] Not now" />
+			<Property name="TencentChinese" value="[TEST] Not now" />
+			<Property name="Korean" value="[TEST] Not now" />
+			<Property name="Japanese" value="[TEST] Not now" />
 			<Property name="USEnglish" value="[TEST] Not now" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_H" />
 			<Property name="English" value="[TEST] Removal probe" />
+			<Property name="French" value="[TEST] Removal probe" />
+			<Property name="Italian" value="[TEST] Removal probe" />
+			<Property name="German" value="[TEST] Removal probe" />
+			<Property name="Spanish" value="[TEST] Removal probe" />
+			<Property name="Russian" value="[TEST] Removal probe" />
+			<Property name="Polish" value="[TEST] Removal probe" />
+			<Property name="Dutch" value="[TEST] Removal probe" />
+			<Property name="Portuguese" value="[TEST] Removal probe" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Removal probe" />
+			<Property name="BrazilianPortuguese" value="[TEST] Removal probe" />
+			<Property name="SimplifiedChinese" value="[TEST] Removal probe" />
+			<Property name="TraditionalChinese" value="[TEST] Removal probe" />
+			<Property name="TencentChinese" value="[TEST] Removal probe" />
+			<Property name="Korean" value="[TEST] Removal probe" />
+			<Property name="Japanese" value="[TEST] Removal probe" />
 			<Property name="USEnglish" value="[TEST] Removal probe" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3B_T" />
 			<Property name="English" value="[TEST] The Pending Step" />
+			<Property name="French" value="[TEST] The Pending Step" />
+			<Property name="Italian" value="[TEST] The Pending Step" />
+			<Property name="German" value="[TEST] The Pending Step" />
+			<Property name="Spanish" value="[TEST] The Pending Step" />
+			<Property name="Russian" value="[TEST] The Pending Step" />
+			<Property name="Polish" value="[TEST] The Pending Step" />
+			<Property name="Dutch" value="[TEST] The Pending Step" />
+			<Property name="Portuguese" value="[TEST] The Pending Step" />
+			<Property name="LatinAmericanSpanish" value="[TEST] The Pending Step" />
+			<Property name="BrazilianPortuguese" value="[TEST] The Pending Step" />
+			<Property name="SimplifiedChinese" value="[TEST] The Pending Step" />
+			<Property name="TraditionalChinese" value="[TEST] The Pending Step" />
+			<Property name="TencentChinese" value="[TEST] The Pending Step" />
+			<Property name="Korean" value="[TEST] The Pending Step" />
+			<Property name="Japanese" value="[TEST] The Pending Step" />
 			<Property name="USEnglish" value="[TEST] The Pending Step" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3B_Q" />
 			<Property name="English" value="[TEST] Leave this unanswered" />
+			<Property name="French" value="[TEST] Leave this unanswered" />
+			<Property name="Italian" value="[TEST] Leave this unanswered" />
+			<Property name="German" value="[TEST] Leave this unanswered" />
+			<Property name="Spanish" value="[TEST] Leave this unanswered" />
+			<Property name="Russian" value="[TEST] Leave this unanswered" />
+			<Property name="Polish" value="[TEST] Leave this unanswered" />
+			<Property name="Dutch" value="[TEST] Leave this unanswered" />
+			<Property name="Portuguese" value="[TEST] Leave this unanswered" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Leave this unanswered" />
+			<Property name="BrazilianPortuguese" value="[TEST] Leave this unanswered" />
+			<Property name="SimplifiedChinese" value="[TEST] Leave this unanswered" />
+			<Property name="TraditionalChinese" value="[TEST] Leave this unanswered" />
+			<Property name="TencentChinese" value="[TEST] Leave this unanswered" />
+			<Property name="Korean" value="[TEST] Leave this unanswered" />
+			<Property name="Japanese" value="[TEST] Leave this unanswered" />
 			<Property name="USEnglish" value="[TEST] Leave this unanswered" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3B_D" />
 			<Property name="English" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="French" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Italian" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="German" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Spanish" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Russian" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Polish" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Dutch" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Portuguese" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="LatinAmericanSpanish" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="BrazilianPortuguese" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="SimplifiedChinese" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="TraditionalChinese" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="TencentChinese" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Korean" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
+			<Property name="Japanese" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
 			<Property name="USEnglish" value="[TEST] Do not answer this one. Save and quit to desktop with it still waiting." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3B_O1" />
 			<Property name="English" value="[TEST] Answered anyway" />
+			<Property name="French" value="[TEST] Answered anyway" />
+			<Property name="Italian" value="[TEST] Answered anyway" />
+			<Property name="German" value="[TEST] Answered anyway" />
+			<Property name="Spanish" value="[TEST] Answered anyway" />
+			<Property name="Russian" value="[TEST] Answered anyway" />
+			<Property name="Polish" value="[TEST] Answered anyway" />
+			<Property name="Dutch" value="[TEST] Answered anyway" />
+			<Property name="Portuguese" value="[TEST] Answered anyway" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Answered anyway" />
+			<Property name="BrazilianPortuguese" value="[TEST] Answered anyway" />
+			<Property name="SimplifiedChinese" value="[TEST] Answered anyway" />
+			<Property name="TraditionalChinese" value="[TEST] Answered anyway" />
+			<Property name="TencentChinese" value="[TEST] Answered anyway" />
+			<Property name="Korean" value="[TEST] Answered anyway" />
+			<Property name="Japanese" value="[TEST] Answered anyway" />
 			<Property name="USEnglish" value="[TEST] Answered anyway" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_RP_P3B_O2" />
 			<Property name="English" value="[TEST] Also answered" />
+			<Property name="French" value="[TEST] Also answered" />
+			<Property name="Italian" value="[TEST] Also answered" />
+			<Property name="German" value="[TEST] Also answered" />
+			<Property name="Spanish" value="[TEST] Also answered" />
+			<Property name="Russian" value="[TEST] Also answered" />
+			<Property name="Polish" value="[TEST] Also answered" />
+			<Property name="Dutch" value="[TEST] Also answered" />
+			<Property name="Portuguese" value="[TEST] Also answered" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Also answered" />
+			<Property name="BrazilianPortuguese" value="[TEST] Also answered" />
+			<Property name="SimplifiedChinese" value="[TEST] Also answered" />
+			<Property name="TraditionalChinese" value="[TEST] Also answered" />
+			<Property name="TencentChinese" value="[TEST] Also answered" />
+			<Property name="Korean" value="[TEST] Also answered" />
+			<Property name="Japanese" value="[TEST] Also answered" />
 			<Property name="USEnglish" value="[TEST] Also answered" />
 		</Property>
 	</Property>

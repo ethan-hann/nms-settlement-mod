@@ -220,7 +220,7 @@ def test_option_one_costs_debt_in_the_sign_that_adds_debt():
 
 def test_option_one_names_its_cost_in_english():
     key = value(field(fortify(), "Option1List")[0], "OptionText")
-    assert "debt" in load_spec()["text"][key].lower()
+    assert "debt" in gen_parts.english(load_spec()["text"][key]).lower()
 
 
 def test_option_two_declines_without_the_perk_or_any_reward():
@@ -266,7 +266,8 @@ def test_every_text_key_the_module_uses_has_english(vanilla_loc_keys):
 def test_every_text_entry_is_used_and_plain_ascii():
     spec_text = load_spec()["text"]
     assert not sorted(set(spec_text) - used_text_keys()), "text entries nothing refers to"
-    for key, english in spec_text.items():
+    for key, text in spec_text.items():
+        english = gen_parts.english(text)
         assert english.strip() and english.isascii(), f"{key}: text must be non-empty ASCII"
 
 
