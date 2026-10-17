@@ -181,7 +181,9 @@ def test_the_ledger_probe_sells_exact_debt_steps_at_two_units_each():
 
     admin = dialog.find("Property[@name='Table']/Property[@_id='SETTLEMENT_ADMIN']/Property[@name='Options']")
     paid = [o for o in admin if o.find("Property[@name='Cost']").get("value").startswith("C_OT_LP_")]
-    assert len(paid) == 2, "expected a guarded and an unguarded payment option"
+    # Session 6: the terminal showed only six options and dropped the seventh.
+    assert len(admin) <= 6, f"SETTLEMENT_ADMIN has {len(admin)} options; the terminal shows six"
+    assert len(paid) == 1, "expected one guarded payment option"
     guarded = 0
     for option in paid:
         cost_id = option.find("Property[@name='Cost']").get("value")
@@ -204,6 +206,10 @@ def test_the_ledger_probe_sells_exact_debt_steps_at_two_units_each():
             assert level.find(".//Property[@name='EqualityEnum']").get("value") == "Greater"
             guarded += 1
     assert guarded == 1
+
+    loc = (MODS / LEDGER_PROBES / "LocTable.MXML").read_text(encoding="utf-8")
+    for key in ("UI_SETTLEMENT_PROD_DEBT_TIP", "UI_SETTLEMENT_PROD_DEBT_TIP2"):
+        assert f'value="{key}"' in loc, f"{key} is not overridden"
 
     # The test save holds far fewer units than its debt, so the probe also hands out units for free.
     free = [o for o in admin if o.find("Property[@name='Name']").get("value") == "OT_LP_CASH"]
