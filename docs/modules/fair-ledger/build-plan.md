@@ -4,7 +4,7 @@ Written 2026-10-17, after Session 6 and the decisions in [plan.md](plan.md). Cov
 
 ## Order
 
-1. Issue #22 first: language support in the generators and translations for core, Defense and Settler Stories.
+1. Issue #22 first: language support in the generators and translations for core, Defense and Settler Stories. Done 2026-10-17 (#25).
 2. Then Fair Ledger, built on that support so it ships translated.
 3. One short check session, then release both as 1.2.0.
 
