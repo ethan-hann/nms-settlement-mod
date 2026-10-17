@@ -104,3 +104,29 @@ def test_a_patched_file_absent_from_the_export_is_reported(tree):
     (tree / "exported").mkdir()
     report = run(tree, tree / "exported")
     assert any("BASEBUILDINGOBJECTSTABLE" in m.upper() for m in report.missing)
+
+
+def test_a_patch_whose_template_does_not_match_vanilla_is_reported_and_the_rest_still_checked(tree):
+    # The game merges a patch with a wrong template anyway, so the check reports it and moves on.
+    other = tree / "mod/OverseersToolkit/GCDEBUGOPTIONS.EXML"
+    other.write_text('<Data template="cGcSettlementGlobalsOld"><Property name="X" value="1" /></Data>')
+    (tree / "vanilla/gcdebugoptions.MXML").write_text('<Data template="cGcSettlementGlobals"><Property name="X" value="0" /></Data>')
+    report = run(tree, export(tree, exported_text(limit="50")))
+    assert any("GCDEBUGOPTIONS" in m and "cGcSettlementGlobalsOld" in m for m in report.missing)
+    assert any("DECALPATH" in m and "PlanetBaseLimit" in m for m in report.missing)
+
+
+def test_main_keeps_checking_modules_after_one_with_a_bad_patch(tree, monkeypatch, capsys):
+    bad = tree / "mod/ABadModule/GCDEBUGOPTIONS.EXML"
+    bad.parent.mkdir(parents=True)
+    bad.write_text('<Data template="cGcSettlementGlobalsOld" />')
+    (tree / "vanilla/gcdebugoptions.MXML").write_text('<Data template="cGcSettlementGlobals" />')
+    monkeypatch.setattr(check_export, "REPO", tree)
+    check = check_export.check_module
+    monkeypatch.setattr(check_export, "check_module", lambda m, e: check(m, e, tree / "vanilla"))
+    exported = export(tree, exported_text())
+    code = check_export.main([str(exported), "ABadModule", "OverseersToolkit"])
+    out = capsys.readouterr().out
+    assert code == 1
+    assert "MISS ABadModule" in out
+    assert "ok   OverseersToolkit" in out

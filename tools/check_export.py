@@ -89,7 +89,12 @@ def check_module(module_dir, exported_dir, vanilla_dir=merge_preview.EXTRACTED):
         rel = patch.relative_to(module_dir).as_posix()
         vanilla_path = Path(vanilla_dir) / vanilla_relpath(Path(rel))
         vanilla = ET.parse(vanilla_path).getroot()
-        _, edits = merge_preview.merge(vanilla, ET.parse(patch).getroot())
+        try:
+            _, edits = merge_preview.merge(vanilla, ET.parse(patch).getroot())
+        except merge_preview.PatchError as err:
+            # The game still merges such a patch (a wrong template, for one), so report it and go on.
+            report.missing.append(f"{rel}: {err}")
+            continue
         exported_path = find_export(exported_dir, rel)
         if exported_path is None:
             report.missing.append(f"{rel}: not in the export")
