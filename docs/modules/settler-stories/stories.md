@@ -1,13 +1,13 @@
 # Settler Stories: story draft
 
-The content for the first release, in `specs/OverseersToolkit-SettlerStories.json`. Written 2026-10-09, rebalanced 2026-10-15 after Session 4. Steps link by `ChainedJudgementID` (route A, verified in Session 3b). Every decision and story step was seen in game in Sessions 3b and 3c except the options changed in the rebalance; those use only rewards proven in Session 4.
+The content for the first release, in `specs/OverseersToolkit-SettlerStories.json`. Written 2026-10-09, rebalanced 2026-10-15 after Session 4. Steps link by `ChainedJudgementID` (route A, verified in Session 3b). Every decision, story step, option and perk was seen working in game in Sessions 3b, 3c and 5.
 
 Conventions:
 - Strengths follow the game's sign: `Positive` is good for the settlement, `Negative` is bad. For example, `Debt NegativeSmall` adds debt, and `Alert PositiveMedium` lowers the Sentinel alert.
 - Every outcome is shown before the choice (`HidePerkInJudgement` false); costs are named in the option text.
 - Options never change Alert or BugAttack: the choice screen has no label for them and shows a raw text key (seen in Session 3). Perks may change them.
 - Text is race-neutral: the dilemma screen shows `%RACE%` literally (Session 4). The world stays No Man's Sky: pirates, signal boosters, ruins whose carvings teach words.
-- Player rewards use vanilla reward IDs: `R_J_GIFTITEM1` (500-600 nanites), `R_J_GIFTITEM2` (100,000-300,000 units), `R_J_BOUNTY` (200-500 quicksilver), `R_SETTL_NAVDATA` (1-5 navigation data), `R_J_GIFTITEM24` (Starship AI Valves), `R_J_GIFTITEM30` (a rare procedural item), `R_J_GIFTITEM10` (5 Hexaberries), `WORD` (one word, Gek in a Gek town) and `STANDING` (Gek standing in a Gek town). Whether `WORD` and `STANDING` follow the settlement's race or the star system's is unknown.
+- Player rewards use vanilla reward IDs: `R_J_GIFTITEM1` (500-600 nanites), `R_J_GIFTITEM2` (100,000-300,000 units), `R_J_BOUNTY` (200-500 quicksilver), `R_SETTL_NAVDATA` (1-5 navigation data), `R_J_GIFTITEM24` (Starship AI Valves), `R_J_GIFTITEM30` (a rare procedural item), `R_J_GIFTITEM10` (5 Hexaberries), `WORD` (one word, Gek in a Gek town) and `STANDING` (a small Gek standing gain in a Gek town, +2 in Session 5). Whether `WORD` and `STANDING` follow the settlement's race or the star system's is unknown.
 - Settlement rewards are stat changes, new perks, and `R_SET_FW_PARTY` (a fireworks party).
 
 ## Single dilemmas
