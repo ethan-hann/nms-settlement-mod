@@ -33,6 +33,7 @@ FILTERS = [
     "metadata/reality/tables/legacybasebuildingtable*",
     "metadata/reality/tables/rewardtable*",
     "metadata/reality/tables/costtable*",
+    "metadata/reality/tables/nms_dialog_gcalienpuzzletable*",
     "metadata/simulation/npcs/npcsettlementbehaviours*",
     "metadata/simulation/solarsystem/wfcbuildings/*",
     "metadata/simulation/environment/planetbuildingtable*",

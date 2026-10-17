@@ -30,6 +30,7 @@ TEST_ONLY = [
     "OverseersToolkit-BrokenProbe",
     "OverseersToolkit-TemplateProbe",
     "OverseersToolkit-MissingIdProbe",
+    "OverseersToolkit-LedgerProbes",
     "OverseersToolkit-SignProbes",
 ]
 

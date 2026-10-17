@@ -26,6 +26,7 @@ EXCLUDED_MODULES = (
     "OverseersToolkit-BrokenProbe",
     "OverseersToolkit-TemplateProbe",
     "OverseersToolkit-MissingIdProbe",
+    "OverseersToolkit-LedgerProbes",
     "OverseersToolkit-SignProbes",
 )
 DEV_PREFIX = "_OTDEV_"

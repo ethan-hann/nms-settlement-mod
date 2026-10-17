@@ -39,6 +39,7 @@ MODULES = {
     "brokenprobe": "OverseersToolkit-BrokenProbe",
     "templateprobe": "OverseersToolkit-TemplateProbe",
     "missingidprobe": "OverseersToolkit-MissingIdProbe",
+    "ledgerprobes": "OverseersToolkit-LedgerProbes",
     "signprobes": "OverseersToolkit-SignProbes",
 }
 DEV_PREFIX = "_OTDEV_"

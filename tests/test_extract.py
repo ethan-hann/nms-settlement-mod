@@ -26,6 +26,9 @@ def test_filters_cover_the_tables_the_mod_patches():
         "metadata/gamestate/defaultsavedata*",
         "metadata/simulation/missions/tables/npcmissiontable*",
         "metadata/simulation/missions/tables/fleetmissiontable*",
+        "metadata/reality/tables/costtable*",
+        "metadata/reality/tables/rewardtable*",
+        "metadata/reality/tables/nms_dialog_gcalienpuzzletable*",
     ]
     for pattern in needed:
         assert pattern in extract.FILTERS

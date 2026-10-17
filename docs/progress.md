@@ -273,6 +273,50 @@ Consequences:
 - Game updates are less likely to delete builds than feared. Verified: an unknown field, a renamed template, or a vanilla part ID removed from under SettlementDecor each leaves the rest of the patch in place. Still unknown: a renamed list, a changed struct type, and a field whose type changes.
 - `WORD` and `STANDING` gave Gek rewards in a Gek town in a Gek system, so whether they follow the settlement's race or the system's is still unknown.
 
+## 2026-10-17: Fair Ledger planning
+
+Plan and findings are in [modules/fair-ledger/](modules/fair-ledger/plan.md); nothing is built. Extra vanilla tables (dialog, consumables, specials, trading costs, settlement UI) were pulled read-only into `scratch/extracted-ledger/`.
+
+- Every building's C level costs more upkeep than it produces at the midpoint; production buildings turn positive by B or A class.
+- The overseer's Administration Terminal is a dialog entry whose options take a cost ID and reward IDs, so a units-for-debt option looks possible in data. Which town the reward pays is unknown.
+- A reward can only name a stat strength; the largest Debt step is 50,000 to 100,000.
+- Installed mods already override vanilla text keys through `LocTable.MXML`.
+- All five installed reward-table mods are now partial patches, so appended reward entries survive them.
+
+Decided 2026-10-17, details in the plan: two modules (FairLedger with the debt option and wording, FairLedger-Rebalance with the contribution edits); pay at the Administration Terminal; Debt PositiveLarge made a flat 100,000, priced at 2 units per 1 debt; hide the option at zero debt if the session allows; break-even for production buildings only; English text overrides if other languages keep their text; no guide sign, with a read-only town sign kept as a later add-on idea.
+
+Next: the probe module and one session.
+
+## 2026-10-17: Session 6, Fair Ledger probes
+
+Two launches on the creative test slot with core, Defense, SettlerStories and LedgerProbes. Safety: both exits passed all checks.
+
+**Part A** (first probe build):
+- The C-level upkeep marker landed at once on existing buildings: production building pages read "Upkeep cost 1,111", and Maintenance Cost fell from 381,454 to 127,768 a day. With productivity at 579,063, the town's debt turned to falling ("Debt will now be automatically repaid over time").
+- The terminal showed the four vanilla options and the first two appended ones, after Leave. The third appended option never appeared. No vanilla dialog has more than six options.
+- "Pay toward debt: 100,000" cut the local town's debt by exactly 100,000, with the message "Settlement debt reduced: 100,000 units".
+- Prices showed at a third (66,000 for 200,000) and nothing was charged: units stayed at 332,096 in the save. The save's Purchases difficulty was Free, which scales units by 0.33 and makes interaction costs free (`CurrencyCostOptionData` in difficultyconfig).
+
+**Part B** (six-option probe, Purchases set to Standard for the run and back to Free after):
+- The price read 200,000 units. Each payment took exactly 200,000 units and cut exactly 100,000 debt. The save confirms every payment took the full price: units went from 5,332,096 to 932,096 over 22 payments, and the last one took 200,000 with only about 64,800 debt left.
+- At zero debt the option stayed visible and selectable. A `DisablingConditions` entry with a Debt stat-level condition did nothing. Paying at zero debt took 200,000 units and showed "Settlement reserves increased: 100,000", but the saved Debt stat is 0 and the settlement state has no reserves field. The payment is lost.
+- With debt at 0, the production panel showed the output slots again.
+- The text override of `UI_SETTLEMENT_PROD_DEBT_TIP2` showed in English. In French, that tip and both [TEST] option labels showed their raw keys.
+- "Reserves" appears nowhere in the overview or the history page.
+
+Consequences:
+- The terminal route works: the reward reaches the terminal's own town, and the flat 100,000 step makes the cut exact.
+- The terminal holds two appended options at most, and only if no other mod adds one.
+- No data guard stops a payment at zero debt; the option text must warn instead (plan decision 4, fallback B).
+- A `LocTable.MXML` entry with only English and USEnglish shows the raw key in every other language. That applies to all Toolkit text, not just overrides.
+- On Free Purchases the payment is free, and on Discounted it costs 0.66 units per debt.
+
+Decided 2026-10-17: every text entry is translated into all 17 languages, using the game's own terms, with English as the fallback for keys not yet translated (issue #22); the payment's price follows the Purchases setting.
+
+Decided 2026-10-17 for the build ([modules/fair-ledger/build-plan.md](modules/fair-ledger/build-plan.md)): ship the 100,000 and 1,000,000 payment options; each production building's C upkeep range becomes its C productivity range; issue #22 comes first and one 1.2.0 release carries both; one check session before release. Planning is complete.
+
+Next: issue #22, then the FairLedger generator.
+
 ## 2026-10-17: Text in every game language
 
 Decided 2026-10-17 (issue #22): every LocTable entry is translated into all 17 columns, using the game's own terms. Translations are not checked by native speakers; the changelog says so and asks for corrections.
