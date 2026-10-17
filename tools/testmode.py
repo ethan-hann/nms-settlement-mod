@@ -41,6 +41,8 @@ MODULES = {
     "missingidprobe": "OverseersToolkit-MissingIdProbe",
     "ledgerprobes": "OverseersToolkit-LedgerProbes",
     "signprobes": "OverseersToolkit-SignProbes",
+    "fairledger": "OverseersToolkit-FairLedger",
+    "fairledgerrebalance": "OverseersToolkit-FairLedger-Rebalance",
 }
 DEV_PREFIX = "_OTDEV_"
 # The game writes its merged mod data here when the test-only debug flag is on.

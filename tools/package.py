@@ -20,6 +20,8 @@ SHIPPED = [
     "OverseersToolkit-Defense",
     "OverseersToolkit-SettlementDecor",
     "OverseersToolkit-SettlerStories",
+    "OverseersToolkit-FairLedger",
+    "OverseersToolkit-FairLedger-Rebalance",
 ]
 # Kept in the repo for test sessions; installing them changes how the game plays.
 TEST_ONLY = [

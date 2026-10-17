@@ -138,12 +138,14 @@ def test_test_only_modules_are_never_shipped():
     assert not test_only & set(package.SHIPPED)
 
 
-def test_the_shipped_modules_are_the_four_released_ones():
+def test_the_shipped_modules_are_the_released_ones_and_fair_ledger():
     assert set(package.SHIPPED) == {
         "OverseersToolkit",
         "OverseersToolkit-Defense",
         "OverseersToolkit-SettlementDecor",
         "OverseersToolkit-SettlerStories",
+        "OverseersToolkit-FairLedger",
+        "OverseersToolkit-FairLedger-Rebalance",
     }
 
 
