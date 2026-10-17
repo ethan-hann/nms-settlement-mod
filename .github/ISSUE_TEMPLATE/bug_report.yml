@@ -1,6 +1,6 @@
 name: Bug report
 description: Something doesn't work as expected
-labels: [bug]
+labels: [mod-bug]
 body:
   - type: textarea
     id: what
