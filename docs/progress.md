@@ -247,3 +247,28 @@ Decided 2026-10-15: ship Settler Stories as 1.1.0 with the removal warning first
 - **Testmode guard.** Until a session records the test slot, `enter` checks every slot from 6 up for parts from modules left out, instead of skipping the check. Tests now cover a real compressed save and the slot's second save file.
 - **Fortify rate.** SettlerStories adds four Request decisions at weighting 1.0, so with it installed, fortify drops from about once every 18 hours of judgements to about once every 30 (same inferred draw model as 1.0.0).
 - **Not yet seen in game:** the four options changed in the rebalance (they use only reward types proven in Session 4), the Orchard and Relic Hall perks, and the bounty path.
+
+## 2026-10-17: Session 5, the 1.1.0 checks and game-update probes
+
+Three launches on the creative test slot. Safety: every exit passed all checks.
+
+**Part A** (core, Defense, SettlementDecor, SettlerStories, TestTuning):
+- A Sealed Vault led to The Old Seeds, and planting them added **Ancient Orchard**. The second Overdue run ended in **Relic Hall**. Both perks show in the settlement's features and are in the save.
+- "Leave the relics, copy the carvings" taught a Gek word ("I") and raised happiness, as previewed.
+
+**Part B** (core, Defense, SettlementDecor, SettlerStories, StoryTuning):
+- "Give them a bed" taught a Gek word ("you") and changed population and happiness as previewed. The preview names the reward only as "Uncharted words x 1", the game's own label.
+- "Keep it small and join in" raised Gek standing from 9 to 11 in the save. Too small to notice in game; the preview said "Standing Increased: Gek".
+- "Keep their secret" taught a word, and The Crew Comes Looking still followed at once: an option can pay a reward and chain to the next step.
+- "Hand them over for the bounty" paid 423 quicksilver, matching the preview.
+- The Wage Dispute came up often, as in Session 3c, because it is the only Conflict decision StoryTuning leaves.
+
+**Part C** (core, Defense, SettlerStories, TestTuning, TemplateProbe, MissingIdProbe):
+- **A wrong template name is ignored.** TemplateProbe's decision came up, and the export shows the file merged under the real template.
+- **An edit to a part ID the game does not have is dropped, and the rest of the file applies.** The export has no `OT_NO_SUCH_PART`, WEAPONRACK became buildable on planets (seen in the build menu), and core's and Defense's 30 parts in the same table all landed. The build menu works normally.
+- The export never contains `BASEBUILDINGCOSTSTABLE`, in this session or earlier ones, so check_export cannot confirm core's and Defense's cost entries. Inferred: the game does not export that table.
+
+Consequences:
+- Every 1.1.0 option and perk has now been seen working in game.
+- Game updates are less likely to delete builds than feared. Verified: an unknown field, a renamed template, or a vanilla part ID removed from under SettlementDecor each leaves the rest of the patch in place. Still unknown: a renamed list, a changed struct type, and a field whose type changes.
+- `WORD` and `STANDING` gave Gek rewards in a Gek town in a Gek system, so whether they follow the settlement's race or the system's is still unknown.
