@@ -1,3 +1,5 @@
+import os
+import subprocess
 import zipfile
 from pathlib import Path
 
@@ -68,6 +70,56 @@ def test_rebuilding_replaces_the_old_zip(tmp_path):
     (mods / "Alpha" / "Y.EXML").unlink()
     (zip_path,) = package.build(mods, tmp_path / "dist", "1.0.0", ["Alpha"])
     assert names_in(zip_path) == ["Alpha/X.EXML"]
+
+
+@pytest.mark.parametrize("rel", ["X.EXML", "LocTable.MXML"])
+def test_a_text_file_with_crlf_line_endings_is_refused(tmp_path, rel):
+    mods = tmp_path / "mod"
+    path = mods / "Alpha" / rel
+    path.parent.mkdir(parents=True)
+    path.write_bytes(b"<x>\r\n</x>\r\n")
+    with pytest.raises(package.PackageError, match=rel):
+        package.build(mods, tmp_path / "dist", "1.0.0", ["Alpha"])
+
+
+def test_a_binary_file_may_hold_carriage_returns(tmp_path):
+    mods = tmp_path / "mod"
+    path = mods / "Alpha" / "X.MBIN"
+    path.parent.mkdir(parents=True)
+    path.write_bytes(b"\x00\r\n\x01")
+    (zip_path,) = package.build(mods, tmp_path / "dist", "1.0.0", ["Alpha"])
+    with zipfile.ZipFile(zip_path) as z:
+        assert z.read("Alpha/X.MBIN") == b"\x00\r\n\x01"
+
+
+def test_two_builds_of_the_same_files_are_byte_identical(tmp_path):
+    mods = tmp_path / "mod"
+    make_module(mods, "Alpha", {"X.EXML": "<x/>", "Y.EXML": "<y/>"})
+    (first,) = package.build(mods, tmp_path / "a", "1.0.0", ["Alpha"])
+    for path in (mods / "Alpha").iterdir():
+        os.utime(path, (1_700_000_000, 1_700_000_000))
+    (second,) = package.build(mods, tmp_path / "b", "1.0.0", ["Alpha"])
+    assert first.read_bytes() == second.read_bytes()
+
+
+def test_shipped_module_files_on_disk_match_the_committed_bytes():
+    # A checkout that converts line endings would make the release zips differ from the repo.
+    files = sorted(
+        p.relative_to(REPO).as_posix()
+        for name in package.SHIPPED
+        for p in (REPO / "mod" / name).rglob("*")
+        if p.is_file()
+    )
+    staged = subprocess.run(
+        ["git", "ls-files", "-s", "--", *files], cwd=REPO, capture_output=True, text=True, check=True
+    ).stdout
+    committed = {line.split("\t", 1)[1]: line.split()[1] for line in staged.splitlines()}
+    on_disk = subprocess.run(
+        ["git", "hash-object", "--no-filters", "--stdin-paths"],
+        cwd=REPO, input="\n".join(files), capture_output=True, text=True, check=True,
+    ).stdout.split()
+    differ = [f for f, sha in zip(files, on_disk) if committed.get(f) != sha]
+    assert not differ, f"differ from the committed bytes: {differ}"
 
 
 def test_test_only_modules_are_never_shipped():

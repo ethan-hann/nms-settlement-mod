@@ -1,0 +1,4 @@
+# Release zips are built from the working copy, so module text keeps the committed LF bytes on every checkout.
+mod/**/*.EXML text eol=lf
+mod/**/*.MXML text eol=lf
+mod/**/*.MBIN binary
