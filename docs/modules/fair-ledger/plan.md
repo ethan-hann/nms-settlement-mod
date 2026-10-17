@@ -33,9 +33,19 @@ Out:
 - No module depends on another Toolkit module.
 - Text goes through `LocTable.MXML` keys, English and USEnglish first.
 
-## Decisions for the maintainer
+## Decisions
 
-Each decision lists the options, the evidence, and a recommendation. Nothing here is decided yet.
+Decided 2026-10-17:
+
+1. **Two modules.** `OverseersToolkit-FairLedger` carries the debt option and the wording; `OverseersToolkit-FairLedger-Rebalance` carries the contribution edits.
+2. **Pay at the Administration Terminal** through an option appended to `SETTLEMENT_ADMIN`.
+3. **Exact steps at a premium of 2 units per 1 debt.** The Debt PositiveLarge range becomes a flat 100,000, so a cut always matches its price. Two options: a 100,000 cut for 200,000 units and a 1,000,000 cut for 2,000,000 units. Any price is possible: `GcCostMoney` takes a plain amount, and vanilla entries go up to 1,000,000,000 (verified). The range edit is a vanilla value the debt option depends on, so it lives in FairLedger, not the Rebalance module, and COMPATIBILITY.md lists it.
+4. **Hide the option at zero debt** with `DisablingConditions` first. Only if the session shows that cannot work, keep the option visible and warn in its text.
+5. **Break-even covers production buildings only,** by lowering their C upkeep to their C productivity. Residences, the bar and the fish pond keep their cost.
+6. **Override the four text keys** in English and USEnglish, if the session shows other languages keep their vanilla text. Otherwise fall back to new text only.
+7. **No guide sign in Fair Ledger.** A read-only town sign is a possible add-on module; see "Later: a town sign" below.
+
+The options, evidence and recommendations behind each decision follow.
 
 ### 1. One module or two
 
@@ -120,11 +130,20 @@ Evidence: a new part gets a permanent `OT_` ID, and the game deletes placed part
 
 Recommendation: **no sign.** The explanation goes in the terminal option's text and the overridden tip, so the module adds no parts.
 
+## Later: a town sign
+
+An idea for an add-on module, separate from Fair Ledger: a 3D town sign placed anywhere in the settlement that shows the town's stats and status. It is read-only; management stays at the terminal. It adds a new `OT_` part, so its module needs the removal warning every part module carries.
+
+What the data says so far:
+- **Verified:** no vanilla base part references a settlement interaction, and only the office terminal (`SettlementAdminTerminal`) and building sites (`SettlementBuildingSite`) use settlement dialog types.
+- **Inferred:** live stat text drawn on a part is not possible in data. No field binds settlement stats to a placed object, so that version needs runtime code.
+- **Unknown:** whether a placed part can open the vanilla status page on interaction, for example through a dialog entry that offers only "View %SETTLEMENT% status" (`R_OPEN_SETOVIEW`). That would be the data-only version of the sign, and it needs its own probe.
+
 ## To verify in one session
 
 What the data cannot answer, batched into one session on the creative test slot. A test-only `OverseersToolkit-LedgerProbes` module carries the probes, all text marked [TEST]:
 
-1. A terminal option paying 100,000 units for a Debt cut. Does the option show, does it charge, does the debt drop, and in which town if the slot owns two?
+1. A terminal option charging 200,000 units for a flat 100,000 Debt cut. Does the option show, does the cut match, does it charge, does the debt drop, and in which town if the slot owns two?
 2. The same option at zero debt: are the units taken, and does a `DisablingConditions` entry hide it?
 3. A contribution patch lowering one building type's C upkeep. Does the building page and overview pick it up for a building that already exists?
 4. A text override of `UI_SETTLEMENT_PROD_DEBT_TIP` in English and USEnglish. Does it show, and what does another game language show?
@@ -134,7 +153,7 @@ Estimate: about 30 minutes with load and save waits, since each probe is read at
 
 ## Rough steps
 
-1. Decisions above, recorded as "Decided <date>".
+1. Decisions: recorded above on 2026-10-17.
 2. Tooling, tests first: a generator (or a `gen_settlement.py` extension) writing the cost entry, the reward entry, the dialog option append, contribution edits and text overrides from `specs/OverseersToolkit-FairLedger*.json`.
 3. Probe module and session as above; results in [../../progress.md](../../progress.md) the same day.
 4. Write the shipped spec and balance the numbers against the session.
@@ -145,5 +164,5 @@ Estimate: about 30 minutes with load and save waits, since each probe is read at
 - **Wrong town:** if a terminal reward pays a different town than the terminal's, route A fails, and the fallback is a mission bound to the local town (`GcMissionConditionNearSettlement`), which needs more probing.
 - **Shared tables:** the dialog table is large and other mods may patch it elsewhere. An appended option merges cleanly by the patch rules seen so far, and an option on an entry a game update removes is dropped (inferred from Session 5's missing-ID probe).
 - **Strength edit:** decision 3B changes a vanilla range every Debt PositiveLarge user shares, including any other mod's.
-- **Balance:** a 1:1 rate with no cap lets rich players clear any debt at once. That is the request, but it removes debt as pressure.
+- **Balance:** with no cap, rich players can still clear any debt at once, even at 2 units per 1 debt. That is the request, but it removes debt as pressure for them.
 - **Removal:** the module adds no parts or stored IDs, so removing it leaves only the debt already paid (inferred). The rebalance's numbers would revert on the next upkeep check.

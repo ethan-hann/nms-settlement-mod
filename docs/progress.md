@@ -283,4 +283,6 @@ Plan and findings are in [modules/fair-ledger/](modules/fair-ledger/plan.md); no
 - Installed mods already override vanilla text keys through `LocTable.MXML`.
 - All five installed reward-table mods are now partial patches, so appended reward entries survive them.
 
-Open: the decisions listed in the plan, then one probe session.
+Decided 2026-10-17, details in the plan: two modules (FairLedger with the debt option and wording, FairLedger-Rebalance with the contribution edits); pay at the Administration Terminal; Debt PositiveLarge made a flat 100,000, priced at 2 units per 1 debt; hide the option at zero debt if the session allows; break-even for production buildings only; English text overrides if other languages keep their text; no guide sign, with a read-only town sign kept as a later add-on idea.
+
+Next: the probe module and one session.
