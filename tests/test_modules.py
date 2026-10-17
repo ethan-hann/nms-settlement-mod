@@ -119,17 +119,39 @@ def test_generated_modules_hold_only_generated_files(module):
     assert present == expected
 
 
-# BrokenProbe is broken on purpose, to show in game what the mod loader does with a stale patch.
-BROKEN_ON_PURPOSE = "OverseersToolkit-BrokenProbe"
+# The probes are broken on purpose, to show in game what the mod loader does with a stale patch.
+BROKEN_ON_PURPOSE = {"OverseersToolkit-BrokenProbe", "OverseersToolkit-TemplateProbe"}
+MISSING_ID_PROBE = "OverseersToolkit-MissingIdProbe"
+
+
+def probe_failures(module, tmp_path):
+    assert (MODS / module).is_dir(), f"mod/{module} is missing"
+    results = merge_preview.preview_module(MODS / module, tmp_path)
+    assert results, f"{module} has no patches"
+    return [f"{r.patch.name}: {r.message}" for r in results if not r.ok]
 
 
 def test_the_broken_probe_fails_only_on_its_missing_field(tmp_path):
-    results = merge_preview.preview_module(MODS / BROKEN_ON_PURPOSE, tmp_path)
-    failures = [f"{r.patch.name}: {r.message}" for r in results if not r.ok]
+    failures = probe_failures("OverseersToolkit-BrokenProbe", tmp_path)
     assert len(failures) == 1 and "OT_NoSuchField" in failures[0], failures
 
 
-@pytest.mark.parametrize("module", [m for m in MODULES if m != BROKEN_ON_PURPOSE])
+def test_the_template_probe_fails_only_on_its_template(tmp_path):
+    failures = probe_failures("OverseersToolkit-TemplateProbe", tmp_path)
+    assert len(failures) == 1 and "template" in failures[0], failures
+
+
+def test_the_missing_id_probe_edits_one_part_vanilla_lacks_beside_a_real_one(tmp_path):
+    # A vanilla part removed by a game update looks like this to a module that only edits vanilla parts.
+    assert not probe_failures(MISSING_ID_PROBE, tmp_path)
+    (result,) = [r for r in merge_preview.preview_module(MODS / MISSING_ID_PROBE, tmp_path) if r.edits]
+    added = [e["path"] for e in result.edits if e["kind"] == "added"]
+    changed = [e["path"] for e in result.edits if e["kind"] == "changed"]
+    assert added == ["Objects[OT_NO_SUCH_PART]"], added
+    assert len(changed) == 1, changed
+
+
+@pytest.mark.parametrize("module", [m for m in MODULES if m not in BROKEN_ON_PURPOSE])
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)
     assert results, f"{module} has no patches"
@@ -184,7 +206,8 @@ def test_compatibility_file_is_current():
     assert on_disk == expected, "COMPATIBILITY.md is stale; rerun tools/compat_report.py"
 
 
-@pytest.mark.parametrize("module", MODULES)
+# The missing-ID probe's stray entry has no groups on purpose.
+@pytest.mark.parametrize("module", [m for m in MODULES if m != MISSING_ID_PROBE])
 def test_no_part_sits_twice_in_one_top_level_build_group(module, tmp_path):
     # No vanilla part repeats a top-level group, and a probe that did so is a crash suspect.
     rel = Path("METADATA/REALITY/TABLES/BASEBUILDINGOBJECTSTABLE.EXML")

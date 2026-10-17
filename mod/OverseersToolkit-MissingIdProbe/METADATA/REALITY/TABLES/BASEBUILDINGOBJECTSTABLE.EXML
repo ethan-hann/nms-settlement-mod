@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. Shows what the game's mod loader does with an edit to a vanilla part a game update removed: OT_NO_SUCH_PART is not in vanilla, WEAPONRACK is and becomes buildable on planets. -->
+<Data template="cGcBaseBuildingTable">
+	<Property name="Objects">
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="OT_NO_SUCH_PART">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+		<Property name="Objects" value="GcBaseBuildingEntry" _id="WEAPONRACK">
+			<Property name="BuildableOnPlanet" value="true" />
+		</Property>
+	</Property>
+</Data>
