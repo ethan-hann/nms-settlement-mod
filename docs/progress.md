@@ -272,3 +272,15 @@ Consequences:
 - Every 1.1.0 option and perk has now been seen working in game.
 - Game updates are less likely to delete builds than feared. Verified: an unknown field, a renamed template, or a vanilla part ID removed from under SettlementDecor each leaves the rest of the patch in place. Still unknown: a renamed list, a changed struct type, and a field whose type changes.
 - `WORD` and `STANDING` gave Gek rewards in a Gek town in a Gek system, so whether they follow the settlement's race or the system's is still unknown.
+
+## 2026-10-17: Fair Ledger planning
+
+Plan and findings are in [modules/fair-ledger/](modules/fair-ledger/plan.md); nothing is built. Extra vanilla tables (dialog, consumables, specials, trading costs, settlement UI) were pulled read-only into `scratch/extracted-ledger/`.
+
+- Every building's C level costs more upkeep than it produces at the midpoint; production buildings turn positive by B or A class.
+- The overseer's Administration Terminal is a dialog entry whose options take a cost ID and reward IDs, so a units-for-debt option looks possible in data. Which town the reward pays is unknown.
+- A reward can only name a stat strength; the largest Debt step is 50,000 to 100,000.
+- Installed mods already override vanilla text keys through `LocTable.MXML`.
+- All five installed reward-table mods are now partial patches, so appended reward entries survive them.
+
+Open: the decisions listed in the plan, then one probe session.
