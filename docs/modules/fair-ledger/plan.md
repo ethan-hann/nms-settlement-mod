@@ -45,6 +45,28 @@ Decided 2026-10-17:
 6. **Override the four text keys** in English and USEnglish, if the session shows other languages keep their vanilla text. Otherwise fall back to new text only.
 7. **No guide sign in Fair Ledger.** A read-only town sign is a possible add-on module; see "Later: a town sign" below.
 
+### What Session 6 changed
+
+Results are in [../../progress.md](../../progress.md) and [vanilla-findings.md](vanilla-findings.md).
+
+- **Decisions 2 and 3 hold.** The terminal option charged exactly 200,000 units and cut exactly 100,000 debt in its own town. The terminal shows six options at most and vanilla uses four, so the two shipped options fill it. Another mod that appends a terminal option would push one of them off.
+- **Decision 4 falls back to B.** The `DisablingConditions` guard did nothing at zero debt, and a payment there is lost: 200,000 units for no change, despite a "Settlement reserves increased" message. The option text has to warn about it.
+- **Decision 5 is supported.** Contributions are computed at runtime, so the upkeep change reached existing buildings at once, and it turned the test town's debt from rising to falling.
+- **Decision 6 needs a new call.** A text entry with only English and USEnglish shows the raw key in every other language, and so does any new Toolkit key. Falling back to "new text only" has the same problem.
+
+### Open after Session 6
+
+8. **Text in other languages.**
+   - **A. Fill all 17 languages in every entry.** Overrides keep the vanilla translation outside English, copied from the game's language files. New keys repeat the English text, so other languages see English instead of a raw key.
+   - **B. English only, as today.** Other languages see raw keys.
+
+   Evidence: verified in Session 6 in French. Installed text mods fill all 17 languages (Normalize Economy Names, _PM_InformationStorm). A needs the other languages' files extracted and a generator change, and it touches every module's `LocTable.MXML`, so it is a repo-wide change, filed as issue #22. Recommendation: **A.**
+9. **Purchases difficulty.** The payment's price follows the Purchases setting: free on Free, a third (0.66 units per debt) on Discounted, 2 units per debt on Standard, and 3.32 on Expensive (Units multiplier 1.66). No cost field opts out (inferred from the cost types).
+   - **A. Accept it** and say so on the mod page: the player chose cheaper purchases.
+   - **B. Charge with something other than units.** The only unscaled currency in the multipliers is Specials (quicksilver), which is not what players asked for.
+
+   Recommendation: **A.**
+
 The options, evidence and recommendations behind each decision follow.
 
 ### 1. One module or two

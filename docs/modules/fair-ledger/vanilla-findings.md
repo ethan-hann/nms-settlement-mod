@@ -1,6 +1,6 @@
 # Fair Ledger: what the game files show
 
-First pass, 2026-10-17. Covers the three ideas behind the module: paying debt with the overseer's units (I-5), C-class buildings that lose money (I-6), and the wording around reserves and debt (I-7).
+First pass, 2026-10-17, updated the same day with Session 6 results. Covers the three ideas behind the module: paying debt with the overseer's units (I-5), C-class buildings that lose money (I-6), and the wording around reserves and debt (I-7).
 
 Each finding is marked:
 - **Verified:** read directly in vanilla data, the type definitions, a save, or seen in a test session.
@@ -31,7 +31,7 @@ Each finding is marked:
 - **Verified:** a new settlement starts with 600,000 to 1,200,000 debt (`InitialStatsMinValues` and `InitialStatsMaxValues`) and 1 positive and 4 negative perks.
 - **Verified:** `StatIsGoodWhenPositive` is false for Upkeep and Debt, and both the Debt bad and good thresholds are 0.5 of the 10,000,000 maximum.
 - **Verified:** the UI shows Productivity and Maintenance Cost in units per day (`UI_SETTLEMENT_STAT_PROD_FMT` and `UI_SETTLEMENT_STAT_COST_FMT`, both "%NUM% u/day").
-- **Inferred:** the net of productivity and upkeep is what grows or shrinks the debt each day. The game text says so ("Reduce debt by constructing buildings and investing in settlement features to increase production and reduce maintenance costs"), but the formula is in the exe.
+- **Verified in Session 6, roughly:** with productivity 579,063 and upkeep 127,768 a day, the game's "Time Until Cleared" for 2,272,871 debt was 128.6 hours, against 121 hours if the net 451,295 a day pays it down. So the net of productivity and upkeep is most of what moves debt; the gap is unexplained. The game text says so ("Reduce debt by constructing buildings and investing in settlement features to increase production and reduce maintenance costs"), but the formula is in the exe.
 - **Verified (text):** while a settlement is in debt its production stops: "Settlement is in debt / Clear debts to restore production" (`UI_SETTLEMENT_PROD_DEBT`).
 - **Verified:** `StatProductivityContributionModifiers` weights MaxPopulation 100, Happiness 30 and Production 30, and `StatProductionIsNegativeWhenBad` is true only for Happiness. **Inferred:** the productivity the town actually earns scales with beds and happiness, not just with building contributions. That fits the player report that production follows beds and that advertised gains arrive at less than half their value.
 
@@ -66,7 +66,7 @@ Each finding is marked:
 - **Verified:** upgrades add productivity, population and happiness, and never upkeep. The production buildings turn positive by B or A class.
 - **Verified:** residences, the bar and the fish pond never pay for themselves at any class. They pay in population and happiness instead, which feed productivity through the modifiers above (inferred).
 - **Verified:** each contribution is a min-max range, so two buildings of the same type and class can differ by up to 15,000 a day. **Inferred:** the roll happens once per building and is kept.
-- **Inferred:** building contributions are added at runtime from the building states, not stored in the saved stats. The test town's saved Upkeep stat is -15,893 (negative, below the stat's minimum of 0) while its buildings stand, so the saved value looks like the sum of perk and decision changes only. If so, a contribution patch applies to existing buildings at once and is undone cleanly when the module is removed. **Unknown** until a session shows it.
+- **Verified in Session 6:** building contributions are computed at runtime, not stored. A patch setting production buildings' C upkeep to 1,111 showed at once on existing buildings' pages, and Maintenance Cost fell from 381,454 to 127,768 a day, while the saved Upkeep stat stayed at -15,893. **Inferred:** removing the patch restores vanilla upkeep at once.
 - **Verified:** many starting negative perks add upkeep or cut productivity: 5 apply Upkeep NegativeMedium (30,000-50,000 more a day), 2 apply Upkeep NegativeLarge, and 5 apply Production NegativeMedium. A fresh town draws 4 negative perks and 1 positive one.
 - **Verified:** the per-building UI page has an "Upkeep cost" field (`UI_SETTLE_BUILD_UPKEEP_TITLE`), so the player's report that upkeep is never shown may be out of date or refer to the office overview. **Unknown** which.
 
@@ -99,8 +99,8 @@ Decisions, perks and rewards never name an amount; they name a strength, and `Pe
 - **Verified:** vanilla uses it three times, all inside the sentinel settlement mission table and all lowering Alert or BugAttack (`R_SENT_NO_ALERT`, `R_SETTL_SAFE`, `R_SETTL_BUGWIN`). Nothing in vanilla rewards a Debt change.
 - **Verified:** a reward list (`GcRewardTableItemList`) can hold several items with `RewardChoice` GiveAll, so one reward can apply the same stat change several times.
 - **Verified in Session 3:** the game finds and runs a reward entry a mod appends to the reward table's `SettlementTable` (`R_OT_SSP_B2` fired its custom judgement).
-- **Unknown:** which settlement `GcRewardSettlementStat` changes when it is not run from a settlement mission. Vanilla only runs it inside settlement missions.
-- **Unknown:** what happens when a debt cut lands on a settlement with less debt than the cut. The stat minimum is 0, so the excess is most likely lost (inferred).
+- **Verified in Session 6:** run from the Administration Terminal, `GcRewardSettlementStat` changes the terminal's own settlement. Each Debt PositiveLarge step, patched to a flat 100,000, cut exactly 100,000 and showed "Settlement debt reduced: 100,000 units".
+- **Verified in Session 6:** a debt cut larger than the remaining debt stops at 0, and the excess is lost. A cut at zero debt shows "Settlement reserves increased: 100,000" (`UI_SETTLEMENT_WEALTH_MSG`), but the saved Debt stat stays 0 and nothing else in the settlement state changes.
 
 ### The overseer's terminal (recommended route)
 
@@ -110,7 +110,9 @@ Decisions, perks and rewards never name an amount; they name a strength, and `Pe
 - **Verified:** the cost table has 32 `GcCostMoney` entries, for example 50,000 units. A cost entry can show its price (`DisplayCost`) and can hide the option when the player cannot pay (`RemoveOptionIfCantAfford`).
 - **Verified:** options also carry `DisablingConditions`, a list of mission conditions, and `GcMissionConditionSettlementStatLevel` (stat, normalised level, comparison) exists. No vanilla dialog option uses `DisablingConditions`, and vanilla uses the stat-level condition only for Alert and BugAttack at 0.99, inside sentinel missions.
 - **Inferred:** an option appended to `SETTLEMENT_ADMIN` with a units cost and a reward of Debt stat changes would let the overseer pay debt in units, at the town's own terminal, with nothing added to the player's inventory and no product to remove later.
-- **Unknown:** whether the stat reward reaches the terminal's settlement; whether the condition can hide the option at zero debt; where an appended option sits in the list (keyless items append, so after "Leave", inferred).
+- **Verified in Session 6:** appended options sit after "Leave", and the terminal lists six options at most: with three appended, the third never showed. No vanilla dialog entry has more than six options, so two appended options fill the terminal.
+- **Verified in Session 6:** a `DisablingConditions` entry (`GcMissionConditionSettlementStatLevel`, Debt, Greater than 0) did not hide or disable the option at zero debt.
+- **Verified in Session 6:** a `GcCostMoney` cost on a terminal option charges exactly its price, scaled by the Purchases difficulty setting (`CurrencyCost` in data). At Standard, 200,000 units showed and was taken. At Free the price showed at a third and nothing was taken; at Discounted the price is also a third (verified in `difficultyconfig`: `Units` 0.33 for Free and Cheap, and `InteractionsCostsAreFree` only for Free).
 - **Verified:** no installed mod patches the dialog table or the cost table.
 
 ### A bond item (I-5 as first written)
@@ -147,10 +149,10 @@ Decisions, perks and rewards never name an amount; they name a strength, and `Pe
 
 - **Verified:** the game says "Maintenance Cost" in the overview, "Upkeep cost" on the building page, and "upkeep costs" in decision text, for the same stat.
 - **Unknown:** where the "Donate to reserves" wording that players quote comes from. No English or USEnglish string contains "donate" together with reserves or settlement. It may be a paraphrase, a string outside the extracted files, or text that has since changed.
-- **Unknown:** how "Reserves" relates to Debt. With no reserves stat or field, reserves are probably derived (for example, a surplus while debt is 0), but nothing states it.
+- **Verified in Session 6:** "Reserves" appears nowhere in the overview or the history page, even at zero debt. Only the zero-debt message names it. **Inferred:** reserves are a leftover concept with no stored value.
 - **Verified:** installed mods override vanilla text through `LocTable.MXML` with vanilla key IDs: Normalize Economy Names (82 keys, for example `UI_CONFLICT_LEVEL_LOW_1`) and _PM_InformationStorm (305 keys, for example `WEATHER_HEAT1`). Both fill all 17 languages. **Inferred:** the override works, since the maintainer plays with both.
 - **Verified:** the Toolkit's `LocTable.MXML` writes only English and USEnglish for its own new keys.
-- **Unknown:** what other languages show when an override entry fills only English and USEnglish: their vanilla text, or blanks.
+- **Verified in Session 6:** an override entry with only English and USEnglish shows the new text in English and the raw key (`UI_SETTLEMENT_PROD_DEBT_TIP2`) in French. The probe's own new keys showed raw in French too, so every Toolkit text key does the same outside English.
 
 ## Upgrade materials
 
