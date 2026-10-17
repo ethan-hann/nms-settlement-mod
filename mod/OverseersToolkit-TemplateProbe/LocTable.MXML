@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_TP_T" />
+			<Property name="English" value="[TEST] Template Probe" />
+			<Property name="USEnglish" value="[TEST] Template Probe" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_TP_Q" />
+			<Property name="English" value="[TEST] Did this load?" />
+			<Property name="USEnglish" value="[TEST] Did this load?" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_TP_D" />
+			<Property name="English" value="[TEST] This decision comes from a patch file whose template name is wrong. If you can read this, the game ignored the template name and loaded the file." />
+			<Property name="USEnglish" value="[TEST] This decision comes from a patch file whose template name is wrong. If you can read this, the game ignored the template name and loaded the file." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_TP_O1" />
+			<Property name="English" value="[TEST] It loaded" />
+			<Property name="USEnglish" value="[TEST] It loaded" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_TP_O2" />
+			<Property name="English" value="[TEST] Noted" />
+			<Property name="USEnglish" value="[TEST] Noted" />
+		</Property>
+	</Property>
+</Data>
