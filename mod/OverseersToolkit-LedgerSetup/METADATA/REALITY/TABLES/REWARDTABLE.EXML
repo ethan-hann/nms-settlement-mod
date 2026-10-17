@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. 5,000,000 units and 25 Debt NegativeLarge steps (at least 1,250,000 debt) for checking both Fair Ledger payments. -->
+<Data template="cGcRewardTable">
+	<Property name="SettlementTable">
+		<Property name="SettlementTable" value="GcGenericRewardTableEntry" _id="R_OT_LS_SETUP">
+			<Property name="Id" value="R_OT_LS_SETUP" />
+			<Property name="List" value="GcRewardTableItemList">
+				<Property name="RewardChoice" value="GiveAll" />
+				<Property name="OverrideZeroSeed" value="false" />
+				<Property name="UseInventoryChoiceOverride" value="false" />
+				<Property name="IncrementStat" value="" />
+				<Property name="List">
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardMoney">
+							<Property name="GcRewardMoney">
+								<Property name="AmountMin" value="5000000" />
+								<Property name="AmountMax" value="5000000" />
+								<Property name="RoundNumber" value="false" />
+								<Property name="Currency" value="GcCurrency">
+									<Property name="Currency" value="Units" />
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+					<Property name="List" value="GcRewardTableItem">
+						<Property name="PercentageChance" value="100.000000" />
+						<Property name="LabelID" value="" />
+						<Property name="Reward" value="GcRewardSettlementStat">
+							<Property name="GcRewardSettlementStat">
+								<Property name="StatToAward" value="GcSettlementStatChange">
+									<Property name="Stat" value="GcSettlementStatType">
+										<Property name="SettlementStatType" value="Debt" />
+									</Property>
+									<Property name="Strength" value="GcSettlementStatStrength">
+										<Property name="SettlementStatStrength" value="NegativeLarge" />
+									</Property>
+									<Property name="DirectlyChangePopulation" value="false" />
+								</Property>
+								<Property name="Silent" value="false" />
+							</Property>
+						</Property>
+					</Property>
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>

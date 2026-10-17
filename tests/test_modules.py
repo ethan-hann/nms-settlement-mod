@@ -298,6 +298,39 @@ def test_fair_ledger_rebalance_sets_c_upkeep_to_c_productivity():
             assert after == before, f"{name}.{level} changed outside its Base Upkeep"
 
 
+LEDGER_SETUP = "OverseersToolkit-LedgerSetup"
+
+
+def test_the_ledger_setup_gives_debt_and_units_without_taking_a_terminal_slot():
+    # The test town has no debt and the test character too few units for the largest payment.
+    assert (MODS / LEDGER_SETUP).is_dir(), f"mod/{LEDGER_SETUP} is missing"
+    rel = Path("METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.EXML")
+    options = "Property[@name='Table']/Property[@_id='SETTLEMENT_ADMIN']/Property[@name='Options']"
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    both, _ = merge_preview.merge(merged_table(FAIR_LEDGER, rel), ET.parse(MODS / LEDGER_SETUP / rel).getroot())
+    assert len(merged_table(LEDGER_SETUP, rel).find(options)) == len(vanilla.find(options))
+    assert len(both.find(options)) <= 6
+
+    (setup,) = [o for o in both.find(options) if o.find("Property[@name='Name']").get("value") == "OT_LS_SETUP"]
+    assert setup.find("Property[@name='Cost']").get("value") == ""
+    rewards = merged_table(LEDGER_SETUP, "METADATA/REALITY/TABLES/REWARDTABLE.EXML")
+    units, debt_steps = 0, 0
+    for reward in setup.find("Property[@name='Rewards']"):
+        entry = rewards.find(f"Property[@name='SettlementTable']/Property[@_id='{reward.get('value')}']")
+        for item in entry.iter("Property"):
+            if item.get("name") == "GcRewardMoney":
+                units += int(item.find("Property[@name='AmountMin']").get("value"))
+            if item.get("name") == "StatToAward":
+                assert item.find(".//Property[@name='SettlementStatType']").get("value") == "Debt"
+                assert item.find(".//Property[@name='SettlementStatStrength']").get("value") == "NegativeLarge"
+                debt_steps += 1
+    settlement = ET.parse(EXTRACTED / "gcsettlementglobals.MXML").getroot()
+    smallest = int(settlement.find(DEBT_LARGE.replace("PositiveLarge", "NegativeLarge") + "/Property[@name='AmountMin']").get("value"))
+    # Both payments in full: 1,100,000 debt and 2,200,000 units at Standard Purchases.
+    assert debt_steps * smallest >= 1_100_000
+    assert units >= 2_200_000
+
+
 SIGN_PROBES = "OverseersToolkit-SignProbes"
 
 

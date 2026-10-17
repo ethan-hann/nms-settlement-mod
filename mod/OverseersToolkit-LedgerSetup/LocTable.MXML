@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_LS_SETUP" />
+			<Property name="English" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="French" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Italian" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="German" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Spanish" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Russian" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Polish" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Dutch" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Portuguese" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="BrazilianPortuguese" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="SimplifiedChinese" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="TraditionalChinese" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="TencentChinese" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Korean" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="Japanese" value="[TEST] Add debt and 5,000,000 units" />
+			<Property name="USEnglish" value="[TEST] Add debt and 5,000,000 units" />
+		</Property>
+	</Property>
+</Data>

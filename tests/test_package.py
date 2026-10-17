@@ -133,6 +133,7 @@ def test_test_only_modules_are_never_shipped():
         "OverseersToolkit-MissingIdProbe",
         "OverseersToolkit-LedgerProbes",
         "OverseersToolkit-SignProbes",
+        "OverseersToolkit-LedgerSetup",
     }
     assert set(package.TEST_ONLY) == test_only
     assert not test_only & set(package.SHIPPED)

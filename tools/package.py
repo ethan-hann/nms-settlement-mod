@@ -34,6 +34,7 @@ TEST_ONLY = [
     "OverseersToolkit-MissingIdProbe",
     "OverseersToolkit-LedgerProbes",
     "OverseersToolkit-SignProbes",
+    "OverseersToolkit-LedgerSetup",
 ]
 
 VERSION_RE = re.compile(r"\d+\.\d+\.\d+")
