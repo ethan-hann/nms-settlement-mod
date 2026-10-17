@@ -4,201 +4,201 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_WATCH_NAME" />
 			<Property name="English" value="Perimeter Watch" />
-			<Property name="French" value="Perimeter Watch" />
-			<Property name="Italian" value="Perimeter Watch" />
-			<Property name="German" value="Perimeter Watch" />
-			<Property name="Spanish" value="Perimeter Watch" />
-			<Property name="Russian" value="Perimeter Watch" />
-			<Property name="Polish" value="Perimeter Watch" />
-			<Property name="Dutch" value="Perimeter Watch" />
-			<Property name="Portuguese" value="Perimeter Watch" />
-			<Property name="LatinAmericanSpanish" value="Perimeter Watch" />
-			<Property name="BrazilianPortuguese" value="Perimeter Watch" />
-			<Property name="SimplifiedChinese" value="Perimeter Watch" />
-			<Property name="TraditionalChinese" value="Perimeter Watch" />
-			<Property name="TencentChinese" value="Perimeter Watch" />
-			<Property name="Korean" value="Perimeter Watch" />
-			<Property name="Japanese" value="Perimeter Watch" />
+			<Property name="French" value="Veille du périmètre" />
+			<Property name="Italian" value="Sorveglianza del perimetro" />
+			<Property name="German" value="Perimeterwache" />
+			<Property name="Spanish" value="Vigilancia del perímetro" />
+			<Property name="Russian" value="Дозор по периметру" />
+			<Property name="Polish" value="Straż obwodowa" />
+			<Property name="Dutch" value="Perimeterwacht" />
+			<Property name="Portuguese" value="Vigilância do Perímetro" />
+			<Property name="LatinAmericanSpanish" value="Guardia perimetral" />
+			<Property name="BrazilianPortuguese" value="Vigilância do perímetro" />
+			<Property name="SimplifiedChinese" value="周界警戒" />
+			<Property name="TraditionalChinese" value="周界警戒" />
+			<Property name="TencentChinese" value="周界警戒" />
+			<Property name="Korean" value="경계 감시" />
+			<Property name="Japanese" value="周辺の見張り" />
 			<Property name="USEnglish" value="Perimeter Watch" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_WATCH_DESC" />
 			<Property name="English" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="French" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Italian" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="German" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Spanish" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Russian" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Polish" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Dutch" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Portuguese" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="LatinAmericanSpanish" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="BrazilianPortuguese" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="SimplifiedChinese" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="TraditionalChinese" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="TencentChinese" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Korean" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
-			<Property name="Japanese" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
+			<Property name="French" value="Des guetteurs surveillent le périmètre : la colonie attire moins l'attention des Sentinelles." />
+			<Property name="Italian" value="Le vedette sorvegliano il perimetro, così l'insediamento attira meno l'attenzione delle Sentinelle." />
+			<Property name="German" value="Wachposten halten den Siedlungsrand im Blick, sodass die Siedlung weniger Aufmerksamkeit der Wächter auf sich zieht." />
+			<Property name="Spanish" value="Los vigías vigilan el perímetro, así que el asentamiento llama menos la atención de los Centinelas." />
+			<Property name="Russian" value="Дозорные следят за периметром, поэтому поселение меньше привлекает внимание стражей." />
+			<Property name="Polish" value="Wartownicy pilnują obwodu, więc osada przyciąga mniej uwagi Strażników." />
+			<Property name="Dutch" value="Uitkijkposten houden de omtrek in de gaten, zodat de nederzetting minder aandacht van Sentinels trekt." />
+			<Property name="Portuguese" value="Vigias mantêm o perímetro sob observação, pelo que o povoamento atrai menos a atenção das Sentinelas." />
+			<Property name="LatinAmericanSpanish" value="Los vigías vigilan el perímetro, por lo que el asentamiento atrae menos la atención de los centinelas." />
+			<Property name="BrazilianPortuguese" value="Vigias ficam de olho no perímetro, então o povoado chama menos a atenção das sentinelas." />
+			<Property name="SimplifiedChinese" value="瞭望哨持续监视周界，因此定居点引来的护卫关注会减少。" />
+			<Property name="TraditionalChinese" value="瞭望哨持續監視周界，因此聚居地引來的巡警關注會減少。" />
+			<Property name="TencentChinese" value="瞭望哨持续监视周界，因此定居点引来的护卫关注会减少。" />
+			<Property name="Korean" value="감시병이 경계를 지키므로 거주지가 센티널의 관심을 덜 끕니다." />
+			<Property name="Japanese" value="見張りが周辺を警戒しているため、開拓地がセンチネルに目をつけられにくくなる。" />
 			<Property name="USEnglish" value="Lookouts keep watch on the perimeter, so the settlement draws less Sentinel attention." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_FORT_TITLE" />
 			<Property name="English" value="A Watchful Eye" />
-			<Property name="French" value="A Watchful Eye" />
-			<Property name="Italian" value="A Watchful Eye" />
-			<Property name="German" value="A Watchful Eye" />
-			<Property name="Spanish" value="A Watchful Eye" />
-			<Property name="Russian" value="A Watchful Eye" />
-			<Property name="Polish" value="A Watchful Eye" />
-			<Property name="Dutch" value="A Watchful Eye" />
-			<Property name="Portuguese" value="A Watchful Eye" />
-			<Property name="LatinAmericanSpanish" value="A Watchful Eye" />
-			<Property name="BrazilianPortuguese" value="A Watchful Eye" />
-			<Property name="SimplifiedChinese" value="A Watchful Eye" />
-			<Property name="TraditionalChinese" value="A Watchful Eye" />
-			<Property name="TencentChinese" value="A Watchful Eye" />
-			<Property name="Korean" value="A Watchful Eye" />
-			<Property name="Japanese" value="A Watchful Eye" />
+			<Property name="French" value="Un œil vigilant" />
+			<Property name="Italian" value="Un occhio vigile" />
+			<Property name="German" value="Ein wachsames Auge" />
+			<Property name="Spanish" value="Ojo avizor" />
+			<Property name="Russian" value="Зоркий глаз" />
+			<Property name="Polish" value="Czujne oko" />
+			<Property name="Dutch" value="Een waakzaam oog" />
+			<Property name="Portuguese" value="Um Olhar Atento" />
+			<Property name="LatinAmericanSpanish" value="Un ojo vigilante" />
+			<Property name="BrazilianPortuguese" value="Um olhar atento" />
+			<Property name="SimplifiedChinese" value="警惕的目光" />
+			<Property name="TraditionalChinese" value="警惕的目光" />
+			<Property name="TencentChinese" value="警惕的目光" />
+			<Property name="Korean" value="경계하는 눈" />
+			<Property name="Japanese" value="見張りの目" />
 			<Property name="USEnglish" value="A Watchful Eye" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_FORT_QUESTION" />
 			<Property name="English" value="Fortify the perimeter?" />
-			<Property name="French" value="Fortify the perimeter?" />
-			<Property name="Italian" value="Fortify the perimeter?" />
-			<Property name="German" value="Fortify the perimeter?" />
-			<Property name="Spanish" value="Fortify the perimeter?" />
-			<Property name="Russian" value="Fortify the perimeter?" />
-			<Property name="Polish" value="Fortify the perimeter?" />
-			<Property name="Dutch" value="Fortify the perimeter?" />
-			<Property name="Portuguese" value="Fortify the perimeter?" />
-			<Property name="LatinAmericanSpanish" value="Fortify the perimeter?" />
-			<Property name="BrazilianPortuguese" value="Fortify the perimeter?" />
-			<Property name="SimplifiedChinese" value="Fortify the perimeter?" />
-			<Property name="TraditionalChinese" value="Fortify the perimeter?" />
-			<Property name="TencentChinese" value="Fortify the perimeter?" />
-			<Property name="Korean" value="Fortify the perimeter?" />
-			<Property name="Japanese" value="Fortify the perimeter?" />
+			<Property name="French" value="Fortifier le périmètre ?" />
+			<Property name="Italian" value="Fortificare il perimetro?" />
+			<Property name="German" value="Den Siedlungsrand befestigen?" />
+			<Property name="Spanish" value="¿Fortificar el perímetro?" />
+			<Property name="Russian" value="Укрепить периметр?" />
+			<Property name="Polish" value="Umocnić obwód?" />
+			<Property name="Dutch" value="De omtrek versterken?" />
+			<Property name="Portuguese" value="Fortificar o perímetro?" />
+			<Property name="LatinAmericanSpanish" value="¿Fortificar el perímetro?" />
+			<Property name="BrazilianPortuguese" value="Fortificar o perímetro?" />
+			<Property name="SimplifiedChinese" value="要加强周界防御吗？" />
+			<Property name="TraditionalChinese" value="要加強周界防禦嗎？" />
+			<Property name="TencentChinese" value="要加强周界防御吗？" />
+			<Property name="Korean" value="경계를 강화할까요?" />
+			<Property name="Japanese" value="周辺を固めるか？" />
 			<Property name="USEnglish" value="Fortify the perimeter?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_FORT_DILEMMA" />
 			<Property name="English" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="French" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Italian" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="German" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Spanish" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Russian" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Polish" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Dutch" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Portuguese" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="LatinAmericanSpanish" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="BrazilianPortuguese" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="SimplifiedChinese" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="TraditionalChinese" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="TencentChinese" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Korean" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
-			<Property name="Japanese" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
+			<Property name="French" value="Les patrouilles de Sentinelles empêchent les colons de dormir. Ils veulent des postes de guet en bordure de la colonie, pour repérer les ennuis avant qu'ils n'arrivent. Les postes seraient payés avec les fonds de la colonie." />
+			<Property name="Italian" value="I coloni perdono il sonno a causa delle pattuglie delle Sentinelle. Vogliono dei posti di guardia lungo il confine dell'insediamento, per individuare i guai prima che arrivino. I posti sarebbero pagati con i fondi dell'insediamento." />
+			<Property name="German" value="Die Siedler finden wegen der Wächter-Patrouillen keinen Schlaf. Sie wünschen sich Wachposten am Rand der Siedlung, damit Ärger entdeckt wird, bevor er eintrifft. Die Posten würden aus den Mitteln der Siedlung bezahlt." />
+			<Property name="Spanish" value="A los colonos les quitan el sueño las patrullas de Centinelas. Quieren puestos de vigilancia en el borde del asentamiento para detectar los problemas antes de que lleguen. Los puestos se pagarían con los fondos del asentamiento." />
+			<Property name="Russian" value="Поселенцы теряют сон из-за патрулей стражей. Они хотят поставить сторожевые посты по краю поселения, чтобы замечать беду раньше, чем она придет. Посты оплатили бы из средств поселения." />
+			<Property name="Polish" value="Osadnicy tracą sen przez patrole Strażników. Chcą posterunków obserwacyjnych na skraju osady, aby kłopoty były widoczne, zanim nadejdą. Posterunki sfinansowano by z funduszy osady." />
+			<Property name="Dutch" value="De nederzetters slapen slecht door de patrouilles van de Sentinels. Ze willen wachtposten langs de rand van de nederzetting, zodat problemen worden gezien voor ze aankomen. De posten worden betaald uit de middelen van de nederzetting." />
+			<Property name="Portuguese" value="Os colonizadores perdem o sono por causa das patrulhas das Sentinelas. Querem postos de vigia ao longo da orla do povoamento, para que os problemas sejam vistos antes de chegarem. Os postos seriam pagos com os fundos do povoamento." />
+			<Property name="LatinAmericanSpanish" value="A los colonos las patrullas de centinelas no los dejan dormir. Quieren puestos de vigilancia en el borde del asentamiento, para detectar los problemas antes de que lleguen. Los puestos se pagarían con los fondos del asentamiento." />
+			<Property name="BrazilianPortuguese" value="Os aldeões perdem o sono por causa das patrulhas das sentinelas. Eles querem postos de vigia ao longo da borda do povoado, para que os problemas sejam vistos antes de chegar. Os postos seriam pagos com os fundos do povoado." />
+			<Property name="SimplifiedChinese" value="居民们因护卫巡逻而夜不能寐。他们希望在定居点边缘设立哨所，以便在麻烦到来之前就发现它。哨所的费用将由定居点资金支付。" />
+			<Property name="TraditionalChinese" value="聚居者因巡警的巡邏而夜不能寐。他們希望在聚居地邊緣設立哨站，以便在麻煩到來之前就發現。哨站的費用將由聚居地資金支付。" />
+			<Property name="TencentChinese" value="居民们因护卫巡逻而夜不能寐。他们希望在定居点边缘设立哨所，以便在麻烦到来之前就发现它。哨所的费用将由定居点资金支付。" />
+			<Property name="Korean" value="거주민들은 센티널 순찰 때문에 잠을 이루지 못합니다. 문제가 닥치기 전에 알아챌 수 있도록 거주지 외곽에 감시 초소를 세우길 원합니다. 초소 비용은 거주지 자금으로 충당됩니다." />
+			<Property name="Japanese" value="開拓者はセンチネルの巡回が気がかりで眠れずにいる。厄介事を早めに察知できるよう、開拓地の外縁に見張り台を置きたいと望んでいる。費用は開拓地の資金から出ることになる。" />
 			<Property name="USEnglish" value="The settlers lose sleep over Sentinel patrols. They want watch posts along the edge of the settlement, so trouble is spotted before it arrives. The posts would be paid for from settlement funds." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_FORT_OPT1" />
 			<Property name="English" value="Fortify the perimeter (adds debt)" />
-			<Property name="French" value="Fortify the perimeter (adds debt)" />
-			<Property name="Italian" value="Fortify the perimeter (adds debt)" />
-			<Property name="German" value="Fortify the perimeter (adds debt)" />
-			<Property name="Spanish" value="Fortify the perimeter (adds debt)" />
-			<Property name="Russian" value="Fortify the perimeter (adds debt)" />
-			<Property name="Polish" value="Fortify the perimeter (adds debt)" />
-			<Property name="Dutch" value="Fortify the perimeter (adds debt)" />
-			<Property name="Portuguese" value="Fortify the perimeter (adds debt)" />
-			<Property name="LatinAmericanSpanish" value="Fortify the perimeter (adds debt)" />
-			<Property name="BrazilianPortuguese" value="Fortify the perimeter (adds debt)" />
-			<Property name="SimplifiedChinese" value="Fortify the perimeter (adds debt)" />
-			<Property name="TraditionalChinese" value="Fortify the perimeter (adds debt)" />
-			<Property name="TencentChinese" value="Fortify the perimeter (adds debt)" />
-			<Property name="Korean" value="Fortify the perimeter (adds debt)" />
-			<Property name="Japanese" value="Fortify the perimeter (adds debt)" />
+			<Property name="French" value="Fortifier le périmètre (ajoute de la dette)" />
+			<Property name="Italian" value="Fortifica il perimetro (aumenta i debiti)" />
+			<Property name="German" value="Rand befestigen (erhöht die Schulden)" />
+			<Property name="Spanish" value="Fortificar el perímetro (añade deuda)" />
+			<Property name="Russian" value="Укрепить периметр (долг растет)" />
+			<Property name="Polish" value="Umocnij obwód (dług się zwiększa)" />
+			<Property name="Dutch" value="Versterk de omtrek (meer schuld)" />
+			<Property name="Portuguese" value="Fortificar o perímetro (aumenta a dívida)" />
+			<Property name="LatinAmericanSpanish" value="Fortificar el perímetro (agrega deuda)" />
+			<Property name="BrazilianPortuguese" value="Fortificar o perímetro (aumenta a dívida)" />
+			<Property name="SimplifiedChinese" value="加强周界防御（增加债务）" />
+			<Property name="TraditionalChinese" value="加強周界防禦（增加債務）" />
+			<Property name="TencentChinese" value="加强周界防御（增加债务）" />
+			<Property name="Korean" value="경계를 강화한다 (부채 증가)" />
+			<Property name="Japanese" value="周辺を固める(負債増加)" />
 			<Property name="USEnglish" value="Fortify the perimeter (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_FORT_OPT2" />
 			<Property name="English" value="Leave the perimeter as it is" />
-			<Property name="French" value="Leave the perimeter as it is" />
-			<Property name="Italian" value="Leave the perimeter as it is" />
-			<Property name="German" value="Leave the perimeter as it is" />
-			<Property name="Spanish" value="Leave the perimeter as it is" />
-			<Property name="Russian" value="Leave the perimeter as it is" />
-			<Property name="Polish" value="Leave the perimeter as it is" />
-			<Property name="Dutch" value="Leave the perimeter as it is" />
-			<Property name="Portuguese" value="Leave the perimeter as it is" />
-			<Property name="LatinAmericanSpanish" value="Leave the perimeter as it is" />
-			<Property name="BrazilianPortuguese" value="Leave the perimeter as it is" />
-			<Property name="SimplifiedChinese" value="Leave the perimeter as it is" />
-			<Property name="TraditionalChinese" value="Leave the perimeter as it is" />
-			<Property name="TencentChinese" value="Leave the perimeter as it is" />
-			<Property name="Korean" value="Leave the perimeter as it is" />
-			<Property name="Japanese" value="Leave the perimeter as it is" />
+			<Property name="French" value="Laisser le périmètre tel quel" />
+			<Property name="Italian" value="Lascia il perimetro com'è" />
+			<Property name="German" value="Rand so lassen, wie er ist" />
+			<Property name="Spanish" value="Dejar el perímetro como está" />
+			<Property name="Russian" value="Оставить периметр как есть" />
+			<Property name="Polish" value="Zostaw obwód bez zmian" />
+			<Property name="Dutch" value="Laat de omtrek zoals hij is" />
+			<Property name="Portuguese" value="Deixar o perímetro como está" />
+			<Property name="LatinAmericanSpanish" value="Dejar el perímetro como está" />
+			<Property name="BrazilianPortuguese" value="Deixar o perímetro como está" />
+			<Property name="SimplifiedChinese" value="维持周界现状" />
+			<Property name="TraditionalChinese" value="維持周界現狀" />
+			<Property name="TencentChinese" value="维持周界现状" />
+			<Property name="Korean" value="경계를 그대로 둔다" />
+			<Property name="Japanese" value="周辺はそのままにする" />
 			<Property name="USEnglish" value="Leave the perimeter as it is" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_TOWER_NAME" />
 			<Property name="English" value="TOWER PILLAR" />
-			<Property name="French" value="TOWER PILLAR" />
-			<Property name="Italian" value="TOWER PILLAR" />
-			<Property name="German" value="TOWER PILLAR" />
-			<Property name="Spanish" value="TOWER PILLAR" />
-			<Property name="Russian" value="TOWER PILLAR" />
-			<Property name="Polish" value="TOWER PILLAR" />
-			<Property name="Dutch" value="TOWER PILLAR" />
-			<Property name="Portuguese" value="TOWER PILLAR" />
-			<Property name="LatinAmericanSpanish" value="TOWER PILLAR" />
-			<Property name="BrazilianPortuguese" value="TOWER PILLAR" />
-			<Property name="SimplifiedChinese" value="TOWER PILLAR" />
-			<Property name="TraditionalChinese" value="TOWER PILLAR" />
-			<Property name="TencentChinese" value="TOWER PILLAR" />
-			<Property name="Korean" value="TOWER PILLAR" />
-			<Property name="Japanese" value="TOWER PILLAR" />
+			<Property name="French" value="PILIER DE TOUR" />
+			<Property name="Italian" value="PILASTRO DA TORRE" />
+			<Property name="German" value="TURMSÄULE" />
+			<Property name="Spanish" value="PILAR DE TORRE" />
+			<Property name="Russian" value="БАШЕННЫЙ СТОЛП" />
+			<Property name="Polish" value="FILAR WIEŻY" />
+			<Property name="Dutch" value="TORENZUIL" />
+			<Property name="Portuguese" value="PILAR DE TORRE" />
+			<Property name="LatinAmericanSpanish" value="PILAR DE TORRE" />
+			<Property name="BrazilianPortuguese" value="PILAR DE TORRE" />
+			<Property name="SimplifiedChinese" value="塔柱" />
+			<Property name="TraditionalChinese" value="塔柱" />
+			<Property name="TencentChinese" value="塔柱" />
+			<Property name="Korean" value="타워 기둥" />
+			<Property name="Japanese" value="タワーピラー" />
 			<Property name="USEnglish" value="TOWER PILLAR" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_TOWER_NAME_L" />
 			<Property name="English" value="Tower Pillar" />
-			<Property name="French" value="Tower Pillar" />
-			<Property name="Italian" value="Tower Pillar" />
-			<Property name="German" value="Tower Pillar" />
-			<Property name="Spanish" value="Tower Pillar" />
-			<Property name="Russian" value="Tower Pillar" />
-			<Property name="Polish" value="Tower Pillar" />
-			<Property name="Dutch" value="Tower Pillar" />
-			<Property name="Portuguese" value="Tower Pillar" />
-			<Property name="LatinAmericanSpanish" value="Tower Pillar" />
-			<Property name="BrazilianPortuguese" value="Tower Pillar" />
-			<Property name="SimplifiedChinese" value="Tower Pillar" />
-			<Property name="TraditionalChinese" value="Tower Pillar" />
-			<Property name="TencentChinese" value="Tower Pillar" />
-			<Property name="Korean" value="Tower Pillar" />
-			<Property name="Japanese" value="Tower Pillar" />
+			<Property name="French" value="Pilier de tour" />
+			<Property name="Italian" value="Pilastro da torre" />
+			<Property name="German" value="Turmsäule" />
+			<Property name="Spanish" value="Pilar de torre" />
+			<Property name="Russian" value="Башенный столп" />
+			<Property name="Polish" value="Filar wieży" />
+			<Property name="Dutch" value="Torenzuil" />
+			<Property name="Portuguese" value="Pilar de Torre" />
+			<Property name="LatinAmericanSpanish" value="Pilar de torre" />
+			<Property name="BrazilianPortuguese" value="Pilar de torre" />
+			<Property name="SimplifiedChinese" value="塔柱" />
+			<Property name="TraditionalChinese" value="塔柱" />
+			<Property name="TencentChinese" value="塔柱" />
+			<Property name="Korean" value="타워 기둥" />
+			<Property name="Japanese" value="タワーピラー" />
 			<Property name="USEnglish" value="Tower Pillar" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_TOWER_DESC" />
 			<Property name="English" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="French" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Italian" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="German" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Spanish" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Russian" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Polish" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Dutch" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Portuguese" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="LatinAmericanSpanish" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="BrazilianPortuguese" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="SimplifiedChinese" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="TraditionalChinese" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="TencentChinese" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Korean" value="A stone pillar, suited to towers and gateposts." />
-			<Property name="Japanese" value="A stone pillar, suited to towers and gateposts." />
+			<Property name="French" value="Un pilier de pierre, adapté aux tours et aux portails." />
+			<Property name="Italian" value="Un pilastro di pietra, adatto a torri e ingressi." />
+			<Property name="German" value="Eine Steinsäule, geeignet für Türme und Torpfosten." />
+			<Property name="Spanish" value="Un pilar de piedra, ideal para torres y portones." />
+			<Property name="Russian" value="Каменный столп, подходящий для башен и ворот." />
+			<Property name="Polish" value="Kamienny filar, dobry do wież i słupów bramnych." />
+			<Property name="Dutch" value="Een stenen zuil, geschikt voor torens en poortpalen." />
+			<Property name="Portuguese" value="Um pilar de pedra, adequado para torres e pilares de portões." />
+			<Property name="LatinAmericanSpanish" value="Un pilar de piedra, apto para torres y portones." />
+			<Property name="BrazilianPortuguese" value="Um pilar de pedra, adequado para torres e batentes de portão." />
+			<Property name="SimplifiedChinese" value="石制立柱，适合用于塔楼和门柱。" />
+			<Property name="TraditionalChinese" value="石製立柱，適合用於塔樓和門柱。" />
+			<Property name="TencentChinese" value="石制立柱，适合用于塔楼和门柱。" />
+			<Property name="Korean" value="탑과 문기둥에 알맞은 석제 기둥입니다." />
+			<Property name="Japanese" value="塔や門柱に適した石の柱。" />
 			<Property name="USEnglish" value="A stone pillar, suited to towers and gateposts." />
 		</Property>
 	</Property>

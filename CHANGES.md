@@ -1,5 +1,11 @@
 # Changes
 
+## Unreleased
+
+**Every game language**
+- Part names, descriptions, perks and decisions in the core, Defense and Settler Stories modules are now translated into every language the game offers. Before, players in any language but English saw raw text keys such as OT_PATH_TILE_NAME.
+- The translations reuse the game's own words for settlements, settlers, the overseer, debt, Sentinels, units and nanites. They have not been checked by native speakers: corrections are welcome as a bug report on GitHub.
+
 ## 1.1.0
 
 A new optional module, Settler Stories, and warnings about removing modules.
