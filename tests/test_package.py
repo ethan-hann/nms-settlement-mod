@@ -80,6 +80,7 @@ def test_test_only_modules_are_never_shipped():
         "OverseersToolkit-TemplateProbe",
         "OverseersToolkit-MissingIdProbe",
         "OverseersToolkit-LedgerProbes",
+        "OverseersToolkit-SignProbes",
     }
     assert set(package.TEST_ONLY) == test_only
     assert not test_only & set(package.SHIPPED)

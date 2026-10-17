@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_GROUP" />
+			<Property name="English" value="[TEST] SIGN PROBES" />
+			<Property name="French" value="[TEST] SIGN PROBES" />
+			<Property name="Italian" value="[TEST] SIGN PROBES" />
+			<Property name="German" value="[TEST] SIGN PROBES" />
+			<Property name="Spanish" value="[TEST] SIGN PROBES" />
+			<Property name="Russian" value="[TEST] SIGN PROBES" />
+			<Property name="Polish" value="[TEST] SIGN PROBES" />
+			<Property name="Dutch" value="[TEST] SIGN PROBES" />
+			<Property name="Portuguese" value="[TEST] SIGN PROBES" />
+			<Property name="LatinAmericanSpanish" value="[TEST] SIGN PROBES" />
+			<Property name="BrazilianPortuguese" value="[TEST] SIGN PROBES" />
+			<Property name="SimplifiedChinese" value="[TEST] SIGN PROBES" />
+			<Property name="TraditionalChinese" value="[TEST] SIGN PROBES" />
+			<Property name="TencentChinese" value="[TEST] SIGN PROBES" />
+			<Property name="Korean" value="[TEST] SIGN PROBES" />
+			<Property name="Japanese" value="[TEST] SIGN PROBES" />
+			<Property name="USEnglish" value="[TEST] SIGN PROBES" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_SUMMARY_NAME" />
+			<Property name="English" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="French" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Italian" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="German" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Spanish" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Russian" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Polish" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Dutch" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Portuguese" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="LatinAmericanSpanish" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="BrazilianPortuguese" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="SimplifiedChinese" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="TraditionalChinese" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="TencentChinese" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Korean" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="Japanese" value="[TEST] BUILDING DETAIL TERMINAL" />
+			<Property name="USEnglish" value="[TEST] BUILDING DETAIL TERMINAL" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_SUMMARY_NAME_L" />
+			<Property name="English" value="[TEST] Building Detail Terminal" />
+			<Property name="French" value="[TEST] Building Detail Terminal" />
+			<Property name="Italian" value="[TEST] Building Detail Terminal" />
+			<Property name="German" value="[TEST] Building Detail Terminal" />
+			<Property name="Spanish" value="[TEST] Building Detail Terminal" />
+			<Property name="Russian" value="[TEST] Building Detail Terminal" />
+			<Property name="Polish" value="[TEST] Building Detail Terminal" />
+			<Property name="Dutch" value="[TEST] Building Detail Terminal" />
+			<Property name="Portuguese" value="[TEST] Building Detail Terminal" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Building Detail Terminal" />
+			<Property name="BrazilianPortuguese" value="[TEST] Building Detail Terminal" />
+			<Property name="SimplifiedChinese" value="[TEST] Building Detail Terminal" />
+			<Property name="TraditionalChinese" value="[TEST] Building Detail Terminal" />
+			<Property name="TencentChinese" value="[TEST] Building Detail Terminal" />
+			<Property name="Korean" value="[TEST] Building Detail Terminal" />
+			<Property name="Japanese" value="[TEST] Building Detail Terminal" />
+			<Property name="USEnglish" value="[TEST] Building Detail Terminal" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_SUMMARY_DESC" />
+			<Property name="English" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="French" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Italian" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="German" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Spanish" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Russian" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Polish" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Dutch" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Portuguese" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="LatinAmericanSpanish" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="BrazilianPortuguese" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="SimplifiedChinese" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="TraditionalChinese" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="TencentChinese" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Korean" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="Japanese" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+			<Property name="USEnglish" value="[TEST] The terminal that stands beside each settlement building. Place it away from any building and interact with it." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_MAYOR_NAME" />
+			<Property name="English" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="French" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Italian" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="German" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Spanish" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Russian" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Polish" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Dutch" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Portuguese" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="LatinAmericanSpanish" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="BrazilianPortuguese" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="SimplifiedChinese" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="TraditionalChinese" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="TencentChinese" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Korean" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="Japanese" value="[TEST] ADMINISTRATION TERMINAL" />
+			<Property name="USEnglish" value="[TEST] ADMINISTRATION TERMINAL" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_MAYOR_NAME_L" />
+			<Property name="English" value="[TEST] Administration Terminal" />
+			<Property name="French" value="[TEST] Administration Terminal" />
+			<Property name="Italian" value="[TEST] Administration Terminal" />
+			<Property name="German" value="[TEST] Administration Terminal" />
+			<Property name="Spanish" value="[TEST] Administration Terminal" />
+			<Property name="Russian" value="[TEST] Administration Terminal" />
+			<Property name="Polish" value="[TEST] Administration Terminal" />
+			<Property name="Dutch" value="[TEST] Administration Terminal" />
+			<Property name="Portuguese" value="[TEST] Administration Terminal" />
+			<Property name="LatinAmericanSpanish" value="[TEST] Administration Terminal" />
+			<Property name="BrazilianPortuguese" value="[TEST] Administration Terminal" />
+			<Property name="SimplifiedChinese" value="[TEST] Administration Terminal" />
+			<Property name="TraditionalChinese" value="[TEST] Administration Terminal" />
+			<Property name="TencentChinese" value="[TEST] Administration Terminal" />
+			<Property name="Korean" value="[TEST] Administration Terminal" />
+			<Property name="Japanese" value="[TEST] Administration Terminal" />
+			<Property name="USEnglish" value="[TEST] Administration Terminal" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_SP_MAYOR_DESC" />
+			<Property name="English" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="French" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Italian" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="German" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Spanish" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Russian" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Polish" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Dutch" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Portuguese" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="LatinAmericanSpanish" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="BrazilianPortuguese" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="SimplifiedChinese" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="TraditionalChinese" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="TencentChinese" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Korean" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="Japanese" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+			<Property name="USEnglish" value="[TEST] The overseer office terminal. Place it outside the office, at a base, or on another planet, and interact with it." />
+		</Property>
+	</Property>
+</Data>

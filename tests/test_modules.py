@@ -221,6 +221,24 @@ def test_the_ledger_probe_sells_exact_debt_steps_at_two_units_each():
     assert kinds == {"GcRewardMoney"}, kinds
 
 
+SIGN_PROBES = "OverseersToolkit-SignProbes"
+
+
+def test_the_sign_probe_offers_the_settlement_terminals_as_parts():
+    # Each probe part reuses a vanilla settlement terminal, to see what its interaction shows away from its building.
+    assert (MODS / SIGN_PROBES).is_dir(), f"mod/{SIGN_PROBES} is missing"
+    parts = {p["id"]: p for p in spec_of(SIGN_PROBES)["parts"]}
+    assert {p["copy_from"] for p in parts.values()} == {"SET_INT_SUMMARY", "SET_MAYORTERM"}
+    objects = gen_parts.build(spec_of(SIGN_PROBES))
+    table = ET.fromstring(objects[next(k for k in objects if str(k).replace("\\", "/").endswith("BASEBUILDINGOBJECTSTABLE.EXML"))])
+    for id_ in parts:
+        entry = table.find(f"Property[@name='Objects']/Property[@_id='{id_}']")
+        assert entry.find("Property[@name='BuildableOnPlanet']").get("value") == "true", id_
+    # The office terminal copy is the remote terminal candidate, so it must also build inside a base.
+    mayor = table.find("Property[@name='Objects']/Property[@_id='OT_SP_MAYOR']")
+    assert mayor.find("Property[@name='BuildableOnPlanetBase']").get("value") == "true"
+
+
 @pytest.mark.parametrize("module", [m for m in MODULES if m not in BROKEN_ON_PURPOSE])
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)

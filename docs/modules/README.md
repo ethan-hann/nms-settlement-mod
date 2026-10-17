@@ -8,3 +8,4 @@ Ideas start in [../research/ideas/module-ideas.md](../research/ideas/module-idea
 |---|---|---|---|
 | [settler-stories](settler-stories/plan.md) | OverseersToolkit-SettlerStories | I-1 | Released in 1.1.0 |
 | [fair-ledger](fair-ledger/plan.md) | OverseersToolkit-FairLedger | I-5, I-6, I-7 | Planned; build after issue #22 |
+| [remote-terminal](remote-terminal/plan.md) | OverseersToolkit-RemoteTerminal | (new, from Fair Ledger decision 7) | Dropped 2026-10-17 |
