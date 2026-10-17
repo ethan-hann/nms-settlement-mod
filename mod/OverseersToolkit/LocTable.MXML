@@ -4,66 +4,261 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SETTLEMENT_NAME" />
 			<Property name="English" value="SETTLEMENT" />
+			<Property name="French" value="COLONIE" />
+			<Property name="Italian" value="INSEDIAMENTO" />
+			<Property name="German" value="SIEDLUNG" />
+			<Property name="Spanish" value="ASENTAMIENTO" />
+			<Property name="Russian" value="ПОСЕЛЕНИЕ" />
+			<Property name="Polish" value="OSADA" />
+			<Property name="Dutch" value="NEDERZETTING" />
+			<Property name="Portuguese" value="POVOAMENTO" />
+			<Property name="LatinAmericanSpanish" value="ASENTAMIENTO" />
+			<Property name="BrazilianPortuguese" value="POVOADO" />
+			<Property name="SimplifiedChinese" value="定居点" />
+			<Property name="TraditionalChinese" value="聚居地" />
+			<Property name="TencentChinese" value="定居点" />
+			<Property name="Korean" value="거주지" />
+			<Property name="Japanese" value="開拓地" />
 			<Property name="USEnglish" value="SETTLEMENT" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME" />
 			<Property name="English" value="PATH TILE" />
+			<Property name="French" value="DALLE DE CHEMIN" />
+			<Property name="Italian" value="PIASTRELLA DA SENTIERO" />
+			<Property name="German" value="WEGPLATTE" />
+			<Property name="Spanish" value="LOSA DE CAMINO" />
+			<Property name="Russian" value="ДОРОЖНАЯ ПЛИТКА" />
+			<Property name="Polish" value="PŁYTKA ŚCIEŻKI" />
+			<Property name="Dutch" value="PADTEGEL" />
+			<Property name="Portuguese" value="LAJETA DE CAMINHO" />
+			<Property name="LatinAmericanSpanish" value="LOSETA DE CAMINO" />
+			<Property name="BrazilianPortuguese" value="LADRILHO DE CAMINHO" />
+			<Property name="SimplifiedChinese" value="小径石砖" />
+			<Property name="TraditionalChinese" value="小徑石磚" />
+			<Property name="TencentChinese" value="小径石砖" />
+			<Property name="Korean" value="길 타일" />
+			<Property name="Japanese" value="小道タイル" />
 			<Property name="USEnglish" value="PATH TILE" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME_L" />
 			<Property name="English" value="Path Tile" />
+			<Property name="French" value="Dalle de chemin" />
+			<Property name="Italian" value="Piastrella da sentiero" />
+			<Property name="German" value="Wegplatte" />
+			<Property name="Spanish" value="Losa de camino" />
+			<Property name="Russian" value="Дорожная плитка" />
+			<Property name="Polish" value="Płytka ścieżki" />
+			<Property name="Dutch" value="Padtegel" />
+			<Property name="Portuguese" value="Lajeta de Caminho" />
+			<Property name="LatinAmericanSpanish" value="Loseta de camino" />
+			<Property name="BrazilianPortuguese" value="Ladrilho de caminho" />
+			<Property name="SimplifiedChinese" value="小径石砖" />
+			<Property name="TraditionalChinese" value="小徑石磚" />
+			<Property name="TencentChinese" value="小径石砖" />
+			<Property name="Korean" value="길 타일" />
+			<Property name="Japanese" value="小道タイル" />
 			<Property name="USEnglish" value="Path Tile" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_DESC" />
 			<Property name="English" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="French" value="Une petite dalle de pierre pour tracer des chemins, des places et des allées." />
+			<Property name="Italian" value="Una piccola piastrella di pietra per realizzare sentieri, piazze e passerelle." />
+			<Property name="German" value="Eine kleine Steinplatte für Wege, Plätze und Gehwege." />
+			<Property name="Spanish" value="Una pequeña losa de piedra para trazar caminos, plazas y pasarelas." />
+			<Property name="Russian" value="Небольшая каменная плитка для мощения дорожек, площадей и пешеходных путей." />
+			<Property name="Polish" value="Mała kamienna płytka do układania ścieżek, placów i chodników." />
+			<Property name="Dutch" value="Een kleine stenen tegel voor paden, pleinen en wandelwegen." />
+			<Property name="Portuguese" value="Uma pequena lajeta de pedra para fazer caminhos, praças e passeios." />
+			<Property name="LatinAmericanSpanish" value="Una pequeña loseta de piedra para trazar caminos, plazas y pasarelas." />
+			<Property name="BrazilianPortuguese" value="Um pequeno ladrilho de pedra para fazer caminhos, praças e calçadas." />
+			<Property name="SimplifiedChinese" value="小块石砖，用于铺设小径、广场和步道。" />
+			<Property name="TraditionalChinese" value="小塊石磚，用於鋪設小徑、廣場和步道。" />
+			<Property name="TencentChinese" value="小块石砖，用于铺设小径、广场和步道。" />
+			<Property name="Korean" value="길, 광장, 보도를 까는 데 쓰는 작은 석제 타일입니다." />
+			<Property name="Japanese" value="小道や広場、遊歩道に敷く小さな石のタイル。" />
 			<Property name="USEnglish" value="A small stone tile for laying paths, plazas and walkways." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_NAME" />
 			<Property name="English" value="PATH TRIANGLE" />
+			<Property name="French" value="DALLE TRIANGULAIRE DE CHEMIN" />
+			<Property name="Italian" value="PIASTRELLA TRIANGOLARE DA SENTIERO" />
+			<Property name="German" value="DREIECKIGE WEGPLATTE" />
+			<Property name="Spanish" value="LOSA TRIANGULAR DE CAMINO" />
+			<Property name="Russian" value="ТРЕУГОЛЬНАЯ ДОРОЖНАЯ ПЛИТКА" />
+			<Property name="Polish" value="TRÓJKĄT ŚCIEŻKI" />
+			<Property name="Dutch" value="DRIEHOEKIGE PADTEGEL" />
+			<Property name="Portuguese" value="LAJETA TRIANGULAR DE CAMINHO" />
+			<Property name="LatinAmericanSpanish" value="LOSETA TRIANGULAR DE CAMINO" />
+			<Property name="BrazilianPortuguese" value="LADRILHO TRIANGULAR DE CAMINHO" />
+			<Property name="SimplifiedChinese" value="小径三角砖" />
+			<Property name="TraditionalChinese" value="小徑三角磚" />
+			<Property name="TencentChinese" value="小径三角砖" />
+			<Property name="Korean" value="길 삼각형" />
+			<Property name="Japanese" value="小道トライアングル" />
 			<Property name="USEnglish" value="PATH TRIANGLE" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_NAME_L" />
 			<Property name="English" value="Path Triangle" />
+			<Property name="French" value="Dalle triangulaire de chemin" />
+			<Property name="Italian" value="Piastrella triangolare da sentiero" />
+			<Property name="German" value="Dreieckige Wegplatte" />
+			<Property name="Spanish" value="Losa triangular de camino" />
+			<Property name="Russian" value="Треугольная дорожная плитка" />
+			<Property name="Polish" value="Trójkąt ścieżki" />
+			<Property name="Dutch" value="Driehoekige padtegel" />
+			<Property name="Portuguese" value="Lajeta Triangular de Caminho" />
+			<Property name="LatinAmericanSpanish" value="Loseta triangular de camino" />
+			<Property name="BrazilianPortuguese" value="Ladrilho triangular de caminho" />
+			<Property name="SimplifiedChinese" value="小径三角砖" />
+			<Property name="TraditionalChinese" value="小徑三角磚" />
+			<Property name="TencentChinese" value="小径三角砖" />
+			<Property name="Korean" value="길 삼각형" />
+			<Property name="Japanese" value="小道トライアングル" />
 			<Property name="USEnglish" value="Path Triangle" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_DESC" />
 			<Property name="English" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="French" value="Une petite dalle triangulaire de pierre pour tourner aux angles et combler les vides le long d'un chemin." />
+			<Property name="Italian" value="Una piccola piastrella triangolare di pietra per girare gli angoli e riempire gli spazi lungo un sentiero." />
+			<Property name="German" value="Eine kleine dreieckige Steinplatte für Wegbiegungen und zum Füllen von Lücken entlang eines Wegs." />
+			<Property name="Spanish" value="Una pequeña losa triangular de piedra para girar en las esquinas y rellenar huecos a lo largo de un camino." />
+			<Property name="Russian" value="Небольшая треугольная каменная плитка, чтобы поворачивать дорожку на углах и заполнять пробелы." />
+			<Property name="Polish" value="Mała trójkątna kamienna płytka do zakrętów i wypełniania luk wzdłuż ścieżki." />
+			<Property name="Dutch" value="Een kleine driehoekige stenen tegel voor bochten en om gaten langs een pad op te vullen." />
+			<Property name="Portuguese" value="Uma pequena lajeta de pedra triangular para fazer curvas e preencher falhas ao longo de um caminho." />
+			<Property name="LatinAmericanSpanish" value="Una pequeña loseta triangular de piedra para doblar en las esquinas y rellenar huecos a lo largo de un camino." />
+			<Property name="BrazilianPortuguese" value="Um pequeno ladrilho de pedra triangular para fazer curvas e preencher vãos ao longo de um caminho." />
+			<Property name="SimplifiedChinese" value="小块三角形石砖，用于小径转角和填补空隙。" />
+			<Property name="TraditionalChinese" value="小塊三角形石磚，用於小徑轉角和填補空隙。" />
+			<Property name="TencentChinese" value="小块三角形石砖，用于小径转角和填补空隙。" />
+			<Property name="Korean" value="길의 모서리를 돌리거나 틈을 메우는 데 쓰는 작은 삼각형 석제 타일입니다." />
+			<Property name="Japanese" value="小道の角を曲がったり隙間を埋めたりするための、小さな三角形の石タイル。" />
 			<Property name="USEnglish" value="A small triangular stone tile for turning corners and filling gaps along a path." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_NAME" />
 			<Property name="English" value="PATH CURB" />
+			<Property name="French" value="BORDURE DE CHEMIN" />
+			<Property name="Italian" value="CORDOLO DA SENTIERO" />
+			<Property name="German" value="WEGKANTE" />
+			<Property name="Spanish" value="BORDILLO DE CAMINO" />
+			<Property name="Russian" value="ДОРОЖНЫЙ БОРДЮР" />
+			<Property name="Polish" value="KRAWĘŻNIK ŚCIEŻKI" />
+			<Property name="Dutch" value="PADRAND" />
+			<Property name="Portuguese" value="LANCIL DE CAMINHO" />
+			<Property name="LatinAmericanSpanish" value="BORDE DE CAMINO" />
+			<Property name="BrazilianPortuguese" value="MEIO-FIO DE CAMINHO" />
+			<Property name="SimplifiedChinese" value="小径路缘" />
+			<Property name="TraditionalChinese" value="小徑路緣" />
+			<Property name="TencentChinese" value="小径路缘" />
+			<Property name="Korean" value="길 연석" />
+			<Property name="Japanese" value="小道の縁石" />
 			<Property name="USEnglish" value="PATH CURB" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_NAME_L" />
 			<Property name="English" value="Path Curb" />
+			<Property name="French" value="Bordure de chemin" />
+			<Property name="Italian" value="Cordolo da sentiero" />
+			<Property name="German" value="Wegkante" />
+			<Property name="Spanish" value="Bordillo de camino" />
+			<Property name="Russian" value="Дорожный бордюр" />
+			<Property name="Polish" value="Krawężnik ścieżki" />
+			<Property name="Dutch" value="Padrand" />
+			<Property name="Portuguese" value="Lancil de Caminho" />
+			<Property name="LatinAmericanSpanish" value="Borde de camino" />
+			<Property name="BrazilianPortuguese" value="Meio-fio de caminho" />
+			<Property name="SimplifiedChinese" value="小径路缘" />
+			<Property name="TraditionalChinese" value="小徑路緣" />
+			<Property name="TencentChinese" value="小径路缘" />
+			<Property name="Korean" value="길 연석" />
+			<Property name="Japanese" value="小道の縁石" />
 			<Property name="USEnglish" value="Path Curb" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_DESC" />
 			<Property name="English" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="French" value="Un muret de pierre pour border un chemin. À placer sous le bord d'une dalle de chemin pour former une marche basse." />
+			<Property name="Italian" value="Un basso muretto di pietra per bordare un sentiero. Posizionalo sotto il bordo di una piastrella da sentiero per creare un gradino basso." />
+			<Property name="German" value="Eine niedrige Steinmauer zur Einfassung eines Wegs. Unter den Rand einer Wegplatte gesetzt, entsteht eine flache Stufe." />
+			<Property name="Spanish" value="Un muro bajo de piedra para bordear un camino. Se coloca bajo el borde de una losa de camino para formar un escalón bajo." />
+			<Property name="Russian" value="Невысокая каменная стенка для обрамления дорожки. Поставьте ее под край дорожной плитки, чтобы получить низкую ступеньку." />
+			<Property name="Polish" value="Niski kamienny murek do obramowania ścieżki. Ustaw go pod krawędzią płytki ścieżki, aby uzyskać niski stopień." />
+			<Property name="Dutch" value="Een lage stenen muur om een pad af te boorden. Plaats hem onder de rand van een padtegel voor een lage trede." />
+			<Property name="Portuguese" value="Um pequeno muro de pedra para orlar um caminho. Coloca-o sob a beira de uma lajeta de caminho para fazer um degrau baixo." />
+			<Property name="LatinAmericanSpanish" value="Un muro bajo de piedra para bordear un camino. Colócalo debajo del borde de una loseta de camino para formar un escalón bajo." />
+			<Property name="BrazilianPortuguese" value="Um muro baixo de pedra para margear um caminho. Coloque-o sob a borda de um ladrilho de caminho para fazer um degrau baixo." />
+			<Property name="SimplifiedChinese" value="镶在小径边缘的矮石墙。将它置于小径石砖边缘之下，即可形成一级低矮台阶。" />
+			<Property name="TraditionalChinese" value="鑲在小徑邊緣的矮石牆。將它置於小徑石磚邊緣之下，即可形成一級低矮台階。" />
+			<Property name="TencentChinese" value="镶在小径边缘的矮石墙。将它置于小径石砖边缘之下，即可形成一级低矮台阶。" />
+			<Property name="Korean" value="길 가장자리를 두르는 낮은 석벽입니다. 길 타일 테두리 아래에 놓으면 낮은 단차가 생깁니다." />
+			<Property name="Japanese" value="小道の縁取り用の低い石壁。小道タイルの縁の下に置くと、低い段差になる。" />
 			<Property name="USEnglish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME" />
 			<Property name="English" value="PATH LAMP" />
+			<Property name="French" value="LAMPADAIRE DE CHEMIN" />
+			<Property name="Italian" value="LAMPIONE DA SENTIERO" />
+			<Property name="German" value="WEGLAMPE" />
+			<Property name="Spanish" value="FAROLA DE CAMINO" />
+			<Property name="Russian" value="ДОРОЖНАЯ ЛАМПА" />
+			<Property name="Polish" value="LAMPA ŚCIEŻKI" />
+			<Property name="Dutch" value="PADLAMP" />
+			<Property name="Portuguese" value="LÂMPADA DE CAMINHO" />
+			<Property name="LatinAmericanSpanish" value="FAROL DE CAMINO" />
+			<Property name="BrazilianPortuguese" value="LÂMPADA DE CAMINHO" />
+			<Property name="SimplifiedChinese" value="小径灯柱" />
+			<Property name="TraditionalChinese" value="小徑燈柱" />
+			<Property name="TencentChinese" value="小径灯柱" />
+			<Property name="Korean" value="길 가로등" />
+			<Property name="Japanese" value="小道の街灯" />
 			<Property name="USEnglish" value="PATH LAMP" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME_L" />
 			<Property name="English" value="Path Lamp" />
+			<Property name="French" value="Lampadaire de chemin" />
+			<Property name="Italian" value="Lampione da sentiero" />
+			<Property name="German" value="Weglampe" />
+			<Property name="Spanish" value="Farola de camino" />
+			<Property name="Russian" value="Дорожная лампа" />
+			<Property name="Polish" value="Lampa ścieżki" />
+			<Property name="Dutch" value="Padlamp" />
+			<Property name="Portuguese" value="Lâmpada de Caminho" />
+			<Property name="LatinAmericanSpanish" value="Farol de camino" />
+			<Property name="BrazilianPortuguese" value="Lâmpada de caminho" />
+			<Property name="SimplifiedChinese" value="小径灯柱" />
+			<Property name="TraditionalChinese" value="小徑燈柱" />
+			<Property name="TencentChinese" value="小径灯柱" />
+			<Property name="Korean" value="길 가로등" />
+			<Property name="Japanese" value="小道の街灯" />
 			<Property name="USEnglish" value="Path Lamp" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_DESC" />
 			<Property name="English" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="French" value="Un lampadaire sur pied pour éclairer chemins et places. Il n'a besoin d'aucune alimentation." />
+			<Property name="Italian" value="Un lampione a stelo per illuminare sentieri e piazze. Non richiede alimentazione." />
+			<Property name="German" value="Eine freistehende Straßenlaterne zur Beleuchtung von Wegen und Plätzen. Sie braucht keinen Strom." />
+			<Property name="Spanish" value="Una farola de pie para iluminar caminos y plazas. No necesita energía." />
+			<Property name="Russian" value="Стоячий уличный фонарь для освещения дорожек и площадей. Питание не требуется." />
+			<Property name="Polish" value="Wolno stojąca latarnia uliczna do oświetlania ścieżek i placów. Nie potrzebuje zasilania." />
+			<Property name="Dutch" value="Een vrijstaande straatlantaarn om paden en pleinen te verlichten. Er is geen stroom voor nodig." />
+			<Property name="Portuguese" value="Um candeeiro de rua independente para iluminar caminhos e praças. Não precisa de energia." />
+			<Property name="LatinAmericanSpanish" value="Un farol de pie para iluminar caminos y plazas. No necesita energía." />
+			<Property name="BrazilianPortuguese" value="Um poste de iluminação independente para iluminar caminhos e praças. Não precisa de energia." />
+			<Property name="SimplifiedChinese" value="立式路灯，用于照亮小径和广场，无需供电。" />
+			<Property name="TraditionalChinese" value="立式路燈，用於照亮小徑和廣場，不需供電。" />
+			<Property name="TencentChinese" value="立式路灯，用于照亮小径和广场，无需供电。" />
+			<Property name="Korean" value="길과 광장을 밝히는 세워 두는 가로등입니다. 전력이 필요하지 않습니다." />
+			<Property name="Japanese" value="小道や広場を照らす、立ち型の街灯。電力は不要。" />
 			<Property name="USEnglish" value="A standing street lamp for lighting paths and plazas. It needs no power." />
 		</Property>
 	</Property>

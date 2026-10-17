@@ -2,7 +2,7 @@
 
 Perks and judgements are long vanilla structures. Copying one from the current build
 keeps every field complete; the spec only names what differs. Text keys named here
-get their English from the spec's `text` key, which gen_parts.py turns into LocTable.MXML.
+get their text in every language from the spec's `text` key, which gen_parts.py turns into LocTable.MXML.
 
 Spec keys (all optional):
   perks:      [{id, copy_from, name, description, stat_changes: [[stat, strength]]}]

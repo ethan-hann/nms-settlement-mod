@@ -4,71 +4,281 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_NAME" />
 			<Property name="English" value="OT Probe Tile" />
+			<Property name="French" value="OT Probe Tile" />
+			<Property name="Italian" value="OT Probe Tile" />
+			<Property name="German" value="OT Probe Tile" />
+			<Property name="Spanish" value="OT Probe Tile" />
+			<Property name="Russian" value="OT Probe Tile" />
+			<Property name="Polish" value="OT Probe Tile" />
+			<Property name="Dutch" value="OT Probe Tile" />
+			<Property name="Portuguese" value="OT Probe Tile" />
+			<Property name="LatinAmericanSpanish" value="OT Probe Tile" />
+			<Property name="BrazilianPortuguese" value="OT Probe Tile" />
+			<Property name="SimplifiedChinese" value="OT Probe Tile" />
+			<Property name="TraditionalChinese" value="OT Probe Tile" />
+			<Property name="TencentChinese" value="OT Probe Tile" />
+			<Property name="Korean" value="OT Probe Tile" />
+			<Property name="Japanese" value="OT Probe Tile" />
 			<Property name="USEnglish" value="OT Probe Tile" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_NAME_L" />
 			<Property name="English" value="OT probe tile" />
+			<Property name="French" value="OT probe tile" />
+			<Property name="Italian" value="OT probe tile" />
+			<Property name="German" value="OT probe tile" />
+			<Property name="Spanish" value="OT probe tile" />
+			<Property name="Russian" value="OT probe tile" />
+			<Property name="Polish" value="OT probe tile" />
+			<Property name="Dutch" value="OT probe tile" />
+			<Property name="Portuguese" value="OT probe tile" />
+			<Property name="LatinAmericanSpanish" value="OT probe tile" />
+			<Property name="BrazilianPortuguese" value="OT probe tile" />
+			<Property name="SimplifiedChinese" value="OT probe tile" />
+			<Property name="TraditionalChinese" value="OT probe tile" />
+			<Property name="TencentChinese" value="OT probe tile" />
+			<Property name="Korean" value="OT probe tile" />
+			<Property name="Japanese" value="OT probe tile" />
 			<Property name="USEnglish" value="OT probe tile" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_DESC" />
 			<Property name="English" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="French" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Italian" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="German" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Spanish" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Russian" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Polish" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Dutch" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Portuguese" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="LatinAmericanSpanish" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="BrazilianPortuguese" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="SimplifiedChinese" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="TraditionalChinese" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="TencentChinese" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Korean" value="Overseer's Toolkit test part. Safe to delete." />
+			<Property name="Japanese" value="Overseer's Toolkit test part. Safe to delete." />
 			<Property name="USEnglish" value="Overseer's Toolkit test part. Safe to delete." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_DECALPATH_NAME" />
 			<Property name="English" value="OT Path Decal" />
+			<Property name="French" value="OT Path Decal" />
+			<Property name="Italian" value="OT Path Decal" />
+			<Property name="German" value="OT Path Decal" />
+			<Property name="Spanish" value="OT Path Decal" />
+			<Property name="Russian" value="OT Path Decal" />
+			<Property name="Polish" value="OT Path Decal" />
+			<Property name="Dutch" value="OT Path Decal" />
+			<Property name="Portuguese" value="OT Path Decal" />
+			<Property name="LatinAmericanSpanish" value="OT Path Decal" />
+			<Property name="BrazilianPortuguese" value="OT Path Decal" />
+			<Property name="SimplifiedChinese" value="OT Path Decal" />
+			<Property name="TraditionalChinese" value="OT Path Decal" />
+			<Property name="TencentChinese" value="OT Path Decal" />
+			<Property name="Korean" value="OT Path Decal" />
+			<Property name="Japanese" value="OT Path Decal" />
 			<Property name="USEnglish" value="OT Path Decal" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_DECALPATH_NAME_L" />
 			<Property name="English" value="OT path decal" />
+			<Property name="French" value="OT path decal" />
+			<Property name="Italian" value="OT path decal" />
+			<Property name="German" value="OT path decal" />
+			<Property name="Spanish" value="OT path decal" />
+			<Property name="Russian" value="OT path decal" />
+			<Property name="Polish" value="OT path decal" />
+			<Property name="Dutch" value="OT path decal" />
+			<Property name="Portuguese" value="OT path decal" />
+			<Property name="LatinAmericanSpanish" value="OT path decal" />
+			<Property name="BrazilianPortuguese" value="OT path decal" />
+			<Property name="SimplifiedChinese" value="OT path decal" />
+			<Property name="TraditionalChinese" value="OT path decal" />
+			<Property name="TencentChinese" value="OT path decal" />
+			<Property name="Korean" value="OT path decal" />
+			<Property name="Japanese" value="OT path decal" />
 			<Property name="USEnglish" value="OT path decal" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_DECALPATH_DESC" />
 			<Property name="English" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="French" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Italian" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="German" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Spanish" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Russian" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Polish" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Dutch" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Portuguese" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="LatinAmericanSpanish" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="BrazilianPortuguese" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="SimplifiedChinese" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="TraditionalChinese" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="TencentChinese" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Korean" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
+			<Property name="Japanese" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
 			<Property name="USEnglish" value="The settlement path decal, exposed by Overseer's Toolkit for testing." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_SUB_NAME" />
 			<Property name="English" value="OT Probes" />
+			<Property name="French" value="OT Probes" />
+			<Property name="Italian" value="OT Probes" />
+			<Property name="German" value="OT Probes" />
+			<Property name="Spanish" value="OT Probes" />
+			<Property name="Russian" value="OT Probes" />
+			<Property name="Polish" value="OT Probes" />
+			<Property name="Dutch" value="OT Probes" />
+			<Property name="Portuguese" value="OT Probes" />
+			<Property name="LatinAmericanSpanish" value="OT Probes" />
+			<Property name="BrazilianPortuguese" value="OT Probes" />
+			<Property name="SimplifiedChinese" value="OT Probes" />
+			<Property name="TraditionalChinese" value="OT Probes" />
+			<Property name="TencentChinese" value="OT Probes" />
+			<Property name="Korean" value="OT Probes" />
+			<Property name="Japanese" value="OT Probes" />
 			<Property name="USEnglish" value="OT Probes" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_TITLE" />
 			<Property name="English" value="OT Probe Decision" />
+			<Property name="French" value="OT Probe Decision" />
+			<Property name="Italian" value="OT Probe Decision" />
+			<Property name="German" value="OT Probe Decision" />
+			<Property name="Spanish" value="OT Probe Decision" />
+			<Property name="Russian" value="OT Probe Decision" />
+			<Property name="Polish" value="OT Probe Decision" />
+			<Property name="Dutch" value="OT Probe Decision" />
+			<Property name="Portuguese" value="OT Probe Decision" />
+			<Property name="LatinAmericanSpanish" value="OT Probe Decision" />
+			<Property name="BrazilianPortuguese" value="OT Probe Decision" />
+			<Property name="SimplifiedChinese" value="OT Probe Decision" />
+			<Property name="TraditionalChinese" value="OT Probe Decision" />
+			<Property name="TencentChinese" value="OT Probe Decision" />
+			<Property name="Korean" value="OT Probe Decision" />
+			<Property name="Japanese" value="OT Probe Decision" />
 			<Property name="USEnglish" value="OT Probe Decision" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_QUESTION" />
 			<Property name="English" value="Run the Overseer's Toolkit test?" />
+			<Property name="French" value="Run the Overseer's Toolkit test?" />
+			<Property name="Italian" value="Run the Overseer's Toolkit test?" />
+			<Property name="German" value="Run the Overseer's Toolkit test?" />
+			<Property name="Spanish" value="Run the Overseer's Toolkit test?" />
+			<Property name="Russian" value="Run the Overseer's Toolkit test?" />
+			<Property name="Polish" value="Run the Overseer's Toolkit test?" />
+			<Property name="Dutch" value="Run the Overseer's Toolkit test?" />
+			<Property name="Portuguese" value="Run the Overseer's Toolkit test?" />
+			<Property name="LatinAmericanSpanish" value="Run the Overseer's Toolkit test?" />
+			<Property name="BrazilianPortuguese" value="Run the Overseer's Toolkit test?" />
+			<Property name="SimplifiedChinese" value="Run the Overseer's Toolkit test?" />
+			<Property name="TraditionalChinese" value="Run the Overseer's Toolkit test?" />
+			<Property name="TencentChinese" value="Run the Overseer's Toolkit test?" />
+			<Property name="Korean" value="Run the Overseer's Toolkit test?" />
+			<Property name="Japanese" value="Run the Overseer's Toolkit test?" />
 			<Property name="USEnglish" value="Run the Overseer's Toolkit test?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_DILEMMA" />
 			<Property name="English" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="French" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Italian" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="German" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Spanish" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Russian" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Polish" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Dutch" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Portuguese" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="LatinAmericanSpanish" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="BrazilianPortuguese" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="SimplifiedChinese" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="TraditionalChinese" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="TencentChinese" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Korean" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
+			<Property name="Japanese" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
 			<Property name="USEnglish" value="A test decision added by Overseer's Toolkit. The first option grants a test perk." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_OPT1" />
 			<Property name="English" value="Grant the probe perk" />
+			<Property name="French" value="Grant the probe perk" />
+			<Property name="Italian" value="Grant the probe perk" />
+			<Property name="German" value="Grant the probe perk" />
+			<Property name="Spanish" value="Grant the probe perk" />
+			<Property name="Russian" value="Grant the probe perk" />
+			<Property name="Polish" value="Grant the probe perk" />
+			<Property name="Dutch" value="Grant the probe perk" />
+			<Property name="Portuguese" value="Grant the probe perk" />
+			<Property name="LatinAmericanSpanish" value="Grant the probe perk" />
+			<Property name="BrazilianPortuguese" value="Grant the probe perk" />
+			<Property name="SimplifiedChinese" value="Grant the probe perk" />
+			<Property name="TraditionalChinese" value="Grant the probe perk" />
+			<Property name="TencentChinese" value="Grant the probe perk" />
+			<Property name="Korean" value="Grant the probe perk" />
+			<Property name="Japanese" value="Grant the probe perk" />
 			<Property name="USEnglish" value="Grant the probe perk" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PJ_OPT2" />
 			<Property name="English" value="Do nothing" />
+			<Property name="French" value="Do nothing" />
+			<Property name="Italian" value="Do nothing" />
+			<Property name="German" value="Do nothing" />
+			<Property name="Spanish" value="Do nothing" />
+			<Property name="Russian" value="Do nothing" />
+			<Property name="Polish" value="Do nothing" />
+			<Property name="Dutch" value="Do nothing" />
+			<Property name="Portuguese" value="Do nothing" />
+			<Property name="LatinAmericanSpanish" value="Do nothing" />
+			<Property name="BrazilianPortuguese" value="Do nothing" />
+			<Property name="SimplifiedChinese" value="Do nothing" />
+			<Property name="TraditionalChinese" value="Do nothing" />
+			<Property name="TencentChinese" value="Do nothing" />
+			<Property name="Korean" value="Do nothing" />
+			<Property name="Japanese" value="Do nothing" />
 			<Property name="USEnglish" value="Do nothing" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_PERK_NAME" />
 			<Property name="English" value="OT Probe Perk" />
+			<Property name="French" value="OT Probe Perk" />
+			<Property name="Italian" value="OT Probe Perk" />
+			<Property name="German" value="OT Probe Perk" />
+			<Property name="Spanish" value="OT Probe Perk" />
+			<Property name="Russian" value="OT Probe Perk" />
+			<Property name="Polish" value="OT Probe Perk" />
+			<Property name="Dutch" value="OT Probe Perk" />
+			<Property name="Portuguese" value="OT Probe Perk" />
+			<Property name="LatinAmericanSpanish" value="OT Probe Perk" />
+			<Property name="BrazilianPortuguese" value="OT Probe Perk" />
+			<Property name="SimplifiedChinese" value="OT Probe Perk" />
+			<Property name="TraditionalChinese" value="OT Probe Perk" />
+			<Property name="TencentChinese" value="OT Probe Perk" />
+			<Property name="Korean" value="OT Probe Perk" />
+			<Property name="Japanese" value="OT Probe Perk" />
 			<Property name="USEnglish" value="OT Probe Perk" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PROBE_PERK_DESC" />
 			<Property name="English" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="French" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Italian" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="German" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Spanish" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Russian" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Polish" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Dutch" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Portuguese" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="LatinAmericanSpanish" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="BrazilianPortuguese" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="SimplifiedChinese" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="TraditionalChinese" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="TencentChinese" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Korean" value="Granted by the Overseer's Toolkit test decision." />
+			<Property name="Japanese" value="Granted by the Overseer's Toolkit test decision." />
 			<Property name="USEnglish" value="Granted by the Overseer's Toolkit test decision." />
 		</Property>
 	</Property>
