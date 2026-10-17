@@ -7,3 +7,4 @@ Ideas start in [../research/ideas/module-ideas.md](../research/ideas/module-idea
 | Folder | Module | Idea | Status |
 |---|---|---|---|
 | [settler-stories](settler-stories/plan.md) | OverseersToolkit-SettlerStories | I-1 | Released in 1.1.0 |
+| [remote-terminal](remote-terminal/plan.md) | OverseersToolkit-RemoteTerminal | (new, from Fair Ledger decision 7) | Dropped 2026-10-17 |

@@ -39,6 +39,7 @@ MODULES = {
     "brokenprobe": "OverseersToolkit-BrokenProbe",
     "templateprobe": "OverseersToolkit-TemplateProbe",
     "missingidprobe": "OverseersToolkit-MissingIdProbe",
+    "signprobes": "OverseersToolkit-SignProbes",
 }
 DEV_PREFIX = "_OTDEV_"
 # The game writes its merged mod data here when the test-only debug flag is on.

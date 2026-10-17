@@ -283,3 +283,34 @@ Decided 2026-10-17 (issue #22): every LocTable entry is translated into all 17 c
 - **Term reference.** The shipped specs are the reference for later text, Fair Ledger included: the cost brackets in OT_FORT_OPT1 (debt), OT_SS_D1_O2 (units), OT_SS_S3C_O2 (nanites) and OT_SS_D3_O1 (settlers) give each language's wording.
 - **Coined terms.** Vanilla has no word for path tile, curb, foreman, night market or perimeter in most languages, so those are new wording. Where vanilla's word for vault is a storage box or compartment, German and Dutch use vanilla's seed-vault word instead (Samenkammer, kluis).
 - **Seen in game (verified 2026-10-17):** the translated LocTables load and show their translations.
+
+## 2026-10-17: Town sign exploration
+
+Plan and findings are in [modules/remote-terminal/](modules/remote-terminal/plan.md). The settlement's own terminals are vanilla base parts: `SET_MAYORTERM` (the Administration Terminal), `SET_INT_SUMMARY` (the building-detail terminal) and `SET_MONUMENT` (the Settlement Interface). Each is placeable and has a product but is not buildable on planets or known to players. A sign that shows live numbers in the world needs runtime code. The test-only SignProbes module makes copies of the first two buildable, to see what they open away from their building.
+
+
+## 2026-10-17: Session 7, town sign probes
+
+One launch on the creative test slot with core, Defense, SettlerStories and SignProbes. Safety: exit passed all checks.
+
+- Both probe parts showed in the build menu under the [TEST] tab, with a wooden-wall placeholder thumbnail. The existing creative save learned them from `creative_known`.
+- The building-detail terminal copy could not be placed: "Must Be Constructed Underwater". Its vanilla entry allows neither water nor land.
+- The Administration Terminal copy, placed in open ground, worked as the full office terminal, and its status page opened.
+- The monument (Settlement Interface) opens the status page at once.
+- The status page offers Change Output, and its history page offers Retire as Overseer, so no vanilla page is read-only.
+- With LedgerProbes no longer installed, Maintenance Cost was back at 381,454 a day (127,768 with the probe's upkeep marker in Session 6). Removing a contribution patch restores vanilla upkeep at once.
+- The slot's newer save file (`save12.hg`) holds no placed probe part; the older `save11.hg` still holds one Administration Terminal copy, so a session that leaves SignProbes out may be refused by `testmode enter`.
+
+Decided 2026-10-17: ship the Administration Terminal copy as a remote terminal, buildable anywhere on a planet, inside or outside a base; a live-updating sign needs runtime code and is dropped. Plan in [modules/remote-terminal/plan.md](modules/remote-terminal/plan.md).
+
+Next: Session 8, the terminal away from the town.
+
+## 2026-10-17: Session 8, the terminal away from the town
+
+One launch with core, Defense, SettlerStories and SignProbes. Safety: exit passed all checks.
+
+- The Administration Terminal copy, placed on Funana Bridge's planet well outside the town, showed every option disabled: "No pending decisions" (though a construction choice was pending) and "Terminal reserved for Overseer" on status and all settlements. The terminal only works inside its own town.
+- The rest of the checklist was skipped, since other planets and bases cannot do better.
+- The slot's newer save file (`save12.hg`) holds no placed probe part.
+
+Decided 2026-10-17: the remote terminal is dropped; Fair Ledger ships in 1.2.0 on its own. Findings stay in [modules/remote-terminal/plan.md](modules/remote-terminal/plan.md).
