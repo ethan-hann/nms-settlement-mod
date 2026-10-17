@@ -151,6 +151,70 @@ def test_the_missing_id_probe_edits_one_part_vanilla_lacks_beside_a_real_one(tmp
     assert len(changed) == 1, changed
 
 
+LEDGER_PROBES = "OverseersToolkit-LedgerProbes"
+DEBT_STEP = 100_000
+UNITS_PER_DEBT = 2
+
+
+def merged_table(module, rel):
+    rel = Path(rel)
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    merged, _ = merge_preview.merge(vanilla, ET.parse(MODS / module / rel).getroot())
+    return merged
+
+
+def test_the_ledger_probe_sells_exact_debt_steps_at_two_units_each():
+    assert (MODS / LEDGER_PROBES).is_dir(), f"mod/{LEDGER_PROBES} is missing"
+    tables = "METADATA/REALITY/TABLES"
+    dialog = merged_table(LEDGER_PROBES, f"{tables}/NMS_DIALOG_GCALIENPUZZLETABLE.EXML")
+    costs = merged_table(LEDGER_PROBES, f"{tables}/COSTTABLE.EXML")
+    rewards = merged_table(LEDGER_PROBES, f"{tables}/REWARDTABLE.EXML")
+    settlement = merged_table(LEDGER_PROBES, "GLOBALS/GCSETTLEMENTGLOBALS.EXML")
+
+    large = settlement.find(
+        "Property[@name='PerkStatStrengthValues']/Property[@name='Debt']"
+        "/Property[@name='PerkStatStrengthValues']/Property[@name='PositiveLarge']"
+    )
+    assert [large.find(f"Property[@name='{f}']").get("value") for f in ("AmountMin", "AmountMax")] == [
+        str(-DEBT_STEP)
+    ] * 2
+
+    admin = dialog.find("Property[@name='Table']/Property[@_id='SETTLEMENT_ADMIN']/Property[@name='Options']")
+    paid = [o for o in admin if o.find("Property[@name='Cost']").get("value").startswith("C_OT_LP_")]
+    assert len(paid) == 2, "expected a guarded and an unguarded payment option"
+    guarded = 0
+    for option in paid:
+        cost_id = option.find("Property[@name='Cost']").get("value")
+        cost = costs.find(f"Property[@name='InteractionTable']/Property[@_id='{cost_id}']")
+        money = cost.find("Property[@name='Cost']/Property[@name='GcCostMoney']")
+        assert money is not None, f"{cost_id} is not a units cost"
+        steps = 0
+        for reward in option.find("Property[@name='Rewards']"):
+            entry = rewards.find(f"Property[@name='SettlementTable']/Property[@_id='{reward.get('value')}']")
+            for change in entry.iter("Property"):
+                if change.get("name") == "StatToAward":
+                    assert change.find(".//Property[@name='SettlementStatType']").get("value") == "Debt"
+                    assert change.find(".//Property[@name='SettlementStatStrength']").get("value") == "PositiveLarge"
+                    steps += 1
+        assert int(money.find("Property[@name='Cost']").get("value")) == UNITS_PER_DEBT * DEBT_STEP * steps
+        conditions = option.find("Property[@name='DisablingConditions']")
+        if len(conditions):
+            level = conditions.find(".//Property[@name='GcMissionConditionSettlementStatLevel']")
+            assert level.find(".//Property[@name='SettlementStatType']").get("value") == "Debt"
+            assert level.find(".//Property[@name='EqualityEnum']").get("value") == "Greater"
+            guarded += 1
+    assert guarded == 1
+
+    # The test save holds far fewer units than its debt, so the probe also hands out units for free.
+    free = [o for o in admin if o.find("Property[@name='Name']").get("value") == "OT_LP_CASH"]
+    assert len(free) == 1, "expected one free units option"
+    assert free[0].find("Property[@name='Cost']").get("value") == ""
+    (reward,) = free[0].find("Property[@name='Rewards']")
+    entry = rewards.find(f"Property[@name='SettlementTable']/Property[@_id='{reward.get('value')}']")
+    kinds = {r.get("value") for r in entry.iter("Property") if r.get("name") == "Reward"}
+    assert kinds == {"GcRewardMoney"}, kinds
+
+
 @pytest.mark.parametrize("module", [m for m in MODULES if m not in BROKEN_ON_PURPOSE])
 def test_every_patch_merges_and_compiles(module, tmp_path):
     results = merge_preview.preview_module(MODS / module, tmp_path)

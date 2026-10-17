@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_LP_PAY_S" />
+			<Property name="English" value="[TEST] Pay toward debt: 100,000 (hides at zero debt)" />
+			<Property name="USEnglish" value="[TEST] Pay toward debt: 100,000 (hides at zero debt)" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_LP_PAY_L" />
+			<Property name="English" value="[TEST] Pay toward debt: 1,000,000" />
+			<Property name="USEnglish" value="[TEST] Pay toward debt: 1,000,000" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_LP_CASH" />
+			<Property name="English" value="[TEST] Receive 5,000,000 units" />
+			<Property name="USEnglish" value="[TEST] Receive 5,000,000 units" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_SETTLEMENT_PROD_DEBT_TIP" />
+			<Property name="English" value="[TEST] Overridden debt tip. If you can read this, a vanilla text key was replaced." />
+			<Property name="USEnglish" value="[TEST] Overridden debt tip. If you can read this, a vanilla text key was replaced." />
+		</Property>
+	</Property>
+</Data>

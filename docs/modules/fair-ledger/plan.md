@@ -141,7 +141,7 @@ What the data says so far:
 
 ## To verify in one session
 
-What the data cannot answer, batched into one session on the creative test slot. A test-only `OverseersToolkit-LedgerProbes` module carries the probes, all text marked [TEST]:
+What the data cannot answer, batched into one session on the creative test slot. A test-only `OverseersToolkit-LedgerProbes` module carries the probes, all text marked [TEST]. Besides the two payment options it adds a free option that grants 5,000,000 units, because the test save holds far less than its debt, and it sets the C upkeep of every production building to 1,111 so the change is easy to spot:
 
 1. A terminal option charging 200,000 units for a flat 100,000 Debt cut. Does the option show, does the cut match, does it charge, does the debt drop, and in which town if the slot owns two?
 2. The same option at zero debt: are the units taken, and does a `DisablingConditions` entry hide it?

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. Debt payment options on the Administration Terminal; the small one hides at zero debt if the condition works, and a free one hands out units. -->
+<Data template="cGcAlienPuzzleTable">
+	<Property name="Table">
+		<Property name="Table" value="GcAlienPuzzleEntry" _id="SETTLEMENT_ADMIN">
+			<Property name="Options">
+				<Property name="Options" value="GcAlienPuzzleOption">
+					<Property name="Name" value="OT_LP_PAY_S" />
+					<Property name="Text" value="" />
+					<Property name="IsAlien" value="false" />
+					<Property name="ResponseLanguageOverride" value="GcAlienRace">
+						<Property name="AlienRace" value="None" />
+					</Property>
+					<Property name="Cost" value="C_OT_LP_PAY1" />
+					<Property name="Rewards">
+						<Property name="Rewards" value="R_OT_LP_DEBT1" _index="0" />
+					</Property>
+					<Property name="Mood" value="GcAlienMood">
+						<Property name="Mood" value="Neutral" />
+					</Property>
+					<Property name="Prop" value="GcNPCPropType">
+						<Property name="NPCProp" value="DontCare" />
+					</Property>
+					<Property name="OverrideWithAlienWord" value="false" />
+					<Property name="AlienWordSpecificRace" value="GcAlienRace">
+						<Property name="AlienRace" value="None" />
+					</Property>
+					<Property name="ReseedInteractionOnUse" value="false" />
+					<Property name="KeepOpen" value="true" />
+					<Property name="DisplayCost" value="true" />
+					<Property name="TruncateCost" value="false" />
+					<Property name="MarkInteractionComplete" value="false" />
+					<Property name="NextInteraction" value="" />
+					<Property name="SelectedOnBackOut" value="false" />
+					<Property name="AudioEvent" value="GcAudioWwiseEvents">
+						<Property name="AkEvent" value="INVALID_EVENT" />
+					</Property>
+					<Property name="TitleOverride" value="" />
+					<Property name="SkipStraightToOptionsOnNextPuzzle" value="false" />
+					<Property name="DisablingConditionTest" value="GcMissionConditionTest">
+						<Property name="ConditionTest" value="AnyFalse" />
+					</Property>
+					<Property name="DisablingConditions">
+						<Property name="DisablingConditions" value="GcMissionConditionSettlementStatLevel">
+							<Property name="GcMissionConditionSettlementStatLevel">
+								<Property name="NormalisedLevel" value="0.000000" />
+								<Property name="Stat" value="GcSettlementStatType">
+									<Property name="SettlementStatType" value="Debt" />
+								</Property>
+								<Property name="Test" value="TkEqualityEnum">
+									<Property name="EqualityEnum" value="Greater" />
+								</Property>
+							</Property>
+						</Property>
+					</Property>
+					<Property name="DisablingConditionId" value="" />
+					<Property name="WordCategory" value="GcWordCategoryTableEnum">
+						<Property name="wordcategorytableEnum" value="MISC" />
+					</Property>
+				</Property>
+				<Property name="Options" value="GcAlienPuzzleOption">
+					<Property name="Name" value="OT_LP_PAY_L" />
+					<Property name="Text" value="" />
+					<Property name="IsAlien" value="false" />
+					<Property name="ResponseLanguageOverride" value="GcAlienRace">
+						<Property name="AlienRace" value="None" />
+					</Property>
+					<Property name="Cost" value="C_OT_LP_PAY10" />
+					<Property name="Rewards">
+						<Property name="Rewards" value="R_OT_LP_DEBT10" _index="0" />
+					</Property>
+					<Property name="Mood" value="GcAlienMood">
+						<Property name="Mood" value="Neutral" />
+					</Property>
+					<Property name="Prop" value="GcNPCPropType">
+						<Property name="NPCProp" value="DontCare" />
+					</Property>
+					<Property name="OverrideWithAlienWord" value="false" />
+					<Property name="AlienWordSpecificRace" value="GcAlienRace">
+						<Property name="AlienRace" value="None" />
+					</Property>
+					<Property name="ReseedInteractionOnUse" value="false" />
+					<Property name="KeepOpen" value="true" />
+					<Property name="DisplayCost" value="true" />
+					<Property name="TruncateCost" value="false" />
+					<Property name="MarkInteractionComplete" value="false" />
+					<Property name="NextInteraction" value="" />
+					<Property name="SelectedOnBackOut" value="false" />
+					<Property name="AudioEvent" value="GcAudioWwiseEvents">
+						<Property name="AkEvent" value="INVALID_EVENT" />
+					</Property>
+					<Property name="TitleOverride" value="" />
+					<Property name="SkipStraightToOptionsOnNextPuzzle" value="false" />
+					<Property name="DisablingConditionTest" value="GcMissionConditionTest">
+						<Property name="ConditionTest" value="AnyFalse" />
+					</Property>
+					<Property name="DisablingConditions" />
+					<Property name="DisablingConditionId" value="" />
+					<Property name="WordCategory" value="GcWordCategoryTableEnum">
+						<Property name="wordcategorytableEnum" value="MISC" />
+					</Property>
+				</Property>
+				<Property name="Options" value="GcAlienPuzzleOption">
+					<Property name="Name" value="OT_LP_CASH" />
+					<Property name="Text" value="" />
+					<Property name="IsAlien" value="false" />
+					<Property name="ResponseLanguageOverride" value="GcAlienRace">
+						<Property name="AlienRace" value="None" />
+					</Property>
+					<Property name="Cost" value="" />
+					<Property name="Rewards">
+						<Property name="Rewards" value="R_OT_LP_CASH" _index="0" />
+					</Property>
+					<Property name="Mood" value="GcAlienMood">
+						<Property name="Mood" value="Neutral" />
+					</Property>
+					<Property name="Prop" value="GcNPCPropType">
+						<Property name="NPCProp" value="DontCare" />
+					</Property>
+					<Property name="OverrideWithAlienWord" value="false" />
+					<Property name="AlienWordSpecificRace" value="GcAlienRace">
+						<Property name="AlienRace" value="None" />
+					</Property>
+					<Property name="ReseedInteractionOnUse" value="false" />
+					<Property name="KeepOpen" value="true" />
+					<Property name="DisplayCost" value="true" />
+					<Property name="TruncateCost" value="false" />
+					<Property name="MarkInteractionComplete" value="false" />
+					<Property name="NextInteraction" value="" />
+					<Property name="SelectedOnBackOut" value="false" />
+					<Property name="AudioEvent" value="GcAudioWwiseEvents">
+						<Property name="AkEvent" value="INVALID_EVENT" />
+					</Property>
+					<Property name="TitleOverride" value="" />
+					<Property name="SkipStraightToOptionsOnNextPuzzle" value="false" />
+					<Property name="DisablingConditionTest" value="GcMissionConditionTest">
+						<Property name="ConditionTest" value="AnyFalse" />
+					</Property>
+					<Property name="DisablingConditions" />
+					<Property name="DisablingConditionId" value="" />
+					<Property name="WordCategory" value="GcWordCategoryTableEnum">
+						<Property name="wordcategorytableEnum" value="MISC" />
+					</Property>
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>
