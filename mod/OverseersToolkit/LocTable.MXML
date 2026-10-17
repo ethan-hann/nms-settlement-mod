@@ -4,66 +4,261 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SETTLEMENT_NAME" />
 			<Property name="English" value="SETTLEMENT" />
+			<Property name="French" value="SETTLEMENT" />
+			<Property name="Italian" value="SETTLEMENT" />
+			<Property name="German" value="SETTLEMENT" />
+			<Property name="Spanish" value="SETTLEMENT" />
+			<Property name="Russian" value="SETTLEMENT" />
+			<Property name="Polish" value="SETTLEMENT" />
+			<Property name="Dutch" value="SETTLEMENT" />
+			<Property name="Portuguese" value="SETTLEMENT" />
+			<Property name="LatinAmericanSpanish" value="SETTLEMENT" />
+			<Property name="BrazilianPortuguese" value="SETTLEMENT" />
+			<Property name="SimplifiedChinese" value="SETTLEMENT" />
+			<Property name="TraditionalChinese" value="SETTLEMENT" />
+			<Property name="TencentChinese" value="SETTLEMENT" />
+			<Property name="Korean" value="SETTLEMENT" />
+			<Property name="Japanese" value="SETTLEMENT" />
 			<Property name="USEnglish" value="SETTLEMENT" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME" />
 			<Property name="English" value="PATH TILE" />
+			<Property name="French" value="PATH TILE" />
+			<Property name="Italian" value="PATH TILE" />
+			<Property name="German" value="PATH TILE" />
+			<Property name="Spanish" value="PATH TILE" />
+			<Property name="Russian" value="PATH TILE" />
+			<Property name="Polish" value="PATH TILE" />
+			<Property name="Dutch" value="PATH TILE" />
+			<Property name="Portuguese" value="PATH TILE" />
+			<Property name="LatinAmericanSpanish" value="PATH TILE" />
+			<Property name="BrazilianPortuguese" value="PATH TILE" />
+			<Property name="SimplifiedChinese" value="PATH TILE" />
+			<Property name="TraditionalChinese" value="PATH TILE" />
+			<Property name="TencentChinese" value="PATH TILE" />
+			<Property name="Korean" value="PATH TILE" />
+			<Property name="Japanese" value="PATH TILE" />
 			<Property name="USEnglish" value="PATH TILE" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_NAME_L" />
 			<Property name="English" value="Path Tile" />
+			<Property name="French" value="Path Tile" />
+			<Property name="Italian" value="Path Tile" />
+			<Property name="German" value="Path Tile" />
+			<Property name="Spanish" value="Path Tile" />
+			<Property name="Russian" value="Path Tile" />
+			<Property name="Polish" value="Path Tile" />
+			<Property name="Dutch" value="Path Tile" />
+			<Property name="Portuguese" value="Path Tile" />
+			<Property name="LatinAmericanSpanish" value="Path Tile" />
+			<Property name="BrazilianPortuguese" value="Path Tile" />
+			<Property name="SimplifiedChinese" value="Path Tile" />
+			<Property name="TraditionalChinese" value="Path Tile" />
+			<Property name="TencentChinese" value="Path Tile" />
+			<Property name="Korean" value="Path Tile" />
+			<Property name="Japanese" value="Path Tile" />
 			<Property name="USEnglish" value="Path Tile" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TILE_DESC" />
 			<Property name="English" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="French" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Italian" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="German" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Spanish" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Russian" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Polish" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Dutch" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Portuguese" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="LatinAmericanSpanish" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="BrazilianPortuguese" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="SimplifiedChinese" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="TraditionalChinese" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="TencentChinese" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Korean" value="A small stone tile for laying paths, plazas and walkways." />
+			<Property name="Japanese" value="A small stone tile for laying paths, plazas and walkways." />
 			<Property name="USEnglish" value="A small stone tile for laying paths, plazas and walkways." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_NAME" />
 			<Property name="English" value="PATH TRIANGLE" />
+			<Property name="French" value="PATH TRIANGLE" />
+			<Property name="Italian" value="PATH TRIANGLE" />
+			<Property name="German" value="PATH TRIANGLE" />
+			<Property name="Spanish" value="PATH TRIANGLE" />
+			<Property name="Russian" value="PATH TRIANGLE" />
+			<Property name="Polish" value="PATH TRIANGLE" />
+			<Property name="Dutch" value="PATH TRIANGLE" />
+			<Property name="Portuguese" value="PATH TRIANGLE" />
+			<Property name="LatinAmericanSpanish" value="PATH TRIANGLE" />
+			<Property name="BrazilianPortuguese" value="PATH TRIANGLE" />
+			<Property name="SimplifiedChinese" value="PATH TRIANGLE" />
+			<Property name="TraditionalChinese" value="PATH TRIANGLE" />
+			<Property name="TencentChinese" value="PATH TRIANGLE" />
+			<Property name="Korean" value="PATH TRIANGLE" />
+			<Property name="Japanese" value="PATH TRIANGLE" />
 			<Property name="USEnglish" value="PATH TRIANGLE" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_NAME_L" />
 			<Property name="English" value="Path Triangle" />
+			<Property name="French" value="Path Triangle" />
+			<Property name="Italian" value="Path Triangle" />
+			<Property name="German" value="Path Triangle" />
+			<Property name="Spanish" value="Path Triangle" />
+			<Property name="Russian" value="Path Triangle" />
+			<Property name="Polish" value="Path Triangle" />
+			<Property name="Dutch" value="Path Triangle" />
+			<Property name="Portuguese" value="Path Triangle" />
+			<Property name="LatinAmericanSpanish" value="Path Triangle" />
+			<Property name="BrazilianPortuguese" value="Path Triangle" />
+			<Property name="SimplifiedChinese" value="Path Triangle" />
+			<Property name="TraditionalChinese" value="Path Triangle" />
+			<Property name="TencentChinese" value="Path Triangle" />
+			<Property name="Korean" value="Path Triangle" />
+			<Property name="Japanese" value="Path Triangle" />
 			<Property name="USEnglish" value="Path Triangle" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_PATH_TRI_DESC" />
 			<Property name="English" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="French" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Italian" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="German" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Spanish" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Russian" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Polish" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Dutch" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Portuguese" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="LatinAmericanSpanish" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="BrazilianPortuguese" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="SimplifiedChinese" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="TraditionalChinese" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="TencentChinese" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Korean" value="A small triangular stone tile for turning corners and filling gaps along a path." />
+			<Property name="Japanese" value="A small triangular stone tile for turning corners and filling gaps along a path." />
 			<Property name="USEnglish" value="A small triangular stone tile for turning corners and filling gaps along a path." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_NAME" />
 			<Property name="English" value="PATH CURB" />
+			<Property name="French" value="PATH CURB" />
+			<Property name="Italian" value="PATH CURB" />
+			<Property name="German" value="PATH CURB" />
+			<Property name="Spanish" value="PATH CURB" />
+			<Property name="Russian" value="PATH CURB" />
+			<Property name="Polish" value="PATH CURB" />
+			<Property name="Dutch" value="PATH CURB" />
+			<Property name="Portuguese" value="PATH CURB" />
+			<Property name="LatinAmericanSpanish" value="PATH CURB" />
+			<Property name="BrazilianPortuguese" value="PATH CURB" />
+			<Property name="SimplifiedChinese" value="PATH CURB" />
+			<Property name="TraditionalChinese" value="PATH CURB" />
+			<Property name="TencentChinese" value="PATH CURB" />
+			<Property name="Korean" value="PATH CURB" />
+			<Property name="Japanese" value="PATH CURB" />
 			<Property name="USEnglish" value="PATH CURB" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_NAME_L" />
 			<Property name="English" value="Path Curb" />
+			<Property name="French" value="Path Curb" />
+			<Property name="Italian" value="Path Curb" />
+			<Property name="German" value="Path Curb" />
+			<Property name="Spanish" value="Path Curb" />
+			<Property name="Russian" value="Path Curb" />
+			<Property name="Polish" value="Path Curb" />
+			<Property name="Dutch" value="Path Curb" />
+			<Property name="Portuguese" value="Path Curb" />
+			<Property name="LatinAmericanSpanish" value="Path Curb" />
+			<Property name="BrazilianPortuguese" value="Path Curb" />
+			<Property name="SimplifiedChinese" value="Path Curb" />
+			<Property name="TraditionalChinese" value="Path Curb" />
+			<Property name="TencentChinese" value="Path Curb" />
+			<Property name="Korean" value="Path Curb" />
+			<Property name="Japanese" value="Path Curb" />
 			<Property name="USEnglish" value="Path Curb" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_CURB_DESC" />
 			<Property name="English" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="French" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Italian" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="German" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Spanish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Russian" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Polish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Dutch" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Portuguese" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="LatinAmericanSpanish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="BrazilianPortuguese" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="SimplifiedChinese" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="TraditionalChinese" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="TencentChinese" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Korean" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
+			<Property name="Japanese" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
 			<Property name="USEnglish" value="A short stone wall for edging a path. Set it under the rim of a path tile to make a low step." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME" />
 			<Property name="English" value="PATH LAMP" />
+			<Property name="French" value="PATH LAMP" />
+			<Property name="Italian" value="PATH LAMP" />
+			<Property name="German" value="PATH LAMP" />
+			<Property name="Spanish" value="PATH LAMP" />
+			<Property name="Russian" value="PATH LAMP" />
+			<Property name="Polish" value="PATH LAMP" />
+			<Property name="Dutch" value="PATH LAMP" />
+			<Property name="Portuguese" value="PATH LAMP" />
+			<Property name="LatinAmericanSpanish" value="PATH LAMP" />
+			<Property name="BrazilianPortuguese" value="PATH LAMP" />
+			<Property name="SimplifiedChinese" value="PATH LAMP" />
+			<Property name="TraditionalChinese" value="PATH LAMP" />
+			<Property name="TencentChinese" value="PATH LAMP" />
+			<Property name="Korean" value="PATH LAMP" />
+			<Property name="Japanese" value="PATH LAMP" />
 			<Property name="USEnglish" value="PATH LAMP" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_NAME_L" />
 			<Property name="English" value="Path Lamp" />
+			<Property name="French" value="Path Lamp" />
+			<Property name="Italian" value="Path Lamp" />
+			<Property name="German" value="Path Lamp" />
+			<Property name="Spanish" value="Path Lamp" />
+			<Property name="Russian" value="Path Lamp" />
+			<Property name="Polish" value="Path Lamp" />
+			<Property name="Dutch" value="Path Lamp" />
+			<Property name="Portuguese" value="Path Lamp" />
+			<Property name="LatinAmericanSpanish" value="Path Lamp" />
+			<Property name="BrazilianPortuguese" value="Path Lamp" />
+			<Property name="SimplifiedChinese" value="Path Lamp" />
+			<Property name="TraditionalChinese" value="Path Lamp" />
+			<Property name="TencentChinese" value="Path Lamp" />
+			<Property name="Korean" value="Path Lamp" />
+			<Property name="Japanese" value="Path Lamp" />
 			<Property name="USEnglish" value="Path Lamp" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_LAMP_DESC" />
 			<Property name="English" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="French" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Italian" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="German" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Spanish" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Russian" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Polish" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Dutch" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Portuguese" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="LatinAmericanSpanish" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="BrazilianPortuguese" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="SimplifiedChinese" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="TraditionalChinese" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="TencentChinese" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Korean" value="A standing street lamp for lighting paths and plazas. It needs no power." />
+			<Property name="Japanese" value="A standing street lamp for lighting paths and plazas. It needs no power." />
 			<Property name="USEnglish" value="A standing street lamp for lighting paths and plazas. It needs no power." />
 		</Property>
 	</Property>

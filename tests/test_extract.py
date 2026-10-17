@@ -1,6 +1,14 @@
+import fnmatch
 from pathlib import Path
 
 import extract
+
+# The 17 columns of a vanilla TkLocalisationEntry.
+LANGUAGES = [
+    "English", "French", "Italian", "German", "Spanish", "Russian", "Polish", "Dutch", "Portuguese",
+    "LatinAmericanSpanish", "BrazilianPortuguese", "SimplifiedChinese", "TraditionalChinese", "TencentChinese",
+    "Korean", "Japanese", "USEnglish",
+]
 
 
 def test_filters_cover_the_tables_the_mod_patches():
@@ -11,7 +19,6 @@ def test_filters_cover_the_tables_the_mod_patches():
         "metadata/reality/tables/nms_basepartproducts*",
         "metadata/reality/tables/nms_reality_gcproducttable*",
         "metadata/reality/tables/settlementperkstable*",
-        "language/*english*",
         "gcdebugoptions*",
         "metadata/simulation/missions/tables/missiontable*",
         "metadata/simulation/missions/tables/modmissiontable*",
@@ -22,6 +29,13 @@ def test_filters_cover_the_tables_the_mod_patches():
     ]
     for pattern in needed:
         assert pattern in extract.FILTERS
+
+
+def test_filters_cover_every_game_language():
+    # The translation glossary reads the vanilla text of every language the game ships.
+    for lang in LANGUAGES:
+        name = f"language/nms_loc1_{lang.lower()}.mbin"
+        assert any(fnmatch.fnmatch(name, pattern) for pattern in extract.FILTERS), name
 
 
 def test_extract_command_uses_windows_paths_and_ors_every_filter():

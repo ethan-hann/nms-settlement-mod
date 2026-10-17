@@ -4,396 +4,1581 @@
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_SANCTUARY_N" />
 			<Property name="English" value="Sanctuary" />
+			<Property name="French" value="Sanctuary" />
+			<Property name="Italian" value="Sanctuary" />
+			<Property name="German" value="Sanctuary" />
+			<Property name="Spanish" value="Sanctuary" />
+			<Property name="Russian" value="Sanctuary" />
+			<Property name="Polish" value="Sanctuary" />
+			<Property name="Dutch" value="Sanctuary" />
+			<Property name="Portuguese" value="Sanctuary" />
+			<Property name="LatinAmericanSpanish" value="Sanctuary" />
+			<Property name="BrazilianPortuguese" value="Sanctuary" />
+			<Property name="SimplifiedChinese" value="Sanctuary" />
+			<Property name="TraditionalChinese" value="Sanctuary" />
+			<Property name="TencentChinese" value="Sanctuary" />
+			<Property name="Korean" value="Sanctuary" />
+			<Property name="Japanese" value="Sanctuary" />
 			<Property name="USEnglish" value="Sanctuary" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_SANCTUARY_DS" />
 			<Property name="English" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="French" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Italian" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="German" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Spanish" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Russian" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Polish" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Dutch" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Portuguese" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="LatinAmericanSpanish" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="BrazilianPortuguese" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="SimplifiedChinese" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="TraditionalChinese" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="TencentChinese" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Korean" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
+			<Property name="Japanese" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
 			<Property name="USEnglish" value="The settlement stood by one of its own. Spirits are high, though outsiders have taken notice." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_ORCHARD_N" />
 			<Property name="English" value="Ancient Orchard" />
+			<Property name="French" value="Ancient Orchard" />
+			<Property name="Italian" value="Ancient Orchard" />
+			<Property name="German" value="Ancient Orchard" />
+			<Property name="Spanish" value="Ancient Orchard" />
+			<Property name="Russian" value="Ancient Orchard" />
+			<Property name="Polish" value="Ancient Orchard" />
+			<Property name="Dutch" value="Ancient Orchard" />
+			<Property name="Portuguese" value="Ancient Orchard" />
+			<Property name="LatinAmericanSpanish" value="Ancient Orchard" />
+			<Property name="BrazilianPortuguese" value="Ancient Orchard" />
+			<Property name="SimplifiedChinese" value="Ancient Orchard" />
+			<Property name="TraditionalChinese" value="Ancient Orchard" />
+			<Property name="TencentChinese" value="Ancient Orchard" />
+			<Property name="Korean" value="Ancient Orchard" />
+			<Property name="Japanese" value="Ancient Orchard" />
 			<Property name="USEnglish" value="Ancient Orchard" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_ORCHARD_DS" />
 			<Property name="English" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="French" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Italian" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="German" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Spanish" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Russian" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Polish" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Dutch" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Portuguese" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="LatinAmericanSpanish" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="BrazilianPortuguese" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="SimplifiedChinese" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="TraditionalChinese" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="TencentChinese" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Korean" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
+			<Property name="Japanese" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
 			<Property name="USEnglish" value="A crop nobody alive had ever grown, now thriving in the settlement's fields." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_RELICS_N" />
 			<Property name="English" value="Relic Hall" />
+			<Property name="French" value="Relic Hall" />
+			<Property name="Italian" value="Relic Hall" />
+			<Property name="German" value="Relic Hall" />
+			<Property name="Spanish" value="Relic Hall" />
+			<Property name="Russian" value="Relic Hall" />
+			<Property name="Polish" value="Relic Hall" />
+			<Property name="Dutch" value="Relic Hall" />
+			<Property name="Portuguese" value="Relic Hall" />
+			<Property name="LatinAmericanSpanish" value="Relic Hall" />
+			<Property name="BrazilianPortuguese" value="Relic Hall" />
+			<Property name="SimplifiedChinese" value="Relic Hall" />
+			<Property name="TraditionalChinese" value="Relic Hall" />
+			<Property name="TencentChinese" value="Relic Hall" />
+			<Property name="Korean" value="Relic Hall" />
+			<Property name="Japanese" value="Relic Hall" />
 			<Property name="USEnglish" value="Relic Hall" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_RELICS_DS" />
 			<Property name="English" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="French" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Italian" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="German" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Spanish" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Russian" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Polish" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Dutch" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Portuguese" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="LatinAmericanSpanish" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="BrazilianPortuguese" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="SimplifiedChinese" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="TraditionalChinese" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="TencentChinese" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Korean" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
+			<Property name="Japanese" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
 			<Property name="USEnglish" value="Relics from the ruins on display, drawing curious settlers and the odd trader." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_O1" />
 			<Property name="English" value="Let it run free" />
+			<Property name="French" value="Let it run free" />
+			<Property name="Italian" value="Let it run free" />
+			<Property name="German" value="Let it run free" />
+			<Property name="Spanish" value="Let it run free" />
+			<Property name="Russian" value="Let it run free" />
+			<Property name="Polish" value="Let it run free" />
+			<Property name="Dutch" value="Let it run free" />
+			<Property name="Portuguese" value="Let it run free" />
+			<Property name="LatinAmericanSpanish" value="Let it run free" />
+			<Property name="BrazilianPortuguese" value="Let it run free" />
+			<Property name="SimplifiedChinese" value="Let it run free" />
+			<Property name="TraditionalChinese" value="Let it run free" />
+			<Property name="TencentChinese" value="Let it run free" />
+			<Property name="Korean" value="Let it run free" />
+			<Property name="Japanese" value="Let it run free" />
 			<Property name="USEnglish" value="Let it run free" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_O2" />
 			<Property name="English" value="Charge a stall fee (units)" />
+			<Property name="French" value="Charge a stall fee (units)" />
+			<Property name="Italian" value="Charge a stall fee (units)" />
+			<Property name="German" value="Charge a stall fee (units)" />
+			<Property name="Spanish" value="Charge a stall fee (units)" />
+			<Property name="Russian" value="Charge a stall fee (units)" />
+			<Property name="Polish" value="Charge a stall fee (units)" />
+			<Property name="Dutch" value="Charge a stall fee (units)" />
+			<Property name="Portuguese" value="Charge a stall fee (units)" />
+			<Property name="LatinAmericanSpanish" value="Charge a stall fee (units)" />
+			<Property name="BrazilianPortuguese" value="Charge a stall fee (units)" />
+			<Property name="SimplifiedChinese" value="Charge a stall fee (units)" />
+			<Property name="TraditionalChinese" value="Charge a stall fee (units)" />
+			<Property name="TencentChinese" value="Charge a stall fee (units)" />
+			<Property name="Korean" value="Charge a stall fee (units)" />
+			<Property name="Japanese" value="Charge a stall fee (units)" />
 			<Property name="USEnglish" value="Charge a stall fee (units)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_T" />
 			<Property name="English" value="The Night Market" />
+			<Property name="French" value="The Night Market" />
+			<Property name="Italian" value="The Night Market" />
+			<Property name="German" value="The Night Market" />
+			<Property name="Spanish" value="The Night Market" />
+			<Property name="Russian" value="The Night Market" />
+			<Property name="Polish" value="The Night Market" />
+			<Property name="Dutch" value="The Night Market" />
+			<Property name="Portuguese" value="The Night Market" />
+			<Property name="LatinAmericanSpanish" value="The Night Market" />
+			<Property name="BrazilianPortuguese" value="The Night Market" />
+			<Property name="SimplifiedChinese" value="The Night Market" />
+			<Property name="TraditionalChinese" value="The Night Market" />
+			<Property name="TencentChinese" value="The Night Market" />
+			<Property name="Korean" value="The Night Market" />
+			<Property name="Japanese" value="The Night Market" />
 			<Property name="USEnglish" value="The Night Market" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_Q" />
 			<Property name="English" value="Should the night market pay a fee?" />
+			<Property name="French" value="Should the night market pay a fee?" />
+			<Property name="Italian" value="Should the night market pay a fee?" />
+			<Property name="German" value="Should the night market pay a fee?" />
+			<Property name="Spanish" value="Should the night market pay a fee?" />
+			<Property name="Russian" value="Should the night market pay a fee?" />
+			<Property name="Polish" value="Should the night market pay a fee?" />
+			<Property name="Dutch" value="Should the night market pay a fee?" />
+			<Property name="Portuguese" value="Should the night market pay a fee?" />
+			<Property name="LatinAmericanSpanish" value="Should the night market pay a fee?" />
+			<Property name="BrazilianPortuguese" value="Should the night market pay a fee?" />
+			<Property name="SimplifiedChinese" value="Should the night market pay a fee?" />
+			<Property name="TraditionalChinese" value="Should the night market pay a fee?" />
+			<Property name="TencentChinese" value="Should the night market pay a fee?" />
+			<Property name="Korean" value="Should the night market pay a fee?" />
+			<Property name="Japanese" value="Should the night market pay a fee?" />
 			<Property name="USEnglish" value="Should the night market pay a fee?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D1_D" />
 			<Property name="English" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="French" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Italian" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="German" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Spanish" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Russian" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Polish" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Dutch" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Portuguese" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="LatinAmericanSpanish" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="BrazilianPortuguese" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="SimplifiedChinese" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="TraditionalChinese" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="TencentChinese" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Korean" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
+			<Property name="Japanese" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
 			<Property name="USEnglish" value="Traders want to run a night market in the plaza once the work shifts end. It would keep the place lively, and the stalls could pay a fee to the Overseer." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_O1" />
 			<Property name="English" value="Claim the salvage yourself" />
+			<Property name="French" value="Claim the salvage yourself" />
+			<Property name="Italian" value="Claim the salvage yourself" />
+			<Property name="German" value="Claim the salvage yourself" />
+			<Property name="Spanish" value="Claim the salvage yourself" />
+			<Property name="Russian" value="Claim the salvage yourself" />
+			<Property name="Polish" value="Claim the salvage yourself" />
+			<Property name="Dutch" value="Claim the salvage yourself" />
+			<Property name="Portuguese" value="Claim the salvage yourself" />
+			<Property name="LatinAmericanSpanish" value="Claim the salvage yourself" />
+			<Property name="BrazilianPortuguese" value="Claim the salvage yourself" />
+			<Property name="SimplifiedChinese" value="Claim the salvage yourself" />
+			<Property name="TraditionalChinese" value="Claim the salvage yourself" />
+			<Property name="TencentChinese" value="Claim the salvage yourself" />
+			<Property name="Korean" value="Claim the salvage yourself" />
+			<Property name="Japanese" value="Claim the salvage yourself" />
 			<Property name="USEnglish" value="Claim the salvage yourself" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_O2" />
 			<Property name="English" value="Strip it for parts for the settlement" />
+			<Property name="French" value="Strip it for parts for the settlement" />
+			<Property name="Italian" value="Strip it for parts for the settlement" />
+			<Property name="German" value="Strip it for parts for the settlement" />
+			<Property name="Spanish" value="Strip it for parts for the settlement" />
+			<Property name="Russian" value="Strip it for parts for the settlement" />
+			<Property name="Polish" value="Strip it for parts for the settlement" />
+			<Property name="Dutch" value="Strip it for parts for the settlement" />
+			<Property name="Portuguese" value="Strip it for parts for the settlement" />
+			<Property name="LatinAmericanSpanish" value="Strip it for parts for the settlement" />
+			<Property name="BrazilianPortuguese" value="Strip it for parts for the settlement" />
+			<Property name="SimplifiedChinese" value="Strip it for parts for the settlement" />
+			<Property name="TraditionalChinese" value="Strip it for parts for the settlement" />
+			<Property name="TencentChinese" value="Strip it for parts for the settlement" />
+			<Property name="Korean" value="Strip it for parts for the settlement" />
+			<Property name="Japanese" value="Strip it for parts for the settlement" />
 			<Property name="USEnglish" value="Strip it for parts for the settlement" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_T" />
 			<Property name="English" value="Salvage Rights" />
+			<Property name="French" value="Salvage Rights" />
+			<Property name="Italian" value="Salvage Rights" />
+			<Property name="German" value="Salvage Rights" />
+			<Property name="Spanish" value="Salvage Rights" />
+			<Property name="Russian" value="Salvage Rights" />
+			<Property name="Polish" value="Salvage Rights" />
+			<Property name="Dutch" value="Salvage Rights" />
+			<Property name="Portuguese" value="Salvage Rights" />
+			<Property name="LatinAmericanSpanish" value="Salvage Rights" />
+			<Property name="BrazilianPortuguese" value="Salvage Rights" />
+			<Property name="SimplifiedChinese" value="Salvage Rights" />
+			<Property name="TraditionalChinese" value="Salvage Rights" />
+			<Property name="TencentChinese" value="Salvage Rights" />
+			<Property name="Korean" value="Salvage Rights" />
+			<Property name="Japanese" value="Salvage Rights" />
 			<Property name="USEnglish" value="Salvage Rights" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_Q" />
 			<Property name="English" value="Who gets the salvage?" />
+			<Property name="French" value="Who gets the salvage?" />
+			<Property name="Italian" value="Who gets the salvage?" />
+			<Property name="German" value="Who gets the salvage?" />
+			<Property name="Spanish" value="Who gets the salvage?" />
+			<Property name="Russian" value="Who gets the salvage?" />
+			<Property name="Polish" value="Who gets the salvage?" />
+			<Property name="Dutch" value="Who gets the salvage?" />
+			<Property name="Portuguese" value="Who gets the salvage?" />
+			<Property name="LatinAmericanSpanish" value="Who gets the salvage?" />
+			<Property name="BrazilianPortuguese" value="Who gets the salvage?" />
+			<Property name="SimplifiedChinese" value="Who gets the salvage?" />
+			<Property name="TraditionalChinese" value="Who gets the salvage?" />
+			<Property name="TencentChinese" value="Who gets the salvage?" />
+			<Property name="Korean" value="Who gets the salvage?" />
+			<Property name="Japanese" value="Who gets the salvage?" />
 			<Property name="USEnglish" value="Who gets the salvage?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D2_D" />
 			<Property name="English" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="French" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Italian" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="German" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Spanish" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Russian" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Polish" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Dutch" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Portuguese" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="LatinAmericanSpanish" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="BrazilianPortuguese" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="SimplifiedChinese" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="TraditionalChinese" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="TencentChinese" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Korean" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
+			<Property name="Japanese" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
 			<Property name="USEnglish" value="Scouts found a cargo pod from a wrecked freighter half buried outside the walls. Its seals still hold." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_O1" />
 			<Property name="English" value="Give them a bed (settlers worry)" />
+			<Property name="French" value="Give them a bed (settlers worry)" />
+			<Property name="Italian" value="Give them a bed (settlers worry)" />
+			<Property name="German" value="Give them a bed (settlers worry)" />
+			<Property name="Spanish" value="Give them a bed (settlers worry)" />
+			<Property name="Russian" value="Give them a bed (settlers worry)" />
+			<Property name="Polish" value="Give them a bed (settlers worry)" />
+			<Property name="Dutch" value="Give them a bed (settlers worry)" />
+			<Property name="Portuguese" value="Give them a bed (settlers worry)" />
+			<Property name="LatinAmericanSpanish" value="Give them a bed (settlers worry)" />
+			<Property name="BrazilianPortuguese" value="Give them a bed (settlers worry)" />
+			<Property name="SimplifiedChinese" value="Give them a bed (settlers worry)" />
+			<Property name="TraditionalChinese" value="Give them a bed (settlers worry)" />
+			<Property name="TencentChinese" value="Give them a bed (settlers worry)" />
+			<Property name="Korean" value="Give them a bed (settlers worry)" />
+			<Property name="Japanese" value="Give them a bed (settlers worry)" />
 			<Property name="USEnglish" value="Give them a bed (settlers worry)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_O2" />
 			<Property name="English" value="Trade medicine for the trinket" />
+			<Property name="French" value="Trade medicine for the trinket" />
+			<Property name="Italian" value="Trade medicine for the trinket" />
+			<Property name="German" value="Trade medicine for the trinket" />
+			<Property name="Spanish" value="Trade medicine for the trinket" />
+			<Property name="Russian" value="Trade medicine for the trinket" />
+			<Property name="Polish" value="Trade medicine for the trinket" />
+			<Property name="Dutch" value="Trade medicine for the trinket" />
+			<Property name="Portuguese" value="Trade medicine for the trinket" />
+			<Property name="LatinAmericanSpanish" value="Trade medicine for the trinket" />
+			<Property name="BrazilianPortuguese" value="Trade medicine for the trinket" />
+			<Property name="SimplifiedChinese" value="Trade medicine for the trinket" />
+			<Property name="TraditionalChinese" value="Trade medicine for the trinket" />
+			<Property name="TencentChinese" value="Trade medicine for the trinket" />
+			<Property name="Korean" value="Trade medicine for the trinket" />
+			<Property name="Japanese" value="Trade medicine for the trinket" />
 			<Property name="USEnglish" value="Trade medicine for the trinket" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_T" />
 			<Property name="English" value="A Fevered Traveller" />
+			<Property name="French" value="A Fevered Traveller" />
+			<Property name="Italian" value="A Fevered Traveller" />
+			<Property name="German" value="A Fevered Traveller" />
+			<Property name="Spanish" value="A Fevered Traveller" />
+			<Property name="Russian" value="A Fevered Traveller" />
+			<Property name="Polish" value="A Fevered Traveller" />
+			<Property name="Dutch" value="A Fevered Traveller" />
+			<Property name="Portuguese" value="A Fevered Traveller" />
+			<Property name="LatinAmericanSpanish" value="A Fevered Traveller" />
+			<Property name="BrazilianPortuguese" value="A Fevered Traveller" />
+			<Property name="SimplifiedChinese" value="A Fevered Traveller" />
+			<Property name="TraditionalChinese" value="A Fevered Traveller" />
+			<Property name="TencentChinese" value="A Fevered Traveller" />
+			<Property name="Korean" value="A Fevered Traveller" />
+			<Property name="Japanese" value="A Fevered Traveller" />
 			<Property name="USEnglish" value="A Fevered Traveller" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_Q" />
 			<Property name="English" value="Give the traveller a bed?" />
+			<Property name="French" value="Give the traveller a bed?" />
+			<Property name="Italian" value="Give the traveller a bed?" />
+			<Property name="German" value="Give the traveller a bed?" />
+			<Property name="Spanish" value="Give the traveller a bed?" />
+			<Property name="Russian" value="Give the traveller a bed?" />
+			<Property name="Polish" value="Give the traveller a bed?" />
+			<Property name="Dutch" value="Give the traveller a bed?" />
+			<Property name="Portuguese" value="Give the traveller a bed?" />
+			<Property name="LatinAmericanSpanish" value="Give the traveller a bed?" />
+			<Property name="BrazilianPortuguese" value="Give the traveller a bed?" />
+			<Property name="SimplifiedChinese" value="Give the traveller a bed?" />
+			<Property name="TraditionalChinese" value="Give the traveller a bed?" />
+			<Property name="TencentChinese" value="Give the traveller a bed?" />
+			<Property name="Korean" value="Give the traveller a bed?" />
+			<Property name="Japanese" value="Give the traveller a bed?" />
 			<Property name="USEnglish" value="Give the traveller a bed?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D3_D" />
 			<Property name="English" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="French" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Italian" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="German" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Spanish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Russian" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Polish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Dutch" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Portuguese" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="LatinAmericanSpanish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="BrazilianPortuguese" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="SimplifiedChinese" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="TraditionalChinese" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="TencentChinese" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Korean" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
+			<Property name="Japanese" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
 			<Property name="USEnglish" value="A traveller staggers in with a fever, asking for a bed until it breaks. They have little to offer but a trinket from their pack, and plenty of time to talk while they recover." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_O1" />
 			<Property name="English" value="Download the charts" />
+			<Property name="French" value="Download the charts" />
+			<Property name="Italian" value="Download the charts" />
+			<Property name="German" value="Download the charts" />
+			<Property name="Spanish" value="Download the charts" />
+			<Property name="Russian" value="Download the charts" />
+			<Property name="Polish" value="Download the charts" />
+			<Property name="Dutch" value="Download the charts" />
+			<Property name="Portuguese" value="Download the charts" />
+			<Property name="LatinAmericanSpanish" value="Download the charts" />
+			<Property name="BrazilianPortuguese" value="Download the charts" />
+			<Property name="SimplifiedChinese" value="Download the charts" />
+			<Property name="TraditionalChinese" value="Download the charts" />
+			<Property name="TencentChinese" value="Download the charts" />
+			<Property name="Korean" value="Download the charts" />
+			<Property name="Japanese" value="Download the charts" />
 			<Property name="USEnglish" value="Download the charts" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_O2" />
 			<Property name="English" value="Wire it into the perimeter sensors" />
+			<Property name="French" value="Wire it into the perimeter sensors" />
+			<Property name="Italian" value="Wire it into the perimeter sensors" />
+			<Property name="German" value="Wire it into the perimeter sensors" />
+			<Property name="Spanish" value="Wire it into the perimeter sensors" />
+			<Property name="Russian" value="Wire it into the perimeter sensors" />
+			<Property name="Polish" value="Wire it into the perimeter sensors" />
+			<Property name="Dutch" value="Wire it into the perimeter sensors" />
+			<Property name="Portuguese" value="Wire it into the perimeter sensors" />
+			<Property name="LatinAmericanSpanish" value="Wire it into the perimeter sensors" />
+			<Property name="BrazilianPortuguese" value="Wire it into the perimeter sensors" />
+			<Property name="SimplifiedChinese" value="Wire it into the perimeter sensors" />
+			<Property name="TraditionalChinese" value="Wire it into the perimeter sensors" />
+			<Property name="TencentChinese" value="Wire it into the perimeter sensors" />
+			<Property name="Korean" value="Wire it into the perimeter sensors" />
+			<Property name="Japanese" value="Wire it into the perimeter sensors" />
 			<Property name="USEnglish" value="Wire it into the perimeter sensors" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_T" />
 			<Property name="English" value="The Buried Beacon" />
+			<Property name="French" value="The Buried Beacon" />
+			<Property name="Italian" value="The Buried Beacon" />
+			<Property name="German" value="The Buried Beacon" />
+			<Property name="Spanish" value="The Buried Beacon" />
+			<Property name="Russian" value="The Buried Beacon" />
+			<Property name="Polish" value="The Buried Beacon" />
+			<Property name="Dutch" value="The Buried Beacon" />
+			<Property name="Portuguese" value="The Buried Beacon" />
+			<Property name="LatinAmericanSpanish" value="The Buried Beacon" />
+			<Property name="BrazilianPortuguese" value="The Buried Beacon" />
+			<Property name="SimplifiedChinese" value="The Buried Beacon" />
+			<Property name="TraditionalChinese" value="The Buried Beacon" />
+			<Property name="TencentChinese" value="The Buried Beacon" />
+			<Property name="Korean" value="The Buried Beacon" />
+			<Property name="Japanese" value="The Buried Beacon" />
 			<Property name="USEnglish" value="The Buried Beacon" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_Q" />
 			<Property name="English" value="What should be done with the booster?" />
+			<Property name="French" value="What should be done with the booster?" />
+			<Property name="Italian" value="What should be done with the booster?" />
+			<Property name="German" value="What should be done with the booster?" />
+			<Property name="Spanish" value="What should be done with the booster?" />
+			<Property name="Russian" value="What should be done with the booster?" />
+			<Property name="Polish" value="What should be done with the booster?" />
+			<Property name="Dutch" value="What should be done with the booster?" />
+			<Property name="Portuguese" value="What should be done with the booster?" />
+			<Property name="LatinAmericanSpanish" value="What should be done with the booster?" />
+			<Property name="BrazilianPortuguese" value="What should be done with the booster?" />
+			<Property name="SimplifiedChinese" value="What should be done with the booster?" />
+			<Property name="TraditionalChinese" value="What should be done with the booster?" />
+			<Property name="TencentChinese" value="What should be done with the booster?" />
+			<Property name="Korean" value="What should be done with the booster?" />
+			<Property name="Japanese" value="What should be done with the booster?" />
 			<Property name="USEnglish" value="What should be done with the booster?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D4_D" />
 			<Property name="English" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="French" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Italian" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="German" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Spanish" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Russian" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Polish" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Dutch" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Portuguese" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="LatinAmericanSpanish" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="BrazilianPortuguese" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="SimplifiedChinese" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="TraditionalChinese" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="TencentChinese" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Korean" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
+			<Property name="Japanese" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
 			<Property name="USEnglish" value="Builders digging a new foundation hit a buried signal booster. It still hums, and its memory is full of planetary charts." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_O1" />
 			<Property name="English" value="Fund a full festival (adds debt)" />
+			<Property name="French" value="Fund a full festival (adds debt)" />
+			<Property name="Italian" value="Fund a full festival (adds debt)" />
+			<Property name="German" value="Fund a full festival (adds debt)" />
+			<Property name="Spanish" value="Fund a full festival (adds debt)" />
+			<Property name="Russian" value="Fund a full festival (adds debt)" />
+			<Property name="Polish" value="Fund a full festival (adds debt)" />
+			<Property name="Dutch" value="Fund a full festival (adds debt)" />
+			<Property name="Portuguese" value="Fund a full festival (adds debt)" />
+			<Property name="LatinAmericanSpanish" value="Fund a full festival (adds debt)" />
+			<Property name="BrazilianPortuguese" value="Fund a full festival (adds debt)" />
+			<Property name="SimplifiedChinese" value="Fund a full festival (adds debt)" />
+			<Property name="TraditionalChinese" value="Fund a full festival (adds debt)" />
+			<Property name="TencentChinese" value="Fund a full festival (adds debt)" />
+			<Property name="Korean" value="Fund a full festival (adds debt)" />
+			<Property name="Japanese" value="Fund a full festival (adds debt)" />
 			<Property name="USEnglish" value="Fund a full festival (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_O2" />
 			<Property name="English" value="Keep it small and join in" />
+			<Property name="French" value="Keep it small and join in" />
+			<Property name="Italian" value="Keep it small and join in" />
+			<Property name="German" value="Keep it small and join in" />
+			<Property name="Spanish" value="Keep it small and join in" />
+			<Property name="Russian" value="Keep it small and join in" />
+			<Property name="Polish" value="Keep it small and join in" />
+			<Property name="Dutch" value="Keep it small and join in" />
+			<Property name="Portuguese" value="Keep it small and join in" />
+			<Property name="LatinAmericanSpanish" value="Keep it small and join in" />
+			<Property name="BrazilianPortuguese" value="Keep it small and join in" />
+			<Property name="SimplifiedChinese" value="Keep it small and join in" />
+			<Property name="TraditionalChinese" value="Keep it small and join in" />
+			<Property name="TencentChinese" value="Keep it small and join in" />
+			<Property name="Korean" value="Keep it small and join in" />
+			<Property name="Japanese" value="Keep it small and join in" />
 			<Property name="USEnglish" value="Keep it small and join in" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_T" />
 			<Property name="English" value="Festival of Lights" />
+			<Property name="French" value="Festival of Lights" />
+			<Property name="Italian" value="Festival of Lights" />
+			<Property name="German" value="Festival of Lights" />
+			<Property name="Spanish" value="Festival of Lights" />
+			<Property name="Russian" value="Festival of Lights" />
+			<Property name="Polish" value="Festival of Lights" />
+			<Property name="Dutch" value="Festival of Lights" />
+			<Property name="Portuguese" value="Festival of Lights" />
+			<Property name="LatinAmericanSpanish" value="Festival of Lights" />
+			<Property name="BrazilianPortuguese" value="Festival of Lights" />
+			<Property name="SimplifiedChinese" value="Festival of Lights" />
+			<Property name="TraditionalChinese" value="Festival of Lights" />
+			<Property name="TencentChinese" value="Festival of Lights" />
+			<Property name="Korean" value="Festival of Lights" />
+			<Property name="Japanese" value="Festival of Lights" />
 			<Property name="USEnglish" value="Festival of Lights" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_Q" />
 			<Property name="English" value="How big should the festival be?" />
+			<Property name="French" value="How big should the festival be?" />
+			<Property name="Italian" value="How big should the festival be?" />
+			<Property name="German" value="How big should the festival be?" />
+			<Property name="Spanish" value="How big should the festival be?" />
+			<Property name="Russian" value="How big should the festival be?" />
+			<Property name="Polish" value="How big should the festival be?" />
+			<Property name="Dutch" value="How big should the festival be?" />
+			<Property name="Portuguese" value="How big should the festival be?" />
+			<Property name="LatinAmericanSpanish" value="How big should the festival be?" />
+			<Property name="BrazilianPortuguese" value="How big should the festival be?" />
+			<Property name="SimplifiedChinese" value="How big should the festival be?" />
+			<Property name="TraditionalChinese" value="How big should the festival be?" />
+			<Property name="TencentChinese" value="How big should the festival be?" />
+			<Property name="Korean" value="How big should the festival be?" />
+			<Property name="Japanese" value="How big should the festival be?" />
 			<Property name="USEnglish" value="How big should the festival be?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D5_D" />
 			<Property name="English" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="French" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Italian" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="German" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Spanish" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Russian" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Polish" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Dutch" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Portuguese" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="LatinAmericanSpanish" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="BrazilianPortuguese" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="SimplifiedChinese" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="TraditionalChinese" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="TencentChinese" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Korean" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
+			<Property name="Japanese" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
 			<Property name="USEnglish" value="The settlers want to throw a festival, with lanterns, music and fireworks over the rooftops. They are sure there is something worth celebrating." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_O1" />
 			<Property name="English" value="Side with the crew (adds debt)" />
+			<Property name="French" value="Side with the crew (adds debt)" />
+			<Property name="Italian" value="Side with the crew (adds debt)" />
+			<Property name="German" value="Side with the crew (adds debt)" />
+			<Property name="Spanish" value="Side with the crew (adds debt)" />
+			<Property name="Russian" value="Side with the crew (adds debt)" />
+			<Property name="Polish" value="Side with the crew (adds debt)" />
+			<Property name="Dutch" value="Side with the crew (adds debt)" />
+			<Property name="Portuguese" value="Side with the crew (adds debt)" />
+			<Property name="LatinAmericanSpanish" value="Side with the crew (adds debt)" />
+			<Property name="BrazilianPortuguese" value="Side with the crew (adds debt)" />
+			<Property name="SimplifiedChinese" value="Side with the crew (adds debt)" />
+			<Property name="TraditionalChinese" value="Side with the crew (adds debt)" />
+			<Property name="TencentChinese" value="Side with the crew (adds debt)" />
+			<Property name="Korean" value="Side with the crew (adds debt)" />
+			<Property name="Japanese" value="Side with the crew (adds debt)" />
 			<Property name="USEnglish" value="Side with the crew (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_O2" />
 			<Property name="English" value="Side with the foreman" />
+			<Property name="French" value="Side with the foreman" />
+			<Property name="Italian" value="Side with the foreman" />
+			<Property name="German" value="Side with the foreman" />
+			<Property name="Spanish" value="Side with the foreman" />
+			<Property name="Russian" value="Side with the foreman" />
+			<Property name="Polish" value="Side with the foreman" />
+			<Property name="Dutch" value="Side with the foreman" />
+			<Property name="Portuguese" value="Side with the foreman" />
+			<Property name="LatinAmericanSpanish" value="Side with the foreman" />
+			<Property name="BrazilianPortuguese" value="Side with the foreman" />
+			<Property name="SimplifiedChinese" value="Side with the foreman" />
+			<Property name="TraditionalChinese" value="Side with the foreman" />
+			<Property name="TencentChinese" value="Side with the foreman" />
+			<Property name="Korean" value="Side with the foreman" />
+			<Property name="Japanese" value="Side with the foreman" />
 			<Property name="USEnglish" value="Side with the foreman" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_T" />
 			<Property name="English" value="The Wage Dispute" />
+			<Property name="French" value="The Wage Dispute" />
+			<Property name="Italian" value="The Wage Dispute" />
+			<Property name="German" value="The Wage Dispute" />
+			<Property name="Spanish" value="The Wage Dispute" />
+			<Property name="Russian" value="The Wage Dispute" />
+			<Property name="Polish" value="The Wage Dispute" />
+			<Property name="Dutch" value="The Wage Dispute" />
+			<Property name="Portuguese" value="The Wage Dispute" />
+			<Property name="LatinAmericanSpanish" value="The Wage Dispute" />
+			<Property name="BrazilianPortuguese" value="The Wage Dispute" />
+			<Property name="SimplifiedChinese" value="The Wage Dispute" />
+			<Property name="TraditionalChinese" value="The Wage Dispute" />
+			<Property name="TencentChinese" value="The Wage Dispute" />
+			<Property name="Korean" value="The Wage Dispute" />
+			<Property name="Japanese" value="The Wage Dispute" />
 			<Property name="USEnglish" value="The Wage Dispute" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_Q" />
 			<Property name="English" value="Whose side is the Overseer on?" />
+			<Property name="French" value="Whose side is the Overseer on?" />
+			<Property name="Italian" value="Whose side is the Overseer on?" />
+			<Property name="German" value="Whose side is the Overseer on?" />
+			<Property name="Spanish" value="Whose side is the Overseer on?" />
+			<Property name="Russian" value="Whose side is the Overseer on?" />
+			<Property name="Polish" value="Whose side is the Overseer on?" />
+			<Property name="Dutch" value="Whose side is the Overseer on?" />
+			<Property name="Portuguese" value="Whose side is the Overseer on?" />
+			<Property name="LatinAmericanSpanish" value="Whose side is the Overseer on?" />
+			<Property name="BrazilianPortuguese" value="Whose side is the Overseer on?" />
+			<Property name="SimplifiedChinese" value="Whose side is the Overseer on?" />
+			<Property name="TraditionalChinese" value="Whose side is the Overseer on?" />
+			<Property name="TencentChinese" value="Whose side is the Overseer on?" />
+			<Property name="Korean" value="Whose side is the Overseer on?" />
+			<Property name="Japanese" value="Whose side is the Overseer on?" />
 			<Property name="USEnglish" value="Whose side is the Overseer on?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_D6_D" />
 			<Property name="English" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="French" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Italian" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="German" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Spanish" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Russian" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Polish" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Dutch" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Portuguese" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="LatinAmericanSpanish" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="BrazilianPortuguese" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="SimplifiedChinese" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="TraditionalChinese" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="TencentChinese" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Korean" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
+			<Property name="Japanese" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
 			<Property name="USEnglish" value="Two workers stand before the Overseer. One says the foreman has been short-changing the night crew. The foreman says the crew has been short-changing the work." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_O1" />
 			<Property name="English" value="Let them stay" />
+			<Property name="French" value="Let them stay" />
+			<Property name="Italian" value="Let them stay" />
+			<Property name="German" value="Let them stay" />
+			<Property name="Spanish" value="Let them stay" />
+			<Property name="Russian" value="Let them stay" />
+			<Property name="Polish" value="Let them stay" />
+			<Property name="Dutch" value="Let them stay" />
+			<Property name="Portuguese" value="Let them stay" />
+			<Property name="LatinAmericanSpanish" value="Let them stay" />
+			<Property name="BrazilianPortuguese" value="Let them stay" />
+			<Property name="SimplifiedChinese" value="Let them stay" />
+			<Property name="TraditionalChinese" value="Let them stay" />
+			<Property name="TencentChinese" value="Let them stay" />
+			<Property name="Korean" value="Let them stay" />
+			<Property name="Japanese" value="Let them stay" />
 			<Property name="USEnglish" value="Let them stay" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_O2" />
 			<Property name="English" value="Turn them away" />
+			<Property name="French" value="Turn them away" />
+			<Property name="Italian" value="Turn them away" />
+			<Property name="German" value="Turn them away" />
+			<Property name="Spanish" value="Turn them away" />
+			<Property name="Russian" value="Turn them away" />
+			<Property name="Polish" value="Turn them away" />
+			<Property name="Dutch" value="Turn them away" />
+			<Property name="Portuguese" value="Turn them away" />
+			<Property name="LatinAmericanSpanish" value="Turn them away" />
+			<Property name="BrazilianPortuguese" value="Turn them away" />
+			<Property name="SimplifiedChinese" value="Turn them away" />
+			<Property name="TraditionalChinese" value="Turn them away" />
+			<Property name="TencentChinese" value="Turn them away" />
+			<Property name="Korean" value="Turn them away" />
+			<Property name="Japanese" value="Turn them away" />
 			<Property name="USEnglish" value="Turn them away" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_T" />
 			<Property name="English" value="A Stranger at the Gate" />
+			<Property name="French" value="A Stranger at the Gate" />
+			<Property name="Italian" value="A Stranger at the Gate" />
+			<Property name="German" value="A Stranger at the Gate" />
+			<Property name="Spanish" value="A Stranger at the Gate" />
+			<Property name="Russian" value="A Stranger at the Gate" />
+			<Property name="Polish" value="A Stranger at the Gate" />
+			<Property name="Dutch" value="A Stranger at the Gate" />
+			<Property name="Portuguese" value="A Stranger at the Gate" />
+			<Property name="LatinAmericanSpanish" value="A Stranger at the Gate" />
+			<Property name="BrazilianPortuguese" value="A Stranger at the Gate" />
+			<Property name="SimplifiedChinese" value="A Stranger at the Gate" />
+			<Property name="TraditionalChinese" value="A Stranger at the Gate" />
+			<Property name="TencentChinese" value="A Stranger at the Gate" />
+			<Property name="Korean" value="A Stranger at the Gate" />
+			<Property name="Japanese" value="A Stranger at the Gate" />
 			<Property name="USEnglish" value="A Stranger at the Gate" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_Q" />
 			<Property name="English" value="Let the stranger stay?" />
+			<Property name="French" value="Let the stranger stay?" />
+			<Property name="Italian" value="Let the stranger stay?" />
+			<Property name="German" value="Let the stranger stay?" />
+			<Property name="Spanish" value="Let the stranger stay?" />
+			<Property name="Russian" value="Let the stranger stay?" />
+			<Property name="Polish" value="Let the stranger stay?" />
+			<Property name="Dutch" value="Let the stranger stay?" />
+			<Property name="Portuguese" value="Let the stranger stay?" />
+			<Property name="LatinAmericanSpanish" value="Let the stranger stay?" />
+			<Property name="BrazilianPortuguese" value="Let the stranger stay?" />
+			<Property name="SimplifiedChinese" value="Let the stranger stay?" />
+			<Property name="TraditionalChinese" value="Let the stranger stay?" />
+			<Property name="TencentChinese" value="Let the stranger stay?" />
+			<Property name="Korean" value="Let the stranger stay?" />
+			<Property name="Japanese" value="Let the stranger stay?" />
 			<Property name="USEnglish" value="Let the stranger stay?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1_D" />
 			<Property name="English" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="French" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Italian" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="German" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Spanish" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Russian" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Polish" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Dutch" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Portuguese" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="LatinAmericanSpanish" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="BrazilianPortuguese" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="SimplifiedChinese" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="TraditionalChinese" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="TencentChinese" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Korean" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
+			<Property name="Japanese" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
 			<Property name="USEnglish" value="A stranger in worn armour asks for shelter. They give a name, but nothing else about where they have come from." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_O1" />
 			<Property name="English" value="Open it carefully" />
+			<Property name="French" value="Open it carefully" />
+			<Property name="Italian" value="Open it carefully" />
+			<Property name="German" value="Open it carefully" />
+			<Property name="Spanish" value="Open it carefully" />
+			<Property name="Russian" value="Open it carefully" />
+			<Property name="Polish" value="Open it carefully" />
+			<Property name="Dutch" value="Open it carefully" />
+			<Property name="Portuguese" value="Open it carefully" />
+			<Property name="LatinAmericanSpanish" value="Open it carefully" />
+			<Property name="BrazilianPortuguese" value="Open it carefully" />
+			<Property name="SimplifiedChinese" value="Open it carefully" />
+			<Property name="TraditionalChinese" value="Open it carefully" />
+			<Property name="TencentChinese" value="Open it carefully" />
+			<Property name="Korean" value="Open it carefully" />
+			<Property name="Japanese" value="Open it carefully" />
 			<Property name="USEnglish" value="Open it carefully" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_O2" />
 			<Property name="English" value="Sell it unopened (units)" />
+			<Property name="French" value="Sell it unopened (units)" />
+			<Property name="Italian" value="Sell it unopened (units)" />
+			<Property name="German" value="Sell it unopened (units)" />
+			<Property name="Spanish" value="Sell it unopened (units)" />
+			<Property name="Russian" value="Sell it unopened (units)" />
+			<Property name="Polish" value="Sell it unopened (units)" />
+			<Property name="Dutch" value="Sell it unopened (units)" />
+			<Property name="Portuguese" value="Sell it unopened (units)" />
+			<Property name="LatinAmericanSpanish" value="Sell it unopened (units)" />
+			<Property name="BrazilianPortuguese" value="Sell it unopened (units)" />
+			<Property name="SimplifiedChinese" value="Sell it unopened (units)" />
+			<Property name="TraditionalChinese" value="Sell it unopened (units)" />
+			<Property name="TencentChinese" value="Sell it unopened (units)" />
+			<Property name="Korean" value="Sell it unopened (units)" />
+			<Property name="Japanese" value="Sell it unopened (units)" />
 			<Property name="USEnglish" value="Sell it unopened (units)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_T" />
 			<Property name="English" value="A Sealed Vault" />
+			<Property name="French" value="A Sealed Vault" />
+			<Property name="Italian" value="A Sealed Vault" />
+			<Property name="German" value="A Sealed Vault" />
+			<Property name="Spanish" value="A Sealed Vault" />
+			<Property name="Russian" value="A Sealed Vault" />
+			<Property name="Polish" value="A Sealed Vault" />
+			<Property name="Dutch" value="A Sealed Vault" />
+			<Property name="Portuguese" value="A Sealed Vault" />
+			<Property name="LatinAmericanSpanish" value="A Sealed Vault" />
+			<Property name="BrazilianPortuguese" value="A Sealed Vault" />
+			<Property name="SimplifiedChinese" value="A Sealed Vault" />
+			<Property name="TraditionalChinese" value="A Sealed Vault" />
+			<Property name="TencentChinese" value="A Sealed Vault" />
+			<Property name="Korean" value="A Sealed Vault" />
+			<Property name="Japanese" value="A Sealed Vault" />
 			<Property name="USEnglish" value="A Sealed Vault" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_Q" />
 			<Property name="English" value="Open the vault?" />
+			<Property name="French" value="Open the vault?" />
+			<Property name="Italian" value="Open the vault?" />
+			<Property name="German" value="Open the vault?" />
+			<Property name="Spanish" value="Open the vault?" />
+			<Property name="Russian" value="Open the vault?" />
+			<Property name="Polish" value="Open the vault?" />
+			<Property name="Dutch" value="Open the vault?" />
+			<Property name="Portuguese" value="Open the vault?" />
+			<Property name="LatinAmericanSpanish" value="Open the vault?" />
+			<Property name="BrazilianPortuguese" value="Open the vault?" />
+			<Property name="SimplifiedChinese" value="Open the vault?" />
+			<Property name="TraditionalChinese" value="Open the vault?" />
+			<Property name="TencentChinese" value="Open the vault?" />
+			<Property name="Korean" value="Open the vault?" />
+			<Property name="Japanese" value="Open the vault?" />
 			<Property name="USEnglish" value="Open the vault?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2_D" />
 			<Property name="English" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="French" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Italian" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="German" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Spanish" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Russian" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Polish" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Dutch" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Portuguese" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="LatinAmericanSpanish" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="BrazilianPortuguese" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="SimplifiedChinese" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="TraditionalChinese" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="TencentChinese" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Korean" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
+			<Property name="Japanese" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
 			<Property name="USEnglish" value="A farmer clearing a cave found a sealed vault of ancient seeds. Collectors would pay well for it unopened." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_O1" />
 			<Property name="English" value="Send a search party" />
+			<Property name="French" value="Send a search party" />
+			<Property name="Italian" value="Send a search party" />
+			<Property name="German" value="Send a search party" />
+			<Property name="Spanish" value="Send a search party" />
+			<Property name="Russian" value="Send a search party" />
+			<Property name="Polish" value="Send a search party" />
+			<Property name="Dutch" value="Send a search party" />
+			<Property name="Portuguese" value="Send a search party" />
+			<Property name="LatinAmericanSpanish" value="Send a search party" />
+			<Property name="BrazilianPortuguese" value="Send a search party" />
+			<Property name="SimplifiedChinese" value="Send a search party" />
+			<Property name="TraditionalChinese" value="Send a search party" />
+			<Property name="TencentChinese" value="Send a search party" />
+			<Property name="Korean" value="Send a search party" />
+			<Property name="Japanese" value="Send a search party" />
 			<Property name="USEnglish" value="Send a search party" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_O2" />
 			<Property name="English" value="Light a beacon and wait" />
+			<Property name="French" value="Light a beacon and wait" />
+			<Property name="Italian" value="Light a beacon and wait" />
+			<Property name="German" value="Light a beacon and wait" />
+			<Property name="Spanish" value="Light a beacon and wait" />
+			<Property name="Russian" value="Light a beacon and wait" />
+			<Property name="Polish" value="Light a beacon and wait" />
+			<Property name="Dutch" value="Light a beacon and wait" />
+			<Property name="Portuguese" value="Light a beacon and wait" />
+			<Property name="LatinAmericanSpanish" value="Light a beacon and wait" />
+			<Property name="BrazilianPortuguese" value="Light a beacon and wait" />
+			<Property name="SimplifiedChinese" value="Light a beacon and wait" />
+			<Property name="TraditionalChinese" value="Light a beacon and wait" />
+			<Property name="TencentChinese" value="Light a beacon and wait" />
+			<Property name="Korean" value="Light a beacon and wait" />
+			<Property name="Japanese" value="Light a beacon and wait" />
 			<Property name="USEnglish" value="Light a beacon and wait" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_T" />
 			<Property name="English" value="Overdue" />
+			<Property name="French" value="Overdue" />
+			<Property name="Italian" value="Overdue" />
+			<Property name="German" value="Overdue" />
+			<Property name="Spanish" value="Overdue" />
+			<Property name="Russian" value="Overdue" />
+			<Property name="Polish" value="Overdue" />
+			<Property name="Dutch" value="Overdue" />
+			<Property name="Portuguese" value="Overdue" />
+			<Property name="LatinAmericanSpanish" value="Overdue" />
+			<Property name="BrazilianPortuguese" value="Overdue" />
+			<Property name="SimplifiedChinese" value="Overdue" />
+			<Property name="TraditionalChinese" value="Overdue" />
+			<Property name="TencentChinese" value="Overdue" />
+			<Property name="Korean" value="Overdue" />
+			<Property name="Japanese" value="Overdue" />
 			<Property name="USEnglish" value="Overdue" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_Q" />
 			<Property name="English" value="Send a search party?" />
+			<Property name="French" value="Send a search party?" />
+			<Property name="Italian" value="Send a search party?" />
+			<Property name="German" value="Send a search party?" />
+			<Property name="Spanish" value="Send a search party?" />
+			<Property name="Russian" value="Send a search party?" />
+			<Property name="Polish" value="Send a search party?" />
+			<Property name="Dutch" value="Send a search party?" />
+			<Property name="Portuguese" value="Send a search party?" />
+			<Property name="LatinAmericanSpanish" value="Send a search party?" />
+			<Property name="BrazilianPortuguese" value="Send a search party?" />
+			<Property name="SimplifiedChinese" value="Send a search party?" />
+			<Property name="TraditionalChinese" value="Send a search party?" />
+			<Property name="TencentChinese" value="Send a search party?" />
+			<Property name="Korean" value="Send a search party?" />
+			<Property name="Japanese" value="Send a search party?" />
 			<Property name="USEnglish" value="Send a search party?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3_D" />
 			<Property name="English" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="French" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Italian" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="German" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Spanish" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Russian" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Polish" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Dutch" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Portuguese" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="LatinAmericanSpanish" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="BrazilianPortuguese" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="SimplifiedChinese" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="TraditionalChinese" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="TencentChinese" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Korean" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
+			<Property name="Japanese" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
 			<Property name="USEnglish" value="A survey team left two days ago to map the ridge. They should have been back yesterday." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_H_S1" />
 			<Property name="English" value="The Stranger at the Gate" />
+			<Property name="French" value="The Stranger at the Gate" />
+			<Property name="Italian" value="The Stranger at the Gate" />
+			<Property name="German" value="The Stranger at the Gate" />
+			<Property name="Spanish" value="The Stranger at the Gate" />
+			<Property name="Russian" value="The Stranger at the Gate" />
+			<Property name="Polish" value="The Stranger at the Gate" />
+			<Property name="Dutch" value="The Stranger at the Gate" />
+			<Property name="Portuguese" value="The Stranger at the Gate" />
+			<Property name="LatinAmericanSpanish" value="The Stranger at the Gate" />
+			<Property name="BrazilianPortuguese" value="The Stranger at the Gate" />
+			<Property name="SimplifiedChinese" value="The Stranger at the Gate" />
+			<Property name="TraditionalChinese" value="The Stranger at the Gate" />
+			<Property name="TencentChinese" value="The Stranger at the Gate" />
+			<Property name="Korean" value="The Stranger at the Gate" />
+			<Property name="Japanese" value="The Stranger at the Gate" />
 			<Property name="USEnglish" value="The Stranger at the Gate" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_H_S2" />
 			<Property name="English" value="The Seed Vault" />
+			<Property name="French" value="The Seed Vault" />
+			<Property name="Italian" value="The Seed Vault" />
+			<Property name="German" value="The Seed Vault" />
+			<Property name="Spanish" value="The Seed Vault" />
+			<Property name="Russian" value="The Seed Vault" />
+			<Property name="Polish" value="The Seed Vault" />
+			<Property name="Dutch" value="The Seed Vault" />
+			<Property name="Portuguese" value="The Seed Vault" />
+			<Property name="LatinAmericanSpanish" value="The Seed Vault" />
+			<Property name="BrazilianPortuguese" value="The Seed Vault" />
+			<Property name="SimplifiedChinese" value="The Seed Vault" />
+			<Property name="TraditionalChinese" value="The Seed Vault" />
+			<Property name="TencentChinese" value="The Seed Vault" />
+			<Property name="Korean" value="The Seed Vault" />
+			<Property name="Japanese" value="The Seed Vault" />
 			<Property name="USEnglish" value="The Seed Vault" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_H_S3" />
 			<Property name="English" value="The Lost Survey" />
+			<Property name="French" value="The Lost Survey" />
+			<Property name="Italian" value="The Lost Survey" />
+			<Property name="German" value="The Lost Survey" />
+			<Property name="Spanish" value="The Lost Survey" />
+			<Property name="Russian" value="The Lost Survey" />
+			<Property name="Polish" value="The Lost Survey" />
+			<Property name="Dutch" value="The Lost Survey" />
+			<Property name="Portuguese" value="The Lost Survey" />
+			<Property name="LatinAmericanSpanish" value="The Lost Survey" />
+			<Property name="BrazilianPortuguese" value="The Lost Survey" />
+			<Property name="SimplifiedChinese" value="The Lost Survey" />
+			<Property name="TraditionalChinese" value="The Lost Survey" />
+			<Property name="TencentChinese" value="The Lost Survey" />
+			<Property name="Korean" value="The Lost Survey" />
+			<Property name="Japanese" value="The Lost Survey" />
 			<Property name="USEnglish" value="The Lost Survey" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_O1" />
 			<Property name="English" value="Keep their secret" />
+			<Property name="French" value="Keep their secret" />
+			<Property name="Italian" value="Keep their secret" />
+			<Property name="German" value="Keep their secret" />
+			<Property name="Spanish" value="Keep their secret" />
+			<Property name="Russian" value="Keep their secret" />
+			<Property name="Polish" value="Keep their secret" />
+			<Property name="Dutch" value="Keep their secret" />
+			<Property name="Portuguese" value="Keep their secret" />
+			<Property name="LatinAmericanSpanish" value="Keep their secret" />
+			<Property name="BrazilianPortuguese" value="Keep their secret" />
+			<Property name="SimplifiedChinese" value="Keep their secret" />
+			<Property name="TraditionalChinese" value="Keep their secret" />
+			<Property name="TencentChinese" value="Keep their secret" />
+			<Property name="Korean" value="Keep their secret" />
+			<Property name="Japanese" value="Keep their secret" />
 			<Property name="USEnglish" value="Keep their secret" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_O2" />
 			<Property name="English" value="Hand them over for the bounty" />
+			<Property name="French" value="Hand them over for the bounty" />
+			<Property name="Italian" value="Hand them over for the bounty" />
+			<Property name="German" value="Hand them over for the bounty" />
+			<Property name="Spanish" value="Hand them over for the bounty" />
+			<Property name="Russian" value="Hand them over for the bounty" />
+			<Property name="Polish" value="Hand them over for the bounty" />
+			<Property name="Dutch" value="Hand them over for the bounty" />
+			<Property name="Portuguese" value="Hand them over for the bounty" />
+			<Property name="LatinAmericanSpanish" value="Hand them over for the bounty" />
+			<Property name="BrazilianPortuguese" value="Hand them over for the bounty" />
+			<Property name="SimplifiedChinese" value="Hand them over for the bounty" />
+			<Property name="TraditionalChinese" value="Hand them over for the bounty" />
+			<Property name="TencentChinese" value="Hand them over for the bounty" />
+			<Property name="Korean" value="Hand them over for the bounty" />
+			<Property name="Japanese" value="Hand them over for the bounty" />
 			<Property name="USEnglish" value="Hand them over for the bounty" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_T" />
 			<Property name="English" value="Rumours" />
+			<Property name="French" value="Rumours" />
+			<Property name="Italian" value="Rumours" />
+			<Property name="German" value="Rumours" />
+			<Property name="Spanish" value="Rumours" />
+			<Property name="Russian" value="Rumours" />
+			<Property name="Polish" value="Rumours" />
+			<Property name="Dutch" value="Rumours" />
+			<Property name="Portuguese" value="Rumours" />
+			<Property name="LatinAmericanSpanish" value="Rumours" />
+			<Property name="BrazilianPortuguese" value="Rumours" />
+			<Property name="SimplifiedChinese" value="Rumours" />
+			<Property name="TraditionalChinese" value="Rumours" />
+			<Property name="TencentChinese" value="Rumours" />
+			<Property name="Korean" value="Rumours" />
+			<Property name="Japanese" value="Rumours" />
 			<Property name="USEnglish" value="Rumours" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_Q" />
 			<Property name="English" value="Keep the stranger's secret?" />
+			<Property name="French" value="Keep the stranger's secret?" />
+			<Property name="Italian" value="Keep the stranger's secret?" />
+			<Property name="German" value="Keep the stranger's secret?" />
+			<Property name="Spanish" value="Keep the stranger's secret?" />
+			<Property name="Russian" value="Keep the stranger's secret?" />
+			<Property name="Polish" value="Keep the stranger's secret?" />
+			<Property name="Dutch" value="Keep the stranger's secret?" />
+			<Property name="Portuguese" value="Keep the stranger's secret?" />
+			<Property name="LatinAmericanSpanish" value="Keep the stranger's secret?" />
+			<Property name="BrazilianPortuguese" value="Keep the stranger's secret?" />
+			<Property name="SimplifiedChinese" value="Keep the stranger's secret?" />
+			<Property name="TraditionalChinese" value="Keep the stranger's secret?" />
+			<Property name="TencentChinese" value="Keep the stranger's secret?" />
+			<Property name="Korean" value="Keep the stranger's secret?" />
+			<Property name="Japanese" value="Keep the stranger's secret?" />
 			<Property name="USEnglish" value="Keep the stranger's secret?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1B_D" />
 			<Property name="English" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="French" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Italian" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="German" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Spanish" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Russian" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Polish" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Dutch" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Portuguese" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="LatinAmericanSpanish" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="BrazilianPortuguese" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="SimplifiedChinese" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="TraditionalChinese" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="TencentChinese" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Korean" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
+			<Property name="Japanese" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
 			<Property name="USEnglish" value="The stranger has worked hard and kept to themselves. Now a passing trader claims they deserted a pirate crew, and that pirates pay well to get deserters back." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_O1" />
 			<Property name="English" value="Stand together" />
+			<Property name="French" value="Stand together" />
+			<Property name="Italian" value="Stand together" />
+			<Property name="German" value="Stand together" />
+			<Property name="Spanish" value="Stand together" />
+			<Property name="Russian" value="Stand together" />
+			<Property name="Polish" value="Stand together" />
+			<Property name="Dutch" value="Stand together" />
+			<Property name="Portuguese" value="Stand together" />
+			<Property name="LatinAmericanSpanish" value="Stand together" />
+			<Property name="BrazilianPortuguese" value="Stand together" />
+			<Property name="SimplifiedChinese" value="Stand together" />
+			<Property name="TraditionalChinese" value="Stand together" />
+			<Property name="TencentChinese" value="Stand together" />
+			<Property name="Korean" value="Stand together" />
+			<Property name="Japanese" value="Stand together" />
 			<Property name="USEnglish" value="Stand together" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_O2" />
 			<Property name="English" value="Pay the pirates to leave (adds debt)" />
+			<Property name="French" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Italian" value="Pay the pirates to leave (adds debt)" />
+			<Property name="German" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Spanish" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Russian" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Polish" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Dutch" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Portuguese" value="Pay the pirates to leave (adds debt)" />
+			<Property name="LatinAmericanSpanish" value="Pay the pirates to leave (adds debt)" />
+			<Property name="BrazilianPortuguese" value="Pay the pirates to leave (adds debt)" />
+			<Property name="SimplifiedChinese" value="Pay the pirates to leave (adds debt)" />
+			<Property name="TraditionalChinese" value="Pay the pirates to leave (adds debt)" />
+			<Property name="TencentChinese" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Korean" value="Pay the pirates to leave (adds debt)" />
+			<Property name="Japanese" value="Pay the pirates to leave (adds debt)" />
 			<Property name="USEnglish" value="Pay the pirates to leave (adds debt)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_T" />
 			<Property name="English" value="The Crew Comes Looking" />
+			<Property name="French" value="The Crew Comes Looking" />
+			<Property name="Italian" value="The Crew Comes Looking" />
+			<Property name="German" value="The Crew Comes Looking" />
+			<Property name="Spanish" value="The Crew Comes Looking" />
+			<Property name="Russian" value="The Crew Comes Looking" />
+			<Property name="Polish" value="The Crew Comes Looking" />
+			<Property name="Dutch" value="The Crew Comes Looking" />
+			<Property name="Portuguese" value="The Crew Comes Looking" />
+			<Property name="LatinAmericanSpanish" value="The Crew Comes Looking" />
+			<Property name="BrazilianPortuguese" value="The Crew Comes Looking" />
+			<Property name="SimplifiedChinese" value="The Crew Comes Looking" />
+			<Property name="TraditionalChinese" value="The Crew Comes Looking" />
+			<Property name="TencentChinese" value="The Crew Comes Looking" />
+			<Property name="Korean" value="The Crew Comes Looking" />
+			<Property name="Japanese" value="The Crew Comes Looking" />
 			<Property name="USEnglish" value="The Crew Comes Looking" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_Q" />
 			<Property name="English" value="How should the settlement answer?" />
+			<Property name="French" value="How should the settlement answer?" />
+			<Property name="Italian" value="How should the settlement answer?" />
+			<Property name="German" value="How should the settlement answer?" />
+			<Property name="Spanish" value="How should the settlement answer?" />
+			<Property name="Russian" value="How should the settlement answer?" />
+			<Property name="Polish" value="How should the settlement answer?" />
+			<Property name="Dutch" value="How should the settlement answer?" />
+			<Property name="Portuguese" value="How should the settlement answer?" />
+			<Property name="LatinAmericanSpanish" value="How should the settlement answer?" />
+			<Property name="BrazilianPortuguese" value="How should the settlement answer?" />
+			<Property name="SimplifiedChinese" value="How should the settlement answer?" />
+			<Property name="TraditionalChinese" value="How should the settlement answer?" />
+			<Property name="TencentChinese" value="How should the settlement answer?" />
+			<Property name="Korean" value="How should the settlement answer?" />
+			<Property name="Japanese" value="How should the settlement answer?" />
 			<Property name="USEnglish" value="How should the settlement answer?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S1C_D" />
 			<Property name="English" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="French" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Italian" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="German" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Spanish" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Russian" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Polish" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Dutch" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Portuguese" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="LatinAmericanSpanish" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="BrazilianPortuguese" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="SimplifiedChinese" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="TraditionalChinese" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="TencentChinese" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Korean" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
+			<Property name="Japanese" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
 			<Property name="USEnglish" value="A pirate dropship lands at the edge of the settlement. The crew wants their deserter back, and they are not asking politely." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_O1" />
 			<Property name="English" value="Plant them for the settlement" />
+			<Property name="French" value="Plant them for the settlement" />
+			<Property name="Italian" value="Plant them for the settlement" />
+			<Property name="German" value="Plant them for the settlement" />
+			<Property name="Spanish" value="Plant them for the settlement" />
+			<Property name="Russian" value="Plant them for the settlement" />
+			<Property name="Polish" value="Plant them for the settlement" />
+			<Property name="Dutch" value="Plant them for the settlement" />
+			<Property name="Portuguese" value="Plant them for the settlement" />
+			<Property name="LatinAmericanSpanish" value="Plant them for the settlement" />
+			<Property name="BrazilianPortuguese" value="Plant them for the settlement" />
+			<Property name="SimplifiedChinese" value="Plant them for the settlement" />
+			<Property name="TraditionalChinese" value="Plant them for the settlement" />
+			<Property name="TencentChinese" value="Plant them for the settlement" />
+			<Property name="Korean" value="Plant them for the settlement" />
+			<Property name="Japanese" value="Plant them for the settlement" />
 			<Property name="USEnglish" value="Plant them for the settlement" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_O2" />
 			<Property name="English" value="Keep the best, plant the rest" />
+			<Property name="French" value="Keep the best, plant the rest" />
+			<Property name="Italian" value="Keep the best, plant the rest" />
+			<Property name="German" value="Keep the best, plant the rest" />
+			<Property name="Spanish" value="Keep the best, plant the rest" />
+			<Property name="Russian" value="Keep the best, plant the rest" />
+			<Property name="Polish" value="Keep the best, plant the rest" />
+			<Property name="Dutch" value="Keep the best, plant the rest" />
+			<Property name="Portuguese" value="Keep the best, plant the rest" />
+			<Property name="LatinAmericanSpanish" value="Keep the best, plant the rest" />
+			<Property name="BrazilianPortuguese" value="Keep the best, plant the rest" />
+			<Property name="SimplifiedChinese" value="Keep the best, plant the rest" />
+			<Property name="TraditionalChinese" value="Keep the best, plant the rest" />
+			<Property name="TencentChinese" value="Keep the best, plant the rest" />
+			<Property name="Korean" value="Keep the best, plant the rest" />
+			<Property name="Japanese" value="Keep the best, plant the rest" />
 			<Property name="USEnglish" value="Keep the best, plant the rest" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_T" />
 			<Property name="English" value="The Old Seeds" />
+			<Property name="French" value="The Old Seeds" />
+			<Property name="Italian" value="The Old Seeds" />
+			<Property name="German" value="The Old Seeds" />
+			<Property name="Spanish" value="The Old Seeds" />
+			<Property name="Russian" value="The Old Seeds" />
+			<Property name="Polish" value="The Old Seeds" />
+			<Property name="Dutch" value="The Old Seeds" />
+			<Property name="Portuguese" value="The Old Seeds" />
+			<Property name="LatinAmericanSpanish" value="The Old Seeds" />
+			<Property name="BrazilianPortuguese" value="The Old Seeds" />
+			<Property name="SimplifiedChinese" value="The Old Seeds" />
+			<Property name="TraditionalChinese" value="The Old Seeds" />
+			<Property name="TencentChinese" value="The Old Seeds" />
+			<Property name="Korean" value="The Old Seeds" />
+			<Property name="Japanese" value="The Old Seeds" />
 			<Property name="USEnglish" value="The Old Seeds" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_Q" />
 			<Property name="English" value="What should become of the seeds?" />
+			<Property name="French" value="What should become of the seeds?" />
+			<Property name="Italian" value="What should become of the seeds?" />
+			<Property name="German" value="What should become of the seeds?" />
+			<Property name="Spanish" value="What should become of the seeds?" />
+			<Property name="Russian" value="What should become of the seeds?" />
+			<Property name="Polish" value="What should become of the seeds?" />
+			<Property name="Dutch" value="What should become of the seeds?" />
+			<Property name="Portuguese" value="What should become of the seeds?" />
+			<Property name="LatinAmericanSpanish" value="What should become of the seeds?" />
+			<Property name="BrazilianPortuguese" value="What should become of the seeds?" />
+			<Property name="SimplifiedChinese" value="What should become of the seeds?" />
+			<Property name="TraditionalChinese" value="What should become of the seeds?" />
+			<Property name="TencentChinese" value="What should become of the seeds?" />
+			<Property name="Korean" value="What should become of the seeds?" />
+			<Property name="Japanese" value="What should become of the seeds?" />
 			<Property name="USEnglish" value="What should become of the seeds?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S2B_D" />
 			<Property name="English" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="French" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Italian" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="German" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Spanish" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Russian" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Polish" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Dutch" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Portuguese" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="LatinAmericanSpanish" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="BrazilianPortuguese" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="SimplifiedChinese" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="TraditionalChinese" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="TencentChinese" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Korean" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
+			<Property name="Japanese" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
 			<Property name="USEnglish" value="Most of the seeds are dust, but a handful are alive: a crop nobody alive has ever grown." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_O1" />
 			<Property name="English" value="Bring them home, with the relics" />
+			<Property name="French" value="Bring them home, with the relics" />
+			<Property name="Italian" value="Bring them home, with the relics" />
+			<Property name="German" value="Bring them home, with the relics" />
+			<Property name="Spanish" value="Bring them home, with the relics" />
+			<Property name="Russian" value="Bring them home, with the relics" />
+			<Property name="Polish" value="Bring them home, with the relics" />
+			<Property name="Dutch" value="Bring them home, with the relics" />
+			<Property name="Portuguese" value="Bring them home, with the relics" />
+			<Property name="LatinAmericanSpanish" value="Bring them home, with the relics" />
+			<Property name="BrazilianPortuguese" value="Bring them home, with the relics" />
+			<Property name="SimplifiedChinese" value="Bring them home, with the relics" />
+			<Property name="TraditionalChinese" value="Bring them home, with the relics" />
+			<Property name="TencentChinese" value="Bring them home, with the relics" />
+			<Property name="Korean" value="Bring them home, with the relics" />
+			<Property name="Japanese" value="Bring them home, with the relics" />
 			<Property name="USEnglish" value="Bring them home, with the relics" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_O2" />
 			<Property name="English" value="Leave the relics, copy the carvings" />
+			<Property name="French" value="Leave the relics, copy the carvings" />
+			<Property name="Italian" value="Leave the relics, copy the carvings" />
+			<Property name="German" value="Leave the relics, copy the carvings" />
+			<Property name="Spanish" value="Leave the relics, copy the carvings" />
+			<Property name="Russian" value="Leave the relics, copy the carvings" />
+			<Property name="Polish" value="Leave the relics, copy the carvings" />
+			<Property name="Dutch" value="Leave the relics, copy the carvings" />
+			<Property name="Portuguese" value="Leave the relics, copy the carvings" />
+			<Property name="LatinAmericanSpanish" value="Leave the relics, copy the carvings" />
+			<Property name="BrazilianPortuguese" value="Leave the relics, copy the carvings" />
+			<Property name="SimplifiedChinese" value="Leave the relics, copy the carvings" />
+			<Property name="TraditionalChinese" value="Leave the relics, copy the carvings" />
+			<Property name="TencentChinese" value="Leave the relics, copy the carvings" />
+			<Property name="Korean" value="Leave the relics, copy the carvings" />
+			<Property name="Japanese" value="Leave the relics, copy the carvings" />
 			<Property name="USEnglish" value="Leave the relics, copy the carvings" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_T" />
 			<Property name="English" value="Shelter in the Ruins" />
+			<Property name="French" value="Shelter in the Ruins" />
+			<Property name="Italian" value="Shelter in the Ruins" />
+			<Property name="German" value="Shelter in the Ruins" />
+			<Property name="Spanish" value="Shelter in the Ruins" />
+			<Property name="Russian" value="Shelter in the Ruins" />
+			<Property name="Polish" value="Shelter in the Ruins" />
+			<Property name="Dutch" value="Shelter in the Ruins" />
+			<Property name="Portuguese" value="Shelter in the Ruins" />
+			<Property name="LatinAmericanSpanish" value="Shelter in the Ruins" />
+			<Property name="BrazilianPortuguese" value="Shelter in the Ruins" />
+			<Property name="SimplifiedChinese" value="Shelter in the Ruins" />
+			<Property name="TraditionalChinese" value="Shelter in the Ruins" />
+			<Property name="TencentChinese" value="Shelter in the Ruins" />
+			<Property name="Korean" value="Shelter in the Ruins" />
+			<Property name="Japanese" value="Shelter in the Ruins" />
 			<Property name="USEnglish" value="Shelter in the Ruins" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_Q" />
 			<Property name="English" value="Bring the relics home?" />
+			<Property name="French" value="Bring the relics home?" />
+			<Property name="Italian" value="Bring the relics home?" />
+			<Property name="German" value="Bring the relics home?" />
+			<Property name="Spanish" value="Bring the relics home?" />
+			<Property name="Russian" value="Bring the relics home?" />
+			<Property name="Polish" value="Bring the relics home?" />
+			<Property name="Dutch" value="Bring the relics home?" />
+			<Property name="Portuguese" value="Bring the relics home?" />
+			<Property name="LatinAmericanSpanish" value="Bring the relics home?" />
+			<Property name="BrazilianPortuguese" value="Bring the relics home?" />
+			<Property name="SimplifiedChinese" value="Bring the relics home?" />
+			<Property name="TraditionalChinese" value="Bring the relics home?" />
+			<Property name="TencentChinese" value="Bring the relics home?" />
+			<Property name="Korean" value="Bring the relics home?" />
+			<Property name="Japanese" value="Bring the relics home?" />
 			<Property name="USEnglish" value="Bring the relics home?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3B_D" />
 			<Property name="English" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="French" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Italian" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="German" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Spanish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Russian" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Polish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Dutch" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Portuguese" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="LatinAmericanSpanish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="BrazilianPortuguese" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="SimplifiedChinese" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="TraditionalChinese" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="TencentChinese" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Korean" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
+			<Property name="Japanese" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
 			<Property name="USEnglish" value="The search party found the survey team sheltering in old ruins after a storm, unhurt. The walls around them are covered in carvings and relics nobody recognises." />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_O1" />
 			<Property name="English" value="Put them on display" />
+			<Property name="French" value="Put them on display" />
+			<Property name="Italian" value="Put them on display" />
+			<Property name="German" value="Put them on display" />
+			<Property name="Spanish" value="Put them on display" />
+			<Property name="Russian" value="Put them on display" />
+			<Property name="Polish" value="Put them on display" />
+			<Property name="Dutch" value="Put them on display" />
+			<Property name="Portuguese" value="Put them on display" />
+			<Property name="LatinAmericanSpanish" value="Put them on display" />
+			<Property name="BrazilianPortuguese" value="Put them on display" />
+			<Property name="SimplifiedChinese" value="Put them on display" />
+			<Property name="TraditionalChinese" value="Put them on display" />
+			<Property name="TencentChinese" value="Put them on display" />
+			<Property name="Korean" value="Put them on display" />
+			<Property name="Japanese" value="Put them on display" />
 			<Property name="USEnglish" value="Put them on display" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_O2" />
 			<Property name="English" value="Hand them to the Overseer (nanites)" />
+			<Property name="French" value="Hand them to the Overseer (nanites)" />
+			<Property name="Italian" value="Hand them to the Overseer (nanites)" />
+			<Property name="German" value="Hand them to the Overseer (nanites)" />
+			<Property name="Spanish" value="Hand them to the Overseer (nanites)" />
+			<Property name="Russian" value="Hand them to the Overseer (nanites)" />
+			<Property name="Polish" value="Hand them to the Overseer (nanites)" />
+			<Property name="Dutch" value="Hand them to the Overseer (nanites)" />
+			<Property name="Portuguese" value="Hand them to the Overseer (nanites)" />
+			<Property name="LatinAmericanSpanish" value="Hand them to the Overseer (nanites)" />
+			<Property name="BrazilianPortuguese" value="Hand them to the Overseer (nanites)" />
+			<Property name="SimplifiedChinese" value="Hand them to the Overseer (nanites)" />
+			<Property name="TraditionalChinese" value="Hand them to the Overseer (nanites)" />
+			<Property name="TencentChinese" value="Hand them to the Overseer (nanites)" />
+			<Property name="Korean" value="Hand them to the Overseer (nanites)" />
+			<Property name="Japanese" value="Hand them to the Overseer (nanites)" />
 			<Property name="USEnglish" value="Hand them to the Overseer (nanites)" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_T" />
 			<Property name="English" value="The Relics" />
+			<Property name="French" value="The Relics" />
+			<Property name="Italian" value="The Relics" />
+			<Property name="German" value="The Relics" />
+			<Property name="Spanish" value="The Relics" />
+			<Property name="Russian" value="The Relics" />
+			<Property name="Polish" value="The Relics" />
+			<Property name="Dutch" value="The Relics" />
+			<Property name="Portuguese" value="The Relics" />
+			<Property name="LatinAmericanSpanish" value="The Relics" />
+			<Property name="BrazilianPortuguese" value="The Relics" />
+			<Property name="SimplifiedChinese" value="The Relics" />
+			<Property name="TraditionalChinese" value="The Relics" />
+			<Property name="TencentChinese" value="The Relics" />
+			<Property name="Korean" value="The Relics" />
+			<Property name="Japanese" value="The Relics" />
 			<Property name="USEnglish" value="The Relics" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_Q" />
 			<Property name="English" value="What should be done with the relics?" />
+			<Property name="French" value="What should be done with the relics?" />
+			<Property name="Italian" value="What should be done with the relics?" />
+			<Property name="German" value="What should be done with the relics?" />
+			<Property name="Spanish" value="What should be done with the relics?" />
+			<Property name="Russian" value="What should be done with the relics?" />
+			<Property name="Polish" value="What should be done with the relics?" />
+			<Property name="Dutch" value="What should be done with the relics?" />
+			<Property name="Portuguese" value="What should be done with the relics?" />
+			<Property name="LatinAmericanSpanish" value="What should be done with the relics?" />
+			<Property name="BrazilianPortuguese" value="What should be done with the relics?" />
+			<Property name="SimplifiedChinese" value="What should be done with the relics?" />
+			<Property name="TraditionalChinese" value="What should be done with the relics?" />
+			<Property name="TencentChinese" value="What should be done with the relics?" />
+			<Property name="Korean" value="What should be done with the relics?" />
+			<Property name="Japanese" value="What should be done with the relics?" />
 			<Property name="USEnglish" value="What should be done with the relics?" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="OT_SS_S3C_D" />
 			<Property name="English" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="French" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Italian" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="German" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Spanish" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Russian" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Polish" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Dutch" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Portuguese" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="LatinAmericanSpanish" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="BrazilianPortuguese" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="SimplifiedChinese" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="TraditionalChinese" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="TencentChinese" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Korean" value="The relics are back in the settlement, and everyone has an opinion about them." />
+			<Property name="Japanese" value="The relics are back in the settlement, and everyone has an opinion about them." />
 			<Property name="USEnglish" value="The relics are back in the settlement, and everyone has an opinion about them." />
 		</Property>
 	</Property>

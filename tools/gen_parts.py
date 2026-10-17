@@ -5,7 +5,9 @@ lines of vanilla fields. Copying them from a vanilla part of the current build k
 them complete and current; the spec only names what differs.
 
 Spec keys (all optional):
-  text:      {loc_key: "English text"}                      -> LocTable.MXML
+  text:      {loc_key: "English text" | {English, French, ...}}  -> LocTable.MXML, every language column;
+               a plain string repeats the English everywhere, and in the object form each of the
+               15 other languages is its translation or null while pending (English is repeated)
   subgroups: [{group, id, name}]                            -> new build-menu subgroup in a vanilla group
   parts:     [{id, copy_from, object: {field: value}, groups: [[group, subgroup]],
                product_from, product: {field: value}}]      -> new object, cost and product entries;
@@ -26,6 +28,7 @@ Usage: gen_parts.py <spec.json> <module folder>
 import argparse
 import copy
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -40,7 +43,15 @@ OBJECTS = ("metadata/reality/tables/basebuildingobjectstable.MXML", "Objects", T
 COSTS = ("metadata/reality/tables/basebuildingcoststable.MXML", "ObjectCosts", TABLES / "BASEBUILDINGCOSTSTABLE.EXML")
 PRODUCTS = ("metadata/reality/tables/nms_basepartproducts.MXML", "Table", TABLES / "NMS_BASEPARTPRODUCTS.EXML")
 LOC_FILE = Path("LocTable.MXML")
-LOC_LANGUAGES = ("English", "USEnglish")
+# Vanilla TkLocalisationEntry column order; a column a mod leaves out shows the raw key in that language.
+LOC_LANGUAGES = (
+    "English", "French", "Italian", "German", "Spanish", "Russian", "Polish", "Dutch", "Portuguese",
+    "LatinAmericanSpanish", "BrazilianPortuguese", "SimplifiedChinese", "TraditionalChinese", "TencentChinese",
+    "Korean", "Japanese", "USEnglish",
+)
+# The game fills these in at run time, so a translation has to keep them.
+PLACEHOLDER = re.compile(r"%[A-Z_]+%")
+TRANSLATED = tuple(lang for lang in LOC_LANGUAGES if lang not in ("English", "USEnglish"))
 
 
 class SpecError(Exception):
@@ -169,14 +180,49 @@ def _check_ids(spec):
         seen.add(id_)
 
 
+def english(text):
+    """The English of a text entry in either spec form."""
+    return text if isinstance(text, str) else text.get("English")
+
+
+def loc_columns(key, text):
+    """Map every LocTable column to its text; a pending (null) translation repeats the English."""
+    if isinstance(text, str):
+        return {lang: text for lang in LOC_LANGUAGES}
+    english = text.get("English")
+    if not isinstance(english, str) or not english.strip():
+        raise SpecError(f"{key}: English text is missing")
+    unknown = sorted(set(text) - {"English", *TRANSLATED})
+    if unknown:
+        raise SpecError(f"{key}: unknown language(s) {', '.join(unknown)}; USEnglish always repeats English")
+    missing = [lang for lang in TRANSLATED if lang not in text]
+    if missing:
+        raise SpecError(f"{key}: no entry for {', '.join(missing)}; use null for a pending translation")
+    columns = {"English": english, "USEnglish": english}
+    for lang in TRANSLATED:
+        value = text[lang]
+        if value is None:
+            columns[lang] = english
+        elif not isinstance(value, str) or not value.strip():
+            raise SpecError(f"{key}: {lang} text is empty")
+        elif value == english:
+            raise SpecError(f"{key}: {lang} repeats the English; mark it pending with null")
+        elif set(PLACEHOLDER.findall(value)) != set(PLACEHOLDER.findall(english)):
+            raise SpecError(f"{key}: {lang} must keep the placeholders {sorted(set(PLACEHOLDER.findall(english)))}")
+        else:
+            columns[lang] = value
+    return columns
+
+
 def _loc_table(text):
     table = P({"name": "Table"})
-    for key, english in text.items():
+    for key, value in text.items():
         if len(key) > MAX_LOC_KEY:
             raise SpecError(f"loc key {key} is longer than {MAX_LOC_KEY} characters")
+        columns = loc_columns(key, value)
         entry = P({"name": "Table", "value": "TkLocalisationEntry"}, P({"name": "Id", "value": key}))
         for lang in LOC_LANGUAGES:
-            entry.append(P({"name": lang, "value": english}))
+            entry.append(P({"name": lang, "value": columns[lang]}))
         table.append(entry)
     root = ET.Element("Data", {"template": "cTkLocalisationTable"})
     root.append(table)
