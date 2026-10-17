@@ -1,6 +1,6 @@
 # Fair Ledger: rough plan
 
-Rough outline, written 2026-10-17. Not a spec yet. Nothing is built.
+Rough outline, written 2026-10-17. Nothing is built. How the modules are built, tested and released is in [build-plan.md](build-plan.md).
 
 ## Goal
 
@@ -41,7 +41,7 @@ Decided 2026-10-17:
 2. **Pay at the Administration Terminal** through an option appended to `SETTLEMENT_ADMIN`.
 3. **Exact steps at a premium of 2 units per 1 debt.** The Debt PositiveLarge range becomes a flat 100,000, so a cut always matches its price. Two options: a 100,000 cut for 200,000 units and a 1,000,000 cut for 2,000,000 units. Any price is possible: `GcCostMoney` takes a plain amount, and vanilla entries go up to 1,000,000,000 (verified). The range edit is a vanilla value the debt option depends on, so it lives in FairLedger, not the Rebalance module, and COMPATIBILITY.md lists it.
 4. **Hide the option at zero debt** with `DisablingConditions` first. Only if the session shows that cannot work, keep the option visible and warn in its text.
-5. **Break-even covers production buildings only,** by lowering their C upkeep to their C productivity. Residences, the bar and the fish pond keep their cost.
+5. **Break-even covers production buildings only,** by setting each one's C upkeep range to its C productivity range, so a building's net averages 0 but a single roll can still lose. Residences, the bar and the fish pond keep their cost. The upkeep rule was decided later the same day; see [build-plan.md](build-plan.md).
 6. **Override the four text keys** in English and USEnglish, if the session shows other languages keep their vanilla text. Otherwise fall back to new text only.
 7. **No guide sign in Fair Ledger.** A read-only town sign is a possible add-on module; see "Later: a town sign" below.
 

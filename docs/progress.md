@@ -313,4 +313,6 @@ Consequences:
 
 Decided 2026-10-17: every text entry is translated into all 17 languages, using the game's own terms, with English as the fallback for keys not yet translated (issue #22); the payment's price follows the Purchases setting.
 
-Next: the FairLedger specs and generator, after issue #22's language support.
+Decided 2026-10-17 for the build ([modules/fair-ledger/build-plan.md](modules/fair-ledger/build-plan.md)): ship the 100,000 and 1,000,000 payment options; each production building's C upkeep range becomes its C productivity range; issue #22 comes first and one 1.2.0 release carries both; one check session before release. Planning is complete.
+
+Next: issue #22, then the FairLedger generator.
