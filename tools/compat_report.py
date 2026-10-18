@@ -8,6 +8,7 @@ scan goes to --out or stdout. Scanning refuses while the game runs.
 """
 
 import argparse
+import re
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
@@ -33,6 +34,8 @@ EXCLUDED_MODULES = (
 )
 DEV_PREFIX = "_OTDEV_"
 PATCH_SUFFIXES = (".EXML", ".MXML", ".MBIN")
+# The loader reads text only from LocTable.MXML at a mod's root.
+LOC_TABLE = "LOCTABLE.MXML"
 
 
 class CompatError(Exception):
@@ -51,7 +54,7 @@ class Finding:
 class Edit:
     file: str  # mod-relative patch path, POSIX
     path: str
-    kind: str  # changed, list-append, added, overwritten
+    kind: str  # changed, list-append, added, overwritten, text-override
     old: str = ""
     new: str = ""
 
@@ -94,6 +97,27 @@ def patch_edits(patch_path, rel, vanilla_dir):
     return [e for e in (_classify(r, rel) for r in records) if e is not None]
 
 
+def loc_keys(path):
+    """Text keys a LocTable.MXML defines. Raises ET.ParseError."""
+    keys = []
+    for entry in ET.parse(path).getroot().iter("Property"):
+        if entry.get("value") == "TkLocalisationEntry":
+            id_ = entry.find("Property[@name='Id']")
+            keys.append(id_.get("value") if id_ is not None else entry.get("_id"))
+    return [k for k in keys if k]
+
+
+def vanilla_text_keys(vanilla_dir):
+    keys = set()
+    for path in (Path(vanilla_dir) / "language").glob("*english.MXML"):
+        keys.update(re.findall(r'TkLocalisationEntry" _id="([^"]+)"', path.read_text(encoding="utf-8")))
+    return keys
+
+
+def _is_loc_table(rel):
+    return rel.upper() == LOC_TABLE
+
+
 def _modules(mod_root, include_test_modules):
     mod_root = Path(mod_root)
     if not mod_root.is_dir():
@@ -112,11 +136,21 @@ def _patch_files(folder):
 def module_edits(mod_root, vanilla_dir, include_test_modules=False):
     """{module: (edits, new whole files)} for our modules. A patch that fails to merge is an error."""
     result = {}
+    vanilla_keys = None
     for name in _modules(mod_root, include_test_modules):
         edits, whole = [], []
         for path, rel in _patch_files(Path(mod_root) / name):
             if path.suffix.upper() != ".EXML":
                 whole.append(rel)
+                if _is_loc_table(rel):
+                    # A key vanilla already has replaces the game's own text in every language.
+                    if vanilla_keys is None:
+                        vanilla_keys = vanilla_text_keys(vanilla_dir)
+                    try:
+                        keys = loc_keys(path)
+                    except ET.ParseError as e:
+                        raise CompatError(f"{name}/{rel}: {e}") from e
+                    edits.extend(Edit(rel, key, "text-override") for key in keys if key in vanilla_keys)
                 continue
             try:
                 edits.extend(patch_edits(path, rel, vanilla_dir))
@@ -156,9 +190,10 @@ def generate_compatibility(mod_root, vanilla_dir, include_test_modules=False):
         changed = sorted((e.file, e.path, e.old, e.new) for e in edits if e.kind == "changed")
         appended = sorted({(e.file, e.path) for e in edits if e.kind == "list-append"})
         replaced = sorted({(e.file, e.path) for e in edits if e.kind == "overwritten"})
+        texts = sorted({(e.file, e.path) for e in edits if e.kind == "text-override"})
         added = sorted({(e.file, e.path) for e in edits if e.kind == "added"})
         out += [f"## {name}", "", "### Edits vanilla", ""]
-        if not (changed or appended or replaced):
+        if not (changed or appended or replaced or texts):
             out += ["This module does not edit vanilla entries.", ""]
         if changed:
             out += _table(["File", "Field", "Vanilla", "Ours"], changed) + [""]
@@ -166,6 +201,8 @@ def generate_compatibility(mod_root, vanilla_dir, include_test_modules=False):
             out += ["Appends to these vanilla lists:", ""] + _table(["File", "List"], appended) + [""]
         if replaced:
             out += ["Replaces these vanilla lists outright:", ""] + _table(["File", "List"], replaced) + [""]
+        if texts:
+            out += ["Replaces this vanilla text in every language:", ""] + _table(["File", "Text key"], texts) + [""]
         out += ["### Adds new", ""]
         rows = added + [(f, "(whole file)") for f in sorted(whole)]
         out += (_table(["File", "Entry"], rows) if rows else ["Nothing new."]) + [""]
@@ -213,6 +250,21 @@ def _compare(mod, rel, theirs, ours, findings):
         findings.append(Finding(mod, rel, "shared-file", "patches the same file; no shared field"))
 
 
+def _compare_text(mod, rel, path, our_keys, vanilla_keys, findings):
+    try:
+        shared = sorted(set(loc_keys(path)) & our_keys)
+    except ET.ParseError as e:
+        findings.append(Finding(mod, rel, "unreadable", str(e)))
+        return
+    # Each mod replaces the whole entry, so only one of them can show its text for the key.
+    replaced = [k for k in shared if k in vanilla_keys]
+    ours = [k for k in shared if k not in vanilla_keys]
+    if replaced:
+        findings.append(Finding(mod, rel, "conflict", f"both replace this vanilla text: {', '.join(replaced)}"))
+    if ours:
+        findings.append(Finding(mod, rel, "conflict", f"defines our text keys: {', '.join(ours)}"))
+
+
 def scan_mods(mods_dir, mod_root, vanilla_dir, game_files, include_test_modules=False):
     """Findings for every installed mod that overlaps our patches. Reads only."""
     ours = {}
@@ -220,15 +272,25 @@ def scan_mods(mods_dir, mod_root, vanilla_dir, game_files, include_test_modules=
         for e in edits:
             ours.setdefault(_target(e.file), []).append(e)
 
+    vanilla_keys, our_keys = vanilla_text_keys(vanilla_dir), set()
+    for name in _modules(mod_root, include_test_modules):
+        for path, rel in _patch_files(Path(mod_root) / name):
+            if _is_loc_table(rel):
+                our_keys.update(loc_keys(path))
+
+    # An installed release of our own modules is us, not another mod.
+    own = {name.upper() for name in _modules(mod_root, include_test_modules=True)}
     findings = []
     for folder in sorted(p for p in Path(mods_dir).iterdir() if p.is_dir()):
         mod = folder.name
-        if mod.upper().startswith(DEV_PREFIX):
+        if mod.upper().startswith(DEV_PREFIX) or mod.upper() in own:
             continue
         for path, rel in _patch_files(folder):
             suffix = path.suffix.upper()
             if suffix == ".MXML":
-                continue  # full new files such as LocTable.MXML patch nothing
+                if _is_loc_table(rel):
+                    _compare_text(mod, rel, path, our_keys, vanilla_keys, findings)
+                continue
             target = _target(rel)
             if suffix == ".MBIN":
                 if target in ours:

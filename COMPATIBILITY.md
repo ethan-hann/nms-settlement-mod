@@ -130,6 +130,15 @@ Appends to these vanilla lists:
 |---|---|
 | METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.EXML | Table[SETTLEMENT_ADMIN].Options |
 
+Replaces this vanilla text in every language:
+
+| File | Text key |
+|---|---|
+| LocTable.MXML | UI_SETTLEMENT_PROD_DEBT_TIP |
+| LocTable.MXML | UI_SETTLEMENT_PROD_DEBT_TIP2 |
+| LocTable.MXML | UI_SETTLEMENT_STAT_COST_NAME |
+| LocTable.MXML | UI_SETTLEMENT_STAT_UPKEEP |
+
 ### Adds new
 
 | File | Entry |
