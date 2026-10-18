@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cTkLocalisationTable">
+	<Property name="Table">
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_FL_PAY_S" />
+			<Property name="English" value="Pay 100,000 debt" />
+			<Property name="French" value="Payer 100.000 de dette" />
+			<Property name="Italian" value="Paga 100.000 di debito" />
+			<Property name="German" value="100.000 Schulden tilgen" />
+			<Property name="Spanish" value="Pagar 100.000 de deuda" />
+			<Property name="Russian" value="Погасить 100.000 долга" />
+			<Property name="Polish" value="Spłać 100.000 długu" />
+			<Property name="Dutch" value="Betaal 100.000 schuld af" />
+			<Property name="Portuguese" value="Pagar 100.000 de dívida" />
+			<Property name="LatinAmericanSpanish" value="Pagar 100.000 de deuda" />
+			<Property name="BrazilianPortuguese" value="Pagar 100.000 de dívida" />
+			<Property name="SimplifiedChinese" value="偿还 100,000 债务" />
+			<Property name="TraditionalChinese" value="償還 100,000 債務" />
+			<Property name="TencentChinese" value="偿还 100,000 债务" />
+			<Property name="Korean" value="부채 100,000 상환" />
+			<Property name="Japanese" value="負債を100,000返済" />
+			<Property name="USEnglish" value="Pay 100,000 debt" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="OT_FL_PAY_L" />
+			<Property name="English" value="Pay 1,000,000 debt" />
+			<Property name="French" value="Payer 1.000.000 de dette" />
+			<Property name="Italian" value="Paga 1.000.000 di debito" />
+			<Property name="German" value="1.000.000 Schulden tilgen" />
+			<Property name="Spanish" value="Pagar 1.000.000 de deuda" />
+			<Property name="Russian" value="Погасить 1.000.000 долга" />
+			<Property name="Polish" value="Spłać 1.000.000 długu" />
+			<Property name="Dutch" value="Betaal 1.000.000 schuld af" />
+			<Property name="Portuguese" value="Pagar 1.000.000 de dívida" />
+			<Property name="LatinAmericanSpanish" value="Pagar 1.000.000 de deuda" />
+			<Property name="BrazilianPortuguese" value="Pagar 1.000.000 de dívida" />
+			<Property name="SimplifiedChinese" value="偿还 1,000,000 债务" />
+			<Property name="TraditionalChinese" value="償還 1,000,000 債務" />
+			<Property name="TencentChinese" value="偿还 1,000,000 债务" />
+			<Property name="Korean" value="부채 1,000,000 상환" />
+			<Property name="Japanese" value="負債を1,000,000返済" />
+			<Property name="USEnglish" value="Pay 1,000,000 debt" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_SETTLEMENT_STAT_UPKEEP" />
+			<Property name="English" value="Upkeep" />
+			<Property name="French" value="Entretien" />
+			<Property name="Italian" value="Manutenzione" />
+			<Property name="German" value="Instandhaltung" />
+			<Property name="Spanish" value="Mantenimiento" />
+			<Property name="Russian" value="Содержание" />
+			<Property name="Polish" value="Utrzymanie" />
+			<Property name="Dutch" value="Onderhoud" />
+			<Property name="Portuguese" value="Manutenção" />
+			<Property name="LatinAmericanSpanish" value="Mantenimiento" />
+			<Property name="BrazilianPortuguese" value="Manutenção" />
+			<Property name="SimplifiedChinese" value="维护费用" />
+			<Property name="TraditionalChinese" value="維護花費" />
+			<Property name="TencentChinese" value="维护费用" />
+			<Property name="Korean" value="유지비" />
+			<Property name="Japanese" value="維持コスト" />
+			<Property name="USEnglish" value="Upkeep" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_SETTLEMENT_STAT_COST_NAME" />
+			<Property name="English" value="upkeep" />
+			<Property name="French" value="frais d'entretien" />
+			<Property name="Italian" value="costi di manutenzione" />
+			<Property name="German" value="Instandhaltungskosten" />
+			<Property name="Spanish" value="costes de mantenimiento" />
+			<Property name="Russian" value="стоимость содержания" />
+			<Property name="Polish" value="utrzymanie" />
+			<Property name="Dutch" value="onderhoudskosten" />
+			<Property name="Portuguese" value="custos de manutenção" />
+			<Property name="LatinAmericanSpanish" value="costos de mantenimiento" />
+			<Property name="BrazilianPortuguese" value="custos de manutenção" />
+			<Property name="SimplifiedChinese" value="维护费用" />
+			<Property name="TraditionalChinese" value="維護花費" />
+			<Property name="TencentChinese" value="维护费用" />
+			<Property name="Korean" value="유지비" />
+			<Property name="Japanese" value="維持コスト" />
+			<Property name="USEnglish" value="upkeep" />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_SETTLEMENT_PROD_DEBT_TIP" />
+			<Property name="English" value="&lt;STELLAR&gt;Productivity&lt;&gt; pays upkeep, then debt. Upgrade &lt;TECHNOLOGY&gt;buildings&lt;&gt;, pick &lt;STELLAR&gt;features&lt;&gt; that cut upkeep, or pay at the &lt;TECHNOLOGY&gt;Administration Terminal&lt;&gt; (extra is lost)." />
+			<Property name="French" value="La &lt;STELLAR&gt;productivité&lt;&gt; paie l'entretien, puis la dette. Améliorez les &lt;TECHNOLOGY&gt;bâtiments&lt;&gt;, réduisez l'entretien avec des &lt;STELLAR&gt;fonctionnalités&lt;&gt; ou payez au &lt;TECHNOLOGY&gt;terminal d'administration&lt;&gt; (excédent perdu)." />
+			<Property name="Italian" value="La &lt;STELLAR&gt;produttività&lt;&gt; paga la manutenzione, poi il debito. Migliora gli &lt;TECHNOLOGY&gt;edifici&lt;&gt;, scegli &lt;STELLAR&gt;funzionalità&lt;&gt; che la riducono o paga al &lt;TECHNOLOGY&gt;terminale amministrativo&lt;&gt; (l'eccedenza va persa)." />
+			<Property name="German" value="Die &lt;STELLAR&gt;Produktivität&lt;&gt; zahlt die Instandhaltung, dann die Schulden. Verbessere &lt;TECHNOLOGY&gt;Gebäude&lt;&gt;, senke Kosten mit &lt;STELLAR&gt;Funktionen&lt;&gt; oder zahle am &lt;TECHNOLOGY&gt;Verwaltungsterminal&lt;&gt; (Überschuss verfällt)." />
+			<Property name="Spanish" value="La &lt;STELLAR&gt;productividad&lt;&gt; paga el mantenimiento, luego la deuda. Mejora los &lt;TECHNOLOGY&gt;edificios&lt;&gt;, elige &lt;STELLAR&gt;características&lt;&gt; que lo reduzcan o paga en el &lt;TECHNOLOGY&gt;terminal de administración&lt;&gt; (el exceso se pierde)." />
+			<Property name="Russian" value="&lt;STELLAR&gt;Продуктивность&lt;&gt; покрывает содержание, затем долг. Улучшайте &lt;TECHNOLOGY&gt;постройки&lt;&gt;, снижайте содержание через &lt;STELLAR&gt;особенности&lt;&gt; или платите у &lt;TECHNOLOGY&gt;терминала управления&lt;&gt; (излишек теряется)." />
+			<Property name="Polish" value="&lt;STELLAR&gt;Produktywność&lt;&gt; pokrywa utrzymanie, potem dług. Ulepszaj &lt;TECHNOLOGY&gt;budynki&lt;&gt;, obniżaj utrzymanie przez &lt;STELLAR&gt;udogodnienia&lt;&gt; lub zapłać przy &lt;TECHNOLOGY&gt;terminalu administracyjnym&lt;&gt; (nadwyżka przepada)." />
+			<Property name="Dutch" value="De &lt;STELLAR&gt;productiviteit&lt;&gt; betaalt eerst onderhoud, dan schuld. Verbeter &lt;TECHNOLOGY&gt;gebouwen&lt;&gt;, kies &lt;STELLAR&gt;functies&lt;&gt; die onderhoud verlagen of betaal bij de &lt;TECHNOLOGY&gt;administratieterminal&lt;&gt; (het teveel gaat verloren)." />
+			<Property name="Portuguese" value="A &lt;STELLAR&gt;produtividade&lt;&gt; paga a manutenção e depois a dívida. Melhora os &lt;TECHNOLOGY&gt;edifícios&lt;&gt;, escolhe &lt;STELLAR&gt;funcionalidades&lt;&gt; que a reduzam ou paga no &lt;TECHNOLOGY&gt;terminal de administração&lt;&gt; (o excedente perde-se)." />
+			<Property name="LatinAmericanSpanish" value="La &lt;STELLAR&gt;productividad&lt;&gt; paga el mantenimiento, luego la deuda. Mejora los &lt;TECHNOLOGY&gt;edificios&lt;&gt;, elige &lt;STELLAR&gt;características&lt;&gt; que lo reduzcan o paga en la &lt;TECHNOLOGY&gt;terminal de administración&lt;&gt; (el exceso se pierde)." />
+			<Property name="BrazilianPortuguese" value="A &lt;STELLAR&gt;produtividade&lt;&gt; paga a manutenção e depois a dívida. Melhore as &lt;TECHNOLOGY&gt;construções&lt;&gt;, escolha &lt;STELLAR&gt;recursos&lt;&gt; que a reduzam ou pague no &lt;TECHNOLOGY&gt;terminal de administração&lt;&gt; (o excedente é perdido)." />
+			<Property name="SimplifiedChinese" value="&lt;STELLAR&gt;生产效率&lt;&gt;先支付维护费用，再偿还债务。升级&lt;TECHNOLOGY&gt;建筑&lt;&gt;、选择&lt;STELLAR&gt;特色&lt;&gt;降低维护费用，或在&lt;TECHNOLOGY&gt;行政终端&lt;&gt;付款（超出部分将损失）。" />
+			<Property name="TraditionalChinese" value="&lt;STELLAR&gt;生產力&lt;&gt;先支付維護花費，再償還債務。升級&lt;TECHNOLOGY&gt;建築物&lt;&gt;、選擇&lt;STELLAR&gt;功能&lt;&gt;降低維護花費，或在&lt;TECHNOLOGY&gt;管理終端站&lt;&gt;付款（超出部分將會損失）。" />
+			<Property name="TencentChinese" value="&lt;STELLAR&gt;生产效率&lt;&gt;先支付维护费用，再偿还债务。升级&lt;TECHNOLOGY&gt;建筑&lt;&gt;、选择&lt;STELLAR&gt;特色&lt;&gt;降低维护费用，或在&lt;TECHNOLOGY&gt;行政终端&lt;&gt;付款（超出部分将损失）。" />
+			<Property name="Korean" value="&lt;STELLAR&gt;생산성&lt;&gt;으로 유지비를 먼저 내고 나머지로 부채를 갚습니다. &lt;TECHNOLOGY&gt;건물&lt;&gt;을 업그레이드하거나, 유지비를 줄이는 &lt;STELLAR&gt;특성&lt;&gt;을 고르거나, &lt;TECHNOLOGY&gt;관리 단말기&lt;&gt;에서 갚으십시오(초과분은 사라짐)." />
+			<Property name="Japanese" value="&lt;STELLAR&gt;生産性&lt;&gt;で維持コスト、次に負債を払う。&lt;TECHNOLOGY&gt;建物&lt;&gt;をアップグレードするか、維持コストを減らす&lt;STELLAR&gt;特徴&lt;&gt;を選ぶか、&lt;TECHNOLOGY&gt;運営ターミナル&lt;&gt;で支払おう(超過分は失われる)。" />
+			<Property name="USEnglish" value="&lt;STELLAR&gt;Productivity&lt;&gt; pays upkeep, then debt. Upgrade &lt;TECHNOLOGY&gt;buildings&lt;&gt;, pick &lt;STELLAR&gt;features&lt;&gt; that cut upkeep, or pay at the &lt;TECHNOLOGY&gt;Administration Terminal&lt;&gt; (extra is lost)." />
+		</Property>
+		<Property name="Table" value="TkLocalisationEntry">
+			<Property name="Id" value="UI_SETTLEMENT_PROD_DEBT_TIP2" />
+			<Property name="English" value="&lt;STELLAR&gt;Productivity&lt;&gt; covers upkeep, so debt &lt;TRADEABLE&gt;falls&lt;&gt; on its own. You can also pay at the &lt;TECHNOLOGY&gt;Administration Terminal&lt;&gt; (extra is lost)." />
+			<Property name="French" value="La &lt;STELLAR&gt;productivité&lt;&gt; couvre l'entretien : la dette &lt;TRADEABLE&gt;baisse&lt;&gt; d'elle-même. Vous pouvez aussi payer au &lt;TECHNOLOGY&gt;terminal d'administration&lt;&gt; (excédent perdu)." />
+			<Property name="Italian" value="La &lt;STELLAR&gt;produttività&lt;&gt; copre la manutenzione, quindi il debito &lt;TRADEABLE&gt;cala&lt;&gt; da solo. Puoi anche pagare al &lt;TECHNOLOGY&gt;terminale amministrativo&lt;&gt; (l'eccedenza va persa)." />
+			<Property name="German" value="Die &lt;STELLAR&gt;Produktivität&lt;&gt; deckt die Instandhaltung, die Schulden &lt;TRADEABLE&gt;sinken&lt;&gt; von selbst. Du kannst auch am &lt;TECHNOLOGY&gt;Verwaltungsterminal&lt;&gt; zahlen (Überschuss verfällt)." />
+			<Property name="Spanish" value="La &lt;STELLAR&gt;productividad&lt;&gt; cubre el mantenimiento, así que la deuda &lt;TRADEABLE&gt;baja&lt;&gt; sola. También puedes pagar en el &lt;TECHNOLOGY&gt;terminal de administración&lt;&gt; (el exceso se pierde)." />
+			<Property name="Russian" value="&lt;STELLAR&gt;Продуктивность&lt;&gt; покрывает содержание, и долг &lt;TRADEABLE&gt;уменьшается&lt;&gt; сам. Можно также заплатить у &lt;TECHNOLOGY&gt;терминала управления&lt;&gt; (излишек теряется)." />
+			<Property name="Polish" value="&lt;STELLAR&gt;Produktywność&lt;&gt; pokrywa utrzymanie, więc dług &lt;TRADEABLE&gt;maleje&lt;&gt; sam. Możesz też zapłacić przy &lt;TECHNOLOGY&gt;terminalu administracyjnym&lt;&gt; (nadwyżka przepada)." />
+			<Property name="Dutch" value="De &lt;STELLAR&gt;productiviteit&lt;&gt; dekt het onderhoud, dus de schuld &lt;TRADEABLE&gt;daalt&lt;&gt; vanzelf. Je kunt ook betalen bij de &lt;TECHNOLOGY&gt;administratieterminal&lt;&gt; (het teveel gaat verloren)." />
+			<Property name="Portuguese" value="A &lt;STELLAR&gt;produtividade&lt;&gt; cobre a manutenção, por isso a dívida &lt;TRADEABLE&gt;desce&lt;&gt; sozinha. Também podes pagar no &lt;TECHNOLOGY&gt;terminal de administração&lt;&gt; (o excedente perde-se)." />
+			<Property name="LatinAmericanSpanish" value="La &lt;STELLAR&gt;productividad&lt;&gt; cubre el mantenimiento, así que la deuda &lt;TRADEABLE&gt;baja&lt;&gt; sola. También puedes pagar en la &lt;TECHNOLOGY&gt;terminal de administración&lt;&gt; (el exceso se pierde)." />
+			<Property name="BrazilianPortuguese" value="A &lt;STELLAR&gt;produtividade&lt;&gt; cobre a manutenção, então a dívida &lt;TRADEABLE&gt;cai&lt;&gt; sozinha. Você também pode pagar no &lt;TECHNOLOGY&gt;terminal de administração&lt;&gt; (o excedente é perdido)." />
+			<Property name="SimplifiedChinese" value="&lt;STELLAR&gt;生产效率&lt;&gt;已足够支付维护费用，债务正在&lt;TRADEABLE&gt;自行&lt;&gt;减少。也可以在&lt;TECHNOLOGY&gt;行政终端&lt;&gt;付款（超出部分将损失）。" />
+			<Property name="TraditionalChinese" value="&lt;STELLAR&gt;生產力&lt;&gt;已足以支付維護花費，債務正在&lt;TRADEABLE&gt;自行&lt;&gt;減少。也可以在&lt;TECHNOLOGY&gt;管理終端站&lt;&gt;付款（超出部分將會損失）。" />
+			<Property name="TencentChinese" value="&lt;STELLAR&gt;生产效率&lt;&gt;已足够支付维护费用，债务正在&lt;TRADEABLE&gt;自行&lt;&gt;减少。也可以在&lt;TECHNOLOGY&gt;行政终端&lt;&gt;付款（超出部分将损失）。" />
+			<Property name="Korean" value="&lt;STELLAR&gt;생산성&lt;&gt;으로 유지비를 충당하므로 부채가 &lt;TRADEABLE&gt;저절로&lt;&gt; 줄어듭니다. &lt;TECHNOLOGY&gt;관리 단말기&lt;&gt;에서 갚을 수도 있습니다(초과분은 사라짐)." />
+			<Property name="Japanese" value="&lt;STELLAR&gt;生産性&lt;&gt;で維持コストをまかなえているため、負債は&lt;TRADEABLE&gt;自然に&lt;&gt;減っていく。&lt;TECHNOLOGY&gt;運営ターミナル&lt;&gt;でも支払える(超過分は失われる)。" />
+			<Property name="USEnglish" value="&lt;STELLAR&gt;Productivity&lt;&gt; covers upkeep, so debt &lt;TRADEABLE&gt;falls&lt;&gt; on its own. You can also pay at the &lt;TECHNOLOGY&gt;Administration Terminal&lt;&gt; (extra is lost)." />
+		</Property>
+	</Property>
+</Data>

@@ -28,6 +28,8 @@ EXCLUDED_MODULES = (
     "OverseersToolkit-MissingIdProbe",
     "OverseersToolkit-LedgerProbes",
     "OverseersToolkit-SignProbes",
+    "OverseersToolkit-LedgerSetup",
+    "OverseersToolkit-LedgerRising",
 )
 DEV_PREFIX = "_OTDEV_"
 PATCH_SUFFIXES = (".EXML", ".MXML", ".MBIN")

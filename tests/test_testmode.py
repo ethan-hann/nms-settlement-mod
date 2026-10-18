@@ -625,3 +625,11 @@ def test_enter_checks_every_free_slot_when_no_test_slot_is_recorded(fake_tree):
 def test_enter_without_a_recorded_slot_leaves_the_real_game_slots_alone(fake_tree):
     with_test_slot_parts(fake_tree, ["OT_CURB"], slot=2, recorded=False)
     testmode.enter(make_env(fake_tree), ["probes"])
+
+
+def test_every_shipped_module_has_a_session_key():
+    import package
+
+    assert set(package.SHIPPED) <= set(testmode.MODULES.values())
+    assert testmode.MODULES.get("fairledger") == "OverseersToolkit-FairLedger"
+    assert testmode.MODULES.get("fairledgerrebalance") == "OverseersToolkit-FairLedger-Rebalance"

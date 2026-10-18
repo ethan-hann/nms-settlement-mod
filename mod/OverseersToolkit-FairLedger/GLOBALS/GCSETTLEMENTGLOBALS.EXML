@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcSettlementGlobals">
+	<Property name="PerkStatStrengthValues">
+		<Property name="Debt" value="GcSettlementStatStrengthData">
+			<Property name="PerkStatStrengthValues">
+				<Property name="PositiveLarge" value="GcSettlementStatStrengthRanges">
+					<Property name="AmountMin" value="-100000" />
+					<Property name="AmountMax" value="-100000" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>

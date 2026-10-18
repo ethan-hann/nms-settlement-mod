@@ -1,0 +1,13 @@
+{
+  "match_upkeep_to_production": [
+    "Settlement_LandingZone",
+    "Settlement_Tower",
+    "Settlement_Market",
+    "Settlement_SmallIndustrial",
+    "Settlement_SheriffsOffice",
+    "Settlement_Double",
+    "Settlement_Farm",
+    "Settlement_Factory",
+    "Settlement_Builders_RoboArm"
+  ]
+}

@@ -1,6 +1,6 @@
 # Fair Ledger: rough plan
 
-Rough outline, written 2026-10-17. Nothing is built. How the modules are built, tested and released is in [build-plan.md](build-plan.md).
+Rough outline, written 2026-10-17. Built the same day, pending the check session; see [../../progress.md](../../progress.md). How the modules are built, tested and released is in [build-plan.md](build-plan.md).
 
 ## Goal
 

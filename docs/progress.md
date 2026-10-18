@@ -362,3 +362,49 @@ Decided 2026-10-17: the remote terminal is dropped; Fair Ledger ships in 1.2.0 o
 ## 2026-10-17: Reproducible release zips
 
 Decided 2026-10-17 (issue #17): module files are LF on every checkout. `.gitattributes` sets `eol=lf` for `.EXML` and `.MXML` under `mod/` and marks `.MBIN` binary. The index already held LF, so only working copies change. package.py refuses a text file holding a carriage return and writes every zip entry with a fixed timestamp and mode, so two builds of one commit give identical zips (verified 2026-10-17 by building twice with touched files). A test checks that the shipped module files on disk match the committed bytes. The next release changes the bytes of every file that shipped as CRLF; CHANGES.md says the change is line endings only.
+
+## 2026-10-17: Fair Ledger built
+
+Built per [modules/fair-ledger/build-plan.md](modules/fair-ledger/build-plan.md), pending the check session.
+
+- `tools/gen_ledger.py` generates both modules from `specs/OverseersToolkit-FairLedger.json` and `specs/OverseersToolkit-FairLedger-Rebalance.json` and joins the stale-module checks in `tests/test_modules.py`.
+- FairLedger: costs `C_OT_FL_PAY1` (200,000 units) and `C_OT_FL_PAY10` (2,000,000), rewards `R_OT_FL_DEBT1` (one Debt PositiveLarge step) and `R_OT_FL_DEBT10` (ten in one GiveAll list), two options appended to `SETTLEMENT_ADMIN` with `KeepOpen` and no disabling conditions, Debt PositiveLarge a flat -100,000, and five vanilla text overrides. All text is in 17 languages.
+- Rebalance: the nine production buildings' C upkeep ranges equal their C productivity ranges, read from vanilla by stat type. The values match the build plan's table.
+- Both are in `package.SHIPPED`, have testmode keys `fairledger` and `fairledgerrebalance`, and are listed in COMPATIBILITY.md. The text overrides do not appear there, because the report lists LocTable.MXML only as a whole file.
+- Translation choices: `UI_SETTLEMENT_STAT_COST_NAME` keeps each language's vanilla wording, since only the English named the stat three ways and decision text around it may depend on its grammatical form. `UI_SETTLEMENT_STAT_UPKEEP` uses each language's upkeep word plus "per day", kept about as short as vanilla. Numbers follow each language's vanilla separator, with a no-break space where the separator is a space.
+- New test-only module LedgerSetup (key `ledgersetup`): the test town had no debt and the test character 732,096 units (save copy after Session 8), too few for the 2,000,000 payment. It turns the terminal's "Manage all settlements" option into a free option giving 5,000,000 units and 25 Debt NegativeLarge steps, so the terminal stays at six options.
+- Unknown until the session: whether ten stat steps in one GiveAll reward all apply (Session 6 tested one step per reward).
+
+Next: the check session (Session 9), then release 1.2.0.
+
+## 2026-10-17: Session 9, Fair Ledger check
+
+Two launches on the creative test slot. Safety: both exits passed all checks.
+
+**Launch 1** (core, Defense, SettlerStories, FairLedger, FairLedger-Rebalance, SignProbes, LedgerSetup; Purchases set to Standard for the run and back to Free after):
+- The terminal listed six options in the expected order, the two payments last with "(200,000 Units)" and "(2,000,000 Units)".
+- LedgerSetup's option gave 5,000,000 units and raised debt from 0 to about 2,414,900.
+- "Pay 100,000 debt" took 200,000 units and cut 100,000, with "Settlement debt reduced: 100,000 units". "Pay 1,000,000 debt" took 2,000,000 units and cut 1,000,000. The save confirms 2,200,000 units taken (5,732,096 to 3,532,096); the debt readings differ from the cuts by under 1,100, which is the debt falling on its own between screenshots.
+- Ten stat steps in one GiveAll reward all apply, but the game shows one message, "Settlement debt reduced: 100,000 units", for the 1,000,000 payment.
+- Rebalance: each production building's upkeep equals its productivity exactly (Farm 18,130 and 18,130, Industrial Chimney 28,542 and 28,542). Inferred: one roll sets both, so a C-class production building nets exactly 0, not "about 0". Housing, the fish pond and the dance lounge kept vanilla upkeep. Maintenance Cost fell from 381,454 to 266,502 a day.
+- The overrides showed in English: "Upkeep (per day)", "In debt: production is paused until the debt is paid", and the falling-debt tip. In French every Fair Ledger string showed translated, with no raw keys.
+- The game formats numbers itself: in French the price read "200.000 unites" and productivity "579.063", so the labels' "100 000" did not match. No language file or type defines a separator; the exe holds a locale code table and imports GetLocaleInfoEx, but Windows' French separator is a space, so the game does not follow it (verified for French only).
+
+**Launch 2** (the same without FairLedger):
+- The save loaded normally. The terminal showed the four vanilla options and LedgerSetup's, with both payments gone. Debt was 1,307,890, keeping the amount paid. The vanilla text came back ("Maintenance Cost", the vanilla debt line and tip), while Rebalance's 266,502 a day stayed.
+
+Also seen: the save list shows the slot in the language it was last saved in ("Colonie de Funana Bridge", "Creatif"), because the save stores its caption as text (`SaveSummary`).
+
+## 2026-10-17: Session 9b, Fair Ledger text check
+
+Four short launches on the creative test slot after adding vanilla color markup, "." separators and shorter text. Safety: every exit passed all checks.
+
+- Vanilla markup works in a mod's LocTable.MXML: `<STELLAR>` (yellow), `<TECHNOLOGY>` (blue) and `<TRADEABLE>` (green) colored the marked words, and `<IMG>SLASH<>` drew the divider in the debt line, in English, French and Spanish.
+- The French Pay labels and the game's own price matched: "Payer 100.000 de dette (66.000 unites)" on Free Purchases.
+- The tip box holds about six lines. The first colored tips (up to 316 characters in French) were cut off, and a period after a colored phrase wrapped onto its own line. After shortening (decided 2026-10-17, from an ethan-voice draft), the rising-debt tip fit in English and in Spanish, the longest translation at 178 visible characters, which filled all six lines. The falling-debt tip fit in English.
+- New test-only module LedgerRising (key `ledgerrising`) sets the base upkeep of residences and the bar to 400,000, which raised Upkeep to 2,573,692 a day so the rising-debt tip shows. It writes nothing to the save; without it, Upkeep was back at 266,502.
+- Tip text for later modules: keep tips under about 175 visible characters in the longest language, and do not end a sentence on a colored phrase.
+
+Decided 2026-10-17: keep only the overrides that add something. The debt banner override is dropped, since it only reworded vanilla and replaced the game's own translations. The overview label becomes plain "Upkeep", since the value already reads "/day". Fair Ledger now overrides four vanilla keys: the two tips, the label and the decision-text word.
+
+Fair Ledger is ready for release as 1.2.0.

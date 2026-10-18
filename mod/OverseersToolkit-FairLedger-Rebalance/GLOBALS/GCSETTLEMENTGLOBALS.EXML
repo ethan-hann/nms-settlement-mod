@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data template="cGcSettlementGlobals">
+	<Property name="SettlementBuildingContributions">
+		<Property name="Settlement_LandingZone" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="10000" />
+					<Property name="MaxValue" value="15000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Tower" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="20000" />
+					<Property name="MaxValue" value="30000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Market" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="20000" />
+					<Property name="MaxValue" value="25000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_SmallIndustrial" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="10000" />
+					<Property name="MaxValue" value="15000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_SheriffsOffice" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="5000" />
+					<Property name="MaxValue" value="8000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Double" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="3">
+					<Property name="MinValue" value="15000" />
+					<Property name="MaxValue" value="25000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Farm" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="3">
+					<Property name="MinValue" value="15000" />
+					<Property name="MaxValue" value="25000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Factory" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="3">
+					<Property name="MinValue" value="20000" />
+					<Property name="MaxValue" value="30000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Builders_RoboArm" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="10000" />
+					<Property name="MaxValue" value="20000" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>

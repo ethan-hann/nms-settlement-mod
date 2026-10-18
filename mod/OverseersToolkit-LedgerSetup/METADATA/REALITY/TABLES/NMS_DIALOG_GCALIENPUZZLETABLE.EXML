@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. Turns "Manage all settlements" into one free option that adds debt and units, so the terminal keeps room for Fair Ledger's two options. -->
+<Data template="cGcAlienPuzzleTable">
+	<Property name="Table">
+		<Property name="Table" value="GcAlienPuzzleEntry" _id="SETTLEMENT_ADMIN">
+			<Property name="Options">
+				<Property name="Options" value="GcAlienPuzzleOption" _index="2">
+					<Property name="Name" value="OT_LS_SETUP" />
+					<Property name="Cost" value="" />
+					<Property name="Rewards">
+						<Property name="Rewards" value="R_OT_LS_SETUP" _index="0" />
+					</Property>
+					<Property name="KeepOpen" value="true" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>

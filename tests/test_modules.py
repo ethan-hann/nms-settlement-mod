@@ -8,13 +8,14 @@ from pathlib import Path
 
 import pytest
 
+import gen_ledger
 import gen_parts
 import gen_settlement
 import gen_unlocks
 import merge_preview
 
 # Each generator takes a spec and returns {relative path: file text}; a module's files must match all of them.
-GENERATORS = [gen_parts.build, gen_settlement.build, gen_unlocks.build]
+GENERATORS = [gen_parts.build, gen_settlement.build, gen_unlocks.build, gen_ledger.build]
 
 REPO = Path(__file__).resolve().parent.parent
 SPECS = REPO / "specs"
@@ -219,6 +220,135 @@ def test_the_ledger_probe_sells_exact_debt_steps_at_two_units_each():
     entry = rewards.find(f"Property[@name='SettlementTable']/Property[@_id='{reward.get('value')}']")
     kinds = {r.get("value") for r in entry.iter("Property") if r.get("name") == "Reward"}
     assert kinds == {"GcRewardMoney"}, kinds
+
+
+FAIR_LEDGER = "OverseersToolkit-FairLedger"
+REBALANCE = "OverseersToolkit-FairLedger-Rebalance"
+DEBT_LARGE = (
+    "Property[@name='PerkStatStrengthValues']/Property[@name='Debt']"
+    "/Property[@name='PerkStatStrengthValues']/Property[@name='PositiveLarge']"
+)
+
+
+def test_fair_ledger_sells_exact_debt_steps_at_two_units_each():
+    assert (MODS / FAIR_LEDGER).is_dir(), f"mod/{FAIR_LEDGER} is missing"
+    tables = "METADATA/REALITY/TABLES"
+    dialog = merged_table(FAIR_LEDGER, f"{tables}/NMS_DIALOG_GCALIENPUZZLETABLE.EXML")
+    costs = merged_table(FAIR_LEDGER, f"{tables}/COSTTABLE.EXML")
+    rewards = merged_table(FAIR_LEDGER, f"{tables}/REWARDTABLE.EXML")
+    settlement = merged_table(FAIR_LEDGER, "GLOBALS/GCSETTLEMENTGLOBALS.EXML")
+    step = spec_of(FAIR_LEDGER)["debt_step"]
+
+    large = settlement.find(DEBT_LARGE)
+    assert [large.find(f"Property[@name='{f}']").get("value") for f in ("AmountMin", "AmountMax")] == [str(-step)] * 2
+
+    admin = dialog.find("Property[@name='Table']/Property[@_id='SETTLEMENT_ADMIN']/Property[@name='Options']")
+    assert len(admin) <= 6, f"SETTLEMENT_ADMIN has {len(admin)} options; the terminal shows six"
+    paid = [o for o in admin if o.find("Property[@name='Name']").get("value").startswith("OT_FL_")]
+    cuts = []
+    for option in paid:
+        cost_id = option.find("Property[@name='Cost']").get("value")
+        reward_ids = [r.get("value") for r in option.find("Property[@name='Rewards']")]
+        assert cost_id.startswith("C_OT_FL_") and len(cost_id) <= 15, cost_id
+        assert all(r.startswith("R_OT_FL_") and len(r) <= 15 for r in reward_ids), reward_ids
+        cost = costs.find(f"Property[@name='InteractionTable']/Property[@_id='{cost_id}']")
+        money = cost.find("Property[@name='Cost']/Property[@name='GcCostMoney']")
+        assert money.find(".//Property[@name='Currency']").get("value") == "Units"
+        steps = 0
+        for reward_id in reward_ids:
+            entry = rewards.find(f"Property[@name='SettlementTable']/Property[@_id='{reward_id}']")
+            kinds = {r.get("value") for r in entry.iter("Property") if r.get("name") == "Reward"}
+            assert kinds == {"GcRewardSettlementStat"}, kinds
+            for change in entry.iter("Property"):
+                if change.get("name") == "StatToAward":
+                    assert change.find(".//Property[@name='SettlementStatType']").get("value") == "Debt"
+                    assert change.find(".//Property[@name='SettlementStatStrength']").get("value") == "PositiveLarge"
+                    steps += 1
+        assert int(money.find("Property[@name='Cost']").get("value")) == UNITS_PER_DEBT * step * steps
+        cuts.append(step * steps)
+    assert sorted(cuts) == [100_000, 1_000_000]
+
+
+def test_fair_ledger_rebalance_sets_c_upkeep_to_c_productivity():
+    assert (MODS / REBALANCE).is_dir(), f"mod/{REBALANCE} is missing"
+    rel = Path("GLOBALS/GCSETTLEMENTGLOBALS.EXML")
+    patch = ET.parse(MODS / REBALANCE / rel).getroot()
+    assert [c.get("name") for c in patch] == ["SettlementBuildingContributions"]
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    merged = merged_table(REBALANCE, rel)
+    path = "Property[@name='SettlementBuildingContributions']"
+    listed = spec_of(REBALANCE)["match_upkeep_to_production"]
+    assert len(listed) == 9
+    assert sorted(b.get("name") for b in patch.find(path)) == sorted(listed)
+
+    def ranges(root, name, level):
+        out = {}
+        for item in root.find(f"{path}/Property[@name='{name}']/Property[@name='{level}']"):
+            stat = item.find(".//Property[@name='SettlementStatType']").get("value")
+            out[stat] = tuple(int(item.find(f"Property[@name='{f}']").get("value")) for f in ("MinValue", "MaxValue"))
+        return out
+
+    for building in vanilla.find(path):
+        name = building.get("name")
+        for level in [c.get("name") for c in building]:
+            before, after = ranges(vanilla, name, level), ranges(merged, name, level)
+            if name in listed and level == "Base":
+                assert after["Upkeep"] == before["Production"], name
+                del before["Upkeep"], after["Upkeep"]
+            assert after == before, f"{name}.{level} changed outside its Base Upkeep"
+
+
+LEDGER_SETUP = "OverseersToolkit-LedgerSetup"
+
+
+def test_the_ledger_setup_gives_debt_and_units_without_taking_a_terminal_slot():
+    # The test town has no debt and the test character too few units for the largest payment.
+    assert (MODS / LEDGER_SETUP).is_dir(), f"mod/{LEDGER_SETUP} is missing"
+    rel = Path("METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.EXML")
+    options = "Property[@name='Table']/Property[@_id='SETTLEMENT_ADMIN']/Property[@name='Options']"
+    vanilla = ET.parse(EXTRACTED / merge_preview.vanilla_relpath(rel)).getroot()
+    both, _ = merge_preview.merge(merged_table(FAIR_LEDGER, rel), ET.parse(MODS / LEDGER_SETUP / rel).getroot())
+    assert len(merged_table(LEDGER_SETUP, rel).find(options)) == len(vanilla.find(options))
+    assert len(both.find(options)) <= 6
+
+    (setup,) = [o for o in both.find(options) if o.find("Property[@name='Name']").get("value") == "OT_LS_SETUP"]
+    assert setup.find("Property[@name='Cost']").get("value") == ""
+    rewards = merged_table(LEDGER_SETUP, "METADATA/REALITY/TABLES/REWARDTABLE.EXML")
+    units, debt_steps = 0, 0
+    for reward in setup.find("Property[@name='Rewards']"):
+        entry = rewards.find(f"Property[@name='SettlementTable']/Property[@_id='{reward.get('value')}']")
+        for item in entry.iter("Property"):
+            if item.get("name") == "GcRewardMoney":
+                units += int(item.find("Property[@name='AmountMin']").get("value"))
+            if item.get("name") == "StatToAward":
+                assert item.find(".//Property[@name='SettlementStatType']").get("value") == "Debt"
+                assert item.find(".//Property[@name='SettlementStatStrength']").get("value") == "NegativeLarge"
+                debt_steps += 1
+    settlement = ET.parse(EXTRACTED / "gcsettlementglobals.MXML").getroot()
+    smallest = int(settlement.find(DEBT_LARGE.replace("PositiveLarge", "NegativeLarge") + "/Property[@name='AmountMin']").get("value"))
+    # Both payments in full: 1,100,000 debt and 2,200,000 units at Standard Purchases.
+    assert debt_steps * smallest >= 1_100_000
+    assert units >= 2_200_000
+
+
+LEDGER_RISING = "OverseersToolkit-LedgerRising"
+
+
+def test_ledger_rising_raises_upkeep_only_where_rebalance_does_not_reach():
+    # The rising-debt tip needs upkeep above productivity, without touching the fields Rebalance sets.
+    assert (MODS / LEDGER_RISING).is_dir(), f"mod/{LEDGER_RISING} is missing"
+    rel = Path("GLOBALS/GCSETTLEMENTGLOBALS.EXML")
+    patch = ET.parse(MODS / LEDGER_RISING / rel).getroot()
+    path = "Property[@name='SettlementBuildingContributions']"
+    assert [c.get("name") for c in patch] == ["SettlementBuildingContributions"]
+    edited = {b.get("name") for b in patch.find(path)}
+    assert edited == {"Settlement_Bar", "Settlement_Small", "Settlement_Medium", "Settlement_Large"}
+    assert not edited & set(spec_of(REBALANCE)["match_upkeep_to_production"])
+    merged = merged_table(LEDGER_RISING, rel)
+    for name in edited:
+        for item in merged.find(f"{path}/Property[@name='{name}']/Property[@name='Base']"):
+            if item.find(".//Property[@name='SettlementStatType']").get("value") == "Upkeep":
+                assert int(item.find("Property[@name='MinValue']").get("value")) >= 400_000, name
 
 
 SIGN_PROBES = "OverseersToolkit-SignProbes"

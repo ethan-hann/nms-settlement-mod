@@ -116,6 +116,58 @@ Appends to these vanilla lists:
 | METADATA/SIMULATION/MISSIONS/TABLES/NPCMISSIONTABLE.EXML | Missions[OT_UNLOCK_S] |
 | LocTable.MXML | (whole file) |
 
+## OverseersToolkit-FairLedger
+
+### Edits vanilla
+
+| File | Field | Vanilla | Ours |
+|---|---|---|---|
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | PerkStatStrengthValues.Debt.PerkStatStrengthValues.PositiveLarge.AmountMax | -50000 | -100000 |
+
+Appends to these vanilla lists:
+
+| File | List |
+|---|---|
+| METADATA/REALITY/TABLES/NMS_DIALOG_GCALIENPUZZLETABLE.EXML | Table[SETTLEMENT_ADMIN].Options |
+
+### Adds new
+
+| File | Entry |
+|---|---|
+| METADATA/REALITY/TABLES/COSTTABLE.EXML | InteractionTable[C_OT_FL_PAY10] |
+| METADATA/REALITY/TABLES/COSTTABLE.EXML | InteractionTable[C_OT_FL_PAY1] |
+| METADATA/REALITY/TABLES/REWARDTABLE.EXML | SettlementTable[R_OT_FL_DEBT10] |
+| METADATA/REALITY/TABLES/REWARDTABLE.EXML | SettlementTable[R_OT_FL_DEBT1] |
+| LocTable.MXML | (whole file) |
+
+## OverseersToolkit-FairLedger-Rebalance
+
+### Edits vanilla
+
+| File | Field | Vanilla | Ours |
+|---|---|---|---|
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Builders_RoboArm.Base[2].MaxValue | 30000 | 20000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Builders_RoboArm.Base[2].MinValue | 20000 | 10000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Double.Base[3].MaxValue | 35000 | 25000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Double.Base[3].MinValue | 30000 | 15000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Factory.Base[3].MaxValue | 50000 | 30000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Factory.Base[3].MinValue | 40000 | 20000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Farm.Base[3].MaxValue | 40000 | 25000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Farm.Base[3].MinValue | 30000 | 15000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_LandingZone.Base[2].MaxValue | 22500 | 15000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_LandingZone.Base[2].MinValue | 20000 | 10000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Market.Base[2].MaxValue | 50000 | 25000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Market.Base[2].MinValue | 35000 | 20000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_SheriffsOffice.Base[2].MaxValue | 32000 | 8000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_SheriffsOffice.Base[2].MinValue | 22000 | 5000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_SmallIndustrial.Base[2].MaxValue | 20000 | 15000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Tower.Base[2].MaxValue | 40000 | 30000 |
+| GLOBALS/GCSETTLEMENTGLOBALS.EXML | SettlementBuildingContributions.Settlement_Tower.Base[2].MinValue | 30000 | 20000 |
+
+### Adds new
+
+Nothing new.
+
 ## OverseersToolkit-SettlementDecor
 
 ### Edits vanilla
