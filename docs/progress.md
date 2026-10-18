@@ -431,3 +431,7 @@ The maintainer installed OverseersToolkit-AllInOne-1.2.0.zip through Vortex in t
 - Verified: after removing AllInOne, MODS matched the snapshot exactly (no file added, removed or changed) and Vortex redeployed the 1.0.0 files.
 - Consequence: a bundle next to separate downloads of a different version conflicts on different files, and load order picks the version. CHANGES.md now tells players to remove the separate downloads before switching to AllInOne.
 
+## 2026-10-17: NMS.py supports the current build
+
+Per the maintainer (2026-10-17): the latest NMS.py release supports the current game build, so the earlier "NMS.py lags the game" blocker is gone. The runtime spike's other no-go still stands until rechecked: NMS.py offered no function to place a part from code. The README roadmap keeps the path tool as an idea without the old blocker.
+

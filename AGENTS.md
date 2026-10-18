@@ -6,7 +6,7 @@ Where things are:
 - `docs/progress.md`: the log of decisions, test sessions and findings. Read the latest entries first to learn the current state.
 - `docs/plan.md`: the build plan, the safety rules in full (section 3), testing (section 9) and workflow (section 10).
 - `docs/modules/<module>/`: the plan, findings and drafts for a module in development.
-- `README.md` "For modders and contributors": setup, generators, packaging and test sessions.
+- `CONTRIBUTING.md`: setup, generators, packaging and test sessions.
 
 ## Safety
 
@@ -29,11 +29,7 @@ The game deletes a placed part the moment it saves without the module that adds 
 
 ## Changing the mod
 
-- Generated modules: edit the spec in `specs/` and rerun the generators. `tests/test_modules.py` fails when a generated file is edited by hand or goes stale.
-- Test first: write the failing test before the implementation and see it fail on an assertion (an import or harness error is not a red). Record the observed red in the commit message. When a test passes on its first run, break the code on purpose once to prove it can fail.
-- Run Python through `tools/.venv`. Run the full suite with `tools/.venv/Scripts/python.exe -m pytest -q` before every commit that changes `mod/`, `specs/`, `tools/` or `tests/`. Commits that change only docs skip it.
-- CI (`.github/workflows/tests.yml`) runs the suite on every PR and on pushes to main. It has no game data, so the tests that need `scratch/extracted` skip there, including the stale-module checks. A green CI run does not replace the local run.
-- Check facts against the extracted game data in `scratch/` before proposing a design, and mark findings as verified, inferred or unknown.
+Follow "How to contribute" in `CONTRIBUTING.md`: branches and pull requests, test first with the red recorded in the commit, the full suite before commits that touch `mod/`, `specs/`, `tools/` or `tests/`, what CI does not cover, and checking facts against `scratch/`. It binds agents as much as people.
 
 ## In-game sessions
 
@@ -52,6 +48,6 @@ The maintainer runs every in-game check; agents cannot play.
 
 ## Git
 
-- One branch per piece of work. Commit as the GitHub noreply identity (`36464732+ethan-hann@users.noreply.github.com`) with no attribution lines.
-- Push the branch and open a PR with `gh`. The body uses one unwrapped line per paragraph and notes the tests run. The maintainer merges.
-- Out-of-scope findings become GitHub issues on this repo.
+Branches, PRs and out-of-scope issues follow `CONTRIBUTING.md`. In addition, for agents:
+- Commit as the GitHub noreply identity (`36464732+ethan-hann@users.noreply.github.com`) with no attribution lines.
+- Push the branch and open the PR with `gh`. The body uses one unwrapped line per paragraph.
