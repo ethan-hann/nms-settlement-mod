@@ -6,7 +6,7 @@ Where things are:
 - `docs/progress.md`: the log of decisions, test sessions and findings. Read the latest entries first to learn the current state.
 - `docs/plan.md`: the build plan, the safety rules in full (section 3), testing (section 9) and workflow (section 10).
 - `docs/modules/<module>/`: the plan, findings and drafts for a module in development.
-- `README.md` "For modders and contributors": setup, generators, packaging and test sessions.
+- `CONTRIBUTING.md`: setup, generators, packaging and test sessions.
 
 ## Safety
 
