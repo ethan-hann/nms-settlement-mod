@@ -62,9 +62,8 @@ Overridden vanilla keys (English drafts; the warning about lost payments lives i
 
 | Key | Now | Draft |
 |---|---|---|
-| `UI_SETTLEMENT_STAT_UPKEEP` | Maintenance Cost | Upkeep (per day) |
+| `UI_SETTLEMENT_STAT_UPKEEP` | Maintenance Cost | Upkeep |
 | `UI_SETTLEMENT_STAT_COST_NAME` | upkeep costs | upkeep |
-| `UI_SETTLEMENT_PROD_DEBT` | Settlement is in debt / Clear debts to restore production | In debt: production is paused until the debt is paid |
 | `UI_SETTLEMENT_PROD_DEBT_TIP` | Reduce debt by constructing buildings ... | Each day, productivity pays upkeep and the rest pays down debt. Upgrade buildings, choose features that cut upkeep, or pay at the Administration Terminal. Paying more than the debt is lost. |
 | `UI_SETTLEMENT_PROD_DEBT_TIP2` | Settlement productivity has increased ... | Productivity now covers upkeep, so the debt is falling on its own. You can also pay it at the Administration Terminal; paying more than the debt is lost. |
 

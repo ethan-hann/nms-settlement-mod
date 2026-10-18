@@ -15,7 +15,6 @@
   "text_overrides": [
     "UI_SETTLEMENT_STAT_UPKEEP",
     "UI_SETTLEMENT_STAT_COST_NAME",
-    "UI_SETTLEMENT_PROD_DEBT",
     "UI_SETTLEMENT_PROD_DEBT_TIP",
     "UI_SETTLEMENT_PROD_DEBT_TIP2"
   ],
@@ -57,22 +56,22 @@
       "Japanese": "負債を1,000,000返済"
     },
     "UI_SETTLEMENT_STAT_UPKEEP": {
-      "English": "Upkeep (per day)",
-      "French": "Entretien (par jour)",
-      "Italian": "Manutenzione (al giorno)",
-      "German": "Instandhaltung (pro Tag)",
-      "Spanish": "Mantenimiento (por día)",
-      "Russian": "Содержание (в день)",
-      "Polish": "Utrzymanie (dziennie)",
-      "Dutch": "Onderhoud (per dag)",
-      "Portuguese": "Manutenção (por dia)",
-      "LatinAmericanSpanish": "Mantenimiento (por día)",
-      "BrazilianPortuguese": "Manutenção (por dia)",
-      "SimplifiedChinese": "维护费用（每日）",
-      "TraditionalChinese": "維護花費（每日）",
-      "TencentChinese": "维护费用（每日）",
-      "Korean": "유지비 (일일)",
-      "Japanese": "維持コスト（1日あたり）"
+      "English": "Upkeep",
+      "French": "Entretien",
+      "Italian": "Manutenzione",
+      "German": "Instandhaltung",
+      "Spanish": "Mantenimiento",
+      "Russian": "Содержание",
+      "Polish": "Utrzymanie",
+      "Dutch": "Onderhoud",
+      "Portuguese": "Manutenção",
+      "LatinAmericanSpanish": "Mantenimiento",
+      "BrazilianPortuguese": "Manutenção",
+      "SimplifiedChinese": "维护费用",
+      "TraditionalChinese": "維護花費",
+      "TencentChinese": "维护费用",
+      "Korean": "유지비",
+      "Japanese": "維持コスト"
     },
     "UI_SETTLEMENT_STAT_COST_NAME": {
       "English": "upkeep",
@@ -91,24 +90,6 @@
       "TencentChinese": "维护费用",
       "Korean": "유지비",
       "Japanese": "維持コスト"
-    },
-    "UI_SETTLEMENT_PROD_DEBT": {
-      "English": "Settlement in debt <IMG>SLASH<> Production stops until it is paid",
-      "French": "Colonie endettée <IMG>SLASH<> Production arrêtée jusqu'au remboursement",
-      "Italian": "Insediamento indebitato <IMG>SLASH<> Produzione ferma fino al saldo",
-      "German": "Siedlung verschuldet <IMG>SLASH<> Produktion ruht bis zur Tilgung",
-      "Spanish": "Asentamiento endeudado <IMG>SLASH<> Producción detenida hasta saldar la deuda",
-      "Russian": "У поселения долги <IMG>SLASH<> Производство стоит до погашения",
-      "Polish": "Osada zadłużona <IMG>SLASH<> Produkcja wstrzymana do spłaty",
-      "Dutch": "Nederzetting in de schulden <IMG>SLASH<> Productie ligt stil tot de schuld betaald is",
-      "Portuguese": "Povoamento endividado <IMG>SLASH<> Produção parada até a dívida ser paga",
-      "LatinAmericanSpanish": "Asentamiento con deuda <IMG>SLASH<> Producción detenida hasta saldar la deuda",
-      "BrazilianPortuguese": "Povoado endividado <IMG>SLASH<> Produção parada até a dívida ser paga",
-      "SimplifiedChinese": "定居点已负债<IMG>SLASH<>还清债务前停止生产",
-      "TraditionalChinese": "聚居地負債中 <IMG>SLASH<> 清償債務前停止生產",
-      "TencentChinese": "定居点已负债<IMG>SLASH<>还清债务前停止生产",
-      "Korean": "거주지에 부채 있음 <IMG>SLASH<> 상환할 때까지 생산 중단",
-      "Japanese": "開拓地が負債を抱えている<IMG>SLASH<>完済まで生産停止"
     },
     "UI_SETTLEMENT_PROD_DEBT_TIP": {
       "English": "<STELLAR>Productivity<> pays upkeep, then debt. Upgrade <TECHNOLOGY>buildings<>, pick <STELLAR>features<> that cut upkeep, or pay at the <TECHNOLOGY>Administration Terminal<> (extra is lost).",

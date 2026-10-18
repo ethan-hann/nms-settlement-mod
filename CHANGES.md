@@ -8,7 +8,7 @@
 - The price follows the Purchases setting: free on Free, a third on Discounted, 2 units per debt on Standard, 3.32 on Expensive.
 - Paying more than the remaining debt is lost. The game shows "Settlement reserves increased", but reserves are not stored anywhere.
 - The terminal shows six options at most and the game uses four, so Fair Ledger takes the last two. Another mod that adds a terminal option pushes one of them off.
-- Clearer text for upkeep and debt: "Maintenance Cost" becomes "Upkeep (per day)", and the debt messages explain how debt falls and where to pay it.
+- Clearer text for upkeep and debt: "Maintenance Cost" becomes "Upkeep", the name the building pages already use, and the two debt tips explain how debt falls, where to pay it, and that overpaying is lost.
 - Side effect: the positive expedition debrief's debt cut becomes a flat 100,000 instead of 50,000 to 100,000, since both use the same step.
 - Adds no parts, so removing it deletes nothing from a save. Debt already paid stays paid.
 - Its text is in every game language. Like the other translations, it has not been checked by native speakers.

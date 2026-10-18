@@ -43,23 +43,23 @@
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="UI_SETTLEMENT_STAT_UPKEEP" />
-			<Property name="English" value="Upkeep (per day)" />
-			<Property name="French" value="Entretien (par jour)" />
-			<Property name="Italian" value="Manutenzione (al giorno)" />
-			<Property name="German" value="Instandhaltung (pro Tag)" />
-			<Property name="Spanish" value="Mantenimiento (por día)" />
-			<Property name="Russian" value="Содержание (в день)" />
-			<Property name="Polish" value="Utrzymanie (dziennie)" />
-			<Property name="Dutch" value="Onderhoud (per dag)" />
-			<Property name="Portuguese" value="Manutenção (por dia)" />
-			<Property name="LatinAmericanSpanish" value="Mantenimiento (por día)" />
-			<Property name="BrazilianPortuguese" value="Manutenção (por dia)" />
-			<Property name="SimplifiedChinese" value="维护费用（每日）" />
-			<Property name="TraditionalChinese" value="維護花費（每日）" />
-			<Property name="TencentChinese" value="维护费用（每日）" />
-			<Property name="Korean" value="유지비 (일일)" />
-			<Property name="Japanese" value="維持コスト（1日あたり）" />
-			<Property name="USEnglish" value="Upkeep (per day)" />
+			<Property name="English" value="Upkeep" />
+			<Property name="French" value="Entretien" />
+			<Property name="Italian" value="Manutenzione" />
+			<Property name="German" value="Instandhaltung" />
+			<Property name="Spanish" value="Mantenimiento" />
+			<Property name="Russian" value="Содержание" />
+			<Property name="Polish" value="Utrzymanie" />
+			<Property name="Dutch" value="Onderhoud" />
+			<Property name="Portuguese" value="Manutenção" />
+			<Property name="LatinAmericanSpanish" value="Mantenimiento" />
+			<Property name="BrazilianPortuguese" value="Manutenção" />
+			<Property name="SimplifiedChinese" value="维护费用" />
+			<Property name="TraditionalChinese" value="維護花費" />
+			<Property name="TencentChinese" value="维护费用" />
+			<Property name="Korean" value="유지비" />
+			<Property name="Japanese" value="維持コスト" />
+			<Property name="USEnglish" value="Upkeep" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="UI_SETTLEMENT_STAT_COST_NAME" />
@@ -80,26 +80,6 @@
 			<Property name="Korean" value="유지비" />
 			<Property name="Japanese" value="維持コスト" />
 			<Property name="USEnglish" value="upkeep" />
-		</Property>
-		<Property name="Table" value="TkLocalisationEntry">
-			<Property name="Id" value="UI_SETTLEMENT_PROD_DEBT" />
-			<Property name="English" value="Settlement in debt &lt;IMG&gt;SLASH&lt;&gt; Production stops until it is paid" />
-			<Property name="French" value="Colonie endettée &lt;IMG&gt;SLASH&lt;&gt; Production arrêtée jusqu'au remboursement" />
-			<Property name="Italian" value="Insediamento indebitato &lt;IMG&gt;SLASH&lt;&gt; Produzione ferma fino al saldo" />
-			<Property name="German" value="Siedlung verschuldet &lt;IMG&gt;SLASH&lt;&gt; Produktion ruht bis zur Tilgung" />
-			<Property name="Spanish" value="Asentamiento endeudado &lt;IMG&gt;SLASH&lt;&gt; Producción detenida hasta saldar la deuda" />
-			<Property name="Russian" value="У поселения долги &lt;IMG&gt;SLASH&lt;&gt; Производство стоит до погашения" />
-			<Property name="Polish" value="Osada zadłużona &lt;IMG&gt;SLASH&lt;&gt; Produkcja wstrzymana do spłaty" />
-			<Property name="Dutch" value="Nederzetting in de schulden &lt;IMG&gt;SLASH&lt;&gt; Productie ligt stil tot de schuld betaald is" />
-			<Property name="Portuguese" value="Povoamento endividado &lt;IMG&gt;SLASH&lt;&gt; Produção parada até a dívida ser paga" />
-			<Property name="LatinAmericanSpanish" value="Asentamiento con deuda &lt;IMG&gt;SLASH&lt;&gt; Producción detenida hasta saldar la deuda" />
-			<Property name="BrazilianPortuguese" value="Povoado endividado &lt;IMG&gt;SLASH&lt;&gt; Produção parada até a dívida ser paga" />
-			<Property name="SimplifiedChinese" value="定居点已负债&lt;IMG&gt;SLASH&lt;&gt;还清债务前停止生产" />
-			<Property name="TraditionalChinese" value="聚居地負債中 &lt;IMG&gt;SLASH&lt;&gt; 清償債務前停止生產" />
-			<Property name="TencentChinese" value="定居点已负债&lt;IMG&gt;SLASH&lt;&gt;还清债务前停止生产" />
-			<Property name="Korean" value="거주지에 부채 있음 &lt;IMG&gt;SLASH&lt;&gt; 상환할 때까지 생산 중단" />
-			<Property name="Japanese" value="開拓地が負債を抱えている&lt;IMG&gt;SLASH&lt;&gt;完済まで生産停止" />
-			<Property name="USEnglish" value="Settlement in debt &lt;IMG&gt;SLASH&lt;&gt; Production stops until it is paid" />
 		</Property>
 		<Property name="Table" value="TkLocalisationEntry">
 			<Property name="Id" value="UI_SETTLEMENT_PROD_DEBT_TIP" />

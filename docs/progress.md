@@ -405,4 +405,6 @@ Four short launches on the creative test slot after adding vanilla color markup,
 - New test-only module LedgerRising (key `ledgerrising`) sets the base upkeep of residences and the bar to 400,000, which raised Upkeep to 2,573,692 a day so the rising-debt tip shows. It writes nothing to the save; without it, Upkeep was back at 266,502.
 - Tip text for later modules: keep tips under about 175 visible characters in the longest language, and do not end a sentence on a colored phrase.
 
+Decided 2026-10-17: keep only the overrides that add something. The debt banner override is dropped, since it only reworded vanilla and replaced the game's own translations. The overview label becomes plain "Upkeep", since the value already reads "/day". Fair Ledger now overrides four vanilla keys: the two tips, the label and the decision-text word.
+
 Fair Ledger is ready for release as 1.2.0.
