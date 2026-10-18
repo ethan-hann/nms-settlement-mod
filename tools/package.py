@@ -8,6 +8,7 @@ Usage: package.py [--out DIR]   (version from VERSION at the repo root)
 """
 
 import argparse
+import json
 import re
 import sys
 import zipfile
@@ -15,14 +16,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-SHIPPED = [
-    "OverseersToolkit",
-    "OverseersToolkit-Defense",
-    "OverseersToolkit-SettlementDecor",
-    "OverseersToolkit-SettlerStories",
-    "OverseersToolkit-FairLedger",
-    "OverseersToolkit-FairLedger-Rebalance",
-]
+# Shipped modules are the ones versioned in versions.json, in its order.
+SHIPPED = list(json.loads((REPO / "versions.json").read_text(encoding="utf-8"))["modules"])
 # Kept in the repo for test sessions; installing them changes how the game plays.
 TEST_ONLY = [
     "OverseersToolkit-Probes",

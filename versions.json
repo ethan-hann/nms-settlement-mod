@@ -1,0 +1,19 @@
+{
+  "modules": {
+    "OverseersToolkit": "1.2.0",
+    "OverseersToolkit-Defense": "1.2.0",
+    "OverseersToolkit-SettlementDecor": "1.1.0",
+    "OverseersToolkit-SettlerStories": "1.2.0",
+    "OverseersToolkit-FairLedger": "1.0.0",
+    "OverseersToolkit-FairLedger-Rebalance": "1.0.0"
+  },
+  "bundle": {
+    "version": "1.2.0",
+    "modules": [
+      "OverseersToolkit",
+      "OverseersToolkit-Defense",
+      "OverseersToolkit-SettlerStories",
+      "OverseersToolkit-FairLedger"
+    ]
+  }
+}
