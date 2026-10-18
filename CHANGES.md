@@ -1,8 +1,29 @@
 # Changes
 
-## Unreleased
+## 1.2.0
 
-**OverseersToolkit-FairLedger (new, optional)**
+Modules now have their own versions, two new optional Fair Ledger modules handle settlement debt and upkeep, and every module's text is translated into every game language.
+
+**How versions work now**
+- Each module has its own version and changes version only when its own files change. Players get an update only for the modules they installed.
+- New main download: OverseersToolkit-AllInOne, version 1.2.0, the page version from now on. It holds core, Defense, Settler Stories and Fair Ledger.
+- Settlement Decor and Fair Ledger Rebalance stay separate optional downloads because they change vanilla content broadly: Decor makes 489 vanilla parts buildable on planets, and Rebalance changes vanilla upkeep and conflicts with economy overhauls.
+- AllInOne installs the same module folders as the separate downloads. Use one or the other. If both are installed, the files are identical, so whichever Vortex keeps is fine.
+- Switching between AllInOne and the separate modules keeps every build, because the folders and part IDs are the same. The removal warnings in 1.1.0 still apply when a module is actually removed.
+- Nothing changes for existing installs: folder names are unchanged.
+
+**OverseersToolkit (core) 1.2.0**
+- Part names, descriptions, perks and decisions are translated into every language the game offers. Before, players in any language but English saw raw text keys such as OT_PATH_TILE_NAME.
+- The translations reuse the game's own words for settlements, settlers, the overseer, debt, Sentinels, units and nanites. They have not been checked by native speakers: corrections are welcome as a bug report on GitHub.
+- Files now use LF line endings. Files from earlier releases mixed CRLF and LF. The game loads both, and the change is line endings only.
+
+**OverseersToolkit-Defense 1.2.0**
+- Same changes as core: text in every game language and LF line endings.
+
+**OverseersToolkit-SettlerStories 1.2.0**
+- Same changes as core: text in every game language and LF line endings.
+
+**OverseersToolkit-FairLedger 1.0.0 (new, optional)**
 - The Administration Terminal in the overseer's office gains two options: "Pay 100,000 debt" for 200,000 units and "Pay 1,000,000 debt" for 2,000,000 units. Each payment clears exactly the debt it names, in that town.
 - The 1,000,000 payment shows a single "Settlement debt reduced: 100,000 units" message, but the debt drops by the full 1,000,000.
 - The price follows the Purchases setting: free on Free, a third on Discounted, 2 units per debt on Standard, 3.32 on Expensive.
@@ -11,20 +32,15 @@
 - Clearer text for upkeep and debt: "Maintenance Cost" becomes "Upkeep", the name the building pages already use, and the two debt tips explain how debt falls, where to pay it, and that overpaying is lost.
 - Side effect: the positive expedition debrief's debt cut becomes a flat 100,000 instead of 50,000 to 100,000, since both use the same step.
 - Adds no parts, so removing it deletes nothing from a save. Debt already paid stays paid.
-- Its text is in every game language. Like the other translations, it has not been checked by native speakers.
+- Its text is in every game language, with the same caveat: not checked by native speakers.
 
-**OverseersToolkit-FairLedger-Rebalance (new, optional)**
+**OverseersToolkit-FairLedger-Rebalance 1.0.0 (new, optional)**
 - At class C, the starport, infrastructure, trade center, small industrial, administrative building, storage facility, farm, factory and Autophage RoboArm cost exactly as much upkeep as they produce, instead of more, so each one breaks even. Upgrades stay the way to profit.
 - Residences, the bar and the fish pond keep their upkeep.
 - Takes effect on existing buildings at once, and removing it restores the game's upkeep at once.
 - Conflicts with economy overhauls that change building contributions, such as BetterSettlements.
 
-**Every game language**
-- Part names, descriptions, perks and decisions in the core, Defense and Settler Stories modules are now translated into every language the game offers. Before, players in any language but English saw raw text keys such as OT_PATH_TILE_NAME.
-- The translations reuse the game's own words for settlements, settlers, the overseer, debt, Sentinels, units and nanites. They have not been checked by native speakers: corrections are welcome as a bug report on GitHub.
-
-**Packaging**
-- Every module file now uses LF line endings. Files from earlier releases mixed CRLF and LF; the game loads both, and the change is line endings only.
+**OverseersToolkit-SettlementDecor** is unchanged at 1.1.0.
 
 ## 1.1.0
 

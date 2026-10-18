@@ -408,3 +408,16 @@ Four short launches on the creative test slot after adding vanilla color markup,
 Decided 2026-10-17: keep only the overrides that add something. The debt banner override is dropped, since it only reworded vanilla and replaced the game's own translations. The overview label becomes plain "Upkeep", since the value already reads "/day". Fair Ledger now overrides four vanilla keys: the two tips, the label and the decision-text word.
 
 Fair Ledger is ready for release as 1.2.0.
+
+## 2026-10-17: Per-module versions and the all-in-one bundle
+
+Decided 2026-10-17: each shipped module has its own version, and a new all-in-one download, OverseersToolkit-AllInOne, carries the Nexus page version and becomes the main file.
+
+- Why: Vortex tracks each file on a Nexus page separately through the "new version of file X" link and ignores the page version (forum reports, not official docs), so a module that keeps its file and version prompts no update. One version for every module meant every release prompted every player for every module.
+- `versions.json` replaces `VERSION`. `tools/versions.py check` compares it with the newest vX.Y.Z tag: changed module files need a higher version, unchanged ones keep theirs, and the bundle moves up when any module in it does. A release before versions.json counts as one bundle of every module at its VERSION. A test runs the check on the repo and skips when the clone has no tags (CI).
+- The bundle is a zip of the separate module folders, not a merged module. A merged folder next to the separate ones would load twice: Fair Ledger's options would be appended twice (eight terminal options, two dropped) and every appended decision would come up twice as often. With separate folders, the bundle and a single module install the same files, and switching between them keeps every build.
+- Bundle contents: core, Defense, Settler Stories and Fair Ledger. Settlement Decor and Fair Ledger Rebalance stay opt-in, since they change vanilla content broadly.
+- Verified in the maintainer's install (vortex.deployment.json, read only): Vortex deploys an NMS archive's top-level entries into MODS as they are, folders and loose files alike. No installed mod deploys two mod folders from one archive, so a multi-folder bundle deploying intact is inferred.
+- Versions for the next release: core, Defense and Settler Stories 1.2.0; Settlement Decor stays 1.1.0 (no file changed since v1.1.0, so it is not re-uploaded); FairLedger and FairLedger-Rebalance 1.0.0; bundle 1.2.0.
+- Upload rules for Nexus: each module's new file is uploaded as a new version of that module's previous file; the bundle is a new main file with no update link, so Core-only players are never offered it; Core moves to the optional files.
+
