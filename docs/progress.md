@@ -376,3 +376,23 @@ Built per [modules/fair-ledger/build-plan.md](modules/fair-ledger/build-plan.md)
 - Unknown until the session: whether ten stat steps in one GiveAll reward all apply (Session 6 tested one step per reward).
 
 Next: the check session (Session 9), then release 1.2.0.
+
+## 2026-10-17: Session 9, Fair Ledger check
+
+Two launches on the creative test slot. Safety: both exits passed all checks.
+
+**Launch 1** (core, Defense, SettlerStories, FairLedger, FairLedger-Rebalance, SignProbes, LedgerSetup; Purchases set to Standard for the run and back to Free after):
+- The terminal listed six options in the expected order, the two payments last with "(200,000 Units)" and "(2,000,000 Units)".
+- LedgerSetup's option gave 5,000,000 units and raised debt from 0 to about 2,414,900.
+- "Pay 100,000 debt" took 200,000 units and cut 100,000, with "Settlement debt reduced: 100,000 units". "Pay 1,000,000 debt" took 2,000,000 units and cut 1,000,000. The save confirms 2,200,000 units taken (5,732,096 to 3,532,096); the debt readings differ from the cuts by under 1,100, which is the debt falling on its own between screenshots.
+- Ten stat steps in one GiveAll reward all apply, but the game shows one message, "Settlement debt reduced: 100,000 units", for the 1,000,000 payment.
+- Rebalance: each production building's upkeep equals its productivity exactly (Farm 18,130 and 18,130, Industrial Chimney 28,542 and 28,542). Inferred: one roll sets both, so a C-class production building nets exactly 0, not "about 0". Housing, the fish pond and the dance lounge kept vanilla upkeep. Maintenance Cost fell from 381,454 to 266,502 a day.
+- The overrides showed in English: "Upkeep (per day)", "In debt: production is paused until the debt is paid", and the falling-debt tip. In French every Fair Ledger string showed translated, with no raw keys.
+- The game formats numbers itself: in French the price read "200.000 unites" and productivity "579.063", so the labels' "100 000" did not match. No language file or type defines a separator; the exe holds a locale code table and imports GetLocaleInfoEx, but Windows' French separator is a space, so the game does not follow it (verified for French only).
+
+**Launch 2** (the same without FairLedger):
+- The save loaded normally. The terminal showed the four vanilla options and LedgerSetup's, with both payments gone. Debt was 1,307,890, keeping the amount paid. The vanilla text came back ("Maintenance Cost", the vanilla debt line and tip), while Rebalance's 266,502 a day stayed.
+
+Also seen: the save list shows the slot in the language it was last saved in ("Colonie de Funana Bridge", "Creatif"), because the save stores its caption as text (`SaveSummary`).
+
+Next: number separators and vanilla color markup in the Fair Ledger text.
