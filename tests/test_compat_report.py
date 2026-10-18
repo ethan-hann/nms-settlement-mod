@@ -463,3 +463,76 @@ def test_regenerating_needs_no_running_check(tmp_path, mod_root, vanilla, fake_p
     )
     assert rc == 0
     assert compat.is_file()
+
+
+# --- text overrides ----------------------------------------------------------
+
+
+def vanilla_english(vanilla, *keys):
+    entries = "".join(
+        f'<Property name="Table" value="TkLocalisationEntry" _id="{k}"><Property name="Id" value="{k}" />'
+        f'<Property name="English" value="vanilla {k}" /></Property>'
+        for k in keys
+    )
+    write(vanilla / "language/nms_loc7_english.MXML", f'<Data template="cTkLocalisationTable"><Property name="Table">{entries}</Property></Data>')
+
+
+def loc_table(*keys):
+    # Mods write entries without _id, as gen_parts.py and installed text mods do.
+    entries = "".join(
+        f'<Property name="Table" value="TkLocalisationEntry"><Property name="Id" value="{k}" />'
+        f'<Property name="English" value="mod {k}" /></Property>'
+        for k in keys
+    )
+    return f'<?xml version="1.0" encoding="utf-8"?>\n<Data template="cTkLocalisationTable"><Property name="Table">{entries}</Property></Data>\n'
+
+
+@pytest.fixture
+def texty(mod_root, vanilla):
+    """A shipped module that overrides one vanilla text key and adds one of its own."""
+    vanilla_english(vanilla, "UI_SETTLEMENT_PROD_DEBT_TIP", "UI_OTHER")
+    write(mod_root / "OverseersToolkit-Text/LocTable.MXML", loc_table("UI_SETTLEMENT_PROD_DEBT_TIP", "OT_TEXT_NEW"))
+    return mod_root
+
+
+def test_overridden_vanilla_text_keys_are_listed_as_edits(texty, vanilla):
+    text = section(generate(texty, vanilla), "## OverseersToolkit-Text")
+    edits = section(text, "### Edits vanilla")
+    assert "UI_SETTLEMENT_PROD_DEBT_TIP" in edits
+    assert "OT_TEXT_NEW" not in edits and "UI_OTHER" not in edits
+    assert "does not edit vanilla" not in edits.lower()
+    assert "LocTable.MXML" in section(text, "### Adds new")
+
+
+def test_another_mod_replacing_the_same_vanilla_text_is_a_conflict(mods, texty, vanilla):
+    write(mods / "Text Overhaul/LocTable.MXML", loc_table("UI_OTHER", "UI_SETTLEMENT_PROD_DEBT_TIP"))
+    (conflict,) = of_kind(scan(mods, texty, vanilla), "conflict")
+    assert conflict.mod == "Text Overhaul" and conflict.file == "LocTable.MXML"
+    assert "UI_SETTLEMENT_PROD_DEBT_TIP" in conflict.message
+    assert "UI_OTHER" not in conflict.message
+
+
+def test_another_mod_defining_one_of_our_new_keys_is_a_conflict(mods, texty, vanilla):
+    write(mods / "Copycat/LocTable.MXML", loc_table("OT_TEXT_NEW"))
+    (conflict,) = of_kind(scan(mods, texty, vanilla), "conflict")
+    assert "OT_TEXT_NEW" in conflict.message
+
+
+def test_text_that_shares_no_key_with_ours_is_not_reported(mods, texty, vanilla):
+    write(mods / "Text Overhaul/LocTable.MXML", loc_table("UI_OTHER", "THEIR_OWN_KEY"))
+    assert scan(mods, texty, vanilla) == []
+
+
+def test_an_unparseable_loc_table_is_reported_and_the_scan_continues(mods, texty, vanilla):
+    write(mods / "Broken Text/LocTable.MXML", "<Data template=")
+    write(mods / "Text Overhaul/LocTable.MXML", loc_table("UI_SETTLEMENT_PROD_DEBT_TIP"))
+    findings = scan(mods, texty, vanilla)
+    assert [f.mod for f in of_kind(findings, "unreadable")] == ["Broken Text"]
+    assert [f.mod for f in of_kind(findings, "conflict")] == ["Text Overhaul"]
+
+
+def test_an_installed_copy_of_our_own_modules_is_not_scanned(mods, texty, vanilla):
+    # A player with an older release installed has our folders in MODS; they are not another mod.
+    write(mods / "OverseersToolkit-Text/LocTable.MXML", loc_table("UI_SETTLEMENT_PROD_DEBT_TIP", "OT_TEXT_NEW"))
+    write(mods / "overseerstoolkit" / OBJECTS_REL, objects_patch(entry("DECALPATH", field("PlanetBaseLimit", "75"))))
+    assert scan(mods, texty, vanilla) == []
