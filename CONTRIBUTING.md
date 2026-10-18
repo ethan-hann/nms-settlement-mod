@@ -2,6 +2,46 @@
 
 This is about working on the mod itself. For installing and playing, see the [README](README.md).
 
+## How to contribute
+
+Players' saves and builds depend on this mod, so every change is treated as one that reaches live games.
+
+### Branches and pull requests
+
+- Use one branch per piece of work. Never commit to `main`.
+- Every change goes in through a pull request, and the maintainer merges.
+- The PR body notes the tests you ran.
+- If a change can stop a module from loading, say so in the PR. It puts player builds at risk.
+- Out-of-scope findings become [GitHub issues](https://github.com/ethan-hann/nms-settlement-mod/issues) on this repo.
+
+### Changing the mod
+
+- Generated modules: edit the spec in `specs/` and rerun the generators. `tests/test_modules.py` fails when a generated file is edited by hand or goes stale.
+- Test first: write the failing test before the implementation and see it fail on an assertion. An import or harness error isn't a red. Record the observed red in the commit message.
+- When a test passes on its first run, break the code on purpose once to prove it can fail.
+- Run Python through `tools/.venv`. Run the full suite with `tools/.venv/Scripts/python.exe -m pytest -q` before every commit that changes `mod/`, `specs/`, `tools/` or `tests/`. Commits that change only docs skip it.
+- CI (`.github/workflows/tests.yml`) runs the suite on every PR and on pushes to `main`. It has no game data, so the tests that need `scratch/extracted` skip there, including the stale-module checks. A green CI run doesn't replace the local run.
+- Check facts against the extracted game data in `scratch/` before proposing a design, and mark findings as verified, inferred or unknown.
+
+### Player builds
+
+The game deletes a placed part the moment it saves without the module that adds that part. So:
+
+- Shipped `OT_` part IDs are permanent. Retire a part by hiding it from the build menu and keep its definition.
+- Every release keeps all earlier parts loadable.
+
+### Test session safety
+
+- Saves are read-only. Inspect a copy of the test slot in `scratch/`, never the save folder.
+- In `GAMEDATA/MODS`, touch only the `_OTDEV_*` folders.
+- `GCMODSETTINGS.MXML` changes only through `tools/testmode.py`, and only while the game is closed.
+- The full rules are in [docs/plan.md](docs/plan.md) section 3.
+
+### Writing
+
+- Repo prose (docs, comments, commits, PRs, issues) is ASCII, American English and concise, and names nobody.
+- Code comments explain why in one line and never name a milestone, slice or phase.
+
 ## Repo layout
 
 ```

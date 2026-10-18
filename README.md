@@ -10,7 +10,7 @@ Overseer's Toolkit is a No Man's Sky mod that gives settlement overseers the stu
 
 ## Quick start
 
-1. Grab **OverseersToolkit-AllInOne** from Nexus for the full set (core, Defense, Settler Stories and Fair Ledger), or pick just the modules you want. Settlement Decor and Fair Ledger Rebalance are separate downloads either way.
+1. Grab **OverseersToolkit-AllInOne** from [Nexus](https://www.nexusmods.com/nomanssky/mods/4635) or the [GitHub releases](https://github.com/ethan-hann/nms-settlement-mod/releases) for the full set (core, Defense, Settler Stories and Fair Ledger), or pick just the modules you want. Settlement Decor and Fair Ledger Rebalance are separate downloads either way.
 2. Install with Vortex, or extract the zips into `No Man's Sky\GAMEDATA\MODS`. Details are in [Installing and updating](#installing-and-updating).
 3. Become your settlement's overseer and look under **Decoration > SETTLEMENT** in the build menu.
 
@@ -114,7 +114,7 @@ Rebalance makes the town's working buildings break even at class C: the starport
 Good to know:
 
 - It takes effect on your existing buildings right away, and removing it puts the game's own upkeep back right away too.
-- It conflicts with economy overhauls that change what buildings contribute, such as BetterSettlements.
+- It conflicts with economy overhauls that change what buildings contribute, such as [BetterSettlements](https://www.nexusmods.com/nomanssky/mods/2855).
 
 ## Using it
 
@@ -157,7 +157,7 @@ Fair Ledger adds no parts, so there's nothing to lose when you remove it. Removi
 
 - Built and tested on **No Man's Sky 7.06 (COSMOS)**.
 - The mod ships small EXML patches and adds new `OT_` parts instead of editing vanilla ones wherever it can. [COMPATIBILITY.md](COMPATIBILITY.md) lists every vanilla entry and field each module touches, plus the vanilla text each module replaces (Fair Ledger's four strings). It's generated from the patches, so it's always current.
-- Fair Ledger Rebalance conflicts with economy overhauls that change what buildings contribute, such as BetterSettlements.
+- Fair Ledger Rebalance conflicts with economy overhauls that change what buildings contribute, such as [BetterSettlements](https://www.nexusmods.com/nomanssky/mods/2855).
 - The overseer's terminal shows six options at most and the game uses four. Another mod that adds a terminal option pushes one of Fair Ledger's off.
 - Want to build base-only parts (walls, landing pads, tech) right next to your settlement? Pair it with [gBase Boundries](https://www.nexusmods.com/nomanssky/mods/1369).
 - Multiplayer: every part reuses a vanilla model, so visitors without the mod should still see what you built.
@@ -172,7 +172,7 @@ Please use the [issue tracker](https://github.com/ethan-hann/nms-settlement-mod/
 
 ## Roadmap
 
-- **Path tool.** Click points along a route and have the kit tiles laid for you, turned and snapped to the ground. It needs [NMS.py](https://github.com/monkeyman192/NMS.py) to support the current game build first. The latest release crashes the game at startup on 7.06.
+- **Path tool.** Click points along a route and have the kit tiles laid for you, turned and snapped to the ground, using [NMS.py](https://github.com/monkeyman192/NMS.py).
 
 ## Contributing 🛠️
 
