@@ -157,5 +157,48 @@ def test_every_module_in_the_repo_is_either_shipped_or_marked_test_only():
     assert not set(package.SHIPPED) & set(package.TEST_ONLY)
 
 
-def test_the_repo_version_is_well_formed():
-    assert package.read_version(REPO / "VERSION") == "1.1.0"
+def entries(zip_path):
+    with zipfile.ZipFile(zip_path) as z:
+        return {i.filename: (z.read(i), i.date_time, i.external_attr) for i in z.infolist()}
+
+
+def test_the_bundle_holds_each_listed_module_exactly_as_its_own_zip_does(tmp_path):
+    mods = tmp_path / "mod"
+    make_module(mods, "Alpha", {"X.EXML": "<x/>", "notes.txt": "hi"})
+    make_module(mods, "Beta", {"Y.EXML": "<y/>"})
+    make_module(mods, "Gamma", {"Z.EXML": "<z/>"})
+    singles = package.build(mods, tmp_path / "dist", "1.0.0", ["Alpha", "Beta"])
+    bundle = package.build_bundle(mods, tmp_path / "dist", "2.3.4", ["Alpha", "Beta"])
+    assert bundle.name == f"{package.BUNDLE_NAME}-2.3.4.zip"
+    # Identical bytes, so Vortex's conflict between the bundle and a single module is harmless.
+    assert entries(bundle) == {**entries(singles[0]), **entries(singles[1])}
+
+
+def test_the_bundle_refuses_what_a_module_zip_refuses(tmp_path):
+    mods = tmp_path / "mod"
+    make_module(mods, "Alpha", {"X.EXML": "<x/>"})
+    with pytest.raises(package.PackageError):
+        package.build_bundle(mods, tmp_path / "dist", "1.0", ["Alpha"])
+    with pytest.raises(package.PackageError):
+        package.build_bundle(mods, tmp_path / "dist", "1.0.0", ["Alpha", "Missing"])
+
+
+def test_a_release_builds_each_module_at_its_own_version_and_the_bundle(tmp_path, monkeypatch):
+    data = {
+        "modules": {"OverseersToolkit": "1.2.0", "OverseersToolkit-SettlementDecor": "1.1.0"},
+        "bundle": {"version": "1.3.0", "modules": ["OverseersToolkit"]},
+    }
+    monkeypatch.setattr(package.versions, "load", lambda path: data)
+    monkeypatch.setattr(package.versions, "changed", lambda d, repo: ["OverseersToolkit"])
+    assert package.main(["--out", str(tmp_path / "all")]) == 0
+    assert sorted(p.name for p in (tmp_path / "all").iterdir()) == [
+        "OverseersToolkit-1.2.0.zip",
+        f"{package.BUNDLE_NAME}-1.3.0.zip",
+        "OverseersToolkit-SettlementDecor-1.1.0.zip",
+    ]
+    # Only what moved since the last release gets uploaded.
+    assert package.main(["--out", str(tmp_path / "new"), "--changed"]) == 0
+    assert sorted(p.name for p in (tmp_path / "new").iterdir()) == [
+        "OverseersToolkit-1.2.0.zip",
+        f"{package.BUNDLE_NAME}-1.3.0.zip",
+    ]
