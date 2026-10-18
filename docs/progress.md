@@ -395,4 +395,14 @@ Two launches on the creative test slot. Safety: both exits passed all checks.
 
 Also seen: the save list shows the slot in the language it was last saved in ("Colonie de Funana Bridge", "Creatif"), because the save stores its caption as text (`SaveSummary`).
 
-Next: number separators and vanilla color markup in the Fair Ledger text.
+## 2026-10-17: Session 9b, Fair Ledger text check
+
+Four short launches on the creative test slot after adding vanilla color markup, "." separators and shorter text. Safety: every exit passed all checks.
+
+- Vanilla markup works in a mod's LocTable.MXML: `<STELLAR>` (yellow), `<TECHNOLOGY>` (blue) and `<TRADEABLE>` (green) colored the marked words, and `<IMG>SLASH<>` drew the divider in the debt line, in English, French and Spanish.
+- The French Pay labels and the game's own price matched: "Payer 100.000 de dette (66.000 unites)" on Free Purchases.
+- The tip box holds about six lines. The first colored tips (up to 316 characters in French) were cut off, and a period after a colored phrase wrapped onto its own line. After shortening (decided 2026-10-17, from an ethan-voice draft), the rising-debt tip fit in English and in Spanish, the longest translation at 178 visible characters, which filled all six lines. The falling-debt tip fit in English.
+- New test-only module LedgerRising (key `ledgerrising`) sets the base upkeep of residences and the bar to 400,000, which raised Upkeep to 2,573,692 a day so the rising-debt tip shows. It writes nothing to the save; without it, Upkeep was back at 266,502.
+- Tip text for later modules: keep tips under about 175 visible characters in the longest language, and do not end a sentence on a colored phrase.
+
+Fair Ledger is ready for release as 1.2.0.
