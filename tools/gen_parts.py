@@ -51,6 +51,8 @@ LOC_LANGUAGES = (
 )
 # The game fills these in at run time, so a translation has to keep them.
 PLACEHOLDER = re.compile(r"%[A-Z_]+%")
+# Color and icon markup as vanilla writes it, <STELLAR>word<> and <IMG>SLASH<>; translations keep the same tags.
+MARKUP = re.compile(r"<IMG>[A-Z_]+<>|<[A-Z_]*>")
 TRANSLATED = tuple(lang for lang in LOC_LANGUAGES if lang not in ("English", "USEnglish"))
 
 
@@ -209,6 +211,8 @@ def loc_columns(key, text):
             raise SpecError(f"{key}: {lang} repeats the English; mark it pending with null")
         elif set(PLACEHOLDER.findall(value)) != set(PLACEHOLDER.findall(english)):
             raise SpecError(f"{key}: {lang} must keep the placeholders {sorted(set(PLACEHOLDER.findall(english)))}")
+        elif sorted(MARKUP.findall(value)) != sorted(MARKUP.findall(english)):
+            raise SpecError(f"{key}: {lang} must keep the English markup {sorted(MARKUP.findall(english))}")
         else:
             columns[lang] = value
     return columns

@@ -334,6 +334,16 @@ def test_a_translation_keeps_the_english_placeholders(vanilla):
         loc_entry(translated("Pay %NUM% units", German="Zahle Einheiten"), vanilla)
 
 
+def test_a_translation_keeps_the_english_color_markup(vanilla):
+    english = "Debt is <TRADEABLE>falling<> <IMG>SLASH<> pay at the terminal"
+    with pytest.raises(SpecError, match="OT_KEY.*German.*markup"):
+        loc_entry(translated(english, German="Schulden <TRADEABLE>sinken<> und zahlen"), vanilla)
+    with pytest.raises(SpecError, match="OT_KEY.*French.*markup"):
+        loc_entry(translated(english, French="La dette <STELLAR>baisse<> <IMG>SLASH<> payer"), vanilla)
+    # Word order differs between languages, so only the tags count, not where they sit.
+    assert loc_entry(translated(english, Japanese="<IMG>SLASH<> 負債が<TRADEABLE>減る<>"), vanilla)
+
+
 def test_english_reads_either_text_form():
     assert gen_parts.english("Path Tile") == "Path Tile"
     assert gen_parts.english(translated("Path Tile")) == "Path Tile"
