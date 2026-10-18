@@ -331,6 +331,26 @@ def test_the_ledger_setup_gives_debt_and_units_without_taking_a_terminal_slot():
     assert units >= 2_200_000
 
 
+LEDGER_RISING = "OverseersToolkit-LedgerRising"
+
+
+def test_ledger_rising_raises_upkeep_only_where_rebalance_does_not_reach():
+    # The rising-debt tip needs upkeep above productivity, without touching the fields Rebalance sets.
+    assert (MODS / LEDGER_RISING).is_dir(), f"mod/{LEDGER_RISING} is missing"
+    rel = Path("GLOBALS/GCSETTLEMENTGLOBALS.EXML")
+    patch = ET.parse(MODS / LEDGER_RISING / rel).getroot()
+    path = "Property[@name='SettlementBuildingContributions']"
+    assert [c.get("name") for c in patch] == ["SettlementBuildingContributions"]
+    edited = {b.get("name") for b in patch.find(path)}
+    assert edited == {"Settlement_Bar", "Settlement_Small", "Settlement_Medium", "Settlement_Large"}
+    assert not edited & set(spec_of(REBALANCE)["match_upkeep_to_production"])
+    merged = merged_table(LEDGER_RISING, rel)
+    for name in edited:
+        for item in merged.find(f"{path}/Property[@name='{name}']/Property[@name='Base']"):
+            if item.find(".//Property[@name='SettlementStatType']").get("value") == "Upkeep":
+                assert int(item.find("Property[@name='MinValue']").get("value")) >= 400_000, name
+
+
 SIGN_PROBES = "OverseersToolkit-SignProbes"
 
 

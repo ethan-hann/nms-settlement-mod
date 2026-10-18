@@ -44,6 +44,7 @@ MODULES = {
     "fairledger": "OverseersToolkit-FairLedger",
     "fairledgerrebalance": "OverseersToolkit-FairLedger-Rebalance",
     "ledgersetup": "OverseersToolkit-LedgerSetup",
+    "ledgerrising": "OverseersToolkit-LedgerRising",
 }
 DEV_PREFIX = "_OTDEV_"
 # The game writes its merged mod data here when the test-only debug flag is on.

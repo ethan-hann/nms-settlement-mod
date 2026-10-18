@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test sessions only, never shipped. Base upkeep 400,000 on residences and the bar, buildings Rebalance leaves alone, so debt rises and the rising-debt tip shows. -->
+<Data template="cGcSettlementGlobals">
+	<Property name="SettlementBuildingContributions">
+		<Property name="Settlement_Bar" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="3">
+					<Property name="MinValue" value="400000" />
+					<Property name="MaxValue" value="400000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Small" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="3">
+					<Property name="MinValue" value="400000" />
+					<Property name="MaxValue" value="400000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Medium" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="400000" />
+					<Property name="MaxValue" value="400000" />
+				</Property>
+			</Property>
+		</Property>
+		<Property name="Settlement_Large" value="GcSettlementBuildingContribution">
+			<Property name="Base">
+				<Property name="Base" value="GcSettlementStatValueRange" _index="2">
+					<Property name="MinValue" value="400000" />
+					<Property name="MaxValue" value="400000" />
+				</Property>
+			</Property>
+		</Property>
+	</Property>
+</Data>
