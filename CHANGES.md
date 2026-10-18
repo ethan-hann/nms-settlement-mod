@@ -8,7 +8,7 @@ Modules now have their own versions, two new optional Fair Ledger modules handle
 - Each module has its own version and changes version only when its own files change. Players get an update only for the modules they installed.
 - New main download: OverseersToolkit-AllInOne, version 1.2.0, the page version from now on. It holds core, Defense, Settler Stories and Fair Ledger.
 - Settlement Decor and Fair Ledger Rebalance stay separate optional downloads because they change vanilla content broadly: Decor makes 489 vanilla parts buildable on planets, and Rebalance changes vanilla upkeep and conflicts with economy overhauls.
-- AllInOne installs the same module folders as the separate downloads. Use one or the other. If both are installed, the files are identical, so whichever Vortex keeps is fine.
+- AllInOne installs the same module folders as the separate downloads. Use one or the other: before switching to AllInOne, remove the separate core, Defense, Settler Stories and Fair Ledger downloads. If both stay installed, Vortex reports a file conflict and its load order decides which version the game loads.
 - Switching between AllInOne and the separate modules keeps every build, because the folders and part IDs are the same. The removal warnings in 1.1.0 still apply when a module is actually removed.
 - Nothing changes for existing installs: folder names are unchanged.
 

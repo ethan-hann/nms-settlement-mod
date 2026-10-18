@@ -417,7 +417,17 @@ Decided 2026-10-17: each shipped module has its own version, and a new all-in-on
 - `versions.json` replaces `VERSION`. `tools/versions.py check` compares it with the newest vX.Y.Z tag: changed module files need a higher version, unchanged ones keep theirs, and the bundle moves up when any module in it does. A release before versions.json counts as one bundle of every module at its VERSION. A test runs the check on the repo and skips when the clone has no tags (CI).
 - The bundle is a zip of the separate module folders, not a merged module. A merged folder next to the separate ones would load twice: Fair Ledger's options would be appended twice (eight terminal options, two dropped) and every appended decision would come up twice as often. With separate folders, the bundle and a single module install the same files, and switching between them keeps every build.
 - Bundle contents: core, Defense, Settler Stories and Fair Ledger. Settlement Decor and Fair Ledger Rebalance stay opt-in, since they change vanilla content broadly.
-- Verified in the maintainer's install (vortex.deployment.json, read only): Vortex deploys an NMS archive's top-level entries into MODS as they are, folders and loose files alike. No installed mod deploys two mod folders from one archive, so a multi-folder bundle deploying intact is inferred.
+- Verified in the maintainer's install (vortex.deployment.json, read only): Vortex deploys an NMS archive's top-level entries into MODS as they are, folders and loose files alike.
 - Versions for the next release: core, Defense and Settler Stories 1.2.0; Settlement Decor stays 1.1.0 (no file changed since v1.1.0, so it is not re-uploaded); FairLedger and FairLedger-Rebalance 1.0.0; bundle 1.2.0.
 - Upload rules for Nexus: each module's new file is uploaded as a new version of that module's previous file; the bundle is a new main file with no update link, so Core-only players are never offered it; Core moves to the optional files.
+
+## 2026-10-17: Vortex check of the bundle
+
+The maintainer installed OverseersToolkit-AllInOne-1.2.0.zip through Vortex in the real setup, with the game closed throughout, and removed it again. MODS was snapshotted byte for byte before (1,162 files, 60 Vortex mods).
+
+- The real setup already held Core, Defense and Settlement Decor 1.0.0 from Nexus through Vortex.
+- Verified: the bundle deployed all four module folders intact (core, Defense, Settler Stories, Fair Ledger).
+- Verified: Vortex reported "Unresolved file conflicts" between AllInOne and OverseersToolkit-1.0.0 (6 files) and OverseersToolkit-Defense-1.0.0 (8 files), and asked for a load-order rule. With AllInOne loading after, it owned all 14 files. Settlement Decor 1.0.0 was untouched.
+- Verified: after removing AllInOne, MODS matched the snapshot exactly (no file added, removed or changed) and Vortex redeployed the 1.0.0 files.
+- Consequence: a bundle next to separate downloads of a different version conflicts on different files, and load order picks the version. CHANGES.md now tells players to remove the separate downloads before switching to AllInOne.
 
